@@ -77,17 +77,17 @@ export function AGO1Page() {
           <Card>
             <CardTitle>Sentinel OS</CardTitle>
             <CardText>Policy enforcement, approvals, identity, evidence capture, and escalation logic.</CardText>
-            <ButtonLink href="/sentinel-os">View Sentinel OS</ButtonLink>
+            <ButtonLink to="/sentinel-os">View Sentinel OS</ButtonLink>
           </Card>
           <Card>
             <CardTitle>Nexus OS</CardTitle>
             <CardText>Workflow orchestration, integrations, retries, recovery, and controlled execution.</CardText>
-            <ButtonLink href="/nexus-os">View Nexus OS</ButtonLink>
+            <ButtonLink to="/nexus-os">View Nexus OS</ButtonLink>
           </Card>
           <Card>
             <CardTitle>SmartNation AI</CardTitle>
             <CardText>Delivery surface for governed digital labor deployments and operational catalogs.</CardText>
-            <ButtonLink href="/smartnation-ai">View SmartNation AI</ButtonLink>
+            <ButtonLink to="/smartnation-ai">View SmartNation AI</ButtonLink>
           </Card>
         </div>
       </Section>

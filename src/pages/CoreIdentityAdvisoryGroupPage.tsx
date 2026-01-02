@@ -71,9 +71,9 @@ export function CoreIdentityAdvisoryGroupPage() {
               workflows.
             </p>
             <div className="flex flex-wrap gap-3">
-              <ButtonLink href="/ago-1">View AGO‑1</ButtonLink>
-              <ButtonLink href="/sentinel-os">Sentinel OS</ButtonLink>
-              <ButtonLink href="/nexus-os">Nexus OS</ButtonLink>
+              <ButtonLink to="/ago-1">View AGO‑1</ButtonLink>
+              <ButtonLink to="/sentinel-os">Sentinel OS</ButtonLink>
+              <ButtonLink to="/nexus-os">Nexus OS</ButtonLink>
             </div>
           </div>
         </Card>
