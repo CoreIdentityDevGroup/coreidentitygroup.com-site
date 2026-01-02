@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { ago1Route } from "../router";
 
 type FAQItem = { q: string; a: ReactNode };
 
@@ -72,9 +73,9 @@ const faq: FAQItem[] = [
     a: (
       <div className="space-y-3 text-muted-foreground leading-relaxed">
         <p>
-          <Link to="/ago-1" className="text-blue-100 hover:text-blue-200">
-            AGO‑1
-          </Link>{" "}
+          <Link to={ago1Route.to} className="text-blue-100">
+  AGO-1
+</Link>
           is an internal operating agent (non-client-facing) used to harden the execution stack in real workflows. AGO‑1 runs under Sentinel OS and Nexus OS
           controls and is used to augment CHC and CoreIdentity AI Advisory Group operations.
         </p>
