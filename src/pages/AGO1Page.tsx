@@ -3,11 +3,17 @@ import { PageHero, Section, SectionTitle, Card, CardTitle, CardText, ButtonLink 
 export function AGO1Page() {
   return (
     <div>
-      <PageHero
-        eyebrow="Internal operating agent (non-client-facing)"
-        title="AGO‑1"
-        subtitle="A governed internal digital‑labor operator used to harden CoreIdentity’s execution stack in real operating conditions—before client exposure."
-      />
+      <p className="text-xs uppercase tracking-wide text-white/60 mb-3">
+  Internal operating agent (non-client-facing)
+</p>
+
+<h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
+  AGO-1
+</h1>
+
+<p className="mt-4 text-lg text-white/70 max-w-3xl">
+  {/* keep your existing subtitle sentence here (copy it from the old prop) */}
+</p>
 
       <Section>
         <SectionTitle>What AGO‑1 is</SectionTitle>

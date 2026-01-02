@@ -4,11 +4,17 @@ import { Card, PageHero, Section, SectionTitle, ButtonLink } from "../components
 export function CoreIdentityAdvisoryGroupPage() {
   return (
     <div>
-      <PageHero
-        eyebrow="Advisory capability"
-        title="CoreIdentity AI Advisory Group"
-        subtitle="Governance-first advisory engagements that generate early revenue, validate real operational needs, and feed hardened learnings back into the platform roadmap."
-      />
+      <p className="text-xs uppercase tracking-wide text-white/60 mb-3">
+  Advisory capability
+</p>
+
+<h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
+  CoreIdentity AI Advisory Group
+</h1>
+
+<p className="mt-4 text-lg text-white/70 max-w-3xl">
+  {/* keep your existing subtitle sentence here (copy it from the old prop) */}
+</p>
 
       <Section>
         <SectionTitle>What we do</SectionTitle>
