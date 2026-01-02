@@ -39,6 +39,7 @@ const routeTree = rootRoute.addChildren([
   sentinelRoute,
   nexusRoute,
   smartRoute,
+  ago1Route,
   advisoryRoute,
   coreidentityAIAdvisoryGroupRoute,
   aisRoute,
