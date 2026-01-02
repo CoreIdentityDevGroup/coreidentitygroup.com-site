@@ -23,7 +23,11 @@ const coreIdentityRoute = createRoute({ getParentRoute: () => rootRoute, path: "
 const sentinelRoute = createRoute({ getParentRoute: () => rootRoute, path: "/sentinel-os", component: SentinelOSPage });
 const nexusRoute = createRoute({ getParentRoute: () => rootRoute, path: "/nexus-os", component: NexusOSPage });
 const smartRoute = createRoute({ getParentRoute: () => rootRoute, path: "/smartnation-ai", component: SmartNationAIPage });
-const ago1Route = createRoute({ getParentRoute: () => rootRoute, path: "/ago-1", component: AGO1Page });
+export const ago1Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/ago-1",
+  component: AGO1Page,
+});
 const advisoryRoute = createRoute({ getParentRoute: () => rootRoute, path: "/coreidentity-advisory-group", component: CoreIdentityAdvisoryGroupPage });
 const coreidentityAIAdvisoryGroupRoute = createRoute({ getParentRoute: () => rootRoute, path: "/coreidentity-ai-advisory-group", component: CoreIdentityAdvisoryGroupPage });
 const aisRoute = createRoute({ getParentRoute: () => rootRoute, path: "/agentidentity-systems", component: AgentIdentitySystemsPage });
