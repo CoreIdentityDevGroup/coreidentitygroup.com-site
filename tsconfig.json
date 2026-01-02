@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "Bundler",
@@ -16,14 +12,9 @@
     "jsx": "react-jsx",
     "strict": true,
     "types": [
-      "types": [
-  "vite/client",
-  "@cloudflare/workers-types"
-]
+      "vite/client",
+      "@cloudflare/workers-types"
     ]
   },
-  "include": [
-    "src",
-    "functions"
-  ]
+  "include": ["src", "functions"]
 }
