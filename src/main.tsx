@@ -18,39 +18,98 @@ function showFatal(message: string) {
 
   forceVisibleRoot(el);
 
-  el.innerHTML = `
-    <div style="padding:16px;font-family:system-ui;color:#fff;background:#111;min-height:100vh;">
-      <h1 style="font-size:20px;margin:0 0 12px 0;">Site Error</h1>
-      <pre style="white-space:pre-wrap;word-break:break-word;background:#222;padding:12px;border-radius:8px;">
-${message}
-      </pre>
-      <p style="opacity:.8;margin-top:12px;">(Temporary debug screen.)</p>
-    </div>
-  `;
+  // No template literals (backticks) -> avoids TS1160 errors
+  el.innerHTML = "";
+  const wrap = document.createElement("div");
+  wrap.style.padding = "16px";
+  wrap.style.fontFamily = "system-ui";
+  wrap.style.color = "#fff";
+  wrap.style.background = "#111";
+  wrap.style.minHeight = "100vh";
+
+  const h1 = document.createElement("h1");
+  h1.textContent = "Site Error";
+  h1.style.fontSize = "20px";
+  h1.style.margin = "0 0 12px 0";
+
+  const pre = document.createElement("pre");
+  pre.textContent = message;
+  pre.style.whiteSpace = "pre-wrap";
+  pre.style.wordBreak = "break-word";
+  pre.style.background = "#222";
+  pre.style.padding = "12px";
+  pre.style.borderRadius = "8px";
+
+  const p = document.createElement("p");
+  p.textContent = "(Temporary debug screen.)";
+  p.style.opacity = "0.8";
+  p.style.marginTop = "12px";
+
+  wrap.appendChild(h1);
+  wrap.appendChild(pre);
+  wrap.appendChild(p);
+  el.appendChild(wrap);
 }
 
-// These only help if code executes—so we also lazy-load router below
 window.addEventListener("error", (e) => {
-  showFatal(`window.error:\n${e.message}\n\n${e.filename}:${e.lineno}:${e.colno}`);
+  showFatal(
+    "window.error:\n" +
+      e.message +
+      "\n\n" +
+      (e.filename || "") +
+      ":" +
+      String(e.lineno) +
+      ":" +
+      String(e.colno)
+  );
 });
+
 window.addEventListener("unhandledrejection", (e: any) => {
   const reason =
     typeof e.reason === "string"
       ? e.reason
       : e.reason?.message || JSON.stringify(e.reason, null, 2);
-  showFatal(`unhandledrejection:\n${reason}`);
+  showFatal("unhandledrejection:\n" + reason);
 });
 
 const rootEl = document.getElementById("root");
 if (!rootEl) {
-  // If index.html is wrong, this will show nothing—but at least we tried
-  throw new Error(`Missing #root element. Check index.html for <div id="root"></div>.`);
+  throw new Error('Missing #root element. Check index.html for <div id="root"></div>.');
 }
 
 forceVisibleRoot(rootEl);
 
-// Render a boot message immediately (proves main.tsx is executing)
-rootEl.innerHTML = `
-  <div style="padding:16px;font-family:system-ui;color:#fff;background:#111;min-height:100vh;">
-    <h1 style="font-size:20px;margin:0 0 12px 0;">Loading…</h1>
-    <p style="opacity:.8;">Booting application bundle.</
+// Immediate boot marker
+rootEl.innerHTML = "";
+const boot = document.createElement("div");
+boot.style.padding = "16px";
+boot.style.fontFamily = "system-ui";
+boot.style.color = "#fff";
+boot.style.background = "#111";
+boot.style.minHeight = "100vh";
+
+const bootH = document.createElement("h1");
+bootH.textContent = "Loading…";
+bootH.style.fontSize = "20px";
+bootH.style.margin = "0 0 12px 0";
+
+const bootP = document.createElement("p");
+bootP.textContent = "Booting application bundle.";
+bootP.style.opacity = "0.8";
+
+boot.appendChild(bootH);
+boot.appendChild(bootP);
+rootEl.appendChild(boot);
+
+// Lazy-load router so import-time crashes are catchable
+import("./router")
+  .then(({ router }) => {
+    ReactDOM.createRoot(rootEl).render(
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+    );
+  })
+  .catch((err: any) => {
+    showFatal("Router import failed:\n" + (err?.stack || err?.message || String(err)));
+  });
