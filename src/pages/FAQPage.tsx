@@ -41,25 +41,25 @@ const faq: FAQItem[] = [
     ),
   },
   {
-    q: "How do Sentinel OS, Nexus OS, and SmartNation AI relate to each other?",
+    q: "How do Sentinel, Nexus, and SmartNation relate to each other?",
     a: (
       <div className="space-y-3 text-muted-foreground leading-relaxed">
         <p>They form a three-layer governed execution stack:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>
-            <Link to="/sentinel-os" className="text-blue-100 hover:text-blue-200">
+            <Link to="/sentinel" className="text-blue-100 hover:text-blue-200">
               Sentinel OS
             </Link>{" "}
             — governance: policy enforcement, approvals, identity boundaries, auditability, and evidence capture.
           </li>
           <li>
-            <Link to="/nexus-os" className="text-blue-100 hover:text-blue-200">
+            <Link to="/nexus" className="text-blue-100 hover:text-blue-200">
               Nexus OS
             </Link>{" "}
             — orchestration: workflow coordination, integrations, retries, recovery, and controlled execution.
           </li>
           <li>
-            <Link to="/smartnation-ai" className="text-blue-100 hover:text-blue-200">
+            <Link to="/smartnation" className="text-blue-100 hover:text-blue-200">
               SmartNation AI
             </Link>{" "}
             — delivery surface: packages governed deployments and repeatable patterns by industry/use case.
@@ -96,11 +96,11 @@ const faq: FAQItem[] = [
     ),
   },
   {
-    q: "What is CoreIdentity Technologies?",
+    q: "What is CoreIdentity?",
     a: (
       <p className="text-muted-foreground leading-relaxed">
-        <Link to="/coreidentity-technologies" className="text-blue-100 hover:text-blue-200">
-          CoreIdentity Technologies
+        <Link to="/coreidentity" className="text-blue-100 hover:text-blue-200">
+          CoreIdentity
         </Link>{" "}
         is the platform company that owns and monetizes governed digital labor. It houses the execution stack and the productization of repeatable
         deployments.
@@ -108,11 +108,11 @@ const faq: FAQItem[] = [
     ),
   },
   {
-    q: "What is CoreIdentity AI Advisory Group?",
+    q: "What is CoreIdentity Advisory Group?",
     a: (
       <p className="text-muted-foreground leading-relaxed">
-        <Link to="/coreidentity-ai-advisory-group" className="text-blue-100 hover:text-blue-200">
-          CoreIdentity AI Advisory Group
+        <Link to="/coreidentityadvisorygroup" className="text-blue-100 hover:text-blue-200">
+          CoreIdentity Advisory Group
         </Link>{" "}
         is the advisory capability used for early revenue, executive readiness and risk reviews, and governance-first assessments. It also feeds validated
         operational learnings back into the platform roadmap.
@@ -123,7 +123,7 @@ const faq: FAQItem[] = [
     q: "What is AgentIdentity Systems?",
     a: (
       <p className="text-muted-foreground leading-relaxed">
-        <Link to="/agentidentity-systems" className="text-blue-100 hover:text-blue-200">
+        <Link to="/agentidentitysystems" className="text-blue-100 hover:text-blue-200">
           AgentIdentity Systems
         </Link>{" "}
         is a governance- and identity-focused system component intended for regulated environments. It is designed to be compatible with Sentinel OS and can

@@ -13,7 +13,7 @@ export function Layout() {
   }, [pathname, hash]);
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(1200px_700px_at_50%_0%,rgba(59,130,246,0.18),rgba(0,0,0,0)_55%),linear-gradient(180deg,rgba(2,6,23,1)_0%,rgba(0,0,0,1)_70%)]">
+    <div style={{ minHeight: "100vh", background: "#0b1220", color: "white" }}>
       <Header />
       <main className="mx-auto container-max px-4 py-10">
         <Outlet />
