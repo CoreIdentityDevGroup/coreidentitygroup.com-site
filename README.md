@@ -37,3 +37,4 @@ Do this locally on a computer:
 If the page is still blank, open DevTools → Console and check for:
 - 404s on `/assets/...` (usually wrong output directory or rewrite missing)
 - A JavaScript error caused by a missing environment variable
+Preview build check
