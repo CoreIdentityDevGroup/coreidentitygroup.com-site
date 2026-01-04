@@ -8,17 +8,19 @@ import { Layout } from "./components/Layout";
 
 import { HomePage } from "./pages/HomePage";
 import { PortfolioPage } from "./pages/PortfolioPage";
-import { CoreIdentityTechnologiesPage } from "./pages/CoreIdentityTechnologiesPage";
-import { SentinelOSPage } from "./pages/SentinelOSPage";
-import { NexusOSPage } from "./pages/NexusOSPage";
-import { SmartNationAIPage } from "./pages/SmartNationAIPage";
-import { CoreIdentityAdvisoryGroupPage } from "./pages/CoreIdentityAdvisoryGroupPage";
-import { AgentIdentitySystemsPage } from "./pages/AgentIdentitySystemsPage";
-import { AGO1Page } from "./pages/AGO1Page";
 import { ResourcesPage } from "./pages/ResourcesPage";
 import { FAQPage } from "./pages/FAQPage";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
+
+import { SentinelOSPage } from "./pages/SentinelOSPage";
+import { NexusOSPage } from "./pages/NexusOSPage";
+import { SmartNationAIPage } from "./pages/SmartNationAIPage";
+
+import { CoreIdentityTechnologiesPage } from "./pages/CoreIdentityTechnologiesPage";
+import { CoreIdentityAdvisoryGroupPage } from "./pages/CoreIdentityAdvisoryGroupPage";
+import { AgentIdentitySystemsPage } from "./pages/AgentIdentitySystemsPage";
+import { AGO1Page } from "./pages/AGO1Page";
 
 /* ROOT */
 const rootRoute = createRootRoute({
@@ -36,49 +38,6 @@ const portfolioRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/portfolio",
   component: PortfolioPage,
-});
-
-const coreIdentityRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/coreidentity",
-  component: CoreIdentityTechnologiesPage,
-});
-
-const sentinelRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/sentinel",
-  component: SentinelOSPage,
-});
-
-const nexusRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/nexus",
-  component: NexusOSPage,
-});
-
-const smartNationRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/smartnation",
-  component: SmartNationAIPage,
-});
-
-/* SECONDARY */
-export const ago1Route = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/ago1",
-  component: AGO1Page,
-});
-
-const advisoryRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/coreidentityadvisorygroup",
-  component: CoreIdentityAdvisoryGroupPage,
-});
-
-const aisRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/agentidentitysystems",
-  component: AgentIdentitySystemsPage,
 });
 
 const resourcesRoute = createRoute({
@@ -105,21 +64,66 @@ const contactRoute = createRoute({
   component: ContactPage,
 });
 
+/* PLATFORM */
+const sentinelRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/sentinelos",
+  component: SentinelOSPage,
+});
+
+const nexusRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/nexusos",
+  component: NexusOSPage,
+});
+
+const smartnationRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/smartnationai",
+  component: SmartNationAIPage,
+});
+
+/* COREIDENTITY */
+const coreidentityTechnologiesRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/coreidentitytechnologies",
+  component: CoreIdentityTechnologiesPage,
+});
+
+const advisoryRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/coreidentityaiadvisorygroup",
+  component: CoreIdentityAdvisoryGroupPage,
+});
+
+const agentIdentityRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/agentidentitysystems",
+  component: AgentIdentitySystemsPage,
+});
+
+/* AGENT */
+const ago1Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/ago1",
+  component: AGO1Page,
+});
+
 /* TREE */
 const routeTree = rootRoute.addChildren([
   indexRoute,
   portfolioRoute,
-  coreIdentityRoute,
-  sentinelRoute,
-  nexusRoute,
-  smartNationRoute,
-  ago1Route,
-  advisoryRoute,
-  aisRoute,
   resourcesRoute,
   faqRoute,
   aboutRoute,
   contactRoute,
+  sentinelRoute,
+  nexusRoute,
+  smartnationRoute,
+  coreidentityTechnologiesRoute,
+  advisoryRoute,
+  agentIdentityRoute,
+  ago1Route,
 ]);
 
 export const router = createRouter({ routeTree });
