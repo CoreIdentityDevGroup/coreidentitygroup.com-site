@@ -3,28 +3,37 @@ import { ButtonLink } from "../components/ButtonLink";
 
 export function AGO1Page() {
   return (
-    <section className="max-w-4xl mx-auto py-16">
-      <h1 className="text-4xl font-bold mb-6">AGO-1</h1>
+    <main className="max-w-5xl mx-auto px-6 py-12">
+      <h1 className="text-3xl font-semibold tracking-tight">
+        AGO-1 Digital Labor Agent
+      </h1>
 
-      <p className="text-lg text-gray-300 mb-8">
-        AGO-1 is Core Holding Corporation’s first operational digital labor
-        agent, designed to demonstrate governed autonomy, compliance-first
-        execution, and real enterprise utility.
+      <p className="mt-4 opacity-80 max-w-3xl">
+        AGO-1 is the internal and enterprise-facing digital labor agent designed
+        to operate under strict governance, auditability, and human oversight.
       </p>
 
-      <div className="flex flex-wrap gap-4">
-        <ButtonLink to="/sentinel" variant="secondary">
-          View Sentinel
+      <div className="mt-10 grid gap-4 sm:grid-cols-2">
+        <ButtonLink to="/sentinelos" variant="secondary">
+          View Sentinel OS
         </ButtonLink>
 
-        <ButtonLink to="/nexus" variant="secondary">
-          View Nexus
+        <ButtonLink to="/nexusos" variant="secondary">
+          View Nexus OS
         </ButtonLink>
 
-        <ButtonLink to="/smartnation" variant="secondary">
-          View SmartNation
+        <ButtonLink to="/smartnationai" variant="secondary">
+          View SmartNation AI
+        </ButtonLink>
+
+        <ButtonLink to="/coreidentitytechnologies" variant="secondary">
+          CoreIdentity Technologies
+        </ButtonLink>
+
+        <ButtonLink to="/coreidentityaiadvisorygroup" variant="secondary">
+          Advisory Group
         </ButtonLink>
       </div>
-    </section>
+    </main>
   );
 }
