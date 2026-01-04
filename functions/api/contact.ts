@@ -1,3 +1,16 @@
+if (request.method === "GET") {
+  return new Response(
+    JSON.stringify({ ok: true, hit: "pages-function", route: "/api/contact" }),
+    {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+        "X-CHC-FN": "contact",
+        "Access-Control-Allow-Origin": "*",
+      },
+    }
+  );
+}
 export const onRequest = async ({ request, env }: any) => {
   // Handle CORS preflight
   if (request.method === "OPTIONS") {
