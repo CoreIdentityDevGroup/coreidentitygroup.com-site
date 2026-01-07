@@ -1,144 +1,128 @@
-export const onRequest = async ({ request, env }: { request: Request; env: any }) => {
-  // CORS preflight
-  if (request.method === "OPTIONS") {
-    return new Response(null, {
-      status: 204,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
-    });
-  }
-
-  if (request.method !== "POST") {
-    return new Response(JSON.stringify({ ok: false, error: "Method not allowed" }), {
-      status: 405,
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-    });
-  }
-
+export const onRequestPost: PagesFunction = async ({ request, env }) => {
   try {
-    const { name, email, subject, message } = await request.json();
+    const {
+      ZEPTO_URL,
+      ZEPTO_API_KEY,
+      ZEPTO_FROM_EMAIL,
+      ZEPTO_TO_EMAIL,
+    } = env as unknown as Record<string, string>;
 
-    if (!name || !email || !subject || !message) {
-      return new Response(JSON.stringify({ ok: false, error: "Missing required fields" }), {
-        status: 400,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-      });
-    }
+    const missing: Record<string, boolean> = {
+      ZEPTO_URL: !ZEPTO_URL,
+      ZEPTO_API_KEY: !ZEPTO_API_KEY,
+      ZEPTO_FROM_EMAIL: !ZEPTO_FROM_EMAIL,
+      ZEPTO_TO_EMAIL: !ZEPTO_TO_EMAIL,
+    };
 
-    // Required secrets
-    const zeptoUrl = env.ZEPTO_URL;
-    const zeptoApiKey = env.ZEPTO_API_KEY;
-    const fromEmail = env.ZEPTO_FROM_EMAIL;
-    const fromName = env.ZEPTO_FROM_NAME || "Core Holding Corporation";
-    const toEmail = env.ZEPTO_TO_EMAIL;
-
-    if (!zeptoUrl || !zeptoApiKey || !fromEmail || !toEmail) {
+    if (Object.values(missing).some(Boolean)) {
       return new Response(
         JSON.stringify({
           ok: false,
           error: "Server misconfigured: missing ZeptoMail env vars",
-          missing: {
-            ZEPTO_URL: !zeptoUrl,
-            ZEPTO_API_KEY: !zeptoApiKey,
-            ZEPTO_FROM_EMAIL: !fromEmail,
-            ZEPTO_TO_EMAIL: !toEmail,
-          },
+          missing,
         }),
-        {
-          status: 500,
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
+        { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
 
-    // ZeptoMail payload (Send Mail API format)
-    const zeptoPayload = {
-      from: { address: fromEmail, name: fromName },
-      to: [{ email_address: { address: toEmail, name: "CHC Inbox" } }],
-      subject: `[Website Contact] ${subject}`,
-      htmlbody: `
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-        <p><strong>Message:</strong><br/>${escapeHtml(message).replace(/\n/g, "<br/>")}</p>
-      `,
-      // optional text fallback
-      textbody: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`,
-    };
+    const { name, email, subject, message } = await request.json();
 
-    const resp = await fetch(zeptoUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // IMPORTANT: Header name must be a string key
-        Authorization: `Zoho-enczapikey ${zeptoApiKey}`,
-      },
-      body: JSON.stringify(zeptoPayload),
-    });
-
-    const respText = await resp.text();
-
-    if (!resp.ok) {
-      // Surface ZeptoMail’s error details back to us
+    if (!name || !email || !subject || !message) {
       return new Response(
         JSON.stringify({
           ok: false,
-          error: "Email delivery failed",
-          zeptoStatus: resp.status,
-          zeptoResponse: respText,
+          error: "Missing required fields: name, email, subject, message",
         }),
-        {
-          status: 502,
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Allow-Methods": "POST, OPTIONS",
-          },
-        }
+        { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
 
-    return new Response(JSON.stringify({ ok: true }), {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-    });
+    // ZeptoMail "Send Mail" payload (Transactional template-less)
+    // If your Zepto account requires a specific structure, Zepto will tell us in the response body.
+    const zeptoPayload = {
+      from: { address: ZEPTO_FROM_EMAIL, name: "CHC Website" },
+      to: [{ email_address: { address: ZEPTO_TO_EMAIL, name: "CHC Inbox" } }],
+      subject: `[CHC Contact] ${subject}`,
+      htmlbody: `
+        <h3>New Contact Form Submission</h3>
+        <p><b>Name:</b> ${escapeHtml(String(name))}</p>
+        <p><b>Email:</b> ${escapeHtml(String(email))}</p>
+        <p><b>Subject:</b> ${escapeHtml(String(subject))}</p>
+        <p><b>Message:</b><br/>${escapeHtml(String(message)).replace(/\n/g, "<br/>")}</p>
+      `,
+      reply_to: [{ address: String(email), name: String(name) }],
+    };
+
+    // Normalize endpoint (avoid double slashes)
+    const zeptoUrl = ZEPTO_URL.replace(/\/+$/, "");
+
+    // Try the most common Zepto auth header patterns.
+    // We send the first; if it fails with auth-type error, we retry with the alternate.
+    const authHeaders = [
+      { Authorization: `Zoho-enczapikey ${ZEPTO_API_KEY}` },
+      { Authorization: `Zoho-enczapikey ${ZEPTO_API_KEY.trim()}` },
+      // Alternate seen in some Zepto contexts:
+      { Authorization: `Zoho-enczapikey=${ZEPTO_API_KEY}` },
+    ];
+
+    let lastStatus = 0;
+    let lastBody = "";
+    let lastHeaderUsed: Record<string, string> | null = null;
+
+    for (const auth of authHeaders) {
+      lastHeaderUsed = auth;
+
+      const resp = await fetch(zeptoUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...auth,
+        },
+        body: JSON.stringify(zeptoPayload),
+      });
+
+      lastStatus = resp.status;
+      lastBody = await resp.text();
+
+      if (resp.ok) {
+        return new Response(JSON.stringify({ ok: true }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
+
+      // If it's not an auth failure, don't keep retrying headers.
+      // We want to preserve signal.
+      if (![401, 403].includes(resp.status)) break;
+    }
+
+    return new Response(
+      JSON.stringify({
+        ok: false,
+        error: "Email delivery failed",
+        zeptoStatus: lastStatus,
+        zeptoResponse: lastBody,
+        zeptoUrl: env.ZEPTO_URL ? env.ZEPTO_URL.replace(/\/+$/, "") : null,
+        from: env.ZEPTO_FROM_EMAIL || null,
+        to: env.ZEPTO_TO_EMAIL || null,
+        authPrefixTried: lastHeaderUsed?.Authorization?.split(" ")[0] || null,
+      }),
+      { status: 502, headers: { "Content-Type": "application/json" } }
+    );
   } catch (err: any) {
     return new Response(
       JSON.stringify({
         ok: false,
-        error: "Unhandled exception",
-        detail: err?.message || String(err),
+        error: "Unhandled server error",
+        details: String(err?.message || err),
       }),
-      {
-        status: 500,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-      }
+      { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
 };
 
-// Minimal HTML escaping to prevent breaking markup
 function escapeHtml(input: string) {
-  return String(input)
+  return input
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
