@@ -1,140 +1,116 @@
-// functions/api/contact.ts
-export const onRequestPost: PagesFunction = async ({ request, env }) => {
-  try {
-    const missing: Record<string, boolean> = {
-      ZEPTO_API_KEY: !env.ZEPTO_API_KEY,
-      ZEPTO_FROM_EMAIL: !env.ZEPTO_FROM_EMAIL,
-      ZEPTO_TO_EMAIL: !env.ZEPTO_TO_EMAIL,
-    };
+export const onRequest = async ({ request, env }: any) => {
+  // CORS headers
+  const corsHeaders = () => ({
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+  });
 
-    if (Object.values(missing).some(Boolean)) {
+  // Handle preflight
+  if (request.method === "OPTIONS") {
+    return new Response(null, { status: 204, headers: corsHeaders() });
+  }
+
+  if (request.method !== "POST") {
+    return new Response(
+      JSON.stringify({ ok: false, error: "Method not allowed" }),
+      { status: 405, headers: corsHeaders() }
+    );
+  }
+
+  try {
+    const body = await request.json();
+    const { name, email, subject, message } = body || {};
+
+    if (!name || !email || !message) {
+      return new Response(
+        JSON.stringify({ ok: false, error: "Missing required fields" }),
+        { status: 400, headers: corsHeaders() }
+      );
+    }
+
+    // ---- ENV VARS (trim is critical) ----
+    const ZEPTO_API_KEY = String(env.ZEPTO_API_KEY || "").trim();
+    const FROM_EMAIL = String(env.ZEPTO_FROM_EMAIL || "").trim();
+    const TO_EMAIL = String(env.ZEPTO_TO_EMAIL || "").trim();
+
+    if (!ZEPTO_API_KEY || !FROM_EMAIL || !TO_EMAIL) {
       return new Response(
         JSON.stringify({
           ok: false,
-          error: "Server misconfigured: missing ZeptoMail env vars",
-          missing,
+          error: "Email service not configured",
+          envCheck: {
+            apiKeyLength: ZEPTO_API_KEY.length,
+            fromSet: !!FROM_EMAIL,
+            toSet: !!TO_EMAIL,
+          },
         }),
         { status: 500, headers: corsHeaders() }
       );
     }
 
-    const body = await request.json().catch(() => null);
-    if (!body) {
-      return new Response(JSON.stringify({ ok: false, error: "Invalid JSON" }), {
-        status: 400,
-        headers: corsHeaders(),
-      });
-    }
-
-    const name = String(body.name ?? "").trim();
-    const email = String(body.email ?? "").trim();
-    const subject = String(body.subject ?? "").trim();
-    const message = String(body.message ?? "").trim();
-
-    if (!name || !email || !subject || !message) {
-      return new Response(
-        JSON.stringify({
-          ok: false,
-          error: "Missing required fields: name, email, subject, message",
-        }),
-        { status: 400, headers: corsHeaders() }
-      );
-    }
-
-    // Basic email sanity check (not perfect, but blocks obvious garbage)
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return new Response(JSON.stringify({ ok: false, error: "Invalid email" }), {
-        status: 400,
-        headers: corsHeaders(),
-      });
-    }
-
-    const zeptoUrl = "https://api.zeptomail.com/v1.1/email";
-
-    // IMPORTANT: Zepto v1.1 expects top-level subject + htmlbody/textbody (NOT content:{...})
-    const htmlbody = `
-      <h3>New contact submission</h3>
-      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-      <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-      <hr />
-      <pre style="white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;">${escapeHtml(
-        message
-      )}</pre>
-    `.trim();
-
+    // ---- ZEPTO PAYLOAD (TEXT ONLY, SAFE) ----
     const zeptoPayload = {
-      from: { address: env.ZEPTO_FROM_EMAIL },
-      to: [{ email_address: { address: env.ZEPTO_TO_EMAIL } }],
-      subject: `CHC Contact: ${subject}`,
-      htmlbody,
+      from: { address: FROM_EMAIL },
+      to: [{ email_address: { address: TO_EMAIL } }],
+      subject: subject || "Website Contact Request",
+      textbody:
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Subject: ${subject || "(none)"}\n\n` +
+        `${message}`,
     };
 
-    const resp = await fetch(zeptoUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Zoho-enczapikey ${env.ZEPTO_API_KEY}`,
-      },
-      body: JSON.stringify(zeptoPayload),
-    });
+    const zeptoResponse = await fetch(
+      "https://api.zeptomail.com/v1.1/email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          "User-Agent": "chc-pages-contact/1.0",
+          Authorization: `Zoho-enczapikey ${ZEPTO_API_KEY}`,
+        },
+        body: JSON.stringify(zeptoPayload),
+      }
+    );
 
-    const respText = await resp.text();
+    const zeptoText = await zeptoResponse.text();
 
-    if (!resp.ok) {
+    if (!zeptoResponse.ok) {
       return new Response(
         JSON.stringify({
           ok: false,
           error: "Email delivery failed",
-          zeptoStatus: resp.status,
-          zeptoResponse: safeJsonOrText(respText),
-          zeptoPayloadPreview: {
-            from: env.ZEPTO_FROM_EMAIL,
-            to: env.ZEPTO_TO_EMAIL,
-            subject: `CHC Contact: ${subject}`,
+          zeptoStatus: zeptoResponse.status,
+          zeptoResponse: zeptoText || "(empty)",
+          from: FROM_EMAIL,
+          to: TO_EMAIL,
+          apiKeyMeta: {
+            length: ZEPTO_API_KEY.length,
+            head: ZEPTO_API_KEY.slice(0, 4),
+            tail: ZEPTO_API_KEY.slice(-4),
           },
         }),
         { status: 502, headers: corsHeaders() }
       );
     }
 
-    return new Response(JSON.stringify({ ok: true }), {
-      status: 200,
-      headers: corsHeaders(),
-    });
+    return new Response(
+      JSON.stringify({
+        ok: true,
+        message: "Email sent successfully",
+      }),
+      { status: 200, headers: corsHeaders() }
+    );
   } catch (err: any) {
     return new Response(
-      JSON.stringify({ ok: false, error: err?.message ?? "Unhandled error" }),
+      JSON.stringify({
+        ok: false,
+        error: "Unhandled exception",
+        message: err?.message || String(err),
+      }),
       { status: 500, headers: corsHeaders() }
     );
   }
 };
-
-export const onRequestOptions: PagesFunction = async () =>
-  new Response(null, { status: 204, headers: corsHeaders() });
-
-function corsHeaders() {
-  return {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Content-Type": "application/json",
-  };
-}
-
-function escapeHtml(input: string) {
-  return input
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
-function safeJsonOrText(s: string) {
-  try {
-    return JSON.parse(s);
-  } catch {
-    return s;
-  }
-}
