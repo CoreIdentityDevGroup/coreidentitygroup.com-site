@@ -62,7 +62,7 @@ export const onRequest = async ({ request, env }: any) => {
     };
 
     const zeptoResponse = await fetch(
-      "https://api.zeptomail.com/v1.1/email",
+      "https://api.zeptomail.in/v1.1/email",
       {
         method: "POST",
         headers: {
