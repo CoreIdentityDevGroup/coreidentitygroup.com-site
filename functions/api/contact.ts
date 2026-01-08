@@ -1,88 +1,73 @@
-export async function onRequestPost(context: any) {
+export const onRequestPost: PagesFunction = async ({ request, env }) => {
   try {
-    const { request, env } = context;
+    const body = await request.json().catch(() => null);
 
-    // ---- Read env vars (trim to kill accidental whitespace/newlines) ----
-    const ZEPTO_URL = String(env.ZEPTO_URL || "").trim(); // e.g. https://api.zeptomail.com/v1.1/email OR https://api.zeptomail.in/v1.1/email
-    const ZEPTO_API_KEY = String(env.ZEPTO_API_KEY || "").trim(); // the API token
-    const ZEPTO_FROM_EMAIL = String(env.ZEPTO_FROM_EMAIL || "").trim(); // must be a verified sender in ZeptoMail
-    const ZEPTO_TO_EMAIL = String(env.ZEPTO_TO_EMAIL || "").trim(); // where contact submissions go
+    if (!body?.name || !body?.email || !body?.message) {
+      return new Response(
+        JSON.stringify({ ok: false, error: "Invalid request payload" }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
 
-    const missing: Record<string, boolean> = {
-      ZEPTO_URL: !ZEPTO_URL,
-      ZEPTO_API_KEY: !ZEPTO_API_KEY,
-      ZEPTO_FROM_EMAIL: !ZEPTO_FROM_EMAIL,
-      ZEPTO_TO_EMAIL: !ZEPTO_TO_EMAIL,
-    };
+    const {
+      ZEPTO_API_KEY,
+      ZEPTO_FROM_EMAIL,
+      ZEPTO_TO_EMAIL,
+      ZEPTO_URL = "https://api.zeptomail.com/v1.1/email"
+    } = env;
 
-    if (Object.values(missing).some(Boolean)) {
+    const missing = [];
+    if (!ZEPTO_API_KEY) missing.push("ZEPTO_API_KEY");
+    if (!ZEPTO_FROM_EMAIL) missing.push("ZEPTO_FROM_EMAIL");
+    if (!ZEPTO_TO_EMAIL) missing.push("ZEPTO_TO_EMAIL");
+
+    if (missing.length) {
+      return new Response(
+        JSON.stringify({ ok: false, error: "Missing env vars", missing }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    if (ZEPTO_FROM_EMAIL === ZEPTO_TO_EMAIL) {
       return new Response(
         JSON.stringify({
           ok: false,
-          error: "Server misconfigured: missing ZeptoMail env vars",
-          missing,
+          error: "FROM and TO must be different",
+          from: ZEPTO_FROM_EMAIL,
+          to: ZEPTO_TO_EMAIL
         }),
         { status: 500, headers: { "Content-Type": "application/json" } }
       );
     }
 
-    // ---- Parse inbound request ----
-    let body: any;
-    try {
-      body = await request.json();
-    } catch {
-      return new Response(
-        JSON.stringify({ ok: false, error: "Invalid JSON body" }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
-      );
-    }
+    const subject = body.subject
+      ? `CHC Contact: ${body.subject}`
+      : "CHC Contact Form Submission";
 
-    const name = String(body?.name || "").trim();
-    const email = String(body?.email || "").trim();
-    const subject = String(body?.subject || "").trim();
-    const message = String(body?.message || "").trim();
+    const htmlBody = `
+      <p><strong>Name:</strong> ${body.name}</p>
+      <p><strong>Email:</strong> ${body.email}</p>
+      <p><strong>Message:</strong></p>
+      <p>${body.message}</p>
+    `;
 
-    if (!name || !email || !subject || !message) {
-      return new Response(
-        JSON.stringify({
-          ok: false,
-          error: "Missing required fields",
-          required: ["name", "email", "subject", "message"],
-        }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
-      );
-    }
-
-    // ---- Zepto payload (KNOWN-GOOD schema) ----
-    const html = `
-      <div style="font-family: Arial, sans-serif; line-height: 1.4;">
-        <h2>CHC Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-        <hr />
-        <p style="white-space: pre-wrap;"><strong>Message:</strong><br/>${escapeHtml(message)}</p>
-      </div>
-    `.trim();
-
+    // ⚠️ CRITICAL FIX: htmlbody (NOT html)
     const zeptoPayload = {
       from: { address: ZEPTO_FROM_EMAIL },
       to: [{ email_address: { address: ZEPTO_TO_EMAIL } }],
       content: {
-        subject: `CHC Contact: ${subject}`,
-        html,
-      },
+        subject,
+        htmlbody: htmlBody
+      }
     };
-
-    // ---- Call Zepto ----
-    const headers = new Headers();
-    headers.set("Content-Type", "application/json");
-    headers.set("Authorization", `Zoho-enczapikey ${ZEPTO_API_KEY}`);
 
     const resp = await fetch(ZEPTO_URL, {
       method: "POST",
-      headers,
-      body: JSON.stringify(zeptoPayload),
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Zoho-enczapikey ${ZEPTO_API_KEY}`
+      },
+      body: JSON.stringify(zeptoPayload)
     });
 
     const respText = await resp.text();
@@ -94,21 +79,19 @@ export async function onRequestPost(context: any) {
           error: "Email delivery failed",
           zeptoStatus: resp.status,
           zeptoResponse: respText,
-          zeptoUrl: ZEPTO_URL,
-          from: ZEPTO_FROM_EMAIL,
-          to: ZEPTO_TO_EMAIL,
+          resolved: {
+            from: ZEPTO_FROM_EMAIL,
+            to: ZEPTO_TO_EMAIL
+          }
         }),
         { status: 502, headers: { "Content-Type": "application/json" } }
       );
     }
 
-    // Success
     return new Response(
       JSON.stringify({
         ok: true,
-        message: "Email request accepted by ZeptoMail",
-        zeptoStatus: resp.status,
-        zeptoResponse: respText,
+        message: "Email sent successfully"
       }),
       { status: 200, headers: { "Content-Type": "application/json" } }
     );
@@ -117,18 +100,9 @@ export async function onRequestPost(context: any) {
       JSON.stringify({
         ok: false,
         error: "Unhandled server error",
-        detail: String(err?.message || err),
+        detail: err?.message || String(err)
       }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
-}
-
-function escapeHtml(input: string) {
-  return input
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
+};
