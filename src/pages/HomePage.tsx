@@ -1,110 +1,102 @@
-import * as React from "react";
+// src/pages/HomePage.tsx
 import { Link } from "@tanstack/react-router";
-import { IllustratedIcon } from "../components/IllustratedIcon";
 
-const CANONICAL =
-  "Core Holding Corporation is the parent organization that builds and governs infrastructure for agentic digital labor through CoreIdentity Technologies—a platform delivering a three-layer governed execution stack consisting of Sentinel OS, Nexus OS, and SmartNation AI, supported by CoreIdentity AI Advisory Group and AgentIdentity Systems.";
-
-type StackCardProps = {
-  title: string;
-  description: string;
-  to: string;
-  iconSrc: string;
-  iconAlt: string;
-  buttonLabel: string;
-};
-
-function StackCard({
-  title,
-  description,
-  to,
-  iconSrc,
-  iconAlt,
-  buttonLabel,
-}: StackCardProps) {
-  return (
-    <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.03)]">
-      <div className="flex items-start gap-4">
-        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3">
-          <IllustratedIcon
-            src={iconSrc}
-            alt={iconAlt}
-            size={56}
-            className="opacity-95"
-          />
-        </div>
-
-        <div className="min-w-0 flex-1">
-          <div className="text-xl font-semibold tracking-tight text-white">
-            {title}
-          </div>
-          <p className="mt-2 text-base leading-relaxed text-white/70">
-            {description}
-          </p>
-
-          <div className="mt-4">
-            <Link
-              to={to}
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.06] px-5 py-2.5 text-sm font-medium text-white/90 backdrop-blur transition hover:bg-white/[0.10] hover:text-white"
-            >
-              {buttonLabel}
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+import heroImg from "../assets/images/global-ai-governance-hero.webp";
 
 export function HomePage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 pb-20 pt-10">
-      {/* HERO */}
-      <header className="mb-10">
-        <h1 className="text-balance text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          Three-layer governed execution stack
-        </h1>
+    <div className="mx-auto max-w-5xl px-4 py-10">
+      {/* Hero */}
+      <div className="mb-10">
+        <div className="mb-8">
+          <div className="mb-4 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+            CORE HOLDING CORPORATION
+          </div>
 
-        <p className="mt-4 max-w-3xl text-pretty text-base leading-relaxed text-white/70 md:text-lg">
-          Governance-first execution: policy enforcement (Sentinel), orchestration
-          (Nexus), and digital labor deployment (SmartNation AI).
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            Governance-first infrastructure
+            <br />
+            for safe, auditable agentic execution.
+          </h1>
+
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70">
+            We build the control plane that keeps AI operations constrained, observable, and
+            accountable—so organizations can deploy agentic capability without losing policy,
+            approvals, and traceable evidence.
+          </p>
+
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link
+              to="/coreidentity-technologies"
+              className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/10 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-white/15"
+            >
+              Explore CoreIdentity Technologies
+            </Link>
+
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-transparent px-5 py-3 text-sm font-medium text-white/80 transition hover:bg-white/5 hover:text-white"
+            >
+              Talk to us
+            </Link>
+          </div>
+        </div>
+
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+          <img
+            src={heroImg}
+            alt="Global AI governance—Earth from space with secure, auditable network overlays"
+            className="h-auto w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* Value pillars */}
+      <div className="grid gap-4 sm:grid-cols-3">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <div className="text-sm font-semibold text-white">Policy-first</div>
+          <p className="mt-2 text-sm leading-relaxed text-white/70">
+            Define what AI can and cannot do—then enforce it with explicit constraints, approvals,
+            and guardrails.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <div className="text-sm font-semibold text-white">Audit-ready</div>
+          <p className="mt-2 text-sm leading-relaxed text-white/70">
+            Capture traceable evidence of inputs, actions, approvals, and outcomes—built for review,
+            compliance, and trust.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <div className="text-sm font-semibold text-white">Operational</div>
+          <p className="mt-2 text-sm leading-relaxed text-white/70">
+            Move from demos to real execution with controls that survive production complexity,
+            incidents, and change.
+          </p>
+        </div>
+      </div>
+
+      {/* Next step */}
+      <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div className="text-sm font-semibold text-white">Next step</div>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-white/70">
+          Start with the governed execution stack—Sentinel OS (governance), Nexus OS (orchestration),
+          and SmartNation AI (deployment). We keep authority explicit: humans lead, machines execute,
+          governance protects both.
         </p>
 
-        {/* Canonical / SEO-safe statement (kept as plain text for stability) */}
-        <p className="mt-4 max-w-3xl text-pretty text-sm leading-relaxed text-white/55">
-          {CANONICAL}
-        </p>
-      </header>
-
-      {/* STACK CARDS */}
-      <section className="grid grid-cols-1 gap-6">
-        <StackCard
-          title="Sentinel OS"
-          description="Governance layer enforcing policy, approvals, identity boundaries, and evidence capture."
-          to="/sentinel-os"
-          iconSrc="/assets/icons/sentinel.webp"
-          iconAlt="Sentinel OS"
-          buttonLabel="View Sentinel OS"
-        />
-
-        <StackCard
-          title="Nexus OS"
-          description="Orchestration layer coordinating workflows, integrations, retries, and recovery under constraints."
-          to="/nexus-os"
-          iconSrc="/assets/icons/nexus.webp"
-          iconAlt="Nexus OS"
-          buttonLabel="View Nexus OS"
-        />
-
-        <StackCard
-          title="SmartNation AI"
-          description="Deployment layer delivering governed AI workers executing real operational work with measurable outcomes."
-          to="/smartnation-ai"
-          iconSrc="/assets/icons/smartnation.webp"
-          iconAlt="SmartNation AI"
-          buttonLabel="View SmartNation AI"
-        />
-      </section>
-    </main>
+        <div className="mt-5">
+          <Link
+            to="/portfolio"
+            className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/10 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-white/15"
+          >
+            View the portfolio
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
