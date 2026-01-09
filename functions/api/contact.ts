@@ -1,7 +1,6 @@
 // functions/api/contact.ts
 export const onRequestPost: PagesFunction = async ({ request, env }) => {
-  const VERSION = "contact-v3.1-zepto-top-level-htmlbody";
-
+  const VERSION = "contact-v4.0-zepto-top-level-htmlbody";
   const json = (obj: unknown, status = 200) =>
     new Response(JSON.stringify(obj), {
       status,
@@ -12,8 +11,8 @@ export const onRequestPost: PagesFunction = async ({ request, env }) => {
     });
 
   try {
+    // Parse JSON body safely
     const data = await request.json().catch(() => null);
-
     if (!data || typeof data !== "object") {
       return json({ ok: false, error: "Invalid JSON body", version: VERSION }, 400);
     }
@@ -34,6 +33,7 @@ export const onRequestPost: PagesFunction = async ({ request, env }) => {
       );
     }
 
+    // Env
     const ZEPTO_API_KEY = String((env as any).ZEPTO_API_KEY ?? "").trim();
     const ZEPTO_FROM_EMAIL = String((env as any).ZEPTO_FROM_EMAIL ?? "").trim();
     const ZEPTO_TO_EMAIL = String((env as any).ZEPTO_TO_EMAIL ?? "").trim();
@@ -43,42 +43,35 @@ export const onRequestPost: PagesFunction = async ({ request, env }) => {
         {
           ok: false,
           error: "Missing ZeptoMail env vars",
+          version: VERSION,
           missing: {
             ZEPTO_API_KEY: !ZEPTO_API_KEY,
             ZEPTO_FROM_EMAIL: !ZEPTO_FROM_EMAIL,
             ZEPTO_TO_EMAIL: !ZEPTO_TO_EMAIL,
           },
-          version: VERSION,
         },
         500
       );
     }
 
-    const subject = subjectIn ? `CHC Contact: ${subjectIn}` : "CHC Contact Form Submission";
+    const subject = subjectIn ? `CHC Contact: ${subjectIn}` : "CHC Contact Form";
 
-    // Deterministic, safe HTML
+    // Keep HTML deterministic and safe
     const htmlbody =
       `<p><strong>Name:</strong> ${escapeHtml(name)}</p>` +
       `<p><strong>Email:</strong> ${escapeHtml(email)}</p>` +
       `<p><strong>Message:</strong></p>` +
       `<p>${escapeHtml(message).replace(/\n/g, "<br/>")}</p>`;
 
-    // Optional plain-text fallback
-    const textbody =
-      `Name: ${name}\n` +
-      `Email: ${email}\n\n` +
-      `Message:\n${message}\n`;
-
-    // Zepto payload (strict top-level schema)
+    // STRICT payload: top-level subject/htmlbody (this matches your working v3.1 test)
     const payload = {
       from: { address: ZEPTO_FROM_EMAIL },
       to: [{ email_address: { address: ZEPTO_TO_EMAIL } }],
       subject,
       htmlbody,
-      textbody,
     };
 
-    // Debug mode: prove exactly what we'd send (no API key)
+    // Debug mode: shows exactly what would be sent (no secrets)
     const url = new URL(request.url);
     if (url.searchParams.get("debug") === "1") {
       return json(
@@ -105,29 +98,38 @@ export const onRequestPost: PagesFunction = async ({ request, env }) => {
     const text = await resp.text();
 
     if (!resp.ok) {
+      // Return the Zepto response verbatim for diagnosis (still no secrets)
       return json(
         {
           ok: false,
           error: "Email delivery failed",
+          version: VERSION,
           zeptoStatus: resp.status,
           zeptoResponse: text,
-          version: VERSION,
           payloadPreview: payload,
         },
         502
       );
     }
 
-    return json({ ok: true, version: VERSION }, 200);
+    // Success: return Zepto response (parsed if possible)
+    let parsed: any = null;
+    try {
+      parsed = JSON.parse(text);
+    } catch {
+      parsed = text;
+    }
+
+    return json({ ok: true, version: VERSION, zepto: parsed }, 200);
   } catch (err: any) {
-    return json(
-      {
+    return new Response(
+      JSON.stringify({
         ok: false,
         error: "Server error",
-        detail: err?.message || String(err),
-        version: "contact-v3.1-zepto-top-level-htmlbody",
-      },
-      500
+        version: "contact-v4.0-zepto-top-level-htmlbody",
+        detail: err?.message ?? String(err),
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
 };
