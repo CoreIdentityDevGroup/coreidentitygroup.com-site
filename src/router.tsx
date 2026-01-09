@@ -1,7 +1,7 @@
 import { createRouter, createRootRoute, createRoute } from "@tanstack/react-router";
 import { Layout } from "./components/Layout";
 
-import { HomePage } from "./pages/HomePage";
+import HomePage from "./pages/HomePage";
 import { PortfolioPage } from "./pages/PortfolioPage";
 import { CoreIdentityTechnologiesPage } from "./pages/CoreIdentityTechnologiesPage";
 import { SentinelOSPage } from "./pages/SentinelOSPage";
