@@ -1,5 +1,6 @@
+// functions/api/contact.ts
 export const onRequestPost: PagesFunction = async ({ request, env }) => {
-  const VERSION = "contact-v3.0-zepto-content-html";
+  const VERSION = "contact-v3.1-zepto-top-level-htmlbody";
 
   const json = (obj: unknown, status = 200) =>
     new Response(JSON.stringify(obj), {
@@ -53,30 +54,31 @@ export const onRequestPost: PagesFunction = async ({ request, env }) => {
       );
     }
 
-    // IMPORTANT:
-    // Payload schema MUST match the proven-working direct curl:
-    // { from, to, content: { subject, html } }
-    // No htmlbody/textbody/extra keys.
     const subject = subjectIn ? `CHC Contact: ${subjectIn}` : "CHC Contact Form Submission";
 
-    // Keep HTML simple and deterministic (no exotic keys; no extra nesting).
-    const html =
+    // Deterministic, safe HTML
+    const htmlbody =
       `<p><strong>Name:</strong> ${escapeHtml(name)}</p>` +
       `<p><strong>Email:</strong> ${escapeHtml(email)}</p>` +
       `<p><strong>Message:</strong></p>` +
       `<p>${escapeHtml(message).replace(/\n/g, "<br/>")}</p>`;
 
+    // Optional plain-text fallback
+    const textbody =
+      `Name: ${name}\n` +
+      `Email: ${email}\n\n` +
+      `Message:\n${message}\n`;
+
+    // Zepto payload (strict top-level schema)
     const payload = {
       from: { address: ZEPTO_FROM_EMAIL },
       to: [{ email_address: { address: ZEPTO_TO_EMAIL } }],
-      content: {
-        subject,
-        html, // <-- THIS is the key that worked in your direct test
-      },
+      subject,
+      htmlbody,
+      textbody,
     };
 
-    // Debug mode: prove exactly what we're about to send (without sending).
-    // Call with: /api/contact?debug=1
+    // Debug mode: prove exactly what we'd send (no API key)
     const url = new URL(request.url);
     if (url.searchParams.get("debug") === "1") {
       return json(
@@ -84,6 +86,7 @@ export const onRequestPost: PagesFunction = async ({ request, env }) => {
           ok: true,
           debug: true,
           version: VERSION,
+          zeptoUrl: "https://api.zeptomail.com/v1.1/email",
           payload,
         },
         200
@@ -109,7 +112,6 @@ export const onRequestPost: PagesFunction = async ({ request, env }) => {
           zeptoStatus: resp.status,
           zeptoResponse: text,
           version: VERSION,
-          // include only safe preview (no API key)
           payloadPreview: payload,
         },
         502
@@ -123,7 +125,7 @@ export const onRequestPost: PagesFunction = async ({ request, env }) => {
         ok: false,
         error: "Server error",
         detail: err?.message || String(err),
-        version: "contact-v3.0-zepto-content-html",
+        version: "contact-v3.1-zepto-top-level-htmlbody",
       },
       500
     );
