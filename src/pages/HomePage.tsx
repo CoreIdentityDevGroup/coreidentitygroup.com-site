@@ -3,14 +3,9 @@ import globalAIGovernanceHero from "../assets/images/global-ai-governance-hero.w
 
 export function HomePage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16">
-      {/* HERO */}
-      <section className="max-w-4xl">
-        <h1 className="text-5xl font-semibold tracking-tight">
-          Governance-first infrastructure
-          <br />
-          for agentic execution.
-        </h1>
+    <div className="absolute left-0 right-0 top-0 px-6 py-5 text-sm text-white/80">
+  Control plane for governed, accountable AI operations.
+</div>
 
         <p className="mt-6 text-lg text-white/70 max-w-3xl leading-relaxed">
           Governance-first infrastructure for safe, auditable agentic execution.
