@@ -1,107 +1,122 @@
-// src/pages/CoreIdentityTechnologiesPage.tsx
+import { Link } from "@tanstack/react-router";
+
 import heroImg from "../assets/images/coreidentity-governance-hero.webp";
+import sentinelImg from "../assets/images/sentinel.webp";
+import nexusImg from "../assets/images/nexus.webp";
+import smartnationImg from "../assets/images/smartnation.webp";
 
-import sentinelIcon from "../assets/images/sentinel.webp";
-import nexusIcon from "../assets/images/nexus.webp";
-import smartnationIcon from "../assets/images/smartnation.webp";
-
-export default function CoreIdentityTechnologiesPage() {
+export function CoreIdentityTechnologiesPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-5 pb-20 pt-10">
-      <header className="mb-10">
-        <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          CoreIdentity Technologies
+    <div className="mx-auto max-w-5xl px-4 py-10">
+      {/* Header */}
+      <div className="mb-10">
+        <h1 className="text-4xl font-semibold tracking-tight text-white">
+          CoreIdentity
+          <br />
+          Technologies
         </h1>
-        <p className="mt-3 text-base text-white/60 sm:text-lg">
-          A Core Holding Corporation company.
-        </p>
-        <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/70">
+
+        <p className="mt-4 text-sm text-white/70">A Core Holding Corporation company.</p>
+
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70">
           CoreIdentity Technologies is the platform company delivering the governance-first execution
           stack for safe, auditable AI operations.
         </p>
-      </header>
+      </div>
 
-      {/* HERO */}
-      <section className="mb-14">
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-          <img
-            src={heroImg}
-            alt="CoreIdentity — AI operates under governance"
-            className="h-auto w-full"
-            loading="lazy"
-          />
-        </div>
-      </section>
+      {/* Hero image */}
+      <div className="mb-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+        <img
+          src={heroImg}
+          alt="AI operates under governance"
+          className="h-auto w-full"
+          loading="lazy"
+        />
+      </div>
 
-      {/* STACK */}
-      <section className="mb-10">
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Three-layer governed execution stack
+      {/* Stack section */}
+      <div className="mb-6">
+        <h2 className="text-3xl font-semibold tracking-tight text-white">
+          Three-layer governed
+          <br />
+          execution stack
         </h2>
+      </div>
 
-        <div className="mt-8 space-y-6">
-          {/* Sentinel */}
-          <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5">
-            <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-black/20">
-              <img
-                src={sentinelIcon}
-                alt="Sentinel OS"
-                className="h-10 w-10"
-                loading="lazy"
-              />
-            </div>
-
-            <div className="min-w-0">
-              <div className="text-lg font-semibold text-white">Sentinel OS</div>
-              <div className="mt-1 text-sm leading-relaxed text-white/65">
-                Governance layer enforcing policy, approvals, and evidence capture.
-              </div>
-            </div>
+      <div className="grid gap-6">
+        {/* Sentinel */}
+        <div className="flex items-center gap-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+            <img src={sentinelImg} alt="Sentinel OS" className="h-9 w-9" loading="lazy" />
           </div>
 
-          {/* Nexus */}
-          <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5">
-            <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-black/20">
-              <img src={nexusIcon} alt="Nexus OS" className="h-10 w-10" loading="lazy" />
-            </div>
+          <div className="flex-1">
+            <h3 className="text-xl font-semibold text-white">Sentinel OS</h3>
+            <p className="mt-2 text-sm leading-relaxed text-white/70">
+              Governance layer enforcing policy, approvals, identity boundaries, and evidence capture.
+            </p>
 
-            <div className="min-w-0">
-              <div className="text-lg font-semibold text-white">Nexus OS</div>
-              <div className="mt-1 text-sm leading-relaxed text-white/65">
-                Orchestration layer coordinating workflows, integrations, and recovery.
-              </div>
-            </div>
-          </div>
-
-          {/* SmartNation */}
-          <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5">
-            <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-black/20">
-              <img
-                src={smartnationIcon}
-                alt="SmartNation AI"
-                className="h-10 w-10"
-                loading="lazy"
-              />
-            </div>
-
-            <div className="min-w-0">
-              <div className="text-lg font-semibold text-white">SmartNation AI</div>
-              <div className="mt-1 text-sm leading-relaxed text-white/65">
-                Digital labor catalog layer defining tasks, controls, and operating constraints.
-              </div>
+            <div className="mt-4">
+              <Link
+                to="/sentinel-os"
+                className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white/80 hover:bg-white/10"
+              >
+                View Sentinel OS
+              </Link>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* POSITIONING */}
-      <section className="mt-14 rounded-2xl border border-white/10 bg-white/5 p-6">
-        <h3 className="text-xl font-semibold text-white">Governance-first, by design</h3>
-        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/70">
-          We do not optimize for autonomy first. We optimize for control, auditability, and human
-          accountability—then we scale execution within those guardrails.
-        </p>
-      </section>
-    </main>
+        {/* Nexus */}
+        <div className="flex items-center gap-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+            <img src={nexusImg} alt="Nexus OS" className="h-9 w-9" loading="lazy" />
+          </div>
+
+          <div className="flex-1">
+            <h3 className="text-xl font-semibold text-white">Nexus OS</h3>
+            <p className="mt-2 text-sm leading-relaxed text-white/70">
+              Orchestration layer coordinating workflows, integrations, retries, and recovery under
+              constraints.
+            </p>
+
+            <div className="mt-4">
+              <Link
+                to="/nexus-os"
+                className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white/80 hover:bg-white/10"
+              >
+                View Nexus OS
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* SmartNation */}
+        <div className="flex items-center gap-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+            <img src={smartnationImg} alt="SmartNation AI" className="h-9 w-9" loading="lazy" />
+          </div>
+
+          <div className="flex-1">
+            <h3 className="text-xl font-semibold text-white">SmartNation AI</h3>
+            <p className="mt-2 text-sm leading-relaxed text-white/70">
+              Deployment layer delivering governed AI workers executing real operational work with
+              measurable outcomes.
+            </p>
+
+            <div className="mt-4">
+              <Link
+                to="/smartnation-ai"
+                className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white/80 hover:bg-white/10"
+              >
+                View SmartNation AI
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
+
+export default CoreIdentityTechnologiesPage;
