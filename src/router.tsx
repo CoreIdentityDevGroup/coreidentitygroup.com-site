@@ -3,10 +3,9 @@ import {
   createRootRoute,
   createRoute,
 } from "@tanstack/react-router";
-
 import { Layout } from "./components/Layout";
 
-import { HomePage } from "./pages/HomePage";
+import HomePage from "./pages/HomePage";
 import { PortfolioPage } from "./pages/PortfolioPage";
 import { CoreIdentityTechnologiesPage } from "./pages/CoreIdentityTechnologiesPage";
 import { SentinelOSPage } from "./pages/SentinelOSPage";
@@ -64,6 +63,17 @@ const ago1Route = createRoute({
   component: AGO1Page,
 });
 
+/**
+ * Advisory Group routes
+ * Canonical: /coreidentity-ai-advisory-group
+ * Alias:     /coreidentity-advisory-group
+ */
+const coreidentityAIAdvisoryGroupRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/coreidentity-ai-advisory-group",
+  component: CoreIdentityAdvisoryGroupPage,
+});
+
 const advisoryRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/coreidentity-advisory-group",
@@ -108,7 +118,11 @@ const routeTree = rootRoute.addChildren([
   nexusRoute,
   smartRoute,
   ago1Route,
+
+  // Advisory Group: canonical first, alias second
+  coreidentityAIAdvisoryGroupRoute,
   advisoryRoute,
+
   aisRoute,
   resourcesRoute,
   faqRoute,
