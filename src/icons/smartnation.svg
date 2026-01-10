@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <!-- Outer glow -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#33E6FF" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#14B8D4" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#14B8D4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Head shading -->
+    <linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D9FBFF"/>
+      <stop offset="55%" stop-color="#86E7F2"/>
+      <stop offset="100%" stop-color="#1FB7C7"/>
+    </linearGradient>
+
+    <!-- Ear shading -->
+    <linearGradient id="ear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BFF7FF"/>
+      <stop offset="100%" stop-color="#0FA5B8"/>
+    </linearGradient>
+
+    <!-- Eye glow -->
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#BFF9FF"/>
+      <stop offset="30%" stop-color="#39E6FF"/>
+      <stop offset="70%" stop-color="#007CFF"/>
+      <stop offset="100%" stop-color="#003B7A"/>
+    </radialGradient>
+
+    <!-- Subtle shadow -->
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Glow bloom -->
+    <filter id="bloom" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.55 0" result="bloomed"/>
+      <feMerge>
+        <feMergeNode in="bloomed"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Transparent background by default -->
+  <rect width="256" height="256" fill="none"/>
+
+  <!-- Aura -->
+  <circle cx="128" cy="142" r="78" fill="url(#glow)" filter="url(#bloom)"/>
+
+  <!-- Robot group -->
+  <g filter="url(#softShadow)">
+    <!-- Ears -->
+    <rect x="54" y="108" width="34" height="52" rx="16" fill="url(#ear)"/>
+    <rect x="168" y="108" width="34" height="52" rx="16" fill="url(#ear)"/>
+
+    <!-- Head -->
+    <rect x="72" y="90" width="112" height="92" rx="28" fill="url(#head)" stroke="#0B7182" stroke-opacity="0.55" stroke-width="3"/>
+
+    <!-- Inner head highlight -->
+    <rect x="80" y="98" width="96" height="76" rx="22" fill="#FFFFFF" opacity="0.10"/>
+
+    <!-- Antenna stem -->
+    <rect x="122" y="64" width="12" height="18" rx="6" fill="#0FA5B8"/>
+    <!-- Antenna ball -->
+    <circle cx="128" cy="56" r="16" fill="url(#ear)" stroke="#0B7182" stroke-opacity="0.55" stroke-width="3"/>
+
+    <!-- Eyes -->
+    <circle cx="110" cy="134" r="18" fill="url(#eyeGlow)"/>
+    <circle cx="146" cy="134" r="18" fill="url(#eyeGlow)"/>
+    <circle cx="110" cy="134" r="6" fill="#E6FEFF" opacity="0.85"/>
+    <circle cx="146" cy="134" r="6" fill="#E6FEFF" opacity="0.85"/>
+
+    <!-- Mouth -->
+    <rect x="108" y="158" width="40" height="10" rx="5" fill="#083B44" opacity="0.55"/>
+
+    <!-- Neck/base -->
+    <rect x="92" y="186" width="72" height="34" rx="14" fill="url(#head)" stroke="#0B7182" stroke-opacity="0.45" stroke-width="3"/>
+    <rect x="102" y="194" width="52" height="18" rx="9" fill="#FFFFFF" opacity="0.10"/>
+  </g>
+
+  <!-- Optional sparkle dots (vector, tiny, cheap) -->
+  <g opacity="0.35">
+    <circle cx="78" cy="176" r="2" fill="#7FF3FF"/>
+    <circle cx="92" cy="196" r="1.5" fill="#7FF3FF"/>
+    <circle cx="174" cy="186" r="2" fill="#7FF3FF"/>
+    <circle cx="160" cy="206" r="1.5" fill="#7FF3FF"/>
+    <circle cx="128" cy="220" r="1.5" fill="#7FF3FF"/>
+  </g>
+</svg>
