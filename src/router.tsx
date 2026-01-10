@@ -17,7 +17,7 @@ import { AGO1Page } from "./pages/AGO1Page";
 import { ResourcesPage } from "./pages/ResourcesPage";
 import { FAQPage } from "./pages/FAQPage";
 import { AboutPage } from "./pages/AboutPage";
-import { ContactPage } from "./pages/ContactPage";
+import ContactPage from "./pages/ContactPage";
 
 const rootRoute = createRootRoute({ component: Layout });
 

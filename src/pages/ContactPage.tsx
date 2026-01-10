@@ -1,7 +1,5 @@
 import { useMemo, useState } from "react";
 
-import { PageTitle } from "../components/PageTitle";
-
 type ContactPayload = {
   name: string;
   email: string;
@@ -28,11 +26,7 @@ export default function ContactPage() {
 
   const isValid = useMemo(() => {
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim());
-    return (
-      form.name.trim().length >= 2 &&
-      emailOk &&
-      form.message.trim().length >= 10
-    );
+    return form.name.trim().length >= 2 && emailOk && form.message.trim().length >= 10;
   }, [form]);
 
   function update<K extends keyof ContactPayload>(key: K, value: ContactPayload[K]) {
@@ -60,10 +54,10 @@ export default function ContactPage() {
       });
 
       const text = await res.text();
-      // Try to parse JSON if the API returns it, else fall back to text
+
       let message = "Message sent. We will follow up shortly.";
       try {
-        const data = JSON.parse(text) as { ok?: boolean; message?: string; error?: string };
+        const data = JSON.parse(text) as { message?: string; error?: string };
         if (data?.message) message = data.message;
         if (data?.error) message = data.error;
       } catch {
@@ -78,17 +72,14 @@ export default function ContactPage() {
       setStatus({ state: "success", message });
       setForm({ name: "", email: "", company: "", interest: "", message: "" });
     } catch {
-      setStatus({
-        state: "error",
-        message: "Network error. Please try again in a moment.",
-      });
+      setStatus({ state: "error", message: "Network error. Please try again in a moment." });
     }
   }
 
   return (
     <div className="space-y-8">
       <div className="space-y-3">
-        <PageTitle>Contact</PageTitle>
+        <h1 className="text-3xl font-semibold text-white">Contact</h1>
         <p className="text-white/70 max-w-3xl">
           Use the form below for general inquiries, partnerships, and requests.
         </p>
@@ -170,9 +161,7 @@ export default function ContactPage() {
               placeholder="Tell us what you’re trying to achieve and what constraints we should assume."
               required
             />
-            <p className="text-xs text-white/40">
-              Minimum: name + valid email + 10+ characters in message.
-            </p>
+            <p className="text-xs text-white/40">Minimum: name + valid email + 10+ characters in message.</p>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -181,9 +170,7 @@ export default function ContactPage() {
             ) : status.state === "success" ? (
               <div className="text-sm text-emerald-200">{status.message}</div>
             ) : (
-              <div className="text-sm text-white/50">
-                We respond as capacity allows.
-              </div>
+              <div className="text-sm text-white/50">We respond as capacity allows.</div>
             )}
 
             <button

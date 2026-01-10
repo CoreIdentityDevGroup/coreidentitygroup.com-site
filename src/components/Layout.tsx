@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet, useRouterState } from "@tanstack/react-router";
 import { Header } from "./Header";
-import { Footer } from "./Footer";
+import Footer from "./Footer";
 
 export function Layout() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
