@@ -1,8 +1,8 @@
 // src/pages/CoreIdentityTechnologiesPage.tsx
-import { Link } from "@tanstack/react-router";
 
 import heroImg from "../assets/images/coreidentity-governance-hero.webp";
 import { stackIcons } from "../assets/stackIcons";
+import { ButtonLink } from "../components/ui";
 
 export function CoreIdentityTechnologiesPage() {
   return (
@@ -15,13 +15,11 @@ export function CoreIdentityTechnologiesPage() {
           Technologies
         </h1>
 
-        <p className="mt-4 text-sm text-white/70">
-          A Core Holding Corporation company.
-        </p>
+        <p className="mt-4 text-sm text-white/70">A Core Holding Corporation company.</p>
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80">
-          CoreIdentity Technologies is the platform company delivering the
-          governance-first execution stack for safe, auditable AI operations.
+          CoreIdentity Technologies is the platform company delivering the governance-first execution stack for safe,
+          auditable AI operations.
         </p>
       </div>
 
@@ -46,93 +44,78 @@ export function CoreIdentityTechnologiesPage() {
         {/* Sentinel */}
         <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-4">
-            <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-black/20">
-              <img
-                src={stackIcons.sentinel}
-                alt="Sentinel OS"
-                className="h-10 w-10"
-                loading="lazy"
-              />
-            </div>
+            {/* ICON (bigger, no frame/box) */}
+            <img
+              src={stackIcons.sentinel}
+              alt="Sentinel OS"
+              className="h-14 w-14 shrink-0"
+              loading="lazy"
+            />
 
             <div className="flex-1">
               <h3 className="text-2xl font-semibold">Sentinel OS</h3>
               <p className="mt-2 text-white/70">
-                Governance layer enforcing policy, approvals, identity
-                boundaries, and evidence capture.
+                Governance layer enforcing policy, approvals, identity boundaries, and evidence capture.
               </p>
             </div>
           </div>
 
           <div className="mt-6">
-            <Link
-              to="/sentinel-os"
-              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/10"
-            >
+            <ButtonLink to="/sentinel-os" variant="sentinel">
               View Sentinel OS
-            </Link>
+            </ButtonLink>
           </div>
         </div>
 
         {/* Nexus */}
         <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-4">
-            <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-black/20">
-              <img
-                src={stackIcons.nexus}
-                alt="Nexus OS"
-                className="h-10 w-10"
-                loading="lazy"
-              />
-            </div>
+            {/* ICON (bigger, no frame/box) */}
+            <img
+              src={stackIcons.nexus}
+              alt="Nexus OS"
+              className="h-14 w-14 shrink-0"
+              loading="lazy"
+            />
 
             <div className="flex-1">
               <h3 className="text-2xl font-semibold">Nexus OS</h3>
               <p className="mt-2 text-white/70">
-                Orchestration layer coordinating workflows, integrations,
-                retries, and recovery under constraints.
+                Orchestration layer coordinating workflows, integrations, retries, and recovery under constraints.
               </p>
             </div>
           </div>
 
           <div className="mt-6">
-            <Link
-              to="/nexus-os"
-              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/10"
-            >
+            <ButtonLink to="/nexus-os" variant="nexus">
               View Nexus OS
-            </Link>
+            </ButtonLink>
           </div>
         </div>
 
         {/* SmartNation */}
         <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-4">
-            <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-black/20">
-              <img
-                src={stackIcons.smartnation}
-                alt="SmartNation AI"
-                className="h-10 w-10"
-                loading="lazy"
-              />
-            </div>
+            {/* ICON (bigger, no frame/box) */}
+            <img
+              src={stackIcons.smartnation}
+              alt="SmartNation AI"
+              className="h-14 w-14 shrink-0"
+              loading="lazy"
+            />
 
             <div className="flex-1">
               <h3 className="text-2xl font-semibold">SmartNation AI</h3>
               <p className="mt-2 text-white/70">
-                Deployment layer delivering governed AI workers executing real
-                operational work with measurable outcomes.
+                Deployment layer delivering governed AI workers executing real operational work with measurable outcomes.
               </p>
             </div>
           </div>
 
           <div className="mt-6">
-            <Link
-              to="/smartnation-ai"
-              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white/90 hover:bg-white/10"
-            >
+            <ButtonLink to="/smartnation-ai" variant="smartnation">
               View SmartNation AI
-            </Link>
+            </ButtonLink>
           </div>
         </div>
       </div>
