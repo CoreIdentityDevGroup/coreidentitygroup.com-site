@@ -33,12 +33,12 @@ export default function HomePage() {
             Explore CoreIdentity Technologies
           </Link>
 
-          <a
-            href="mailto:info@coreholdingcorp.com"
-            className="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
-          >
-            Request additional Information
-          </a>
+          <Link
+  to="/contact"
+  className="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
+>
+  Request additional Information
+</Link>
         </div>
       </section>
 
@@ -50,7 +50,7 @@ export default function HomePage() {
             alt="Global AI governance and controlled agentic execution"
             className="w-full object-cover"
           />
-          <div className="px-6 py-4 text-sm text-white/60 text center ">
+          <div className="px-6 py-4 text-sm text-white/60 text center">
             Global governance signals, enforceable constraints, and auditable
             execution.
           </div>
