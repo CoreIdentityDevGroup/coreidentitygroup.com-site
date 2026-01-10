@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <linearGradient id="gAmber" x1="52" y1="64" x2="204" y2="192" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDBA74"/>
+      <stop offset="0.55" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#7C2D12"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="0 0 0 0 1  0 0 0 0 0.6  0 0 0 0 0.1  0 0 0 0.65 0" result="c"/>
+      <feMerge>
+        <feMergeNode in="c"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Interlocking links -->
+  <g filter="url(#glow)" stroke="url(#gAmber)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left link -->
+    <path d="M98 92
+      C82 92, 70 104, 70 120
+      V136
+      C70 152, 82 164, 98 164
+      H122" />
+    <!-- Right link -->
+    <path d="M158 92
+      H134
+      C118 92, 106 104, 106 120
+      V136
+      C106 152, 118 164, 134 164
+      H158
+      C174 164, 186 152, 186 136
+      V120
+      C186 104, 174 92, 158 92Z" />
+    <!-- Connector stroke -->
+    <path d="M112 128H144"/>
+  </g>
+
+  <!-- Subtle white edge highlight -->
+  <path d="M112 128H144" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-linecap="round"/>
+</svg>
