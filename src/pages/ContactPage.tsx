@@ -82,7 +82,7 @@ export function ContactPage() {
               required
               autoComplete="name"
               className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-white/20"
-              placeholder="Todd Morgan"
+              placeholder="Name"
             />
           </div>
 
