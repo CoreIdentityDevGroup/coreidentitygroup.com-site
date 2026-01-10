@@ -62,8 +62,8 @@ export function ContactPage() {
       <div className="space-y-3">
         <PageTitle>Contact</PageTitle>
         <p className="text-white/70 max-w-3xl">
-          Direct all general inquiries, partnerships, and requests to{" "}
-          <span
+  Use the form below for general inquiries, partnerships, and requests.
+</p>
   translate="no"
   data-nosnippet
   className="text-blue-300 select-all"
@@ -73,7 +73,6 @@ export function ContactPage() {
     WebkitTouchCallout: "none",
   }}
 >
-  info@coreholdingcorp.com
 </span>
         </p>
       </div>

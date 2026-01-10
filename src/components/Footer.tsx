@@ -81,9 +81,8 @@ export function Footer() {
               <li>
                 <a
                   className="hover:text-white/80 transition"
-                  href="mailto:info@coreholdingcorp.com"
-                >
-                  info@coreholdingcorp.com
+                  href="/contact">
+Contact
                 </a>
               </li>
             </ul>
