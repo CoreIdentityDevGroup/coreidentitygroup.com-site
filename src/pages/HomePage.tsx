@@ -8,9 +8,9 @@ export default function HomePage() {
       {/* HERO */}
       <section className="max-w-4xl">
         <h1 className="text-5xl font-semibold tracking-tight">
-          Governance-first infrastructure
+          Governance infrastructure
           <br />
-          for safe, auditable agentic execution.
+          for agentic execution.
         </h1>
 
         {/* Kicker tagline (non-duplicate) */}
@@ -37,7 +37,7 @@ export default function HomePage() {
             href="mailto:info@coreholdingcorp.com"
             className="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
           >
-            Talk to us
+            Request additional Information
           </a>
         </div>
       </section>
@@ -50,7 +50,7 @@ export default function HomePage() {
             alt="Global AI governance and controlled agentic execution"
             className="w-full object-cover"
           />
-          <div className="px-6 py-4 text-sm text-white/60">
+          <div className="px-6 py-4 text-sm text-white/60 text center ">
             Global governance signals, enforceable constraints, and auditable
             execution.
           </div>
