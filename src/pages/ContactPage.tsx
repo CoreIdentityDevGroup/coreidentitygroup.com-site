@@ -63,10 +63,18 @@ export function ContactPage() {
         <PageTitle>Contact</PageTitle>
         <p className="text-white/70 max-w-3xl">
           Direct all general inquiries, partnerships, and requests to{" "}
-          <a className="text-blue-300 hover:text-blue-200" href="/contact">
-            info@coreholdingcorp.com
-          </a>
-          .
+          <span
+  translate="no"
+  data-nosnippet
+  className="text-blue-300 select-all"
+  style={{
+    unicodeBidi: "plaintext",
+    WebkitUserSelect: "text",
+    WebkitTouchCallout: "none",
+  }}
+>
+  info@coreholdingcorp.com
+</span>
         </p>
       </div>
 
