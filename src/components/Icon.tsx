@@ -1,28 +1,46 @@
-import sentinel from "../icons/sentinel.svg";
-import nexus from "../icons/nexus.svg";
-import smartnation from "../icons/smartnation.svg";
+// src/components/Icon.tsx
 
-export type IconName = "sentinel" | "nexus" | "smartnation";
+import React from "react";
+import { stackIcons, StackIconKey } from "../assets/stackIcons";
 
-const ICON_MAP: Record<IconName, string> = {
-  sentinel,
-  nexus,
-  smartnation,
+type IconProps = {
+  name: StackIconKey;
+  size?: number;
+  className?: string;
+  alt?: string;
 };
 
-interface IconProps {
-  name: IconName;
-  size?: number;
-}
+export function Icon({
+  name,
+  size = 48,
+  className = "",
+  alt = "",
+}: IconProps) {
+  const src = stackIcons[name];
 
-export default function Icon({ name, size = 32 }: IconProps) {
+  // Raster image (PNG, WebP, etc.)
+  if (typeof src === "string" && !src.endsWith(".svg")) {
+    return (
+      <img
+        src={src}
+        alt={alt || name}
+        width={size}
+        height={size}
+        className={`object-contain ${className}`}
+        draggable={false}
+      />
+    );
+  }
+
+  // SVG (inline-safe)
   return (
     <img
-      src={ICON_MAP[name]}
-      alt={name}
+      src={src}
+      alt={alt || name}
       width={size}
       height={size}
-      style={{ display: "block" }}
+      className={className}
+      draggable={false}
     />
   );
 }
