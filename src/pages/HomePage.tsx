@@ -50,10 +50,11 @@ export default function HomePage() {
             alt="Global AI governance and controlled agentic execution"
             className="w-full object-cover"
           />
-          <div className="px-6 py-4 text-sm text-white/60 text center">
-            Global governance signals, enforceable constraints, and auditable
-            execution.
-          </div>
+          <div className="px-6 py-4 text-sm text-white/60 text-center">
+  <span className="mx-auto block max-w-md">
+    Global governance signals, enforceable constraints, and auditable execution.
+  </span>
+</div>
         </div>
       </section>
 
