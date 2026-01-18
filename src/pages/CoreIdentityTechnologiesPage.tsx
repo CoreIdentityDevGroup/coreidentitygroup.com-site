@@ -293,6 +293,41 @@ export function CoreIdentityTechnologiesPage() {
       </div>
 
       {/* Stack */}
+
+      {/* BEGIN: Operational Verticals */}
+      <section className="mt-12">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-semibold tracking-tight">Operational Verticals</h2>
+          <p className="mt-3 text-base leading-relaxed text-white/80">
+            We deploy governed agentic execution into operational markets where auditability, controls, and evidence matter.
+            We are starting with revenue-first verticals while running targeted pilots in parallel.
+          </p>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="text-sm font-semibold text-white">LegalOps</div>
+              <div className="mt-2 text-sm text-white/75">
+                Policy-constrained legal workflow automation with approvals, traceability, and defensible evidence.
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="text-sm font-semibold text-white">ComplianceOps</div>
+              <div className="mt-2 text-sm text-white/75">
+                Continuous compliance execution: controls, attestations, and audit-ready evidence across systems.
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="text-sm font-semibold text-white">HospitalityOps (POC)</div>
+              <div className="mt-2 text-sm text-white/75">
+                Operational automation pilot (Cole) focused on measurable ROI, with governed execution and reporting.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* END: Operational Verticals */}
       <div className="mb-10">
         <h2 className="mb-2 text-2xl font-semibold text-white">
           Three-layer governed execution stack
