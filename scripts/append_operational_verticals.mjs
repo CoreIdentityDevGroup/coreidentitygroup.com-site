@@ -1,80 +1,66 @@
+#!/usr/bin/env node
 import fs from "node:fs";
 import path from "node:path";
 
-const FILE = path.join(process.cwd(), "src/pages/CoreIdentityTechnologiesPage.tsx");
+const FILE = path.join("src", "pages", "CoreIdentityTechnologiesPage.tsx");
 
-// This must match a stable line that already exists on the page.
-// Update this ONE string if needed after you confirm the exact line.
+// Stable anchor that exists in the file (from your rg output).
 const ANCHOR = "{/* Stack */}";
-// Unique marker so the transform is idempotent.
-const START_MARK = "{/* BEGIN: Operational Verticals */}";
-const END_MARK = "{/* END: Operational Verticals */}";
 
-// The appended JSX block. This is intentionally self-contained and styling-light.
-const BLOCK = `
-      ${START_MARK}
-      <section className="mt-12">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-semibold tracking-tight">Operational Verticals</h2>
-          <p className="mt-3 text-base leading-relaxed text-white/80">
-            We deploy governed agentic execution into operational markets where auditability, controls, and evidence matter.
-            We are starting with revenue-first verticals while running targeted pilots in parallel.
-          </p>
+// Idempotency markers (do not change these strings once deployed)
+const BEGIN = "{/* BEGIN: OPERATIONAL_VERTICALS (managed) */}";
+const END   = "{/* END: OPERATIONAL_VERTICALS (managed) */}";
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <div className="text-sm font-semibold text-white">LegalOps</div>
-              <div className="mt-2 text-sm text-white/75">
-                Policy-constrained legal workflow automation with approvals, traceability, and defensible evidence.
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <div className="text-sm font-semibold text-white">ComplianceOps</div>
-              <div className="mt-2 text-sm text-white/75">
-                Continuous compliance execution: controls, attestations, and audit-ready evidence across systems.
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <div className="text-sm font-semibold text-white">HospitalityOps (POC)</div>
-              <div className="mt-2 text-sm text-white/75">
-                Operational automation pilot (Cole) focused on measurable ROI, with governed execution and reporting.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      ${END_MARK}
+// Minimal, dependency-free insertion.
+// We are NOT importing new UI atoms here; we only call an existing component.
+// If the component doesn't exist, build will fail (as it should).
+const BLOCK = `${BEGIN}
+      <OperationalVerticalsSection />
+${END}
 `;
 
-function fail(msg) {
-  console.error(`ERROR: ${msg}`);
+function die(msg) {
+  console.error(msg);
   process.exit(1);
 }
 
+if (!fs.existsSync(FILE)) die(`ERROR: Target file not found: ${FILE}`);
+
 const src = fs.readFileSync(FILE, "utf8");
 
-// Idempotency: if block already present, do nothing.
-if (src.includes(START_MARK) && src.includes(END_MARK)) {
-  console.log("No-op: Operational Verticals block already present.");
+// Idempotency: if markers exist, do nothing.
+if (src.includes(BEGIN) && src.includes(END)) {
+  console.log("OK: operational verticals block already present (idempotent no-op).");
   process.exit(0);
 }
 
-// Anchor must exist.
-if (!src.includes(ANCHOR)) {
-  fail(
-    `Anchor text not found: "${ANCHOR}". Update ANCHOR in scripts/append_operational_verticals.mjs to a line that exists in CoreIdentityTechnologiesPage.tsx.`
-  );
+// Guardrail: must contain the page function signature so we never write garbage.
+if (!src.includes("export function CoreIdentityTechnologiesPage")) {
+  die("ERROR: Safety check failed: expected page export not found. Refusing to write.");
 }
 
-// Insert AFTER the first occurrence of the anchor line (without reformatting anything else).
-// We insert after the line that contains ANCHOR by finding the next newline.
 const idx = src.indexOf(ANCHOR);
+if (idx === -1) {
+  die(`ERROR: Anchor not found: ${JSON.stringify(ANCHOR)}. Refusing to write.`);
+}
+
+// Insert AFTER the anchor line
 const lineEnd = src.indexOf("\n", idx);
-if (lineEnd === -1) fail("Could not locate end of anchor line.");
+const insertAt = (lineEnd === -1) ? src.length : lineEnd + 1;
 
-const updated = src.slice(0, lineEnd + 1) + BLOCK + src.slice(lineEnd + 1);
+const out = src.slice(0, insertAt) + BLOCK + src.slice(insertAt);
 
-fs.writeFileSync(FILE, updated, "utf8");
-console.log("Applied: appended Operational Verticals block.");
+// Hard safety checks: refuse to write if we accidentally shrank the file or lost structure.
+if (out.length <= src.length) {
+  die("ERROR: Safety check failed: output did not grow. Refusing to write.");
+}
+if (!out.includes("export default CoreIdentityTechnologiesPage")) {
+  die("ERROR: Safety check failed: default export missing after transform. Refusing to write.");
+}
+// Ensure we did not accidentally replace the start of file.
+if (out.slice(0, 200) !== src.slice(0, 200)) {
+  die("ERROR: Safety check failed: file header changed unexpectedly. Refusing to write.");
+}
+
+fs.writeFileSync(FILE, out, "utf8");
+console.log("OK: appended operational verticals block safely.");

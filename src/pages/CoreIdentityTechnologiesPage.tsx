@@ -293,6 +293,9 @@ export function CoreIdentityTechnologiesPage() {
       </div>
 
       {/* Stack */}
+{/* BEGIN: OPERATIONAL_VERTICALS (managed) */}
+      <OperationalVerticalsSection />
+{/* END: OPERATIONAL_VERTICALS (managed) */}
 
       {/* BEGIN: Operational Verticals */}
       <section className="mt-12">
