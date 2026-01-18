@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import heroImg from "../assets/images/coreidentity-governance-hero.webp";
 
+import OperationalVerticalsSection from "../components/OperationalVerticalsSection";
 type Vertical = {
   name: string;
   oneLiner: string;
@@ -365,42 +366,8 @@ export function CoreIdentityTechnologiesPage() {
       </div>
 
       {/* Verticalization */}
-      <div className="mb-10">
-        <div className="mb-3 flex items-center justify-between gap-4">
-          <h2 className="text-2xl font-semibold text-white">
-            Initial operational verticals
-          </h2>
-        </div>
-
-        <p className="mb-6 max-w-3xl text-sm leading-6 text-white/70">
-          We’re not launching “general AI.” We’re launching governed execution in
-          specific markets with clear workflows, constraints, and measurable
-          outcomes. LegalOps and ComplianceOps are first for revenue velocity;
-          HospitalityOps runs in parallel as a targeted POC stream.
-        </p>
-
-        <div className="grid gap-5 md:grid-cols-2">
-          {verticals.map((v) => {
-            const tone =
-              v.launchOrder === "Now"
-                ? "green"
-                : v.launchOrder === "Next"
-                  ? "amber"
-                  : "neutral";
-
-            return (
-              <div
-                key={v.name}
-                className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-xl shadow-black/20"
-              >
-                <div className="mb-3 flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{v.name}</h3>
-                    <p className="mt-1 text-sm leading-6 text-white/70">
-                      {v.oneLiner}
-                    </p>
-                  </div>
-                  <Pill tone={tone}>{v.launchOrder}</Pill>
+      <OperationalVerticalsSection />
+        <Pill tone={tone}>{v.launchOrder}</Pill>
                 </div>
 
                 <div className="mt-4">
