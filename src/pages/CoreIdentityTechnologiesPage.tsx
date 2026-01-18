@@ -367,42 +367,8 @@ export function CoreIdentityTechnologiesPage() {
 
       {/* Verticalization */}
       <OperationalVerticalsSection />
-        <Pill tone={tone}>{v.launchOrder}</Pill>
-                </div>
 
-                <div className="mt-4">
-                  <div className="text-xs font-semibold uppercase tracking-wide text-white/50">
-                    Target outcomes
-                  </div>
-                  <ul className="mt-2 space-y-2 text-sm text-white/75">
-                    {v.outcomes.map((o) => (
-                      <li key={o} className="flex gap-2">
-                        <CheckIcon />
-                        <span>{o}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             );
-          })}
-        </div>
-      </div>
-
-      {/* Note about links (content-first) */}
-      <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
-        <h2 className="mb-2 text-lg font-semibold text-white">
-          Next step: supporting pages (optional)
-        </h2>
-        <p className="text-sm leading-6 text-white/70">
-          We can add dedicated pages for each vertical (LegalOps, ComplianceOps,
-          HospitalityOps) once we decide what level of public detail we want.
-          For now, this page anchors the strategy and keeps the website coherent:
-          stack first, vertical execution second.
-        </p>
-      </div>
-    </div>
-  );
 }
-
 export default CoreIdentityTechnologiesPage;
