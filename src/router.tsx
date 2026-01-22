@@ -1,3 +1,5 @@
+/* CHC_TECHNOLOGIES_IMPORT_NORMALIZED */
+/* CHC_COMPOSED_TECHNOLOGIES_PATCH */
 import {
   createRouter,
   createRootRoute,
@@ -7,7 +9,6 @@ import { Layout } from "./components/Layout";
 
 import HomePage from "./pages/HomePage";
 import { PortfolioPage } from "./pages/PortfolioPage";
-import { CoreIdentityTechnologiesPage } from "./pages/CoreIdentityTechnologiesPage";
 import { SentinelOSPage } from "./pages/SentinelOSPage";
 import { NexusOSPage } from "./pages/NexusOSPage";
 import { SmartNationAIPage } from "./pages/SmartNationAIPage";
@@ -18,7 +19,7 @@ import { ResourcesPage } from "./pages/ResourcesPage";
 import { FAQPage } from "./pages/FAQPage";
 import { AboutPage } from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-
+import { CoreIdentityTechnologiesComposed } from "./components/CoreIdentityTechnologiesComposed";
 const rootRoute = createRootRoute({ component: Layout });
 
 const indexRoute = createRoute({
@@ -36,7 +37,7 @@ const portfolioRoute = createRoute({
 const coreidentityRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/coreidentity-technologies",
-  component: CoreIdentityTechnologiesPage,
+  component: CoreIdentityTechnologiesComposed,
 });
 
 const sentinelRoute = createRoute({
