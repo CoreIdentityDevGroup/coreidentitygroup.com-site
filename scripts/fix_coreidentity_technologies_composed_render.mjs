@@ -1,4 +1,11 @@
-/* CHC_TECHNOLOGIES_COMPOSED_LOCK */
+import fs from "node:fs";
+import path from "node:path";
+import { execSync } from "node:child_process";
+
+const ROOT = process.cwd();
+const TARGET = path.join(ROOT, "src/components/CoreIdentityTechnologiesComposed.tsx");
+
+const next = `/* CHC_TECHNOLOGIES_COMPOSED_LOCK */
 /* CHC_GOVERNANCE_VERTICALS_START */
 /* CHC_GOVERNANCE_VERTICALS_END */
 
@@ -122,3 +129,15 @@ export function CoreIdentityTechnologiesComposed() {
     </>
   );
 }
+`;
+
+const prev = fs.existsSync(TARGET) ? fs.readFileSync(TARGET, "utf8") : null;
+if (prev !== next) {
+  fs.mkdirSync(path.dirname(TARGET), { recursive: true });
+  fs.writeFileSync(TARGET, next, "utf8");
+  console.log("Fixed CoreIdentityTechnologiesComposed: renders original page + governance verticals (idempotent).");
+} else {
+  console.log("CoreIdentityTechnologiesComposed already fixed (idempotent).");
+}
+
+execSync("npm run build", { stdio: "inherit" });
