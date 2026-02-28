@@ -1,95 +1,188 @@
-import React, { useState } from "react";
-import { Card, PageTitle } from "../components/ui";
+import { useMemo, useState } from "react";
 
-type Status = "idle" | "submitting" | "success" | "error";
+type ContactPayload = {
+  name: string;
+  email: string;
+  company: string;
+  interest: string;
+  message: string;
+};
 
-export function ContactPage() {
-  const [status, setStatus] = useState<Status>("idle");
-  const [error, setError] = useState<string>("");
+export default function ContactPage() {
+  const [form, setForm] = useState<ContactPayload>({
+    name: "",
+    email: "",
+    company: "",
+    interest: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState<
+    | { state: "idle" }
+    | { state: "submitting" }
+    | { state: "success"; message: string }
+    | { state: "error"; message: string }
+  >({ state: "idle" });
+
+  const isValid = useMemo(() => {
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim());
+    return form.name.trim().length >= 2 && emailOk && form.message.trim().length >= 10;
+  }, [form]);
+
+  function update<K extends keyof ContactPayload>(key: K, value: ContactPayload[K]) {
+    setForm((prev) => ({ ...prev, [key]: value }));
+  }
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("submitting");
-    setError("");
+    if (!isValid || status.state === "submitting") return;
 
-    const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    setStatus({ state: "submitting" });
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          name: form.name.trim(),
+          email: form.email.trim(),
+          company: form.company.trim(),
+          interest: form.interest.trim(),
+          message: form.message.trim(),
+          source: "website-contact-form",
+        }),
       });
-      if (!res.ok) throw new Error("Submission failed");
-      setStatus("success");
-      form.reset();
-    } catch (err: any) {
-      setStatus("error");
-      setError(err?.message ?? "Submission failed");
+
+      const text = await res.text();
+
+      let message = "Message sent. We will follow up shortly.";
+      try {
+        const data = JSON.parse(text) as { message?: string; error?: string };
+        if (data?.message) message = data.message;
+        if (data?.error) message = data.error;
+      } catch {
+        if (text && text.length < 200) message = text;
+      }
+
+      if (!res.ok) {
+        setStatus({ state: "error", message: message || "Submission failed." });
+        return;
+      }
+
+      setStatus({ state: "success", message });
+      setForm({ name: "", email: "", company: "", interest: "", message: "" });
+    } catch {
+      setStatus({ state: "error", message: "Network error. Please try again in a moment." });
     }
   }
 
   return (
     <div className="space-y-8">
       <div className="space-y-3">
-        <PageTitle>Contact</PageTitle>
+        <h1 className="text-3xl font-semibold text-white">Contact</h1>
         <p className="text-white/70 max-w-3xl">
-          Direct all general inquiries, partnerships, and briefing requests to{" "}
-          <a className="text-blue-300 hover:text-blue-200" href="mailto:info@coreholdingcorp.com">
-            info@coreholdingcorp.com
-          </a>.
+          Use the form below for general inquiries, partnerships, and requests.
         </p>
       </div>
 
-      <Card>
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
         <form className="grid gap-4" onSubmit={onSubmit}>
-          <div className="grid gap-2">
-            <label className="text-sm text-white/70">Full Name (required)</label>
-            <input name="fullName" required className="rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-white/30" />
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-2">
+              <label className="text-sm text-white/70" htmlFor="name">
+                Name
+              </label>
+              <input
+                id="name"
+                value={form.name}
+                onChange={(e) => update("name", e.target.value)}
+                className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
+                placeholder="Your name"
+                autoComplete="name"
+                required
+              />
+            </div>
+
+            <div className="grid gap-2">
+              <label className="text-sm text-white/70" htmlFor="email">
+                Email
+              </label>
+              <input
+                id="email"
+                value={form.email}
+                onChange={(e) => update("email", e.target.value)}
+                className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
+                placeholder="you@company.com"
+                autoComplete="email"
+                inputMode="email"
+                required
+              />
+            </div>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-2">
+              <label className="text-sm text-white/70" htmlFor="company">
+                Company (optional)
+              </label>
+              <input
+                id="company"
+                value={form.company}
+                onChange={(e) => update("company", e.target.value)}
+                className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
+                placeholder="Organization"
+                autoComplete="organization"
+              />
+            </div>
+
+            <div className="grid gap-2">
+              <label className="text-sm text-white/70" htmlFor="interest">
+                Topic (optional)
+              </label>
+              <input
+                id="interest"
+                value={form.interest}
+                onChange={(e) => update("interest", e.target.value)}
+                className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
+                placeholder="Governance, platform, advisory…"
+              />
+            </div>
           </div>
 
           <div className="grid gap-2">
-            <label className="text-sm text-white/70">Email (required)</label>
-            <input type="email" name="email" required className="rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-white/30" />
+            <label className="text-sm text-white/70" htmlFor="message">
+              Message
+            </label>
+            <textarea
+              id="message"
+              value={form.message}
+              onChange={(e) => update("message", e.target.value)}
+              className="min-h-[140px] rounded-xl border border-white/10 bg-black/30 px-3 py-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
+              placeholder="Tell us what you’re trying to achieve and what constraints we should assume."
+              required
+            />
+            <p className="text-xs text-white/40">Minimum: name + valid email + 10+ characters in message.</p>
           </div>
 
-          <div className="grid gap-2">
-            <label className="text-sm text-white/70">Organization</label>
-            <input name="organization" className="rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-white/30" />
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            {status.state === "error" ? (
+              <div className="text-sm text-red-200">{status.message}</div>
+            ) : status.state === "success" ? (
+              <div className="text-sm text-emerald-200">{status.message}</div>
+            ) : (
+              <div className="text-sm text-white/50">We respond as capacity allows.</div>
+            )}
+
+            <button
+              type="submit"
+              disabled={!isValid || status.state === "submitting"}
+              className="h-11 rounded-xl bg-white/10 px-5 text-sm font-medium text-white transition hover:bg-white/15 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {status.state === "submitting" ? "Sending…" : "Send message"}
+            </button>
           </div>
-
-          <div className="grid gap-2">
-            <label className="text-sm text-white/70">Area of Interest</label>
-            <select name="areaOfInterest" className="rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-white/30">
-              <option>Governance-First AI Infrastructure</option>
-              <option>Governance-Only Deployment Mode</option>
-              <option>Pilot Design</option>
-              <option>Enterprise Deployment</option>
-              <option>Partnership</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div className="grid gap-2">
-            <label className="text-sm text-white/70">Message</label>
-            <textarea name="message" rows={6} className="rounded-xl bg-black/30 border border-white/10 px-4 py-3 outline-none focus:border-white/30" />
-          </div>
-
-          <button
-            type="submit"
-            disabled={status === "submitting"}
-            className="rounded-full px-5 py-3 text-sm font-medium bg-blue-600/90 border border-blue-400/20 hover:bg-blue-600 transition disabled:opacity-60"
-          >
-            Submit
-          </button>
-
-          <div className="text-sm text-white/70">Place of Business: Madison County, Virginia</div>
-
-          {status === "success" && <div className="text-sm text-emerald-300">Submitted. We will follow up via email.</div>}
-          {status === "error" && <div className="text-sm text-rose-300">{error}</div>}
         </form>
-      </Card>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <linearGradient id="gBlue" x1="64" y1="40" x2="192" y2="216" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="0.55" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0B1B3A"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="0 0 0 0 0.1  0 0 0 0 0.35  0 0 0 0 1  0 0 0 0.7 0" result="c"/>
+      <feMerge>
+        <feMergeNode in="c"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer shield -->
+  <path filter="url(#glow)" d="M128 26
+    C98 44, 74 52, 54 58
+    V122
+    C54 170, 86 207, 128 230
+    C170 207, 202 170, 202 122
+    V58
+    C182 52, 158 44, 128 26Z"
+    fill="url(#gBlue)" stroke="rgba(255,255,255,0.14)" stroke-width="6" />
+
+  <!-- Inner highlight -->
+  <path d="M128 46
+    C105 59, 86 65, 72 69
+    V122
+    C72 160, 98 190, 128 209
+    C158 190, 184 160, 184 122
+    V69
+    C170 65, 151 59, 128 46Z"
+    fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Center notch -->
+  <path d="M128 78
+    C112 88, 98 92, 90 95
+    V123
+    C90 145, 106 164, 128 178
+    C150 164, 166 145, 166 123
+    V95
+    C158 92, 144 88, 128 78Z"
+    fill="rgba(0,0,0,0.18)"/>
+</svg>
