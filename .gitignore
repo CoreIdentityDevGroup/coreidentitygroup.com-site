@@ -3,3 +3,12 @@ dist
 .env
 .DS_Store
 tsconfig.tsbuildinfo
+.env.*
+*.tar.gz
+*.zip
+*.backup
+frontend.backup/
+*.pem
+*.key
+*.p12
+infrastructure_audit_report_*.md
