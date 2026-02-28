@@ -65,7 +65,35 @@ export function HomePage() {
           Three-layer governed execution stack
         </h1>
 
-        <p className="mt-4 max-w-3xl text-pretty text-base leading-relaxed text-white/70 md:text-lg">
+
+
+          {/* Governance Portal CTA */}
+          <a
+            href="https://portal.coreholdingcorp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '12px 24px',
+              background: 'rgba(212,175,55,0.1)',
+              border: '1px solid rgba(212,175,55,0.35)',
+              borderRadius: '8px',
+              color: '#d4af37',
+              fontSize: '15px',
+              fontWeight: 600,
+              textDecoration: 'none',
+              letterSpacing: '0.02em',
+              marginTop: '16px',
+              transition: 'all 0.15s',
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            CoreIdentity Governance Portal →
+          </a>        <p className="mt-4 max-w-3xl text-pretty text-base leading-relaxed text-white/70 md:text-lg">
           Governance-first execution: policy enforcement (Sentinel), orchestration
           (Nexus), and digital labor deployment (SmartNation AI).
         </p>

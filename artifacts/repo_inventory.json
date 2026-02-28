@@ -1,0 +1,34 @@
+{
+  "localRepos": [
+    {
+      "ahead": 0,
+      "behind": 0,
+      "branch": "main",
+      "lastCommit": {
+        "date": "2026-01-22",
+        "hash": "50fa266",
+        "message": "Fix technologies composed rendering: restore page + governance verticals"
+      },
+      "name": "coreholdingcorp-site",
+      "origin": "https://github.com/IMG2025/coreholdingcorp.com-site.git",
+      "path": "/data/data/com.termux/files/home/coreholdingcorp-site",
+      "status": "dirty",
+      "upstream": "origin/main"
+    },
+    {
+      "ahead": 0,
+      "behind": 0,
+      "branch": "main",
+      "lastCommit": {
+        "date": "2026-01-04",
+        "hash": "b507f85",
+        "message": "Merge branch 'feat/illustrated-icons'"
+      },
+      "name": "coreholdingcorp.com-site",
+      "origin": "https://github.com/IMG2025/coreholdingcorp.com-site.git",
+      "path": "/data/data/com.termux/files/home/coreholdingcorp.com-site",
+      "status": "clean",
+      "upstream": "origin/main"
+    }
+  ]
+}
