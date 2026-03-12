@@ -13,7 +13,18 @@ type Vertical = {
   launchOrder: "Now" | "Next" | "Planned";
 };
 
+// CHC-VERTICALS-REORDER-v1
 const verticals: Vertical[] = [
+  {
+    name: "FinanceOps",
+    oneLiner: "Governed AI execution for financial operations: transaction review, audit workflows, regulatory reporting, and compliance controls.",
+    outcomes: [
+      "Automated transaction monitoring and flagging",
+      "Regulatory reporting with full evidence trails",
+      "Audit-ready approvals and escalation workflows",
+    ],
+    launchOrder: "Now",
+  },
   {
     name: "LegalOps",
     oneLiner: "Governed AI workers for legal operations: intake, drafting, review workflows, and policy controls.",
@@ -25,34 +36,34 @@ const verticals: Vertical[] = [
     launchOrder: "Now",
   },
   {
-    name: "ComplianceOps",
-    oneLiner: "Continuous compliance execution: evidence collection, control testing, reporting, and remediation tasking.",
+    name: "HealthcareOps",
+    oneLiner: "Governed AI execution for healthcare environments: HIPAA-compliant workflows, clinical documentation, and regulatory evidence capture.",
     outcomes: [
-      "Automated evidence gathering and mapping",
-      "Control testing workflows with approvals",
-      "Remediation tasking with measurable closure",
+      "HIPAA and HITECH compliant workflow execution",
+      "Clinical documentation with full audit trails",
+      "Regulatory evidence capture and reporting",
+    ],
+    launchOrder: "Now",
+  },
+  {
+    name: "RetailOps",
+    oneLiner: "Governed AI execution for retail operations: inventory management, vendor workflows, and compliance automation.",
+    outcomes: [
+      "Inventory and procurement governance",
+      "Vendor onboarding and compliance tracking",
+      "Policy-driven exception handling",
     ],
     launchOrder: "Now",
   },
   {
     name: "HospitalityOps",
-    oneLiner: "Operational execution in hospitality environments: vendor coordination, tariff impacts, and pilot automation.",
+    oneLiner: "Operational execution in hospitality environments: vendor coordination, property operations, and incident response.",
     outcomes: [
       "Structured POC execution and reporting",
       "Operational task automation with governance",
       "Measured ROI via tracked outcomes",
     ],
-    launchOrder: "Next",
-  },
-  {
-    name: "LaborOps",
-    oneLiner: "Governed digital labor for back-office operations: intake, routing, and execution across repeatable workflows.",
-    outcomes: [
-      "Reduced cycle time for routine operations",
-      "Improved consistency across workflows",
-      "Governed automation with human oversight",
-    ],
-    launchOrder: "Planned",
+    launchOrder: "Now",
   },
 ];
 
@@ -258,9 +269,7 @@ export function CoreIdentityTechnologiesPage() {
             <div key={v.name} className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <div className="flex items-center gap-3 mb-2">
                 <div className="text-lg font-semibold text-white">{v.name}</div>
-                <Pill tone={v.launchOrder === "Now" ? "green" : v.launchOrder === "Next" ? "amber" : "neutral"}>
-                  {v.launchOrder}
-                </Pill>
+                <Pill tone="green">{v.launchOrder}</Pill>
               </div>
               <p className="text-sm text-white/70 mb-3">{v.oneLiner}</p>
               <ul className="space-y-1">
@@ -272,6 +281,22 @@ export function CoreIdentityTechnologiesPage() {
               </ul>
             </div>
           ))}
+          <div className="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-5 flex flex-col justify-center">
+            <div className="text-base font-semibold text-white/50">Additional verticals in development</div>
+            <p className="mt-2 text-sm text-white/40">
+              New industry verticals are continuously being validated through internal
+              operations and advisory engagements. Availability is driven by client demand
+              and regulatory readiness.
+            </p>
+          </div>
+        </div>
+        <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4">
+          <p className="text-sm text-white/60">
+            Deployment model: we launch each vertical with (1) a governance baseline,
+            (2) control-to-workflow mapping, (3) role-based agent policies, and
+            (4) evidence automation. This keeps scope tight, outcomes measurable,
+            and expansion predictable.
+          </p>
         </div>
       </section>
 
