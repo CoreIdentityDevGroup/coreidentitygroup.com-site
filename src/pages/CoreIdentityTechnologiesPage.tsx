@@ -252,3 +252,115 @@ function BotIcon() {
     </svg>
   );
 }
+
+// CHC-COREIDENTITY-PAGE-EXPORT-v1
+export function CoreIdentityTechnologiesPage() {
+  return (
+    <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
+      <div className="mb-10">
+        <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          CoreIdentity Technologies
+        </h1>
+        <p className="mt-3 max-w-3xl text-lg text-white/70">
+          Governance infrastructure for agentic execution — defining authority, enforcing
+          constraints, and preserving auditability from policy definition through execution
+          and outcome.
+        </p>
+      </div>
+
+      <section className="mb-12">
+        <div className="mb-4">
+          <h2 className="text-2xl font-semibold text-white">The governed execution stack</h2>
+          <p className="mt-2 max-w-3xl text-white/70">
+            CoreIdentity is organized as a three-layer platform. Each layer has a distinct job,
+            a clear boundary, and a clean contract — so we can scale across industries without
+            losing control.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div className="text-sm font-semibold tracking-wide text-white/80">Layer 1</div>
+            <div className="mt-1 text-xl font-semibold text-white">Sentinel OS</div>
+            <div className="mt-2 text-white/70">
+              Governance, policy, identity, permissions, audit logging, constraints, and enforcement.
+              Humans lead; machines execute — Sentinel keeps that authority explicit.
+            </div>
+            <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-white/60">
+              <li>Policy + controls at the execution layer</li>
+              <li>Authorization boundaries + traceability</li>
+              <li>Risk containment + compliance posture</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div className="text-sm font-semibold tracking-wide text-white/80">Layer 2</div>
+            <div className="mt-1 text-xl font-semibold text-white">Nexus OS</div>
+            <div className="mt-2 text-white/70">
+              Orchestration and tasking. Nexus coordinates workflows, tools, agents, approvals,
+              and handoffs — while staying inside Sentinel's rules.
+            </div>
+            <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-white/60">
+              <li>Workflow routing + escalation</li>
+              <li>Agent orchestration + tool use</li>
+              <li>Human-in-the-loop checkpoints</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <div className="text-sm font-semibold tracking-wide text-white/80">Layer 3</div>
+            <div className="mt-1 text-xl font-semibold text-white">SmartNation AI</div>
+            <div className="mt-2 text-white/70">
+              Deployment layer: packaged, governed digital labor offerings that operate in
+              real environments with controls that survive production.
+            </div>
+            <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-white/60">
+              <li>Vertical digital workforce packages</li>
+              <li>Integration-ready delivery patterns</li>
+              <li>Measured outcomes + reporting</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-12">
+        <div className="mb-4">
+          <h2 className="text-2xl font-semibold text-white">MCP Protocol layer</h2>
+          <p className="mt-2 max-w-3xl text-white/70">
+            CoreIdentity exposes eleven live governance tools through a production MCP server
+            running on GCP Cloud Run — making the platform queryable by any MCP-compatible
+            AI client with full policy enforcement and audit logging on every call.
+          </p>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <div className="grid gap-4 md:grid-cols-3">
+            <div>
+              <div className="text-base font-semibold text-white mb-1">Identity enforcement</div>
+              <p className="text-sm text-white/70">Every call validated against tenant, actor, purpose, classification, and traceId before any tool executes.</p>
+            </div>
+            <div>
+              <div className="text-base font-semibold text-white mb-1">Namespace isolation</div>
+              <p className="text-sm text-white/70">Default-deny namespace allowlist per tenant. Cross-tenant access is structurally impossible.</p>
+            </div>
+            <div>
+              <div className="text-base font-semibold text-white mb-1">Contract versioning</div>
+              <p className="text-sm text-white/70">Per-tool minimum contract version enforcement. Outdated callers receive a structured rejection.</p>
+            </div>
+          </div>
+          <div className="mt-4 text-sm text-white/50">
+            <a href="/mcp" className="text-white/70 hover:text-white transition">View full MCP Protocol documentation →</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+          <h3 className="text-xl font-semibold text-white">Operating principle</h3>
+          <p className="mt-2 text-white/70">
+            We do not sell AI. We sell governed execution: measurable outcomes with explicit
+            authority, enforced constraints, and auditability built in.
+          </p>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default CoreIdentityTechnologiesPage;

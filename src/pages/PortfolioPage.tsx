@@ -66,6 +66,13 @@ export function PortfolioPage() {
             body="Advisory capability used to drive early revenue, validate real operational needs, and deliver governance‑first assessments. Feeds learnings back into CoreIdentity’s platform roadmap without becoming the product."
           />
 
+          {/* CHC-MCP-PORTFOLIO-v1 */}
+          <PortfolioCard
+            title="MCP Protocol"
+            href="/mcp"
+            body="Production MCP server exposing eleven live governance tools across four tenant namespaces. Any MCP-compatible AI client, agent, or orchestration framework can query the CoreIdentity platform with full policy enforcement, namespace isolation, and audit logging on every call."
+          />
+
           <PortfolioCard
             title="AgentIdentity Systems"
             href="/agentidentity-systems"
