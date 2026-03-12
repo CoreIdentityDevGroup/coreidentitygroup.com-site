@@ -15,6 +15,8 @@ export function Header() {
       { to: "/nexus-os", label: "Nexus OS" },
       { to: "/smartnation-ai", label: "SmartNation AI" },
   { to: "/ago-1", label: "AGO‑1" },
+      // CHC-MCP-NAV-v1
+      { to: "/mcp", label: "MCP Protocol" },
   { to: "/coreidentity-ai-advisory-group", label: "CoreIdentity AI Advisory Group" },
       { to: "/agentidentity-systems", label: "AgentIdentity Systems" },
       { to: "/resources", label: "Resources" },

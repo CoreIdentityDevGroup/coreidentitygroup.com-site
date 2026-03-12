@@ -19,6 +19,8 @@ import { ResourcesPage } from "./pages/ResourcesPage";
 import { FAQPage } from "./pages/FAQPage";
 import { AboutPage } from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+// CHC-MCP-ROUTE-v1
+import { MCPPage } from "./pages/MCPPage";
 import { CoreIdentityTechnologiesComposed } from "./components/CoreIdentityTechnologiesComposed";
 const rootRoute = createRootRoute({ component: Layout });
 
@@ -111,6 +113,8 @@ const contactRoute = createRoute({
   component: ContactPage,
 });
 
+const mcpRoute = createRoute({ getParentRoute: () => rootRoute, path: "/mcp", component: MCPPage });
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   portfolioRoute,
@@ -129,6 +133,7 @@ const routeTree = rootRoute.addChildren([
   faqRoute,
   aboutRoute,
   contactRoute,
+  mcpRoute,
 ]);
 
 export const router = createRouter({ routeTree });
