@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="mt-24 border-t border-white/10 px-6 py-10 text-sm text-white/60">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div className="space-y-2">
-          <div className="text-white/80 font-medium">Core Holding Corporation</div>
-          <div className="text-white/50">Governance-first AI infrastructure</div>
+          <div className="text-white/80 font-medium">CoreIdentity Development Group</div>
+          <div className="text-white/50">The control layer for governed AI</div>
         </div>
 
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
@@ -56,7 +56,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-10 max-w-6xl text-xs text-white/35">
-        © {new Date().getFullYear()} Core Holding Corporation. All rights reserved.
+        © {new Date().getFullYear()} CoreIdentity Development Group. All rights reserved.
       </div>
     </footer>
   );

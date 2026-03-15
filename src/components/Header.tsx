@@ -11,6 +11,7 @@ export function Header() {
       { to: "/", label: "Home" },
       { to: "/portfolio", label: "Portfolio" },
       { to: "/coreidentity-technologies", label: "CoreIdentity Technologies" },
+      { to: "/sal", label: "SAL Enforcement Kernel" },
       { to: "/sentinel-os", label: "Sentinel OS" },
       { to: "/nexus-os", label: "Nexus OS" },
       { to: "/smartnation-ai", label: "SmartNation AI" },
@@ -33,9 +34,9 @@ export function Header() {
         <div className="h-16 py-3 flex items-center justify-between gap-4">
           <div className="min-w-0">
             <div className="text-sm font-semibold tracking-[0.22em] uppercase leading-tight">
-              CORE HOLDING CORPORATION
+              COREIDENTITY DEVELOPMENT GROUP
             </div>
-            <div className="text-xs text-white/60 leading-tight">Governance-First AI Infrastructure</div>
+            <div className="text-xs text-white/60 leading-tight">The Control Layer for Governed AI</div>
           </div>
 
           <nav className="hidden lg:flex items-center gap-5 text-sm text-white/70">

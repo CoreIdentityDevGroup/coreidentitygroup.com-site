@@ -115,6 +115,9 @@ const contactRoute = createRoute({
 
 const mcpRoute = createRoute({ getParentRoute: () => rootRoute, path: "/mcp", component: MCPPage });
 
+import { SALPage } from "./pages/SALPage";
+const salRoute = createRoute({ getParentRoute: () => rootRoute, path: "/sal", component: SALPage });
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   portfolioRoute,
@@ -134,6 +137,7 @@ const routeTree = rootRoute.addChildren([
   aboutRoute,
   contactRoute,
   mcpRoute,
+  salRoute,
 ]);
 
 export const router = createRouter({ routeTree });
