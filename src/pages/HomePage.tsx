@@ -17,7 +17,7 @@ export default function HomePage() {
 
           {/* Governance Portal CTA */}
           <a
-            href="https://portal.coreholdingcorp.com"
+            href="https://portal.coreidentitygroup.com"
             target="_blank"
             rel="noopener noreferrer"
             style={{
