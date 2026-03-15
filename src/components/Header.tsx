@@ -10,15 +10,14 @@ export function Header() {
     () => [
       { to: "/", label: "Home" },
       { to: "/portfolio", label: "Portfolio" },
-      { to: "/coreidentity-technologies", label: "CoreIdentity Technologies" },
       { to: "/sal", label: "SAL Enforcement Kernel" },
+      { to: "/coreidentity-technologies", label: "CoreIdentity Technologies" },
       { to: "/sentinel-os", label: "Sentinel OS" },
       { to: "/nexus-os", label: "Nexus OS" },
       { to: "/smartnation-ai", label: "SmartNation AI" },
-  { to: "/ago-1", label: "AGO‑1" },
-      // CHC-MCP-NAV-v1
+      { to: "/ago-1", label: "AGO‑1" },
       { to: "/mcp", label: "MCP Protocol" },
-  { to: "/coreidentity-ai-advisory-group", label: "CoreIdentity AI Advisory Group" },
+      { to: "/coreidentity-ai-advisory-group", label: "CoreIdentity AI Advisory Group" },
       { to: "/agentidentity-systems", label: "AgentIdentity Systems" },
       { to: "/resources", label: "Resources" },
       { to: "/faq", label: "FAQ" },
