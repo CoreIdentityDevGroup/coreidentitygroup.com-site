@@ -2,7 +2,7 @@ import React from "react";
 import { Card, PageTitle, SectionTitle } from "../components/ui";
 
 const INTRO =
-  "CoreIdentity Development Group Inc. is the parent organization that governs a portfolio of systems and operating capabilities built to enable safe, auditable agentic digital labor. The portfolio is structured to keep governance and control at the center: Sentinel OS defines the rules and evidence requirements, Nexus OS orchestrates controlled execution, and SmartNation AI packages governed deployment patterns. AGO‑1 is our internal operating agent used to harden the stack in real workflows before client exposure.";
+  "CoreIdentity Development Group Inc. governs a portfolio of systems and operating capabilities built to enable safe, auditable agentic digital labor. At the foundation is the Semantic Arbitration Layer (SAL) — the deterministic enforcement kernel that authorizes every agent execution before it reaches the stack. Above it, Sentinel OS defines policy, Nexus OS orchestrates controlled execution, and SmartNation AI packages governed deployment patterns. CoreIdentity Advisory Group and AGO-1 translate the platform into commercial engagements.";
 
 function PortfolioCard(props: { title: string; body: string; href: string }) {
   return (
