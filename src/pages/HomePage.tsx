@@ -48,9 +48,7 @@ export default function HomePage() {
 
         {/* Main paragraph (updated to lead into the image below) */}
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/70">
-          Our infrastructure establishes the governance layer beneath agentic
-          systems—defining authority, enforcing constraints, and maintaining
-          visibility from policy definition through execution and outcome.
+          Your AI agents are making consequential decisions across your business right now. CoreIdentity is the enforcement infrastructure that ensures every agent action stays within the boundaries your organization authorized — and generates the audit trail your regulators and board require. Before something goes wrong.
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -80,7 +78,7 @@ export default function HomePage() {
           />
           <div className="px-6 py-4 text-sm text-white/60 text-center">
   <span className="mx-auto block max-w-md">
-    Global governance signals, enforceable constraints, and auditable execution.
+    Every agent action. Every policy boundary. Every audit trail. Governed at machine speed.
   </span>
 </div>
         </div>

@@ -12,7 +12,7 @@ export function AGO1Page() {
 </h1>
 
 <p className="mt-4 text-lg text-white/70 max-w-3xl">
-  {/* keep your existing subtitle sentence here (copy it from the old prop) */}
+  The internal operating agent that governs CoreIdentity's own operations — and serves as the validated pilot pattern for every client deployment that follows.
 </p>
 
       <Section>

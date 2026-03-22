@@ -6,11 +6,11 @@ export function SentinelOSPage() {
     <div className="space-y-8">
       <div className="space-y-3">
         <PageTitle>Sentinel OS</PageTitle>
-        <p className="text-white/70 max-w-3xl">Governance layer enforcing policy, approvals, identity boundaries, and audit-ready evidence for autonomous systems.</p>
+        <p className="text-white/70 max-w-3xl">The reason your AI fleet cannot make a decision your legal team did not authorize. Sentinel OS enforces policy, controls identity boundaries, gates approvals, and captures the evidence your auditors will require — before a regulator asks for it.</p>
       </div>
       <Card>
         <ul className="list-disc pl-5 space-y-2 text-white/75">
-          <li>Policy enforcement</li><li>Identity + permissions</li><li>Approval gates</li><li>Evidence + audit trails</li><li>Fail-closed controls</li>
+          <li>Policy enforcement — agents execute only what was explicitly authorized</li><li>Identity + permissions — every agent action is attributed and bounded</li><li>Approval gates — human authority preserved at every critical decision point</li><li>Evidence + audit trails — the documentation your legal team needs before regulators ask</li><li>Fail-closed controls — ambiguity stops the agent, not the business</li>
         </ul>
       </Card>
 

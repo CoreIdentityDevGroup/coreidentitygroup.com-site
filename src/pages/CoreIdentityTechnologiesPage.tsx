@@ -17,7 +17,7 @@ type Vertical = {
 const verticals: Vertical[] = [
   {
     name: "FinanceOps",
-    oneLiner: "Governed AI execution for financial operations: transaction review, audit workflows, regulatory reporting, and compliance controls.",
+    oneLiner: "Every financial transaction executed by an AI agent is authorized, logged, and auditable. FinanceOps ensures your autonomous finance layer meets SOX, PCI-DSS, and internal controls — before your auditors ask.",
     outcomes: [
       "Automated transaction monitoring and flagging",
       "Regulatory reporting with full evidence trails",
@@ -27,7 +27,7 @@ const verticals: Vertical[] = [
   },
   {
     name: "LegalOps",
-    oneLiner: "Governed AI workers for legal operations: intake, drafting, review workflows, and policy controls.",
+    oneLiner: "Privileged information stays privileged, even when AI handles it. LegalOps enforces access boundaries and creates defensible audit trails for every agent interaction with sensitive legal data.",
     outcomes: [
       "Faster contract intake and triage",
       "Standardized drafting and review playbooks",
@@ -37,7 +37,7 @@ const verticals: Vertical[] = [
   },
   {
     name: "HealthcareOps",
-    oneLiner: "Governed AI execution for healthcare environments: HIPAA-compliant workflows, clinical documentation, and regulatory evidence capture.",
+    oneLiner: "PHI never touches an unauthorized agent. HealthcareOps enforces HIPAA-compliant agent governance across your entire autonomous workforce — so your compliance team is not discovering violations after the fact.",
     outcomes: [
       "HIPAA and HITECH compliant workflow execution",
       "Clinical documentation with full audit trails",
@@ -47,7 +47,7 @@ const verticals: Vertical[] = [
   },
   {
     name: "RetailOps",
-    oneLiner: "Governed AI execution for retail operations: inventory management, vendor workflows, and compliance automation.",
+    oneLiner: "Customer data, pricing decisions, inventory actions — all governed. RetailOps ensures your retail AI agents operate within policy boundaries that protect margin, brand, and compliance simultaneously.",
     outcomes: [
       "Inventory and procurement governance",
       "Vendor onboarding and compliance tracking",
@@ -57,7 +57,7 @@ const verticals: Vertical[] = [
   },
   {
     name: "HospitalityOps",
-    oneLiner: "Operational execution in hospitality environments: vendor coordination, property operations, and incident response.",
+    oneLiner: "Guest data, operational decisions, revenue management — governed at the agent level. HospitalityOps brings enterprise-grade AI governance to hospitality operations without creating operational friction.",
     outcomes: [
       "Structured POC execution and reporting",
       "Operational task automation with governance",

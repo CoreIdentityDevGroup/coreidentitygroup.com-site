@@ -39,7 +39,7 @@ export function SALPage() {
           SAL Enforcement Kernel
         </h1>
         <p className="mt-4 max-w-3xl text-lg text-white/70 leading-relaxed">
-          The CoreIdentity Semantic Arbitration Layer (SAL) is the deterministic enforcement kernel of the CoreIdentity ecosystem. It is the authoritative gateway between autonomous reasoning and enterprise execution — the architectural guarantee that transforms probabilistic AI into institutional-grade digital labor.
+          Your AI agents can reason about anything. SAL determines what they are actually permitted to do. The CoreIdentity Semantic Arbitration Layer is the deterministic enforcement kernel that sits in the execution path — not the policy document — mathematically preventing any machine action that violates your codified business logic, safety thresholds, or regulatory boundaries. The architectural guarantee that transforms probabilistic AI into institutional-grade digital labor.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">sub-3ms arbitration latency</span>
