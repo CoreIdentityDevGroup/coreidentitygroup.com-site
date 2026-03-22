@@ -27,8 +27,19 @@ export function PortfolioPage() {
       </div>
 
       <section className="space-y-5">
-        <SectionTitle>Core systems and operating capabilities</SectionTitle>
+        <SectionTitle>Foundational Infrastructure</SectionTitle>
+        <p className="text-white/60 text-sm max-w-2xl">The enforcement kernel that underpins every product in the stack. Every agent execution passes through SAL before reaching Sentinel OS, Nexus OS, or any downstream system.</p>
+        <div className="grid gap-5 md:grid-cols-1 max-w-2xl">
+          <PortfolioCard
+            title="Semantic Arbitration Layer (SAL)"
+            href="/sal"
+            body="The deterministic pre-execution authorization kernel at the core of every CoreIdentity deployment. SAL evaluates every agent request across five dimensions — Identity, Intent, Asset, Action, and Context (IIAAC) — before execution is permitted. Every decision generates an immutable Proof Pack anchored to a cryptographic ledger. Fail-closed by design: if SAL is unreachable, execution is blocked. SAL is the enforcement primitive that makes the rest of the stack governable."
+          />
+        </div>
+      </section>
 
+      <section className="space-y-5">
+        <SectionTitle>Core systems and operating capabilities</SectionTitle>
         <div className="grid gap-5 md:grid-cols-2">
           <PortfolioCard
             title="CoreIdentity Technologies"
