@@ -6,7 +6,7 @@ export function AgentIdentitySystemsPage() {
     <div className="space-y-8">
       <div className="space-y-3">
         <PageTitle>AgentIdentity Systems</PageTitle>
-        <div className="text-sm text-white/60">A Core Holding Corporation company.</div>
+        <div className="text-sm text-white/60">A CoreIdentity Development Group Inc. company.</div>
         <p className="text-white/70 max-w-3xl">Identity and accountability R&D advancing authentication, authorization, provenance, and attribution frameworks for AI agents.</p>
       </div>
       <Card>

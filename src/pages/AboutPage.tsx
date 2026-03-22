@@ -7,7 +7,7 @@ export function AboutPage() {
       <div className="space-y-3">
         <PageTitle>About</PageTitle>
         <p className="text-white/70 max-w-3xl">
-          Core Holding Corporation is the parent organization that builds and governs infrastructure for agentic digital labor through CoreIdentity Technologies—a platform delivering a three-layer governed execution stack consisting of Sentinel OS, Nexus OS, and SmartNation AI, supported by CoreIdentity AI Advisory Group and AgentIdentity Systems.
+          CoreIdentity Development Group Inc. builds and governs infrastructure for agentic digital labor through CoreIdentity Technologies—a platform delivering a three-layer governed execution stack consisting of Sentinel OS, Nexus OS, and SmartNation AI, supported by CoreIdentity AI Advisory Group and AgentIdentity Systems.
         </p>
       </div>
 
@@ -23,7 +23,7 @@ export function AboutPage() {
         <Card>
           <div className="text-lg font-semibold">Todd Morgan</div>
           <div className="mt-2 text-white/75 leading-relaxed">
-            Todd founded Core Holding Corporation to address the governance gap in AI deployment—ensuring autonomous systems operate inside policy,
+            Todd founded CoreIdentity Development Group Inc. to address the governance gap in AI deployment—ensuring autonomous systems operate inside policy,
             approvals, identity boundaries, and evidence requirements. His focus is making governed execution deployable in regulated and mission-critical environments.
           </div>
         </Card>

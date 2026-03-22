@@ -2,7 +2,7 @@ import React from "react";
 import { Card, PageTitle, SectionTitle } from "../components/ui";
 
 const INTRO =
-  "Core Holding Corporation is the parent organization that governs a portfolio of systems and operating capabilities built to enable safe, auditable agentic digital labor. The portfolio is structured to keep governance and control at the center: Sentinel OS defines the rules and evidence requirements, Nexus OS orchestrates controlled execution, and SmartNation AI packages governed deployment patterns. AGO‑1 is our internal operating agent used to harden the stack in real workflows before client exposure.";
+  "CoreIdentity Development Group Inc. is the parent organization that governs a portfolio of systems and operating capabilities built to enable safe, auditable agentic digital labor. The portfolio is structured to keep governance and control at the center: Sentinel OS defines the rules and evidence requirements, Nexus OS orchestrates controlled execution, and SmartNation AI packages governed deployment patterns. AGO‑1 is our internal operating agent used to harden the stack in real workflows before client exposure.";
 
 function PortfolioCard(props: { title: string; body: string; href: string }) {
   return (
@@ -57,7 +57,7 @@ export function PortfolioPage() {
           <PortfolioCard
             title="AGO‑1"
             href="/ago-1"
-            body="Internal operating agent (non‑client‑facing). Used to augment CHC and advisory operations and to serve as a controlled first pilot pattern for hospitality workflows (starting with Cole Hospitality). Runs under Sentinel + Nexus controls."
+            body="Internal operating agent (non‑client‑facing). Used to augment CoreIdentity Advisory Group operations and to serve as a controlled first pilot pattern for hospitality workflows (starting with Cole Hospitality). Runs under Sentinel + Nexus controls."
           />
 
           <PortfolioCard

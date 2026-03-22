@@ -66,7 +66,7 @@ export function CoreIdentityAdvisoryGroupPage() {
         <Card>
           <div className="space-y-3">
             <p className="text-white/70 leading-relaxed">
-              AGO‑1 is an internal operating agent used to augment advisory and CHC operations while remaining non-client-facing. AGO‑1 runs under Sentinel
+              AGO‑1 is an internal operating agent used to augment advisory and CoreIdentity operations while remaining non-client-facing. AGO‑1 runs under Sentinel
               OS and Nexus OS controls and is used to validate fail-closed behaviors, produce audit evidence, and operationalize governance patterns in real
               workflows.
             </p>

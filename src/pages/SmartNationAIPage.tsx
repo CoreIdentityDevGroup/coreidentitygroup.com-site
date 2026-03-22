@@ -6,7 +6,7 @@ export function SmartNationAIPage() {
     <div className="space-y-8">
       <div className="space-y-3">
         <PageTitle>SmartNation AI</PageTitle>
-        <div className="text-sm text-white/60">A Core Holding Corporation company.</div>
+        <div className="text-sm text-white/60">A CoreIdentity Development Group Inc. company.</div>
         <p className="text-white/70 max-w-3xl">Digital labor layer deploying role-based AI workers executing real operational work under policy constraints with evidence by default.</p>
       </div>
       <Card>

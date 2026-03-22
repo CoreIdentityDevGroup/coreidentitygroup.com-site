@@ -5,10 +5,10 @@ type FAQItem = { q: string; a: ReactNode };
 
 const faq: FAQItem[] = [
   {
-    q: "What is Core Holding Corporation (CHC)?",
+    q: "What is CoreIdentity Development Group Inc.?",
     a: (
       <p className="text-muted-foreground leading-relaxed">
-        CHC is the parent organization that governs a portfolio of systems and operating capabilities designed for safe, auditable agentic execution. CHC
+        CoreIdentity Development Group Inc. is the parent organization that governs a portfolio of systems and operating capabilities designed for safe, auditable agentic execution. CoreIdentity
         exists to enforce clarity: what can be automated, under what controls, with what evidence, and with what escalation path when uncertainty appears.
       </p>
     ),
@@ -76,7 +76,7 @@ const faq: FAQItem[] = [
             AGO‑1
           </Link>{" "}
           is an internal operating agent (non-client-facing) used to harden the execution stack in real workflows. AGO‑1 runs under Sentinel OS and Nexus OS
-          controls and is used to augment CHC and CoreIdentity AI Advisory Group operations.
+          controls and is used to augment CoreIdentity Advisory Group operations.
         </p>
         <p>
           AGO‑1 also serves as a controlled pilot pattern for hospitality workflows (beginning with the Cole Hospitality pilot), producing repeatable
@@ -89,7 +89,7 @@ const faq: FAQItem[] = [
     q: "Are you replacing human positions?",
     a: (
       <p className="text-muted-foreground leading-relaxed">
-        No. CHC’s posture is augmentation: removing friction, waste, and cognitive overload so human talent operates at a higher level. We avoid automating
+        No. CoreIdentity’s posture is augmentation: removing friction, waste, and cognitive overload so human talent operates at a higher level. We avoid automating
         decisions requiring ethics, accountability, empathy, or human judgment—and we keep people in the loop.
       </p>
     ),

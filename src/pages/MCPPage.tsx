@@ -81,7 +81,7 @@ export function MCPPage() {
             </ul>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <div className="text-sm font-semibold tracking-wide text-white/60 uppercase mb-3">CHC · CIAG · Hospitality namespaces</div>
+            <div className="text-sm font-semibold tracking-wide text-white/60 uppercase mb-3">CoreIdentity · CIAG · Hospitality namespaces</div>
             <p className="text-sm text-white/70 mb-3">
               Each vertical namespace exposes the same three-tool surface — read,
               readById, and search — scoped to that tenant's governed artifact space.
@@ -97,7 +97,7 @@ export function MCPPage() {
         <div className="mb-4">
           <h2 className="text-2xl font-semibold text-white">AGO and the MCP execution plane</h2>
           <p className="mt-2 max-w-3xl text-white/70">
-            AGO agents — CHC Ops, CIAG, and Hospitality — consume the MCP server through
+            AGO agents — CoreIdentity Ops, CIAG, and Hospitality — consume the MCP server through
             ago-1-core, the single authoritative MCP gateway. Tool calls made by AGO agents
             pass through identical governance enforcement as external MCP callers.
             The governance layer does not distinguish between internal and external invocations.
@@ -105,7 +105,7 @@ export function MCPPage() {
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <div className="text-sm font-semibold tracking-wide text-white/60 uppercase mb-1">AGO CHC Ops</div>
+            <div className="text-sm font-semibold tracking-wide text-white/60 uppercase mb-1">AGO CoreIdentity Ops</div>
             <div className="text-base font-semibold text-white mb-2">MCP server host</div>
             <p className="text-sm text-white/70">
               Hosts the shared MCP server and owns the full smoke test suite validating

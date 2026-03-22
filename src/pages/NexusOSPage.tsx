@@ -6,7 +6,7 @@ export function NexusOSPage() {
     <div className="space-y-8">
       <div className="space-y-3">
         <PageTitle>Nexus OS</PageTitle>
-        <div className="text-sm text-white/60">A Core Holding Corporation company.</div>
+        <div className="text-sm text-white/60">A CoreIdentity Development Group Inc. company.</div>
         <p className="text-white/70 max-w-3xl">Orchestration layer coordinating workflows, integrations, routing, recovery, and state management under governance constraints.</p>
       </div>
       <Card>

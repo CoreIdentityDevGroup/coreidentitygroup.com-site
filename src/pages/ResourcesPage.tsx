@@ -7,7 +7,7 @@ const resources: Resource[] = [
   {
     title: "Executive Summary",
     description:
-      "A concise orientation to CHC’s governance-first posture, portfolio structure, and the three-layer governed execution stack. Useful for executives who need clarity quickly.",
+      "A concise orientation to CoreIdentity’s governance-first posture, portfolio structure, and the three-layer governed execution stack. Useful for executives who need clarity quickly.",
     status: "Reference",
   },
   {
@@ -31,7 +31,7 @@ const resources: Resource[] = [
   {
     title: "Security & Compliance Posture (High-Level)",
     description:
-      "A non-technical overview of how CHC approaches secure operations: least privilege, auditability, data minimization, and conservative defaults. Details are provided during engagement.",
+      "A non-technical overview of how CoreIdentity approaches secure operations: least privilege, auditability, data minimization, and conservative defaults. Details are provided during engagement.",
     status: "Reference",
   },
   {
