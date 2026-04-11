@@ -1,0 +1,7 @@
+name = "coreidentity-live-metrics"
+main = "workers/live-metrics.js"
+compatibility_date = "2024-01-01"
+
+[[routes]]
+pattern = "coreidentitygroup.com/api/live-metrics"
+zone_name = "coreidentitygroup.com"

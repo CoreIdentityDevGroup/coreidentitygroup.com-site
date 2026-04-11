@@ -1,7 +1,16 @@
 import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import globalAIGovernanceHero from "../assets/images/global-ai-governance-hero.webp";
 
 export default function HomePage() {
+  const [liveData, setLiveData] = useState(null);
+
+  useEffect(() => {
+    fetch('/api/live-metrics')
+      .then(r => r.json())
+      .then(d => { if (d.success) setLiveData(d.data); })
+      .catch(() => {});
+  }, []);
   return (
     <div className="mx-auto max-w-6xl px-4 py-16">
 
