@@ -88,20 +88,6 @@ export function LeadershipPage() {
         </Card>
       </section>
 
-      <div className="rounded-2xl border border-white/10 bg-black/30 p-8">
-        <p className="text-white/60 text-sm leading-relaxed mb-4">
-          CoreIdentity is actively building its leadership team as the platform
-          scales toward enterprise and sovereign deployment. Inquiries from
-          qualified executives in governance, infrastructure, and regulated
-          industry are welcome.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
-        >
-          Get in Touch →
-        </Link>
-      </div>
 
     </div>
   );

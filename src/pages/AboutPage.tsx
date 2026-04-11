@@ -49,12 +49,10 @@ export function AboutPage() {
         <Card>
           <div className="space-y-4 text-white/70 leading-relaxed">
             <p>
-              CoreIdentity Development Group Inc. is a Wyoming C-Corporation
-              operating through two Virginia-based subsidiaries: CoreIdentity
-              Advisory Group and CoreIdentity Technologies. Together, these
-              entities form a vertically integrated governance infrastructure
-              company — from advisory engagement to platform enforcement to
-              digital labor deployment.
+              CoreIdentity Development Group Inc. is the parent entity
+              governing a portfolio of infrastructure systems and operating
+              capabilities — from advisory engagement to platform enforcement
+              to governed digital labor deployment at enterprise scale.
             </p>
             <p>
               We are governance-first by design. Every system we build
@@ -103,21 +101,21 @@ export function AboutPage() {
             <div className="space-y-2">
               <div className="text-sm font-medium text-white/40 tracking-widest">HOLDING COMPANY</div>
               <div className="font-semibold text-white">CoreIdentity Development Group Inc.</div>
-              <p className="text-sm text-white/60 leading-relaxed">Wyoming C-Corporation. Parent entity governing the full portfolio of infrastructure systems and operating capabilities.</p>
+              <p className="text-sm text-white/60 leading-relaxed">Parent entity governing the full portfolio of infrastructure systems and operating capabilities.</p>
             </div>
           </Card>
           <Card>
             <div className="space-y-2">
               <div className="text-sm font-medium text-white/40 tracking-widest">ADVISORY</div>
               <div className="font-semibold text-white">CoreIdentity Advisory Group</div>
-              <p className="text-sm text-white/60 leading-relaxed">Virginia operating entity. Governance-first advisory engagements, executive readiness assessments, and enterprise deployment strategy.</p>
+              <p className="text-sm text-white/60 leading-relaxed">Governance-first advisory engagements, executive readiness assessments, and enterprise deployment strategy.</p>
             </div>
           </Card>
           <Card>
             <div className="space-y-2">
               <div className="text-sm font-medium text-white/40 tracking-widest">TECHNOLOGY</div>
               <div className="font-semibold text-white">CoreIdentity Technologies</div>
-              <p className="text-sm text-white/60 leading-relaxed">Virginia operating entity. Platform R&D, enforcement stack, and governed digital labor deployment at enterprise scale.</p>
+              <p className="text-sm text-white/60 leading-relaxed">Platform R&D, enforcement stack, and governed digital labor deployment at enterprise scale.</p>
             </div>
           </Card>
         </div>

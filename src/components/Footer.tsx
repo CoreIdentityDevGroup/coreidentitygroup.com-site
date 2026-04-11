@@ -47,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link to="/contact" className="hover:text-white/80 transition">
-                  Use the contact form
+                  <a href="/contact" style={{color:'inherit',textDecoration:'none'}}>Contact Us →</a>
                 </Link>
               </li>
             </ul>
