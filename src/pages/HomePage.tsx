@@ -1,158 +1,185 @@
-// src/pages/HomePage.tsx
 import { Link } from "@tanstack/react-router";
 import globalAIGovernanceHero from "../assets/images/global-ai-governance-hero.webp";
 
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-16">
+
       {/* HERO */}
       <section className="max-w-4xl">
-        <h1 className="text-5xl font-semibold tracking-tight">
-          Governance infrastructure
-          <br />
-          for agentic execution.
-        </h1>
-
-
-
-          {/* Governance Portal CTA */}
-          <a
-            href="https://portal.coreidentitygroup.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '12px 24px',
-              background: 'rgba(212,175,55,0.1)',
-              border: '1px solid rgba(212,175,55,0.35)',
-              borderRadius: '8px',
-              color: '#d4af37',
-              fontSize: '15px',
-              fontWeight: 600,
-              textDecoration: 'none',
-              letterSpacing: '0.02em',
-              marginTop: '16px',
-              transition: 'all 0.15s',
-            }}
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-            CoreIdentity Governance Portal →
-          </a>        {/* Kicker tagline (non-duplicate) */}
-        <div className="mt-8 text-xs font-medium tracking-[0.22em] text-white/50">
-          GOVERNANCE AT THE EXECUTION LAYER
+        <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-6">
+          AGENTIC EXECUTION GOVERNANCE
         </div>
-
-        {/* Main paragraph (updated to lead into the image below) */}
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/70">
-          Your AI agents are making consequential decisions across your business right now. CoreIdentity is the enforcement infrastructure that ensures every agent action stays within the boundaries your organization authorized — and generates the audit trail your regulators and board require. Before something goes wrong.
+        <h1 className="text-5xl font-semibold tracking-tight leading-tight">
+          The control plane
+          <br />
+          for autonomous enterprise AI.
+        </h1>
+        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-white/70">
+          Autonomous agents are executing consequential decisions across your
+          enterprise right now — without a control plane designed to govern them.
+          CoreIdentity is that control plane. Identity enforcement, policy
+          arbitration, and immutable audit — operating at machine speed, before
+          something goes wrong.
         </p>
-
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
-            to="/coreidentity-technologies"
+            to="/portfolio"
             className="inline-flex items-center justify-center rounded-xl bg-white/10 px-6 py-3 text-sm font-medium hover:bg-white/15 transition"
           >
-            Explore CoreIdentity Technologies
+            Explore the Platform
           </Link>
-
           <Link
-  to="/contact"
-  className="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
->
-  Request additional Information
-</Link>
+            to="/contact"
+            className="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
+          >
+            Request a Briefing
+          </Link>
         </div>
       </section>
 
-      {/* GLOBAL GOVERNANCE VISUAL (image overlay text stays untouched) */}
+      {/* VISUAL */}
       <section className="mt-20">
         <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/30">
           <img
             src={globalAIGovernanceHero}
-            alt="Global AI governance and controlled agentic execution"
+            alt="Agentic Execution Governance — CoreIdentity"
             className="w-full object-cover"
           />
-          <div className="px-6 py-4 text-sm text-white/60 text-center">
-  <span className="mx-auto block max-w-md">
-    Every agent action. Every policy boundary. Every audit trail. Governed at machine speed.
-  </span>
-</div>
+          <div className="px-6 py-4 text-sm text-white/50 text-center">
+            <span className="mx-auto block max-w-md">
+              Every agent action. Every policy boundary. Every audit trail. Governed at machine speed.
+            </span>
+          </div>
         </div>
       </section>
 
-      {/* RESTORED: Section list/cards below the image */}
-      <section className="mt-14">
-        <div className="grid gap-6">
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-              <div className="text-lg font-semibold">Policy-first</div>
-              <p className="mt-3 text-white/70 leading-relaxed">
-                Define what AI can and cannot do—then enforce it with explicit
-                constraints, approvals, and guardrails.
-              </p>
-            </div>
+      {/* AEG CATEGORY DEFINITION */}
+      <section className="mt-20">
+        <div className="max-w-3xl">
+          <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-4">
+            DEFINING THE CATEGORY
+          </div>
+          <h2 className="text-3xl font-semibold tracking-tight mb-6">
+            Agentic Execution Governance
+          </h2>
+          <p className="text-white/70 leading-relaxed text-lg">
+            AEG is the infrastructure discipline that governs autonomous AI at the
+            execution layer — not through dashboards or after-the-fact monitoring,
+            but through deterministic enforcement embedded in the execution chain
+            itself. Every agent action is authorized before it executes, attributed
+            to a verified identity, bounded by codified policy, and recorded in an
+            immutable audit trail. CoreIdentity builds and operates the AEG stack.
+          </p>
+        </div>
+      </section>
 
-            <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-              <div className="text-lg font-semibold">Audit-ready</div>
-              <p className="mt-3 text-white/70 leading-relaxed">
-                Capture traceable evidence of inputs, actions, approvals, and
-                outcomes—built for review, compliance, and trust.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-              <div className="text-lg font-semibold">Operational</div>
-              <p className="mt-3 text-white/70 leading-relaxed">
-                Move from demos to real execution with controls that survive
-                production complexity, incidents, and change.
-              </p>
-            </div>
+      {/* ENFORCEMENT STACK */}
+      <section className="mt-20">
+        <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-8">
+          THE ENFORCEMENT STACK
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">AUTHORIZATION</div>
+            <div className="text-lg font-semibold mb-3">SAL Enforcement Kernel</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              The deterministic pre-execution gateway. Every agent request is
+              evaluated across five dimensions before execution is permitted.
+              Fail-closed by design — if SAL cannot authorize, execution stops.
+            </p>
+            <Link to="/sal" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+              SAL Kernel →
+            </Link>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <div className="text-lg font-semibold">Next step</div>
-            <p className="mt-3 text-white/70 leading-relaxed">
-              Start with the governed execution stack—Sentinel OS (governance),
-              Nexus OS (orchestration), and SmartNation AI (deployment). We keep
-              authority explicit: humans lead, machines execute, governance
-              protects both.
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">GOVERNANCE</div>
+            <div className="text-lg font-semibold mb-3">Sentinel OS</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              Policy enforcement, identity boundaries, approval gates, and
+              evidence capture. The reason your AI fleet cannot make a decision
+              your legal team did not authorize.
             </p>
+            <Link to="/sentinel-os" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+              Sentinel OS →
+            </Link>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">IDENTITY</div>
+            <div className="text-lg font-semibold mb-3">Agent Identity Systems</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              Every agent needs an identity it can prove. Authentication,
+              authorization, provenance, and attribution — enforced at the
+              execution layer, not bolted on after the fact.
+            </p>
+            <Link to="/agentidentity-systems" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+              Agent Identity Systems →
+            </Link>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">ORCHESTRATION</div>
+            <div className="text-lg font-semibold mb-3">Nexus OS</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              Controlled multi-agent execution. Workflows, integrations,
+              retries, and recovery — coordinated inside defined governance
+              constraints with structured operational traces at every step.
+            </p>
+            <Link to="/nexus-os" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+              Nexus OS →
+            </Link>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">DIGITAL LABOR</div>
+            <div className="text-lg font-semibold mb-3">SmartNation AI</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              10,000 governed agents across eight verticals. Pre-built,
+              compliance-ready digital labor — deployed under full AEG
+              enforcement from day one.
+            </p>
+            <Link to="/smartnation-ai" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+              SmartNation AI →
+            </Link>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">CRYPTOGRAPHIC POSTURE</div>
+            <div className="text-lg font-semibold mb-3">Quantum Hardening</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              The first AI governance platform to complete post-quantum
+              cryptographic hardening across the full enforcement stack.
+              FIPS 203, 204, and 205. Every surface — not just the perimeter.
+            </p>
+            <Link to="/quantum-hardening" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+              Quantum Hardening →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* AIS + PQC highlights */}
-      <section className="mt-14">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-6">
-            <div className="text-xs font-medium tracking-widest text-indigo-400 mb-3">LIVE — 30-DAY SOAK TEST</div>
-            <div className="text-lg font-semibold mb-2">Agent Identity Systems</div>
-            <p className="text-white/70 leading-relaxed text-sm mb-3">Every agent needs an identity it can prove. AIS delivers authentication, authorization, provenance, and attribution — enforced at the execution layer.</p>
-            <div className="flex gap-6 mb-3">
-              <div><div className="text-xl font-bold text-indigo-300">32,784+</div><div className="text-xs text-white/50">soak cycles</div></div>
-              <div><div className="text-xl font-bold text-indigo-300">100%</div><div className="text-xs text-white/50">pass rate</div></div>
-              <div><div className="text-xl font-bold text-indigo-300">99ms</div><div className="text-xs text-white/50">p95 latency</div></div>
-            </div>
-            <a href="/agentidentity-systems" className="text-sm text-indigo-400 hover:text-indigo-300 transition">Explore AIS →</a>
-          </div>
-
-          <div className="rounded-2xl border border-teal-400/20 bg-teal-400/5 p-6">
-            <div className="text-xs font-medium tracking-widest text-teal-400 mb-3">VERIFIED — FIPS 203/204/205</div>
-            <div className="text-lg font-semibold mb-2">Quantum Hardening</div>
-            <p className="text-white/70 leading-relaxed text-sm mb-3">First AI governance platform to complete post-quantum cryptographic hardening across the full enforcement stack. Every cryptographic surface — not just the perimeter.</p>
-            <div className="flex gap-6 mb-3">
-              <div><div className="text-xl font-bold text-teal-300">100,000</div><div className="text-xs text-white/50">soak cycles</div></div>
-              <div><div className="text-xl font-bold text-teal-300">376/376</div><div className="text-xs text-white/50">tests passed</div></div>
-              <div><div className="text-xl font-bold text-teal-300">Jul 2026</div><div className="text-xs text-white/50">declaration</div></div>
-            </div>
-            <a href="/quantum-hardening" className="text-sm text-teal-400 hover:text-teal-300 transition">Explore PQC →</a>
+      {/* CLOSING STATEMENT */}
+      <section className="mt-20">
+        <div className="rounded-2xl border border-white/10 bg-black/30 p-10 max-w-3xl">
+          <p className="text-xl text-white/80 leading-relaxed font-light">
+            Autonomous AI is not a future risk. It is a present operational
+            reality. The enterprises that govern it correctly today will be the
+            ones that scale it with confidence tomorrow. CoreIdentity is the
+            infrastructure that makes that possible.
+          </p>
+          <div className="mt-8">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-xl bg-white/10 px-6 py-3 text-sm font-medium hover:bg-white/15 transition"
+            >
+              Request a Briefing
+            </Link>
           </div>
         </div>
       </section>
+
     </div>
   );
 }
