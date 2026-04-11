@@ -41,7 +41,6 @@ export default function Footer() {
             <div className="text-white/60 font-medium text-xs tracking-widest uppercase">Resources</div>
             <ul className="space-y-2">
               <li><Link to="/faq" className="hover:text-white/80 transition">FAQ</Link></li>
-              <li><Link to="/resources" className="hover:text-white/80 transition">Reference Library</Link></li>
               <li><Link to="/quantum-hardening" className="hover:text-white/80 transition">Quantum Hardening</Link></li>
             </ul>
           </div>
