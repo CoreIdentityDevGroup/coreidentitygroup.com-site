@@ -1,76 +1,129 @@
 import React from "react";
-import { Card, PageTitle } from "../components/ui";
+import { Card, PageTitle, SectionTitle, PulseDot, StatBlock, Eyebrow } from "../components/ui";
 
 export function AgentIdentitySystemsPage() {
   return (
-    <div className="space-y-8">
-      <div className="space-y-3">
-        <div className="text-xs font-medium tracking-[0.22em] text-white/40">A COREIDENTITY DEVELOPMENT GROUP COMPANY</div>
+    <div className="space-y-12">
+
+      <div className="space-y-4 cidg-fadein">
+        <Eyebrow>A COREIDENTITY DEVELOPMENT GROUP COMPANY</Eyebrow>
         <PageTitle>Agent Identity Systems</PageTitle>
-        <p className="text-white/70 max-w-3xl">Every agent needs an identity it can prove. Agent Identity Systems is the identity and accountability infrastructure for autonomous AI — authentication, authorization, provenance, and attribution enforced at the execution layer, not bolted on after the fact.</p>
+        <p className="text-white/70 max-w-3xl leading-relaxed text-lg">
+          Every agent needs an identity it can prove. Agent Identity Systems
+          is the identity and accountability infrastructure for autonomous AI —
+          authentication, authorization, provenance, and attribution enforced
+          at the execution layer, not bolted on after the fact.
+        </p>
+        <a
+          href="https://agentidentity.systems"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cidg-btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border border-indigo-500/30 text-indigo-300 hover:text-indigo-200 transition"
+          style={{background:'rgba(99,102,241,0.08)'}}
+        >
+          Visit agentidentity.systems →
+        </a>
       </div>
 
-      <Card>
-        <div className="space-y-2">
-          <div className="text-xs font-medium tracking-[0.15em] text-indigo-400 mb-3">LIVE — 30-DAY SOAK TEST RUNNING</div>
-          <div className="grid grid-cols-3 gap-4">
-            <div>
-              <div className="text-xs text-white/40 tracking-widest mb-1">SOAK CYCLES</div>
-              <div className="text-2xl font-bold text-indigo-300">32,784+</div>
-              <div className="text-xs text-white/50">100% pass rate</div>
-            </div>
-            <div>
-              <div className="text-xs text-white/40 tracking-widest mb-1">AVG LATENCY</div>
-              <div className="text-2xl font-bold text-indigo-300">99ms</div>
-              <div className="text-xs text-white/50">identity verify p95</div>
-            </div>
-            <div>
-              <div className="text-xs text-white/40 tracking-widest mb-1">UPTIME</div>
-              <div className="text-2xl font-bold text-indigo-300">100%</div>
-              <div className="text-xs text-white/50">30-day soak window</div>
-            </div>
+      <Card accent="indigo" className="cidg-fadein cidg-fadein-delay-1">
+        <div className="space-y-5">
+          <div className="flex items-center gap-3">
+            <PulseDot color="#6366f1" />
+            <span className="text-xs font-mono tracking-[0.15em] text-indigo-400">
+              LIVE — 30-DAY SOAK TEST RUNNING
+            </span>
           </div>
-          <a href="https://agentidentity.systems" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-sm text-indigo-400 hover:text-indigo-300 transition">View live portal at agentidentity.systems →</a>
+          <div className="grid grid-cols-3 gap-6">
+            <StatBlock label="SOAK CYCLES" value="32,784+" sub="100% pass rate" color="#a5b4fc" />
+            <StatBlock label="AVG LATENCY" value="99ms" sub="identity verify p95" color="#a5b4fc" />
+            <StatBlock label="UPTIME" value="100%" sub="30-day soak window" color="#a5b4fc" />
+          </div>
+          <a
+            href="https://agentidentity.systems"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-indigo-400 hover:text-indigo-300 transition"
+          >
+            View live portal at agentidentity.systems →
+          </a>
         </div>
       </Card>
 
-      <div className="space-y-3">
-        <h2 className="text-xl font-semibold">Identity infrastructure for the agentic era</h2>
+      <div className="space-y-4 cidg-fadein cidg-fadein-delay-2">
+        <SectionTitle>Identity infrastructure for the agentic era</SectionTitle>
       </div>
 
-      <Card>
-        <div className="space-y-4">
-          <div>
-            <div className="font-semibold text-white mb-1">Agent Authentication</div>
-            <p className="text-sm text-white/60 leading-relaxed">Cryptographically verifiable identity for every agent. Not session tokens — persistent, auditable credentials that prove who the agent is and who authorized it to act.</p>
-          </div>
-          <div>
-            <div className="font-semibold text-white mb-1">Authorization Boundaries</div>
-            <p className="text-sm text-white/60 leading-relaxed">Policy-linked identity boundaries that constrain what each agent can do, where it can do it, and under what conditions — enforced at runtime, not in configuration files.</p>
-          </div>
-          <div>
-            <div className="font-semibold text-white mb-1">Provenance and Traceability</div>
-            <p className="text-sm text-white/60 leading-relaxed">Every action an agent takes is traceable back to its identity, its authorization chain, and the human or system that initiated it. Full lineage with no gaps.</p>
-          </div>
-          <div>
-            <div className="font-semibold text-white mb-1">Attribution and Accountability</div>
-            <p className="text-sm text-white/60 leading-relaxed">When something goes wrong, you know exactly which agent acted, under which authorization, and what policy governed the decision. Audit-grade accountability built in.</p>
-          </div>
-        </div>
-      </Card>
-
-      <Card>
-        <div className="space-y-3">
-          <div className="font-semibold text-white">The problem every enterprise is about to face</div>
-          <p className="text-sm text-white/60 leading-relaxed">Your agents are making consequential decisions right now. Most organizations cannot answer three basic questions: Which agent did this? Was it authorized to act? Can you prove it to a regulator? AIS makes those questions answerable — before an incident forces them.</p>
-        </div>
-      </Card>
-
-      <div className="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-6">
-        <div className="text-sm font-semibold tracking-wide text-indigo-400 uppercase mb-3">Native to the CoreIdentity Enforcement Stack</div>
-        <p className="text-sm text-white/70 leading-relaxed">AIS integrates natively with Sentinel OS for policy enforcement, SAL Kernel for semantic authorization, and Nexus OS for multi-agent orchestration. Identity is not a feature — it is the foundation every other control depends on.</p>
-        <a href="/sentinel-os" className="mt-3 inline-flex items-center gap-1 text-sm text-indigo-400/80 hover:text-indigo-400 transition">Explore the enforcement stack →</a>
+      <div className="grid gap-5 md:grid-cols-2 cidg-fadein cidg-fadein-delay-3">
+        <Card accent="indigo">
+          <div className="font-semibold text-white mb-2">Agent Authentication</div>
+          <p className="text-sm text-white/60 leading-relaxed">
+            Cryptographically verifiable identity for every agent. Not session
+            tokens — persistent, auditable credentials that prove who the agent
+            is and who authorized it to act.
+          </p>
+        </Card>
+        <Card accent="indigo">
+          <div className="font-semibold text-white mb-2">Authorization Boundaries</div>
+          <p className="text-sm text-white/60 leading-relaxed">
+            Policy-linked identity boundaries that constrain what each agent
+            can do, where it can do it, and under what conditions — enforced
+            at runtime, not in configuration files.
+          </p>
+        </Card>
+        <Card accent="indigo">
+          <div className="font-semibold text-white mb-2">Provenance and Traceability</div>
+          <p className="text-sm text-white/60 leading-relaxed">
+            Every action an agent takes is traceable back to its identity,
+            its authorization chain, and the human or system that initiated
+            it. Full lineage with no gaps.
+          </p>
+        </Card>
+        <Card accent="indigo">
+          <div className="font-semibold text-white mb-2">Attribution and Accountability</div>
+          <p className="text-sm text-white/60 leading-relaxed">
+            When something goes wrong, you know exactly which agent acted,
+            under which authorization, and what policy governed the decision.
+            Audit-grade accountability built in.
+          </p>
+        </Card>
       </div>
+
+      <Card className="cidg-fadein cidg-fadein-delay-4">
+        <div className="font-semibold text-white mb-3">
+          The problem every enterprise is about to face
+        </div>
+        <p className="text-sm text-white/60 leading-relaxed">
+          Your agents are making consequential decisions right now. Most
+          organizations cannot answer three basic questions: Which agent did
+          this? Was it authorized to act? Can you prove it to a regulator?
+          AIS makes those questions answerable — before an incident forces them.
+        </p>
+      </Card>
+
+      <div
+        className="rounded-2xl p-6 cidg-fadein cidg-fadein-delay-5"
+        style={{border:'1px solid rgba(99,102,241,0.2)', background:'rgba(99,102,241,0.04)'}}
+      >
+        <div className="text-xs font-medium tracking-widest text-indigo-400 uppercase mb-3">
+          Native to the CoreIdentity Enforcement Stack
+        </div>
+        <p className="text-sm text-white/70 leading-relaxed mb-4">
+          AIS integrates natively with Sentinel OS for policy enforcement,
+          SAL Kernel for semantic authorization, and Nexus OS for multi-agent
+          orchestration. Identity is not a feature — it is the foundation
+          every other control depends on.
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {['Sentinel OS','SAL Kernel','Nexus OS','AGO'].map(function(p) {
+            return (
+              <span key={p} className="text-xs px-3 py-1 rounded border border-indigo-500/20 text-indigo-300" style={{background:'rgba(99,102,241,0.05)'}}>
+                {p}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+
     </div>
   );
 }

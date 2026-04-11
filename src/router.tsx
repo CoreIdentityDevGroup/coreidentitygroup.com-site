@@ -14,6 +14,7 @@ import { NexusOSPage } from "./pages/NexusOSPage";
 import { SmartNationAIPage } from "./pages/SmartNationAIPage";
 import { CoreIdentityAdvisoryGroupPage } from "./pages/CoreIdentityAdvisoryGroupPage";
 import { AgentIdentitySystemsPage } from "./pages/AgentIdentitySystemsPage";
+import { PortalPage } from "./pages/PortalPage";
 import { QuantumHardeningPage } from "./pages/QuantumHardeningPage";
 import { AGO1Page } from "./pages/AGO1Page";
 import { ResourcesPage } from "./pages/ResourcesPage";
@@ -85,6 +86,12 @@ const advisoryRoute = createRoute({
   component: CoreIdentityAdvisoryGroupPage,
 });
 
+const portalRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/portal",
+  component: PortalPage,
+});
+
 const pqcRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/quantum-hardening",
@@ -147,6 +154,7 @@ const routeTree = rootRoute.addChildren([
 
   aisRoute,
   pqcRoute,
+  portalRoute,
   resourcesRoute,
   faqRoute,
   aboutRoute,
