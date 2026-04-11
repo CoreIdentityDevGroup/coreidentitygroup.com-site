@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, PageTitle, SectionTitle, PulseDot, StatBlock, Eyebrow } from "../components/ui";
+import { Card, PageTitle, SectionTitle, PulseDot, Eyebrow } from "../components/ui";
 
 export function QuantumHardeningPage() {
   return (
@@ -10,26 +10,28 @@ export function QuantumHardeningPage() {
         <PageTitle>Quantum-Resistant by Design</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed text-lg">
           CoreIdentity is the first AI governance platform to complete
-          post-quantum cryptographic hardening across its full enforcement
-          stack. Every cryptographic surface — not just the perimeter.
-          Declaration date: July 1, 2026.
+          Post-Quantum Cryptographic (PQC) hardening across its full
+          enforcement stack. Every cryptographic surface — not just the
+          perimeter. Declaration date: July 1, 2026.
         </p>
       </div>
 
       <Card accent="teal" className="cidg-fadein cidg-fadein-delay-1">
-        <div className="space-y-5">
+        <div className="space-y-4">
           <div className="flex items-center gap-3">
             <PulseDot color="#14b8a6" />
             <span className="text-xs font-mono tracking-[0.15em] text-teal-400">
-              VERIFIED — SOAK COMPLETE
+              VERIFIED — ENFORCEMENT STACK HARDENED
             </span>
           </div>
-          <div className="grid grid-cols-3 gap-6">
-            <StatBlock label="SOAK CYCLES" value="100,000" sub="100.00% pass rate" color="#2dd4bf" />
-            <StatBlock label="SPRINT TESTS" value="376 / 376" sub="zero failures" color="#2dd4bf" />
-            <StatBlock label="DECLARATION" value="JUL 1 2026" sub="first in class" color="#2dd4bf" />
-          </div>
-          <div className="flex flex-wrap gap-2">
+          <p className="text-white/70 text-sm leading-relaxed">
+            The complete CoreIdentity enforcement chain has been migrated to
+            NIST-approved post-quantum algorithms and verified under rigorous
+            adversarial soak conditions. Every cryptographic surface —
+            authorization tokens, audit signatures, identity credentials, and
+            orchestration proofs — is quantum-resistant.
+          </p>
+          <div className="flex flex-wrap gap-2 pt-1">
             {['ML-KEM-768','ML-DSA-65','SLH-DSA-128s','SHA-3-512','AES-256-GCM'].map(function(a) {
               return (
                 <span key={a} className="text-xs font-mono px-2 py-1 rounded border border-teal-500/30 text-teal-300" style={{background:'rgba(20,184,166,0.05)'}}>
@@ -42,7 +44,7 @@ export function QuantumHardeningPage() {
       </Card>
 
       <div className="space-y-4 cidg-fadein cidg-fadein-delay-2">
-        <SectionTitle>Why post-quantum cryptography matters now</SectionTitle>
+        <SectionTitle>Why Post-Quantum Cryptography matters now</SectionTitle>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2 cidg-fadein cidg-fadein-delay-3">
@@ -67,8 +69,8 @@ export function QuantumHardeningPage() {
           <div className="font-semibold text-white mb-2">Identity credentials are the highest-value target</div>
           <p className="text-sm text-white/60 leading-relaxed">
             Agent identity tokens, capability certificates, and authorization
-            proofs are exactly what adversaries want. Quantum-resistant
-            cryptography protects the most sensitive layer of your control plane.
+            proofs are exactly what adversaries want. PQC protects the most
+            sensitive layer of your control plane.
           </p>
         </Card>
         <Card accent="teal">
@@ -91,7 +93,7 @@ export function QuantumHardeningPage() {
         <p className="text-sm text-white/70 leading-relaxed mb-5">
           PQC hardening covers the complete CoreIdentity enforcement chain.
           Every cryptographic surface across the platform has been migrated
-          to post-quantum algorithms and verified under adversarial soak conditions.
+          to post-quantum algorithms and verified under adversarial conditions.
         </p>
         <div className="grid grid-cols-2 gap-3">
           {[

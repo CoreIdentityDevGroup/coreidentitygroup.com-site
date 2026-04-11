@@ -26,6 +26,8 @@ export default function Footer() {
               <li><Link to="/about" className="hover:text-white/80 transition">About Us</Link></li>
               <li><Link to="/leadership" className="hover:text-white/80 transition">Leadership</Link></li>
               <li><Link to="/portfolio" className="hover:text-white/80 transition">Portfolio</Link></li>
+              <li><Link to="/coreidentity-ai-advisory-group" className="hover:text-white/80 transition">Advisory Group</Link></li>
+              <li><Link to="/coreidentity-technologies" className="hover:text-white/80 transition">CoreIdentity Technologies</Link></li>
               <li><Link to="/contact" className="hover:text-white/80 transition">Contact</Link></li>
               <li><Link to="/faq" className="hover:text-white/80 transition">FAQ</Link></li>
             </ul>
@@ -35,14 +37,14 @@ export default function Footer() {
           <div className="space-y-3">
             <div className="text-white/60 font-medium text-xs tracking-widest uppercase">Platform</div>
             <ul className="space-y-2">
-              <li><Link to="/coreidentity-technologies" className="hover:text-white/80 transition">CoreIdentity Technologies</Link></li>
               <li><Link to="/sal" className="hover:text-white/80 transition">SAL Kernel</Link></li>
               <li><Link to="/sentinel-os" className="hover:text-white/80 transition">Sentinel OS</Link></li>
               <li><Link to="/nexus-os" className="hover:text-white/80 transition">Nexus OS</Link></li>
               <li><Link to="/smartnation-ai" className="hover:text-white/80 transition">SmartNation AI</Link></li>
               <li><Link to="/agentidentity-systems" className="hover:text-white/80 transition">Agent Identity Systems</Link></li>
+              <li><Link to="/mcp" className="hover:text-white/80 transition">MCP Protocol</Link></li>
+              <li><Link to="/ago-1" className="hover:text-white/80 transition">AGO-1</Link></li>
               <li><Link to="/quantum-hardening" className="hover:text-white/80 transition">Quantum Hardening</Link></li>
-              <li><Link to="/coreidentity-ai-advisory-group" className="hover:text-white/80 transition">Advisory Group</Link></li>
             </ul>
           </div>
 
@@ -50,12 +52,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="mx-auto mt-10 max-w-6xl flex items-center justify-between border-t border-white/5 pt-6">
+      <div className="mx-auto mt-10 max-w-6xl border-t border-white/5 pt-6">
         <div className="text-xs text-white/25">
           © {new Date().getFullYear()} CoreIdentity Development Group. All rights reserved.
-        </div>
-        <div className="text-xs text-white/20 tracking-widest uppercase hidden sm:block">
-          AEG
         </div>
       </div>
     </footer>

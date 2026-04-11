@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, PageTitle, SectionTitle, PulseDot, StatBlock, Eyebrow } from "../components/ui";
+import { Card, PageTitle, SectionTitle, PulseDot, Eyebrow } from "../components/ui";
 
 export function AgentIdentitySystemsPage() {
   return (
@@ -26,18 +26,19 @@ export function AgentIdentitySystemsPage() {
       </div>
 
       <Card accent="indigo" className="cidg-fadein cidg-fadein-delay-1">
-        <div className="space-y-5">
+        <div className="space-y-4">
           <div className="flex items-center gap-3">
             <PulseDot color="#6366f1" />
             <span className="text-xs font-mono tracking-[0.15em] text-indigo-400">
-              LIVE — 30-DAY SOAK TEST RUNNING
+              PRODUCTION — LIVE DEPLOYMENT
             </span>
           </div>
-          <div className="grid grid-cols-3 gap-6">
-            <StatBlock label="SOAK CYCLES" value="32,784+" sub="100% pass rate" color="#a5b4fc" />
-            <StatBlock label="AVG LATENCY" value="99ms" sub="identity verify p95" color="#a5b4fc" />
-            <StatBlock label="UPTIME" value="100%" sub="30-day soak window" color="#a5b4fc" />
-          </div>
+          <p className="text-white/70 text-sm leading-relaxed">
+            AIS is live in production and actively running under extended
+            soak conditions — validating identity enforcement, authorization
+            boundaries, and audit trail integrity at scale. The portal is
+            publicly accessible at agentidentity.systems.
+          </p>
           <a
             href="https://agentidentity.systems"
             target="_blank"
