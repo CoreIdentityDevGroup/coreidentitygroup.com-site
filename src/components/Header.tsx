@@ -19,7 +19,6 @@ export function Header() {
       { to: "/mcp", label: "MCP Protocol" },
       { to: "/coreidentity-ai-advisory-group", label: "CoreIdentity AI Advisory Group" },
       { to: "/agentidentity-systems", label: "AgentIdentity Systems" },
-      { to: "/quantum-hardening", label: "Quantum Hardening" },
 
       { to: "/about", label: "About" },
       { to: "/contact", label: "Contact" },
