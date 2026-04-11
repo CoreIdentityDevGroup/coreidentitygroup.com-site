@@ -124,6 +124,35 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* AIS + PQC highlights */}
+      <section className="mt-14">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-6">
+            <div className="text-xs font-medium tracking-widest text-indigo-400 mb-3">LIVE — 30-DAY SOAK TEST</div>
+            <div className="text-lg font-semibold mb-2">Agent Identity Systems</div>
+            <p className="text-white/70 leading-relaxed text-sm mb-3">Every agent needs an identity it can prove. AIS delivers authentication, authorization, provenance, and attribution — enforced at the execution layer.</p>
+            <div className="flex gap-6 mb-3">
+              <div><div className="text-xl font-bold text-indigo-300">32,784+</div><div className="text-xs text-white/50">soak cycles</div></div>
+              <div><div className="text-xl font-bold text-indigo-300">100%</div><div className="text-xs text-white/50">pass rate</div></div>
+              <div><div className="text-xl font-bold text-indigo-300">99ms</div><div className="text-xs text-white/50">p95 latency</div></div>
+            </div>
+            <a href="/agentidentity-systems" className="text-sm text-indigo-400 hover:text-indigo-300 transition">Explore AIS →</a>
+          </div>
+
+          <div className="rounded-2xl border border-teal-400/20 bg-teal-400/5 p-6">
+            <div className="text-xs font-medium tracking-widest text-teal-400 mb-3">VERIFIED — FIPS 203/204/205</div>
+            <div className="text-lg font-semibold mb-2">Quantum Hardening</div>
+            <p className="text-white/70 leading-relaxed text-sm mb-3">First AI governance platform to complete post-quantum cryptographic hardening across the full enforcement stack. Every cryptographic surface — not just the perimeter.</p>
+            <div className="flex gap-6 mb-3">
+              <div><div className="text-xl font-bold text-teal-300">100,000</div><div className="text-xs text-white/50">soak cycles</div></div>
+              <div><div className="text-xl font-bold text-teal-300">376/376</div><div className="text-xs text-white/50">tests passed</div></div>
+              <div><div className="text-xl font-bold text-teal-300">Jul 2026</div><div className="text-xs text-white/50">declaration</div></div>
+            </div>
+            <a href="/quantum-hardening" className="text-sm text-teal-400 hover:text-teal-300 transition">Explore PQC →</a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -35,6 +35,11 @@ export function PortfolioPage() {
             href="/sal"
             body="The deterministic pre-execution authorization kernel at the core of every CoreIdentity deployment. SAL evaluates every agent request across five dimensions — Identity, Intent, Asset, Action, and Context (IIAAC) — before execution is permitted. Every decision generates an immutable Proof Pack anchored to a cryptographic ledger. Fail-closed by design: if SAL is unreachable, execution is blocked. SAL is the enforcement primitive that makes the rest of the stack governable."
           />
+          <PortfolioCard
+            title="Quantum Hardening — FIPS 203/204/205"
+            href="/quantum-hardening"
+            body="CoreIdentity is the first AI governance platform to complete post-quantum cryptographic hardening across its full enforcement stack. 100,000 soak cycles. 376/376 sprint tests. Zero failures. ML-KEM-768, ML-DSA-65, SLH-DSA-128s deployed across SAL Kernel, Sentinel OS, AIS, and Nexus OS. Declaration date: July 1, 2026."
+          />
         </div>
       </section>
 
@@ -87,7 +92,7 @@ export function PortfolioPage() {
           <PortfolioCard
             title="AgentIdentity Systems"
             href="/agentidentity-systems"
-            body="Identity and governance-focused system component intended for regulated environments. Designed to be separable as an acquisition-grade capability while remaining compatible with Sentinel OS."
+            body="The identity and accountability infrastructure for autonomous AI. AIS provides agent authentication, authorization boundaries, provenance tracking, and attribution — enforced at the execution layer. Live: 32,784+ soak cycles at 100% pass rate. Acquisition-grade and natively integrated with the CoreIdentity enforcement stack."
           />
         </div>
       </section>
