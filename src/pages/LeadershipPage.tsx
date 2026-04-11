@@ -64,26 +64,6 @@ export function LeadershipPage() {
               </p>
             </div>
 
-            <div className="pt-2 border-t border-white/10">
-              <div className="text-xs text-white/40 tracking-widest mb-3">AREAS OF FOCUS</div>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  'Agentic Execution Governance',
-                  'Enterprise AI Infrastructure',
-                  'National Intelligence Sector',
-                  'Department of Defense',
-                  'Multi-Entity Operations',
-                  'Institutional Compliance',
-                  'Federal Contracting',
-                ].map(function(tag) {
-                  return (
-                    <span key={tag} className="text-xs px-3 py-1 rounded border border-white/10 text-white/50">
-                      {tag}
-                    </span>
-                  );
-                })}
-              </div>
-            </div>
           </div>
         </Card>
       </section>
