@@ -9,6 +9,8 @@ export function Header() {
   const navItems: NavItem[] = useMemo(
     () => [
       { to: "/", label: "Home" },
+      { to: "/about", label: "About Us" },
+      { to: "/leadership", label: "Leadership" },
       { to: "/portfolio", label: "Portfolio" },
       { to: "/sal", label: "SAL Enforcement Kernel" },
       { to: "/coreidentity-technologies", label: "CoreIdentity Technologies" },
@@ -21,7 +23,6 @@ export function Header() {
       { to: "/agentidentity-systems", label: "AgentIdentity Systems" },
       { to: "/quantum-hardening", label: "Quantum Hardening" },
 
-      { to: "/about", label: "About" },
       { to: "/contact", label: "Contact" },
     ],
     [],

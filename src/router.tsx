@@ -19,6 +19,7 @@ import { AGO1Page } from "./pages/AGO1Page";
 import { ResourcesPage } from "./pages/ResourcesPage";
 import { FAQPage } from "./pages/FAQPage";
 import { AboutPage } from "./pages/AboutPage";
+import { LeadershipPage } from "./pages/LeadershipPage";
 import ContactPage from "./pages/ContactPage";
 // CHC-MCP-ROUTE-v1
 import { MCPPage } from "./pages/MCPPage";
@@ -108,6 +109,12 @@ const faqRoute = createRoute({
   component: FAQPage,
 });
 
+const leadershipRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/leadership",
+  component: LeadershipPage,
+});
+
 const aboutRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/about",
@@ -143,6 +150,7 @@ const routeTree = rootRoute.addChildren([
   resourcesRoute,
   faqRoute,
   aboutRoute,
+  leadershipRoute,
   contactRoute,
   mcpRoute,
   salRoute,
