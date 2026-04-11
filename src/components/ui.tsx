@@ -19,17 +19,58 @@ export function SectionTitle({ children }: { children: React.ReactNode }) {
 export function Card({
   children,
   className,
+  accent,
 }: {
   children: React.ReactNode;
   className?: string;
+  accent?: "blue" | "teal" | "amber" | "indigo";
 }) {
+  const accentClass = accent ? `cidg-card-${accent}` : "";
   return (
     <div
       className={[
-        "rounded-3xl bg-white/5 border border-white/10",
+        "rounded-3xl bg-white/5 border border-white/10 cidg-card p-6",
+        accentClass,
         className ?? "",
       ].join(" ")}
     >
+      {children}
+    </div>
+  );
+}
+
+export function PulseDot({ color = "#22c55e" }: { color?: string }) {
+  return (
+    <span
+      className="cidg-pulse inline-block rounded-full flex-shrink-0"
+      style={{ width: 8, height: 8, background: color, boxShadow: `0 0 6px ${color}` }}
+    />
+  );
+}
+
+export function StatBlock({
+  label,
+  value,
+  sub,
+  color = "white",
+}: {
+  label: string;
+  value: string;
+  sub?: string;
+  color?: string;
+}) {
+  return (
+    <div className="cidg-stat">
+      <div style={{ fontSize: 10, fontFamily: "monospace", color: "rgba(255,255,255,0.4)", letterSpacing: "0.12em", marginBottom: 4 }}>{label}</div>
+      <div style={{ fontSize: 26, fontWeight: 700, color, lineHeight: 1.1, marginBottom: 4 }}>{value}</div>
+      {sub && <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)" }}>{sub}</div>}
+    </div>
+  );
+}
+
+export function Eyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-4">
       {children}
     </div>
   );

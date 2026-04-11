@@ -6,6 +6,142 @@
 
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container-max { max-width: 1150px; }
+
+/* ── AMBIENT GRID ─────────────────────────────────────────────── */
+.cidg-grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: center center;
+}
+
+/* ── CARD HOVER GLOW ─────────────────────────────────────────── */
+.cidg-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.cidg-card:hover {
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.4);
+  transform: translateY(-1px);
+}
+
+/* ── ENFORCEMENT CARD ACCENTS ────────────────────────────────── */
+.cidg-card-blue:hover   { border-color: rgba(99,102,241,0.4); box-shadow: 0 0 24px rgba(99,102,241,0.08); }
+.cidg-card-teal:hover   { border-color: rgba(20,184,166,0.4); box-shadow: 0 0 24px rgba(20,184,166,0.08); }
+.cidg-card-amber:hover  { border-color: rgba(212,175,55,0.4); box-shadow: 0 0 24px rgba(212,175,55,0.08); }
+.cidg-card-indigo:hover { border-color: rgba(129,140,248,0.4); box-shadow: 0 0 24px rgba(129,140,248,0.08); }
+
+/* ── LIVE PULSE ──────────────────────────────────────────────── */
+@keyframes cidg-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 currentColor; }
+  50%       { opacity: 0.7; box-shadow: 0 0 0 4px transparent; }
+}
+.cidg-pulse {
+  animation: cidg-pulse 2.5s ease-in-out infinite;
+}
+
+/* ── GRADIENT TEXT ───────────────────────────────────────────── */
+.cidg-gradient-text {
+  background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.65) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.cidg-gradient-text-blue {
+  background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.cidg-gradient-text-teal {
+  background: linear-gradient(135deg, #5eead4 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── SCROLL FADE IN ──────────────────────────────────────────── */
+@keyframes cidg-fadein {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cidg-fadein {
+  animation: cidg-fadein 0.6s ease forwards;
+}
+.cidg-fadein-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.cidg-fadein-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.cidg-fadein-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.cidg-fadein-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.cidg-fadein-delay-5 { animation-delay: 0.5s; opacity: 0; }
+.cidg-fadein-delay-6 { animation-delay: 0.6s; opacity: 0; }
+
+/* ── ENFORCEMENT LINE ────────────────────────────────────────── */
+@keyframes cidg-scan {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+.cidg-scan::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.3), transparent);
+  animation: cidg-scan 3s ease-in-out infinite;
+}
+
+/* ── AMBIENT ORB ─────────────────────────────────────────────── */
+.cidg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+.cidg-orb-blue  { background: rgba(99,102,241,0.12); }
+.cidg-orb-teal  { background: rgba(20,184,166,0.10); }
+.cidg-orb-amber { background: rgba(212,175,55,0.08); }
+
+/* ── NAV LINK HOVER ──────────────────────────────────────────── */
+.cidg-nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.cidg-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 1px;
+  background: rgba(255,255,255,0.4);
+  transition: width 0.2s ease;
+}
+.cidg-nav-link:hover::after { width: 100%; }
+
+/* ── BUTTON GLOW ─────────────────────────────────────────────── */
+.cidg-btn-primary {
+  transition: all 0.2s ease;
+}
+.cidg-btn-primary:hover {
+  box-shadow: 0 0 20px rgba(255,255,255,0.08);
+}
+
+/* ── SEPARATOR ───────────────────────────────────────────────── */
+.cidg-separator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+}
+
+/* ── STAT NUMBER ─────────────────────────────────────────────── */
+@keyframes cidg-countup {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cidg-stat {
+  animation: cidg-countup 0.5s ease forwards;
+}
