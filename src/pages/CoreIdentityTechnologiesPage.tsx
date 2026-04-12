@@ -284,47 +284,73 @@ export function CoreIdentityTechnologiesPage() {
 
       {/* Three-layer governance stack */}
       <section className="mb-12">
-        <div className="mb-4">
-          <h2 className="text-2xl font-semibold text-white">The governed execution stack</h2>
+        <div className="mb-6">
+          <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-3">THE ENFORCEMENT CHAIN</div>
+          <h2 className="text-2xl font-semibold text-white">The AEG Enforcement Stack</h2>
           <p className="mt-2 max-w-3xl text-white/70">
-            CoreIdentity is organized as a three-layer platform. Each layer has a distinct job,
-            a clear boundary, and a clean contract — so we can scale across industries without
-            losing control.
+            Every agent action passes through a vertically integrated enforcement chain before execution is permitted. Authorization, governance, identity, orchestration, and governed deployment — each layer with a distinct job and a clear boundary.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-3">
-          <Card title="Sentinel OS" icon={<ShieldIcon />}>
-            <div className="mb-1 text-xs font-semibold tracking-wide text-white/50 uppercase">Layer 1</div>
-            <p>Governance, policy, identity, permissions, audit logging, constraints, and enforcement. Humans lead; machines execute — Sentinel keeps that authority explicit.</p>
-            <ul className="mt-3 space-y-1">
-              <li className="flex items-center gap-2"><CheckIcon /><span>Policy + controls at the execution layer</span></li>
-              <li className="flex items-center gap-2"><CheckIcon /><span>Authorization boundaries + traceability</span></li>
-              <li className="flex items-center gap-2"><CheckIcon /><span>Risk containment + compliance posture</span></li>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-amber-400/20 bg-amber-400/5 p-5 cidg-card">
+            <div className="text-xs font-semibold tracking-wide text-amber-400 uppercase mb-2">Authorization</div>
+            <div className="text-lg font-semibold text-white mb-2">SAL Kernel</div>
+            <p className="text-sm text-white/65 leading-relaxed mb-3">The deterministic pre-execution gateway. Every agent request is evaluated across five dimensions — Identity, Intent, Asset, Action, and Context — before execution is permitted. Fail-closed by design.</p>
+            <ul className="space-y-1 mb-4">
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>IIAAC five-dimension validation</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Immutable Proof Pack on every decision</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Sub-3ms enforcement latency</span></li>
             </ul>
-            <div className="mt-4"><PrimaryButton to="/sentinel-os" color="blue">Sentinel OS →</PrimaryButton></div>
-          </Card>
+            <Link to="/sal" className="text-sm text-amber-400/80 hover:text-amber-400 transition">SAL Kernel →</Link>
+          </div>
 
-          <Card title="Nexus OS" icon={<NetworkIcon />}>
-            <div className="mb-1 text-xs font-semibold tracking-wide text-white/50 uppercase">Layer 2</div>
-            <p>Orchestration and tasking. Nexus coordinates workflows, tools, agents, approvals, and handoffs — while staying inside Sentinel's rules.</p>
-            <ul className="mt-3 space-y-1">
-              <li className="flex items-center gap-2"><CheckIcon /><span>Workflow routing + escalation</span></li>
-              <li className="flex items-center gap-2"><CheckIcon /><span>Agent orchestration + tool use</span></li>
-              <li className="flex items-center gap-2"><CheckIcon /><span>Human-in-the-loop checkpoints</span></li>
+          <div className="rounded-2xl border border-blue-400/20 bg-blue-400/5 p-5 cidg-card">
+            <div className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-2">Governance</div>
+            <div className="text-lg font-semibold text-white mb-2">Sentinel OS</div>
+            <p className="text-sm text-white/65 leading-relaxed mb-3">Policy enforcement, identity boundaries, approval gates, and evidence capture. The reason your AI fleet cannot make a decision your legal team did not authorize.</p>
+            <ul className="space-y-1 mb-4">
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Policy + controls at the execution layer</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Authorization boundaries + traceability</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Risk containment + compliance posture</span></li>
             </ul>
-            <div className="mt-4"><PrimaryButton to="/nexus-os" color="orange">Nexus OS →</PrimaryButton></div>
-          </Card>
+            <Link to="/sentinel-os" className="text-sm text-blue-400/80 hover:text-blue-400 transition">Sentinel OS →</Link>
+          </div>
 
-          <Card title="SmartNation AI" icon={<BotIcon />}>
-            <div className="mb-1 text-xs font-semibold tracking-wide text-white/50 uppercase">Layer 3</div>
-            <p>Deployment layer: packaged, governed digital labor offerings that operate in real environments with controls that survive production.</p>
-            <ul className="mt-3 space-y-1">
-              <li className="flex items-center gap-2"><CheckIcon /><span>Vertical digital workforce packages</span></li>
-              <li className="flex items-center gap-2"><CheckIcon /><span>Integration-ready delivery patterns</span></li>
-              <li className="flex items-center gap-2"><CheckIcon /><span>Measured outcomes + reporting</span></li>
+          <div className="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-5 cidg-card">
+            <div className="text-xs font-semibold tracking-wide text-indigo-400 uppercase mb-2">Identity</div>
+            <div className="text-lg font-semibold text-white mb-2">Agent Identity Systems</div>
+            <p className="text-sm text-white/65 leading-relaxed mb-3">Cryptographically verifiable identity for every agent. Authentication, authorization boundaries, provenance tracking, and attribution — enforced at the execution layer.</p>
+            <ul className="space-y-1 mb-4">
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Persistent, auditable agent credentials</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Policy-linked identity boundaries</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Full provenance with no gaps</span></li>
             </ul>
-            <div className="mt-4"><PrimaryButton to="/smartnation-ai">SmartNation AI →</PrimaryButton></div>
-          </Card>
+            <Link to="/agentidentity-systems" className="text-sm text-indigo-400/80 hover:text-indigo-400 transition">Agent Identity Systems →</Link>
+          </div>
+
+          <div className="rounded-2xl border border-orange-400/20 bg-orange-400/5 p-5 cidg-card">
+            <div className="text-xs font-semibold tracking-wide text-orange-400 uppercase mb-2">Orchestration</div>
+            <div className="text-lg font-semibold text-white mb-2">Nexus OS</div>
+            <p className="text-sm text-white/65 leading-relaxed mb-3">Controlled multi-agent execution. Workflows, integrations, retries, and recovery — coordinated inside defined governance constraints with structured operational traces.</p>
+            <ul className="space-y-1 mb-4">
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Workflow routing + escalation</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Agent orchestration + tool use</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Human-in-the-loop checkpoints</span></li>
+            </ul>
+            <Link to="/nexus-os" className="text-sm text-orange-400/80 hover:text-orange-400 transition">Nexus OS →</Link>
+          </div>
+
+          <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-5 cidg-card md:col-span-2">
+            <div className="text-xs font-semibold tracking-wide text-emerald-400 uppercase mb-2">Digital Labor</div>
+            <div className="text-lg font-semibold text-white mb-2">SmartNation AI</div>
+            <p className="text-sm text-white/65 leading-relaxed mb-3">10,000 governed agents across 10 industry verticals. Pre-built, compliance-ready digital labor — deployed under full AEG enforcement from day one. Every agent has a real labor position, a governance profile, and a SAL audit trail.</p>
+            <ul className="space-y-1 mb-4">
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>10,000 agents across 10 verticals</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Integration-ready governed delivery patterns</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Measured outcomes with full audit trails</span></li>
+            </ul>
+            <Link to="/smartnation-ai" className="text-sm text-emerald-400/80 hover:text-emerald-400 transition">SmartNation AI →</Link>
+          </div>
         </div>
       </section>
 
