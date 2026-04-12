@@ -13,8 +13,18 @@ type Vertical = {
   launchOrder: "Now" | "Next" | "Planned";
 };
 
-// CHC-VERTICALS-REORDER-v1
+// VERTICALS-v2 — Full 10-vertical AEG catalog
 const verticals: Vertical[] = [
+  {
+    name: "HealthcareOps",
+    oneLiner: "PHI never touches an unauthorized agent. HealthcareOps enforces HIPAA-compliant agent governance across your entire autonomous workforce — so your compliance team is not discovering violations after the fact.",
+    outcomes: [
+      "HIPAA and HITECH compliant workflow execution",
+      "Clinical documentation with full audit trails",
+      "Regulatory evidence capture and reporting",
+    ],
+    launchOrder: "Now",
+  },
   {
     name: "FinanceOps",
     oneLiner: "Every financial transaction executed by an AI agent is authorized, logged, and auditable. FinanceOps ensures your autonomous finance layer meets SOX, PCI-DSS, and internal controls — before your auditors ask.",
@@ -22,6 +32,36 @@ const verticals: Vertical[] = [
       "Automated transaction monitoring and flagging",
       "Regulatory reporting with full evidence trails",
       "Audit-ready approvals and escalation workflows",
+    ],
+    launchOrder: "Now",
+  },
+  {
+    name: "BFSI",
+    oneLiner: "Banking, financial services, and insurance operate under the most demanding regulatory environments. BFSI brings AEG enforcement to every autonomous decision — loan processing, claims handling, fraud detection — with full auditability.",
+    outcomes: [
+      "GLBA, SOX, and Basel III compliant agent execution",
+      "Real-time fraud detection with evidence trails",
+      "Audit-ready loan and claims workflow governance",
+    ],
+    launchOrder: "Now",
+  },
+  {
+    name: "ManufacturingOps",
+    oneLiner: "Production decisions, supply chain actions, and quality control — governed at the agent level. ManufacturingOps ensures autonomous manufacturing agents operate within safety, compliance, and operational boundaries.",
+    outcomes: [
+      "ISO and OSHA compliant workflow execution",
+      "Supply chain governance with full traceability",
+      "Quality control decision trails and escalation",
+    ],
+    launchOrder: "Now",
+  },
+  {
+    name: "LogisticsOps",
+    oneLiner: "Every routing decision, shipment authorization, and carrier action — enforced and auditable. LogisticsOps brings AEG to autonomous logistics networks operating across complex regulatory and contractual environments.",
+    outcomes: [
+      "DOT and CTPAT compliant agent execution",
+      "Carrier and vendor governance with audit trails",
+      "Real-time exception handling and escalation",
     ],
     launchOrder: "Now",
   },
@@ -36,12 +76,12 @@ const verticals: Vertical[] = [
     launchOrder: "Now",
   },
   {
-    name: "HealthcareOps",
-    oneLiner: "PHI never touches an unauthorized agent. HealthcareOps enforces HIPAA-compliant agent governance across your entire autonomous workforce — so your compliance team is not discovering violations after the fact.",
+    name: "HospitalityOps",
+    oneLiner: "Guest data, operational decisions, revenue management — governed at the agent level. HospitalityOps brings enterprise-grade AI governance to hospitality operations without creating operational friction.",
     outcomes: [
-      "HIPAA and HITECH compliant workflow execution",
-      "Clinical documentation with full audit trails",
-      "Regulatory evidence capture and reporting",
+      "Guest data governance with full compliance trails",
+      "Revenue management decisions with policy enforcement",
+      "Operational task automation with measured ROI",
     ],
     launchOrder: "Now",
   },
@@ -56,12 +96,22 @@ const verticals: Vertical[] = [
     launchOrder: "Now",
   },
   {
-    name: "HospitalityOps",
-    oneLiner: "Guest data, operational decisions, revenue management — governed at the agent level. HospitalityOps brings enterprise-grade AI governance to hospitality operations without creating operational friction.",
+    name: "RealEstateOps",
+    oneLiner: "Property transactions, tenant management, and investment decisions involve significant regulatory and fiduciary obligations. RealEstateOps governs every autonomous action with the audit trail institutional real estate demands.",
     outcomes: [
-      "Structured POC execution and reporting",
-      "Operational task automation with governance",
-      "Measured ROI via tracked outcomes",
+      "Transaction governance with full evidence trails",
+      "Tenant and vendor compliance tracking",
+      "Investment decision audit and escalation workflows",
+    ],
+    launchOrder: "Now",
+  },
+  {
+    name: "EducationOps",
+    oneLiner: "Student data, academic decisions, and institutional operations require the same governance rigor as any regulated enterprise. EducationOps enforces FERPA-compliant agent boundaries across your autonomous education infrastructure.",
+    outcomes: [
+      "FERPA compliant student data governance",
+      "Academic workflow execution with audit trails",
+      "Institutional decision traceability and reporting",
     ],
     launchOrder: "Now",
   },
