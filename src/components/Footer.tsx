@@ -52,9 +52,13 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="mx-auto mt-10 max-w-6xl border-t border-white/5 pt-6">
+      <div className="mx-auto mt-10 max-w-6xl border-t border-white/5 pt-6 flex items-center justify-between flex-wrap gap-4">
         <div className="text-xs text-white/25">
           © {new Date().getFullYear()} CoreIdentity Development Group. All rights reserved.
+        </div>
+        <div className="flex gap-6">
+          <a href="/privacy" className="text-xs text-white/25 hover:text-white/50 transition">Privacy Policy</a>
+          <a href="/terms" className="text-xs text-white/25 hover:text-white/50 transition">Terms of Use</a>
         </div>
       </div>
     </footer>

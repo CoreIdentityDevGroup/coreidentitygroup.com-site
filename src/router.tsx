@@ -15,6 +15,9 @@ import { SmartNationAIPage } from "./pages/SmartNationAIPage";
 import { CoreIdentityAdvisoryGroupPage } from "./pages/CoreIdentityAdvisoryGroupPage";
 import { AgentIdentitySystemsPage } from "./pages/AgentIdentitySystemsPage";
 import { PortalPage } from "./pages/PortalPage";
+import { FoundersPage } from "./pages/FoundersPage";
+import { PrivacyPage } from "./pages/PrivacyPage";
+import { TermsPage } from "./pages/TermsPage";
 import { QuantumHardeningPage } from "./pages/QuantumHardeningPage";
 import { AGO1Page } from "./pages/AGO1Page";
 import { ResourcesPage } from "./pages/ResourcesPage";
@@ -86,6 +89,24 @@ const advisoryRoute = createRoute({
   component: CoreIdentityAdvisoryGroupPage,
 });
 
+const foundersRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/founders",
+  component: FoundersPage,
+});
+
+const privacyRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/privacy",
+  component: PrivacyPage,
+});
+
+const termsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/terms",
+  component: TermsPage,
+});
+
 const portalRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/portal",
@@ -155,6 +176,9 @@ const routeTree = rootRoute.addChildren([
   aisRoute,
   pqcRoute,
   portalRoute,
+  foundersRoute,
+  privacyRoute,
+  termsRoute,
   resourcesRoute,
   faqRoute,
   aboutRoute,
