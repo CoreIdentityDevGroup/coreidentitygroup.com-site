@@ -40,7 +40,7 @@ export function AgentIdentitySystemsPage() {
           Includes EU AI Act, CO SB 24-205, and NIST AI RMF 1.0 compliance mapping.
         </p>
         <a
-          href="/AIP-v0.1-White-Paper-v2.pdf"
+          href="/AIP-v0.1-White-Paper.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border border-indigo-500/30 text-indigo-300 hover:text-indigo-200 transition"
