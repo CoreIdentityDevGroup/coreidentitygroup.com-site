@@ -333,8 +333,7 @@ export function CoreIdentityTechnologiesPage() {
         <div className="mb-4">
           <h2 className="text-2xl font-semibold text-white">Agentic Execution Governance — 10 Industry Verticals</h2>
           <p className="mt-2 max-w-3xl text-white/70">
-            These are the initial markets served through SmartNation AI packages, governed by
-            Sentinel and orchestrated by Nexus.
+            Ten governed industry verticals. Each deploys under full AEG enforcement — SAL authorization, Sentinel OS policy, Nexus OS orchestration, and AIS identity verification — from day one.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
@@ -356,13 +355,9 @@ export function CoreIdentityTechnologiesPage() {
           ))}
 
         </div>
-        <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4">
-          <p className="text-sm text-white/60">
-            Deployment model: we launch each vertical with (1) a governance baseline,
-            (2) control-to-workflow mapping, (3) role-based agent policies, and
-            (4) evidence automation. This keeps scope tight, outcomes measurable,
-            and expansion predictable.
-          </p>
+        <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-6">
+          <div className="text-xs font-medium tracking-widest text-white/40 uppercase mb-3">Deployment Model</div>
+          <p className="text-sm text-white/60 leading-relaxed">Each vertical launches with a governance baseline, control-to-workflow mapping, role-based agent policies, and evidence automation. Scope stays tight, outcomes stay measurable, and expansion stays predictable.</p>
         </div>
       </section>
 
