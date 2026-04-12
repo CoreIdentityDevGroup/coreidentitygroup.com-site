@@ -2,6 +2,7 @@
 /* CHC_PAGE_SANITIZED */
 /* CHC_COMPOSED_TECHNOLOGIES_PATCH */
 import React from "react";
+import { Eyebrow } from "../components/ui";
 import { Link } from "@tanstack/react-router";
 import heroImg from "../assets/images/coreidentity-governance-hero.webp";
 import OperationalVerticalsSection from "../components/OperationalVerticalsSection";
@@ -11,12 +12,16 @@ type Vertical = {
   oneLiner: string;
   outcomes: string[];
   launchOrder: "Now" | "Next" | "Planned";
+  accent?: string;
+  accentBorder?: string;
 };
 
 // VERTICALS-v2 — Full 10-vertical AEG catalog
 const verticals: Vertical[] = [
   {
     name: "HealthcareOps",
+    accent: "rgba(20,184,166,0.06)",
+    accentBorder: "rgba(20,184,166,0.2)",
     oneLiner: "PHI never touches an unauthorized agent. HealthcareOps enforces HIPAA-compliant agent governance across your entire autonomous workforce — so your compliance team is not discovering violations after the fact.",
     outcomes: [
       "HIPAA and HITECH compliant workflow execution",
@@ -27,6 +32,8 @@ const verticals: Vertical[] = [
   },
   {
     name: "FinanceOps",
+    accent: "rgba(212,175,55,0.06)",
+    accentBorder: "rgba(212,175,55,0.2)",
     oneLiner: "Every financial transaction executed by an AI agent is authorized, logged, and auditable. FinanceOps ensures your autonomous finance layer meets SOX, PCI-DSS, and internal controls — before your auditors ask.",
     outcomes: [
       "Automated transaction monitoring and flagging",
@@ -37,6 +44,8 @@ const verticals: Vertical[] = [
   },
   {
     name: "BFSI",
+    accent: "rgba(99,102,241,0.06)",
+    accentBorder: "rgba(99,102,241,0.2)",
     oneLiner: "Banking, financial services, and insurance operate under the most demanding regulatory environments. BFSI brings AEG enforcement to every autonomous decision — loan processing, claims handling, fraud detection — with full auditability.",
     outcomes: [
       "GLBA, SOX, and Basel III compliant agent execution",
@@ -47,6 +56,8 @@ const verticals: Vertical[] = [
   },
   {
     name: "ManufacturingOps",
+    accent: "rgba(59,130,246,0.06)",
+    accentBorder: "rgba(59,130,246,0.2)",
     oneLiner: "Production decisions, supply chain actions, and quality control — governed at the agent level. ManufacturingOps ensures autonomous manufacturing agents operate within safety, compliance, and operational boundaries.",
     outcomes: [
       "ISO and OSHA compliant workflow execution",
@@ -57,6 +68,8 @@ const verticals: Vertical[] = [
   },
   {
     name: "LogisticsOps",
+    accent: "rgba(59,130,246,0.06)",
+    accentBorder: "rgba(59,130,246,0.2)",
     oneLiner: "Every routing decision, shipment authorization, and carrier action — enforced and auditable. LogisticsOps brings AEG to autonomous logistics networks operating across complex regulatory and contractual environments.",
     outcomes: [
       "DOT and CTPAT compliant agent execution",
@@ -67,6 +80,8 @@ const verticals: Vertical[] = [
   },
   {
     name: "LegalOps",
+    accent: "rgba(168,85,247,0.06)",
+    accentBorder: "rgba(168,85,247,0.2)",
     oneLiner: "Privileged information stays privileged, even when AI handles it. LegalOps enforces access boundaries and creates defensible audit trails for every agent interaction with sensitive legal data.",
     outcomes: [
       "Faster contract intake and triage",
@@ -77,6 +92,8 @@ const verticals: Vertical[] = [
   },
   {
     name: "HospitalityOps",
+    accent: "rgba(251,146,60,0.06)",
+    accentBorder: "rgba(251,146,60,0.2)",
     oneLiner: "Guest data, operational decisions, revenue management — governed at the agent level. HospitalityOps brings enterprise-grade AI governance to hospitality operations without creating operational friction.",
     outcomes: [
       "Guest data governance with full compliance trails",
@@ -87,6 +104,8 @@ const verticals: Vertical[] = [
   },
   {
     name: "RetailOps",
+    accent: "rgba(34,197,94,0.06)",
+    accentBorder: "rgba(34,197,94,0.2)",
     oneLiner: "Customer data, pricing decisions, inventory actions — all governed. RetailOps ensures your retail AI agents operate within policy boundaries that protect margin, brand, and compliance simultaneously.",
     outcomes: [
       "Inventory and procurement governance",
@@ -97,6 +116,8 @@ const verticals: Vertical[] = [
   },
   {
     name: "RealEstateOps",
+    accent: "rgba(212,175,55,0.06)",
+    accentBorder: "rgba(212,175,55,0.2)",
     oneLiner: "Property transactions, tenant management, and investment decisions involve significant regulatory and fiduciary obligations. RealEstateOps governs every autonomous action with the audit trail institutional real estate demands.",
     outcomes: [
       "Transaction governance with full evidence trails",
@@ -107,6 +128,8 @@ const verticals: Vertical[] = [
   },
   {
     name: "EducationOps",
+    accent: "rgba(20,184,166,0.06)",
+    accentBorder: "rgba(20,184,166,0.2)",
     oneLiner: "Student data, academic decisions, and institutional operations require the same governance rigor as any regulated enterprise. EducationOps enforces FERPA-compliant agent boundaries across your autonomous education infrastructure.",
     outcomes: [
       "FERPA compliant student data governance",
@@ -306,9 +329,9 @@ export function CoreIdentityTechnologiesPage() {
       </section>
 
       {/* Operational verticals */}
-      <section className="mb-12">
+      <section className="mb-12 cidg-fadein">
         <div className="mb-4">
-          <h2 className="text-2xl font-semibold text-white">Operational governance verticals</h2>
+          <h2 className="text-2xl font-semibold text-white">Agentic Execution Governance — 10 Industry Verticals</h2>
           <p className="mt-2 max-w-3xl text-white/70">
             These are the initial markets served through SmartNation AI packages, governed by
             Sentinel and orchestrated by Nexus.
@@ -316,13 +339,13 @@ export function CoreIdentityTechnologiesPage() {
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {verticals.map((v) => (
-            <div key={v.name} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <div className="flex items-center gap-3 mb-2">
+            <div key={v.name} className="cidg-card rounded-2xl p-5" style={{border: `1px solid ${v.accentBorder || "rgba(255,255,255,0.1)"}`, background: v.accent || "rgba(255,255,255,0.03)"}}>
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-lg font-semibold text-white">{v.name}</div>
                 <Pill tone="green">{v.launchOrder}</Pill>
               </div>
-              <p className="text-sm text-white/70 mb-3">{v.oneLiner}</p>
-              <ul className="space-y-1">
+              <p className="text-sm text-white/70 mb-4 leading-relaxed">{v.oneLiner}</p>
+              <ul className="space-y-2">
                 {v.outcomes.map((o) => (
                   <li key={o} className="flex items-center gap-2 text-sm text-white/60">
                     <CheckIcon /><span>{o}</span>
@@ -331,14 +354,7 @@ export function CoreIdentityTechnologiesPage() {
               </ul>
             </div>
           ))}
-          <div className="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-5 flex flex-col justify-center">
-            <div className="text-base font-semibold text-white/50">Additional verticals in development</div>
-            <p className="mt-2 text-sm text-white/40">
-              New industry verticals are continuously being validated through internal
-              operations and advisory engagements. Availability is driven by client demand
-              and regulatory readiness.
-            </p>
-          </div>
+
         </div>
         <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4">
           <p className="text-sm text-white/60">
@@ -441,12 +457,20 @@ export function CoreIdentityTechnologiesPage() {
 
       {/* Operating principle */}
       <section>
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-          <h3 className="text-xl font-semibold text-white">Operating principle</h3>
-          <p className="mt-2 text-white/70">
-            We do not sell AI. We sell governed execution: measurable outcomes with explicit
-            authority, enforced constraints, and auditability built in.
+        <div className="rounded-2xl border border-white/10 bg-black/30 p-8">
+          <Eyebrow>OPERATING PRINCIPLE</Eyebrow>
+          <h3 className="text-2xl font-semibold text-white mb-4">We do not sell AI.</h3>
+          <p className="text-white/70 leading-relaxed max-w-2xl mb-6">
+            CoreIdentity sells governed execution — measurable outcomes with explicit authority,
+            enforced constraints, and auditability built in. Every vertical. Every agent.
+            Every decision. Governed at the execution layer before something goes wrong.
           </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center rounded-xl bg-white/10 px-6 py-3 text-sm font-medium hover:bg-white/15 transition"
+          >
+            Request a Briefing →
+          </Link>
         </div>
       </section>
 
