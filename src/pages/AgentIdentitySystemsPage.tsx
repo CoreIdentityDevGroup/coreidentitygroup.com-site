@@ -25,7 +25,32 @@ export function AgentIdentitySystemsPage() {
         </a>
       </div>
 
-      <Card accent="indigo" className="cidg-fadein cidg-fadein-delay-1">
+      <div
+        className="rounded-2xl p-6 cidg-fadein cidg-fadein-delay-1"
+        style={{border:'1px solid rgba(99,102,241,0.3)', background:'rgba(99,102,241,0.06)'}}
+      >
+        <div className="text-xs font-medium tracking-widest text-indigo-400 uppercase mb-3">
+          White Paper
+        </div>
+        <div className="font-semibold text-white mb-2">
+          Agent Identity Protocol (AIP) v0.1 — White Paper
+        </div>
+        <p className="text-sm text-white/70 leading-relaxed mb-4">
+          The open standard for AI agent identity, verification, and governance.
+          Includes EU AI Act, CO SB 24-205, and NIST AI RMF 1.0 compliance mapping.
+        </p>
+        <a
+          href="/AIP-v0.1-White-Paper.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium border border-indigo-500/30 text-indigo-300 hover:text-indigo-200 transition"
+          style={{background:'rgba(99,102,241,0.08)'}}
+        >
+          Download PDF →
+        </a>
+      </div>
+
+      <Card accent="indigo" className="cidg-fadein cidg-fadein-delay-2">
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <PulseDot color="#6366f1" />
@@ -50,11 +75,11 @@ export function AgentIdentitySystemsPage() {
         </div>
       </Card>
 
-      <div className="space-y-4 cidg-fadein cidg-fadein-delay-2">
+      <div className="space-y-4 cidg-fadein cidg-fadein-delay-3">
         <SectionTitle>Identity infrastructure for the agentic era</SectionTitle>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2 cidg-fadein cidg-fadein-delay-3">
+      <div className="grid gap-5 md:grid-cols-2 cidg-fadein cidg-fadein-delay-4">
         <Card accent="indigo">
           <div className="font-semibold text-white mb-2">Agent Authentication</div>
           <p className="text-sm text-white/60 leading-relaxed">
@@ -89,7 +114,7 @@ export function AgentIdentitySystemsPage() {
         </Card>
       </div>
 
-      <Card className="cidg-fadein cidg-fadein-delay-4">
+      <Card className="cidg-fadein cidg-fadein-delay-5">
         <div className="font-semibold text-white mb-3">
           The problem every enterprise is about to face
         </div>
@@ -102,7 +127,7 @@ export function AgentIdentitySystemsPage() {
       </Card>
 
       <div
-        className="rounded-2xl p-6 cidg-fadein cidg-fadein-delay-5"
+        className="rounded-2xl p-6 cidg-fadein cidg-fadein-delay-6"
         style={{border:'1px solid rgba(99,102,241,0.2)', background:'rgba(99,102,241,0.04)'}}
       >
         <div className="text-xs font-medium tracking-widest text-indigo-400 uppercase mb-3">
