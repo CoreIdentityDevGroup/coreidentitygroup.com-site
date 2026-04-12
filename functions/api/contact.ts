@@ -22,8 +22,8 @@ export const onRequestPost: PagesFunction = async ({ request, env }) => {
       return json({ ok: false, error: "Missing required fields: name, email, message", version: VERSION }, 400);
 
     const RESEND_API_KEY = String((env as any).RESEND_API_KEY  ?? "").trim();
-    const FROM_EMAIL     = String((env as any).ZEPTO_FROM_EMAIL ?? "").trim();
-    const TO_EMAIL       = String((env as any).ZEPTO_TO_EMAIL   ?? "").trim();
+    const FROM_EMAIL     = String((env as any).RESEND_FROM_EMAIL ?? "").trim();
+    const TO_EMAIL       = String((env as any).RESEND_TO_EMAIL   ?? "").trim();
 
     if (!RESEND_API_KEY || !FROM_EMAIL || !TO_EMAIL)
       return json({ ok: false, error: "Missing env vars", version: VERSION,
