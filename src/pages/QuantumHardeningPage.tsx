@@ -1,9 +1,14 @@
 import React from "react";
 import { Card, PageTitle, SectionTitle, PulseDot, Eyebrow } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 export function QuantumHardeningPage() {
  return (
  <div className="space-y-12">
+      <Helmet>
+        <title>Quantum-Resistant AI Governance | Post-Quantum Cryptography | CoreIdentity</title>
+        <meta name="description" content="CoreIdentity completes post-quantum cryptographic hardening across the full enforcement stack. FIPS 203, 204, and 205. Every surface — not just the perimeter." />
+      </Helmet>
 
  <div className="space-y-4 cidg-fadein">
  <Eyebrow>QUANTUM HARDENING — FIPS 203 / 204 / 205</Eyebrow>

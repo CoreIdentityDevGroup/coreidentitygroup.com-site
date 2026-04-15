@@ -1,8 +1,14 @@
 import { PageHero, Section, SectionTitle, Card, CardTitle, CardText, ButtonLink } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 export function AGO1Page() {
   return (
     <div>
+      <Helmet>
+        <title>AGO — Autonomous Governance Orchestrator | CoreIdentity</title>
+        <meta name="description" content="AGO-1 is CoreIdentity’s internal operating agent running under Sentinel OS and Nexus OS governance. The validated pilot pattern for enterprise agentic deployments." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AGO — Autonomous Governance Orchestrator","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+      </Helmet>
       <p className="text-xs uppercase tracking-wide text-white/60 mb-3">
   Internal operating agent (non-client-facing)
 </p>

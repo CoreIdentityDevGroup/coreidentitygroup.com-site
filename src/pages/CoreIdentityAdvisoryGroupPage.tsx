@@ -1,9 +1,14 @@
 import React from "react";
 import { Card, PageHero, Section, SectionTitle, ButtonLink } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 export function CoreIdentityAdvisoryGroupPage() {
   return (
     <div>
+      <Helmet>
+        <title>CIAG — AI Governance Advisory Services | CoreIdentity</title>
+        <meta name="description" content="CoreIdentity AI Advisory Group delivers AI governance frameworks, regulatory compliance roadmaps, and enterprise implementation strategy for agentic AI deployments." />
+      </Helmet>
       <p className="text-xs uppercase tracking-wide text-white/60 mb-3">
   Advisory capability
 </p>

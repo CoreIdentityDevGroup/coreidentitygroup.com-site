@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import globalAIGovernanceHero from "../assets/images/global-ai-governance-hero.webp";
+import { Helmet } from "react-helmet-async";
 
 export default function HomePage() {
   const [liveData, setLiveData] = useState(null);
@@ -13,6 +14,10 @@ export default function HomePage() {
   }, []);
   return (
     <div className="mx-auto max-w-6xl px-4 py-16">
+      <Helmet>
+        <title>CoreIdentity — Agentic AI Governance Ecosystem | The Control Layer for Governed AI</title>
+        <meta name="description" content="CoreIdentity is the complete Agentic AI Governance Ecosystem. The infrastructure layer governing how autonomous AI agents are deployed, operated, audited, and controlled at enterprise scale." />
+      </Helmet>
 
       {/* HERO */}
       <section className="max-w-4xl">
@@ -166,6 +171,33 @@ export default function HomePage() {
               Quantum Hardening →
             </Link>
           </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">AUTONOMOUS OPERATIONS</div>
+            <div className="text-lg font-semibold mb-3">AGO — Autonomous Governance Orchestrator</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              The internal operating agent running under full AEG enforcement —
+              and the validated pilot pattern for every enterprise deployment that follows.
+              Governance demonstrated, not just described.
+            </p>
+            <Link to="/ago-1" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+              AGO →
+            </Link>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widests mb-2">ADVISORY</div>
+            <div className="text-lg font-semibold mb-3">CoreIdentity Advisory Group</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              AI governance frameworks, regulatory compliance roadmaps, and enterprise
+              implementation strategy for organizations navigating the agentic AI
+              regulatory landscape.
+            </p>
+            <Link to="/coreidentity-ai-advisory-group" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+              CIAG →
+            </Link>
+          </div>
+
         </div>
       </section>
 

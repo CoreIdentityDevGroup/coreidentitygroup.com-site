@@ -1,9 +1,15 @@
 import React from "react";
 import { Card, PageTitle } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 export function NexusOSPage() {
   return (
     <div className="space-y-8">
+      <Helmet>
+        <title>Nexus OS — Multi-Agent Orchestration Governance | CoreIdentity</title>
+        <meta name="description" content="Nexus OS orchestrates multi-agent workflows under governance constraints. Workflow orchestration, systems integration, and task routing within authorized policy boundaries." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Nexus OS","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+      </Helmet>
       <div className="space-y-3">
         <PageTitle>Nexus OS</PageTitle>
         <div className="text-sm text-white/60">A CoreIdentity Development Group Inc. company.</div>

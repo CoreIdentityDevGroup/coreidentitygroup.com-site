@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 type ContactPayload = {
   name: string;
@@ -78,6 +79,10 @@ export default function ContactPage() {
 
   return (
     <div className="space-y-8">
+      <Helmet>
+        <title>Contact CoreIdentity | Enterprise AI Governance Inquiries</title>
+        <meta name="description" content="Contact CoreIdentity Development Group for enterprise AI governance briefings, platform demonstrations, and partnership inquiries." />
+      </Helmet>
       <div className="space-y-3">
         <h1 className="text-3xl font-semibold text-white">Contact</h1>
         <p className="text-white/70 max-w-3xl">

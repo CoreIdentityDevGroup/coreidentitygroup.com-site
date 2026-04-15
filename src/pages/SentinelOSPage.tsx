@@ -1,9 +1,15 @@
 import React from "react";
 import { Card, PageTitle } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 export function SentinelOSPage() {
   return (
     <div className="space-y-8">
+      <Helmet>
+        <title>Sentinel OS — AI Agent Policy Enforcement | CoreIdentity</title>
+        <meta name="description" content="Sentinel OS enforces policy, controls identity boundaries, gates approvals, and captures audit evidence for your AI fleet. The governance layer for enterprise agentic AI." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sentinel OS","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+      </Helmet>
       <div className="space-y-3">
         <PageTitle>Sentinel OS</PageTitle>
         <p className="text-white/70 max-w-3xl">The reason your AI fleet cannot make a decision your legal team did not authorize. Sentinel OS enforces policy, controls identity boundaries, gates approvals, and captures the evidence your auditors will require — before a regulator asks for it.</p>

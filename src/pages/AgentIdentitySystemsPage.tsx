@@ -1,9 +1,14 @@
 import React from "react";
 import { Card, PageTitle, SectionTitle, PulseDot, Eyebrow } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 export function AgentIdentitySystemsPage() {
   return (
     <div className="space-y-12">
+      <Helmet>
+        <title>Agent Identity Systems — AIP v0.1 | agentidentity.systems</title>
+        <meta name="description" content="Agent Identity Systems provides cryptographic identity, authorization boundaries, provenance, and attribution for autonomous AI agents. The AIP v0.1 open standard." />
+      </Helmet>
 
       <div className="space-y-4 cidg-fadein">
         <Eyebrow>A COREIDENTITY DEVELOPMENT GROUP COMPANY</Eyebrow>

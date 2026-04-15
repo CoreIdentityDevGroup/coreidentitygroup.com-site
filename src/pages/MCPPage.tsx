@@ -1,9 +1,14 @@
 // CHC-MCP-PAGE-v1
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export function MCPPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>Model Context Protocol Governance | CoreIdentity MCP Integration</title>
+        <meta name="description" content="CoreIdentity governs Model Context Protocol integrations with identity enforcement, authorization boundaries, and audit trails for every MCP tool call." />
+      </Helmet>
       <div className="mb-10">
         <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           MCP Protocol

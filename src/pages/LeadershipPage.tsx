@@ -64,6 +64,11 @@ export function LeadershipPage() {
               </p>
             </div>
 
+            <p className="mt-6 text-sm text-white/35 italic">
+              “The greatest superpower is the ability to change yourself.”
+            </p>
+
+
           </div>
         </Card>
       </section>

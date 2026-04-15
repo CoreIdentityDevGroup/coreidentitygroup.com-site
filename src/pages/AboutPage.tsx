@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "@tanstack/react-router";
 import { Card, PageTitle, SectionTitle } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 export function AboutPage() {
   return (
     <div className="space-y-12">
+      <Helmet>
+        <title>About CoreIdentity Development Group | Agentic AI Governance</title>
+        <meta name="description" content="CoreIdentity Development Group Inc. is the infrastructure company behind Agentic Execution Governance — the discipline that governs autonomous AI at the execution layer." />
+      </Helmet>
 
       <div className="space-y-4">
         <div className="text-xs font-medium tracking-[0.22em] text-white/40">

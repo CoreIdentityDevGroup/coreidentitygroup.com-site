@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /portal/
-Sitemap: https://www.coreholdingcorp.com/sitemap.xml
+Disallow: /api/
+Disallow: /_headers
+Disallow: /_redirects
+Sitemap: https://coreidentitygroup.com/sitemap.xml
