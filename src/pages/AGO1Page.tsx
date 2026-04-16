@@ -54,6 +54,12 @@ export function AGO1Page() {
               Each workflow becomes a governed template: scope boundaries, data inputs, controls, and measurable outcomes.
             </CardText>
           </Card>
+          <Card>
+            <CardTitle>Autonomous Data Protection Officer</CardTitle>
+            <CardText>
+              AGO-1 operates as an autonomous DPO function — continuously monitoring all agent activity for policy drift, data access scope violations, and compliance gaps. When drift is detected, AGO-1 initiates an intervention automatically: suspending the agent, restricting its scope, or escalating for human review. Every intervention produces an immutable DPO audit record. Organizations deploying AI at scale will face regulatory requirements for DPO-equivalent oversight — AGO-1 delivers that function autonomously, without adding headcount.
+            </CardText>
+          </Card>
         </div>
       </Section>
 
@@ -108,7 +114,7 @@ export function AGO1Page() {
             <span className="text-sm font-semibold tracking-wide text-amber-400 uppercase">Governance Guaranteed by SAL</span>
           </div>
           <p className="text-sm text-white/70 leading-relaxed">
-            AGO-1 operates under the SAL Enforcement Kernel — ensuring every autonomous action is evaluated against the IIAAC model (Identity, Intent, Asset, Action, Context) before execution. No AGO-1 task can exceed its delegated authority, export unauthorized data, or trigger unvalidated transactions.
+            AGO-1 operates under the SAL Enforcement Kernel — ensuring every autonomous action is evaluated against the IIAAC model (Identity, Intent, Asset, Action, Context) before execution. No AGO-1 task can exceed its delegated authority, export unauthorized data, or trigger unvalidated transactions. AGO-1's Autonomous DPO function monitors all governed agents continuously — detecting policy drift, data access anomalies, and compliance gaps before they become incidents. Interventions are logged as immutable DPO audit records.
           </p>
           <a href="/sal" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
             Learn how SAL enforces boundaries →

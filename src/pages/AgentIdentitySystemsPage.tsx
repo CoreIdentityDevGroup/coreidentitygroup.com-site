@@ -64,10 +64,7 @@ export function AgentIdentitySystemsPage() {
             </span>
           </div>
           <p className="text-white/70 text-sm leading-relaxed">
-            AIS is live in production and actively running under extended
-            soak conditions — validating identity enforcement, authorization
-            boundaries, and audit trail integrity at scale. The portal is
-            publicly accessible at agentidentity.systems.
+            AIS is live in production with over 37,000 verified agent interactions logged at 100% pass rate under continuous soak conditions — validating identity enforcement, authorization boundaries, and audit trail integrity at enterprise scale. The portal is publicly accessible at agentidentity.systems.
           </p>
           <a
             href="https://agentidentity.systems"
@@ -115,6 +112,12 @@ export function AgentIdentitySystemsPage() {
             When something goes wrong, you know exactly which agent acted,
             under which authorization, and what policy governed the decision.
             Audit-grade accountability built in.
+          </p>
+        </Card>
+        <Card accent="indigo">
+          <div className="font-semibold text-white mb-2">Delegated Financial Authority</div>
+          <p className="text-sm text-white/60 leading-relaxed">
+            AIS credentials carry cryptographically enforced financial authority bounds — maximum transaction amounts, approved currencies, authorized counterparties, and daily limits. Every financial action an agent initiates requires a signed TransactionAuthToken valid for 60 seconds. No agent can transact outside its declared bounds. Dual-authorization thresholds are enforced at the credential level. For BFSI and enterprise deployments where agents touch financial systems, this is the difference between governed automation and uncontrolled exposure.
           </p>
         </Card>
       </div>

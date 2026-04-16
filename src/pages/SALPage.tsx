@@ -4,11 +4,6 @@ import { Helmet } from "react-helmet-async";
 function ShieldIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-amber-400" aria-hidden="true">
-      <Helmet>
-        <title>SAL Enforcement Kernel — Semantic Authorization Layer | CoreIdentity</title>
-        <meta name="description" content="The SAL Enforcement Kernel is the deterministic pre-execution gateway for autonomous AI. Sub-3ms arbitration latency. IIAAC validation model. Fail-closed by design." />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SAL Enforcement Kernel","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
-      </Helmet>
       <path d="M12 2l8 4v6c0 5-3.2 9.4-8 10-4.8-.6-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
     </svg>
   );
@@ -34,6 +29,11 @@ function BlockIcon() {
 export function SALPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>SAL Enforcement Kernel — Semantic Authorization Layer | CoreIdentity</title>
+        <meta name="description" content="The SAL Enforcement Kernel is the deterministic pre-execution gateway for autonomous AI. Sub-3ms arbitration latency. IIAAC validation model. Fail-closed by design." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SAL Enforcement Kernel","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+      </Helmet>
 
       {/* Header */}
       <div className="mb-12">
@@ -51,6 +51,8 @@ export function SALPage() {
           <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">sub-3ms arbitration latency</span>
           <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">IIAAC validation model</span>
           <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">SAL-Certified Rail standard</span>
+          <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">Parameter bounds enforcement</span>
+          <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">Delegation chain validation</span>
           <span className="inline-flex items-center rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-400">Deterministic · Not probabilistic</span>
         </div>
       </div>
@@ -140,6 +142,25 @@ export function SALPage() {
               <p className="text-xs text-white/60 leading-relaxed">{dim.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Advanced Enforcement Capabilities */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold text-white mb-6">Advanced Enforcement Capabilities</h2>
+        <div className="space-y-6">
+          <div className="rounded-2xl border border-amber-400/15 bg-amber-400/5 p-6">
+            <div className="text-base font-semibold text-white mb-2">Parameter Semantic Validation</div>
+            <p className="text-sm text-white/70 leading-relaxed">
+              SAL enforces parameter-level bounds on every agent action — not just whether the action is permitted, but whether the specific values are within authorized ranges. A financial agent authorized to process payments cannot submit a transaction outside its declared dollar bounds. A data agent cannot export a record count beyond its authorized scope. Out-of-bounds parameters return SAL-4010 before execution — regardless of whether the action type is permitted. This closes the prompt injection gap that RBAC cannot address.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-amber-400/15 bg-amber-400/5 p-6">
+            <div className="text-base font-semibold text-white mb-2">Inter-Agent Trust Propagation</div>
+            <p className="text-sm text-white/70 leading-relaxed">
+              In multi-agent workflows, SAL validates the full delegation chain — every agent that passed authority to the current agent, back to the original authorization source. A compromised sub-agent cannot propagate elevated permissions to a downstream agent. SAL-4011 fires when any link in the chain is invalid. Maximum delegation depth is enforced at the infrastructure level. The governance boundary holds regardless of how complex the agent topology becomes.
+            </p>
+          </div>
         </div>
       </section>
 
