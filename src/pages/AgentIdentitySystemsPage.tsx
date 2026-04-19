@@ -77,6 +77,50 @@ export function AgentIdentitySystemsPage() {
         </div>
       </Card>
 
+
+      <div
+        className="rounded-2xl p-6 cidg-fadein cidg-fadein-delay-2"
+        style={{border:'1px solid rgba(20,184,166,0.3)', background:'rgba(20,184,166,0.05)'}}
+      >
+        <div className="text-xs font-medium tracking-widest text-teal-400 uppercase mb-3">
+          Sovereign PQ-CA Trust Authority
+        </div>
+        <div className="font-semibold text-white mb-3">
+          AIS is no longer just an identity registry — it is a sovereign post-quantum Certificate Authority.
+        </div>
+        <p className="text-sm text-white/70 leading-relaxed mb-5">
+          Agent credentials issued by AIS are ML-DSA-65 signed, FIPS 204 compliant, and anchored to quantum
+          entropy sourced from photon vacuum fluctuation measurements. The AIS PQ-CA operates a two-tier
+          trust hierarchy: a Root CA cold-stored in AWS Secrets Manager signs the Issuing CA certificate,
+          then its key is immediately zeroed. The online Issuing CA signs every agent identity credential.
+          No classical cryptographic signature algorithm is in the credential chain.
+        </p>
+        <div className="grid grid-cols-2 gap-3 mb-5">
+          {[
+            {label:'Algorithm', value:'ML-DSA-65 (FIPS 204)'},
+            {label:'Entropy source', value:'ANU QRNG — photon vacuum fluctuation'},
+            {label:'Root CA storage', value:'AWS Secrets Manager — key zeroed after use'},
+            {label:'Revocation guard', value:'X-Manual-Override header required'},
+          ].map(function(item) {
+            return (
+              <div key={item.label} className="rounded-xl p-3 border border-teal-500/15" style={{background:'rgba(20,184,166,0.04)'}}>
+                <div className="text-xs text-teal-400 font-medium mb-1">{item.label}</div>
+                <div className="text-xs text-white/70 font-mono">{item.value}</div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {['GET /ca/crl','POST /ca/issue','POST /ca/verify','POST /ca/revoke'].map(function(ep) {
+            return (
+              <span key={ep} className="text-xs font-mono px-2 py-1 rounded border border-teal-500/30 text-teal-300" style={{background:'rgba(20,184,166,0.05)'}}>
+                {ep}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+
       <div className="space-y-4 cidg-fadein cidg-fadein-delay-3">
         <SectionTitle>Identity infrastructure for the agentic era</SectionTitle>
       </div>

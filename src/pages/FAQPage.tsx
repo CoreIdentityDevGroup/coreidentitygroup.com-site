@@ -130,16 +130,75 @@ export function FAQPage() {
         </FAQCard>
 
         <FAQCard q="What is quantum hardening and why does it matter?">
+          <div className="space-y-3">
+            <p>
+              CoreIdentity is the first AI governance platform to complete post-quantum cryptographic (PQC)
+              hardening across its full enforcement stack — SAL Kernel, Sentinel OS, Agent Identity Systems,
+              and Nexus OS. Every cryptographic surface has been migrated to NIST-finalized post-quantum
+              algorithms (FIPS 203, 204, and 205). This matters now for two reasons:
+            </p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                <span className="text-white/80 font-medium">Harvest Now, Decrypt Later (HNDL).</span>{" "}
+                Adversaries are collecting encrypted data today with the intent to decrypt it once
+                cryptographically relevant quantum computers become available. Governance audit trails
+                and agent identity credentials signed with classical algorithms are already at risk.
+              </li>
+              <li>
+                <span className="text-white/80 font-medium">NIST finalized in August 2024.</span>{" "}
+                FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), and FIPS 205 (SLH-DSA) are the official
+                post-quantum standards. Federal agencies and their contractors face migration deadlines.
+                Enterprise governance infrastructure must meet the same bar.
+              </li>
+            </ul>
+          </div>
+        </FAQCard>
+
+        <FAQCard q="What is the PQ-CA?">
           <p>
-            CoreIdentity is the first AI governance platform to complete
-            post-quantum cryptographic hardening across its full enforcement
-            stack — SAL Kernel, Sentinel OS, AIS, and Nexus OS. This means
-            every cryptographic surface has been migrated to FIPS 203, 204,
-            and 205 post-quantum algorithms. Adversaries are collecting
-            encrypted data today to decrypt once quantum computers become
-            capable. Governance audit trails and agent identity credentials
-            require the same protection as any other sensitive institutional
-            infrastructure.
+            The PQ-CA (Post-Quantum Certificate Authority) is a two-tier cryptographic trust authority
+            embedded in Agent Identity Systems. It issues and verifies ML-DSA-65 signed agent identity
+            certificates. The Root CA is cold-stored in AWS Secrets Manager — its private key signs only
+            the Issuing CA certificate, after which it is immediately zeroed and never loaded into memory
+            again. The Issuing CA is online, signs every agent credential, and is the trust anchor for
+            the entire AIS identity chain. Four CA endpoints are live: GET /ca/crl, POST /ca/issue,
+            POST /ca/verify, and POST /ca/revoke. The /ca/revoke endpoint requires an{" "}
+            <span className="font-mono text-white/80">X-Manual-Override: true</span> header, making automated
+            revocation architecturally impossible.
+          </p>
+        </FAQCard>
+
+        <FAQCard q="What algorithm does the PQ-CA use?">
+          <div className="space-y-3">
+            <p>
+              ML-DSA-65, defined in NIST FIPS 204 (finalized August 2024). ML-DSA-65 is a lattice-based
+              digital signature algorithm in the Module-Lattice-Digital Signature Algorithm family —
+              designed specifically to resist attacks from cryptographically relevant quantum computers.
+              It produces signatures that are mathematically unforgeable without solving the Module
+              Learning With Errors (MLWE) problem, which is believed to be hard for both classical and
+              quantum adversaries.
+            </p>
+            <p>
+              ML-DSA-65 provides NIST security level 3, equivalent to 192-bit classical security — the
+              same level used in many high-assurance government and defense applications. CoreIdentity
+              selected ML-DSA-65 for agent identity credentials because identity certificates are the
+              highest-value cryptographic artifact in the enforcement chain.
+            </p>
+          </div>
+        </FAQCard>
+
+        <FAQCard q="What is quantum entropy anchoring?">
+          <p>
+            Quantum entropy anchoring means that the randomness used to generate every agent identity
+            credential is sourced from a physical quantum process — not from a purely deterministic
+            algorithmic source. The primary entropy source is the ANU Quantum Random Number Generator,
+            which measures photon vacuum fluctuations: an inherently non-deterministic quantum-mechanical
+            event that cannot be predicted or reproduced. On each refresh cycle, 1,024 quantum-sourced
+            values from the ANU QRNG API are XOR-mixed with OS CSPRNG output and loaded into a 16 KB
+            entropy pool. If the ANU QRNG API is unavailable, the system degrades to OS CSPRNG fallback
+            (DEGRADED status). QUANTUM status is only reported when photon-sourced entropy is actively
+            contributing to the pool. The result: every agent credential derives its key material from
+            a physically random quantum source, not a software approximation.
           </p>
         </FAQCard>
 

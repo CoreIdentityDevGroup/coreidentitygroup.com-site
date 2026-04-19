@@ -52,6 +52,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* QUANTUM BOUNDARY STATEMENT */}
+      <section className="mt-10 max-w-3xl">
+        <p className="text-base leading-relaxed text-white/55 border-l-2 border-teal-500/40 pl-5 italic">
+          CoreIdentity is the only governance infrastructure platform that operates at the quantum boundary
+          — hardening the enforcement stack against quantum-era threats while providing enterprises the
+          diagnostic and remediation tooling required to govern their own agentic ecosystems through the
+          post-quantum transition.
+        </p>
+      </section>
+
       {/* VISUAL */}
       <section className="mt-20">
         <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/30">

@@ -47,7 +47,44 @@ export function QuantumHardeningPage() {
  </div>
  </Card>
 
+
+
  <div className="space-y-4 cidg-fadein cidg-fadein-delay-2">
+ <SectionTitle>What was built and deployed</SectionTitle>
+ </div>
+
+ <div className="grid gap-5 md:grid-cols-2 cidg-fadein cidg-fadein-delay-3">
+ <Card accent="teal">
+ <div className="font-semibold text-white mb-2">PQ-CA: ML-DSA-65 (FIPS 204) Certificate Authority</div>
+ <p className="text-sm text-white/60 leading-relaxed">
+ A two-tier post-quantum Certificate Authority is embedded directly in the Agent Identity Systems
+ API. The Root CA is cold-stored in AWS Secrets Manager and signs only the Issuing CA certificate
+ — its private key is immediately zeroed after bootstrap. The Issuing CA is online, issues and
+ verifies ML-DSA-65 agent identity certificates, and operates under a FIPS 204 compliant signing
+ stack. All four CA endpoints are live: <span className="font-mono text-teal-300 text-xs">GET /ca/crl</span>,{" "}
+ <span className="font-mono text-teal-300 text-xs">POST /ca/issue</span>,{" "}
+ <span className="font-mono text-teal-300 text-xs">POST /ca/verify</span>, and{" "}
+ <span className="font-mono text-teal-300 text-xs">POST /ca/revoke</span>.
+ Revocation is structurally blocked from automation — the{" "}
+ <span className="font-mono text-teal-300 text-xs">X-Manual-Override: true</span> header is
+ required, making automated revocation architecturally impossible.
+ </p>
+ </Card>
+ <Card accent="teal">
+ <div className="font-semibold text-white mb-2">QRNG Entropy Pool — Quantum Photon Vacuum Fluctuation</div>
+ <p className="text-sm text-white/60 leading-relaxed">
+ Every agent identity credential is anchored to quantum entropy. The primary entropy source is the
+ ANU Quantum Random Number Generator — a photon vacuum fluctuation measurement apparatus — accessed
+ via the ANU QRNG API. On every refresh cycle, 1,024 quantum-sourced hex values are fetched,
+ XOR-mixed with OS CSPRNG output, and loaded into a 16 KB circular entropy pool. If the ANU API
+ is unavailable, the system degrades gracefully to OS CSPRNG fallback (DEGRADED status) without
+ halting credential issuance. The pool refreshes every 30 seconds in production. QUANTUM status is
+ reported only when photon-sourced entropy is actively contributing to the pool.
+ </p>
+ </Card>
+ </div>
+
+  <div className="space-y-4 cidg-fadein cidg-fadein-delay-2">
  <SectionTitle>Why Post-Quantum Cryptography matters now</SectionTitle>
  </div>
 
