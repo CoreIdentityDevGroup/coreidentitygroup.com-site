@@ -63,20 +63,20 @@ export default function HomePage() {
       </section>
 
 
-      {/* PRODUCTION STATUS */}
+      {/* ENTERPRISE POSITIONING */}
       <section className="mt-12">
         <div className="rounded-2xl border border-white/10 bg-black/20 px-8 py-6 flex flex-col sm:flex-row gap-8 sm:gap-0 sm:divide-x sm:divide-white/10 max-w-3xl">
           <div className="flex-1 sm:pr-8">
-            <div className="text-2xl font-semibold">36,000+</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Cryptographically Verified Agent Interactions</div>
+            <div className="text-2xl font-bold">BAA-Ready</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">HIPAA-compliant PHI agent governance for regulated enterprise deployments</div>
           </div>
           <div className="flex-1 sm:px-8">
-            <div className="text-2xl font-semibold">20</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Autonomous Agents in Production</div>
+            <div className="text-2xl font-bold">FIPS 204 Compliant</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">ML-DSA-65 cryptographic audit trail — every agent action signed and verifiable</div>
           </div>
           <div className="flex-1 sm:pl-8">
-            <div className="text-2xl font-semibold text-teal-400">Live</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Awareness, BD & Corporate Operations</div>
+            <div className="text-2xl font-bold text-teal-400">Enforcement-First</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Governance that runs before the API call — not after the audit</div>
           </div>
         </div>
       </section>
