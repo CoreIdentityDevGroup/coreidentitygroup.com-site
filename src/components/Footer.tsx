@@ -39,8 +39,8 @@ export default function Footer() {
             <div className="text-white/60 font-medium text-xs tracking-widest uppercase">Platform</div>
             <ul className="space-y-2">
               <li><Link to="/sal" className="hover:text-white/80 transition">SAL Kernel</Link></li>
-              <li><Link to="/sentinel-os" className="hover:text-white/80 transition">Sentinel</Link></li>
-              <li><Link to="/nexus-os" className="hover:text-white/80 transition">Nexus</Link></li>
+              <li><Link to="/sentinel" className="hover:text-white/80 transition">Sentinel</Link></li>
+              <li><Link to="/nexus" className="hover:text-white/80 transition">Nexus</Link></li>
               <li><Link to="/smartnation-ai" className="hover:text-white/80 transition">SmartNation AI</Link></li>
               <li><Link to="/agentidentity-systems" className="hover:text-white/80 transition">Agent Identity Systems</Link></li>
               <li><Link to="/mcp" className="hover:text-white/80 transition">MCP Protocol</Link></li>

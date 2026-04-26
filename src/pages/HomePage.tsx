@@ -144,7 +144,7 @@ export default function HomePage() {
               evidence capture. The reason your AI fleet cannot make a decision
               your legal team did not authorize.
             </p>
-            <Link to="/sentinel-os" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/sentinel" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               Sentinel →
             </Link>
           </div>
@@ -170,7 +170,7 @@ export default function HomePage() {
               retries, and recovery — coordinated inside defined governance
               constraints with structured operational traces at every step.
             </p>
-            <Link to="/nexus-os" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/nexus" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               Nexus →
             </Link>
           </div>
@@ -238,7 +238,7 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-2">
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
             <div className="text-sm font-medium text-white/40 tracking-widest mb-2">THREAT VISIBILITY</div>
-            <div className="text-lg font-semibold mb-3">ShadowScan</div>
+            <a href="https://shadowscan.coreidentitygroup.com" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold mb-3 hover:text-blue-400 transition block">ShadowScan →</a>
             <p className="text-white/60 text-sm leading-relaxed">
               Autonomous discovery of unsanctioned AI activity across your enterprise environment.
               Identify agents, models, and integrations operating without governance coverage —
@@ -247,7 +247,7 @@ export default function HomePage() {
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
             <div className="text-sm font-medium text-white/40 tracking-widest mb-2">CRYPTOGRAPHIC HYGIENE</div>
-            <div className="text-lg font-semibold mb-3">ClearShield</div>
+            <a href="https://clearshield.coreidentitygroup.com" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold mb-3 hover:text-blue-400 transition block">ClearShield →</a>
             <p className="text-white/60 text-sm leading-relaxed">
               Cryptographic posture assessment and remediation for enterprise AI deployments.
               Identify classical algorithm exposure, map quantum-vulnerable surfaces, and

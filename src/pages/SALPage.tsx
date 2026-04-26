@@ -169,9 +169,9 @@ export function SALPage() {
         <h2 className="text-2xl font-semibold text-white mb-4">SAL in the CoreIdentity Ecosystem</h2>
         <div className="grid gap-4 md:grid-cols-2">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <div className="text-base font-semibold text-white mb-2">Powers Sentinel OS</div>
-            <p className="text-sm text-white/70 leading-relaxed">Every Sentinel OS policy enforcement decision, approval gate evaluation, and kill switch trigger is arbitrated through the SAL Kernel. Sentinel's guarantees are SAL's guarantees.</p>
-            <a href="/sentinel-os" className="mt-3 inline-flex items-center gap-1 text-sm text-white/50 hover:text-white/80 transition">View Sentinel OS →</a>
+            <div className="text-base font-semibold text-white mb-2">Powers Sentinel</div>
+            <p className="text-sm text-white/70 leading-relaxed">Every Sentinel policy enforcement decision, approval gate evaluation, and kill switch trigger is arbitrated through the SAL Kernel. Sentinel's guarantees are SAL's guarantees.</p>
+            <a href="/sentinel" className="mt-3 inline-flex items-center gap-1 text-sm text-white/50 hover:text-white/80 transition">View Sentinel →</a>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-base font-semibold text-white mb-2">Powers AGO</div>

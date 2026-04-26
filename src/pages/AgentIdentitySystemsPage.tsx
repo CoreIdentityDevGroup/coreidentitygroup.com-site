@@ -186,13 +186,13 @@ export function AgentIdentitySystemsPage() {
           Native to the CoreIdentity Enforcement Stack
         </div>
         <p className="text-sm text-white/70 leading-relaxed mb-4">
-          AIS integrates natively with Sentinel OS for policy enforcement,
-          SAL Kernel for semantic authorization, and Nexus OS for multi-agent
+          AIS integrates natively with Sentinel for policy enforcement,
+          SAL Kernel for semantic authorization, and Nexus for multi-agent
           orchestration. Identity is not a feature — it is the foundation
           every other control depends on.
         </p>
         <div className="flex flex-wrap gap-2">
-          {['Sentinel OS','SAL Kernel','Nexus OS','AGO'].map(function(p) {
+          {['Sentinel','SAL Kernel','Nexus','AGO'].map(function(p) {
             return (
               <span key={p} className="text-xs px-3 py-1 rounded border border-indigo-500/20 text-indigo-300" style={{background:'rgba(99,102,241,0.05)'}}>
                 {p}

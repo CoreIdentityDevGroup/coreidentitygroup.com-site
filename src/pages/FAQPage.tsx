@@ -92,12 +92,12 @@ export function FAQPage() {
                 Fail-closed by design.
               </li>
               <li>
-                <Link to="/sentinel-os" className="text-white/80 hover:text-white">Sentinel OS</Link>
+                <Link to="/sentinel" className="text-white/80 hover:text-white">Sentinel</Link>
                 {" "}— governance layer enforcing policy, identity boundaries,
                 approval gates, and evidence capture.
               </li>
               <li>
-                <Link to="/nexus-os" className="text-white/80 hover:text-white">Nexus OS</Link>
+                <Link to="/nexus" className="text-white/80 hover:text-white">Nexus</Link>
                 {" "}— orchestration layer coordinating controlled multi-agent
                 execution with structured operational traces.
               </li>
@@ -133,8 +133,8 @@ export function FAQPage() {
           <div className="space-y-3">
             <p>
               CoreIdentity is the first AI governance platform to complete post-quantum cryptographic (PQC)
-              hardening across its full enforcement stack — SAL Kernel, Sentinel OS, Agent Identity Systems,
-              and Nexus OS. Every cryptographic surface has been migrated to NIST-finalized post-quantum
+              hardening across its full enforcement stack — SAL Kernel, Sentinel, Agent Identity Systems,
+              and Nexus. Every cryptographic surface has been migrated to NIST-finalized post-quantum
               algorithms (FIPS 203, 204, and 205). This matters now for two reasons:
             </p>
             <ul className="list-disc pl-5 space-y-2">
@@ -207,7 +207,7 @@ export function FAQPage() {
             AGO-1 is an internal operating agent used to harden the CoreIdentity
             execution stack in real workflows, produce repeatable governance
             evidence, and validate fail-closed controls before client-facing
-            deployments. AGO-1 runs under full Sentinel OS and Nexus OS
+            deployments. AGO-1 runs under full Sentinel and Nexus
             enforcement and augments CoreIdentity Advisory Group operations.
             It is not client-facing.
           </p>

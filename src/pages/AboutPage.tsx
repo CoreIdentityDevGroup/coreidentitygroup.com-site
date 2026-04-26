@@ -70,7 +70,7 @@ export function AboutPage() {
             <p>
               CoreIdentity is not a dashboard company. We do not observe
               AI behavior after the fact. We govern it at the execution layer —
-              through the Semantic Arbitration Layer, Sentinel OS, and a
+              through the Semantic Arbitration Layer, Sentinel, and a
               cryptographically hardened identity infrastructure that meets
               the most demanding institutional standards.
             </p>

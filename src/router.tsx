@@ -50,13 +50,13 @@ const coreidentityRoute = createRoute({
 
 const sentinelRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/sentinel-os",
+  path: "/sentinel",
   component: SentinelOSPage,
 });
 
 const nexusRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/nexus-os",
+  path: "/nexus",
   component: NexusOSPage,
 });
 

@@ -6,13 +6,13 @@ export function SentinelOSPage() {
   return (
     <div className="space-y-8">
       <Helmet>
-        <title>Sentinel OS — AI Agent Policy Enforcement | CoreIdentity</title>
-        <meta name="description" content="Sentinel OS enforces policy, controls identity boundaries, gates approvals, and captures audit evidence for your AI fleet. The governance layer for enterprise agentic AI." />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sentinel OS","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+        <title>Sentinel — AI Agent Policy Enforcement | CoreIdentity</title>
+        <meta name="description" content="Sentinel enforces policy, controls identity boundaries, gates approvals, and captures audit evidence for your AI fleet. The governance layer for enterprise agentic AI." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sentinel","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
       <div className="space-y-3">
-        <PageTitle>Sentinel OS</PageTitle>
-        <p className="text-white/70 max-w-3xl">The reason your AI fleet cannot make a decision your legal team did not authorize. Sentinel OS enforces policy, controls identity boundaries, gates approvals, and captures the evidence your auditors will require — before a regulator asks for it.</p>
+        <PageTitle>Sentinel</PageTitle>
+        <p className="text-white/70 max-w-3xl">The reason your AI fleet cannot make a decision your legal team did not authorize. Sentinel enforces policy, controls identity boundaries, gates approvals, and captures the evidence your auditors will require — before a regulator asks for it.</p>
       </div>
       <Card>
         <ul className="list-disc pl-5 space-y-2 text-white/75">
@@ -29,7 +29,7 @@ export function SentinelOSPage() {
           <span className="text-sm font-semibold tracking-wide text-amber-400 uppercase">Governance Guaranteed by SAL</span>
         </div>
         <p className="text-sm text-white/70 leading-relaxed">
-          All Sentinel OS enforcement operations are powered by the SAL Enforcement Kernel — the deterministic gateway that mathematically prevents any machine action violating codified business logic or safety thresholds. Every policy decision, approval gate, and audit trail is arbitrated through SAL's five-dimensional IIAAC model.
+          All Sentinel enforcement operations are powered by the SAL Enforcement Kernel — the deterministic gateway that mathematically prevents any machine action violating codified business logic or safety thresholds. Every policy decision, approval gate, and audit trail is arbitrated through SAL's five-dimensional IIAAC model.
         </p>
         <a href="/sal" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
           Learn how SAL enforces boundaries →

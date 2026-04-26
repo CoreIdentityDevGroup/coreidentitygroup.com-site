@@ -2,7 +2,7 @@ import React from "react";
 import { Card, PageTitle, SectionTitle } from "../components/ui";
 
 const INTRO =
- "CoreIdentity Development Group Inc. governs a portfolio of systems and operating capabilities built to enable safe, auditable agentic digital labor. At the foundation is the Semantic Arbitration Layer (SAL) — the deterministic enforcement kernel that authorizes every agent execution before it reaches the stack. Above it, Sentinel OS defines policy, Nexus OS orchestrates controlled execution, and SmartNation AI packages governed deployment patterns. CoreIdentity Advisory Group and AGO-1 translate the platform into commercial engagements.";
+ "CoreIdentity Development Group Inc. governs a portfolio of systems and operating capabilities built to enable safe, auditable agentic digital labor. At the foundation is the Semantic Arbitration Layer (SAL) — the deterministic enforcement kernel that authorizes every agent execution before it reaches the stack. Above it, Sentinel defines policy, Nexus orchestrates controlled execution, and SmartNation AI packages governed deployment patterns. CoreIdentity Advisory Group and AGO-1 translate the platform into commercial engagements.";
 
 function PortfolioCard(props: { title: string; body: string; href: string }) {
  return (
@@ -28,7 +28,7 @@ export function PortfolioPage() {
 
  <section className="space-y-5">
  <SectionTitle>Foundational Infrastructure</SectionTitle>
- <p className="text-white/60 text-sm max-w-2xl">The enforcement kernel that underpins every product in the stack. Every agent execution passes through SAL before reaching Sentinel OS, Nexus OS, or any downstream system.</p>
+ <p className="text-white/60 text-sm max-w-2xl">The enforcement kernel that underpins every product in the stack. Every agent execution passes through SAL before reaching Sentinel, Nexus, or any downstream system.</p>
  <div className="grid gap-5 md:grid-cols-1 max-w-2xl">
  <PortfolioCard
  title="Semantic Arbitration Layer (SAL)"
@@ -38,7 +38,7 @@ export function PortfolioPage() {
  <PortfolioCard
  title="Quantum Hardening — FIPS 203/204/205"
  href="/quantum-hardening"
- body="CoreIdentity is the first AI governance platform to complete post-quantum cryptographic hardening across its full enforcement stack. 100,000 soak cycles. 376/376 sprint tests. Zero failures. ML-KEM-768, ML-DSA-65, SLH-DSA-128s deployed across SAL Kernel, Sentinel OS, AIS, and Nexus OS. "
+ body="CoreIdentity is the first AI governance platform to complete post-quantum cryptographic hardening across its full enforcement stack. 100,000 soak cycles. 376/376 sprint tests. Zero failures. ML-KEM-768, ML-DSA-65, SLH-DSA-128s deployed across SAL Kernel, Sentinel, AIS, and Nexus. "
  />
  </div>
  </section>
@@ -53,14 +53,14 @@ export function PortfolioPage() {
  />
 
  <PortfolioCard
- title="Sentinel OS"
- href="/sentinel-os"
+ title="Sentinel"
+ href="/sentinel"
  body="Governance layer enforcing policy, approvals, identity boundaries, auditability, and evidence capture. Designed to be fail‑closed when authority or data is missing."
  />
 
  <PortfolioCard
- title="Nexus OS"
- href="/nexus-os"
+ title="Nexus"
+ href="/nexus"
  body="Orchestration layer coordinating workflows, integrations, retries, and recovery. Ensures tasks run inside defined controls and produces structured operational traces."
  />
 

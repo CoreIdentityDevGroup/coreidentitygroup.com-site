@@ -139,9 +139,9 @@ export function QuantumHardeningPage() {
  <div className="grid grid-cols-2 gap-3">
  {[
  {name:'SAL Kernel', detail:'Authorization tokens and capability proofs'},
- {name:'Sentinel OS', detail:'Audit signatures and governance records'},
+ {name:'Sentinel', detail:'Audit signatures and governance records'},
  {name:'Agent Identity Systems', detail:'Identity credentials and certificates'},
- {name:'Nexus OS', detail:'Orchestration proofs and execution records'},
+ {name:'Nexus', detail:'Orchestration proofs and execution records'},
  ].map(function(p) {
  return (
  <div key={p.name} className="rounded-xl p-4 border border-teal-500/15" style={{background:'rgba(20,184,166,0.04)'}}>

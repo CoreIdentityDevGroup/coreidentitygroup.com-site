@@ -36,7 +36,7 @@ export function CoreIdentityPage() {
         <div className="grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <div className="text-sm font-semibold tracking-wide text-white/80">Layer 1</div>
-            <div className="mt-1 text-xl font-semibold text-white">Sentinel OS</div>
+            <div className="mt-1 text-xl font-semibold text-white">Sentinel</div>
             <div className="mt-2 text-white/70">
               Governance, policy, identity, permissions, audit logging, constraints, and enforcement.
               Humans lead; machines execute—Sentinel keeps that authority explicit.
@@ -50,7 +50,7 @@ export function CoreIdentityPage() {
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <div className="text-sm font-semibold tracking-wide text-white/80">Layer 2</div>
-            <div className="mt-1 text-xl font-semibold text-white">Nexus OS</div>
+            <div className="mt-1 text-xl font-semibold text-white">Nexus</div>
             <div className="mt-2 text-white/70">
               Orchestration and tasking. Nexus coordinates workflows, tools, agents, approvals, and
               handoffs—while staying inside Sentinel’s rules.

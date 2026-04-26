@@ -6,7 +6,7 @@ export function AGO1Page() {
     <div>
       <Helmet>
         <title>AGO — Autonomous Governance Orchestrator | CoreIdentity</title>
-        <meta name="description" content="AGO-1 is CoreIdentity’s internal operating agent running under Sentinel OS and Nexus OS governance. The validated pilot pattern for enterprise agentic deployments." />
+        <meta name="description" content="AGO-1 is CoreIdentity’s internal operating agent running under Sentinel and Nexus governance. The validated pilot pattern for enterprise agentic deployments." />
         <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AGO — Autonomous Governance Orchestrator","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
       <p className="text-xs uppercase tracking-wide text-white/60 mb-3">
@@ -25,8 +25,8 @@ export function AGO1Page() {
         <SectionTitle>What AGO‑1 is</SectionTitle>
         <Card>
           <CardText>
-            AGO‑1 is an internal operating agent that runs under <strong>Sentinel OS</strong> (policy, approvals, audit trails) and
-            <strong> Nexus OS</strong> (workflow orchestration and recovery). It is deliberately <strong>non‑client‑facing</strong> and is used to
+            AGO‑1 is an internal operating agent that runs under <strong>Sentinel</strong> (policy, approvals, audit trails) and
+            <strong> Nexus</strong> (workflow orchestration and recovery). It is deliberately <strong>non‑client‑facing</strong> and is used to
             (1) augment CoreIdentity Development Group and CoreIdentity Advisory Group operations, and (2) serve as a controlled first pilot pattern for
             hospitality workflows (beginning with the Cole Hospitality pilot).
           </CardText>
@@ -87,14 +87,14 @@ export function AGO1Page() {
         <SectionTitle>Where it fits in the stack</SectionTitle>
         <div className="grid gap-4 md:grid-cols-3">
           <Card>
-            <CardTitle>Sentinel OS</CardTitle>
+            <CardTitle>Sentinel</CardTitle>
             <CardText>Policy enforcement, approvals, identity, evidence capture, and escalation logic.</CardText>
-            <ButtonLink to="/sentinel-os">View Sentinel OS</ButtonLink>
+            <ButtonLink to="/sentinel">View Sentinel</ButtonLink>
           </Card>
           <Card>
-            <CardTitle>Nexus OS</CardTitle>
+            <CardTitle>Nexus</CardTitle>
             <CardText>Workflow orchestration, integrations, retries, recovery, and controlled execution.</CardText>
-            <ButtonLink to="/nexus-os">View Nexus OS</ButtonLink>
+            <ButtonLink to="/nexus">View Nexus</ButtonLink>
           </Card>
           <Card>
             <CardTitle>SmartNation AI</CardTitle>

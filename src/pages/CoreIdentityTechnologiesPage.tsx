@@ -306,14 +306,14 @@ export function CoreIdentityTechnologiesPage() {
 
           <div className="rounded-2xl border border-blue-400/20 bg-blue-400/5 p-5 cidg-card">
             <div className="text-xs font-semibold tracking-wide text-blue-400 uppercase mb-2">Governance</div>
-            <div className="text-lg font-semibold text-white mb-2">Sentinel OS</div>
+            <div className="text-lg font-semibold text-white mb-2">Sentinel</div>
             <p className="text-sm text-white/65 leading-relaxed mb-3">Policy enforcement, identity boundaries, approval gates, and evidence capture. The reason your AI fleet cannot make a decision your legal team did not authorize.</p>
             <ul className="space-y-1 mb-4">
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Policy + controls at the execution layer</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Authorization boundaries + traceability</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Risk containment + compliance posture</span></li>
             </ul>
-            <Link to="/sentinel-os" className="text-sm text-blue-400/80 hover:text-blue-400 transition">Sentinel OS →</Link>
+            <Link to="/sentinel" className="text-sm text-blue-400/80 hover:text-blue-400 transition">Sentinel →</Link>
           </div>
 
           <div className="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-5 cidg-card">
@@ -330,14 +330,14 @@ export function CoreIdentityTechnologiesPage() {
 
           <div className="rounded-2xl border border-orange-400/20 bg-orange-400/5 p-5 cidg-card">
             <div className="text-xs font-semibold tracking-wide text-orange-400 uppercase mb-2">Orchestration</div>
-            <div className="text-lg font-semibold text-white mb-2">Nexus OS</div>
+            <div className="text-lg font-semibold text-white mb-2">Nexus</div>
             <p className="text-sm text-white/65 leading-relaxed mb-3">Controlled multi-agent execution. Workflows, integrations, retries, and recovery — coordinated inside defined governance constraints with structured operational traces.</p>
             <ul className="space-y-1 mb-4">
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Workflow routing + escalation</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Agent orchestration + tool use</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Human-in-the-loop checkpoints</span></li>
             </ul>
-            <Link to="/nexus-os" className="text-sm text-orange-400/80 hover:text-orange-400 transition">Nexus OS →</Link>
+            <Link to="/nexus" className="text-sm text-orange-400/80 hover:text-orange-400 transition">Nexus →</Link>
           </div>
 
           <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-5 cidg-card md:col-span-2">
@@ -359,7 +359,7 @@ export function CoreIdentityTechnologiesPage() {
         <div className="mb-4">
           <h2 className="text-2xl font-semibold text-white">Agentic Execution Governance — 10 Industry Verticals</h2>
           <p className="mt-2 max-w-3xl text-white/70">
-            Ten governed industry verticals. Each deploys under full AEG enforcement — SAL authorization, Sentinel OS policy, Nexus OS orchestration, and AIS identity verification — from day one.
+            Ten governed industry verticals. Each deploys under full AEG enforcement — SAL authorization, Sentinel policy, Nexus orchestration, and AIS identity verification — from day one.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2">

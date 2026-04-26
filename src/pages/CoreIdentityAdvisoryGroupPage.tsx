@@ -38,7 +38,7 @@ export function CoreIdentityAdvisoryGroupPage() {
             <div className="space-y-2">
               <div className="text-xl font-semibold">Governance-Only Deployment Mode</div>
               <p className="text-white/70 leading-relaxed">
-                For organizations that already have agents but lack governance: Sentinel OS and Nexus OS can be deployed as a control wrapper to restore
+                For organizations that already have agents but lack governance: Sentinel and Nexus can be deployed as a control wrapper to restore
                 policy enforcement, auditability, evidence capture, and safe escalation—without replatforming everything.
               </p>
             </div>
@@ -72,13 +72,13 @@ export function CoreIdentityAdvisoryGroupPage() {
           <div className="space-y-3">
             <p className="text-white/70 leading-relaxed">
               AGO‑1 is an internal operating agent used to augment advisory and CoreIdentity operations while remaining non-client-facing. AGO‑1 runs under Sentinel
-              OS and Nexus OS controls and is used to validate fail-closed behaviors, produce audit evidence, and operationalize governance patterns in real
+              OS and Nexus controls and is used to validate fail-closed behaviors, produce audit evidence, and operationalize governance patterns in real
               workflows.
             </p>
             <div className="flex flex-wrap gap-3">
               <ButtonLink to="/ago-1">View AGO‑1</ButtonLink>
-              <ButtonLink to="/sentinel-os">Sentinel OS</ButtonLink>
-              <ButtonLink to="/nexus-os">Nexus OS</ButtonLink>
+              <ButtonLink to="/sentinel">Sentinel</ButtonLink>
+              <ButtonLink to="/nexus">Nexus</ButtonLink>
             </div>
           </div>
         </Card>

@@ -78,7 +78,7 @@ export function SmartNationAIPage() {
         <PageTitle>SmartNation AI</PageTitle>
         <div className="text-sm text-white/60">A CoreIdentity Development Group Inc. platform.</div>
         <p className="text-white/70 max-w-3xl leading-relaxed">
-          The governed digital labor registry. SmartNation AI catalogs, deploys, and monitors 10,000 enterprise-grade autonomous agents across 8 regulated verticals. Every agent maps to a real operational labor position, carries a full governance profile, and executes exclusively under Sentinel OS policy enforcement with an immutable audit trail anchored by the SAL Kernel.
+          The governed digital labor registry. SmartNation AI catalogs, deploys, and monitors 10,000 enterprise-grade autonomous agents across 8 regulated verticals. Every agent maps to a real operational labor position, carries a full governance profile, and executes exclusively under Sentinel policy enforcement with an immutable audit trail anchored by the SAL Kernel.
         </p>
       </div>
 
