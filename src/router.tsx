@@ -158,7 +158,21 @@ const contactRoute = createRoute({
 const mcpRoute = createRoute({ getParentRoute: () => rootRoute, path: "/mcp", component: MCPPage });
 
 import { SALPage } from "./pages/SALPage";
+import BlogIndexPage from "./pages/BlogIndexPage";
+import BlogPostPage from "./pages/BlogPostPage";
 const salRoute = createRoute({ getParentRoute: () => rootRoute, path: "/sal", component: SALPage });
+
+const blogIndexRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/blog",
+  component: BlogIndexPage,
+});
+
+const blogPostRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/blog/$slug",
+  component: BlogPostPage,
+});
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
@@ -186,6 +200,8 @@ const routeTree = rootRoute.addChildren([
   contactRoute,
   mcpRoute,
   salRoute,
+  blogIndexRoute,
+  blogPostRoute,
 ]);
 
 export const router = createRouter({ routeTree });

@@ -62,6 +62,25 @@ export default function HomePage() {
         </p>
       </section>
 
+
+      {/* PRODUCTION STATUS */}
+      <section className="mt-12">
+        <div className="rounded-2xl border border-white/10 bg-black/20 px-8 py-6 flex flex-col sm:flex-row gap-8 sm:gap-0 sm:divide-x sm:divide-white/10 max-w-3xl">
+          <div className="flex-1 sm:pr-8">
+            <div className="text-2xl font-semibold">36,000+</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Cryptographically Verified Agent Interactions</div>
+          </div>
+          <div className="flex-1 sm:px-8">
+            <div className="text-2xl font-semibold">20</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Autonomous Agents in Production</div>
+          </div>
+          <div className="flex-1 sm:pl-8">
+            <div className="text-2xl font-semibold text-teal-400">Live</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Awareness, BD & Corporate Operations</div>
+          </div>
+        </div>
+      </section>
+
       {/* VISUAL */}
       <section className="mt-20">
         <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/30">
@@ -119,14 +138,14 @@ export default function HomePage() {
 
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
             <div className="text-sm font-medium text-white/40 tracking-widest mb-2">GOVERNANCE</div>
-            <div className="text-lg font-semibold mb-3">Sentinel OS</div>
+            <div className="text-lg font-semibold mb-3">Sentinel</div>
             <p className="text-white/60 text-sm leading-relaxed">
               Policy enforcement, identity boundaries, approval gates, and
               evidence capture. The reason your AI fleet cannot make a decision
               your legal team did not authorize.
             </p>
             <Link to="/sentinel-os" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
-              Sentinel OS →
+              Sentinel →
             </Link>
           </div>
 
@@ -145,14 +164,14 @@ export default function HomePage() {
 
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
             <div className="text-sm font-medium text-white/40 tracking-widest mb-2">ORCHESTRATION</div>
-            <div className="text-lg font-semibold mb-3">Nexus OS</div>
+            <div className="text-lg font-semibold mb-3">Nexus</div>
             <p className="text-white/60 text-sm leading-relaxed">
               Controlled multi-agent execution. Workflows, integrations,
               retries, and recovery — coordinated inside defined governance
               constraints with structured operational traces at every step.
             </p>
             <Link to="/nexus-os" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
-              Nexus OS →
+              Nexus →
             </Link>
           </div>
 
@@ -208,6 +227,33 @@ export default function HomePage() {
             </Link>
           </div>
 
+        </div>
+      </section>
+
+      {/* ENTRY-LEVEL PRODUCTS */}
+      <section className="mt-20">
+        <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-8">
+          ENTRY-LEVEL PRODUCTS
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">THREAT VISIBILITY</div>
+            <div className="text-lg font-semibold mb-3">ShadowScan</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              Autonomous discovery of unsanctioned AI activity across your enterprise environment.
+              Identify agents, models, and integrations operating without governance coverage —
+              before they create liability.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">CRYPTOGRAPHIC HYGIENE</div>
+            <div className="text-lg font-semibold mb-3">ClearShield</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              Cryptographic posture assessment and remediation for enterprise AI deployments.
+              Identify classical algorithm exposure, map quantum-vulnerable surfaces, and
+              receive a prioritized hardening roadmap aligned to NIST FIPS 203, 204, and 205.
+            </p>
+          </div>
         </div>
       </section>
 

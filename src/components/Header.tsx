@@ -14,14 +14,15 @@ export function Header() {
       { to: "/portfolio", label: "Portfolio" },
       { to: "/sal", label: "SAL Enforcement Kernel" },
       { to: "/coreidentity-technologies", label: "CoreIdentity Technologies" },
-      { to: "/sentinel-os", label: "Sentinel OS" },
-      { to: "/nexus-os", label: "Nexus OS" },
+      { to: "/sentinel-os", label: "Sentinel" },
+      { to: "/nexus-os", label: "Nexus" },
       { to: "/smartnation-ai", label: "SmartNation AI" },
       { to: "/ago-1", label: "AGO‑1" },
       { to: "/mcp", label: "MCP Protocol" },
       { to: "/coreidentity-ai-advisory-group", label: "CoreIdentity AI Advisory Group" },
       { to: "/agentidentity-systems", label: "AgentIdentity Systems" },
       { to: "/quantum-hardening", label: "Quantum Hardening" },
+      { to: "/blog", label: "Blog" },
 
       { to: "/contact", label: "Contact" },
     ],
@@ -32,12 +33,14 @@ export function Header() {
     <header className="sticky top-0 z-50 backdrop-blur bg-black/30 border-b border-white/10">
       <div className="mx-auto container-max px-4">
         <div className="h-16 py-3 flex items-center justify-between gap-4">
-          <div className="min-w-0">
+          <Link to="/" className="min-w-0 no-underline text-inherit">
+          <div>
             <div className="text-sm font-semibold tracking-[0.22em] uppercase leading-tight">
               COREIDENTITY DEVELOPMENT GROUP
             </div>
             <div className="text-xs text-white/60 leading-tight">The Control Layer for Governed AI</div>
           </div>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-5 text-sm text-white/70">
             {navItems.map((item) => (
