@@ -58,31 +58,25 @@ export default function HomePage() {
           CoreIdentity is the only governance infrastructure platform that operates at the quantum boundary
           — hardening the enforcement stack against quantum-era threats while providing enterprises the
           diagnostic and remediation tooling required to govern their own agentic ecosystems through the
-          post-quantum transition. The moat is not any single algorithm — it is the only
-          platform where post-quantum cryptography, sovereign agent identity, inline policy
-          enforcement, and immutable audit trails operate as a single integrated enforcement chain.
+          post-quantum transition.
         </p>
       </section>
 
 
-      {/* ENTERPRISE POSITIONING */}
+      {/* PRODUCTION STATUS */}
       <section className="mt-12">
-        <div className="rounded-2xl border border-white/10 bg-black/20 px-8 py-6 flex flex-col sm:flex-row gap-8 sm:gap-0 sm:divide-x sm:divide-white/10 max-w-4xl">
+        <div className="rounded-2xl border border-white/10 bg-black/20 px-8 py-6 flex flex-col sm:flex-row gap-8 sm:gap-0 sm:divide-x sm:divide-white/10 max-w-3xl">
           <div className="flex-1 sm:pr-8">
-            <div className="text-2xl font-bold">BAA-Ready</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">HIPAA-compliant PHI agent governance for regulated enterprise deployments</div>
+            <div className="text-2xl font-semibold">36,000+</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Cryptographically Verified Agent Interactions</div>
           </div>
           <div className="flex-1 sm:px-8">
-            <div className="text-2xl font-bold">FIPS 204 Compliant</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">ML-DSA-65 cryptographic audit trail — every agent action signed and verifiable</div>
-          </div>
-          <div className="flex-1 sm:px-8">
-            <div className="text-2xl font-bold text-teal-400">Enforcement-First</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Governance that runs before the API call — not after the audit</div>
+            <div className="text-2xl font-semibold">20</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Autonomous Agents in Production</div>
           </div>
           <div className="flex-1 sm:pl-8">
-            <div className="text-2xl font-bold text-amber-400">82%</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">of enterprises have unknown AI agents — CoreIdentity closes the gap (CSA, Jan 2026)</div>
+            <div className="text-2xl font-semibold text-teal-400">Live</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Awareness, BD & Corporate Operations</div>
           </div>
         </div>
       </section>

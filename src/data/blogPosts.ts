@@ -9,6 +9,146 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-agents-out-of-control-2026",
+    title: "77% of IT Managers Say AI Agents Are Out of Control. Here's What That Means.",
+    date: "2026-04-28",
+    author: "Todd Morgan, Founder & CEO, CoreIdentity Development Group",
+    excerpt:
+      "New data from the Cloud Security Alliance, Monte Carlo, Deloitte, and Grant Thornton paints a clear picture: enterprises are deploying AI agents faster than they can govern them. Here is what the numbers mean — and what happens when the first enforcement action arrives.",
+    content: `
+<p>
+  Seventy-seven percent. That is the share of IT managers who now say AI agents in their organizations
+  are out of control. Not "difficult to manage." Not "a work in progress." Out of control.
+</p>
+<p>
+  That number, surfaced in a ZDNet industry survey, is the headline. But the supporting data makes it
+  worse. According to the Cloud Security Alliance, surveying 418 enterprise respondents in January 2026,
+  82% of enterprises have unknown AI agents running in their IT infrastructure right now. Not agents they
+  haven't gotten around to auditing. Unknown agents. Operating without sanction, without policy, without
+  any accountability chain.
+</p>
+<p>
+  Sixty-five percent of those same enterprises have already experienced an AI agent-related incident in
+  the past year: data exposure in 61% of cases, operational disruption in 43%, direct financial cost in
+  35%. These are not theoretical future risks. They are current operational realities being reported by
+  enterprises that have already absorbed the impact.
+</p>
+
+<h2>The Setup: Deployment Without Governance</h2>
+<p>
+  How did we get here? The Monte Carlo survey of 260 enterprise leaders puts it plainly: 64% deployed AI
+  agents before feeling fully prepared. That is not a technology failure. It is a governance failure
+  created by the gap between deployment velocity and the infrastructure required to govern what gets
+  deployed.
+</p>
+<p>
+  The same survey found that only 47% of builders say their systems are easily traceable end-to-end
+  when something goes wrong. More than half of the people building the systems that enterprises depend
+  on cannot follow the decision trail when an agent makes a mistake. That is not an edge case. That is
+  the default state of enterprise AI today.
+</p>
+<p>
+  Deloitte's AI Institute 2026 survey adds the strategic dimension: 74% of companies plan to deploy
+  agentic AI within two years. Yet only 21% have a mature model for AI governance. The deployment
+  wave is accelerating. The governance infrastructure is not keeping pace.
+</p>
+
+<h2>What "Out of Control" Actually Means</h2>
+<p>
+  "Out of control" is not hyperbole. It is a technically precise description of the default state of
+  enterprise AI agent deployments. An agent that is "out of control" has four specific deficits:
+</p>
+<p>
+  <strong>No cryptographic identity.</strong> The agent has no verified, attestable identity. You cannot
+  prove which agent took which action, because there is no signature on the action. You have logs, maybe.
+  You have records, probably. But you do not have cryptographic proof — the kind that survives legal
+  discovery, regulatory examination, or a forensic investigation after something goes wrong.
+</p>
+<p>
+  <strong>No policy enforcement at execution time.</strong> Policies exist in documents. Governance
+  frameworks exist in slide decks. But when the agent calls the API — when it executes the action — there
+  is no enforcement mechanism operating between model intent and execution. The agent acts, and the
+  audit happens afterward, if at all.
+</p>
+<p>
+  <strong>No immutable audit trail.</strong> Logs are not audit trails. Logs can be deleted,
+  manipulated, or simply not generated. An immutable audit trail is a cryptographically signed,
+  tamper-evident record of every agent action, created at execution time, anchored in a structure that
+  cannot be retroactively modified. Most enterprises do not have this for their AI agents.
+</p>
+<p>
+  <strong>No incident response capability.</strong> Grant Thornton surveyed 950 business leaders between
+  February and March 2026 and found that just 20% have a tested AI incident response plan for when
+  agents fail. When something goes wrong — and the data says it will — four out of five enterprises have
+  no rehearsed response. They will improvise, under pressure, with incomplete information, while
+  regulators and counsel are waiting.
+</p>
+
+<h2>The Regulatory Consequence</h2>
+<p>
+  Every regulated industry is now one incident away from an enforcement action.
+</p>
+<p>
+  Healthcare organizations deploying clinical AI agents are operating under HIPAA and emerging FDA
+  clinical AI guidance. Financial institutions deploying AI agents for trading, fraud detection, or
+  customer decisions are operating under FINRA, SEC, and FinCEN frameworks. Industrial operators
+  deploying AI agents in critical infrastructure are operating under IEC 62443 and NERC CIP.
+  Government agencies are operating under NSM-10 and CNSA 2.0 post-quantum mandates.
+</p>
+<p>
+  None of those frameworks were written for autonomous AI agents. But they apply to the decisions
+  those agents make. And when an enforcement action comes — when a patient is harmed by an unaudited
+  clinical AI action, when a financial institution cannot reconstruct an autonomous trading decision,
+  when a critical infrastructure operator cannot prove what their AI did during an incident — the
+  absence of governance infrastructure is not a mitigating factor. It is the liability.
+</p>
+<p>
+  The agentic AI security incident at 90+ organizations — where autonomous agents gained write access
+  to firewalls and IAM policies — is the preview of what uncontrolled AI agent access looks like at
+  enterprise scale. Not theoretical. Reported.
+</p>
+
+<h2>The Infrastructure That Was Missing</h2>
+<p>
+  CoreIdentity was built for exactly this moment. Not for the moment when AI governance becomes a
+  regulatory requirement. For the moment before that — when the governance infrastructure that prevents
+  enforcement actions can still be put in place.
+</p>
+<p>
+  We are not a framework. We are not a checklist. We are not an advisory practice that produces a
+  roadmap for what you should eventually implement. We are the enforcement infrastructure — operating
+  at execution time, before the API call, before the action, before the record that cannot be changed.
+</p>
+<p>
+  Every agent that runs through CoreIdentity has a cryptographic identity. Every action it takes is
+  evaluated against policy before execution. Every decision is recorded in an immutable audit trail,
+  signed with ML-DSA-65 (FIPS 204) — the NIST post-quantum standard that ensures those records remain
+  verifiable even as classical cryptography becomes vulnerable. We are the only governance
+  infrastructure platform implementing all three NIST FIPS post-quantum standards (FIPS 203, 204, 205)
+  simultaneously in production.
+</p>
+<p>
+  The 77% of enterprises whose IT managers say their agents are out of control are not failing at AI.
+  They are operating without the infrastructure layer that makes AI controllable. That infrastructure
+  layer now exists.
+</p>
+
+<h2>If Your Agents Are in That 77%</h2>
+<p>
+  The data is not ambiguous. The governance gap is not closing on its own. Every week that autonomous
+  agents operate without cryptographic identity, without policy enforcement at execution time, and
+  without immutable audit trails is a week of accumulated liability.
+</p>
+<p>
+  If your organization is in the 77%, or the 82%, or the 80% without a tested incident response plan
+  — let's talk. Not about a framework. About the infrastructure.
+</p>
+<p>
+  <a href="https://coreidentitygroup.com/contact">Request a briefing →</a>
+</p>
+`,
+  },
+  {
     slug: "quantum-vulnerability-closed-24-hours",
     title: "We Found Our Own Quantum Vulnerability — Here's How We Closed It in 24 Hours",
     date: "2026-04-26",
@@ -142,6 +282,15 @@ export const blogPosts: BlogPost[] = [
 <p>
   This is what cryptographic accountability looks like in practice: not a press release, but a
   verifiable, timestamped, auditable transition in the governance record.
+</p>
+
+<h2>What We Haven't Finished Yet</h2>
+<p>
+  ML-KEM-768 key encapsulation is live as a software layer — the algorithm is quantum-resistant
+  but the underlying key material is protected by classical AWS KMS at rest, pending native PQC
+  support from AWS KMS (targeted Q3 2026). ML-DSA-65 signing across all audit and identity
+  surfaces is fully hardened. We name this gap because precision is the standard — and because
+  closing it on a documented timeline is more defensible than pretending it doesn't exist.
 </p>
 
 <h2>Next Steps</h2>
