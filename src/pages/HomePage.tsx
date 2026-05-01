@@ -65,8 +65,26 @@ export default function HomePage() {
       </section>
 
 
-      {/* ENTERPRISE POSITIONING */}
+      {/* MARKET VALIDATION */}
       <section className="mt-12">
+        <div className="rounded-2xl border border-white/10 bg-black/20 px-8 py-6 flex flex-col sm:flex-row gap-8 sm:gap-0 sm:divide-x sm:divide-white/10 max-w-4xl">
+          <div className="flex-1 sm:pr-8">
+            <div className="text-2xl font-bold text-amber-400">77%</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">of IT managers say AI agents are out of control (ZDNet, 2026)</div>
+          </div>
+          <div className="flex-1 sm:px-8">
+            <div className="text-2xl font-bold text-amber-400">82%</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">of enterprises have unknown AI agents — CoreIdentity closes the gap (CSA, 2026)</div>
+          </div>
+          <div className="flex-1 sm:pl-8">
+            <div className="text-2xl font-bold text-blue-400">706-Point</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Platinum Assurance Framework — continuously passing. The governance standard we hold ourselves to.</div>
+          </div>
+        </div>
+      </section>
+
+      {/* ENTERPRISE POSITIONING */}
+      <section className="mt-8">
         <div className="rounded-2xl border border-white/10 bg-black/20 px-8 py-6 flex flex-col sm:flex-row gap-8 sm:gap-0 sm:divide-x sm:divide-white/10 max-w-4xl">
           <div className="flex-1 sm:pr-8">
             <div className="text-2xl font-bold">BAA-Ready</div>
