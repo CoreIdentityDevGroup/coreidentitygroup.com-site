@@ -74,7 +74,7 @@ export default function HomePage() {
           </div>
           <div className="flex-1 sm:px-8">
             <div className="text-2xl font-bold text-amber-400">82%</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">of enterprises have unknown AI agents — CoreIdentity closes the gap (CSA, 2026)</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">of enterprises have unknown AI agents — CoreIdentity closes the gap (CSA, Jan 2026)</div>
           </div>
           <div className="flex-1 sm:pl-8">
             <div className="text-2xl font-bold text-blue-400">706-Point</div>
@@ -94,13 +94,9 @@ export default function HomePage() {
             <div className="text-2xl font-bold">FIPS 204 Compliant</div>
             <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">ML-DSA-65 cryptographic audit trail — every agent action signed and verifiable</div>
           </div>
-          <div className="flex-1 sm:px-8">
+          <div className="flex-1 sm:pl-8">
             <div className="text-2xl font-bold text-teal-400">Enforcement-First</div>
             <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Governance that runs before the API call — not after the audit</div>
-          </div>
-          <div className="flex-1 sm:pl-8">
-            <div className="text-2xl font-bold text-amber-400">82%</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">of enterprises have unknown AI agents — CoreIdentity closes the gap (CSA, Jan 2026)</div>
           </div>
         </div>
       </section>
