@@ -281,6 +281,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* PARTNERSHIPS & CERTIFICATIONS */}
+      <section className="mt-20">
+        <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-6">
+          PARTNERSHIPS &amp; CERTIFICATIONS
+        </div>
+        <div className="flex flex-wrap gap-4 items-center">
+          {/* Google Cloud Partner Network — placeholder until Partner Marketing Studio access */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            background: '#0d1117',
+            border: '1px solid rgba(66, 133, 244, 0.35)',
+            borderRadius: '10px',
+            padding: '10px 18px',
+          }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="#4285F4"/>
+            </svg>
+            <div>
+              <div style={{ color: '#4285F4', fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
+                Google Cloud Partner Network
+              </div>
+              <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '10px', marginTop: '2px' }}>
+                Official badge pending Partner Marketing Studio access
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CLOSING STATEMENT */}
       <section className="mt-20">
         <div className="rounded-2xl border border-white/10 bg-black/30 p-10 max-w-3xl">
