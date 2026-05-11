@@ -18,6 +18,6 @@ jobs:
         working-directory: studio
         run: |
           npm install
-          npx sanity deploy --yes
+          echo "wqmjbrvw" | npx sanity deploy --yes
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
