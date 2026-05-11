@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.0",
+    "@sanity/client": "^6.0.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tanstack/react-router": "^1.0.0",
     "@tanstack/react-router-devtools": "^1.0.0",

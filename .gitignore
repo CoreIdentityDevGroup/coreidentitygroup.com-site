@@ -1,5 +1,7 @@
 node_modules
+studio/node_modules
 dist
+studio/.sanity
 .env
 .DS_Store
 tsconfig.tsbuildinfo
