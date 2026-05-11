@@ -76,9 +76,13 @@ export default function HomePage() {
             <div className="text-2xl font-bold text-amber-400">82%</div>
             <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">of enterprises have unknown AI agents — CoreIdentity closes the gap (CSA, Jan 2026)</div>
           </div>
-          <div className="flex-1 sm:pl-8">
+          <div className="flex-1 sm:px-8">
             <div className="text-2xl font-bold text-blue-400">706-Point</div>
             <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Platinum Assurance Framework — continuously passing. The governance standard we hold ourselves to.</div>
+          </div>
+          <div className="flex-1 sm:pl-8">
+            <div className="text-2xl font-bold text-teal-400">693/693</div>
+            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Platinum tests passing — continuously verified against the full assurance framework</div>
           </div>
         </div>
       </section>
@@ -247,6 +251,16 @@ export default function HomePage() {
             </Link>
           </div>
 
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">FORMAL VERIFICATION</div>
+            <div className="text-lg font-semibold mb-3">FGRE — Formal Governance Reasoning Engine</div>
+            <p className="text-white/60 text-sm leading-relaxed">
+              Mathematical assurance for governance policy integrity. Z3 SMT formal verification
+              detects policy contradictions, validates execution paths, and generates
+              machine-verifiable proof artifacts before any policy activates.
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -299,9 +313,6 @@ export default function HomePage() {
             <div>
               <div style={{ color: '#4285F4', fontSize: '11px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
                 Google Cloud Partner Network
-              </div>
-              <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '10px', marginTop: '2px' }}>
-                Official badge pending Partner Marketing Studio access
               </div>
             </div>
           </div>

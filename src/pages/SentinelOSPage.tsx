@@ -35,6 +35,26 @@ export function SentinelOSPage() {
           Learn how SAL enforces boundaries →
         </a>
       </div>
+
+      {/* FGRE Sovereign Attestation Export */}
+      <div className="mt-8 rounded-2xl border border-violet-400/20 bg-violet-400/5 p-6">
+        <div className="flex items-center gap-3 mb-3">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-violet-400" aria-hidden="true">
+            <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12 2l8 4v6c0 5-3.2 9.4-8 10-4.8-.6-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+          </svg>
+          <span className="text-sm font-semibold tracking-wide text-violet-400 uppercase">FGRE Sovereign Attestation Export</span>
+        </div>
+        <p className="text-sm text-white/70 leading-relaxed">
+          Sentinel’s immutable audit records are now complemented by FGRE sovereign attestation
+          export — machine-verifiable SLH-DSA-128s signed proof bundles exportable for
+          regulatory submission and institutional due diligence. Where Sentinel captures what
+          happened and proves it cannot be altered, FGRE proves the governance policy itself
+          was mathematically sound before it activated. Together they provide complete
+          governance evidence: verified policy integrity upstream, immutable execution record
+          downstream.
+        </p>
+      </div>
     </div>
   );
 }

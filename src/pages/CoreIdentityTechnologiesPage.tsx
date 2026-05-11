@@ -351,6 +351,17 @@ export function CoreIdentityTechnologiesPage() {
             </ul>
             <Link to="/smartnation-ai" className="text-sm text-emerald-400/80 hover:text-emerald-400 transition">SmartNation AI →</Link>
           </div>
+
+          <div className="rounded-2xl border border-violet-400/20 bg-violet-400/5 p-5 cidg-card md:col-span-2">
+            <div className="text-xs font-semibold tracking-wide text-violet-400 uppercase mb-2">Formal Verification</div>
+            <div className="text-lg font-semibold text-white mb-2">FGRE — Formal Governance Reasoning Engine</div>
+            <p className="text-sm text-white/65 leading-relaxed mb-3">Mathematical assurance for governance policy integrity. Z3 SMT formal verification detects policy contradictions, validates execution paths, and generates machine-verifiable proof artifacts before any policy activates.</p>
+            <ul className="space-y-1 mb-4">
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Z3 SMT formal verification engine</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>SLH-DSA-128s signed proof artifacts (FIPS 205)</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Exportable for regulatory submission</span></li>
+            </ul>
+          </div>
         </div>
       </section>
 

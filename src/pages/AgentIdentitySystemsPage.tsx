@@ -202,6 +202,26 @@ export function AgentIdentitySystemsPage() {
         </div>
       </div>
 
+      <div
+        className="rounded-2xl p-6 cidg-fadein"
+        style={{border:'1px solid rgba(6,182,212,0.3)', background:'rgba(6,182,212,0.05)'}}
+      >
+        <div className="text-xs font-medium tracking-widest text-cyan-400 uppercase mb-3">
+          Formal Governance Verification
+        </div>
+        <div className="font-semibold text-white mb-3">
+          FGRE extends AIS with mathematically proven policy integrity.
+        </div>
+        <p className="text-sm text-white/70 leading-relaxed">
+          The Formal Governance Reasoning Engine applies Z3 SMT formal verification to
+          governance policies before activation — mathematically proving correctness,
+          detecting policy contradictions, and validating execution paths. FGRE generates
+          SLH-DSA-128s signed proof artifacts exportable for regulatory submission and
+          institutional due diligence. Where AIS establishes identity, FGRE proves the
+          policies governing that identity are mathematically sound before they activate.
+        </p>
+      </div>
+
     </div>
   );
 }

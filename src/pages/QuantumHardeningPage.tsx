@@ -109,6 +109,8 @@ export function QuantumHardeningPage() {
             ['CA trust chain',            'ML-DSA-65 (FIPS 204)',    'Live — HSM-backed'],
             ['Key encapsulation',         'ML-KEM-768 (FIPS 203)',   'Live — software layer, HSM pending AWS KMS PQC support'],
             ['Entropy source',            'ANU QRNG + OS CSPRNG',   'Live'],
+            ['Stateless hash signing',    'SLH-DSA-128s (FIPS 205)', 'Live — Persistent HSM-backed keypair'],
+            ['FGRE proof attestation',    'SLH-DSA-128s (FIPS 205)', 'Live — Machine-verifiable'],
           ].map(function([surface, algo, status]) {
             const isInterim = (status as string).includes('software layer');
             return (

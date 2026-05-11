@@ -181,6 +181,31 @@ export function SALPage() {
         </div>
       </section>
 
+      {/* SAL + FGRE: Complete Governance Assurance Stack */}
+      <section className="mb-12">
+        <div className="rounded-2xl border border-violet-400/20 bg-violet-400/5 p-6">
+          <div className="flex items-center gap-3 mb-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-violet-400" aria-hidden="true">
+              <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M12 2l8 4v6c0 5-3.2 9.4-8 10-4.8-.6-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+            </svg>
+            <span className="text-sm font-semibold tracking-wide text-violet-400 uppercase">Complete Governance Assurance Stack</span>
+          </div>
+          <p className="text-sm text-white/70 leading-relaxed mb-3">
+            SAL deterministic enforcement is complemented by FGRE pre-deployment formal verification —
+            together they represent the complete governance assurance stack. SAL enforces policy at
+            runtime, preventing any execution that violates codified business logic. FGRE proves
+            policy correctness before activation, using Z3 SMT formal verification to detect
+            contradictions and validate execution paths before any policy goes live.
+          </p>
+          <p className="text-sm text-white/70 leading-relaxed">
+            The result: governance policies that are mathematically verified before they activate
+            and deterministically enforced once they do. Formal proof upstream, deterministic
+            enforcement downstream.
+          </p>
+        </div>
+      </section>
+
       {/* Out-of-Scope Declarations */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-white mb-2">Out-of-Scope Declarations</h2>
