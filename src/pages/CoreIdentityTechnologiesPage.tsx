@@ -31,6 +31,19 @@ const verticals: Vertical[] = [
     ],
     launchOrder: "Now",
   },
+  // CIDG_SPRINT03_SOVEREIGN_VERTICAL
+  {
+    name: "SovereignOps",
+    accent: "rgba(217,119,6,0.06)",
+    accentBorder: "rgba(217,119,6,0.25)",
+    oneLiner: "Sovereign nations deploying agentic AI at national scale face a governance gap no policy document closes. SovereignOps brings execution-layer control to national AI programs — ensuring every autonomous action is authorized, auditable, and contained within jurisdictional and regulatory boundaries before it executes.",
+    outcomes: [
+      "National AI policy enforcement at the agent execution layer",
+      "Digital sovereignty — agents operate within defined jurisdictional boundaries",
+      "Multi-ministry orchestration with full governance enforcement and audit trails",
+    ],
+    launchOrder: "Now",
+  },
   {
     name: "HealthcareOps",
     accent: "rgba(20,184,166,0.06)",
