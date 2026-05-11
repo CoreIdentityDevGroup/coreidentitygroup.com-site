@@ -18,12 +18,12 @@ Alternatively, go to [sanity.io/manage](https://www.sanity.io/manage), click **N
 
 ---
 
-## 2. Add `VITE_SANITY_PROJECT_ID` to Cloudflare Pages
+## 2. Add `VITE_wqmjbrvw` to Cloudflare Pages
 
 1. Open [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages** → your CoreIdentity Pages project.
 2. Go to **Settings → Environment variables**.
 3. Add a variable for both **Production** and **Preview**:
-   - **Variable name:** `VITE_SANITY_PROJECT_ID`
+   - **Variable name:** `VITE_wqmjbrvw`
    - **Value:** your Sanity Project ID (e.g. `abc12345`)
 4. Save and redeploy (or push a new commit to trigger a build).
 
@@ -37,7 +37,7 @@ Replace the placeholder project ID with your real one:
 
 ```ts
 // studio/sanity.config.ts
-projectId: 'YOUR_REAL_PROJECT_ID',  // replace SANITY_PROJECT_ID
+projectId: 'YOUR_REAL_PROJECT_ID',  // replace wqmjbrvw
 ```
 
 Commit this change.
@@ -94,7 +94,7 @@ Sanity can trigger a Cloudflare Pages rebuild whenever content is published:
 
 ```bash
 # In the main site directory — set the env var in a local .env.local
-echo "VITE_SANITY_PROJECT_ID=your_project_id" >> .env.local
+echo "VITE_wqmjbrvw=your_project_id" >> .env.local
 
 # Run Vite dev server
 npm run dev

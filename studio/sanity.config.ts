@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'CoreIdentity CMS',
 
-  projectId: 'SANITY_PROJECT_ID',
+  projectId: 'wqmjbrvw',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
