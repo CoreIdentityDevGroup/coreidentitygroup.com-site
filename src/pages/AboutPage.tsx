@@ -1,151 +1,174 @@
+// CIDG_GOOGLE_COMPLIANCE_ABOUT_v1
 import React from "react";
-import { Link } from "@tanstack/react-router";
 import { Card, PageTitle, SectionTitle } from "../components/ui";
-import { Helmet } from "react-helmet-async";
 
+/**
+ * AboutPage (About Us)
+ * Google Compliance Sprint — Gap 4: Team & Organizational Depth
+ * Establishes: Mission, Vision, corporate structure, leadership credentials,
+ * autonomous agent operations, and infrastructure partner ecosystem.
+ */
 export function AboutPage() {
   return (
-    <div className="space-y-12">
-      <Helmet>
-        <title>About CoreIdentity Development Group | Agentic AI Governance</title>
-        <meta name="description" content="CoreIdentity Development Group Inc. is the infrastructure company behind Agentic Execution Governance — the discipline that governs autonomous AI at the execution layer." />
-      </Helmet>
+    <div className="space-y-10">
 
-      <div className="space-y-4">
-        <div className="text-xs font-medium tracking-[0.22em] text-white/40">
-          AGENTIC EXECUTION GOVERNANCE
-        </div>
+      {/* Header */}
+      <div className="space-y-3">
         <PageTitle>About Us</PageTitle>
-        <p className="text-white/70 max-w-3xl leading-relaxed text-lg">
-          CoreIdentity Development Group Inc. is the infrastructure company
-          behind Agentic Execution Governance — the discipline that governs
-          autonomous AI at the execution layer. We build the control plane
-          that enterprise organizations require to deploy agentic digital labor
-          safely, accountably, and at scale.
+        <p className="text-white/70 max-w-3xl leading-relaxed">
+          CoreIdentity Development Group Inc. is the governance infrastructure company
+          for the agentic AI era — building the control plane that enterprises need to
+          deploy autonomous AI at scale without losing compliance, accountability, or control.
         </p>
       </div>
 
+      {/* Mission */}
       <section className="space-y-5">
-        <SectionTitle>Mission</SectionTitle>
+        <SectionTitle>Our Mission</SectionTitle>
         <Card>
-          <p className="text-white/80 leading-relaxed text-lg">
-            To make autonomous AI governable — by building the identity,
-            enforcement, orchestration, and audit infrastructure that
-            enterprises and sovereign institutions require before agentic
-            execution can be trusted at scale.
+          <p className="text-white/85 leading-relaxed">
+            To make governed autonomous execution the standard — not the exception. We build
+            infrastructure that ensures every AI agent decision is authorized, auditable, and
+            defensible under the regulatory frameworks our clients operate in.
           </p>
         </Card>
       </section>
 
+      {/* Vision */}
       <section className="space-y-5">
-        <SectionTitle>Vision</SectionTitle>
+        <SectionTitle>Our Vision</SectionTitle>
         <Card>
-          <p className="text-white/80 leading-relaxed text-lg">
-            A world in which autonomous AI operates inside the boundaries
-            of human authority — where every agent action is authorized,
-            every decision is attributable, and every organization retains
-            provable control over the systems acting on its behalf.
+          <p className="text-white/85 leading-relaxed">
+            A world where enterprises deploy autonomous AI at the speed of business — with
+            full confidence that agents operate inside policy, identity, and accountability
+            boundaries. CoreIdentity is building the foundational layer that makes that world
+            possible at institutional scale.
           </p>
         </Card>
       </section>
 
-      <section className="space-y-5">
-        <SectionTitle>Who We Are</SectionTitle>
-        <Card>
-          <div className="space-y-4 text-white/70 leading-relaxed">
-            <p>
-              CoreIdentity Development Group Inc. is the parent entity
-              governing a portfolio of infrastructure systems and operating
-              capabilities — from advisory engagement to platform enforcement
-              to governed digital labor deployment at enterprise scale.
-            </p>
-            <p>
-              We are governance-first by design. Every system we build
-              operates on the principle that autonomous execution without
-              enforceable boundaries is not a capability — it is a liability.
-              Our platform enforces those boundaries at machine speed, before
-              incidents occur, and generates the immutable evidence trail
-              that regulators, boards, and institutional counterparties require.
-            </p>
-            <p>
-              CoreIdentity is not a dashboard company. We do not observe
-              AI behavior after the fact. We govern it at the execution layer —
-              through the Semantic Arbitration Layer, Sentinel, and a
-              cryptographically hardened identity infrastructure that meets
-              the most demanding institutional standards.
-            </p>
-          </div>
-        </Card>
-      </section>
-
-      <section className="space-y-5">
-        <SectionTitle>The Standard We Build To</SectionTitle>
-        <Card>
-          <div className="space-y-4 text-white/70 leading-relaxed">
-            <p>
-              CoreIdentity's design standard is set by the regulatory
-              environments our clients operate in — plus one level of margin.
-              We do not set the bar. The frameworks that govern healthcare,
-              financial services, federal procurement, and critical
-              infrastructure set it. We build to that bar, and then exceed it.
-            </p>
-            <p>
-              This is what Platinum Standard means in practice: institutional
-              rigor applied to every layer of the stack, from cryptographic
-              posture to audit evidence to fail-closed enforcement behavior.
-              No exceptions for early-stage convenience.
-            </p>
-          </div>
-        </Card>
-      </section>
-
+      {/* Corporate Structure */}
       <section className="space-y-5">
         <SectionTitle>Corporate Structure</SectionTitle>
-        <div className="grid gap-4 md:grid-cols-3">
-          <Card>
-            <div className="space-y-2">
-              <div className="text-sm font-medium text-white/40 tracking-widest">HOLDING COMPANY</div>
-              <div className="font-semibold text-white">CoreIdentity Development Group Inc.</div>
-              <p className="text-sm text-white/60 leading-relaxed">Parent entity governing the full portfolio of infrastructure systems and operating capabilities.</p>
+        <Card>
+          <div className="space-y-4 text-white/75 leading-relaxed">
+            <p>
+              CoreIdentity Development Group Inc. is a Wyoming C-Corporation with two
+              Virginia operating subsidiaries structured for institutional-grade operations:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div className="p-4 rounded-lg border border-white/10 bg-white/3 space-y-1">
+                <div className="text-sm font-semibold text-white">CoreIdentity Advisory Group</div>
+                <div className="text-xs text-blue-400">Advisory Services</div>
+                <p className="text-xs text-white/55 mt-1">
+                  Governance advisory, CIAG engagements, and enterprise consulting for
+                  regulated and mission-critical AI deployments.
+                </p>
+              </div>
+              <div className="p-4 rounded-lg border border-white/10 bg-white/3 space-y-1">
+                <div className="text-sm font-semibold text-white">CoreIdentity Technologies</div>
+                <div className="text-xs text-blue-400">Platform Engineering & IP</div>
+                <p className="text-xs text-white/55 mt-1">
+                  Platform engineering, intellectual property, and production infrastructure
+                  across AWS ECS, GKE, and Cloudflare.
+                </p>
+              </div>
             </div>
-          </Card>
-          <Card>
-            <div className="space-y-2">
-              <div className="text-sm font-medium text-white/40 tracking-widest">ADVISORY</div>
-              <div className="font-semibold text-white">CoreIdentity Advisory Group</div>
-              <p className="text-sm text-white/60 leading-relaxed">Governance-first advisory engagements, executive readiness assessments, and enterprise deployment strategy.</p>
-            </div>
-          </Card>
-          <Card>
-            <div className="space-y-2">
-              <div className="text-sm font-medium text-white/40 tracking-widest">TECHNOLOGY</div>
-              <div className="font-semibold text-white">CoreIdentity Technologies</div>
-              <p className="text-sm text-white/60 leading-relaxed">Platform R&D, enforcement stack, and governed digital labor deployment at enterprise scale.</p>
-            </div>
-          </Card>
-        </div>
+            <p className="text-xs text-white/45 pt-1">
+              The platform is live in production with 734/734 Platinum-grade tests passing
+              across Security, Post-Quantum, Compliance, Disaster Recovery, and Adversarial suites.
+            </p>
+          </div>
+        </Card>
       </section>
 
-      <div className="rounded-2xl border border-white/10 bg-black/30 p-8">
-        <p className="text-white/70 leading-relaxed mb-6">
-          Learn more about the people behind CoreIdentity or explore the
-          full platform portfolio.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <Link
-            to="/leadership"
-            className="inline-flex items-center justify-center rounded-xl bg-white/10 px-6 py-3 text-sm font-medium hover:bg-white/15 transition"
-          >
-            Leadership Team →
-          </Link>
-          <Link
-            to="/portfolio"
-            className="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
-          >
-            Platform Portfolio →
-          </Link>
-        </div>
-      </div>
+      {/* Leadership */}
+      <section className="space-y-5">
+        <SectionTitle>Leadership</SectionTitle>
+        <Card>
+          <div className="space-y-5">
+            <div>
+              <div className="text-lg font-bold text-white">Todd Morgan</div>
+              <div className="text-sm text-blue-400 mt-0.5">Founder &amp; Chief Executive Officer</div>
+              <div className="mt-4 space-y-3 text-white/72 leading-relaxed">
+                <p>
+                  Todd founded CoreIdentity Development Group Inc. to close the governance gap
+                  in agentic AI deployment — ensuring autonomous systems operate inside policy,
+                  identity, and accountability boundaries at enterprise scale.
+                </p>
+                <p>
+                  He brings over 20 years of leadership experience managing a $65M+ federal
+                  contract portfolio spanning national intelligence and DoD sectors. His
+                  background in mission-critical operational environments — FBI, TSA, FEMA,
+                  and DoD — directly informs CoreIdentity's infrastructure-grade,
+                  compliance-first architecture.
+                </p>
+                <p>
+                  Todd is building CoreIdentity as a category-defining, generational company
+                  — not for acquisition, but to establish Autonomous Execution Governance as
+                  permanent infrastructure for the agentic AI era.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+      </section>
+
+      {/* Autonomous Operations */}
+      <section className="space-y-5">
+        <SectionTitle>Autonomous Operations</SectionTitle>
+        <Card>
+          <div className="space-y-4">
+            <p className="text-white/75 leading-relaxed">
+              CoreIdentity operates a production fleet of 20 autonomous agents — governed by
+              the same infrastructure we deploy for enterprise clients. This is strategic
+              dogfooding: we run our own governance stack at scale so we understand exactly
+              what our customers face.
+            </p>
+            <div className="grid grid-cols-3 gap-3 mt-2">
+              <div className="text-center p-3 rounded-lg border border-white/10 bg-white/4">
+                <div className="text-2xl font-bold text-blue-400">6</div>
+                <div className="text-xs text-white/55 mt-1 leading-tight">Awareness<br/>Agents</div>
+              </div>
+              <div className="text-center p-3 rounded-lg border border-white/10 bg-white/4">
+                <div className="text-2xl font-bold text-blue-400">6</div>
+                <div className="text-xs text-white/55 mt-1 leading-tight">BD / Sales<br/>Agents</div>
+              </div>
+              <div className="text-center p-3 rounded-lg border border-white/10 bg-white/4">
+                <div className="text-2xl font-bold text-blue-400">8</div>
+                <div className="text-xs text-white/55 mt-1 leading-tight">Corporate Ops<br/>Agents</div>
+              </div>
+            </div>
+            <p className="text-xs text-white/45 leading-relaxed">
+              All 20 agents operate under the same policy enforcement, identity management,
+              and audit trail requirements we deliver to enterprise clients.
+            </p>
+          </div>
+        </Card>
+      </section>
+
+      {/* Infrastructure Partners */}
+      <section className="space-y-5">
+        <SectionTitle>Infrastructure Partners</SectionTitle>
+        <Card>
+          <p className="text-white/65 leading-relaxed mb-4">
+            CoreIdentity's production platform is built on enterprise-grade cloud infrastructure
+            — the same platforms our clients depend on at scale.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {["Amazon Web Services", "Google Cloud Platform", "Cloudflare", "Stripe"].map(
+              (partner) => (
+                <span
+                  key={partner}
+                  className="px-4 py-2 rounded-lg border border-white/10 bg-white/4 text-white/65 text-sm"
+                >
+                  {partner}
+                </span>
+              )
+            )}
+          </div>
+        </Card>
+      </section>
 
     </div>
   );

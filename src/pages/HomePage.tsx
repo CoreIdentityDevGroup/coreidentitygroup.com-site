@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import globalAIGovernanceHero from "../assets/images/global-ai-governance-hero.webp";
 import { Helmet } from "react-helmet-async";
 
+// CIDG_GOOGLE_COMPLIANCE_HOMEPAGE_INJECT_v1
+import { DemoRequestBanner } from "../components/DemoRequestBanner";
+import { PlatformStatsSection } from "../components/PlatformStatsSection";
+
 export default function HomePage() {
   const [liveData, setLiveData] = useState(null);
 
@@ -339,6 +343,10 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* CIDG_GOOGLE_COMPLIANCE_HOMEPAGE_INJECT_v1 */}
+      <DemoRequestBanner />
+      <PlatformStatsSection />
     </div>
   );
 }

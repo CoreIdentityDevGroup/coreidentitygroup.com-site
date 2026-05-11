@@ -1,193 +1,103 @@
-import { useMemo, useState } from "react";
-import { Helmet } from "react-helmet-async";
+// CIDG_GOOGLE_COMPLIANCE_CONTACT_v1
+import React from "react";
+import { Card, PageTitle, SectionTitle } from "../components/ui";
 
-type ContactPayload = {
-  name: string;
-  email: string;
-  company: string;
-  interest: string;
-  message: string;
-};
-
+/**
+ * ContactPage
+ * Google Compliance Sprint — Digital-Native CTA Signal
+ * intake.coreidentitygroup.com is the primary engagement point.
+ */
 export default function ContactPage() {
-  const [form, setForm] = useState<ContactPayload>({
-    name: "",
-    email: "",
-    company: "",
-    interest: "",
-    message: "",
-  });
-
-  const [status, setStatus] = useState<
-    | { state: "idle" }
-    | { state: "submitting" }
-    | { state: "success"; message: string }
-    | { state: "error"; message: string }
-  >({ state: "idle" });
-
-  const isValid = useMemo(() => {
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim());
-    return form.name.trim().length >= 2 && emailOk && form.message.trim().length >= 10;
-  }, [form]);
-
-  function update<K extends keyof ContactPayload>(key: K, value: ContactPayload[K]) {
-    setForm((prev) => ({ ...prev, [key]: value }));
-  }
-
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (!isValid || status.state === "submitting") return;
-
-    setStatus({ state: "submitting" });
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          name: form.name.trim(),
-          email: form.email.trim(),
-          company: form.company.trim(),
-          interest: form.interest.trim(),
-          message: form.message.trim(),
-          source: "website-contact-form",
-        }),
-      });
-
-      const text = await res.text();
-
-      let message = "Message sent. We will follow up shortly.";
-      try {
-        const data = JSON.parse(text) as { message?: string; error?: string };
-        if (data?.message) message = data.message;
-        if (data?.error) message = data.error;
-      } catch {
-        if (text && text.length < 200) message = text;
-      }
-
-      if (!res.ok) {
-        setStatus({ state: "error", message: message || "Submission failed." });
-        return;
-      }
-
-      setStatus({ state: "success", message });
-      setForm({ name: "", email: "", company: "", interest: "", message: "" });
-    } catch {
-      setStatus({ state: "error", message: "Network error. Please try again in a moment." });
-    }
-  }
-
   return (
-    <div className="space-y-8">
-      <Helmet>
-        <title>Contact CoreIdentity | Enterprise AI Governance Inquiries</title>
-        <meta name="description" content="Contact CoreIdentity Development Group for enterprise AI governance briefings, platform demonstrations, and partnership inquiries." />
-      </Helmet>
+    <div className="space-y-10">
+
       <div className="space-y-3">
-        <h1 className="text-3xl font-semibold text-white">Contact</h1>
-        <p className="text-white/70 max-w-3xl">
-          Use the form below for general inquiries, partnerships, and requests.
+        <PageTitle>Contact</PageTitle>
+        <p className="text-white/70 max-w-3xl leading-relaxed">
+          CoreIdentity engages with enterprise teams, institutional investors, and
+          technology partners evaluating governance infrastructure for agentic AI deployment.
         </p>
       </div>
 
-      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
-        <form className="grid gap-4" onSubmit={onSubmit}>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="grid gap-2">
-              <label className="text-sm text-white/70" htmlFor="name">
-                Name
-              </label>
-              <input
-                id="name"
-                value={form.name}
-                onChange={(e) => update("name", e.target.value)}
-                className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
-                placeholder="Your name"
-                autoComplete="name"
-                required
-              />
-            </div>
-
-            <div className="grid gap-2">
-              <label className="text-sm text-white/70" htmlFor="email">
-                Email
-              </label>
-              <input
-                id="email"
-                value={form.email}
-                onChange={(e) => update("email", e.target.value)}
-                className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
-                placeholder="you@company.com"
-                autoComplete="email"
-                inputMode="email"
-                required
-              />
-            </div>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="grid gap-2">
-              <label className="text-sm text-white/70" htmlFor="company">
-                Company (optional)
-              </label>
-              <input
-                id="company"
-                value={form.company}
-                onChange={(e) => update("company", e.target.value)}
-                className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
-                placeholder="Organization"
-                autoComplete="organization"
-              />
-            </div>
-
-            <div className="grid gap-2">
-              <label className="text-sm text-white/70" htmlFor="interest">
-                Topic (optional)
-              </label>
-              <input
-                id="interest"
-                value={form.interest}
-                onChange={(e) => update("interest", e.target.value)}
-                className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
-                placeholder="Governance, platform, advisory…"
-              />
-            </div>
-          </div>
-
-          <div className="grid gap-2">
-            <label className="text-sm text-white/70" htmlFor="message">
-              Message
-            </label>
-            <textarea
-              id="message"
-              value={form.message}
-              onChange={(e) => update("message", e.target.value)}
-              className="min-h-[140px] rounded-xl border border-white/10 bg-black/30 px-3 py-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
-              placeholder="Tell us what you’re trying to achieve and what constraints we should assume."
-              required
-            />
-            <p className="text-xs text-white/40">Minimum: name + valid email + 10+ characters in message.</p>
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            {status.state === "error" ? (
-              <div className="text-sm text-red-200">{status.message}</div>
-            ) : status.state === "success" ? (
-              <div className="text-sm text-emerald-200">{status.message}</div>
-            ) : (
-              <div className="text-sm text-white/50">We respond as capacity allows.</div>
-            )}
-
-            <button
-              type="submit"
-              disabled={!isValid || status.state === "submitting"}
-              className="h-11 rounded-xl bg-white/10 px-5 text-sm font-medium text-white transition hover:bg-white/15 disabled:cursor-not-allowed disabled:opacity-50"
+      {/* Primary CTA */}
+      <section className="space-y-5">
+        <SectionTitle>Book a Consultation</SectionTitle>
+        <Card>
+          <div className="space-y-4">
+            <p className="text-white/80 leading-relaxed">
+              Schedule a live walkthrough of the CoreIdentity Governance Platform — real-time
+              policy enforcement, agent identity management, and autonomous audit trails.
+              Consultations are structured for CISOs, CTOs, and compliance leads evaluating
+              enterprise AI governance requirements.
+            </p>
+            <a
+              href="https://intake.coreidentitygroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-colors duration-200 shadow-lg shadow-blue-900/30"
             >
-              {status.state === "submitting" ? "Sending…" : "Send message"}
-            </button>
+              Request a Consultation →
+            </a>
           </div>
-        </form>
-      </div>
+        </Card>
+      </section>
+
+      {/* AIS / Developer Access */}
+      <section className="space-y-5">
+        <SectionTitle>Developer & API Access</SectionTitle>
+        <Card>
+          <div className="space-y-4">
+            <p className="text-white/70 leading-relaxed">
+              Technical teams can register agents, access the Agent Identity Systems API,
+              and integrate with CoreIdentity's post-quantum identity infrastructure directly.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://agentidentity.systems"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-7 py-3 rounded-lg border border-blue-500/40 hover:border-blue-400 text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors duration-200"
+              >
+                Agent Identity Systems →
+              </a>
+              <a
+                href="https://portal.coreidentitygroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-7 py-3 rounded-lg border border-white/15 hover:border-white/30 text-white/60 hover:text-white/80 font-semibold text-sm transition-colors duration-200"
+              >
+                Governance Portal →
+              </a>
+            </div>
+          </div>
+        </Card>
+      </section>
+
+      {/* Direct Contact */}
+      <section className="space-y-5">
+        <SectionTitle>Direct Contact</SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Card>
+            <div className="text-sm font-semibold text-white/80 mb-1">General Inquiries</div>
+            <a
+              href="mailto:info@coreidentitygroup.com"
+              className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
+            >
+              info@coreidentitygroup.com
+            </a>
+          </Card>
+          <Card>
+            <div className="text-sm font-semibold text-white/80 mb-1">Investor Relations</div>
+            <a
+              href="mailto:investors@coreidentitygroup.com"
+              className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
+            >
+              investors@coreidentitygroup.com
+            </a>
+          </Card>
+        </div>
+      </section>
+
     </div>
   );
 }
