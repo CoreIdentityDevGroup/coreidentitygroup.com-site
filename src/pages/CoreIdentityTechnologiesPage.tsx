@@ -18,6 +18,19 @@ type Vertical = {
 
 // VERTICALS-v2 — Full 10-vertical AEG catalog
 const verticals: Vertical[] = [
+  // CIDG_SPRINT02_PCM_VERTICAL
+  {
+    name: "PrivateCapitalOps",
+    accent: "rgba(79,70,229,0.06)",
+    accentBorder: "rgba(79,70,229,0.2)",
+    oneLiner: "CoreIdentity is live in the Private Capital Markets vertical, governing agentic workflows for a PCM platform managing deal intake, asset pipeline, and compliance screening — where a single unauthorized agent action carries regulatory and fiduciary consequence.",
+    outcomes: [
+      "Deal intake and pipeline governance with full audit trails",
+      "SEC, FINRA, and fiduciary compliance enforcement at the agent level",
+      "Agentic workflow authorization across fund operations and LP communications",
+    ],
+    launchOrder: "Now",
+  },
   {
     name: "HealthcareOps",
     accent: "rgba(20,184,166,0.06)",

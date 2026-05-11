@@ -4,6 +4,7 @@ import globalAIGovernanceHero from "../assets/images/global-ai-governance-hero.w
 import { Helmet } from "react-helmet-async";
 
 // CIDG_GOOGLE_COMPLIANCE_HOMEPAGE_INJECT_v1
+// CIDG_SPRINT02_STATS_REMOVED
 import { DemoRequestBanner } from "../components/DemoRequestBanner";
 import { PlatformStatsSection } from "../components/PlatformStatsSection";
 
@@ -80,14 +81,7 @@ export default function HomePage() {
             <div className="text-2xl font-bold text-amber-400">82%</div>
             <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">of enterprises have unknown AI agents — CoreIdentity closes the gap (CSA, Jan 2026)</div>
           </div>
-          <div className="flex-1 sm:px-8">
-            <div className="text-2xl font-bold text-blue-400">706-Point</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Platinum Assurance Framework — continuously passing. The governance standard we hold ourselves to.</div>
-          </div>
-          <div className="flex-1 sm:pl-8">
-            <div className="text-2xl font-bold text-teal-400">693/693</div>
-            <div className="text-xs text-white/45 tracking-widest mt-1 uppercase">Platinum tests passing — continuously verified against the full assurance framework</div>
-          </div>
+
         </div>
       </section>
 
