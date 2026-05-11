@@ -46,6 +46,7 @@ export default function Footer() {
               <li><Link to="/mcp" className="hover:text-white/80 transition">MCP Protocol</Link></li>
               <li><Link to="/ago-1" className="hover:text-white/80 transition">AGO-1</Link></li>
               <li><Link to="/quantum-hardening" className="hover:text-white/80 transition">Quantum Hardening</Link></li>
+              <li><Link to="/fgre" className="hover:text-white/80 transition">Formal Governance Verification</Link></li>
             </ul>
           </div>
 

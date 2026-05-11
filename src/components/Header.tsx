@@ -22,6 +22,7 @@ export function Header() {
       { to: "/coreidentity-ai-advisory-group", label: "CoreIdentity AI Advisory Group" },
       { to: "/agentidentity-systems", label: "AgentIdentity Systems" },
       { to: "/quantum-hardening", label: "Quantum Hardening" },
+      { to: "/fgre", label: "Formal Governance Verification" },
       { to: "/blog", label: "Blog" },
 
       { to: "/contact", label: "Contact" },

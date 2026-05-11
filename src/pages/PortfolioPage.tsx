@@ -38,7 +38,12 @@ export function PortfolioPage() {
  <PortfolioCard
  title="Quantum Hardening — FIPS 203/204/205"
  href="/quantum-hardening"
- body="CoreIdentity is the first AI governance platform to complete post-quantum cryptographic hardening across its full enforcement stack. 100,000 soak cycles. 376/376 sprint tests. Zero failures. ML-KEM-768, ML-DSA-65, SLH-DSA-128s deployed across SAL Kernel, Sentinel, AIS, and Nexus. "
+ body="CoreIdentity is the first AI governance platform to complete post-quantum cryptographic hardening across its full enforcement stack. 100,000 soak cycles. 693/693 platinum tests. Zero failures. ML-KEM-768, ML-DSA-65, SLH-DSA-128s deployed across SAL Kernel, Sentinel, AIS, and Nexus. "
+ />
+ <PortfolioCard
+ title="FGRE — Formal Governance Reasoning Engine"
+ href="/fgre"
+ body="The first commercial implementation of formal mathematical governance verification. Z3 SMT solver detects policy contradictions, validates execution paths, and generates SLH-DSA-128s signed proof artifacts before any policy activates. Machine-verifiable. Exportable for regulatory submission and sovereign audit."
  />
  </div>
  </section>
