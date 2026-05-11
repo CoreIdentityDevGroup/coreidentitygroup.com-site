@@ -104,3 +104,4 @@ cd studio && npm run dev
 ```
 
 > `.env.local` is already in `.gitignore` — your project ID will not be committed.
+# sanity connected Mon May 11 11:47:15 UTC 2026
