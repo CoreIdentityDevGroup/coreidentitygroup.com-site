@@ -13,8 +13,10 @@ export function CoreIdentityAdvisoryGroupPage() {
         />
       </Helmet>
 
+      <p className="text-xs uppercase tracking-wide text-white/60 mb-3">
+        CoreIdentity Advisory Group
+      </p>
       <PageHero
-        eyebrow="CoreIdentity Advisory Group"
         title="AI Governance Advisory for Regulated Enterprises"
         subtitle="CIAG works with regulated enterprises deploying agentic AI at scale — from initial governance assessment through enterprise deployment. Every engagement is scoped, evidence-based, and designed to produce defensible outcomes."
       />
