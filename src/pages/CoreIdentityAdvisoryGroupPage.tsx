@@ -79,10 +79,6 @@ export function CoreIdentityAdvisoryGroupPage() {
               <p className="text-white/70 leading-relaxed text-sm">
                 90-day advisory engagement. AI risk assessment, regulatory gap analysis, governance architecture design, and a deployment roadmap with prioritized controls.
               </p>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-white/50 text-sm">Starting from</span>
-                <div className="text-white font-semibold">$250K</div>
-              </div>
             </div>
           </Card>
 
@@ -95,10 +91,6 @@ export function CoreIdentityAdvisoryGroupPage() {
               <p className="text-white/70 leading-relaxed text-sm">
                 Full deployment of the CoreIdentity governance stack across your AI fleet. Live enforcement, real-time audit trails, and regulatory evidence automation.
               </p>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-white/50 text-sm">Starting from</span>
-                <div className="text-white font-semibold">$500K</div>
-              </div>
             </div>
           </Card>
 
@@ -111,10 +103,6 @@ export function CoreIdentityAdvisoryGroupPage() {
               <p className="text-white/70 leading-relaxed text-sm">
                 Autonomous governance orchestration across enterprise AI infrastructure. Board-level reporting, continuous compliance monitoring, and regulatory evidence packages.
               </p>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-white/50 text-sm">Starting from</span>
-                <div className="text-white font-semibold">$1M</div>
-              </div>
             </div>
           </Card>
         </div>
@@ -193,9 +181,6 @@ export function CoreIdentityAdvisoryGroupPage() {
               advisory@coreidentitygroup.com
             </a>
           </div>
-          <p className="text-white/30 text-xs mt-6">
-            Phase 0 engagements starting from $250K &nbsp;&middot;&nbsp; Healthcare and Financial Services verticals carry a 20% premium &nbsp;&middot;&nbsp; Government and Defense +30%
-          </p>
         </div>
       </Section>
 
