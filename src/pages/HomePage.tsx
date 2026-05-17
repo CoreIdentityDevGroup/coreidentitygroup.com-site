@@ -316,6 +316,7 @@ export default function HomePage() {
           PARTNERSHIPS &amp; CERTIFICATIONS
         </div>
         <div className="flex flex-wrap gap-4 items-center">
+          {/* Google Cloud Partner — placeholder until official badge retrieved from Partner Marketing Studio */}
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -325,11 +326,16 @@ export default function HomePage() {
             borderRadius: '10px',
             padding: '10px 18px',
           }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="#4285F4"/>
+            <svg width="22" height="18" viewBox="0 0 272 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M115.75 46.5c0 12.76-9.99 22.18-22.25 22.18S71.25 59.26 71.25 46.5s9.99-22.18 22.25-22.18 22.25 9.42 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S81 38.52 81 46.5s5.79 13.44 12.51 13.44 12.5-5.46 12.5-13.44z" fill="#EA4335"/>
+              <path d="M163.75 46.5c0 12.76-9.99 22.18-22.25 22.18S119.25 59.26 119.25 46.5s9.99-22.18 22.25-22.18 22.25 9.42 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S129 38.52 129 46.5s5.79 13.44 12.51 13.44 12.5-5.46 12.5-13.44z" fill="#FBBC05"/>
+              <path d="M209.75 25.32v39.36c0 16.21-9.57 22.84-20.88 22.84-10.65 0-17.04-7.12-19.46-12.95l8.48-3.53c1.49 3.56 5.14 7.76 11 7.76 7.2 0 11.66-4.44 11.66-12.82v-3.14h-.34c-2.15 2.65-6.29 4.97-11.52 4.97-10.94 0-20.95-9.53-20.95-21.8 0-12.36 10.01-22.02 20.95-22.02 5.21 0 9.35 2.32 11.52 4.89h.34v-3.56h9.2zm-8.52 21.17c0-7.71-5.14-13.35-11.69-13.35-6.63 0-12.19 5.64-12.19 13.35 0 7.63 5.56 13.18 12.19 13.18 6.55 0 11.69-5.55 11.69-13.18z" fill="#4285F4"/>
+              <path d="M224 4h9.74v63h-9.74z" fill="#34A853"/>
+              <path d="M262.02 54.48l7.56 5.04c-2.44 3.61-8.32 9.84-18.48 9.84-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.5 0 17.13 9.15 18.96 14.1l1.01 2.52-29.65 12.27c2.27 4.44 5.8 6.71 10.77 6.71 4.98 0 8.43-2.44 10.92-6.12zm-23.27-7.98l19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.36-11.59 12.93z" fill="#EA4335"/>
+              <path d="M35.29 41.41V32h31.91c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.65-24.02 9.65C16.32 69.34.36 53.89.36 34.67.36 15.45 16.32 0 35.5 0c10.49 0 17.96 4.12 23.58 9.49l-6.64 6.64c-4.02-3.78-9.48-6.72-16.94-6.72-13.84 0-24.66 11.15-24.66 25.26 0 14.11 10.82 25.26 24.66 25.26 8.97 0 14.08-3.61 17.36-6.89 2.66-2.66 4.41-6.46 5.1-11.65H35.29z" fill="#4285F4"/>
             </svg>
-            <span style={{ fontSize: '13px', fontWeight: 600, color: '#e8eaed', letterSpacing: '0.02em' }}>
-              Google Cloud Partner
+            <span style={{ fontSize: '12px', fontWeight: 600, color: '#9aa0a6', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              Cloud Partner
             </span>
           </div>
           <div style={{
@@ -337,28 +343,15 @@ export default function HomePage() {
             alignItems: 'center',
             gap: '10px',
             background: '#0d1117',
-            border: '1px solid rgba(255,255,255,0.12)',
+            border: '1px solid rgba(20,184,166,0.3)',
             borderRadius: '10px',
             padding: '10px 18px',
           }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 2l8 4v6c0 5-3.2 9.4-8 10-4.8-.6-8-5-8-10V6l8-4z" stroke="#14b8a6" strokeWidth="1.5" strokeLinejoin="round"/>
             </svg>
             <span style={{ fontSize: '13px', fontWeight: 600, color: '#e8eaed', letterSpacing: '0.02em' }}>
-              NIST FIPS 203 / 204 / 205
-            </span>
-          </div>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            background: '#0d1117',
-            border: '1px solid rgba(255,255,255,0.12)',
-            borderRadius: '10px',
-            padding: '10px 18px',
-          }}>
-            <span style={{ fontSize: '13px', fontWeight: 600, color: '#e8eaed', letterSpacing: '0.02em' }}>
-              HIPAA BAA-Ready
+              Implements NIST FIPS 203 / 204 / 205
             </span>
           </div>
         </div>
