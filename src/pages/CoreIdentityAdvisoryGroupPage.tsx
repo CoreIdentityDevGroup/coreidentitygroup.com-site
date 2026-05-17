@@ -174,12 +174,6 @@ export function CoreIdentityAdvisoryGroupPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            <a
-              href="mailto:advisory@coreidentitygroup.com"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold text-sm tracking-wide transition-all duration-200"
-            >
-              advisory@coreidentitygroup.com
-            </a>
           </div>
         </div>
       </Section>
