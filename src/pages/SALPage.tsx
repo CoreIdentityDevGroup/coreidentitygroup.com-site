@@ -47,7 +47,7 @@ export function SALPage() {
           SAL Enforcement Kernel
         </h1>
         <p className="mt-4 max-w-3xl text-lg text-white/70 leading-relaxed">
-          Your AI agents can reason about anything. SAL determines what they are actually permitted to do. The CoreIdentity Semantic Arbitration Layer is the deterministic enforcement kernel that sits in the execution path — not the policy document — mathematically preventing any machine action that violates your codified business logic, safety thresholds, or regulatory boundaries. The architectural guarantee that transforms probabilistic AI into institutional-grade digital labor.
+          Your AI agents can reason about anything. SAL determines what they are actually permitted to do. The CoreIdentity Semantic Authorization Layer is the deterministic enforcement kernel that sits in the execution path — not the policy document — mathematically preventing any machine action that violates your codified business logic, safety thresholds, or regulatory boundaries. The architectural guarantee that transforms probabilistic AI into institutional-grade digital labor.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">sub-3ms arbitration latency</span>
@@ -99,7 +99,7 @@ export function SALPage() {
               <div className="rounded-2xl border-2 border-amber-400/40 bg-amber-400/10 p-5 text-center w-full">
                 <ShieldIcon />
                 <div className="text-base font-bold text-amber-400 mt-2">SAL Kernel</div>
-                <div className="text-xs text-amber-400/70 mt-1">Semantic Arbitration Layer</div>
+                <div className="text-xs text-amber-400/70 mt-1">Semantic Authorization Layer</div>
                 <div className="mt-3 space-y-1 text-left">
                   {["Identity validation", "Intent classification", "Asset boundary check", "Action authorization", "Context evaluation"].map(item => (
                     <div key={item} className="flex items-center gap-2 text-xs text-white/70"><CheckIcon />{item}</div>

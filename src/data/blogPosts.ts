@@ -14,11 +14,11 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-17",
     author: "Todd Morgan, Founder & CEO, CoreIdentity Development Group",
     excerpt:
-      "In the same week, a sovereign nation announced it would run half its government on autonomous AI agents, and a major publicly-traded company cut 14% of its workforce to replace those roles with AI agent fleets. Neither deployment has governance infrastructure. Here is why that matters — and what changes when regulators catch up.",
+      "In the same week, a sovereign nation announced it would run half its government on autonomous AI agents, and a major publicly-traded company cut 14% of its workforce to replace those roles with AI agent fleets. Neither commitment comes with governance infrastructure. Here is why that matters — and what changes when regulators catch up.",
     content: `
 <p>
-  Two deployments. One week. One sovereign, one corporate. Both operating at a scale that demands
-  governed infrastructure. Neither has it.
+  Two announcements. One week. One sovereign, one corporate. Both committing to autonomous AI at a
+  scale that demands governed infrastructure. Neither currently has it.
 </p>
 <p>
   On April 23, 2026, the UAE Cabinet announced that fifty percent of all federal government sectors,
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
   audit trail before execution."
 </p>
 <p>
-  Neither deployment can currently meet that standard.
+  Neither can currently meet that standard.
 </p>
 
 <h2>Why Scale Makes Governance Non-Optional</h2>
