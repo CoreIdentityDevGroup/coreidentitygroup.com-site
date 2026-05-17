@@ -23,6 +23,16 @@ export default function HomePage() {
       <Helmet>
         <title>CoreIdentity — Agentic AI Governance Infrastructure | The Control Layer for Governed AI</title>
         <meta name="description" content="CoreIdentity is the governance infrastructure for the agentic AI era. The enforcement layer governing how autonomous AI agents are deployed, operated, audited, and controlled at enterprise scale." />
+        <meta property="og:title" content="CoreIdentity — Governance Infrastructure for Agentic AI" />
+        <meta property="og:description" content="The control plane for autonomous enterprise AI. Identity enforcement, policy authorization, and immutable audit — operating at machine speed." />
+        <meta property="og:image" content="https://coreidentitygroup.com/og-blog.png" />
+        <meta property="og:url" content="https://coreidentitygroup.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="CoreIdentity Development Group" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CoreIdentity — Governance Infrastructure for Agentic AI" />
+        <meta name="twitter:description" content="The control plane for autonomous enterprise AI. Identity enforcement, policy authorization, and immutable audit — operating at machine speed." />
+        <meta name="twitter:image" content="https://coreidentitygroup.com/og-blog.png" />
       </Helmet>
 
       {/* VISUAL — top of page */}
