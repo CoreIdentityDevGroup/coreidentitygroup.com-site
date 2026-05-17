@@ -33,9 +33,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Platform — workflow order */}
+          {/* Governance Infrastructure */}
           <div className="space-y-3">
-            <div className="text-white/60 font-medium text-xs tracking-widest uppercase">Platform</div>
+            <div className="text-white/60 font-medium text-xs tracking-widest uppercase">Governance Infrastructure</div>
             <ul className="space-y-2">
               <li><Link to="/sal" className="hover:text-white/80 transition">SAL Enforcement Kernel</Link></li>
               <li><Link to="/sentinel" className="hover:text-white/80 transition">Sentinel</Link></li>

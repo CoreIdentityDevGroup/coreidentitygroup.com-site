@@ -1,8 +1,8 @@
 import React from "react";
-import { Card, PageTitle, SectionTitle } from "../components/ui";
+import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
 
 const INTRO =
-  "CoreIdentity Development Group Inc. governs a portfolio of systems and operating capabilities built to enable safe, auditable agentic execution. At the foundation is the Semantic Authorization Layer (SAL) — the deterministic enforcement kernel that authorizes every agent execution before it reaches the stack. Above it, Sentinel defines policy, Nexus orchestrates controlled execution, and Agent Identity Systems verifies every agent. AGO validates the governance stack in real operational conditions, and SmartNation AI packages governed deployment patterns for enterprise delivery. CoreIdentity Advisory Group translates the platform into commercial engagements.";
+  "CoreIdentity Development Group Inc. builds and operates the governance infrastructure of systems and operating capabilities built to enable safe, auditable agentic execution. At the foundation is the Semantic Authorization Layer (SAL) — the deterministic enforcement kernel that authorizes every agent execution before it reaches the stack. Above it, Sentinel defines policy, Nexus orchestrates controlled execution, and Agent Identity Systems verifies every agent. AGO validates the governance stack in real operational conditions, and SmartNation AI packages governed deployment patterns for enterprise delivery. CoreIdentity Advisory Group translates the platform into commercial engagements.";
 
 function PortfolioCard(props: { title: string; body: string; href: string }) {
   return (
@@ -22,7 +22,8 @@ export function PortfolioPage() {
   return (
     <div className="space-y-12">
       <div className="space-y-4">
-        <PageTitle>Portfolio</PageTitle>
+        <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
+        <PageTitle>Governance Infrastructure</PageTitle>
         <p className="text-white/70 max-w-3xl">{INTRO}</p>
       </div>
 

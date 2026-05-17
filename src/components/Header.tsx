@@ -13,8 +13,7 @@ export function Header() {
       { to: "/leadership", label: "Leadership" },
       { to: "/ciag", label: "CoreIdentity Advisory Group" },
       { to: "/coreidentity-technologies", label: "CoreIdentity Technologies" },
-      { to: "/portfolio", label: "Portfolio" },
-      // Platform — workflow order
+      { to: "/governance-infrastructure", label: "Governance Infrastructure" },
       { to: "/sal", label: "SAL Enforcement Kernel", section: "platform" },
       { to: "/sentinel", label: "Sentinel", section: "platform" },
       { to: "/nexus", label: "Nexus", section: "platform" },
@@ -24,7 +23,6 @@ export function Header() {
       { to: "/mcp", label: "MCP Protocol", section: "platform" },
       { to: "/quantum-hardening", label: "Quantum Hardening", section: "platform" },
       { to: "/fgre", label: "Formal Governance Verification", section: "platform" },
-      // Company
       { to: "/blog", label: "Blog" },
       { to: "/faq", label: "FAQ" },
       { to: "/contact", label: "Contact" },
@@ -32,7 +30,7 @@ export function Header() {
     [],
   );
 
-  const desktopItems = navItems.filter(i => !i.section);
+  const mainItems = navItems.filter(i => !i.section);
   const platformItems = navItems.filter(i => i.section === "platform");
 
   return (
@@ -49,7 +47,7 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-5 text-sm text-white/70">
-            {desktopItems.map((item) => (
+            {mainItems.slice(0, 6).map((item) => (
               <Link key={item.to} to={item.to} className="hover:text-white transition">
                 {item.label}
               </Link>
@@ -75,35 +73,22 @@ export function Header() {
 
       <div id="mobile-menu" className={["lg:hidden border-t border-white/10", open ? "block" : "hidden"].join(" ")}>
         <div className="mx-auto container-max px-4 py-4 grid gap-3 text-sm">
-          {navItems.filter(i => !i.section).slice(0, 6).map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-white/80 hover:text-white transition"
-              onClick={() => setOpen(false)}
-            >
+          {mainItems.slice(0, 6).map((item) => (
+            <Link key={item.to} to={item.to} className="text-white/80 hover:text-white transition" onClick={() => setOpen(false)}>
               {item.label}
             </Link>
           ))}
-          <div className="text-white/30 text-xs tracking-widest uppercase pt-1 pb-0.5">Platform</div>
+          <div className="text-white/30 text-xs tracking-widest uppercase pt-1 pb-0.5 border-t border-white/10 mt-1">
+            Governance Infrastructure
+          </div>
           {platformItems.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-white/70 hover:text-white transition pl-2"
-              onClick={() => setOpen(false)}
-            >
+            <Link key={item.to} to={item.to} className="text-white/70 hover:text-white transition pl-2" onClick={() => setOpen(false)}>
               {item.label}
             </Link>
           ))}
-          <div className="border-t border-white/10 pt-1" />
-          {navItems.filter(i => !i.section).slice(6).map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="text-white/80 hover:text-white transition"
-              onClick={() => setOpen(false)}
-            >
+          <div className="border-t border-white/10 pt-1 mt-1" />
+          {mainItems.slice(6).map((item) => (
+            <Link key={item.to} to={item.to} className="text-white/80 hover:text-white transition" onClick={() => setOpen(false)}>
               {item.label}
             </Link>
           ))}

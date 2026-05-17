@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, PageTitle } from "../components/ui";
+import { Card, PageTitle, Eyebrow } from "../components/ui";
 import { Helmet } from "react-helmet-async";
 
 export function SentinelOSPage() {
@@ -11,6 +11,7 @@ export function SentinelOSPage() {
         <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sentinel","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
       <div className="space-y-3">
+        <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
         <PageTitle>Sentinel</PageTitle>
         <p className="text-white/70 max-w-3xl">The reason your AI fleet cannot make a decision your legal team did not authorize. Sentinel enforces policy, controls identity boundaries, gates approvals, and captures the evidence your auditors will require — before a regulator asks for it.</p>
       </div>

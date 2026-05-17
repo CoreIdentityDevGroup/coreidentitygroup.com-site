@@ -1,6 +1,6 @@
 // CIDG_GOOGLE_COMPLIANCE_ABOUT_v1
 import React from "react";
-import { Card, PageTitle, SectionTitle } from "../components/ui";
+import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
 
 /**
  * AboutPage (About Us)
@@ -14,6 +14,7 @@ export function AboutPage() {
 
       {/* Header */}
       <div className="space-y-3">
+        <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
         <PageTitle>About Us</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed">
           CoreIdentity Development Group Inc. is the governance infrastructure company

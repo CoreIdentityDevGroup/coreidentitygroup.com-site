@@ -43,7 +43,7 @@ export default function HomePage() {
         </p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
-            to="/portfolio"
+            to="/governance-infrastructure"
             className="inline-flex items-center justify-center rounded-xl bg-white/10 px-6 py-3 text-sm font-medium hover:bg-white/15 transition"
           >
             Explore the Platform

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { PortableText } from "@portabletext/react";
 import type { PortableTextComponents } from "@portabletext/react";
-import { Card, PageTitle, SectionTitle } from "../components/ui";
+import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
 import { getTeamMembers, isSanityConfigured, type SanityTeamMember } from "../lib/queries";
 
 // Portable text renderer for biography blocks
@@ -117,6 +117,7 @@ export function LeadershipPage() {
         <div className="text-xs font-medium tracking-[0.22em] text-white/40">
           COREIDENTITY DEVELOPMENT GROUP
         </div>
+        <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
         <PageTitle>Leadership</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed">
           CoreIdentity is led by operators who have built and governed

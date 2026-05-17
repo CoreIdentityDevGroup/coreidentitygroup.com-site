@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, PageTitle } from "../components/ui";
+import { Card, PageTitle, Eyebrow } from "../components/ui";
 import { Helmet } from "react-helmet-async";
 
 export function NexusOSPage() {
@@ -11,8 +11,8 @@ export function NexusOSPage() {
         <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Nexus","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
       <div className="space-y-3">
+        <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
         <PageTitle>Nexus</PageTitle>
-        <div className="text-sm text-white/60">A CoreIdentity Development Group Inc. company.</div>
         <p className="text-white/70 max-w-3xl">Your agent workforce, operating as a governed fleet — not a collection of independent actors with no accountability chain. Nexus orchestrates multi-agent workflows under governance constraints, ensuring every task, integration, and recovery action stays within the boundaries Sentinel enforces.</p>
       </div>
       <Card>

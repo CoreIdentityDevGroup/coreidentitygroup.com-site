@@ -15,7 +15,7 @@ export function FAQPage() {
   return (
     <div className="space-y-10">
       <div className="space-y-4">
-        <Eyebrow>AGENTIC EXECUTION GOVERNANCE</Eyebrow>
+        <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
         <PageTitle>Frequently Asked Questions</PageTitle>
         <p className="text-white/60 max-w-3xl leading-relaxed">
           Practical answers about CoreIdentity, Agentic Execution Governance,

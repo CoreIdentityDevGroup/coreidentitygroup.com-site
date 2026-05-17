@@ -1,5 +1,6 @@
 // CHC-MCP-PAGE-v1
 import React from "react";
+import { PageTitle, Eyebrow } from "../components/ui";
 import { Helmet } from "react-helmet-async";
 
 export function MCPPage() {
@@ -9,11 +10,10 @@ export function MCPPage() {
         <title>Model Context Protocol Governance | CoreIdentity MCP Integration</title>
         <meta name="description" content="CoreIdentity governs Model Context Protocol integrations with identity enforcement, authorization boundaries, and audit trails for every MCP tool call." />
       </Helmet>
-      <div className="mb-10">
-        <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          MCP Protocol
-        </h1>
-        <p className="mt-3 max-w-3xl text-lg text-white/70">
+      <div className="space-y-4 mb-10">
+        <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
+        <PageTitle>MCP Protocol</PageTitle>
+        <p className="text-white/70 max-w-3xl leading-relaxed text-lg">
           CoreIdentity exposes eleven live governance tools through a production MCP server —
           making the entire platform queryable by any MCP-compatible AI client, agent,
           or orchestration framework, with policy enforcement and audit logging on every call.

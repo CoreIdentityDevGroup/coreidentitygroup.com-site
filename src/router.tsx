@@ -36,6 +36,12 @@ const indexRoute = createRoute({
   component: HomePage,
 });
 
+const govintraRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance-infrastructure",
+  component: PortfolioPage,
+});
+
 const portfolioRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/portfolio",
@@ -189,6 +195,7 @@ const blogPostRoute = createRoute({
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
+  govintraRoute,
   portfolioRoute,
   coreidentityRoute,
   sentinelRoute,
