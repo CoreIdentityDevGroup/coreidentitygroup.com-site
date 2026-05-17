@@ -21,20 +21,47 @@ export const blogPosts: BlogPost[] = [
   scale that demands governed infrastructure. Neither currently has it.
 </p>
 <p>
-  On April 23, 2026, the UAE Cabinet announced that fifty percent of all federal government sectors,
-  services, and operations will run on autonomous agentic AI within two years. The directive came
-  from the President and was executed by Sheikh Mohammed bin Rashid, Vice President and Prime Minister,
-  with a mandate to make the UAE the first government in the world to operate at this scale through
-  autonomous systems. Not chatbots. Not decision-support tools. Autonomous agents that analyze,
-  decide, execute, and improve in real time — operating as what the directive explicitly calls
-  an "executive partner to government."
+  The sovereign signal started in January. On January 22, 2026, Singapore's Minister for Digital
+  Development announced the world's first governance framework specifically designed for agentic AI
+  at the World Economic Forum in Davos. The Model AI Governance Framework for Agentic AI, developed
+  by the Infocomm Media Development Authority, was the first official recognition at the national
+  level that agentic systems — AI that plans, reasons, and acts autonomously — require a governance
+  architecture fundamentally different from what governs conventional AI tools. Singapore's framework
+  is not legally binding. But it was the first government in the world to acknowledge in formal policy
+  that the governance gap for autonomous AI is real, structural, and requires dedicated infrastructure
+  to close.
 </p>
 <p>
-  On May 4, Dubai extended the same directive to the private sector: a two-year action plan to
-  integrate advanced agentic AI across Dubai's entire private economy, covering everything from
-  enterprise operations to small and medium businesses. The DIFC simultaneously committed to becoming
-  the world's first AI-native financial centre. The scope is not incremental adoption. It is
-  a wholesale transformation of how a sovereign economy operates.
+  Three months later, the UAE moved from framework to directive. On April 23, 2026, the UAE Cabinet
+  announced that fifty percent of all federal government sectors, services, and operations will run
+  on autonomous agentic AI within two years — making the UAE the first government in the world to
+  commit to operating at this scale through autonomous systems. Not chatbots. Not decision-support
+  tools. Autonomous agents that analyze, decide, execute, and improve in real time. An "executive
+  partner to government," in the words of the directive itself.
+</p>
+<p>
+  On May 4, Dubai extended the commitment to the private sector: a two-year action plan to integrate
+  advanced agentic AI across Dubai's entire economy. The DIFC simultaneously committed to becoming
+  the world's first AI-native financial centre. The scope is not incremental adoption. It is a
+  wholesale transformation of how a sovereign economy operates — government and commerce moving
+  together toward autonomous execution at national scale.
+</p>
+<p>
+  The IMF weighed in on April 22. In a formal IMF Note titled "How Agentic AI Will Reshape Payments,"
+  the Fund identified a structural tension at the core of every agentic deployment in financial
+  services: probabilistic AI behavior operating inside deterministic payment infrastructure. The
+  IMF explicitly called for cryptographically verifiable agent identity, real-time audit trails,
+  and authorization frameworks that bind agent actions to explicit, verifiable mandates. The Fund
+  also identified the regulatory fragmentation risk — noting that countries have initiated governance
+  frameworks but that coordination is insufficient to prevent cross-border spillover when ungoverned
+  agents interact across jurisdictions.
+</p>
+<p>
+  Singapore built the framework. The UAE committed to deployment. The IMF warned about the financial
+  system consequences. All three actions happened within four months of each other in 2026. The
+  global recognition that agentic AI requires dedicated governance infrastructure is no longer
+  a theoretical position. It is the stated consensus of the world's leading financial institution
+  and two of the world's most AI-forward sovereign jurisdictions.
 </p>
 <p>
   On May 5, 2026 — twelve days later — a major publicly-traded digital asset exchange cut approximately
