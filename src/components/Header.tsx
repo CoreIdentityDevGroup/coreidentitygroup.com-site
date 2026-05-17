@@ -19,7 +19,7 @@ export function Header() {
       { to: "/smartnation-ai", label: "SmartNation AI" },
       { to: "/ago-1", label: "AGO‑1" },
       { to: "/mcp", label: "MCP Protocol" },
-      { to: "/coreidentity-ai-advisory-group", label: "CoreIdentity AI Advisory Group" },
+      { to: "/ciag", label: "CoreIdentity AI Advisory Group" },
       { to: "/agentidentity-systems", label: "AgentIdentity Systems" },
       { to: "/quantum-hardening", label: "Quantum Hardening" },
       { to: "/fgre", label: "Formal Governance Verification" },

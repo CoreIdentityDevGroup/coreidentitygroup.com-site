@@ -26,7 +26,7 @@ export default function Footer() {
               <li><Link to="/about" className="hover:text-white/80 transition">About Us</Link></li>
               <li><Link to="/leadership" className="hover:text-white/80 transition">Leadership</Link></li>
               <li><Link to="/portfolio" className="hover:text-white/80 transition">Portfolio</Link></li>
-              <li><Link to="/coreidentity-ai-advisory-group" className="hover:text-white/80 transition">Advisory Group</Link></li>
+              <li><Link to="/ciag" className="hover:text-white/80 transition">Advisory Group</Link></li>
               <li><Link to="/coreidentity-technologies" className="hover:text-white/80 transition">CoreIdentity Technologies</Link></li>
               <li><Link to="/contact" className="hover:text-white/80 transition">Contact</Link></li>
               <li><Link to="/faq" className="hover:text-white/80 transition">FAQ</Link></li>

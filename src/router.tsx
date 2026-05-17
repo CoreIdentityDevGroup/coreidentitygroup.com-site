@@ -88,6 +88,11 @@ const advisoryRoute = createRoute({
   path: "/coreidentity-advisory-group",
   component: CoreIdentityAdvisoryGroupPage,
 });
+const ciagRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/ciag",
+  component: CoreIdentityAdvisoryGroupPage,
+});
 
 const foundersRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -186,6 +191,7 @@ const routeTree = rootRoute.addChildren([
   ago1Route,
 
   // Advisory Group: canonical first, alias second
+  ciagRoute,
   coreidentityAIAdvisoryGroupRoute,
   advisoryRoute,
 
