@@ -59,14 +59,29 @@ export default function HomePage() {
 
       {/* QUANTUM BOUNDARY STATEMENT */}
       <section className="mt-10 max-w-3xl">
-        <p className="text-base leading-relaxed text-white/55 border-l-2 border-teal-500/40 pl-5 italic">
-          CoreIdentity is the only governance infrastructure platform that operates at the quantum boundary
-          — hardening the enforcement stack against quantum-era threats while providing enterprises the
-          diagnostic and remediation tooling required to govern their own agentic ecosystems through the
-          post-quantum transition. The moat is not any single algorithm — it is the only
-          platform where post-quantum cryptography, sovereign agent identity, inline policy
-          enforcement, and immutable audit trails operate as a single integrated enforcement chain.
-        </p>
+        <div className="border-l-2 border-teal-500/40 pl-5 space-y-3">
+          <p className="text-base leading-relaxed text-white/55 italic">
+            CoreIdentity is the only governance infrastructure platform where post-quantum cryptography,
+            formal mathematical policy verification, post-quantum agent identity, deterministic inline
+            enforcement, and immutable audit trails operate as a single integrated chain — not assembled
+            from components, not layered onto existing systems, but engineered as a unified enforcement
+            architecture from the ground up.
+          </p>
+          <p className="text-base leading-relaxed text-white/55 italic">
+            The moat is not any single element. It is the combination no other platform has assembled:
+            all three NIST FIPS post-quantum standards (FIPS 203, 204, 205) in production across the
+            full enforcement stack. Z3 SMT formal verification detecting policy contradictions and
+            generating machine-verifiable proof artifacts before any policy activates. Post-quantum
+            agent identity credentials issued by a two-tier PQ-CA. Deterministic pre-execution
+            authorization at sub-3ms latency. Cryptographically signed, append-only audit trails
+            anchored to a tamper-evident ledger.
+          </p>
+          <p className="text-base leading-relaxed text-white/55 italic">
+            No other platform combines all five. That integration is the infrastructure layer regulated
+            enterprises need when the standard is not eventual compliance — it is provable compliance
+            at execution time.
+          </p>
+        </div>
       </section>
 
 
@@ -231,20 +246,20 @@ export default function HomePage() {
               and the validated pilot pattern for every enterprise deployment that follows.
               Governance demonstrated, not just described.
             </p>
-            <Link to="/ago-1" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/ago" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               AGO →
             </Link>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <div className="text-sm font-medium text-white/40 tracking-widests mb-2">ADVISORY</div>
+            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">ADVISORY</div>
             <div className="text-lg font-semibold mb-3">CoreIdentity Advisory Group</div>
             <p className="text-white/60 text-sm leading-relaxed">
               AI governance frameworks, regulatory compliance roadmaps, and enterprise
               implementation strategy for organizations navigating the agentic AI
               regulatory landscape.
             </p>
-            <Link to="/coreidentity-ai-advisory-group" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/ciag" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               CIAG →
             </Link>
           </div>
@@ -257,6 +272,9 @@ export default function HomePage() {
               detects policy contradictions, validates execution paths, and generates
               machine-verifiable proof artifacts before any policy activates.
             </p>
+            <Link to="/fgre" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+              Formal Governance Verification →
+            </Link>
           </div>
 
         </div>
