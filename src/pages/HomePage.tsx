@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import globalAIGovernanceHero from "../assets/images/global-ai-governance-hero.webp";
+import globalAIGovernanceHero from "../assets/images/coreidentity-governance-hero.webp";
 import { Helmet } from "react-helmet-async";
 
 // CIDG_GOOGLE_COMPLIANCE_HOMEPAGE_INJECT_v1
