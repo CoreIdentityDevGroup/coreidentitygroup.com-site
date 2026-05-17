@@ -66,6 +66,12 @@ const smartRoute = createRoute({
   component: SmartNationAIPage,
 });
 
+const agoRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/ago",
+  component: AGO1Page,
+});
+
 const ago1Route = createRoute({
   getParentRoute: () => rootRoute,
   path: "/ago-1",
@@ -188,6 +194,7 @@ const routeTree = rootRoute.addChildren([
   sentinelRoute,
   nexusRoute,
   smartRoute,
+  agoRoute,
   ago1Route,
 
   // Advisory Group: canonical first, alias second

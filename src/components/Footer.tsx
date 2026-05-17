@@ -25,26 +25,25 @@ export default function Footer() {
               <li><Link to="/" className="hover:text-white/80 transition">Home</Link></li>
               <li><Link to="/about" className="hover:text-white/80 transition">About Us</Link></li>
               <li><Link to="/leadership" className="hover:text-white/80 transition">Leadership</Link></li>
-              <li><Link to="/portfolio" className="hover:text-white/80 transition">Portfolio</Link></li>
-              <li><Link to="/ciag" className="hover:text-white/80 transition">Advisory Group</Link></li>
+              <li><Link to="/ciag" className="hover:text-white/80 transition">CoreIdentity Advisory Group</Link></li>
               <li><Link to="/coreidentity-technologies" className="hover:text-white/80 transition">CoreIdentity Technologies</Link></li>
-              <li><Link to="/contact" className="hover:text-white/80 transition">Contact</Link></li>
-              <li><Link to="/faq" className="hover:text-white/80 transition">FAQ</Link></li>
               <li><Link to="/blog" className="hover:text-white/80 transition">Blog</Link></li>
+              <li><Link to="/faq" className="hover:text-white/80 transition">FAQ</Link></li>
+              <li><Link to="/contact" className="hover:text-white/80 transition">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Platform */}
+          {/* Platform — workflow order */}
           <div className="space-y-3">
             <div className="text-white/60 font-medium text-xs tracking-widest uppercase">Platform</div>
             <ul className="space-y-2">
-              <li><Link to="/sal" className="hover:text-white/80 transition">SAL Kernel</Link></li>
+              <li><Link to="/sal" className="hover:text-white/80 transition">SAL Enforcement Kernel</Link></li>
               <li><Link to="/sentinel" className="hover:text-white/80 transition">Sentinel</Link></li>
               <li><Link to="/nexus" className="hover:text-white/80 transition">Nexus</Link></li>
-              <li><Link to="/smartnation-ai" className="hover:text-white/80 transition">SmartNation AI</Link></li>
               <li><Link to="/agentidentity-systems" className="hover:text-white/80 transition">Agent Identity Systems</Link></li>
+              <li><Link to="/ago" className="hover:text-white/80 transition">AGO</Link></li>
+              <li><Link to="/smartnation-ai" className="hover:text-white/80 transition">SmartNation AI</Link></li>
               <li><Link to="/mcp" className="hover:text-white/80 transition">MCP Protocol</Link></li>
-              <li><Link to="/ago-1" className="hover:text-white/80 transition">AGO-1</Link></li>
               <li><Link to="/quantum-hardening" className="hover:text-white/80 transition">Quantum Hardening</Link></li>
               <li><Link to="/fgre" className="hover:text-white/80 transition">Formal Governance Verification</Link></li>
             </ul>

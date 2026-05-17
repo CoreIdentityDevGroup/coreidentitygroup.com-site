@@ -121,11 +121,11 @@ export function FAQPage() {
             infrastructure for autonomous AI. AIS provides cryptographically
             verifiable agent authentication, policy-linked authorization
             boundaries, full provenance tracking, and audit-grade attribution
-            — enforced at the execution layer. AIS is live at{" "}
+            — enforced at the execution layer. AIS is live and production-stable at{" "}
             <a href="https://agentidentity.systems" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white">
               agentidentity.systems
             </a>
-            {" "}with an active 30-day soak test running.
+            {" "}with 100,000+ governed endpoint calls validated at a 96%+ pass rate.
           </p>
         </FAQCard>
 
@@ -202,14 +202,14 @@ export function FAQPage() {
           </p>
         </FAQCard>
 
-        <FAQCard q="What is AGO-1?">
+        <FAQCard q="What is AGO?">
           <p>
-            AGO-1 is an internal operating agent used to harden the CoreIdentity
-            execution stack in real workflows, produce repeatable governance
-            evidence, and validate fail-closed controls before client-facing
-            deployments. AGO-1 runs under full Sentinel and Nexus
-            enforcement and augments CoreIdentity Advisory Group operations.
-            It is not client-facing.
+            AGO is CoreIdentity's Autonomous Governance Orchestrator — the operating agent
+            that runs CoreIdentity's own governance workflows under full Sentinel and Nexus
+            enforcement. AGO validates the enforcement stack in real operational conditions,
+            produces repeatable governance evidence, and serves as the verified pilot pattern
+            for enterprise deployments. Every AGO workflow produces cryptographically signed
+            audit records, demonstrating fail-closed governance in practice.
           </p>
         </FAQCard>
 

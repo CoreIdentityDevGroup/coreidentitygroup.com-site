@@ -6,85 +6,88 @@ export function AGO1Page() {
     <div>
       <Helmet>
         <title>AGO — Autonomous Governance Orchestrator | CoreIdentity</title>
-        <meta name="description" content="AGO-1 is CoreIdentity’s internal operating agent running under Sentinel and Nexus governance. The validated pilot pattern for enterprise agentic deployments." />
+        <meta name="description" content="AGO is CoreIdentity's Autonomous Governance Orchestrator — the operating agent that validates the enforcement stack in real conditions, produces repeatable governance evidence, and serves as the verified pilot pattern for enterprise deployments." />
         <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AGO — Autonomous Governance Orchestrator","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
-      <p className="text-xs uppercase tracking-wide text-white/60 mb-3">
-  Internal operating agent (non-client-facing)
-</p>
 
-<h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
-  AGO-1
-</h1>
-
-<p className="mt-4 text-lg text-white/70 max-w-3xl">
-  The internal operating agent that governs CoreIdentity's own operations — and serves as the validated pilot pattern for every client deployment that follows.
-</p>
+      <PageHero
+        title="AGO — Autonomous Governance Orchestrator"
+        subtitle="The operating agent that governs CoreIdentity's own operations — and serves as the validated pilot pattern for every enterprise deployment that follows."
+      />
 
       <Section>
-        <SectionTitle>What AGO‑1 is</SectionTitle>
+        <SectionTitle>What AGO Is</SectionTitle>
         <Card>
           <CardText>
-            AGO‑1 is an internal operating agent that runs under <strong>Sentinel</strong> (policy, approvals, audit trails) and
-            <strong> Nexus</strong> (workflow orchestration and recovery). It is deliberately <strong>non‑client‑facing</strong> and is used to
-            (1) augment CoreIdentity Development Group and CoreIdentity Advisory Group operations, and (2) serve as a controlled first pilot pattern for
-            hospitality workflows (beginning with the Cole Hospitality pilot).
+            AGO is CoreIdentity's Autonomous Governance Orchestrator — an operating agent that runs
+            under <strong>Sentinel</strong> (policy enforcement, approvals, audit trails) and{" "}
+            <strong>Nexus</strong> (workflow orchestration and recovery). AGO validates the
+            CoreIdentity enforcement stack in real operational conditions, producing cryptographically
+            signed governance evidence on every workflow it executes. Every AGO deployment follows
+            the same governance architecture available to enterprise clients.
           </CardText>
         </Card>
       </Section>
 
       <Section>
-        <SectionTitle>Why it matters</SectionTitle>
+        <SectionTitle>Why It Matters</SectionTitle>
         <div className="grid gap-4 md:grid-cols-3">
           <Card>
-            <CardTitle>Hardens governance in practice</CardTitle>
+            <CardTitle>Hardens Governance in Practice</CardTitle>
             <CardText>
-              Governance concepts become operational only when exercised. AGO‑1 creates repeatable evidence: approvals, traces, outputs, and exceptions.
+              Governance concepts become operational only when exercised. AGO creates repeatable evidence:
+              approvals, traces, outputs, and exceptions — all cryptographically signed and auditable.
             </CardText>
           </Card>
           <Card>
-            <CardTitle>Validates “fail‑closed” controls</CardTitle>
+            <CardTitle>Validates Fail-Closed Controls</CardTitle>
             <CardText>
-              AGO‑1 is designed to stop safely when policy is ambiguous or data is incomplete—escalating to a human operator rather than guessing.
+              AGO is designed to stop safely when policy is ambiguous or data is incomplete —
+              escalating to a human operator rather than guessing. Every fail-closed event is logged.
             </CardText>
           </Card>
           <Card>
-            <CardTitle>Produces reusable pilot patterns</CardTitle>
+            <CardTitle>Produces Reusable Pilot Patterns</CardTitle>
             <CardText>
-              Each workflow becomes a governed template: scope boundaries, data inputs, controls, and measurable outcomes.
+              Each workflow becomes a governed template: scope boundaries, data inputs, controls,
+              and measurable outcomes ready for enterprise deployment.
             </CardText>
           </Card>
           <Card>
-            <CardTitle>Autonomous Data Protection Officer</CardTitle>
+            <CardTitle>Autonomous DPO Function</CardTitle>
             <CardText>
-              AGO-1 operates as an autonomous DPO function — continuously monitoring all agent activity for policy drift, data access scope violations, and compliance gaps. When drift is detected, AGO-1 initiates an intervention automatically: suspending the agent, restricting its scope, or escalating for human review. Every intervention produces an immutable DPO audit record. Organizations deploying AI at scale will face regulatory requirements for DPO-equivalent oversight — AGO-1 delivers that function autonomously, without adding headcount.
+              AGO operates as an autonomous Data Protection Officer function — continuously monitoring
+              all agent activity for policy drift, data access scope violations, and compliance gaps.
+              When drift is detected, AGO initiates an intervention automatically: suspending the
+              agent, restricting its scope, or escalating for human review. Every intervention
+              produces an immutable DPO audit record.
             </CardText>
           </Card>
         </div>
       </Section>
 
       <Section>
-        <SectionTitle>Operating boundaries (high level)</SectionTitle>
+        <SectionTitle>Operating Boundaries</SectionTitle>
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
-            <CardTitle>Included task classes</CardTitle>
+            <CardTitle>Included Task Classes</CardTitle>
             <CardText>
-              Repetitive coordination, structured data capture, document drafting from provided inputs, compliance tracking, inventory/tariff monitoring,
-              reporting, and operational monitoring.
+              Repetitive coordination, structured data capture, document drafting from provided inputs,
+              compliance tracking, reporting, operational monitoring, and governance evidence generation.
             </CardText>
           </Card>
           <Card>
-            <CardTitle>Explicit exclusions</CardTitle>
+            <CardTitle>Explicit Exclusions</CardTitle>
             <CardText>
-              Human‑judgment decisions (ethical, legal conclusions, hiring/firing), relational work, and any action requiring accountability beyond
-              auditable human approval.
+              Human-judgment decisions (ethical determinations, legal conclusions, hiring decisions),
+              relational work, and any action requiring accountability beyond auditable human approval.
             </CardText>
           </Card>
         </div>
       </Section>
 
       <Section>
-        <SectionTitle>Where it fits in the stack</SectionTitle>
+        <SectionTitle>Where AGO Fits in the Stack</SectionTitle>
         <div className="grid gap-4 md:grid-cols-3">
           <Card>
             <CardTitle>Sentinel</CardTitle>
@@ -104,7 +107,6 @@ export function AGO1Page() {
         </div>
       </Section>
 
-      {/* SAL Trust Section */}
       <Section>
         <div className="rounded-2xl border border-amber-400/20 bg-amber-400/5 p-6">
           <div className="flex items-center gap-3 mb-3">
@@ -114,7 +116,13 @@ export function AGO1Page() {
             <span className="text-sm font-semibold tracking-wide text-amber-400 uppercase">Governance Guaranteed by SAL</span>
           </div>
           <p className="text-sm text-white/70 leading-relaxed">
-            AGO-1 operates under the SAL Enforcement Kernel — ensuring every autonomous action is evaluated against the IIAAC model (Identity, Intent, Asset, Action, Context) before execution. No AGO-1 task can exceed its delegated authority, export unauthorized data, or trigger unvalidated transactions. AGO-1's Autonomous DPO function monitors all governed agents continuously — detecting policy drift, data access anomalies, and compliance gaps before they become incidents. Interventions are logged as immutable DPO audit records.
+            AGO operates under the SAL Enforcement Kernel — ensuring every autonomous action is
+            evaluated against the IIAAC model (Identity, Intent, Asset, Action, Context) before
+            execution. No AGO task can exceed its delegated authority, export unauthorized data,
+            or trigger unvalidated transactions. AGO's Autonomous DPO function monitors all
+            governed agents continuously — detecting policy drift, data access anomalies, and
+            compliance gaps before they become incidents. Interventions are logged as immutable
+            DPO audit records.
           </p>
           <a href="/sal" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
             Learn how SAL enforces boundaries →

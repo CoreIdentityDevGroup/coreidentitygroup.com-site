@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 
-type NavItem = { to: string; label: string };
+type NavItem = { to: string; label: string; section?: "platform" };
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -11,40 +11,45 @@ export function Header() {
       { to: "/", label: "Home" },
       { to: "/about", label: "About Us" },
       { to: "/leadership", label: "Leadership" },
-      { to: "/portfolio", label: "Portfolio" },
-      { to: "/sal", label: "SAL Enforcement Kernel" },
+      { to: "/ciag", label: "CoreIdentity Advisory Group" },
       { to: "/coreidentity-technologies", label: "CoreIdentity Technologies" },
-      { to: "/sentinel", label: "Sentinel" },
-      { to: "/nexus", label: "Nexus" },
-      { to: "/smartnation-ai", label: "SmartNation AI" },
-      { to: "/ago-1", label: "AGO‑1" },
-      { to: "/mcp", label: "MCP Protocol" },
-      { to: "/ciag", label: "CoreIdentity AI Advisory Group" },
-      { to: "/agentidentity-systems", label: "AgentIdentity Systems" },
-      { to: "/quantum-hardening", label: "Quantum Hardening" },
-      { to: "/fgre", label: "Formal Governance Verification" },
+      { to: "/portfolio", label: "Portfolio" },
+      // Platform — workflow order
+      { to: "/sal", label: "SAL Enforcement Kernel", section: "platform" },
+      { to: "/sentinel", label: "Sentinel", section: "platform" },
+      { to: "/nexus", label: "Nexus", section: "platform" },
+      { to: "/agentidentity-systems", label: "Agent Identity Systems", section: "platform" },
+      { to: "/ago", label: "AGO", section: "platform" },
+      { to: "/smartnation-ai", label: "SmartNation AI", section: "platform" },
+      { to: "/mcp", label: "MCP Protocol", section: "platform" },
+      { to: "/quantum-hardening", label: "Quantum Hardening", section: "platform" },
+      { to: "/fgre", label: "Formal Governance Verification", section: "platform" },
+      // Company
       { to: "/blog", label: "Blog" },
-
+      { to: "/faq", label: "FAQ" },
       { to: "/contact", label: "Contact" },
     ],
     [],
   );
+
+  const desktopItems = navItems.filter(i => !i.section);
+  const platformItems = navItems.filter(i => i.section === "platform");
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur bg-black/30 border-b border-white/10">
       <div className="mx-auto container-max px-4">
         <div className="h-16 py-3 flex items-center justify-between gap-4">
           <Link to="/" className="min-w-0 no-underline text-inherit">
-          <div>
-            <div className="text-sm font-semibold tracking-[0.22em] uppercase leading-tight">
-              COREIDENTITY DEVELOPMENT GROUP
+            <div>
+              <div className="text-sm font-semibold tracking-[0.22em] uppercase leading-tight">
+                COREIDENTITY DEVELOPMENT GROUP
+              </div>
+              <div className="text-xs text-white/60 leading-tight">The Control Layer for Governed AI</div>
             </div>
-            <div className="text-xs text-white/60 leading-tight">The Control Layer for Governed AI</div>
-          </div>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-5 text-sm text-white/70">
-            {navItems.map((item) => (
+            {desktopItems.map((item) => (
               <Link key={item.to} to={item.to} className="hover:text-white transition">
                 {item.label}
               </Link>
@@ -70,7 +75,29 @@ export function Header() {
 
       <div id="mobile-menu" className={["lg:hidden border-t border-white/10", open ? "block" : "hidden"].join(" ")}>
         <div className="mx-auto container-max px-4 py-4 grid gap-3 text-sm">
-          {navItems.map((item) => (
+          {navItems.filter(i => !i.section).slice(0, 6).map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="text-white/80 hover:text-white transition"
+              onClick={() => setOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="text-white/30 text-xs tracking-widest uppercase pt-1 pb-0.5">Platform</div>
+          {platformItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="text-white/70 hover:text-white transition pl-2"
+              onClick={() => setOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="border-t border-white/10 pt-1" />
+          {navItems.filter(i => !i.section).slice(6).map((item) => (
             <Link
               key={item.to}
               to={item.to}
