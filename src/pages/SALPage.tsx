@@ -1,4 +1,5 @@
 import React from "react";
+import { Eyebrow } from "../components/ui";
 import { Helmet } from "react-helmet-async";
 
 function ShieldIcon() {
@@ -41,7 +42,8 @@ export function SALPage() {
           <ShieldIcon />
           ENFORCEMENT KERNEL · FOUNDATIONAL LAYER
         </div>
-        <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+        <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
+      <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           SAL Enforcement Kernel
         </h1>
         <p className="mt-4 max-w-3xl text-lg text-white/70 leading-relaxed">

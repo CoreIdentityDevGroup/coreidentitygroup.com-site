@@ -11,7 +11,7 @@ export function AgentIdentitySystemsPage() {
       </Helmet>
 
       <div className="space-y-4 cidg-fadein">
-        <Eyebrow>A COREIDENTITY DEVELOPMENT GROUP COMPANY</Eyebrow>
+        <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
         <PageTitle>Agent Identity Systems</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed text-lg">
           Every agent needs an identity it can prove. Agent Identity Systems

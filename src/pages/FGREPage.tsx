@@ -11,7 +11,7 @@ export function FGREPage() {
       </Helmet>
 
  <div className="space-y-4 cidg-fadein">
- <Eyebrow>FORMAL GOVERNANCE REASONING ENGINE — FIPS 205</Eyebrow>
+ <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
  <PageTitle>Formal Governance Verification</PageTitle>
  <p className="text-white/70 max-w-3xl leading-relaxed text-lg">
  Mathematical assurance for governance policy integrity — before any policy activates.

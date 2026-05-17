@@ -11,7 +11,7 @@ export function QuantumHardeningPage() {
       </Helmet>
 
  <div className="space-y-4 cidg-fadein">
- <Eyebrow>QUANTUM HARDENING — FIPS 203 / 204 / 205</Eyebrow>
+ <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
  <PageTitle>Quantum-Resistant by Design</PageTitle>
  <p className="text-white/70 max-w-3xl leading-relaxed text-lg">
  CoreIdentity is the first AI governance platform to complete
