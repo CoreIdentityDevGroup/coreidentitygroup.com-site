@@ -17,8 +17,8 @@ export function CoreIdentityAdvisoryGroupPage() {
         CoreIdentity Advisory Group
       </p>
       <PageHero
-        title="AI Governance Advisory for Regulated Enterprises"
-        subtitle="CIAG works with regulated enterprises deploying agentic AI at scale — from initial governance assessment through enterprise deployment. Every engagement is scoped, evidence-based, and designed to produce defensible outcomes."
+        title="Your Agents Are Acting. Can You Prove They Acted Within Bounds?"
+        subtitle="When a regulator, auditor, or board asks what your AI agents did — and why — CIAG ensures you have a defensible answer. We work with regulated enterprises to close enforcement gaps, architect governance frameworks, and deploy the audit infrastructure that turns AI liability into AI accountability."
       />
 
       {/* ── What We Do ─────────────────────────────────────────── */}

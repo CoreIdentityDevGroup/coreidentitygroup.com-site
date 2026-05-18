@@ -176,6 +176,9 @@ const mcpRoute = createRoute({ getParentRoute: () => rootRoute, path: "/mcp", co
 
 import { SALPage } from "./pages/SALPage";
 import { FGREPage } from "./pages/FGREPage";
+import { HealthcareGovernancePage } from "./pages/HealthcareGovernancePage";
+import { BFSIGovernancePage } from "./pages/BFSIGovernancePage";
+import { SovereignGovernancePage } from "./pages/SovereignGovernancePage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import BlogPostPage from "./pages/BlogPostPage";
 const salRoute = createRoute({ getParentRoute: () => rootRoute, path: "/sal", component: SALPage });
@@ -191,6 +194,24 @@ const blogPostRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/blog/$slug",
   component: BlogPostPage,
+});
+
+const healthcareRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/healthcare",
+  component: HealthcareGovernancePage,
+});
+
+const bfsiRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/bfsi",
+  component: BFSIGovernancePage,
+});
+
+const sovereignRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/sovereign",
+  component: SovereignGovernancePage,
 });
 
 const routeTree = rootRoute.addChildren([
@@ -225,6 +246,9 @@ const routeTree = rootRoute.addChildren([
   fgreRoute,
   blogIndexRoute,
   blogPostRoute,
+  healthcareRoute,
+  bfsiRoute,
+  sovereignRoute,
 ]);
 
 export const router = createRouter({ routeTree });
