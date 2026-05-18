@@ -16,7 +16,7 @@ type Vertical = {
   accentBorder?: string;
 };
 
-// VERTICALS-v2 — Full 10-vertical AEG catalog
+// VERTICALS-v2 — Full 12-vertical AEG catalog
 const verticals: Vertical[] = [
   // CIDG_SPRINT02_PCM_VERTICAL
   {
@@ -369,9 +369,9 @@ export function CoreIdentityTechnologiesPage() {
           <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-5 cidg-card md:col-span-2">
             <div className="text-xs font-semibold tracking-wide text-emerald-400 uppercase mb-2">Digital Labor</div>
             <div className="text-lg font-semibold text-white mb-2">SmartNation AI</div>
-            <p className="text-sm text-white/65 leading-relaxed mb-3">10,000 governed agents across 10 industry verticals. Pre-built, compliance-ready digital labor — deployed under full AEG enforcement from day one. Every agent has a real labor position, a governance profile, and a SAL audit trail.</p>
+            <p className="text-sm text-white/65 leading-relaxed mb-3">10,000 governed agents across 12 industry verticals. Pre-built, compliance-ready digital labor — deployed under full AEG enforcement from day one. Every agent has a real labor position, a governance profile, and a SAL audit trail.</p>
             <ul className="space-y-1 mb-4">
-              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>10,000 agents across 10 verticals</span></li>
+              <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>10,000 agents across 12 verticals</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Integration-ready governed delivery patterns</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Measured outcomes with full audit trails</span></li>
             </ul>

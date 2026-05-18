@@ -36,9 +36,9 @@ export function CoreIdentityAdvisoryGroupPage() {
 
           <Card>
             <div className="space-y-2">
-              <div className="text-xl font-semibold">Governance-Only Deployment</div>
+              <div className="text-xl font-semibold">Govern Your Existing AI Fleet</div>
               <p className="text-white/70 leading-relaxed">
-                For organizations that already operate AI systems but lack governance controls: Sentinel and Nexus deploy as a control wrapper restoring policy enforcement, auditability, evidence capture, and safe escalation — without replatforming existing systems.
+                For organizations already operating AI agents: CIAG deploys the complete CoreIdentity Governance Infrastructure around your existing fleet — enforcing policy, establishing cryptographic agent identity, and generating the audit evidence your regulators and board require. No replatforming. No agent replacement. Complete governance from day one.
               </p>
             </div>
           </Card>
