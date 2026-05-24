@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { GOVERNANCE_GROUPS } from "../data/governanceNav";
 
 type NavLink = { to: string; label: string };
 
@@ -20,12 +21,6 @@ const LAYERS: NavLink[] = [
   { to: "/layer-d", label: "Cryptographic Hardening" },
 ];
 
-const GOVERNANCE: NavLink[] = [
-  { to: "/governance/healthcare", label: "Healthcare" },
-  { to: "/governance/bfsi", label: "BFSI" },
-  { to: "/governance/sovereign", label: "Sovereign" },
-];
-
 function Column({ title, links }: { title: string; links: NavLink[] }) {
   return (
     <div className="space-y-3">
@@ -43,6 +38,37 @@ function Column({ title, links }: { title: string; links: NavLink[] }) {
   );
 }
 
+// Governance column mirrors the Header governance menu exactly — same shared
+// GOVERNANCE_GROUPS source, same two-group structure, same links.
+function GovernanceColumn() {
+  return (
+    <div className="space-y-3">
+      <div className="text-xs font-medium uppercase tracking-widest text-ink-muted">Governance</div>
+      <div className="space-y-4">
+        {GOVERNANCE_GROUPS.map((group) => (
+          <div key={group.to} className="space-y-2">
+            <Link
+              to={group.to}
+              className="block text-xs font-semibold uppercase tracking-widest text-accent transition hover:text-accent-strong"
+            >
+              {group.label}
+            </Link>
+            <ul className="space-y-2 pl-3">
+              {group.items.map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="text-ink-secondary transition hover:text-ink">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="mt-12 border-t border-line px-6 py-10 text-sm text-ink-secondary">
@@ -54,14 +80,14 @@ export default function Footer() {
           </div>
           <div className="cidg-separator mt-3" />
           <div className="pt-1 text-xs leading-relaxed text-ink-muted">
-            Provable proof that autonomous systems acted within authority.
+            Proof that autonomous systems acted within authority.
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
           <Column title="Company" links={COMPANY} />
           <Column title="Governance Layers" links={LAYERS} />
-          <Column title="Governance" links={GOVERNANCE} />
+          <GovernanceColumn />
         </div>
       </div>
 
