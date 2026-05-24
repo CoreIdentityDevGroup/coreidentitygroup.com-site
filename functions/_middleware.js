@@ -10,6 +10,30 @@ const POSTS = {
   }
 };
 
+// Static governance surfaces — pre-rendered OG cards for social/bot crawlers.
+const PAGES = {
+  "/platform": {
+    title: "Platform Architecture | CoreIdentity",
+    desc: "The complete CoreIdentity governance substrate for evaluators: eight components across identity, authorization, formal verification, orchestration, and post-quantum hardening — 25 governance tables, 734/734 tests passing, 100K+ governed calls."
+  },
+  "/layer-a": {
+    title: "Execution Integrity — Layer A | CoreIdentity",
+    desc: "Prove which agent acted, under whose authority, and whether it was permitted. Agent Identity Systems + runtime behavioral fingerprinting, ML-DSA-65 signed."
+  },
+  "/layer-b": {
+    title: "Verification at Scale — Layer B | CoreIdentity",
+    desc: "Policy proven correct before it activates and enforced deterministically once it does. FGRE formal reasoning + the SAL Semantic Authorization Layer."
+  },
+  "/layer-c": {
+    title: "Sovereign Assurance — Layer C | CoreIdentity",
+    desc: "Delegation lineage and trust-decay scoring across the entire agent fleet. Nexus orchestration, AGO autonomous supervision, and behavioral genealogy."
+  },
+  "/layer-d": {
+    title: "Cryptographic Hardening — Layer D | CoreIdentity",
+    desc: "Post-quantum protection across every cryptographic surface — the first commercial platform in production with all three NIST FIPS standards (203/204/205)."
+  }
+};
+
 const BOTS = [
   'twitterbot','facebookexternalhit','linkedinbot','whatsapp',
   'slackbot','discordbot','telegrambot','googlebot','bingbot',
@@ -50,12 +74,17 @@ export async function onRequest({ request, next }) {
   const ua = request.headers.get('user-agent') || '';
   if (!isBot(ua)) return next();
 
-  const path = new URL(request.url).pathname;
+  const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
   const headers = { 'Content-Type': 'text/html;charset=UTF-8', 'Cache-Control': 'public,max-age=3600' };
 
   const m = path.match(/^\/blog\/([^/]+)\/?$/);
   if (m && POSTS[m[1]]) {
     const p = POSTS[m[1]];
+    return new Response(card(p.title, p.desc, BASE + path, IMG), { headers });
+  }
+
+  if (PAGES[path]) {
+    const p = PAGES[path];
     return new Response(card(p.title, p.desc, BASE + path, IMG), { headers });
   }
 

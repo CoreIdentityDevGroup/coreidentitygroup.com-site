@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /portal
 Disallow: /_headers
 Disallow: /_redirects
 Sitemap: https://coreidentitygroup.com/sitemap.xml
