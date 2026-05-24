@@ -61,8 +61,8 @@ export async function onRequest({ request, next }) {
 
   if (path === '/' || path === '') {
     return new Response(card(
-      'CoreIdentity - Governance Infrastructure for Agentic AI',
-      'The control plane for autonomous enterprise AI. Identity enforcement, policy authorization, and immutable audit.',
+      'CoreIdentity — Institutional Trust Infrastructure for Autonomous Systems',
+      'When you delegate consequential authority to AI, you need institutional-grade proof your agents acted correctly. CoreIdentity makes every AI decision provable — authorized, attributed, and auditable.',
       BASE, IMG
     ), { headers });
   }

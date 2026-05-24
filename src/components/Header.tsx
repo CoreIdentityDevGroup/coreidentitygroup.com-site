@@ -42,7 +42,7 @@ export function Header() {
               <div className="text-sm font-semibold tracking-[0.22em] uppercase leading-tight">
                 COREIDENTITY DEVELOPMENT GROUP
               </div>
-              <div className="text-xs text-white/60 leading-tight">The Control Layer for Governed AI</div>
+              <div className="text-xs text-white/60 leading-tight">Institutional Trust Infrastructure for Autonomous Systems</div>
             </div>
           </Link>
 

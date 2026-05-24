@@ -8,10 +8,10 @@ export default function Footer() {
         {/* Brand */}
         <div className="space-y-2 max-w-xs">
           <div className="text-white/80 font-medium tracking-wide">CoreIdentity Development Group</div>
-          <div className="text-white/40 text-xs tracking-[0.12em] uppercase">Agentic Execution Governance</div>
+          <div className="text-white/40 text-xs tracking-[0.12em] uppercase">Institutional Trust Infrastructure</div>
           <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mt-3" />
           <div className="text-white/35 text-xs leading-relaxed pt-1">
-            The control plane for autonomous enterprise AI.
+            Provable proof that autonomous systems acted within authority.
           </div>
         </div>
 
