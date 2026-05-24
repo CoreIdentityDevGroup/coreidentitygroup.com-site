@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 import { DemoRequestBanner } from "../components/DemoRequestBanner";
 import { PlatformStatsSection } from "../components/PlatformStatsSection";
-import { SectionHead, ProofStat } from "../components/institutional";
+import { SectionHead } from "../components/institutional";
 
 // Live metrics fed by the secured /api/live-metrics Worker (Step 0).
 type LiveMetrics = {
@@ -146,17 +146,6 @@ export default function HomePage() {
               ) : null}
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* 5 — Traction stats */}
-      <section>
-        <SectionHead title="Operating infrastructure, not a roadmap" intro="Every figure below is sourced from live production deployments." />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <ProofStat value="25" label="Governance tables" detail="Codified policy, controls, and evidence schemas" />
-          <ProofStat value="734 / 734" label="Tests passing" detail="Security, PQ-CA, load, DR, compliance, adversarial" />
-          <ProofStat value="14" label="Agents fingerprinted" detail="Live runtime behavioral profiles under monitoring" />
-          <ProofStat value="3 of 3" label="NIST FIPS PQ standards" detail="FIPS 203, 204, and 205 — first in production" />
         </div>
       </section>
 
