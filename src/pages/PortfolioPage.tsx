@@ -38,17 +38,17 @@ export function PortfolioPage() {
         <div className="grid gap-5 md:grid-cols-1 max-w-2xl">
           <PortfolioCard
             title="Semantic Authorization Layer (SAL)"
-            href="/sal"
+            href="/layer-b"
             body="The deterministic pre-execution authorization kernel at the core of every CoreIdentity deployment. SAL evaluates every agent request across five dimensions — Identity, Intent, Asset, Action, and Context (IIAAC) — before execution is permitted. Every decision generates an immutable Proof Pack anchored to a cryptographic ledger. Fail-closed by design: if SAL is unreachable, execution is blocked."
           />
           <PortfolioCard
             title="Quantum Hardening — FIPS 203/204/205"
-            href="/quantum-hardening"
+            href="/layer-d"
             body="Hardened against both current and future threats. Post-quantum cryptography — ML-KEM-768, ML-DSA-65, and SLH-DSA-128s — runs across SAL, Sentinel, Agent Identity Systems, and Nexus. 100,000 soak cycles. Zero failures."
           />
           <PortfolioCard
             title="Formal Governance Verification (FGRE)"
-            href="/fgre"
+            href="/layer-b"
             body="The first commercial implementation of formal mathematical governance verification. Z3 SMT solver detects policy contradictions, validates execution paths, and generates SLH-DSA-128s signed proof artifacts before any policy activates. Machine-verifiable. Exportable for regulatory submission and sovereign audit."
           />
         </div>
@@ -60,22 +60,22 @@ export function PortfolioPage() {
         <div className="grid gap-5 md:grid-cols-2">
           <PortfolioCard
             title="Sentinel"
-            href="/sentinel"
+            href="/layer-d"
             body="Governance layer enforcing policy, approvals, identity boundaries, auditability, and evidence capture. Operates above SAL in the enforcement chain. Designed to be fail-closed when authority or data is missing."
           />
           <PortfolioCard
             title="Nexus"
-            href="/nexus"
+            href="/layer-c"
             body="Orchestration layer coordinating workflows, integrations, retries, and recovery. Ensures tasks run inside defined controls and produces structured operational traces for every execution."
           />
           <PortfolioCard
             title="Agent Identity Systems"
-            href="/agentidentity-systems"
+            href="/layer-a"
             body="The identity and accountability infrastructure for autonomous AI. AIS provides cryptographically verifiable agent authentication, policy-linked authorization boundaries, provenance tracking, and audit-grade attribution — enforced at the execution layer. Production-stable with 100,000+ governed endpoint calls validated."
           />
           <PortfolioCard
             title="AGO — Autonomous Governance Orchestrator"
-            href="/ago"
+            href="/layer-c"
             body="The operating agent that runs CoreIdentity's governance workflows under full Sentinel and Nexus enforcement. AGO validates fail-closed controls in real operational conditions, produces repeatable governance evidence, and serves as the verified pilot pattern for enterprise deployments."
           />
           <PortfolioCard
@@ -85,7 +85,7 @@ export function PortfolioPage() {
           />
           <PortfolioCard
             title="MCP Protocol"
-            href="/mcp"
+            href="/layer-d"
             body="Production MCP server exposing eleven live governance tools across four tenant namespaces. Any MCP-compatible AI client, agent, or orchestration framework can query the CoreIdentity platform with full policy enforcement, namespace isolation, and audit logging on every call."
           />
         </div>
@@ -96,7 +96,7 @@ export function PortfolioPage() {
         <div className="grid gap-5 md:grid-cols-2">
           <PortfolioCard
             title="CoreIdentity Technologies"
-            href="/coreidentity-technologies"
+            href="/platform"
             body="Platform company that owns and monetizes governed digital labor. Houses product R&D and the execution stack. CoreIdentity Technologies is where delivery becomes repeatable and where platform IP is developed."
           />
           <PortfolioCard

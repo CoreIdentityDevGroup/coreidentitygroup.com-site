@@ -332,7 +332,7 @@ export function CoreIdentityTechnologiesPage() {
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Immutable Proof Pack on every decision</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Sub-3ms enforcement latency</span></li>
             </ul>
-            <Link to="/sal" className="text-sm text-amber-400/80 hover:text-amber-400 transition">SAL Kernel →</Link>
+            <Link to="/layer-b" className="text-sm text-amber-400/80 hover:text-amber-400 transition">SAL Kernel →</Link>
           </div>
 
           <div className="rounded-2xl border border-blue-400/20 bg-blue-400/5 p-5 cidg-card">
@@ -344,7 +344,7 @@ export function CoreIdentityTechnologiesPage() {
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Authorization boundaries + traceability</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Risk containment + compliance posture</span></li>
             </ul>
-            <Link to="/sentinel" className="text-sm text-blue-400/80 hover:text-blue-400 transition">Sentinel →</Link>
+            <Link to="/layer-d" className="text-sm text-blue-400/80 hover:text-blue-400 transition">Sentinel →</Link>
           </div>
 
           <div className="rounded-2xl border border-indigo-400/20 bg-indigo-400/5 p-5 cidg-card">
@@ -356,7 +356,7 @@ export function CoreIdentityTechnologiesPage() {
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Policy-linked identity boundaries</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Full provenance with no gaps</span></li>
             </ul>
-            <Link to="/agentidentity-systems" className="text-sm text-indigo-400/80 hover:text-indigo-400 transition">Agent Identity Systems →</Link>
+            <Link to="/layer-a" className="text-sm text-indigo-400/80 hover:text-indigo-400 transition">Agent Identity Systems →</Link>
           </div>
 
           <div className="rounded-2xl border border-orange-400/20 bg-orange-400/5 p-5 cidg-card">
@@ -368,7 +368,7 @@ export function CoreIdentityTechnologiesPage() {
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Agent orchestration + tool use</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Human-in-the-loop checkpoints</span></li>
             </ul>
-            <Link to="/nexus" className="text-sm text-orange-400/80 hover:text-orange-400 transition">Nexus →</Link>
+            <Link to="/layer-c" className="text-sm text-orange-400/80 hover:text-orange-400 transition">Nexus →</Link>
           </div>
 
           <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-5 cidg-card md:col-span-2">
@@ -480,7 +480,7 @@ export function CoreIdentityTechnologiesPage() {
             </div>
           </div>
           <div className="mt-4 flex items-center gap-3">
-            <a href="/sal" className="inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition font-medium">
+            <a href="/layer-b" className="inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition font-medium">
               View SAL Enforcement Specification →
             </a>
           </div>
@@ -513,7 +513,7 @@ export function CoreIdentityTechnologiesPage() {
             </div>
           </div>
           <div className="mt-4">
-            <a href="/mcp" className="text-white/70 hover:text-white transition text-sm">View full MCP Protocol documentation →</a>
+            <a href="/layer-d" className="text-white/70 hover:text-white transition text-sm">View full MCP Protocol documentation →</a>
           </div>
         </div>
       </section>

@@ -1,1 +1,17 @@
+# 301 redirects — retired surfaces → governance layers (Institutional Carbon restructure).
+# Specific rules must precede the SPA catch-all (first match wins).
+/sal                     /layer-b   301
+/fgre                    /layer-b   301
+/sentinel                /layer-d   301
+/nexus                   /layer-c   301
+/agentidentity-systems   /layer-a   301
+/mcp                     /layer-d   301
+/ago                     /layer-c   301
+/ago-1                   /layer-c   301
+/sentinel-os             /layer-d   301
+/nexus-os                /layer-c   301
+/quantum-hardening       /layer-d   301
+/coreidentity-technologies  /platform  301
+
+# SPA fallback
 /*    /index.html   200

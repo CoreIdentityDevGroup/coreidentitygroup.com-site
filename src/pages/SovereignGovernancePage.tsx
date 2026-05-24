@@ -37,7 +37,7 @@ export function SovereignGovernancePage() {
             Request a Sovereign Briefing →
           </Link>
           <Link
-            to="/quantum-hardening"
+            to="/layer-d"
             className="inline-flex items-center justify-center rounded-xl border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
             View Post-Quantum Posture
@@ -107,7 +107,7 @@ export function SovereignGovernancePage() {
             <div className="text-white/60">FIPS 205 · Hash-based signatures · Live</div>
           </div>
         </div>
-        <Link to="/quantum-hardening" className="mt-4 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
+        <Link to="/layer-d" className="mt-4 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
           View full cryptographic posture →
         </Link>
       </div>

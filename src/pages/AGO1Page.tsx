@@ -93,12 +93,12 @@ export function AGO1Page() {
           <Card>
             <CardTitle>Sentinel</CardTitle>
             <CardText>Policy enforcement, approvals, identity, evidence capture, and escalation logic.</CardText>
-            <ButtonLink to="/sentinel">View Sentinel</ButtonLink>
+            <ButtonLink to="/layer-d">View Sentinel</ButtonLink>
           </Card>
           <Card>
             <CardTitle>Nexus</CardTitle>
             <CardText>Workflow orchestration, integrations, retries, recovery, and controlled execution.</CardText>
-            <ButtonLink to="/nexus">View Nexus</ButtonLink>
+            <ButtonLink to="/layer-c">View Nexus</ButtonLink>
           </Card>
           <Card>
             <CardTitle>SmartNation AI</CardTitle>
@@ -125,7 +125,7 @@ export function AGO1Page() {
             compliance gaps before they become incidents. Interventions are logged as immutable
             DPO audit records.
           </p>
-          <a href="/sal" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
+          <a href="/layer-b" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
             Learn how SAL enforces boundaries →
           </a>
         </div>

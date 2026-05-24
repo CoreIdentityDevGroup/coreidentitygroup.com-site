@@ -37,7 +37,7 @@ export function HealthcareGovernancePage() {
             Schedule a Governance Assessment →
           </Link>
           <Link
-            to="/quantum-hardening"
+            to="/layer-d"
             className="inline-flex items-center justify-center rounded-xl border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
             View Post-Quantum Posture
@@ -130,7 +130,7 @@ export function HealthcareGovernancePage() {
           commitments can deploy CoreIdentity with confidence that the cryptographic surface is
           already hardened.
         </p>
-        <Link to="/quantum-hardening" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
+        <Link to="/layer-d" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
           View full quantum hardening posture →
         </Link>
       </div>

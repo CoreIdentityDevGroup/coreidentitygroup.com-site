@@ -85,23 +85,23 @@ export function FAQPage() {
             </p>
             <ul className="list-disc pl-5 space-y-2">
               <li>
-                <Link to="/sal" className="text-white/80 hover:text-white">SAL Kernel</Link>
+                <Link to="/layer-b" className="text-white/80 hover:text-white">SAL Kernel</Link>
                 {" "}— deterministic pre-execution authorization. Evaluates every
                 request across five dimensions before execution is permitted.
                 Fail-closed by design.
               </li>
               <li>
-                <Link to="/sentinel" className="text-white/80 hover:text-white">Sentinel</Link>
+                <Link to="/layer-d" className="text-white/80 hover:text-white">Sentinel</Link>
                 {" "}— governance layer enforcing policy, identity boundaries,
                 approval gates, and evidence capture.
               </li>
               <li>
-                <Link to="/nexus" className="text-white/80 hover:text-white">Nexus</Link>
+                <Link to="/layer-c" className="text-white/80 hover:text-white">Nexus</Link>
                 {" "}— orchestration layer coordinating controlled multi-agent
                 execution with structured operational traces.
               </li>
               <li>
-                <Link to="/agentidentity-systems" className="text-white/80 hover:text-white">Agent Identity Systems</Link>
+                <Link to="/layer-a" className="text-white/80 hover:text-white">Agent Identity Systems</Link>
                 {" "}— cryptographically verifiable agent identity, authorization
                 boundaries, provenance, and attribution.
               </li>

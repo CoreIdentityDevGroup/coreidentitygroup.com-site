@@ -37,7 +37,7 @@ export function BFSIGovernancePage() {
             Schedule a Governance Assessment →
           </Link>
           <Link
-            to="/coreidentity-technologies"
+            to="/platform"
             className="inline-flex items-center justify-center rounded-xl border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
             View Platform Stack

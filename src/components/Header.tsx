@@ -1,67 +1,90 @@
-import React, { useMemo, useState } from "react";
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 
-type NavItem = { to: string; label: string; section?: "platform" };
+type NavLink = { to: string; label: string };
+
+const PLATFORM_MENU: NavLink[] = [
+  { to: "/platform", label: "Platform Architecture" },
+  { to: "/layer-a", label: "Execution Integrity" },
+  { to: "/layer-b", label: "Verification at Scale" },
+  { to: "/layer-c", label: "Sovereign Assurance" },
+  { to: "/layer-d", label: "Cryptographic Hardening" },
+];
+
+const GOVERNANCE_MENU: NavLink[] = [
+  { to: "/governance/healthcare", label: "Healthcare" },
+  { to: "/governance/bfsi", label: "BFSI" },
+  { to: "/governance/sovereign", label: "Sovereign" },
+];
+
+function Chevron() {
+  return (
+    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="opacity-60">
+      <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function DesktopMenu({ label, items }: { label: string; items: NavLink[] }) {
+  return (
+    <div className="group relative">
+      <button className="inline-flex items-center gap-1 py-2 text-ink-secondary transition hover:text-ink">
+        {label}
+        <Chevron />
+      </button>
+      <div className="invisible absolute left-0 top-full z-50 pt-2 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+        <div className="min-w-[248px] rounded-xl border border-line bg-carbon-panel/95 p-2 shadow-2xl backdrop-blur">
+          {items.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="block rounded-lg px-3 py-2 text-sm text-ink-secondary transition hover:bg-accent/10 hover:text-accent"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function Header() {
   const [open, setOpen] = useState(false);
-
-  const navItems: NavItem[] = useMemo(
-    () => [
-      { to: "/", label: "Home" },
-      { to: "/about", label: "About Us" },
-      { to: "/leadership", label: "Leadership" },
-      { to: "/ciag", label: "CoreIdentity Advisory Group" },
-      { to: "/coreidentity-technologies", label: "CoreIdentity Technologies" },
-      { to: "/governance-infrastructure", label: "Governance Infrastructure" },
-      { to: "/sal", label: "SAL Enforcement Kernel", section: "platform" },
-      { to: "/sentinel", label: "Sentinel", section: "platform" },
-      { to: "/nexus", label: "Nexus", section: "platform" },
-      { to: "/agentidentity-systems", label: "Agent Identity Systems", section: "platform" },
-      { to: "/ago", label: "AGO", section: "platform" },
-      { to: "/smartnation-ai", label: "SmartNation AI", section: "platform" },
-      { to: "/mcp", label: "MCP Protocol", section: "platform" },
-      { to: "/quantum-hardening", label: "Quantum Hardening", section: "platform" },
-      { to: "/fgre", label: "Formal Governance Verification", section: "platform" },
-      { to: "/blog", label: "Blog" },
-      { to: "/faq", label: "FAQ" },
-      { to: "/contact", label: "Contact" },
-    ],
-    [],
-  );
-
-  const mainItems = navItems.filter(i => !i.section);
-  const platformItems = navItems.filter(i => i.section === "platform");
+  const close = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-black/30 border-b border-white/10">
+    <header className="sticky top-0 z-50 border-b border-line bg-carbon/70 backdrop-blur">
       <div className="mx-auto container-max px-4">
-        <div className="h-16 py-3 flex items-center justify-between gap-4">
+        <div className="flex h-16 items-center justify-between gap-4 py-3">
           <Link to="/" className="min-w-0 no-underline text-inherit">
-            <div>
-              <div className="text-sm font-semibold tracking-[0.22em] uppercase leading-tight">
-                COREIDENTITY DEVELOPMENT GROUP
-              </div>
-              <div className="text-xs text-white/60 leading-tight">Institutional Trust Infrastructure for Autonomous Systems</div>
+            <div className="text-sm font-semibold uppercase leading-tight tracking-[0.22em] text-ink">
+              COREIDENTITY DEVELOPMENT GROUP
+            </div>
+            <div className="text-xs leading-tight text-ink-muted">
+              Institutional Trust Infrastructure for Autonomous Systems
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-5 text-sm text-white/70">
-            {mainItems.slice(0, 6).map((item) => (
-              <Link key={item.to} to={item.to} className="hover:text-white transition">
-                {item.label}
-              </Link>
-            ))}
+          <nav className="hidden items-center gap-6 text-sm lg:flex">
+            <DesktopMenu label="Platform" items={PLATFORM_MENU} />
+            <DesktopMenu label="Governance" items={GOVERNANCE_MENU} />
+            <Link to="/ciag" className="py-2 text-ink-secondary transition hover:text-ink">
+              Advisory
+            </Link>
+            <Link to="/about" className="py-2 text-ink-secondary transition hover:text-ink">
+              About
+            </Link>
             <Link
               to="/contact"
-              className="ml-2 inline-flex items-center rounded-full px-4 py-2 bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/10 transition text-white"
+              className="ml-1 inline-flex items-center rounded-full bg-accent px-4 py-2 font-medium text-carbon transition hover:bg-accent-strong"
             >
-              Request a Briefing
+              Contact
             </Link>
           </nav>
 
           <button
-            className="lg:hidden inline-flex items-center rounded-full px-4 py-2 bg-white/5 border border-white/10 hover:bg-white/10 transition"
+            className="inline-flex items-center rounded-full border border-line bg-carbon-panel px-4 py-2 text-sm text-ink transition hover:border-accent/40 lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
@@ -71,33 +94,33 @@ export function Header() {
         </div>
       </div>
 
-      <div id="mobile-menu" className={["lg:hidden border-t border-white/10", open ? "block" : "hidden"].join(" ")}>
-        <div className="mx-auto container-max px-4 py-4 grid gap-3 text-sm">
-          {mainItems.slice(0, 6).map((item) => (
-            <Link key={item.to} to={item.to} className="text-white/80 hover:text-white transition" onClick={() => setOpen(false)}>
+      <div id="mobile-menu" className={["border-t border-line lg:hidden", open ? "block" : "hidden"].join(" ")}>
+        <div className="mx-auto container-max grid gap-1 px-4 py-4 text-sm">
+          <div className="px-1 pb-1 pt-1 text-xs uppercase tracking-widest text-ink-muted">Platform</div>
+          {PLATFORM_MENU.map((item) => (
+            <Link key={item.to} to={item.to} onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
               {item.label}
             </Link>
           ))}
-          <div className="text-white/30 text-xs tracking-widest uppercase pt-1 pb-0.5 border-t border-white/10 mt-1">
-            Governance Infrastructure
-          </div>
-          {platformItems.map((item) => (
-            <Link key={item.to} to={item.to} className="text-white/70 hover:text-white transition pl-2" onClick={() => setOpen(false)}>
+          <div className="mt-2 border-t border-line px-1 pb-1 pt-3 text-xs uppercase tracking-widest text-ink-muted">Governance</div>
+          {GOVERNANCE_MENU.map((item) => (
+            <Link key={item.to} to={item.to} onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
               {item.label}
             </Link>
           ))}
-          <div className="border-t border-white/10 pt-1 mt-1" />
-          {mainItems.slice(6).map((item) => (
-            <Link key={item.to} to={item.to} className="text-white/80 hover:text-white transition" onClick={() => setOpen(false)}>
-              {item.label}
-            </Link>
-          ))}
+          <div className="mt-2 border-t border-line pt-2" />
+          <Link to="/ciag" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            Advisory
+          </Link>
+          <Link to="/about" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            About
+          </Link>
           <Link
             to="/contact"
-            className="mt-2 inline-flex items-center justify-center rounded-full px-4 py-2 bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/10 transition text-white"
-            onClick={() => setOpen(false)}
+            onClick={close}
+            className="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-4 py-2 font-medium text-carbon transition hover:bg-accent-strong"
           >
-            Request a Briefing
+            Contact
           </Link>
         </div>
       </div>

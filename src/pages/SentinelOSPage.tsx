@@ -32,7 +32,7 @@ export function SentinelOSPage() {
         <p className="text-sm text-white/70 leading-relaxed">
           All Sentinel enforcement operations are powered by the SAL Enforcement Kernel — the deterministic gateway that mathematically prevents any machine action violating codified business logic or safety thresholds. Every policy decision, approval gate, and audit trail is arbitrated through SAL's five-dimensional IIAAC model.
         </p>
-        <a href="/sal" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
+        <a href="/layer-b" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
           Learn how SAL enforces boundaries →
         </a>
       </div>

@@ -1,5 +1,3 @@
-/* CHC_TECHNOLOGIES_IMPORT_NORMALIZED */
-/* CHC_COMPOSED_TECHNOLOGIES_PATCH */
 import {
   createRouter,
   createRootRoute,
@@ -9,25 +7,30 @@ import { Layout } from "./components/Layout";
 
 import HomePage from "./pages/HomePage";
 import { PortfolioPage } from "./pages/PortfolioPage";
-import { SentinelOSPage } from "./pages/SentinelOSPage";
-import { NexusOSPage } from "./pages/NexusOSPage";
 import { SmartNationAIPage } from "./pages/SmartNationAIPage";
 import { CoreIdentityAdvisoryGroupPage } from "./pages/CoreIdentityAdvisoryGroupPage";
-import { AgentIdentitySystemsPage } from "./pages/AgentIdentitySystemsPage";
 import { PortalPage } from "./pages/PortalPage";
 import { FoundersPage } from "./pages/FoundersPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { TermsPage } from "./pages/TermsPage";
-import { QuantumHardeningPage } from "./pages/QuantumHardeningPage";
-import { AGO1Page } from "./pages/AGO1Page";
 import { ResourcesPage } from "./pages/ResourcesPage";
 import { FAQPage } from "./pages/FAQPage";
 import { AboutPage } from "./pages/AboutPage";
 import { LeadershipPage } from "./pages/LeadershipPage";
 import ContactPage from "./pages/ContactPage";
-// CHC-MCP-ROUTE-v1
-import { MCPPage } from "./pages/MCPPage";
-import { CoreIdentityTechnologiesComposed } from "./components/CoreIdentityTechnologiesComposed";
+import { HealthcareGovernancePage } from "./pages/HealthcareGovernancePage";
+import { BFSIGovernancePage } from "./pages/BFSIGovernancePage";
+import { SovereignGovernancePage } from "./pages/SovereignGovernancePage";
+import BlogIndexPage from "./pages/BlogIndexPage";
+import BlogPostPage from "./pages/BlogPostPage";
+
+// Institutional Carbon restructure — four governance layers + platform deep-dive.
+import { PlatformPage } from "./pages/PlatformPage";
+import { LayerAPage } from "./pages/LayerAPage";
+import { LayerBPage } from "./pages/LayerBPage";
+import { LayerCPage } from "./pages/LayerCPage";
+import { LayerDPage } from "./pages/LayerDPage";
+
 const rootRoute = createRootRoute({ component: Layout });
 
 const indexRoute = createRoute({
@@ -36,6 +39,38 @@ const indexRoute = createRoute({
   component: HomePage,
 });
 
+// ── Governance layers (A → D) + platform architecture ───────────────────
+const platformRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/platform",
+  component: PlatformPage,
+});
+
+const layerARoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/layer-a",
+  component: LayerAPage,
+});
+
+const layerBRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/layer-b",
+  component: LayerBPage,
+});
+
+const layerCRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/layer-c",
+  component: LayerCPage,
+});
+
+const layerDRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/layer-d",
+  component: LayerDPage,
+});
+
+// ── Portfolio (Governance Infrastructure + Commercial Products) ──────────
 const govintraRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/governance-infrastructure",
@@ -48,47 +83,19 @@ const portfolioRoute = createRoute({
   component: PortfolioPage,
 });
 
-const coreidentityRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/coreidentity-technologies",
-  component: CoreIdentityTechnologiesComposed,
-});
-
-const sentinelRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/sentinel",
-  component: SentinelOSPage,
-});
-
-const nexusRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/nexus",
-  component: NexusOSPage,
-});
-
 const smartRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/smartnation-ai",
   component: SmartNationAIPage,
 });
 
-const agoRoute = createRoute({
+// ── Advisory (canonical + aliases) ──────────────────────────────────────
+const ciagRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/ago",
-  component: AGO1Page,
+  path: "/ciag",
+  component: CoreIdentityAdvisoryGroupPage,
 });
 
-const ago1Route = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/ago-1",
-  component: AGO1Page,
-});
-
-/**
- * Advisory Group routes
- * Canonical: /coreidentity-ai-advisory-group
- * Alias:     /coreidentity-advisory-group
- */
 const coreidentityAIAdvisoryGroupRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/coreidentity-ai-advisory-group",
@@ -100,12 +107,8 @@ const advisoryRoute = createRoute({
   path: "/coreidentity-advisory-group",
   component: CoreIdentityAdvisoryGroupPage,
 });
-const ciagRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/ciag",
-  component: CoreIdentityAdvisoryGroupPage,
-});
 
+// ── Company + legal ─────────────────────────────────────────────────────
 const foundersRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/founders",
@@ -128,18 +131,6 @@ const portalRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/portal",
   component: PortalPage,
-});
-
-const pqcRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/quantum-hardening",
-  component: QuantumHardeningPage,
-});
-
-const aisRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/agentidentity-systems",
-  component: AgentIdentitySystemsPage,
 });
 
 const resourcesRoute = createRoute({
@@ -172,18 +163,7 @@ const contactRoute = createRoute({
   component: ContactPage,
 });
 
-const mcpRoute = createRoute({ getParentRoute: () => rootRoute, path: "/mcp", component: MCPPage });
-
-import { SALPage } from "./pages/SALPage";
-import { FGREPage } from "./pages/FGREPage";
-import { HealthcareGovernancePage } from "./pages/HealthcareGovernancePage";
-import { BFSIGovernancePage } from "./pages/BFSIGovernancePage";
-import { SovereignGovernancePage } from "./pages/SovereignGovernancePage";
-import BlogIndexPage from "./pages/BlogIndexPage";
-import BlogPostPage from "./pages/BlogPostPage";
-const salRoute = createRoute({ getParentRoute: () => rootRoute, path: "/sal", component: SALPage });
-const fgreRoute = createRoute({ getParentRoute: () => rootRoute, path: "/fgre", component: FGREPage });
-
+// ── Blog ────────────────────────────────────────────────────────────────
 const blogIndexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/blog",
@@ -196,6 +176,7 @@ const blogPostRoute = createRoute({
   component: BlogPostPage,
 });
 
+// ── Governance verticals ────────────────────────────────────────────────
 const healthcareRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/governance/healthcare",
@@ -216,22 +197,25 @@ const sovereignRoute = createRoute({
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
+
+  // Layers + platform
+  platformRoute,
+  layerARoute,
+  layerBRoute,
+  layerCRoute,
+  layerDRoute,
+
+  // Portfolio
   govintraRoute,
   portfolioRoute,
-  coreidentityRoute,
-  sentinelRoute,
-  nexusRoute,
   smartRoute,
-  agoRoute,
-  ago1Route,
 
-  // Advisory Group: canonical first, alias second
+  // Advisory: canonical first, aliases second
   ciagRoute,
   coreidentityAIAdvisoryGroupRoute,
   advisoryRoute,
 
-  aisRoute,
-  pqcRoute,
+  // Company + legal
   portalRoute,
   foundersRoute,
   privacyRoute,
@@ -241,11 +225,12 @@ const routeTree = rootRoute.addChildren([
   aboutRoute,
   leadershipRoute,
   contactRoute,
-  mcpRoute,
-  salRoute,
-  fgreRoute,
+
+  // Blog
   blogIndexRoute,
   blogPostRoute,
+
+  // Governance verticals
   healthcareRoute,
   bfsiRoute,
   sovereignRoute,

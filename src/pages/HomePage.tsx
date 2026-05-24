@@ -201,7 +201,7 @@ export default function HomePage() {
               evaluated across five dimensions before execution is permitted.
               Fail-closed by design — if SAL cannot authorize, execution stops.
             </p>
-            <Link to="/sal" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/layer-b" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               SAL Kernel →
             </Link>
           </div>
@@ -214,7 +214,7 @@ export default function HomePage() {
               evidence capture. The reason your AI fleet cannot make a decision
               your legal team did not authorize.
             </p>
-            <Link to="/sentinel" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/layer-d" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               Sentinel →
             </Link>
           </div>
@@ -227,7 +227,7 @@ export default function HomePage() {
               retries, and recovery — coordinated inside defined governance
               constraints with structured operational traces at every step.
             </p>
-            <Link to="/nexus" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/layer-c" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               Nexus →
             </Link>
           </div>
@@ -240,7 +240,7 @@ export default function HomePage() {
               authorization, provenance, and attribution — enforced at the
               execution layer, not bolted on after the fact.
             </p>
-            <Link to="/agentidentity-systems" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/layer-a" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               Agent Identity Systems →
             </Link>
           </div>
@@ -253,7 +253,7 @@ export default function HomePage() {
               and the validated pilot pattern for every enterprise deployment that follows.
               Governance demonstrated, not just described.
             </p>
-            <Link to="/ago" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/layer-c" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               AGO →
             </Link>
           </div>
@@ -280,7 +280,7 @@ export default function HomePage() {
               queries the CoreIdentity enforcement architecture with full policy
               enforcement, namespace isolation, and audit logging on every call.
             </p>
-            <Link to="/mcp" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/layer-d" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               MCP Protocol →
             </Link>
           </div>
@@ -293,7 +293,7 @@ export default function HomePage() {
               cryptography runs across the full enforcement chain — every surface,
               not just the perimeter. NIST FIPS 203, 204, and 205 in production.
             </p>
-            <Link to="/quantum-hardening" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/layer-d" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               Quantum Hardening →
             </Link>
           </div>
@@ -307,7 +307,7 @@ export default function HomePage() {
               execution paths, and generates machine-verifiable proof artifacts
               before any policy activates.
             </p>
-            <Link to="/fgre" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
+            <Link to="/layer-b" className="mt-4 inline-flex text-sm text-white/50 hover:text-white transition">
               Formal Governance Verification →
             </Link>
           </div>

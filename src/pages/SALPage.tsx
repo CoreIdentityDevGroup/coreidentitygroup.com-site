@@ -173,12 +173,12 @@ export function SALPage() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-base font-semibold text-white mb-2">Powers Sentinel</div>
             <p className="text-sm text-white/70 leading-relaxed">Every Sentinel policy enforcement decision, approval gate evaluation, and kill switch trigger is arbitrated through the SAL Kernel. Sentinel's guarantees are SAL's guarantees.</p>
-            <a href="/sentinel" className="mt-3 inline-flex items-center gap-1 text-sm text-white/50 hover:text-white/80 transition">View Sentinel →</a>
+            <a href="/layer-d" className="mt-3 inline-flex items-center gap-1 text-sm text-white/50 hover:text-white/80 transition">View Sentinel →</a>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
             <div className="text-base font-semibold text-white mb-2">Powers AGO</div>
             <p className="text-sm text-white/70 leading-relaxed">The Autonomous Governance Operator runs under SAL enforcement. Every AGO task execution is SAL-arbitrated — no action can exceed delegated authority or trigger unauthorized external calls.</p>
-            <a href="/ago-1" className="mt-3 inline-flex items-center gap-1 text-sm text-white/50 hover:text-white/80 transition">View AGO-1 →</a>
+            <a href="/layer-c" className="mt-3 inline-flex items-center gap-1 text-sm text-white/50 hover:text-white/80 transition">View AGO-1 →</a>
           </div>
         </div>
       </section>
@@ -241,7 +241,7 @@ export function SALPage() {
             <a href="/contact" className="inline-flex items-center justify-center rounded-full bg-amber-500 hover:bg-amber-400 px-6 py-3 text-sm font-semibold text-black transition">
               Request SAL Specification
             </a>
-            <a href="/coreidentity-technologies" className="inline-flex items-center justify-center rounded-full border border-white/15 hover:bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition">
+            <a href="/platform" className="inline-flex items-center justify-center rounded-full border border-white/15 hover:bg-white/5 px-6 py-3 text-sm font-medium text-white/80 transition">
               View CoreIdentity Technologies
             </a>
           </div>
