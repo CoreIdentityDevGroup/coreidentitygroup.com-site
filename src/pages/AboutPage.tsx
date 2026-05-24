@@ -98,21 +98,32 @@ export function AboutPage() {
               <div className="text-sm text-blue-400 mt-0.5">Founder &amp; Chief Executive Officer</div>
               <div className="mt-4 space-y-3 text-white/72 leading-relaxed">
                 <p>
-                  Todd founded CoreIdentity Development Group Inc. to close the governance gap
-                  in agentic AI deployment — ensuring autonomous systems operate inside policy,
-                  identity, and accountability boundaries at enterprise scale.
+                  CoreIdentity Development Group Inc. was founded to solve a problem most
+                  organizations don't yet know they have — and that no existing platform is
+                  built to address.
                 </p>
                 <p>
-                  He brings over 20 years of leadership experience managing a $65M+ federal
-                  contract portfolio spanning national intelligence and DoD sectors. His
-                  background in mission-critical operational environments — FBI, TSA, FEMA,
-                  and DoD — directly informs CoreIdentity's infrastructure-grade,
-                  compliance-first architecture.
+                  Founder and CEO Todd Morgan brings a career spanning more than 30 years,
+                  including extensive support to the National Intelligence Community and the
+                  Department of Defense across a variety of roles — including the management of
+                  a multi-million dollar portfolio of federal contracts. That experience
+                  produced a direct understanding of what institutional accountability actually
+                  requires in environments where governance is not optional.
                 </p>
                 <p>
-                  Todd is building CoreIdentity as a category-defining, generational company
-                  — not for acquisition, but to establish institutional trust infrastructure for
-                  autonomous systems as a permanent layer of the agentic era.
+                  CoreIdentity reflects that understanding. It was built from the inside out —
+                  by someone who has operated within the institutions that need this
+                  infrastructure, to meet the standards those institutions actually enforce.
+                </p>
+                <p>
+                  The gaps CoreIdentity addresses are not theoretical. They are gaps Todd
+                  encountered firsthand — in environments where the absence of proper governance
+                  infrastructure carries real consequences.
+                </p>
+                <p>
+                  The company is building for the long term — establishing institutional trust
+                  infrastructure for autonomous systems as a permanent and essential layer of
+                  the agentic era.
                 </p>
               </div>
             </div>
