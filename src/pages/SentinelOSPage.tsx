@@ -7,7 +7,7 @@ export function SentinelOSPage() {
     <div className="space-y-8">
       <Helmet>
         <title>Sentinel — AI Agent Policy Enforcement | CoreIdentity</title>
-        <meta name="description" content="Sentinel enforces policy, controls identity boundaries, gates approvals, and captures audit evidence for your AI fleet. The governance layer for enterprise agentic AI." />
+        <meta name="description" content="Sentinel enforces policy, controls identity boundaries, gates approvals, and captures the audit evidence that proves your AI fleet acted within authority — before a regulator asks." />
         <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sentinel","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
       <div className="space-y-3">

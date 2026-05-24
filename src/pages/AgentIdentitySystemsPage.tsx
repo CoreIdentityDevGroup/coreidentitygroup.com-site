@@ -64,7 +64,7 @@ export function AgentIdentitySystemsPage() {
             </span>
           </div>
           <p className="text-white/70 text-sm leading-relaxed">
-            AIS is live in production with over 37,000 verified agent interactions logged at 100% pass rate under continuous soak conditions — validating identity enforcement, authorization boundaries, and audit trail integrity at enterprise scale. The portal is publicly accessible at agentidentity.systems.
+            AIS is live in production with over 100,000 verified agent interactions logged at 100% pass rate under continuous soak conditions — validating identity enforcement, authorization boundaries, and audit trail integrity at enterprise scale. The portal is publicly accessible at agentidentity.systems.
           </p>
           <a
             href="https://agentidentity.systems"

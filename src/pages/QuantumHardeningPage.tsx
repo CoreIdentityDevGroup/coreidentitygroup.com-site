@@ -6,17 +6,17 @@ export function QuantumHardeningPage() {
  return (
  <div className="space-y-12">
       <Helmet>
-        <title>Quantum-Resistant AI Governance | Post-Quantum Cryptography | CoreIdentity</title>
-        <meta name="description" content="CoreIdentity completes post-quantum cryptographic hardening across the full enforcement stack. FIPS 203, 204, and 205. Every surface — not just the perimeter." />
+        <title>Quantum Hardening — Current & Future Threat Protection | CoreIdentity</title>
+        <meta name="description" content="CoreIdentity is hardened against both current and future threats — post-quantum cryptography across the full enforcement chain. NIST FIPS 203, 204, and 205. Every surface, not just the perimeter." />
       </Helmet>
 
  <div className="space-y-4 cidg-fadein">
  <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
- <PageTitle>Quantum-Resistant by Design</PageTitle>
+ <PageTitle>Hardened Against Current and Future Threats</PageTitle>
  <p className="text-white/70 max-w-3xl leading-relaxed text-lg">
- CoreIdentity is the first AI governance platform to complete
- Post-Quantum Cryptographic (PQC) hardening across its full
- enforcement stack. Every cryptographic surface — not just the
+ CoreIdentity is hardened against both current and future threats.
+ Post-Quantum Cryptography (PQC) runs across the full enforcement
+ chain — every cryptographic surface, not just the
  perimeter. </p>
  </div>
 
@@ -153,15 +153,15 @@ export function QuantumHardeningPage() {
  <p className="text-sm text-white/60 leading-relaxed">
  Agent identity tokens, capability certificates, and authorization
  proofs are exactly what adversaries want. PQC protects the most
- sensitive layer of your control plane.
+ sensitive layer of your enforcement chain.
  </p>
  </Card>
  <Card accent="teal">
  <div className="font-semibold text-white mb-2">First-mover credibility with institutional buyers</div>
  <p className="text-sm text-white/60 leading-relaxed">
- Being the first AI governance platform to complete PQC hardening
- is a durable competitive position. It signals institutional-grade
- security posture before regulators require it.
+ Being hardened against both current and future threats across the
+ full enforcement chain is a durable competitive position. It signals
+ institutional-grade security posture before regulators require it.
  </p>
  </Card>
  </div>
