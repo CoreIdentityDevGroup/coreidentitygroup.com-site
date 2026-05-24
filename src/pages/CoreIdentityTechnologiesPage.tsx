@@ -6,6 +6,7 @@ import { Eyebrow } from "../components/ui";
 import { Link } from "@tanstack/react-router";
 import heroImg from "../assets/images/coreidentity-governance-hero.webp";
 import OperationalVerticalsSection from "../components/OperationalVerticalsSection";
+import { Helmet } from "react-helmet-async";
 
 type Vertical = {
   name: string;
@@ -16,7 +17,7 @@ type Vertical = {
   accentBorder?: string;
 };
 
-// VERTICALS-v2 — Full 12-vertical AEG catalog
+// VERTICALS-v2 — Full 12-vertical CoreIdentity enforcement catalog
 const verticals: Vertical[] = [
   // CIDG_SPRINT02_PCM_VERTICAL
   {
@@ -72,7 +73,7 @@ const verticals: Vertical[] = [
     name: "BFSI",
     accent: "rgba(99,102,241,0.06)",
     accentBorder: "rgba(99,102,241,0.2)",
-    oneLiner: "Banking, financial services, and insurance operate under the most demanding regulatory environments. BFSI brings AEG enforcement to every autonomous decision — loan processing, claims handling, fraud detection — with full auditability.",
+    oneLiner: "Banking, financial services, and insurance operate under the most demanding regulatory environments. BFSI brings CoreIdentity enforcement to every autonomous decision — loan processing, claims handling, fraud detection — with full auditability.",
     outcomes: [
       "GLBA, SOX, and Basel III compliant agent execution",
       "Real-time fraud detection with evidence trails",
@@ -96,7 +97,7 @@ const verticals: Vertical[] = [
     name: "LogisticsOps",
     accent: "rgba(59,130,246,0.06)",
     accentBorder: "rgba(59,130,246,0.2)",
-    oneLiner: "Every routing decision, shipment authorization, and carrier action — enforced and auditable. LogisticsOps brings AEG to autonomous logistics networks operating across complex regulatory and contractual environments.",
+    oneLiner: "Every routing decision, shipment authorization, and carrier action — enforced and auditable. LogisticsOps brings CoreIdentity enforcement to autonomous logistics networks operating across complex regulatory and contractual environments.",
     outcomes: [
       "DOT and CTPAT compliant agent execution",
       "Carrier and vendor governance with audit trails",
@@ -287,6 +288,10 @@ function BotIcon() {
 export function CoreIdentityTechnologiesPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>CoreIdentity Technologies | Institutional Trust Infrastructure for Autonomous Systems</title>
+        <meta name="description" content="The CoreIdentity enforcement chain — SAL authorization, Sentinel policy, Nexus orchestration, Agent Identity Systems, and FGRE — that makes every autonomous AI decision provable across twelve industry verticals." />
+      </Helmet>
 
       {/* Hero */}
       <div className="mb-10">
@@ -294,9 +299,9 @@ export function CoreIdentityTechnologiesPage() {
           CoreIdentity Technologies
         </h1>
         <p className="mt-3 max-w-3xl text-lg text-white/70">
-          Governance infrastructure for agentic execution — defining authority, enforcing
+          Institutional trust infrastructure for autonomous systems — defining authority, enforcing
           constraints, and preserving auditability from policy definition through execution
-          and outcome.
+          and outcome, so every AI decision is provable.
         </p>
         <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
           <img
@@ -312,7 +317,7 @@ export function CoreIdentityTechnologiesPage() {
       <section className="mb-12">
         <div className="mb-6">
           <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-3">THE ENFORCEMENT CHAIN</div>
-          <h2 className="text-2xl font-semibold text-white">The AEG Enforcement Stack</h2>
+          <h2 className="text-2xl font-semibold text-white">The CoreIdentity Enforcement Stack</h2>
           <p className="mt-2 max-w-3xl text-white/70">
             Every agent action passes through a vertically integrated enforcement chain before execution is permitted. Authorization, governance, identity, orchestration, and governed deployment — each layer with a distinct job and a clear boundary.
           </p>
@@ -369,7 +374,7 @@ export function CoreIdentityTechnologiesPage() {
           <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-5 cidg-card md:col-span-2">
             <div className="text-xs font-semibold tracking-wide text-emerald-400 uppercase mb-2">Digital Labor</div>
             <div className="text-lg font-semibold text-white mb-2">SmartNation AI</div>
-            <p className="text-sm text-white/65 leading-relaxed mb-3">10,000 governed agents across 12 industry verticals. Pre-built, compliance-ready digital labor — deployed under full AEG enforcement from day one. Every agent has a real labor position, a governance profile, and a SAL audit trail.</p>
+            <p className="text-sm text-white/65 leading-relaxed mb-3">10,000 governed agents across 12 industry verticals. Pre-built, compliance-ready digital labor — deployed under full CoreIdentity enforcement from day one. Every agent has a real labor position, a governance profile, and a SAL audit trail.</p>
             <ul className="space-y-1 mb-4">
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>10,000 agents across 12 verticals</span></li>
               <li className="flex items-center gap-2 text-sm text-white/60"><CheckIcon /><span>Integration-ready governed delivery patterns</span></li>
@@ -394,9 +399,9 @@ export function CoreIdentityTechnologiesPage() {
       {/* Operational verticals */}
       <section className="mb-12 cidg-fadein">
         <div className="mb-4">
-          <h2 className="text-2xl font-semibold text-white">Agentic Execution Governance — 10 Industry Verticals</h2>
+          <h2 className="text-2xl font-semibold text-white">Twelve Governed Industry Verticals</h2>
           <p className="mt-2 max-w-3xl text-white/70">
-            Ten governed industry verticals. Each deploys under full AEG enforcement — SAL authorization, Sentinel policy, Nexus orchestration, and AIS identity verification — from day one.
+            Twelve governed industry verticals. Each deploys under full CoreIdentity enforcement — SAL authorization, Sentinel policy, Nexus orchestration, and AIS identity verification — from day one.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
@@ -436,7 +441,7 @@ export function CoreIdentityTechnologiesPage() {
           </div>
           <h2 className="text-2xl font-semibold text-white">SAL Enforcement Kernel</h2>
           <p className="mt-2 max-w-3xl text-white/70">
-            The Semantic Arbitration Layer (SAL) is the deterministic enforcement kernel powering the entire CoreIdentity ecosystem. It is the architectural guarantee that transforms probabilistic AI into institutional-grade digital labor.
+            The Semantic Authorization Layer (SAL) is the deterministic enforcement kernel powering the entire CoreIdentity ecosystem. It is the architectural guarantee that transforms probabilistic AI into institutional-grade digital labor.
           </p>
         </div>
         <div className="rounded-2xl border border-amber-400/15 bg-amber-400/5 p-6 mb-4">
@@ -465,7 +470,7 @@ export function CoreIdentityTechnologiesPage() {
                 <path d="M12 2l8 4v6c0 5-3.2 9.4-8 10-4.8-.6-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
               </svg>
               <div className="text-sm font-semibold text-amber-400">SAL Kernel</div>
-              <div className="text-xs text-amber-400/70 mt-1">Arbitration Layer</div>
+              <div className="text-xs text-amber-400/70 mt-1">Authorization Layer</div>
               <div className="text-xs text-white/50 mt-1">sub-3ms latency</div>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/5 p-4">
