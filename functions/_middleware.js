@@ -31,6 +31,18 @@ const PAGES = {
   "/layer-d": {
     title: "Cryptographic Hardening — Layer D | CoreIdentity",
     desc: "Post-quantum protection across every cryptographic surface — the first commercial platform in production with all three NIST FIPS standards (203/204/205)."
+  },
+  "/governance/legal": {
+    title: "Legal & Professional Services AI Governance | CoreIdentity",
+    desc: "CoreIdentity enforces privilege-aware agent governance across legal and professional services — so an autonomous agent never waives privilege, breaches an ethical wall, or leaves a matter without a defensible record."
+  },
+  "/governance/critical-infrastructure": {
+    title: "Critical Infrastructure AI Governance | CoreIdentity",
+    desc: "CoreIdentity enforces actuation-level agent governance across energy, water, transportation, and industrial control systems — so an autonomous agent can never issue an operational command outside its authorized, auditable bounds."
+  },
+  "/governance/defense": {
+    title: "Defense & Intelligence AI Governance | CoreIdentity",
+    desc: "CoreIdentity enforces need-to-know agent governance for defense and intelligence missions — so every autonomous action on controlled information is attributable, authorized, and auditable to the standard accreditation authorities enforce."
   }
 };
 
