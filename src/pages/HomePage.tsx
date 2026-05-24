@@ -1,8 +1,15 @@
+import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 import { DemoRequestBanner } from "../components/DemoRequestBanner";
 import { PlatformStatsSection } from "../components/PlatformStatsSection";
 import { SectionHead, ProofStat } from "../components/institutional";
+
+// Live metrics fed by the secured /api/live-metrics Worker (Step 0).
+type LiveMetrics = {
+  enforcement?: { total?: number; blocked?: number; permitted?: number; status?: string };
+  platform?: { totalAgents?: number; activeAgents?: number; verticals?: number };
+} | null;
 
 // Institutional Carbon homepage — trust-deficit thesis, the live regulatory
 // "why now", the four-layer assurance model, and production traction.
@@ -37,6 +44,19 @@ const LAYERS: Layer[] = [
 ];
 
 export default function HomePage() {
+  const [liveData, setLiveData] = useState<LiveMetrics>(null);
+
+  useEffect(() => {
+    fetch("/api/live-metrics")
+      .then((r) => r.json())
+      .then((d) => {
+        if (d && d.success && d.data) setLiveData(d.data as NonNullable<LiveMetrics>);
+      })
+      .catch(() => {});
+  }, []);
+
+  const fmt = (n?: number) => (typeof n === "number" ? n.toLocaleString() : "—");
+
   return (
     <div className="space-y-16">
       <Helmet>
@@ -139,6 +159,34 @@ export default function HomePage() {
           <ProofStat value="3 of 3" label="NIST FIPS PQ standards" detail="FIPS 203, 204, and 205 — first in production" />
         </div>
       </section>
+
+      {/* Live enforcement — fed by the secured /api/live-metrics Worker (Step 0) */}
+      {liveData ? (
+        <section className="rounded-2xl border border-line bg-carbon-panel p-6">
+          <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-ink-muted">
+            <span className="cidg-pulse inline-block h-2 w-2 rounded-full bg-accent" style={{ boxShadow: "0 0 6px var(--accent)" }} />
+            Live enforcement · {liveData.enforcement?.status ?? "OPERATIONAL"}
+          </div>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <div className="tabular-figures text-2xl font-semibold text-ink">{fmt(liveData.enforcement?.total)}</div>
+              <div className="text-xs text-ink-muted">Decisions governed</div>
+            </div>
+            <div>
+              <div className="tabular-figures text-2xl font-semibold text-ink">{fmt(liveData.enforcement?.blocked)}</div>
+              <div className="text-xs text-ink-muted">Actions blocked</div>
+            </div>
+            <div>
+              <div className="tabular-figures text-2xl font-semibold text-ink">{fmt(liveData.enforcement?.permitted)}</div>
+              <div className="text-xs text-ink-muted">Actions permitted</div>
+            </div>
+            <div>
+              <div className="tabular-figures text-2xl font-semibold text-ink">{fmt(liveData.platform?.activeAgents)}</div>
+              <div className="text-xs text-ink-muted">Active agents</div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* 4 — Preserved: PlatformStatsSection (Google compliance Gap 3) */}
       <section>
