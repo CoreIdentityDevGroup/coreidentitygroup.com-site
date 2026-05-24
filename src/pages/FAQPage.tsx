@@ -18,23 +18,22 @@ export function FAQPage() {
         <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
         <PageTitle>Frequently Asked Questions</PageTitle>
         <p className="text-white/60 max-w-3xl leading-relaxed">
-          Practical answers about CoreIdentity, Agentic Execution Governance,
+          Practical answers about CoreIdentity, provable AI decision governance,
           and how governed execution differs from autonomy-first AI deployment.
         </p>
       </div>
 
       <div className="grid gap-5">
 
-        <FAQCard q="What is Agentic Execution Governance?">
+        <FAQCard q="What is institutional trust infrastructure for autonomous systems?">
           <p>
-            Agentic Execution Governance (AEG) is the infrastructure discipline
-            that governs autonomous AI at the execution layer — not through
-            dashboards or after-the-fact monitoring, but through deterministic
-            enforcement embedded in the execution chain itself. Under AEG,
-            every agent action is authorized before it executes, attributed
-            to a verified identity, bounded by codified policy, and recorded
-            in an immutable audit trail. CoreIdentity builds and operates the
-            AEG stack.
+            The market does not have an AI problem — it has a trust deficit
+            problem. Institutional trust infrastructure is what closes that gap:
+            it makes every autonomous AI decision provable. Every agent action
+            is authorized before it executes, attributed to a verified identity,
+            bounded by codified policy, and recorded in an immutable audit trail.
+            CoreIdentity builds and operates that infrastructure — and its
+            near-term wedge is Provable AI Decision Governance.
           </p>
         </FAQCard>
 
@@ -45,7 +44,7 @@ export function FAQPage() {
             designed for safe, auditable agentic execution. CoreIdentity exists
             to enforce clarity: what can be automated, under what controls,
             with what evidence, and with what escalation path when uncertainty
-            appears. We build the control plane that makes autonomous AI
+            appears. We build the institutional trust infrastructure that makes autonomous AI
             governable at enterprise scale.
           </p>
         </FAQCard>
@@ -109,7 +108,7 @@ export function FAQPage() {
               <li>
                 <Link to="/smartnation-ai" className="text-white/80 hover:text-white">SmartNation AI</Link>
                 {" "}— governed digital labor catalog. 10,000 agents across
-                eight verticals, deployed under full AEG enforcement.
+                twelve verticals, deployed under full CoreIdentity enforcement.
               </li>
             </ul>
           </div>
@@ -132,9 +131,9 @@ export function FAQPage() {
         <FAQCard q="What is quantum hardening and why does it matter?">
           <div className="space-y-3">
             <p>
-              CoreIdentity is the first AI governance platform to complete post-quantum cryptographic (PQC)
-              hardening across its full enforcement stack — SAL Kernel, Sentinel, Agent Identity Systems,
-              and Nexus. Every cryptographic surface has been migrated to NIST-finalized post-quantum
+              CoreIdentity is hardened against both current and future threats — post-quantum cryptographic (PQC)
+              hardening runs across its full enforcement chain: SAL Kernel, Sentinel, Agent Identity Systems,
+              and Nexus. Every cryptographic surface uses NIST-finalized post-quantum
               algorithms (FIPS 203, 204, and 205). This matters now for two reasons:
             </p>
             <ul className="list-disc pl-5 space-y-2">
@@ -228,7 +227,7 @@ export function FAQPage() {
             We follow a controlled assessment to pilot to production pathway
             with explicit scope boundaries, success metrics, evidence
             requirements, escalation triggers, and termination thresholds.
-            If a workflow cannot be governed safely under AEG constraints,
+            If a workflow cannot be governed safely under CoreIdentity enforcement constraints,
             it is deferred rather than forced.
           </p>
         </FAQCard>

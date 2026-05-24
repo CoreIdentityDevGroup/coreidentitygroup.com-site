@@ -23,7 +23,7 @@ export function TermsPage() {
 
         <section className="space-y-3">
           <h2 className="text-lg font-semibold text-white">Intellectual Property</h2>
-          <p>All content on this site — including text, images, product names, trademarks, and platform architecture descriptions — is the property of CoreIdentity Development Group Inc. and is protected by applicable intellectual property laws. Agentic Execution Governance (AEG) is a proprietary category defined by CoreIdentity. Unauthorized use or reproduction is prohibited.</p>
+          <p>All content on this site — including text, images, product names, trademarks, and platform architecture descriptions — is the property of CoreIdentity Development Group Inc. and is protected by applicable intellectual property laws. Provable AI Decision Governance and CoreIdentity's institutional trust infrastructure for autonomous systems are proprietary categories defined by CoreIdentity. Unauthorized use or reproduction is prohibited.</p>
         </section>
 
         <section className="space-y-3">

@@ -36,7 +36,7 @@ export default function BlogIndexPage() {
         <title>Blog — CoreIdentity Development Group</title>
         <meta
           name="description"
-          content="Insights on agentic AI governance, post-quantum cryptography, and enterprise AI operations from CoreIdentity Development Group."
+          content="Insights on provable AI decision governance, post-quantum cryptography, and enterprise AI operations from CoreIdentity Development Group."
         />
       </Helmet>
 
@@ -48,7 +48,7 @@ export default function BlogIndexPage() {
       </h1>
       <p className="text-white/60 text-lg leading-relaxed mb-16 max-w-2xl">
         Technical perspective and operational experience from the team building
-        the control plane for autonomous enterprise AI.
+        institutional trust infrastructure for autonomous systems.
       </p>
 
       {loading ? (

@@ -434,7 +434,7 @@ export const blogPosts: BlogPost[] = [
   more likely to pursue "harvest now, decrypt later" strategies against records created today.
 </p>
 <p>
-  An AI governance platform that produces audit records signed with classical algorithms is creating
+  Trust infrastructure that produces audit records signed with classical algorithms is creating
   a time-limited liability for sovereign clients — one that grows more acute as quantum computing
   matures. CoreIdentity eliminated that liability on April 26, 2026.
 </p>

@@ -103,7 +103,7 @@ export function SmartNationAIPage() {
         <SectionTitle>Governance Architecture</SectionTitle>
         <Card>
           <div className="space-y-3 text-white/75 leading-relaxed">
-            <p>Every agent in the SmartNation registry executes under the CoreIdentity governance stack. No agent reaches production without a governance profile, a risk tier assignment, and a compliance framework mapping. At runtime, every execution request is evaluated by the Semantic Arbitration Layer (SAL) across five dimensions — Identity, Intent, Asset, Action, and Context — before execution is permitted. Every decision generates an immutable Proof Pack anchored to a cryptographic ledger.</p>
+            <p>Every agent in the SmartNation registry executes under the CoreIdentity governance stack. No agent reaches production without a governance profile, a risk tier assignment, and a compliance framework mapping. At runtime, every execution request is evaluated by the Semantic Authorization Layer (SAL) across five dimensions — Identity, Intent, Asset, Action, and Context — before execution is permitted. Every decision generates an immutable Proof Pack anchored to a cryptographic ledger.</p>
             <div className="grid sm:grid-cols-3 gap-4 pt-2">
               {[
                 { tier: "TIER 1 — Critical", count: "6,021 agents (60%)", desc: "Highest risk. Dual approval required. Human review on escalation. Healthcare, financial, and legal agents." },
