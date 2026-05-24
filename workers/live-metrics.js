@@ -6,19 +6,25 @@
  */
 
 const API_BASE = 'https://api.coreidentitygroup.com';
-const API_EMAIL = 'tmorgan@coreidentitygroup.com';
-const API_PASS = 'CoreIdentity2026!'; // Store in Worker env var in production
+// Credentials are read from Cloudflare Worker secrets at runtime:
+//   wrangler secret put API_PASS        (required)
+//   wrangler secret put API_EMAIL       (optional; defaults below)
 
 // Cache metrics for 60 seconds to avoid hammering the API
 let metricsCache = null;
 let cacheTime = 0;
 const CACHE_TTL = 60000;
 
-async function getToken() {
+async function getToken(env) {
+  const email = env.API_EMAIL || 'tmorgan@coreidentitygroup.com';
+  const password = env.API_PASS;
+  if (!password) {
+    throw new Error('live-metrics: API_PASS not configured (run `wrangler secret put API_PASS`)');
+  }
   const r = await fetch(`${API_BASE}/api/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: API_EMAIL, password: API_PASS }),
+    body: JSON.stringify({ email, password }),
   });
   const d = await r.json();
   return d.data?.token;
@@ -74,7 +80,7 @@ export default {
     try {
       const now = Date.now();
       if (!metricsCache || (now - cacheTime) > CACHE_TTL) {
-        const token = await getToken();
+        const token = await getToken(env);
         metricsCache = await fetchMetrics(token);
         cacheTime = now;
       }
