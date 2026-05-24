@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 const INTRO =
-  "CoreIdentity Development Group Inc. builds and operates the governance infrastructure of systems and operating capabilities built to enable safe, auditable agentic execution. At the foundation is the Semantic Authorization Layer (SAL) — the deterministic enforcement kernel that authorizes every agent execution before it reaches the stack. Above it, Sentinel defines policy, Nexus orchestrates controlled execution, and Agent Identity Systems verifies every agent. AGO validates the governance stack in real operational conditions, and SmartNation AI packages governed deployment patterns for enterprise delivery. CoreIdentity Advisory Group translates the platform into commercial engagements.";
+  "CoreIdentity Development Group Inc. builds and operates institutional trust infrastructure for autonomous systems — the systems and operating capabilities that make agentic execution safe, authorized, and auditable. At the foundation is the Semantic Authorization Layer (SAL) — the deterministic enforcement kernel that authorizes every agent execution before it reaches the stack. Above it, Sentinel defines policy, Nexus orchestrates controlled execution, and Agent Identity Systems verifies every agent. AGO validates the governance stack in real operational conditions, and SmartNation AI packages governed deployment patterns for enterprise delivery. CoreIdentity Advisory Group translates the platform into commercial engagements.";
 
 function PortfolioCard(props: { title: string; body: string; href: string }) {
   return (
@@ -21,6 +22,10 @@ function PortfolioCard(props: { title: string; body: string; href: string }) {
 export function PortfolioPage() {
   return (
     <div className="space-y-12">
+      <Helmet>
+        <title>Governance Infrastructure | CoreIdentity</title>
+        <meta name="description" content="The CoreIdentity enforcement chain — SAL, Sentinel, Nexus, Agent Identity Systems, FGRE, and quantum hardening — that makes every autonomous AI decision provable." />
+      </Helmet>
       <div className="space-y-4">
         <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
         <PageTitle>Governance Infrastructure</PageTitle>
@@ -39,7 +44,7 @@ export function PortfolioPage() {
           <PortfolioCard
             title="Quantum Hardening — FIPS 203/204/205"
             href="/quantum-hardening"
-            body="CoreIdentity is the first AI governance platform to complete post-quantum cryptographic hardening across its full enforcement stack. ML-KEM-768, ML-DSA-65, and SLH-DSA-128s deployed across SAL, Sentinel, Agent Identity Systems, and Nexus. 100,000 soak cycles. Zero failures."
+            body="Hardened against both current and future threats. Post-quantum cryptography — ML-KEM-768, ML-DSA-65, and SLH-DSA-128s — runs across SAL, Sentinel, Agent Identity Systems, and Nexus. 100,000 soak cycles. Zero failures."
           />
           <PortfolioCard
             title="Formal Governance Verification (FGRE)"
@@ -76,7 +81,7 @@ export function PortfolioPage() {
           <PortfolioCard
             title="SmartNation AI"
             href="/smartnation-ai"
-            body="Governed deployment surface for packaging and delivering digital labor patterns across industry verticals. Turns validated governance patterns into reusable catalogs — 10,000 agents across eight verticals under full AEG enforcement."
+            body="Governed deployment surface for packaging and delivering digital labor patterns across industry verticals. Turns validated governance patterns into reusable catalogs — 10,000 agents across twelve verticals under full CoreIdentity enforcement."
           />
           <PortfolioCard
             title="MCP Protocol"

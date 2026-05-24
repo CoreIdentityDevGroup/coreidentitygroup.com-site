@@ -1,17 +1,22 @@
 // CIDG_GOOGLE_COMPLIANCE_CONTACT_v1
 import React from "react";
 import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 export default function ContactPage() {
   return (
     <div className="space-y-10">
+      <Helmet>
+        <title>Contact | CoreIdentity</title>
+        <meta name="description" content="Engage CoreIdentity on institutional trust infrastructure for autonomous systems — advisory intake, developer and API access, and direct contact." />
+      </Helmet>
 
       <div className="space-y-3">
         <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
         <PageTitle>Contact</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed">
           CoreIdentity engages with enterprise teams, institutional investors, and
-          technology partners evaluating governance infrastructure for agentic AI deployment.
+          technology partners evaluating institutional trust infrastructure for autonomous AI deployment.
         </p>
       </div>
 

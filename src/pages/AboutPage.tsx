@@ -1,6 +1,7 @@
 // CIDG_GOOGLE_COMPLIANCE_ABOUT_v1
 import React from "react";
 import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 /**
  * AboutPage (About Us)
@@ -11,15 +12,19 @@ import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
 export function AboutPage() {
   return (
     <div className="space-y-10">
+      <Helmet>
+        <title>About | CoreIdentity</title>
+        <meta name="description" content="CoreIdentity Development Group builds institutional trust infrastructure for autonomous systems — making every AI decision provable for regulated enterprises and sovereign institutions." />
+      </Helmet>
 
       {/* Header */}
       <div className="space-y-3">
         <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
         <PageTitle>About Us</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed">
-          CoreIdentity Development Group Inc. is the governance infrastructure company
-          for the agentic AI era — building the control plane that enterprises need to
-          deploy autonomous AI at scale without losing compliance, accountability, or control.
+          CoreIdentity Development Group Inc. builds institutional trust infrastructure for
+          autonomous systems — the infrastructure organizations need to prove their AI agents
+          acted correctly: authorized, attributed, and auditable, without losing compliance or control.
         </p>
       </div>
 
@@ -106,8 +111,8 @@ export function AboutPage() {
                 </p>
                 <p>
                   Todd is building CoreIdentity as a category-defining, generational company
-                  — not for acquisition, but to establish Autonomous Execution Governance as
-                  permanent infrastructure for the agentic AI era.
+                  — not for acquisition, but to establish institutional trust infrastructure for
+                  autonomous systems as a permanent layer of the agentic era.
                 </p>
               </div>
             </div>

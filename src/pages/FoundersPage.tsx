@@ -1,14 +1,19 @@
 import React from "react";
 import { Card, PageTitle, Eyebrow } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 export function FoundersPage() {
   return (
     <div className="space-y-12">
+      <Helmet>
+        <title>Founder's Brief | CoreIdentity</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="space-y-4">
         <Eyebrow>INTERNAL — NOT INDEXED</Eyebrow>
         <PageTitle>Founder's Brief</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed">
-          CoreIdentity Development Group Inc. — the control plane for autonomous enterprise AI.
+          CoreIdentity Development Group Inc. — institutional trust infrastructure for autonomous systems.
           This page is not linked from any public navigation.
         </p>
       </div>
