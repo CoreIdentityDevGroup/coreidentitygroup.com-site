@@ -32,17 +32,57 @@ const PAGES = {
     title: "Cryptographic Hardening — Layer D | CoreIdentity",
     desc: "Post-quantum protection across every cryptographic surface — the first commercial platform in production with all three NIST FIPS standards (203/204/205)."
   },
+  "/governance/regulated": {
+    title: "Regulated Industries AI Governance | CoreIdentity",
+    desc: "CoreIdentity enforces autonomous-agent governance across eleven regulated industries — authorization, attribution, and audit mapped to the obligations each regulator enforces, from SEC and HIPAA to CMMC and FinCEN."
+  },
+  "/governance/bfsi": {
+    title: "BFSI AI Governance | CoreIdentity",
+    desc: "CoreIdentity enforces authorization, attribution, and audit on every autonomous action across banking, trading, credit, and payments — to SEC, FINRA, OCC, Basel III, and PCI-DSS standards."
+  },
+  "/governance/education": {
+    title: "Education AI Governance | CoreIdentity",
+    desc: "CoreIdentity governs every agent that touches student records, federal aid, or research data — enforcing FERPA, Title IV, and federal research compliance with cryptographic audit trails."
+  },
+  "/governance/finance": {
+    title: "Corporate Finance AI Governance | CoreIdentity",
+    desc: "CoreIdentity keeps autonomous agents inside SOX controls across the financial close, treasury, and reporting — authorized, segregated, and audit-ready for the SEC and external auditors."
+  },
+  "/governance/healthcare": {
+    title: "Healthcare AI Governance | CoreIdentity",
+    desc: "CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act."
+  },
+  "/governance/hospitality": {
+    title: "Hospitality AI Governance | CoreIdentity",
+    desc: "CoreIdentity governs guest payment and personal data across brands and borders — enforcing PCI-DSS, GDPR, and data-sovereignty requirements on every autonomous agent."
+  },
   "/governance/legal": {
     title: "Legal & Professional Services AI Governance | CoreIdentity",
     desc: "CoreIdentity enforces privilege-aware agent governance across legal and professional services — so an autonomous agent never waives privilege, breaches an ethical wall, or leaves a matter without a defensible record."
   },
-  "/governance/critical-infrastructure": {
-    title: "Critical Infrastructure AI Governance | CoreIdentity",
-    desc: "CoreIdentity enforces actuation-level agent governance across energy, water, transportation, and industrial control systems — so an autonomous agent can never issue an operational command outside its authorized, auditable bounds."
+  "/governance/logistics": {
+    title: "Logistics & Supply Chain AI Governance | CoreIdentity",
+    desc: "CoreIdentity governs routing, customs clearance, and party screening across the supply chain — enforcing CISA, DHS, and export-control obligations on every autonomous action."
   },
-  "/governance/defense": {
-    title: "Defense & Intelligence AI Governance | CoreIdentity",
-    desc: "CoreIdentity enforces need-to-know agent governance for defense and intelligence missions — so every autonomous action on controlled information is attributable, authorized, and auditable to the standard accreditation authorities enforce."
+  "/governance/manufacturing": {
+    title: "Manufacturing AI Governance | CoreIdentity",
+    desc: "CoreIdentity protects CUI and controlled technical data across design and production — enforcing CMMC, ITAR, and EAR requirements on every autonomous agent."
+  },
+  "/governance/private-capital": {
+    title: "Private Capital AI Governance | CoreIdentity",
+    desc: "CoreIdentity governs diligence, valuation, and LP-reporting agents — enforcing SEC private-fund rules, FINRA information barriers, and fiduciary duty with cryptographic evidence."
+  },
+  "/governance/real-estate": {
+    title: "Real Estate AI Governance | CoreIdentity",
+    desc: "CoreIdentity governs origination, title, and closing agents against money-laundering and consumer-protection risk — enforcing FinCEN, the Bank Secrecy Act, and CFPB rules."
+  },
+  "/governance/retail": {
+    title: "Retail AI Governance | CoreIdentity",
+    desc: "CoreIdentity governs pricing, payments, and personalization agents across millions of consumers — enforcing PCI-DSS, CCPA/CPRA, and consumer-protection law."
+  },
+  "/governance/sovereign": {
+    title: "Sovereign & Government AI Governance | CoreIdentity",
+    desc: "CoreIdentity enforces accreditation-grade agent governance for government and sovereign missions — authorization, attribution, and audit aligned to FedRAMP, FISMA, IL4/IL5, the UAE AI Act, and Singapore IMDA."
   }
 };
 

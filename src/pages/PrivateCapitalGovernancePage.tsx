@@ -1,27 +1,27 @@
-// CIDG_VERTICAL_HEALTHCARE_v2
+// CIDG_VERTICAL_PRIVATE_CAPITAL_v1
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "@tanstack/react-router";
 
-export function HealthcareGovernancePage() {
+export function PrivateCapitalGovernancePage() {
   return (
     <div className="space-y-12">
       <Helmet>
-        <title>Healthcare AI Governance | CoreIdentity</title>
-        <meta name="description" content="CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act." />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity HealthcareOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+        <title>Private Capital AI Governance | CoreIdentity</title>
+        <meta name="description" content="CoreIdentity governs diligence, valuation, and LP-reporting agents — enforcing SEC private-fund rules, FINRA information barriers, and fiduciary duty with cryptographic evidence." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity PrivateCapitalOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity governs diligence, valuation, and LP-reporting agents — enforcing SEC private-fund rules, FINRA information barriers, and fiduciary duty with cryptographic evidence.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}
       <div className="space-y-4">
         <p className="text-xs font-medium uppercase tracking-widest text-accent">
-          Healthcare · HIPAA · FDA · CMS · 21st Century Cures Act
+          Private Capital · SEC · FINRA · Fiduciary Duty · LP Obligations
         </p>
         <h1 className="font-serif text-display-xl md:text-display-2xl tracking-tight leading-tight text-ink">
-          PHI Never Touches an Unauthorized Agent.
+          An Agent Acting for the Fund Is Acting on Your Fiduciary Duty.
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-ink-secondary">
-          When OCR investigates, the first question is not which system failed — it is what the AI agent was authorized to access, why it accessed it, and whether a cryptographic record proves it stayed within bounds. Across clinical operations, claims, and care coordination, an ungoverned agent that touches protected health information is a reportable breach. CoreIdentity answers authorization, attribution, and audit before the investigation begins.
+          Private equity, venture, and credit managers are deploying agents across diligence, portfolio monitoring, valuation, and LP reporting. Under SEC private-fund rules and fiduciary duty, every consequential action must be controllable and defensible to LPs and examiners. An agent that mishandles material nonpublic information or misstates a valuation is a fiduciary breach, not a productivity gain. CoreIdentity makes every agent action authorized, attributed, and auditable.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
@@ -46,21 +46,21 @@ export function HealthcareGovernancePage() {
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">HIPAA & HITECH</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">SEC Private Fund Rules</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Every agent that touches PHI must operate under a documented authorization chain. A missing audit trail is not a gap — it is prima facie evidence of a violation, and OCR penalties run into the hundreds of millions.
+              Heightened disclosure, valuation, and conflict requirements demand demonstrable control over automated processes. Examiners expect evidence that agents acted within authorized policy.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">FDA AI/ML Guidance</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">FINRA & MNPI Controls</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Autonomous clinical AI must demonstrate bounded behavior, traceable decisions, and human oversight at defined escalation thresholds under the FDA's change-control framework.
+              Information barriers around material nonpublic information must hold at machine speed. An agent that crosses a wall creates immediate regulatory and reputational exposure.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">CMS & 21st Century Cures</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">Fiduciary & LP Obligations</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Interoperability and information-blocking rules expand data flow — and the surface for unauthorized agent access. Governed access is the precondition for compliant data exchange.
+              Managers owe LPs a duty of care and candor. Delegating consequential actions to agents without provable governance is a breach exposure that surfaces in the next audit or side letter.
             </p>
           </div>
         </div>
@@ -73,27 +73,27 @@ export function HealthcareGovernancePage() {
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-lg font-semibold text-ink">PHI Access Boundaries</div>
+            <div className="mb-2 text-lg font-semibold text-ink">Wall-Aware Access Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces data classification at the agent level. No agent accesses PHI without an active, scoped authorization — regardless of what the model was prompted to do.
+              Sentinel enforces information barriers and scoped authorization at the agent layer. No agent accesses MNPI or fund data outside its authorized purpose.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Cryptographic Audit Trails</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Every action on protected data produces a proof artifact signed by the Semantic Authorization Layer with ML-DSA-65 (FIPS 204) — tamper-evident and regulator-ready.
+              Every governed action produces a proof artifact signed by the Semantic Authorization Layer with ML-DSA-65 (FIPS 204) — tamper-evident evidence for LPs, auditors, and the SEC.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an agent meets a scenario outside its authorized scope, Sentinel stops and escalates to a clinician or operator. It does not guess. It stops.
+              When an action exceeds authorized policy, Sentinel halts and escalates. The agent does not cross a wall or self-approve a valuation. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-lg font-semibold text-ink">HIPAA-Ready Evidence</div>
+            <div className="mb-2 text-lg font-semibold text-ink">Examiner- and LP-Ready Evidence</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              CIAG Phase 0 produces a governance gap analysis mapped to HIPAA administrative, physical, and technical safeguards with a prioritized remediation roadmap for compliance and legal.
+              CIAG Phase 0 maps your agents to SEC, FINRA, and fiduciary obligations with a prioritized roadmap your CCO and operating partners can defend.
             </p>
           </div>
         </div>
@@ -140,4 +140,4 @@ export function HealthcareGovernancePage() {
   );
 }
 
-export default HealthcareGovernancePage;
+export default PrivateCapitalGovernancePage;

@@ -18,12 +18,19 @@ import { FAQPage } from "./pages/FAQPage";
 import { AboutPage } from "./pages/AboutPage";
 import { LeadershipPage } from "./pages/LeadershipPage";
 import ContactPage from "./pages/ContactPage";
+import { RegulatedIndustriesPage } from "./pages/RegulatedIndustriesPage";
 import { HealthcareGovernancePage } from "./pages/HealthcareGovernancePage";
 import { BFSIGovernancePage } from "./pages/BFSIGovernancePage";
 import { SovereignGovernancePage } from "./pages/SovereignGovernancePage";
 import { LegalGovernancePage } from "./pages/LegalGovernancePage";
-import { CriticalInfrastructureGovernancePage } from "./pages/CriticalInfrastructureGovernancePage";
-import { DefenseGovernancePage } from "./pages/DefenseGovernancePage";
+import { EducationGovernancePage } from "./pages/EducationGovernancePage";
+import { FinanceGovernancePage } from "./pages/FinanceGovernancePage";
+import { HospitalityGovernancePage } from "./pages/HospitalityGovernancePage";
+import { LogisticsGovernancePage } from "./pages/LogisticsGovernancePage";
+import { ManufacturingGovernancePage } from "./pages/ManufacturingGovernancePage";
+import { PrivateCapitalGovernancePage } from "./pages/PrivateCapitalGovernancePage";
+import { RealEstateGovernancePage } from "./pages/RealEstateGovernancePage";
+import { RetailGovernancePage } from "./pages/RetailGovernancePage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import BlogPostPage from "./pages/BlogPostPage";
 
@@ -180,6 +187,12 @@ const blogPostRoute = createRoute({
 });
 
 // ── Governance verticals ────────────────────────────────────────────────
+const regulatedRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/regulated",
+  component: RegulatedIndustriesPage,
+});
+
 const healthcareRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/governance/healthcare",
@@ -204,16 +217,52 @@ const legalRoute = createRoute({
   component: LegalGovernancePage,
 });
 
-const criticalInfrastructureRoute = createRoute({
+const educationRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/governance/critical-infrastructure",
-  component: CriticalInfrastructureGovernancePage,
+  path: "/governance/education",
+  component: EducationGovernancePage,
 });
 
-const defenseRoute = createRoute({
+const financeRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/governance/defense",
-  component: DefenseGovernancePage,
+  path: "/governance/finance",
+  component: FinanceGovernancePage,
+});
+
+const hospitalityRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/hospitality",
+  component: HospitalityGovernancePage,
+});
+
+const logisticsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/logistics",
+  component: LogisticsGovernancePage,
+});
+
+const manufacturingRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/manufacturing",
+  component: ManufacturingGovernancePage,
+});
+
+const privateCapitalRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/private-capital",
+  component: PrivateCapitalGovernancePage,
+});
+
+const realEstateRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/real-estate",
+  component: RealEstateGovernancePage,
+});
+
+const retailRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/retail",
+  component: RetailGovernancePage,
 });
 
 const routeTree = rootRoute.addChildren([
@@ -252,12 +301,19 @@ const routeTree = rootRoute.addChildren([
   blogPostRoute,
 
   // Governance verticals
+  regulatedRoute,
   healthcareRoute,
   bfsiRoute,
   sovereignRoute,
   legalRoute,
-  criticalInfrastructureRoute,
-  defenseRoute,
+  educationRoute,
+  financeRoute,
+  hospitalityRoute,
+  logisticsRoute,
+  manufacturingRoute,
+  privateCapitalRoute,
+  realEstateRoute,
+  retailRoute,
 ]);
 
 export const router = createRouter({ routeTree });

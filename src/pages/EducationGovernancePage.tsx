@@ -1,27 +1,27 @@
-// CIDG_VERTICAL_HEALTHCARE_v2
+// CIDG_VERTICAL_EDUCATION_v1
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "@tanstack/react-router";
 
-export function HealthcareGovernancePage() {
+export function EducationGovernancePage() {
   return (
     <div className="space-y-12">
       <Helmet>
-        <title>Healthcare AI Governance | CoreIdentity</title>
-        <meta name="description" content="CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act." />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity HealthcareOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+        <title>Education AI Governance | CoreIdentity</title>
+        <meta name="description" content="CoreIdentity governs every agent that touches student records, federal aid, or research data — enforcing FERPA, Title IV, and federal research compliance with cryptographic audit trails." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity EducationOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity governs every agent that touches student records, federal aid, or research data — enforcing FERPA, Title IV, and federal research compliance with cryptographic audit trails.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}
       <div className="space-y-4">
         <p className="text-xs font-medium uppercase tracking-widest text-accent">
-          Healthcare · HIPAA · FDA · CMS · 21st Century Cures Act
+          Education · FERPA · Title IV · Federal Research Compliance
         </p>
         <h1 className="font-serif text-display-xl md:text-display-2xl tracking-tight leading-tight text-ink">
-          PHI Never Touches an Unauthorized Agent.
+          Student Records Are Federally Protected. So Must Be the Agents That Touch Them.
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-ink-secondary">
-          When OCR investigates, the first question is not which system failed — it is what the AI agent was authorized to access, why it accessed it, and whether a cryptographic record proves it stayed within bounds. Across clinical operations, claims, and care coordination, an ungoverned agent that touches protected health information is a reportable breach. CoreIdentity answers authorization, attribution, and audit before the investigation begins.
+          Universities and education providers are deploying agents across admissions, financial aid, advising, and research. FERPA governs every student record, Title IV governs every aid dollar, and federal research terms govern controlled data. An agent that discloses a protected record or mishandles aid is not a glitch — it is a federal compliance failure with funding consequences. CoreIdentity makes every agent action on protected data authorized, attributed, and auditable.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
@@ -46,21 +46,21 @@ export function HealthcareGovernancePage() {
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">HIPAA & HITECH</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">FERPA</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Every agent that touches PHI must operate under a documented authorization chain. A missing audit trail is not a gap — it is prima facie evidence of a violation, and OCR penalties run into the hundreds of millions.
+              Education records may only be accessed and disclosed under defined authority. An autonomous agent that exposes a student record outside permitted scope creates a direct FERPA violation and institutional liability.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">FDA AI/ML Guidance</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">Title IV Aid Integrity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Autonomous clinical AI must demonstrate bounded behavior, traceable decisions, and human oversight at defined escalation thresholds under the FDA's change-control framework.
+              Federal student aid carries strict eligibility, disbursement, and documentation rules. An agent acting on aid decisions without an authorization chain puts Title IV participation itself at risk.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">CMS & 21st Century Cures</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">Federal Research Compliance</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Interoperability and information-blocking rules expand data flow — and the surface for unauthorized agent access. Governed access is the precondition for compliant data exchange.
+              Sponsored research and controlled data carry access, export, and integrity obligations. Ungoverned agent access to research data threatens awards, accreditation, and federal standing.
             </p>
           </div>
         </div>
@@ -73,27 +73,27 @@ export function HealthcareGovernancePage() {
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-lg font-semibold text-ink">PHI Access Boundaries</div>
+            <div className="mb-2 text-lg font-semibold text-ink">Record-Aware Access Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces data classification at the agent level. No agent accesses PHI without an active, scoped authorization — regardless of what the model was prompted to do.
+              Sentinel enforces FERPA-scoped classification at the agent layer. No agent reads or discloses a protected education record outside an active, authorized purpose.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Cryptographic Audit Trails</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Every action on protected data produces a proof artifact signed by the Semantic Authorization Layer with ML-DSA-65 (FIPS 204) — tamper-evident and regulator-ready.
+              Every action on protected data produces a proof artifact signed by the Semantic Authorization Layer with ML-DSA-65 (FIPS 204) — tamper-evident for an auditor or the Department of Education.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an agent meets a scenario outside its authorized scope, Sentinel stops and escalates to a clinician or operator. It does not guess. It stops.
+              When access falls outside authorized scope, Sentinel stops and escalates to a human. The agent does not guess with a student's protected record. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-lg font-semibold text-ink">HIPAA-Ready Evidence</div>
+            <div className="mb-2 text-lg font-semibold text-ink">Compliance-Ready Evidence</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              CIAG Phase 0 produces a governance gap analysis mapped to HIPAA administrative, physical, and technical safeguards with a prioritized remediation roadmap for compliance and legal.
+              CIAG Phase 0 maps your agents to FERPA, Title IV, and research obligations with a prioritized remediation roadmap your compliance team and general counsel can act on.
             </p>
           </div>
         </div>
@@ -140,4 +140,4 @@ export function HealthcareGovernancePage() {
   );
 }
 
-export default HealthcareGovernancePage;
+export default EducationGovernancePage;

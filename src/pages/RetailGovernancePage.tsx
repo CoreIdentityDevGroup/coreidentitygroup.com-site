@@ -1,27 +1,27 @@
-// CIDG_VERTICAL_HEALTHCARE_v2
+// CIDG_VERTICAL_RETAIL_v1
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "@tanstack/react-router";
 
-export function HealthcareGovernancePage() {
+export function RetailGovernancePage() {
   return (
     <div className="space-y-12">
       <Helmet>
-        <title>Healthcare AI Governance | CoreIdentity</title>
-        <meta name="description" content="CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act." />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity HealthcareOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+        <title>Retail AI Governance | CoreIdentity</title>
+        <meta name="description" content="CoreIdentity governs pricing, payments, and personalization agents across millions of consumers — enforcing PCI-DSS, CCPA/CPRA, and consumer-protection law." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity RetailOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity governs pricing, payments, and personalization agents across millions of consumers — enforcing PCI-DSS, CCPA/CPRA, and consumer-protection law.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}
       <div className="space-y-4">
         <p className="text-xs font-medium uppercase tracking-widest text-accent">
-          Healthcare · HIPAA · FDA · CMS · 21st Century Cures Act
+          Retail & Consumer · PCI-DSS · CCPA · CPRA · Consumer Protection
         </p>
         <h1 className="font-serif text-display-xl md:text-display-2xl tracking-tight leading-tight text-ink">
-          PHI Never Touches an Unauthorized Agent.
+          Personalization at Scale Is Regulated Data at Scale.
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-ink-secondary">
-          When OCR investigates, the first question is not which system failed — it is what the AI agent was authorized to access, why it accessed it, and whether a cryptographic record proves it stayed within bounds. Across clinical operations, claims, and care coordination, an ungoverned agent that touches protected health information is a reportable breach. CoreIdentity answers authorization, attribution, and audit before the investigation begins.
+          Retail agents now drive pricing, recommendations, payments, and service across millions of consumers. Every interaction touches payment data under PCI-DSS and personal data under CCPA and CPRA, and every automated decision is subject to consumer-protection scrutiny. An agent that mishandles a card, ignores an opt-out, or makes a deceptive automated decision is a breach or an enforcement action. CoreIdentity makes every agent action on consumer data authorized, attributed, and auditable.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
@@ -46,21 +46,21 @@ export function HealthcareGovernancePage() {
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">HIPAA & HITECH</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">PCI-DSS</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Every agent that touches PHI must operate under a documented authorization chain. A missing audit trail is not a gap — it is prima facie evidence of a violation, and OCR penalties run into the hundreds of millions.
+              Payment data carries strict access and transmission controls. An agent that touches cardholder data outside an authorized scope is an immediate compliance and contractual liability.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">FDA AI/ML Guidance</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">CCPA & CPRA</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Autonomous clinical AI must demonstrate bounded behavior, traceable decisions, and human oversight at defined escalation thresholds under the FDA's change-control framework.
+              Consumers hold rights to know, delete, and opt out. An autonomous agent that processes personal data against a consumer's election is a direct privacy violation.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">CMS & 21st Century Cures</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">Consumer Protection</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Interoperability and information-blocking rules expand data flow — and the surface for unauthorized agent access. Governed access is the precondition for compliant data exchange.
+              Automated pricing and decisions are subject to unfair-and-deceptive-practices and fairness scrutiny. An action no one can attribute to authorized policy is indefensible before a regulator.
             </p>
           </div>
         </div>
@@ -73,27 +73,27 @@ export function HealthcareGovernancePage() {
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-lg font-semibold text-ink">PHI Access Boundaries</div>
+            <div className="mb-2 text-lg font-semibold text-ink">Consent-Aware Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces data classification at the agent level. No agent accesses PHI without an active, scoped authorization — regardless of what the model was prompted to do.
+              Sentinel enforces data classification and consumer elections at the agent layer. No agent processes consumer data outside its authorized purpose and the consumer's choices.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Cryptographic Audit Trails</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Every action on protected data produces a proof artifact signed by the Semantic Authorization Layer with ML-DSA-65 (FIPS 204) — tamper-evident and regulator-ready.
+              Every governed action produces a proof artifact signed by the Semantic Authorization Layer with ML-DSA-65 (FIPS 204) — tamper-evident evidence for a regulator or card brand.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an agent meets a scenario outside its authorized scope, Sentinel stops and escalates to a clinician or operator. It does not guess. It stops.
+              When an action falls outside authorized policy, Sentinel halts and escalates. The agent does not act against an opt-out. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-lg font-semibold text-ink">HIPAA-Ready Evidence</div>
+            <div className="mb-2 text-lg font-semibold text-ink">Compliance-Ready Evidence</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              CIAG Phase 0 produces a governance gap analysis mapped to HIPAA administrative, physical, and technical safeguards with a prioritized remediation roadmap for compliance and legal.
+              CIAG Phase 0 maps your agents to PCI-DSS, CCPA/CPRA, and consumer-protection obligations with a prioritized enforcement roadmap.
             </p>
           </div>
         </div>
@@ -140,4 +140,4 @@ export function HealthcareGovernancePage() {
   );
 }
 
-export default HealthcareGovernancePage;
+export default RetailGovernancePage;

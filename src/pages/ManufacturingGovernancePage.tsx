@@ -1,27 +1,27 @@
-// CIDG_VERTICAL_HEALTHCARE_v2
+// CIDG_VERTICAL_MANUFACTURING_v1
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "@tanstack/react-router";
 
-export function HealthcareGovernancePage() {
+export function ManufacturingGovernancePage() {
   return (
     <div className="space-y-12">
       <Helmet>
-        <title>Healthcare AI Governance | CoreIdentity</title>
-        <meta name="description" content="CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act." />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity HealthcareOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+        <title>Manufacturing AI Governance | CoreIdentity</title>
+        <meta name="description" content="CoreIdentity protects CUI and controlled technical data across design and production — enforcing CMMC, ITAR, and EAR requirements on every autonomous agent." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity ManufacturingOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity protects CUI and controlled technical data across design and production — enforcing CMMC, ITAR, and EAR requirements on every autonomous agent.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}
       <div className="space-y-4">
         <p className="text-xs font-medium uppercase tracking-widest text-accent">
-          Healthcare · HIPAA · FDA · CMS · 21st Century Cures Act
+          Manufacturing · CMMC · ITAR · EAR · Defense Industrial Base
         </p>
         <h1 className="font-serif text-display-xl md:text-display-2xl tracking-tight leading-tight text-ink">
-          PHI Never Touches an Unauthorized Agent.
+          Controlled Technical Data Cannot Leak Through an Ungoverned Agent.
         </h1>
         <p className="max-w-3xl text-lg leading-relaxed text-ink-secondary">
-          When OCR investigates, the first question is not which system failed — it is what the AI agent was authorized to access, why it accessed it, and whether a cryptographic record proves it stayed within bounds. Across clinical operations, claims, and care coordination, an ungoverned agent that touches protected health information is a reportable breach. CoreIdentity answers authorization, attribution, and audit before the investigation begins.
+          Manufacturers in the defense industrial base hold controlled technical data, export-restricted designs, and CUI that agents now touch across design, procurement, and production. An agent that exposes ITAR or EAR controlled data, or accesses CUI outside authority, is not a process slip — it is an export violation and a CMMC failure that can end a contract. CoreIdentity makes every agent action on controlled data authorized, attributed, and auditable.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
@@ -46,21 +46,21 @@ export function HealthcareGovernancePage() {
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">HIPAA & HITECH</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">CMMC 2.0</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Every agent that touches PHI must operate under a documented authorization chain. A missing audit trail is not a gap — it is prima facie evidence of a violation, and OCR penalties run into the hundreds of millions.
+              Defense contracts require enforced access control, least privilege, and continuous audit over CUI. An autonomous agent without an authorization chain puts certification and the contract at risk.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">FDA AI/ML Guidance</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">ITAR & EAR</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Autonomous clinical AI must demonstrate bounded behavior, traceable decisions, and human oversight at defined escalation thresholds under the FDA's change-control framework.
+              Controlled technical data carries strict access and export restrictions. An agent that exposes a controlled design to an unauthorized person or destination creates immediate export-control liability.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">CMS & 21st Century Cures</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent">Defense Industrial Base Security</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Interoperability and information-blocking rules expand data flow — and the surface for unauthorized agent access. Governed access is the precondition for compliant data exchange.
+              DIB security expectations demand attribution and evidence for every actor in the system. Agents are subjects that must be governed and recorded, not exceptions.
             </p>
           </div>
         </div>
@@ -73,27 +73,27 @@ export function HealthcareGovernancePage() {
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-lg font-semibold text-ink">PHI Access Boundaries</div>
+            <div className="mb-2 text-lg font-semibold text-ink">CUI-Aware Access Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces data classification at the agent level. No agent accesses PHI without an active, scoped authorization — regardless of what the model was prompted to do.
+              Sentinel enforces classification- and export-aware authorization at the agent layer. No agent accesses controlled technical data outside an active, scoped authorization.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Cryptographic Audit Trails</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Every action on protected data produces a proof artifact signed by the Semantic Authorization Layer with ML-DSA-65 (FIPS 204) — tamper-evident and regulator-ready.
+              Every governed action produces a proof artifact signed by the Semantic Authorization Layer with ML-DSA-65 (FIPS 204) — tamper-evident, attributable evidence for an assessor.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an agent meets a scenario outside its authorized scope, Sentinel stops and escalates to a clinician or operator. It does not guess. It stops.
+              When access falls outside authorized scope, Sentinel stops and escalates to a cleared operator. The agent does not infer authority it was not granted. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-            <div className="mb-2 text-lg font-semibold text-ink">HIPAA-Ready Evidence</div>
+            <div className="mb-2 text-lg font-semibold text-ink">Assessment-Ready Evidence</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              CIAG Phase 0 produces a governance gap analysis mapped to HIPAA administrative, physical, and technical safeguards with a prioritized remediation roadmap for compliance and legal.
+              CIAG Phase 0 maps your agents to CMMC, ITAR, and EAR obligations with a prioritized remediation roadmap your ISSM and program lead can act on.
             </p>
           </div>
         </div>
@@ -140,4 +140,4 @@ export function HealthcareGovernancePage() {
   );
 }
 
-export default HealthcareGovernancePage;
+export default ManufacturingGovernancePage;
