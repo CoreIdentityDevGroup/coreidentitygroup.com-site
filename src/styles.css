@@ -2,12 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
+/* ── Institutional Carbon — "Heritage Gold" tokens (Step 1) ─────────────
+   Mirror of the Tailwind theme in tailwind.config.js — keep in sync.
+   Use these vars from the raw-CSS layer (.cidg-* rules) below.        */
+:root {
+  color-scheme: dark;
 
-body {
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Carbon surfaces */
+  --carbon-bg:     #0B0B0C;
+  --carbon-panel:  #16161A;
+  --carbon-raised: #1F2024;
+  /* Hairline border */
+  --line:          rgba(255,255,255,0.09);
+  /* Ink (text) */
+  --ink-primary:   #ECEBE8;
+  --ink-secondary: #9C9A95;
+  --ink-muted:     #6E6C66;
+  /* Heritage gold accent */
+  --accent:        #C8A24A;
+  --accent-strong: #A8842F;
+}
+
+/* Base typography: Inter for body/UI, Source Serif 4 for display. */
+@layer base {
+  body {
+    background-color: var(--carbon-bg);
+    color: var(--ink-primary);
+    font-family: theme('fontFamily.sans');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv05', 'ss01';
+  }
+
+  /* Headings default to the serif display face. Inline `font-*` and
+     `text-*` utilities still win (utilities layer > base), so existing
+     page markup is unaffected until later steps adopt the tokens. */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: theme('fontFamily.serif');
+    color: var(--ink-primary);
+    font-weight: 600;
+  }
+
+  /* Tabular figures for stats/metrics readouts. */
+  .tabular-figures { font-variant-numeric: tabular-nums; }
+
+  ::selection {
+    background-color: rgba(200,162,74,0.30); /* accent @ 30% */
+    color: var(--ink-primary);
+  }
 }
 
 .container-max { max-width: 1150px; }
