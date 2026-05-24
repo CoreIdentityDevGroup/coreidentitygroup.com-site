@@ -54,7 +54,7 @@ export function Header() {
   const close = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-carbon/70 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-line bg-carbon backdrop-blur">
       <div className="mx-auto container-max px-4">
         <div className="flex h-16 items-center justify-between gap-4 py-3">
           <Link to="/" className="min-w-0 no-underline text-inherit">
@@ -94,7 +94,7 @@ export function Header() {
         </div>
       </div>
 
-      <div id="mobile-menu" className={["border-t border-line lg:hidden", open ? "block" : "hidden"].join(" ")}>
+      <div id="mobile-menu" className={["border-t border-line bg-carbon lg:hidden", open ? "block" : "hidden"].join(" ")}>
         <div className="mx-auto container-max grid gap-1 px-4 py-4 text-sm">
           <div className="px-1 pb-1 pt-1 text-xs uppercase tracking-widest text-ink-muted">Platform</div>
           {PLATFORM_MENU.map((item) => (
