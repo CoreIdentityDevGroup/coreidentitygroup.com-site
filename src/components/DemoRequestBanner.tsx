@@ -17,16 +17,16 @@ export function DemoRequestBanner() {{
       <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div className="space-y-2 max-w-2xl">
           <div className="text-xs font-semibold tracking-widest text-blue-400 uppercase">
-            Enterprise Governance Infrastructure · Live in Production
+            Institutional Trust Infrastructure · Live in Production
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-white leading-snug">
-            See CoreIdentity Governing<br className="hidden md:block" /> Agentic AI in Real Time
+            Prove Every AI Decision —<br className="hidden md:block" /> Authorized, Attributed, Auditable
           </h2>
           <p className="text-white/65 leading-relaxed">
             Schedule a live walkthrough of the Governance Portal — real-time policy
             enforcement, agent identity management, and autonomous audit trails.
-            Structured for CISOs, CTOs, and compliance leads evaluating enterprise
-            AI governance requirements.
+            Structured for CISOs, CTOs, and compliance leads who need provable AI decision governance —
+            proof that every agent acted within authority.
           </p>
         </div>
         <div className="flex flex-col gap-3 shrink-0 min-w-[200px]">

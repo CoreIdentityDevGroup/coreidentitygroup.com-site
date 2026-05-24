@@ -1,4 +1,23 @@
-import { Link } from "@tanstack/react-router";
+#!/usr/bin/env python3
+"""
+Positioning rewrite — Group 03: complete HomePage rewrite + DemoRequestBanner copy.
+
+HomePage.tsx is rewritten in full to lead with the trust-deficit thesis,
+the "Provable AI Decision Governance" wedge, and the six-questions framing.
+All "control plane" / "AI governance platform" / "AEG" category language is
+removed; post-quantum is framed as "hardened against both current and future
+threats". The previously dead DemoRequestBanner + PlatformStatsSection imports
+are now rendered (live-in-production proof + CTA).
+
+Idempotent: the full-file write is guarded by the CIDG_POSITIONING_V2_HOME
+marker; DemoRequestBanner edits are guarded on their new text.
+"""
+import sys
+
+HOME_PATH = "src/pages/HomePage.tsx"
+HOME_MARKER = "CIDG_POSITIONING_V2_HOME"
+
+NEW_HOME = r'''import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import globalAIGovernanceHero from "../assets/images/global-ai-governance-hero.webp";
 import { Helmet } from "react-helmet-async";
@@ -401,3 +420,64 @@ export default function HomePage() {
     </div>
   );
 }
+'''
+
+# DemoRequestBanner copy edits: (guard, find, replace)
+BANNER_PATH = "src/components/DemoRequestBanner.tsx"
+BANNER_EDITS = [
+    (
+        "Institutional Trust Infrastructure · Live in Production",
+        "Enterprise Governance Infrastructure · Live in Production",
+        "Institutional Trust Infrastructure · Live in Production",
+    ),
+    (
+        "Prove Every AI Decision",
+        "See CoreIdentity Governing<br className=\"hidden md:block\" /> Agentic AI in Real Time",
+        "Prove Every AI Decision —<br className=\"hidden md:block\" /> Authorized, Attributed, Auditable",
+    ),
+    (
+        "who need provable AI decision governance",
+        "Structured for CISOs, CTOs, and compliance leads evaluating enterprise\n            AI governance requirements.",
+        "Structured for CISOs, CTOs, and compliance leads who need provable AI decision governance —\n            proof that every agent acted within authority.",
+    ),
+]
+
+
+def write_home():
+    with open(HOME_PATH, "r", encoding="utf-8") as f:
+        content = f.read()
+    if HOME_MARKER in content:
+        print(f"[SKIP] {HOME_PATH} — already at positioning v2 ({HOME_MARKER}).")
+        return True
+    with open(HOME_PATH, "w", encoding="utf-8") as f:
+        f.write(NEW_HOME)
+    print(f"[OK] {HOME_PATH} — rewritten to positioning v2.")
+    return True
+
+
+def apply(path, guard, find, replace):
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+    if guard in content:
+        print(f"[SKIP] {path} — already updated: {guard[:48]!r}")
+        return True
+    if find not in content:
+        print(f"[ERROR] {path} — anchor not found and guard absent.")
+        print(f"        Expected anchor: {find[:120]!r}")
+        return False
+    content = content.replace(find, replace, 1)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"[OK] {path} — applied: {guard[:48]!r}")
+    return True
+
+
+def main():
+    ok = write_home()
+    for guard, find, replace in BANNER_EDITS:
+        ok = apply(BANNER_PATH, guard, find, replace) and ok
+    sys.exit(0 if ok else 1)
+
+
+if __name__ == "__main__":
+    main()
