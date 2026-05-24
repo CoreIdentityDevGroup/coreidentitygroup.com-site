@@ -315,32 +315,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ENTRY-LEVEL PRODUCTS */}
-      <section className="mt-20">
-        <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-8">
-          ENTRY-LEVEL PRODUCTS
-        </div>
-        <div className="grid gap-4 md:grid-cols-2">
-          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">THREAT VISIBILITY</div>
-            <a href="https://shadowscan.coreidentitygroup.com" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold mb-3 hover:text-blue-400 transition block">ShadowScan →</a>
-            <p className="text-white/60 text-sm leading-relaxed">
-              Autonomous discovery of unsanctioned AI activity across your enterprise environment.
-              Identify agents, models, and integrations operating without proof of authority —
-              before they become liability.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <div className="text-sm font-medium text-white/40 tracking-widest mb-2">CRYPTOGRAPHIC HYGIENE</div>
-            <a href="https://clearshield.coreidentitygroup.com" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold mb-3 hover:text-blue-400 transition block">ClearShield →</a>
-            <p className="text-white/60 text-sm leading-relaxed">
-              Cryptographic posture assessment and remediation for enterprise AI deployments.
-              Identify classical algorithm exposure, map quantum-vulnerable surfaces, and
-              receive a prioritized hardening roadmap aligned to NIST FIPS 203, 204, and 205.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* LIVE IN PRODUCTION */}
       <section className="mt-20">
