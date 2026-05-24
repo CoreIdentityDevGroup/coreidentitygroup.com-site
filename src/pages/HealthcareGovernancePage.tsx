@@ -83,7 +83,7 @@ export function HealthcareGovernancePage() {
           <Card>
             <div className="text-lg font-semibold mb-2">PHI Access Boundaries</div>
             <p className="text-white/70 text-sm leading-relaxed">
-              Sentinel OS enforces data classification at the agent level. No agent accesses
+              Sentinel enforces data classification at the agent level. No agent accesses
               PHI without an active, scoped authorization — regardless of what the underlying
               model was prompted to do.
             </p>
@@ -100,7 +100,7 @@ export function HealthcareGovernancePage() {
             <div className="text-lg font-semibold mb-2">Fail-Closed on Ambiguity</div>
             <p className="text-white/70 text-sm leading-relaxed">
               When an agent encounters an access scenario outside its authorized policy scope,
-              Sentinel OS stops the action and escalates to a human operator. The agent does
+              Sentinel stops the action and escalates to a human operator. The agent does
               not guess. It does not proceed. It stops.
             </p>
           </Card>
@@ -124,11 +124,11 @@ export function HealthcareGovernancePage() {
           <span className="text-sm font-semibold tracking-wide text-amber-400 uppercase">Post-Quantum Cryptographic Infrastructure</span>
         </div>
         <p className="text-sm text-white/70 leading-relaxed">
-          CoreIdentity is the first AI governance platform to implement all three NIST FIPS
-          post-quantum standards — ML-DSA-65 (FIPS 204), ML-KEM-768 (FIPS 203), and
-          SLH-DSA-128s (FIPS 205) — in production. Healthcare organizations planning
-          5-year infrastructure commitments can deploy CoreIdentity with confidence that
-          the cryptographic surface is already quantum-hardened.
+          CoreIdentity is hardened against both current and future threats — implementing all three
+          NIST FIPS post-quantum standards in production: ML-DSA-65 (FIPS 204), ML-KEM-768 (FIPS 203),
+          and SLH-DSA-128s (FIPS 205). Healthcare organizations planning 5-year infrastructure
+          commitments can deploy CoreIdentity with confidence that the cryptographic surface is
+          already hardened.
         </p>
         <Link to="/quantum-hardening" className="mt-3 inline-flex items-center gap-1 text-sm text-amber-400/80 hover:text-amber-400 transition">
           View full quantum hardening posture →

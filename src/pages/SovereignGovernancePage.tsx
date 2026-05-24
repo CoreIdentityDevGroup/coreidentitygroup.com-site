@@ -89,9 +89,9 @@ export function SovereignGovernancePage() {
         </div>
         <p className="text-sm text-white/70 leading-relaxed mb-2">
           Sovereign AI infrastructure has a 10-20 year deployment horizon. Classical
-          cryptography will not survive that window. CoreIdentity is the only AI governance
-          platform that has implemented all three NIST FIPS post-quantum standards in
-          production simultaneously:
+          cryptography will not survive that window. CoreIdentity is hardened against both
+          current and future threats — the only enforcement chain that has implemented all three
+          NIST FIPS post-quantum standards in production simultaneously:
         </p>
         <div className="grid gap-2 md:grid-cols-3 mt-3 text-sm">
           <div className="rounded-lg border border-amber-400/20 bg-amber-400/5 p-3">

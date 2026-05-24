@@ -6,7 +6,7 @@ export function CoreIdentityAdvisoryGroupPage() {
   return (
     <div>
       <Helmet>
-        <title>CIAG — AI Governance Advisory | CoreIdentity</title>
+        <title>CIAG — Provable AI Decision Governance Advisory | CoreIdentity</title>
         <meta
           name="description"
           content="CoreIdentity Advisory Group delivers AI governance frameworks, regulatory compliance roadmaps, and enterprise implementation strategy for regulated organizations deploying agentic AI at scale."
