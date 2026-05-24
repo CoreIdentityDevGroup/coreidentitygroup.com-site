@@ -121,9 +121,6 @@ export function LeadershipPage() {
         <meta name="description" content="CoreIdentity is led by operators who have built and governed mission-critical systems in the most demanding institutional environments — where trust is proven, not asserted." />
       </Helmet>
       <div className="space-y-4">
-        <div className="text-xs font-medium tracking-[0.22em] text-white/40">
-          COREIDENTITY DEVELOPMENT GROUP
-        </div>
         <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
         <PageTitle>Leadership</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed">

@@ -2,7 +2,7 @@ import React from "react";
 
 export function PageTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
+    <h1 className="font-serif text-display-xl md:text-display-2xl tracking-tight text-ink">
       {children}
     </h1>
   );
@@ -10,7 +10,7 @@ export function PageTitle({ children }: { children: React.ReactNode }) {
 
 export function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+    <h2 className="font-serif text-display-md md:text-display-lg tracking-tight text-ink">
       {children}
     </h2>
   );
@@ -70,7 +70,7 @@ export function StatBlock({
 
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="text-xs font-medium tracking-[0.22em] text-white/40 mb-4">
+    <div className="text-xs font-medium uppercase tracking-widest text-accent mb-4">
       {children}
     </div>
   );
