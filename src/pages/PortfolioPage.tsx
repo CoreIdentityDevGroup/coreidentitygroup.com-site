@@ -1,109 +1,162 @@
-import React from "react";
-import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
+import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
+import { SectionHead } from "../components/institutional";
 
-const INTRO =
-  "CoreIdentity Development Group Inc. builds and operates institutional trust infrastructure for autonomous systems — the systems and operating capabilities that make agentic execution safe, authorized, and auditable. At the foundation is the Semantic Authorization Layer (SAL) — the deterministic enforcement kernel that authorizes every agent execution before it reaches the stack. Above it, Sentinel defines policy, Nexus orchestrates controlled execution, and Agent Identity Systems verifies every agent. AGO validates the governance stack in real operational conditions, and SmartNation AI packages governed deployment patterns for enterprise delivery. CoreIdentity Advisory Group translates the platform into commercial engagements.";
+// Portfolio — two tiers: the governance infrastructure (primary positioning,
+// the four assurance layers) and the commercial products that demonstrate the
+// platform's capability in market (secondary, capability proof).
 
-function PortfolioCard(props: { title: string; body: string; href: string }) {
-  return (
-    <Card>
-      <div className="space-y-3">
-        <div className="text-xl font-semibold">{props.title}</div>
-        <p className="text-white/70 leading-relaxed">{props.body}</p>
-        <a className="text-blue-100 hover:text-blue-200" href={props.href}>
-          Learn More
-        </a>
-      </div>
-    </Card>
-  );
-}
+type LayerEntry = { id: string; to: string; title: string; body: string };
+const LAYERS: LayerEntry[] = [
+  {
+    id: "A",
+    to: "/layer-a",
+    title: "Execution Integrity",
+    body: "Verified agent identity, runtime behavioral fingerprinting, and an immutable, ML-DSA-65 signed audit trail — proof of which agent acted and under whose authority.",
+  },
+  {
+    id: "B",
+    to: "/layer-b",
+    title: "Verification at Scale",
+    body: "FGRE formal proof of policy correctness before activation, and the SAL Semantic Authorization Layer enforcing it deterministically in sub-3ms. 734/734 tests across 100K+ governed calls.",
+  },
+  {
+    id: "C",
+    to: "/layer-c",
+    title: "Sovereign Assurance",
+    body: "Nexus governed orchestration, AGO autonomous supervision, and behavioral genealogy — delegation lineage and trust-decay scoring across the entire agent fleet.",
+  },
+  {
+    id: "D",
+    to: "/layer-d",
+    title: "Cryptographic Hardening",
+    body: "Post-quantum protection across every cryptographic surface — the first commercial platform in production with all three NIST FIPS standards (203/204/205), 2-of-3 consensus, fail-close containment.",
+  },
+];
+
+type Product = { name: string; tag: string; body: string; href?: string; external?: boolean };
+const PRODUCTS: Product[] = [
+  {
+    name: "ClearShield",
+    tag: "Cryptographic hygiene",
+    href: "https://clearshield.coreidentitygroup.com",
+    external: true,
+    body: "Cryptographic posture assessment and remediation for enterprise AI deployments — identify classical algorithm exposure, map quantum-vulnerable surfaces, and receive a prioritized hardening roadmap aligned to NIST FIPS 203, 204, and 205.",
+  },
+  {
+    name: "ShadowScan",
+    tag: "Threat visibility",
+    href: "https://shadowscan.coreidentitygroup.com",
+    external: true,
+    body: "Autonomous discovery of unsanctioned AI activity across the enterprise — surface agents, models, and integrations operating without proof of authority before they become liability.",
+  },
+  {
+    name: "SmartNation AI",
+    tag: "Governed digital labor",
+    href: "/smartnation-ai",
+    body: "Pre-built, compliance-ready digital labor deployed under full CoreIdentity enforcement from day one — every agent carries a governance profile and an audit trail across industry verticals.",
+  },
+  {
+    name: "CoreG PCM",
+    tag: "Private capital markets",
+    body: "A live deployment governing agentic workflows for a private capital markets platform — deal intake, asset pipeline, and compliance screening, where a single unauthorized agent action carries regulatory and fiduciary consequence.",
+  },
+];
 
 export function PortfolioPage() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-14">
       <Helmet>
-        <title>Governance Infrastructure | CoreIdentity</title>
-        <meta name="description" content="The CoreIdentity enforcement chain — SAL, Sentinel, Nexus, Agent Identity Systems, FGRE, and quantum hardening — that makes every autonomous AI decision provable." />
+        <title>Portfolio | CoreIdentity</title>
+        <meta
+          name="description"
+          content="The CoreIdentity portfolio: the governance infrastructure — four layers of progressive institutional assurance — and the commercial products that prove the platform's capability in market."
+        />
       </Helmet>
-      <div className="space-y-4">
-        <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
-        <PageTitle>Governance Infrastructure</PageTitle>
-        <p className="text-white/70 max-w-3xl">{INTRO}</p>
-      </div>
 
-      <section className="space-y-5">
-        <SectionTitle>Foundational Infrastructure</SectionTitle>
-        <p className="text-white/60 text-sm max-w-2xl">The enforcement kernel and cryptographic infrastructure that underpins every system in the stack. Every agent execution passes through SAL before reaching any downstream system.</p>
-        <div className="grid gap-5 md:grid-cols-1 max-w-2xl">
-          <PortfolioCard
-            title="Semantic Authorization Layer (SAL)"
-            href="/layer-b"
-            body="The deterministic pre-execution authorization kernel at the core of every CoreIdentity deployment. SAL evaluates every agent request across five dimensions — Identity, Intent, Asset, Action, and Context (IIAAC) — before execution is permitted. Every decision generates an immutable Proof Pack anchored to a cryptographic ledger. Fail-closed by design: if SAL is unreachable, execution is blocked."
-          />
-          <PortfolioCard
-            title="Quantum Hardening — FIPS 203/204/205"
-            href="/layer-d"
-            body="Hardened against both current and future threats. Post-quantum cryptography — ML-KEM-768, ML-DSA-65, and SLH-DSA-128s — runs across SAL, Sentinel, Agent Identity Systems, and Nexus. 100,000 soak cycles. Zero failures."
-          />
-          <PortfolioCard
-            title="Formal Governance Verification (FGRE)"
-            href="/layer-b"
-            body="The first commercial implementation of formal mathematical governance verification. Z3 SMT solver detects policy contradictions, validates execution paths, and generates SLH-DSA-128s signed proof artifacts before any policy activates. Machine-verifiable. Exportable for regulatory submission and sovereign audit."
-          />
+      <section className="pt-4 md:pt-8">
+        <div className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
+          CoreIdentity Development Group
+        </div>
+        <h1 className="mt-4 font-serif text-display-xl tracking-tight text-ink md:text-display-2xl">
+          Portfolio
+        </h1>
+        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-secondary md:text-xl">
+          CoreIdentity builds and operates institutional trust infrastructure for autonomous systems.
+          The portfolio is organized in two tiers: the governance substrate itself — four layers of
+          progressive assurance — and the commercial products that demonstrate that substrate at work
+          in market.
+        </p>
+      </section>
+
+      {/* 1 — Governance Infrastructure */}
+      <section>
+        <SectionHead
+          eyebrow="Primary positioning"
+          title="Governance Infrastructure"
+          intro="The four-layer assurance model. Each layer adds a guarantee on the one beneath it, and the platform deep-dive ties them together."
+        />
+        <div className="grid gap-4 md:grid-cols-2">
+          {LAYERS.map((l) => (
+            <Link
+              key={l.id}
+              to={l.to}
+              className="cidg-card flex flex-col rounded-2xl border border-line bg-carbon-panel p-6 transition hover:border-accent/40"
+            >
+              <div className="mb-2 flex items-center gap-2">
+                <span className="grid h-9 w-9 place-items-center rounded-lg border border-accent/30 bg-accent/5 font-serif text-lg text-accent">
+                  {l.id}
+                </span>
+                <span className="text-xs uppercase tracking-widest text-ink-muted">Layer {l.id}</span>
+              </div>
+              <h3 className="font-serif text-xl text-ink">{l.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-secondary">{l.body}</p>
+              <span className="mt-4 text-sm font-medium text-accent">View layer →</span>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-4">
+          <Link to="/platform" className="text-sm font-medium text-accent hover:text-accent-strong">
+            See the complete platform architecture →
+          </Link>
         </div>
       </section>
 
-      <section className="space-y-5">
-        <SectionTitle>Platform Systems — Execution Workflow</SectionTitle>
-        <p className="text-white/60 text-sm max-w-2xl">Systems listed in execution workflow order — the sequence an agent request traverses from authorization through delivery.</p>
-        <div className="grid gap-5 md:grid-cols-2">
-          <PortfolioCard
-            title="Sentinel"
-            href="/layer-d"
-            body="Governance layer enforcing policy, approvals, identity boundaries, auditability, and evidence capture. Operates above SAL in the enforcement chain. Designed to be fail-closed when authority or data is missing."
-          />
-          <PortfolioCard
-            title="Nexus"
-            href="/layer-c"
-            body="Orchestration layer coordinating workflows, integrations, retries, and recovery. Ensures tasks run inside defined controls and produces structured operational traces for every execution."
-          />
-          <PortfolioCard
-            title="Agent Identity Systems"
-            href="/layer-a"
-            body="The identity and accountability infrastructure for autonomous AI. AIS provides cryptographically verifiable agent authentication, policy-linked authorization boundaries, provenance tracking, and audit-grade attribution — enforced at the execution layer. Production-stable with 100,000+ governed endpoint calls validated."
-          />
-          <PortfolioCard
-            title="AGO — Autonomous Governance Orchestrator"
-            href="/layer-c"
-            body="The operating agent that runs CoreIdentity's governance workflows under full Sentinel and Nexus enforcement. AGO validates fail-closed controls in real operational conditions, produces repeatable governance evidence, and serves as the verified pilot pattern for enterprise deployments."
-          />
-          <PortfolioCard
-            title="SmartNation AI"
-            href="/smartnation-ai"
-            body="Governed deployment surface for packaging and delivering digital labor patterns across industry verticals. Turns validated governance patterns into reusable catalogs — 10,000 agents across twelve verticals under full CoreIdentity enforcement."
-          />
-          <PortfolioCard
-            title="MCP Protocol"
-            href="/layer-d"
-            body="Production MCP server exposing eleven live governance tools across four tenant namespaces. Any MCP-compatible AI client, agent, or orchestration framework can query the CoreIdentity platform with full policy enforcement, namespace isolation, and audit logging on every call."
-          />
-        </div>
-      </section>
-
-      <section className="space-y-5">
-        <SectionTitle>Operating Capabilities</SectionTitle>
-        <div className="grid gap-5 md:grid-cols-2">
-          <PortfolioCard
-            title="CoreIdentity Technologies"
-            href="/platform"
-            body="Platform company that owns and monetizes governed digital labor. Houses product R&D and the execution stack. CoreIdentity Technologies is where delivery becomes repeatable and where platform IP is developed."
-          />
-          <PortfolioCard
-            title="CoreIdentity Advisory Group"
-            href="/ciag"
-            body="Advisory capability delivering AI governance frameworks, regulatory compliance roadmaps, and enterprise implementation strategy. Phase 0 through Phase 2 engagements scoped for regulated enterprises deploying agentic AI at scale."
-          />
+      {/* 2 — Commercial Products */}
+      <section>
+        <SectionHead
+          eyebrow="Capability proof — not primary positioning"
+          title="Commercial Products"
+          intro="Market-facing offerings that demonstrate the governance substrate in commercial use. They are evidence of capability, not the institutional positioning."
+        />
+        <div className="grid gap-4 md:grid-cols-2">
+          {PRODUCTS.map((p) => (
+            <div key={p.name} className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
+              <div className="text-xs font-semibold uppercase tracking-widest text-accent">{p.tag}</div>
+              <h3 className="mt-2 font-serif text-xl text-ink">{p.name}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-secondary">{p.body}</p>
+              {p.href ? (
+                p.external ? (
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex text-sm font-medium text-accent hover:text-accent-strong"
+                  >
+                    {p.name} →
+                  </a>
+                ) : (
+                  <Link to={p.href} className="mt-4 inline-flex text-sm font-medium text-accent hover:text-accent-strong">
+                    {p.name} →
+                  </Link>
+                )
+              ) : (
+                <span className="mt-4 inline-flex items-center gap-2 text-xs text-ink-muted">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Live deployment
+                </span>
+              )}
+            </div>
+          ))}
         </div>
       </section>
     </div>
