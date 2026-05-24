@@ -21,6 +21,9 @@ import ContactPage from "./pages/ContactPage";
 import { HealthcareGovernancePage } from "./pages/HealthcareGovernancePage";
 import { BFSIGovernancePage } from "./pages/BFSIGovernancePage";
 import { SovereignGovernancePage } from "./pages/SovereignGovernancePage";
+import { LegalGovernancePage } from "./pages/LegalGovernancePage";
+import { CriticalInfrastructureGovernancePage } from "./pages/CriticalInfrastructureGovernancePage";
+import { DefenseGovernancePage } from "./pages/DefenseGovernancePage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import BlogPostPage from "./pages/BlogPostPage";
 
@@ -195,6 +198,24 @@ const sovereignRoute = createRoute({
   component: SovereignGovernancePage,
 });
 
+const legalRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/legal",
+  component: LegalGovernancePage,
+});
+
+const criticalInfrastructureRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/critical-infrastructure",
+  component: CriticalInfrastructureGovernancePage,
+});
+
+const defenseRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance/defense",
+  component: DefenseGovernancePage,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
 
@@ -234,6 +255,9 @@ const routeTree = rootRoute.addChildren([
   healthcareRoute,
   bfsiRoute,
   sovereignRoute,
+  legalRoute,
+  criticalInfrastructureRoute,
+  defenseRoute,
 ]);
 
 export const router = createRouter({ routeTree });

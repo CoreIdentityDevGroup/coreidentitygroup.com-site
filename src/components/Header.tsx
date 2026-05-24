@@ -13,8 +13,11 @@ const PLATFORM_MENU: NavLink[] = [
 
 const GOVERNANCE_MENU: NavLink[] = [
   { to: "/governance/healthcare", label: "Healthcare" },
-  { to: "/governance/bfsi", label: "BFSI" },
-  { to: "/governance/sovereign", label: "Sovereign" },
+  { to: "/governance/bfsi", label: "Financial Services (BFSI)" },
+  { to: "/governance/sovereign", label: "Sovereign & Government" },
+  { to: "/governance/legal", label: "Legal & Professional Services" },
+  { to: "/governance/critical-infrastructure", label: "Critical Infrastructure" },
+  { to: "/governance/defense", label: "Defense & Intelligence" },
 ];
 
 function Chevron() {
