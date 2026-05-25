@@ -1,6 +1,6 @@
 // CIDG_GOOGLE_COMPLIANCE_PLATFORM_STATS_v2
 import React from "react";
-import { PlatinumProof } from "./institutional";
+import { Link } from "@tanstack/react-router";
 
 /**
  * PlatformStatsSection
@@ -28,7 +28,17 @@ export function PlatformStatsSection() {
         </h2>
       </div>
 
-      <PlatinumProof />
+      <Link
+        to="/platform"
+        className="group block rounded-2xl border border-line bg-carbon-panel p-6 transition hover:border-accent/40"
+      >
+        <p className="text-base leading-relaxed text-ink-secondary md:text-lg">
+          Validated through the Platinum Test Suite. Every invariant held. No exceptions.
+        </p>
+        <span className="mt-2 inline-block text-sm font-medium text-accent">
+          Read the full assurance statement →
+        </span>
+      </Link>
 
       <div className="space-y-2">
         <div className="text-xs uppercase tracking-widest text-ink-muted">Deployment Infrastructure</div>
