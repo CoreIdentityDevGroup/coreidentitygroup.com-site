@@ -140,7 +140,7 @@ export function LayerDPage() {
       <section>
         <SectionHead title="Production proof" intro="Hardened across the full enforcement chain and verified under adversarial conditions." />
         <div className="grid gap-4 sm:grid-cols-3">
-          <ProofStat value="3 of 3" label="NIST FIPS PQ standards" detail="FIPS 203, 204, and 205 — first commercial platform in production" />
+          <ProofStat value="Post-quantum hardened" label="Across all three NIST FIPS production standards (203, 204, 205)" detail="First commercial platform in production" />
           <ProofStat value="2 of 3" label="Multi-provider consensus" detail="No single model provider is a point of failure" />
           <ProofStat value="Fail-close" label="Containment" detail="When consensus fails, the action is contained, not guessed" />
         </div>

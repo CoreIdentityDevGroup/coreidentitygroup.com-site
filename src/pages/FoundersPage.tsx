@@ -50,11 +50,11 @@ export function FoundersPage() {
             </div>
             <div>
               <div className="text-xs text-white/40 tracking-widest mb-1">CONTRACTS</div>
-              <div className="text-sm font-mono text-green-400">23 / 23 passing</div>
+              <div className="text-sm font-mono text-green-400">Verified — no exceptions</div>
             </div>
             <div>
               <div className="text-xs text-white/40 tracking-widest mb-1">AIS SOAK</div>
-              <div className="text-sm font-mono text-indigo-400">Live — 100% pass rate</div>
+              <div className="text-sm font-mono text-indigo-400">Live — every invariant held</div>
             </div>
             <div>
               <div className="text-xs text-white/40 tracking-widest mb-1">PQC</div>

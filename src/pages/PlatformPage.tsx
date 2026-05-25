@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { SectionHead, InfoCard, ProofStat, InstitutionalCTA } from "../components/institutional";
+import { SectionHead, InfoCard, ProofStat, InstitutionalCTA, PlatinumProof } from "../components/institutional";
 
 // Platform Architecture — the technical deep-dive for CTOs and security
 // evaluators. Absorbs the former CoreIdentity Technologies deep-dive:
@@ -22,7 +22,7 @@ const STACK: Component[] = [
 const TIMELINE: { phase: string; title: string; detail: string }[] = [
   { phase: "Foundation", title: "Identity & authorization substrate", detail: "Agent Identity Systems and the SAL Kernel establish verifiable identity and deterministic, fail-closed authorization in the execution path." },
   { phase: "Enforcement", title: "Policy, orchestration & evidence", detail: "Sentinel, Nexus, and AGO bring policy enforcement, governed orchestration, and autonomous supervision online with immutable audit trails." },
-  { phase: "Verification", title: "Formal proof at scale", detail: "FGRE adds Z3 SMT verification — proving policy correctness before activation — reaching 734/734 tests passing across the verification corpus." },
+  { phase: "Verification", title: "Formal proof at scale", detail: "FGRE adds Z3 SMT verification — proving policy correctness before activation — validated by a Platinum Test Suite under continuous adversarial validation across the verification corpus — every invariant held, no exceptions." },
   { phase: "Hardening", title: "Post-quantum across every surface", detail: "The full enforcement chain migrates to NIST FIPS 203/204/205, with a post-quantum CA and QRNG-anchored entropy. First commercial platform in production with all three standards." },
   { phase: "Scale", title: "Governed connectivity & consensus", detail: "Governed MCP opens the platform to external AI clients under enforcement, and 2-of-3 multi-provider consensus with fail-close containment governs consequential decisions." },
 ];
@@ -34,7 +34,7 @@ export function PlatformPage() {
         <title>Platform Architecture | CoreIdentity</title>
         <meta
           name="description"
-          content="The complete CoreIdentity architecture for CTOs and security evaluators: an eight-component governance substrate spanning identity, authorization, formal verification, orchestration, and post-quantum hardening — 25 governance tables, 734/734 tests passing, 100K+ governed calls in production."
+          content="The complete CoreIdentity architecture for CTOs and security evaluators: an eight-component governance substrate spanning identity, authorization, formal verification, orchestration, and post-quantum hardening — schema-enforced accountability boundaries across every agent action, a Platinum Test Suite with every invariant held, governed agent interactions at institutional scale in production."
         />
         <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
@@ -101,12 +101,7 @@ export function PlatformPage() {
 
       <section>
         <SectionHead title="Production posture" intro="Operating infrastructure, sourced from verified live deployments across AWS and GKE — not a roadmap." />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <ProofStat value="25" label="Governance tables" detail="Codified policy, controls, and evidence schemas across the platform" />
-          <ProofStat value="734 / 734" label="Tests passing" detail="Security, PQ-CA, load, DR, compliance, and adversarial suites" />
-          <ProofStat value="100K+" label="Governed calls" detail="Continuous soak across live AWS ECS and GKE infrastructure" />
-          <ProofStat value="3 of 3" label="NIST FIPS PQ standards" detail="FIPS 203, 204, and 205 — first commercial platform in production" />
-        </div>
+        <PlatinumProof />
       </section>
 
       <section>

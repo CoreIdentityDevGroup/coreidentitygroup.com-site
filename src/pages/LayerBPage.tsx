@@ -6,6 +6,7 @@ import {
   InfoCard,
   ProofStat,
   InstitutionalCTA,
+  PlatinumProof,
 } from "../components/institutional";
 
 // Layer B — Verification at Scale. Powered by FGRE + SAL (Semantic
@@ -18,7 +19,7 @@ export function LayerBPage() {
         <title>Verification at Scale — Layer B | CoreIdentity</title>
         <meta
           name="description"
-          content="Verification at Scale proves governance policy is correct before it activates and enforces it deterministically once it does. Powered by the FGRE formal reasoning engine and the SAL Semantic Authorization Layer — 734/734 tests passing across 100K+ governed calls."
+          content="Verification at Scale proves governance policy is correct before it activates and enforces it deterministically once it does. Powered by the FGRE formal reasoning engine and the SAL Semantic Authorization Layer — a Platinum Test Suite under continuous adversarial validation, every invariant held, across governed agent interactions at institutional scale."
         />
         <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SAL Enforcement Kernel","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
@@ -64,11 +65,7 @@ export function LayerBPage() {
 
       <section>
         <SectionHead title="Production proof" intro="Verified continuously under adversarial soak conditions across live infrastructure." />
-        <div className="grid gap-4 sm:grid-cols-3">
-          <ProofStat value="734 / 734" label="Tests passing" detail="Security, PQ-CA, load, DR, compliance, and adversarial suites" />
-          <ProofStat value="96%" label="Pass rate" detail="Sustained across the full verification corpus" />
-          <ProofStat value="100K+" label="Governed calls" detail="Continuous soak across live AWS ECS and GKE infrastructure" />
-        </div>
+        <PlatinumProof />
       </section>
 
       <InstitutionalCTA />

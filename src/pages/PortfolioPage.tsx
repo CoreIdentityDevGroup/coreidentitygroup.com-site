@@ -18,7 +18,7 @@ const LAYERS: LayerEntry[] = [
     id: "B",
     to: "/layer-b",
     title: "Verification at Scale",
-    body: "FGRE formal proof of policy correctness before activation, and the SAL Semantic Authorization Layer enforcing it deterministically in sub-3ms. 734/734 tests across 100K+ governed calls.",
+    body: "FGRE formal proof of policy correctness before activation, and the SAL Semantic Authorization Layer enforcing it deterministically in sub-3ms. Validated by a Platinum Test Suite across governed agent interactions at institutional scale — every invariant held, no exceptions.",
   },
   {
     id: "C",

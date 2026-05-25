@@ -111,6 +111,19 @@ export function ProofStat({
   );
 }
 
+export const PLATINUM_STATEMENT =
+  "Our infrastructure is under continuous adversarial validation through the execution of a Platinum Test Suite against the Computational Trust Fabric's institutional assurance domains — sustained adversarial pressure, simulated breach, load collapse, cryptographic attack, regulatory edge case, and coordinated multi-vector failure — all against live production infrastructure. Every governance invariant held. Every boundary enforced. No exceptions.";
+
+export function PlatinumProof() {
+  return (
+    <div className="rounded-2xl border border-line bg-carbon-panel p-8 text-center">
+      <p className="mx-auto max-w-3xl text-base leading-relaxed text-ink-secondary md:text-lg">
+        {PLATINUM_STATEMENT}
+      </p>
+    </div>
+  );
+}
+
 const LAYERS: { id: "a" | "b" | "c" | "d"; to: string; label: string }[] = [
   { id: "a", to: "/layer-a", label: "Execution Integrity" },
   { id: "b", to: "/layer-b", label: "Verification at Scale" },

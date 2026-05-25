@@ -69,7 +69,7 @@ export function LayerAPage() {
       <section>
         <SectionHead title="Production proof" intro="Execution Integrity is operating infrastructure, not a roadmap." />
         <div className="grid gap-4 sm:grid-cols-3">
-          <ProofStat value="14" label="Agents fingerprinted" detail="Live runtime behavioral profiles under continuous monitoring" />
+          <ProofStat value="Every production agent" label="Cryptographically attributed and forensically replayable" detail="Live runtime behavioral profiles under continuous monitoring" />
           <ProofStat value="Immutable" label="Audit trail" detail="Tamper-evident record on every governed decision" />
           <ProofStat value="ML-DSA-65" label="Identity signing" detail="FIPS 204 post-quantum signatures on every credential" />
         </div>

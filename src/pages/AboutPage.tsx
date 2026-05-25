@@ -81,7 +81,7 @@ export function AboutPage() {
               </div>
             </div>
             <p className="text-xs text-white/45 pt-1">
-              The platform is live in production with 734/734 Platinum-grade tests passing
+              The platform is live in production with a Platinum Test Suite under continuous adversarial validation
               across Security, Post-Quantum, Compliance, Disaster Recovery, and Adversarial suites.
             </p>
           </div>

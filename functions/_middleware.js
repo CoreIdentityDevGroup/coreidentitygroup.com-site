@@ -14,7 +14,7 @@ const POSTS = {
 const PAGES = {
   "/platform": {
     title: "Platform Architecture | CoreIdentity",
-    desc: "The complete CoreIdentity governance substrate for evaluators: eight components across identity, authorization, formal verification, orchestration, and post-quantum hardening — 25 governance tables, 734/734 tests passing, 100K+ governed calls."
+    desc: "The complete CoreIdentity governance substrate for evaluators: eight components across identity, authorization, formal verification, orchestration, and post-quantum hardening — schema-enforced accountability boundaries across every agent action, a Platinum Test Suite with every invariant held, governed agent interactions at institutional scale."
   },
   "/layer-a": {
     title: "Execution Integrity — Layer A | CoreIdentity",
