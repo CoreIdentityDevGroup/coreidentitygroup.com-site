@@ -94,8 +94,8 @@ export function FoundersPage() {
           <div className="font-semibold text-white">CVS Health</div>
           <p className="text-sm text-white/60 leading-relaxed">
             Advisory engagement first, platform deployment second. BAA is critical path
-            for PHI agent governance. Phase 0 engagement: $450K–$550K.
-            Five-year lifetime value: $28M–$42M.
+            for PHI agent governance. Phase 0 engagement: $300K–$600K (Healthcare/BFSI +20%);
+            full Phase 0→1→2 cycle $2.1M–$4.8M. Five-year lifetime value: $28M–$42M.
           </p>
         </div>
       </Card>
