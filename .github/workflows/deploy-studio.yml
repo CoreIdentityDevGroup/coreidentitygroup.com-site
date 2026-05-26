@@ -14,21 +14,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Build studio
+      - name: Install dependencies
         working-directory: studio
-        run: |
-          npm install
-          npx sanity build --yes
+        run: npm install
+      - name: Deploy studio
+        working-directory: studio
+        run: npx sanity deploy --yes --no-interactive --studio-hostname wqmjbrvw
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
-          VITE_SANITY_PROJECT_ID: wqmjbrvw
-          SANITY_STUDIO_PROJECT_ID: wqmjbrvw
-          SANITY_STUDIO_DATASET: production
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: coreidentity-studio
-          directory: studio/dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
