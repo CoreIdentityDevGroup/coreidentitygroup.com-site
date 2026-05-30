@@ -37,20 +37,6 @@ const LAYERS: LayerEntry[] = [
 type Product = { name: string; tag: string; body: string; href?: string; external?: boolean };
 const PRODUCTS: Product[] = [
   {
-    name: "ClearShield",
-    tag: "Cryptographic hygiene",
-    href: "https://clearshield.coreidentitygroup.com",
-    external: true,
-    body: "Cryptographic posture assessment and remediation for enterprise AI deployments — identify classical algorithm exposure, map quantum-vulnerable surfaces, and receive a prioritized hardening roadmap aligned to NIST FIPS 203, 204, and 205.",
-  },
-  {
-    name: "ShadowScan",
-    tag: "Threat visibility",
-    href: "https://shadowscan.coreidentitygroup.com",
-    external: true,
-    body: "Autonomous discovery of unsanctioned AI activity across the enterprise — surface agents, models, and integrations operating without proof of authority before they become liability.",
-  },
-  {
     name: "SmartNation AI",
     tag: "Governed digital labor",
     href: "/smartnation-ai",
