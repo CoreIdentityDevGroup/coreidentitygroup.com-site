@@ -128,7 +128,29 @@ export function Header() {
 
       <div id="mobile-menu" className={["border-t border-line bg-carbon lg:hidden", open ? "block" : "hidden"].join(" ")}>
         <div className="mx-auto container-max grid gap-1 px-4 py-4 text-sm">
-          <div className="px-1 pb-1 pt-1 text-xs uppercase tracking-widest text-ink-muted">Platform</div>
+          <div className="px-1 pb-1 pt-1 text-xs uppercase tracking-widest text-ink-muted">Company</div>
+          <Link to="/" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            Home
+          </Link>
+          <Link to="/about" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            About Us
+          </Link>
+          <Link to="/leadership" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            Leadership
+          </Link>
+          <Link to="/ciag" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            CoreIdentity Advisory Group
+          </Link>
+          <Link to="/governance-console" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            Console
+          </Link>
+          <Link to="/blog" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            Blog
+          </Link>
+          <Link to="/faq" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            FAQ
+          </Link>
+          <div className="mt-2 border-t border-line px-1 pb-1 pt-3 text-xs uppercase tracking-widest text-ink-muted">Governance Layers</div>
           {PLATFORM_MENU.map((item) => (
             <Link key={item.to} to={item.to} onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
               {item.label}
@@ -157,27 +179,6 @@ export function Header() {
             </div>
           ))}
           <div className="mt-2 border-t border-line pt-2" />
-          <Link to="/" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
-            Home
-          </Link>
-          <Link to="/about" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
-            About Us
-          </Link>
-          <Link to="/leadership" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
-            Leadership
-          </Link>
-          <Link to="/ciag" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
-            CoreIdentity Advisory Group
-          </Link>
-          <Link to="/governance-console" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
-            Console
-          </Link>
-          <Link to="/blog" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
-            Blog
-          </Link>
-          <Link to="/faq" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
-            FAQ
-          </Link>
           <Link
             to="/contact"
             onClick={close}
