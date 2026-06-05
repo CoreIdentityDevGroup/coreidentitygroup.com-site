@@ -98,6 +98,9 @@ export function Header() {
           <nav className="hidden items-center gap-6 text-sm lg:flex">
             <DesktopMenu label="Platform" items={PLATFORM_MENU} />
             <GovernanceDesktopMenu />
+            <Link to="/governance-console" className="py-2 text-ink-secondary transition hover:text-ink">
+              Console
+            </Link>
             <Link to="/ciag" className="py-2 text-ink-secondary transition hover:text-ink">
               Advisory
             </Link>
@@ -154,6 +157,9 @@ export function Header() {
             </div>
           ))}
           <div className="mt-2 border-t border-line pt-2" />
+          <Link to="/governance-console" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
+            Console
+          </Link>
           <Link to="/ciag" onClick={close} className="rounded-lg px-3 py-2 text-ink-secondary transition hover:bg-accent/10 hover:text-accent">
             Advisory
           </Link>

@@ -33,6 +33,7 @@ import { RealEstateGovernancePage } from "./pages/RealEstateGovernancePage";
 import { RetailGovernancePage } from "./pages/RetailGovernancePage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import { GovernanceConsolePage } from "./pages/GovernanceConsolePage";
 
 // Institutional Carbon restructure — four governance layers + platform deep-dive.
 import { PlatformPage } from "./pages/PlatformPage";
@@ -265,6 +266,12 @@ const retailRoute = createRoute({
   component: RetailGovernancePage,
 });
 
+const governanceConsoleRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance-console",
+  component: GovernanceConsolePage,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
 
@@ -314,6 +321,7 @@ const routeTree = rootRoute.addChildren([
   privateCapitalRoute,
   realEstateRoute,
   retailRoute,
+  governanceConsoleRoute,
 ]);
 
 export const router = createRouter({ routeTree });
