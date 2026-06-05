@@ -63,12 +63,10 @@ export default function ContactPage() {
                 Agent Identity Systems →
               </a>
               <a
-                href="https://portal.coreidentitygroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/governance-console"
                 className="inline-flex items-center justify-center px-7 py-3 rounded-lg border border-white/15 hover:border-white/30 text-white/60 hover:text-white/80 font-semibold text-sm transition-colors duration-200"
               >
-                Governance Portal →
+                Governance Console →
               </a>
             </div>
           </div>

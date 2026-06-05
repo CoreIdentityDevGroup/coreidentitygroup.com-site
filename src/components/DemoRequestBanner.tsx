@@ -39,12 +39,10 @@ export function DemoRequestBanner() {
             Book a Consultation →
           </a>
           <a
-            href="https://portal.coreidentitygroup.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/governance-console"
             className="inline-flex items-center justify-center px-7 py-3.5 rounded-lg border border-white/15 hover:border-white/35 text-white/70 hover:text-white font-semibold text-sm transition-colors duration-200 text-center"
           >
-            Access Portal
+            View Governance Console
           </a>
         </div>
       </div>
