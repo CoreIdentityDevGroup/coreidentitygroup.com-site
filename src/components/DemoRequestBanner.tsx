@@ -7,7 +7,7 @@ import React from "react";
  * Signals live product + scalable engagement model to reviewers.
  * Primary CTA: intake.coreidentitygroup.com
  */
-export function DemoRequestBanner() {{
+export function DemoRequestBanner() {
   return (
     <div className="relative overflow-hidden rounded-2xl border border-blue-500/25 bg-gradient-to-br from-blue-950/60 via-indigo-950/40 to-slate-900/60 p-8 md:p-10">
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -50,4 +50,4 @@ export function DemoRequestBanner() {{
       </div>
     </div>
   );
-}}
+}
