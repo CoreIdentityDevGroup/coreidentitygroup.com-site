@@ -8,6 +8,7 @@ const COMPANY: NavLink[] = [
   { to: "/about", label: "About Us" },
   { to: "/leadership", label: "Leadership" },
   { to: "/ciag", label: "CoreIdentity Advisory Group" },
+  { to: "/governance-console", label: "Console" },
   { to: "/blog", label: "Blog" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
