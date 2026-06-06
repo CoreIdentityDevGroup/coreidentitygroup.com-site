@@ -100,7 +100,7 @@ export function PlatformPage() {
       </section>
 
       <section>
-        <SectionHead title="Production posture" intro="Operating infrastructure, sourced from verified live deployments across AWS and GKE — not a roadmap." />
+        <SectionHead title="Production posture" intro="Operating infrastructure, sourced from verified live deployments on AWS ECS Fargate (us-east-2) — not a roadmap." />
         <PlatinumProof />
       </section>
 

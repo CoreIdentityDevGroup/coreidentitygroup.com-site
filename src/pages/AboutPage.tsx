@@ -76,7 +76,7 @@ export function AboutPage() {
                 <div className="text-xs text-blue-400">Platform Engineering & IP</div>
                 <p className="text-xs text-white/55 mt-1">
                   Platform engineering, intellectual property, and production infrastructure
-                  across AWS ECS, GKE, and Cloudflare.
+                  across AWS ECS Fargate and Cloudflare.
                 </p>
               </div>
             </div>

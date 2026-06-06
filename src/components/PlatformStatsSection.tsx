@@ -5,12 +5,12 @@ import { Link } from "@tanstack/react-router";
 /**
  * PlatformStatsSection
  * Proof-oriented production metrics — every number is a proof, not a projection.
- * Sourced from verified live production deployments across AWS and GKE.
+ * Sourced from verified live production deployments on AWS (ECS Fargate, us-east-2).
  */
 
 const INFRA_BADGES = [
   "AWS ECS Fargate (us-east-2)",
-  "GKE (us-central1)",
+  "AWS Bedrock",
   "Cloudflare Pages (Global CDN)",
   "RDS PostgreSQL",
   "AWS Secrets Manager",
