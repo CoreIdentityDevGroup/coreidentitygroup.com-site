@@ -648,34 +648,5 @@ export const blogPosts: BlogPost[] = [
 </p>
 `,
   },
-  {
-    slug: "governing-autonomous-ai-post-quantum-world",
-    title: "Governing Autonomous AI in a Post-Quantum World: What the Department of War\'s PQC Strategy Demands from Commercial Platforms",
-    date: "2026-06-27",
-    author: "Todd Morgan, Founder & CEO, CoreIdentity Development Group",
-    excerpt: "On April 16, 2026, DoW CIO Kirsten Davies signed the Department of War Post-Quantum Cryptography Strategy. One sentence changes everything for commercial AI governance platforms: solutions that migrate confidentiality only will not be considered fully PQC. Here is what that means for every platform operating in or adjacent to the Defense Industrial Base.",
-    content: `
-<p>On April 16, 2026, DoW CIO Kirsten Davies signed and publicly released the <strong>United States Department of War Post-Quantum Cryptography Strategy</strong> (Cleared for Open Publication, Office of Prepublication and Security Review). The document signals a directional shift in how the federal government intends to define cryptographic compliance — a shift expected to flow into acquisition requirements, certification frameworks, and procurement obligations across the Defense Industrial Base on a defined timeline.</p>
-<p><em>Reference: DoW PQC Strategy, APR 01 2026. Available at: https://dowcio.war.gov/Portals/0/Documents/Library/DoW-PQC-Strategy.pdf</em></p>
-<h2>What the Strategy Establishes</h2>
-<p>The strategy sets two planning horizons. By December 31, 2030, all DoW systems are expected to support post-quantum cryptography or be phased out. By December 31, 2031, all DoW systems are expected to actively use post-quantum cryptography. For National Security Systems, the target standard is CNSA 2.0 — built on FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), and FIPS 205 (SLH-DSA).</p>
-<p>The compliance threshold is precise: <em>"Solutions that lack PQC authentication (i.e., migration of confidentiality only) will not be considered fully PQC."</em> A platform that encrypts data in transit but signs identity assertions and audit records with classical cryptography does not meet this threshold. Authentication integrity is a first-class requirement.</p>
-<h2>Why Authentication Drives the Requirement</h2>
-<p>The Harvest Now, Decrypt Later attack — adversaries collecting protected material now and decrypting it when quantum capability matures — applies to signed records and encrypted data alike. For records with multi-year retention requirements, the threat window extends well beyond current quantum development timelines.</p>
-<p>For autonomous AI governance systems, the exposure is specific. A governance audit trail signed with classical ECDSA today carries a verifiable integrity guarantee only as long as classical cryptography holds. An agent whose identity can be forged retroactively is not a governed agent. An audit trail that can be manipulated after the fact is not an audit trail.</p>
-<h2>Why Existing AI Governance Stacks Are Exposed</h2>
-<p>In most commercial AI governance platforms today, agent identity is signed with classical asymmetric algorithms — RSA-2048, ECDSA P-256, or similar. Under a CRQC model, this creates a retroactive impersonation surface. Governance audit trails are only as durable as the cryptography that seals them.</p>
-<p>The market has responded to PQC awareness primarily at the transport layer. This is necessary but not sufficient. Transport-only PQC leaves the authentication and audit integrity layers exposed — and creates a migration asymmetry. Retrofitting post-quantum cryptography into an AI governance stack requires simultaneous refactoring of identity, audit, and transport layers. Architectures where post-quantum primitives are native to the design can evolve incrementally instead.</p>
-<h2>What Full-Stack PQC Implementation Requires</h2>
-<p>Satisfying the DoW control requirements means implementing all three NIST FIPS post-quantum primitive classes concurrently: ML-DSA-65 (FIPS 204) for agent identity assurance, SLH-DSA-128s (FIPS 205) for audit record immutability and governance artifact signing, and ML-KEM-768 (FIPS 203) for transport confidentiality.</p>
-<p>Hardware custody of signing keys is a separate requirement from algorithm selection. HSM-bound key storage — FIPS 140-3 Level 3 — is the custody posture that matches the algorithm assurance level. CoreIdentity's AEG platform is implemented to satisfy all three control categories across controlled production environments, with ML-DSA-65 keys hardware-bound via AWS KMS FIPS 140-3 Level 3 infrastructure — never software-extractable.</p>
-<h2>The CMMC Gap That Is Coming</h2>
-<p>The strategy states the DoW will update CMMC to include PQC requirements. If codified, the enforcement surface shifts from advisory guidance to contractual obligation across every contractor and platform vendor handling Controlled Unclassified Information. The timeline depends on downstream rulemaking — but the direction is explicit and the mechanism is established.</p>
-<p>Organizations operating on post-quantum governance infrastructure when CMMC PQC requirements land will be positioned for first-mover compliance. The window between policy signal and enforcement codification is where infrastructure decisions are made and competitive positions are set.</p>
-<h2>Governed Autonomy Has a Cryptographic Floor</h2>
-<p>Governance without a verifiable, quantum-resistant root of trust is not governance — it is policy documentation that describes what should happen, without the ability to prove what did happen in a form that survives adversarial scrutiny across the retention lifetime of the record.</p>
-<p>CoreIdentity's AEG platform is governance enforcement infrastructure — the control plane between autonomous AI systems and the outcomes they produce. Every layer is built to the standard that regulated operating environments demand, with one level of margin.</p>
-<p>For organizations navigating the PQC transition — as DoW systems integrators, CMMC-scoped contractors, or enterprise AI operators in regulated verticals — contact us at <a href="mailto:tmorgan@coreidentitygroup.com">tmorgan@coreidentitygroup.com</a>.</p>
-`
-  },
+
 ];
