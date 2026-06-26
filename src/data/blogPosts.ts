@@ -651,7 +651,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "governing-autonomous-ai-post-quantum-world",
     title: "Governing Autonomous AI in a Post-Quantum World: What the Department of War\'s PQC Strategy Demands from Commercial Platforms",
-    date: "2026-06-26",
+    date: "2026-06-27",
     author: "Todd Morgan, Founder & CEO, CoreIdentity Development Group",
     excerpt: "On April 16, 2026, DoW CIO Kirsten Davies signed the Department of War Post-Quantum Cryptography Strategy. One sentence changes everything for commercial AI governance platforms: solutions that migrate confidentiality only will not be considered fully PQC. Here is what that means for every platform operating in or adjacent to the Defense Industrial Base.",
     content: `
