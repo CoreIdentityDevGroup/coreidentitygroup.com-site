@@ -75,7 +75,7 @@ export default function BlogIndexPage() {
                 {new Date(post.publishedAt).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
-                  day: "numeric",
+                  day: "numeric", timeZone: "UTC",
                 })}
               </div>
               <h2 className="text-xl font-semibold leading-snug mb-3">

@@ -123,7 +123,7 @@ export default function BlogPostPage() {
 
         <div className="text-xs text-white/40 tracking-widest mb-4">
           {new Date(post.publishedAt).toLocaleDateString("en-US", {
-            year: "numeric", month: "long", day: "numeric",
+            year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
           })}
         </div>
 
@@ -180,7 +180,7 @@ export default function BlogPostPage() {
 
       <div className="text-xs text-white/40 tracking-widest mb-4">
         {new Date(localPost.date).toLocaleDateString("en-US", {
-          year: "numeric", month: "long", day: "numeric",
+          year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
         })}
       </div>
 
