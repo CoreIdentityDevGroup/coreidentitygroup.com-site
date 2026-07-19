@@ -107,7 +107,7 @@ export function LayerDPage() {
                   <tr key={surface} className="border-b border-line/60 last:border-0">
                     <td className="px-5 py-3 text-ink">{surface}</td>
                     <td className="px-5 py-3 font-mono text-xs text-accent">{algo}</td>
-                    <td className={["px-5 py-3 text-xs font-medium", isInterim ? "text-amber-400/80" : "text-ink-secondary"].join(" ")}>
+                    <td className={["px-5 py-3 text-xs font-medium", isInterim ? "text-accent-purple/80" : "text-ink-secondary"].join(" ")}>
                       {status}
                     </td>
                   </tr>

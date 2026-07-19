@@ -117,7 +117,7 @@ export function QuantumHardeningPage() {
               <tr key={surface as string}>
                 <td className="py-3 pr-6 text-white/80">{surface}</td>
                 <td className="py-3 pr-6 font-mono text-teal-300 text-xs">{algo}</td>
-                <td className={`py-3 text-xs font-medium ${isInterim ? 'text-amber-400/80' : 'text-teal-400'}`}>{status}</td>
+                <td className={`py-3 text-xs font-medium ${isInterim ? 'text-accent-purple/80' : 'text-teal-400'}`}>{status}</td>
               </tr>
             );
           })}

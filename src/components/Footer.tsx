@@ -75,7 +75,10 @@ export default function Footer() {
     <footer className="mt-12 border-t border-line px-6 py-10 text-sm text-ink-secondary">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div className="max-w-xs space-y-2">
-          <div className="font-medium tracking-wide text-ink">CoreIdentity Development Group</div>
+          <div className="flex items-center gap-2">
+            <img src="/logo-mark.png" alt="CoreIdentity" className="h-6 w-6 flex-shrink-0" />
+            <div className="font-medium tracking-wide text-ink">CoreIdentity Development Group</div>
+          </div>
           <div className="text-xs uppercase tracking-[0.12em] text-ink-muted">
             Institutional Trust Infrastructure
           </div>

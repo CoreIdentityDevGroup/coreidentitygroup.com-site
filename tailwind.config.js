@@ -24,10 +24,16 @@ export default {
         },
         // Hairline borders
         line: 'rgba(255,255,255,0.09)',
-        // Heritage gold accent
+        // Platinum (quiet label accent — token defined for future use)
+        platinum: '#C5CAD6',
+        // Primary brand accent (blue) — replaces the retired Heritage Gold accent
         accent: {
-          DEFAULT: '#C8A24A',
-          strong:  '#A8842F',
+          DEFAULT: '#6E84A3',
+          strong:  '#4b5e79',
+          purple: {
+            DEFAULT: '#A78BDA',
+            strong:  '#6d3cc5',
+          },
         },
       },
       fontFamily: {

@@ -1,6 +1,6 @@
-// Institutional Carbon — shared page primitives (Heritage Gold palette).
+// Institutional Carbon — shared page primitives (Platinum / Blue / Purple palette).
 // Used by the Layer A/B/C/D and Platform pages so the institutional
-// vocabulary (carbon surfaces, ink text, gold accent, serif display) stays
+// vocabulary (carbon surfaces, ink text, blue accent, serif display) stays
 // consistent. Language rule: infrastructure / substrate / layer — never
 // "product", "tool", or "SaaS".
 import type { ReactNode } from "react";

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Institutional Carbon — "Heritage Gold" tokens (Step 1) ─────────────
+/* ── Institutional Carbon — Platinum / Blue / Purple tokens ──────────────
    Mirror of the Tailwind theme in tailwind.config.js — keep in sync.
    Use these vars from the raw-CSS layer (.cidg-* rules) below.        */
 :root {
@@ -18,9 +18,14 @@
   --ink-primary:   #ECEBE8;
   --ink-secondary: #9C9A95;
   --ink-muted:     #6E6C66;
-  /* Heritage gold accent */
-  --accent:        #C8A24A;
-  --accent-strong: #A8842F;
+  /* Platinum (quiet label accent — defined for future use) */
+  --platinum:      #C5CAD6;
+  /* Primary brand accent (blue) */
+  --accent:        #6E84A3;
+  --accent-strong: #4b5e79;
+  /* Secondary brand accent (purple) */
+  --accent-purple:        #A78BDA;
+  --accent-purple-strong: #6d3cc5;
 }
 
 /* Base typography: Inter for body/UI, Source Serif 4 for display. */
@@ -47,7 +52,7 @@
   .tabular-figures { font-variant-numeric: tabular-nums; }
 
   ::selection {
-    background-color: rgba(200,162,74,0.30); /* accent @ 30% */
+    background-color: rgba(110,132,163,0.30); /* accent @ 30% */
     color: var(--ink-primary);
   }
 }
@@ -76,7 +81,7 @@
 /* ── ENFORCEMENT CARD ACCENTS ────────────────────────────────── */
 .cidg-card-blue:hover   { border-color: rgba(99,102,241,0.4); box-shadow: 0 0 24px rgba(99,102,241,0.08); }
 .cidg-card-teal:hover   { border-color: rgba(20,184,166,0.4); box-shadow: 0 0 24px rgba(20,184,166,0.08); }
-.cidg-card-amber:hover  { border-color: rgba(212,175,55,0.4); box-shadow: 0 0 24px rgba(212,175,55,0.08); }
+.cidg-card-purple:hover { border-color: rgba(167,139,218,0.4); box-shadow: 0 0 24px rgba(167,139,218,0.08); }
 .cidg-card-indigo:hover { border-color: rgba(129,140,248,0.4); box-shadow: 0 0 24px rgba(129,140,248,0.08); }
 
 /* ── LIVE PULSE ──────────────────────────────────────────────── */
@@ -148,7 +153,7 @@
 }
 .cidg-orb-blue  { background: rgba(99,102,241,0.12); }
 .cidg-orb-teal  { background: rgba(20,184,166,0.10); }
-.cidg-orb-amber { background: rgba(212,175,55,0.08); }
+.cidg-orb-purple { background: rgba(167,139,218,0.08); }
 
 /* ── NAV LINK HOVER ──────────────────────────────────────────── */
 .cidg-nav-link {

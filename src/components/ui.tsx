@@ -23,7 +23,7 @@ export function Card({
 }: {
   children: React.ReactNode;
   className?: string;
-  accent?: "blue" | "teal" | "amber" | "indigo";
+  accent?: "blue" | "teal" | "purple" | "indigo";
 }) {
   const accentClass = accent ? `cidg-card-${accent}` : "";
   return (
@@ -179,7 +179,7 @@ export function ButtonLink({
     variant === "sentinel"
       ? "bg-blue-600/90 border-blue-400/30 hover:bg-blue-600"
       : variant === "nexus"
-      ? "bg-amber-600/90 border-amber-400/30 hover:bg-amber-600"
+      ? "bg-accent-purple/90 border-accent-purple/30 hover:bg-accent-purple"
       : variant === "smartnation"
       ? "bg-emerald-600/90 border-emerald-400/30 hover:bg-emerald-600"
       : variant === "primary"

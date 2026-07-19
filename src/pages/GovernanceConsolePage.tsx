@@ -22,7 +22,7 @@ interface AgentDef { id: string; label: string; }
 const LAYERS: Record<LayerKey, Layer> = {
   smartnation: { name: "SmartNation AI", role: "Governed digital labor catalog", icon: "SN", accent: "#10B981" },
   fgv: { name: "Formal Governance Verification", role: "Z3 SMT pre-deployment proof", icon: "FV", accent: "#2DD4BF" },
-  ais: { name: "Agent Identity Systems", role: "Post-quantum credential authority", icon: "AIS", accent: "#F59E0B" },
+  ais: { name: "Agent Identity Systems", role: "Post-quantum credential authority", icon: "AIS", accent: "#A78BDA" },
   sal: { name: "SAL Enforcement Kernel", role: "Semantic Authorization Layer \u00b7 IIAAC", icon: "SAL", accent: "#10B981" },
   mcp: { name: "MCP Protocol", role: "Governed external-access gateway", icon: "MCP", accent: "#A78BFA" },
   sentinel: { name: "Sentinel", role: "Policy enforcement & evidence capture", icon: "SEN", accent: "#3B82F6" },
@@ -406,7 +406,7 @@ function initSteps(m: ModeKey): StepVisual[] {
 }
 
 const CSS = `
-.gic-root { --gic-bg:#060A14; --gic-panel:#0C1322; --gic-elev:#111A2E; --gic-border:rgba(255,255,255,0.08); --gic-border-b:rgba(255,255,255,0.18); --gic-text:#E8EDF5; --gic-dim:#8A96A8; --gic-faint:#56627A; --gic-blue:#3B82F6; --gic-green:#10B981; --gic-red:#F43F5E; --gic-amber:#F59E0B; --gic-mono:'IBM Plex Mono',ui-monospace,monospace; color:var(--gic-text); max-width:1120px; }
+.gic-root { --gic-bg:#060A14; --gic-panel:#0C1322; --gic-elev:#111A2E; --gic-border:rgba(255,255,255,0.08); --gic-border-b:rgba(255,255,255,0.18); --gic-text:#E8EDF5; --gic-dim:#8A96A8; --gic-faint:#56627A; --gic-blue:#3B82F6; --gic-green:#10B981; --gic-red:#F43F5E; --gic-purple:#A78BDA; --gic-mono:'IBM Plex Mono',ui-monospace,monospace; color:var(--gic-text); max-width:1120px; }
 .gic-eyebrow { font-family:var(--gic-mono); font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gic-green); margin-bottom:14px; display:flex; align-items:center; gap:8px; }
 .gic-dot { width:7px; height:7px; border-radius:50%; background:var(--gic-green); box-shadow:0 0 8px rgba(16,185,129,0.5); animation:gicpulse 2s infinite; }
 @keyframes gicpulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
@@ -425,7 +425,7 @@ const CSS = `
 .gic-agents { display:flex; gap:8px; flex-wrap:wrap; }
 .gic-chip { font-family:var(--gic-mono); font-size:11px; padding:5px 11px; border-radius:7px; background:var(--gic-elev); border:1px solid var(--gic-border); color:var(--gic-dim); cursor:pointer; transition:all 0.15s ease; }
 .gic-chip:hover { border-color:var(--gic-border-b); color:var(--gic-text); }
-.gic-chip-active { border-color:var(--gic-amber); color:var(--gic-amber); background:rgba(245,158,11,0.08); }
+.gic-chip-active { border-color:var(--gic-purple); color:var(--gic-purple); background:rgba(167,139,218,0.08); }
 .gic-runbar { display:flex; align-items:center; gap:14px; margin-bottom:24px; }
 .gic-run { font-family:inherit; font-size:14px; font-weight:600; color:#fff; background:var(--gic-blue); border:none; border-radius:10px; padding:13px 28px; cursor:pointer; transition:all 0.18s ease; display:flex; align-items:center; gap:9px; }
 .gic-run:hover:not(:disabled) { background:#2563EB; transform:translateY(-1px); box-shadow:0 6px 20px rgba(59,130,246,0.3); }
