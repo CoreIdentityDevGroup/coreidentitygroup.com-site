@@ -48,32 +48,40 @@ export default function HomePage() {
       </Helmet>
 
       {/* 1 — Hero */}
-      <section className="pt-6 md:pt-10">
-        <div className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-          Provable AI Decision Governance
-        </div>
-        <h1 className="mt-5 max-w-4xl font-serif text-display-2xl leading-[1.05] tracking-tight text-ink md:text-display-3xl">
-          The market does not have an AI problem. It has a trust deficit problem.
-        </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink-secondary md:text-xl">
-          Organizations are delegating consequential authority to autonomous AI faster than they can
-          prove those systems acted correctly. CoreIdentity is the institutional trust infrastructure
-          that closes the gap — making every decision authorized before it executes, attributed to a
-          verified identity, bounded by codified policy, and recorded in a tamper-evident audit trail.
-        </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Link
-            to="/ciag"
-            className="inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-carbon transition hover:bg-accent-strong"
-          >
-            Request Governance Architecture Review
-          </Link>
-          <Link
-            to="/platform"
-            className="inline-flex items-center justify-center rounded-xl border border-line px-6 py-3 text-sm font-medium text-ink transition hover:border-accent/40"
-          >
-            Explore Technical Architecture
-          </Link>
+      <section className="relative pt-6 md:pt-10">
+        <img
+          src="/logo-mark.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-16 -top-16 z-0 hidden h-[380px] w-[380px] opacity-90 md:block lg:-right-10 lg:h-[420px] lg:w-[420px]"
+        />
+        <div className="relative z-10">
+          <div className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
+            Provable AI Decision Governance
+          </div>
+          <h1 className="mt-5 max-w-4xl font-serif text-display-2xl leading-[1.05] tracking-tight text-ink md:text-display-3xl">
+            The market does not have an AI problem. It has a trust deficit problem.
+          </h1>
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink-secondary md:text-xl">
+            Organizations are delegating consequential authority to autonomous AI faster than they can
+            prove those systems acted correctly. CoreIdentity is the institutional trust infrastructure
+            that closes the gap — making every decision authorized before it executes, attributed to a
+            verified identity, bounded by codified policy, and recorded in a tamper-evident audit trail.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              to="/ciag"
+              className="inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-carbon transition hover:bg-accent-strong"
+            >
+              Request Governance Architecture Review
+            </Link>
+            <Link
+              to="/platform"
+              className="inline-flex items-center justify-center rounded-xl border border-line px-6 py-3 text-sm font-medium text-ink transition hover:border-accent/40"
+            >
+              Explore Technical Architecture
+            </Link>
+          </div>
         </div>
       </section>
 
