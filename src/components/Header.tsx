@@ -85,14 +85,14 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-line bg-carbon backdrop-blur">
       <div className="mx-auto container-max px-4">
-        <div className="flex h-20 items-center justify-between gap-4 py-3">
-          <Link to="/" className="flex min-w-0 items-center gap-3 no-underline text-inherit">
-            <img src="/logo-mark.png" alt="CoreIdentity" className="h-11 w-11 flex-shrink-0" />
+        <div className="flex h-24 items-center justify-between gap-4 py-3">
+          <Link to="/" className="flex min-w-0 items-center gap-4 no-underline text-inherit">
+            <img src="/logo-mark.png" alt="CoreIdentity" className="h-16 w-16 flex-shrink-0" />
             <div>
-              <div className="text-sm font-semibold uppercase leading-tight tracking-[0.22em] text-ink">
+              <div className="text-lg font-semibold uppercase leading-tight tracking-[0.18em] text-ink">
                 COREIDENTITY DEVELOPMENT GROUP
               </div>
-              <div className="text-xs leading-tight text-ink-muted">
+              <div className="text-sm leading-tight text-ink-muted">
                 Institutional Trust Infrastructure for Autonomous Systems
               </div>
             </div>

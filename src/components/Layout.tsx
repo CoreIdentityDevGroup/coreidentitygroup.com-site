@@ -70,7 +70,7 @@ export function Layout() {
       {/* Content */}
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Header />
-        <main className="mx-auto container-max px-4 pb-10 pt-[calc(5rem+2.5rem)]">
+        <main className="mx-auto container-max px-4 pb-10 pt-[calc(6rem+2.5rem)]">
           <Outlet />
         </main>
         <Footer />
