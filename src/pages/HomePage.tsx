@@ -53,7 +53,7 @@ export default function HomePage() {
           src="/logo-mark.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -right-16 -top-16 z-0 hidden h-[380px] w-[380px] opacity-90 md:block lg:-right-10 lg:h-[420px] lg:w-[420px]"
+          className="pointer-events-none absolute -right-12 -top-20 z-0 hidden h-[420px] w-[420px] opacity-90 xl:block"
         />
         <div className="relative z-10">
           <div className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
