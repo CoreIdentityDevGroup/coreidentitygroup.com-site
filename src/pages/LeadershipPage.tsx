@@ -37,12 +37,12 @@ const FALLBACK_MEMBERS: SanityTeamMember[] = [
 
 // Hardcoded bio paragraphs shown for the fallback member
 const TODD_FALLBACK_BIO = [
-  `Todd Morgan is the Founder and CEO of CoreIdentity Development Group Inc.`,
-  `His career spans more than 30 years and includes extensive support to the National Intelligence Community and the Department of Defense across a variety of roles — including the management of a multi-million dollar portfolio of federal contracts in operational environments where accountability, auditability, and governance are not aspirational standards but absolute requirements.`,
-  `That experience shaped a conviction that became CoreIdentity: the governance frameworks institutions rely on were built for humans making decisions at human speed. They will systematically fail when autonomous AI systems begin acting with institutional authority. No configuration change, policy update, or vendor upgrade addresses that failure. It requires different infrastructure entirely.`,
-  `The problem CoreIdentity solves is one Todd encountered directly — in environments where governance gaps are not abstract risks but operational realities with lasting consequences. That experience is the architecture.`,
-  `CoreIdentity is what Todd built in response — architecture grounded in the operational realities of environments where governance failures have consequences. Compliance-first. Institutional-grade. Designed to meet the bar that regulators, auditors, and institutional accountability frameworks actually set.`,
-  `Todd holds a Bachelor of Science in Information Systems from American Sentinel University (now Post University) and an MBA from the University of Maryland Global Campus, where he was elected to Phi Kappa Phi, the nation's oldest and most selective all-discipline honor society. He is building CoreIdentity as a category-defining company — not to be acquired, but to become the institutional trust infrastructure the agentic era is built on.`,
+  `Todd is the Founder and Chief Executive Officer of CoreIdentity Development Group Inc., the company advancing the Trust Infrastructure discipline.`,
+  `He brings more than 30 years of executive leadership experience across highly regulated, multi-stakeholder operating environments supporting the National Intelligence Community, the Department of Defense, and private enterprise. Throughout his career, he has built governance frameworks for environments where accountability, auditability, and operational integrity are institutional requirements rather than aspirational goals.`,
+  `That experience led to a fundamental observation: the governance systems organizations rely on today were designed for people making decisions at human speed. As autonomous systems assume responsibility for increasingly consequential work, institutions require a new model—one capable of governing autonomous execution with the same rigor historically applied to people, processes, and financial controls.`,
+  `Todd is the architect of the Trust Infrastructure discipline and the Autonomous Execution Governance (AEG) doctrine, establishing the governance principles and institutional trust model that enable autonomous execution at enterprise scale.`,
+  `Under his leadership, CoreIdentity is building the technology and institutional infrastructure that transforms those principles into operational reality, enabling governments, regulated industries, and enterprises to deploy autonomous execution with verifiable trust, accountability, and control.`,
+  `Todd holds a Bachelor of Science in Information Systems from American Sentinel University (now Post University) and a Master of Business Administration from the University of Maryland Global Campus, where he was elected to Phi Kappa Phi, the nation's oldest and most selective all-discipline honor society. He is building CoreIdentity as a category-defining company to become the institutional trust infrastructure the agentic era is built on.`,
 ];
 
 function MemberCard({ member }: { member: SanityTeamMember }) {
@@ -84,7 +84,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition mt-2"
           >
-            LinkedIn →
+            Connect with Todd on LinkedIn →
           </a>
         )}
 
