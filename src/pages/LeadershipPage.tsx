@@ -77,21 +77,21 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
           ) : null}
         </div>
 
+        {isFallback && (
+          <p className="mt-4 text-sm text-white/35 italic">
+            "The greatest superpower is the ability to change yourself."
+          </p>
+        )}
+
         {member.linkedIn && (
           <a
             href={member.linkedIn}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition mt-2"
+            className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition mt-3"
           >
             Connect with Todd on LinkedIn →
           </a>
-        )}
-
-        {isFallback && (
-          <p className="mt-4 text-sm text-white/35 italic">
-            "The greatest superpower is the ability to change yourself."
-          </p>
         )}
       </div>
     </Card>
