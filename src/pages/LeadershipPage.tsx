@@ -83,34 +83,15 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
           </p>
         )}
 
-        {isFallback ? (
-          <div
-            className="badge-base LI-profile-badge mt-3"
-            data-locale="en_US"
-            data-size="medium"
-            data-theme="dark"
-            data-type="VERTICAL"
-            data-vanity="todd-morgan-ceo"
-            data-version="v1"
+        {member.linkedIn && (
+          <a
+            href={member.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition mt-3"
           >
-            <a
-              className="badge-base__link LI-simple-link"
-              href="https://www.linkedin.com/in/todd-morgan-ceo?trk=profile-badge"
-            >
-              Todd Morgan
-            </a>
-          </div>
-        ) : (
-          member.linkedIn && (
-            <a
-              href={member.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition mt-3"
-            >
-              Connect with Todd on LinkedIn →
-            </a>
-          )
+            Connect with Todd on LinkedIn →
+          </a>
         )}
       </div>
     </Card>
@@ -133,23 +114,11 @@ export function LeadershipPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  // LinkedIn's platform.js only auto-scans the DOM on its own initial load.
-  // On a client-routed SPA, navigating back to this page without a full
-  // reload won't re-trigger that scan -- ask it to re-scan explicitly if
-  // it's already loaded from a prior visit.
-  useEffect(() => {
-    const w = window as any;
-    if (w.IN && typeof w.IN.parse === "function") {
-      w.IN.parse();
-    }
-  }, []);
-
   return (
     <div className="space-y-12">
       <Helmet>
         <title>Leadership | CoreIdentity</title>
         <meta name="description" content="CoreIdentity is led by operators who have built and governed mission-critical systems in the most demanding institutional environments — where trust is proven, not asserted." />
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
       </Helmet>
       <div className="space-y-4">
         <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
