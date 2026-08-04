@@ -88,9 +88,12 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
             href={member.linkedIn}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition mt-3"
+            aria-label={`${member.name} on LinkedIn`}
+            className="mt-3 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line bg-carbon-panel text-ink-secondary transition hover:border-accent/40 hover:text-accent"
           >
-            Connect with Todd on LinkedIn →
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.881 3.88 6 2.5 6S0 4.881 0 3.5 1.12 1 2.5 1 4.98 2.119 4.98 3.5zM.216 8.25h4.568V23H.216V8.25zM8.5 8.25h4.38v2.014h.062c.61-1.155 2.1-2.373 4.32-2.373 4.62 0 5.47 3.043 5.47 7v8.109h-4.57v-7.19c0-1.716-.03-3.923-2.39-3.923-2.39 0-2.76 1.868-2.76 3.8v7.313H8.5V8.25z"/>
+            </svg>
           </a>
         )}
       </div>
