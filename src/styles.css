@@ -271,3 +271,109 @@
     transition: none !important;
   }
 }
+
+/* ── CoreIdentity Website v5.1.0 — Institutional Brand Experience ───── */
+.cidg-v51-global-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(197,202,214,0.10), transparent 34%),
+    radial-gradient(circle at 8% 54%, rgba(197,202,214,0.045), transparent 28%),
+    radial-gradient(circle at 92% 72%, rgba(197,202,214,0.04), transparent 24%);
+}
+
+.cidg-v51-global-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(197,202,214,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(197,202,214,0.035) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+.cidg-v51-hero {
+  background:
+    radial-gradient(circle at 77% 46%, rgba(197,202,214,0.11), transparent 25%),
+    linear-gradient(135deg, rgba(22,22,26,0.99), rgba(7,7,8,0.98));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.025);
+}
+
+.cidg-v51-network {
+  position: absolute;
+  inset: 0;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(30deg, transparent 48%, rgba(197,202,214,0.10) 49%, rgba(197,202,214,0.10) 50%, transparent 51%),
+    linear-gradient(150deg, transparent 48%, rgba(197,202,214,0.07) 49%, rgba(197,202,214,0.07) 50%, transparent 51%);
+  background-size: 110px 110px;
+  mask-image: linear-gradient(90deg, transparent 8%, black 60%, transparent 100%);
+}
+
+.cidg-v51-horizon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197,202,214,0.22), transparent);
+}
+
+.cidg-v51-sphere {
+  opacity: 0.92;
+  filter: drop-shadow(0 0 40px rgba(197,202,214,0.15));
+}
+
+.cidg-v51-framework-card {
+  overflow: visible;
+  background:
+    linear-gradient(145deg, rgba(197,202,214,0.045), transparent 38%),
+    var(--carbon-panel);
+}
+
+.cidg-v51-framework-card:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+  transform: translateY(-2px);
+}
+
+.cidg-v51-blueprint {
+  background:
+    linear-gradient(rgba(197,202,214,0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(197,202,214,0.055) 1px, transparent 1px),
+    linear-gradient(135deg, #111114, #09090a);
+  background-size: 42px 42px, 42px 42px, auto;
+}
+
+.cidg-v51-blueprint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(197,202,214,0.08), transparent 60%);
+  pointer-events: none;
+}
+
+.cidg-v51-closing {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(197,202,214,0.12), transparent 44%),
+    linear-gradient(180deg, rgba(22,22,26,0.96), rgba(8,8,9,0.99));
+}
+
+@media (max-width: 1279px) {
+  .cidg-v51-hero {
+    min-height: 580px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cidg-v51-framework-card,
+  .cidg-card,
+  .cidg-btn-primary {
+    transition: none !important;
+    transform: none !important;
+  }
+}
