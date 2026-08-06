@@ -377,3 +377,115 @@
     transform: none !important;
   }
 }
+
+/* ── CoreIdentity Website v6.0.2a — Executive Hero Reconstruction ───── */
+body {
+  background: #f5f2ec;
+  color: #1f2430;
+}
+
+.cidg-v602-global-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(88,96,111,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88,96,111,0.05) 1px, transparent 1px);
+  background-size: 84px 84px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.cidg-v602-hero {
+  background:
+    radial-gradient(circle at 78% 45%, rgba(216,198,168,0.32), transparent 28%),
+    linear-gradient(135deg, rgba(255,255,255,0.97), rgba(239,235,226,0.95));
+  box-shadow: 0 24px 80px rgba(31,36,48,0.08);
+}
+
+.cidg-v602-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(31,36,48,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31,36,48,0.045) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: linear-gradient(90deg, transparent 0%, black 56%, transparent 100%);
+}
+
+.cidg-v602-logo-stage {
+  background:
+    radial-gradient(circle at center, rgba(255,255,255,0.96) 0%, rgba(239,235,226,0.82) 48%, rgba(216,198,168,0.16) 70%, transparent 72%);
+}
+
+.cidg-v602-logo {
+  filter:
+    drop-shadow(0 22px 34px rgba(31,36,48,0.16))
+    drop-shadow(0 0 22px rgba(216,198,168,0.24));
+  animation: cidg-v602-float 8s ease-in-out infinite;
+}
+
+.cidg-v602-orbit {
+  position: absolute;
+  inset: 50%;
+  border-radius: 9999px;
+  border: 1px solid rgba(139,111,71,0.24);
+  transform-origin: center;
+}
+
+.cidg-v602-orbit-one {
+  width: 78%;
+  height: 38%;
+  margin-left: -39%;
+  margin-top: -19%;
+  transform: rotate(18deg);
+}
+
+.cidg-v602-orbit-two {
+  width: 68%;
+  height: 68%;
+  margin-left: -34%;
+  margin-top: -34%;
+  transform: rotate(-28deg);
+}
+
+.cidg-v602-orbit-three {
+  width: 92%;
+  height: 26%;
+  margin-left: -46%;
+  margin-top: -13%;
+  transform: rotate(64deg);
+}
+
+.cidg-v602-card {
+  box-shadow: 0 12px 34px rgba(31,36,48,0.055);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.cidg-v602-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139,111,71,0.42);
+  box-shadow: 0 18px 46px rgba(31,36,48,0.085);
+}
+
+@keyframes cidg-v602-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.8deg); }
+}
+
+@media (max-width: 1023px) {
+  .cidg-v602-logo-stage {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cidg-v602-logo,
+  .cidg-v602-card {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

@@ -13,9 +13,8 @@ export function Layout() {
   }, [pathname, hash]);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-carbon">
-      <div className="cidg-v51-global-glow" aria-hidden="true" />
-      <div className="cidg-v51-global-grid" aria-hidden="true" />
+    <div className="relative min-h-screen overflow-x-hidden bg-[#f5f2ec]">
+      <div className="cidg-v602-global-grid" aria-hidden="true" />
       <div className="relative z-10">
         <Header />
         <main className="mx-auto container-max px-4 pb-10 pt-[calc(6rem+2.5rem)]">
