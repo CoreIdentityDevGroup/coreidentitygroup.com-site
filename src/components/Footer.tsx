@@ -26,11 +26,11 @@ const KNOWLEDGE: NavLink[] = [
 function Column({ title, links }: { title: string; links: NavLink[] }) {
   return (
     <div className="space-y-3">
-      <div className="text-xs font-medium uppercase tracking-widest text-ink-muted">{title}</div>
+      <div className="text-xs font-medium uppercase tracking-widest text-white/45">{title}</div>
       <ul className="space-y-2">
         {links.map((link) => (
           <li key={link.to}>
-            <Link to={link.to} className="text-ink-secondary transition hover:text-platinum">
+            <Link to={link.to} className="text-white/70 transition hover:text-[#d8c6a8]">
               {link.label}
             </Link>
           </li>
@@ -42,18 +42,20 @@ function Column({ title, links }: { title: string; links: NavLink[] }) {
 
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-line px-6 py-12 text-sm text-ink-secondary">
+    <footer className="mt-16 border-t border-black/10 bg-[#1f2430] px-6 py-12 text-sm text-white/70">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-sm space-y-3">
           <div className="flex items-center gap-3">
-            <img src="/logo-mark.png" alt="CoreIdentity" className="h-9 w-9 flex-shrink-0" />
-            <div className="font-medium tracking-wide text-ink">CoreIdentity Development Group</div>
+            <div className="cidg-v602b-footer-mark flex h-11 w-11 items-center justify-center rounded-full">
+              <img src="/logo-mark.png" alt="CoreIdentity CI Sphere" className="h-9 w-9 object-contain" />
+            </div>
+            <div className="font-medium tracking-wide text-white">CoreIdentity Development Group</div>
           </div>
-          <div className="text-xs uppercase tracking-[0.16em] text-platinum">
+          <div className="text-xs uppercase tracking-[0.16em] text-[#d8c6a8]">
             Trust Infrastructure · Intelligence · Assurance · Trust
           </div>
-          <div className="cidg-separator mt-4" />
-          <p className="pt-2 text-xs leading-relaxed text-ink-muted">
+          <div className="h-px bg-white/10" />
+          <p className="pt-2 text-xs leading-relaxed text-white/50">
             Establishing the institutional foundation that enables organizations to deploy Intelligence with continuous Assurance—creating Trust while ensuring they remain in control.
           </p>
         </div>
@@ -65,15 +67,15 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-6xl flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
-        <div className="text-xs text-ink-muted">
+      <div className="mx-auto mt-10 flex max-w-6xl flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6">
+        <div className="text-xs text-white/45">
           © {new Date().getFullYear()} CoreIdentity Development Group. All rights reserved.
         </div>
         <div className="flex gap-6">
-          <Link to="/privacy" className="text-xs text-ink-muted transition hover:text-ink-secondary">
+          <Link to="/privacy" className="text-xs text-white/45 transition hover:text-white/70">
             Privacy Policy
           </Link>
-          <Link to="/terms" className="text-xs text-ink-muted transition hover:text-ink-secondary">
+          <Link to="/terms" className="text-xs text-white/45 transition hover:text-white/70">
             Terms of Use
           </Link>
         </div>
