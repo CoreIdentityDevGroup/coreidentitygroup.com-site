@@ -2852,3 +2852,83 @@ main [class*="bg-[#fbfaf7]"] {
     letter-spacing: 0.035em;
   }
 }
+
+/* CoreIdentity Website v6.3.5 — Optical Alignment */
+
+.cidg-brand-lockup {
+  gap: 0.72rem;
+}
+
+.cidg-brand-mark-wrap {
+  transform: translateY(-3px);
+}
+
+.cidg-brand-wordmark {
+  transform: translateY(1px);
+  min-height: auto;
+  line-height: 0.96;
+}
+
+.cidg-x10-symbol {
+  min-height: 400px;
+  transform: translateY(-10px);
+}
+
+.cidg-x10-symbol::before {
+  width: min(70%, 390px);
+  box-shadow:
+    0 16px 40px rgba(18, 22, 28, 0.10),
+    0 0 0 12px rgba(154, 163, 177, 0.024);
+}
+
+.cidg-x10-symbol img {
+  width: min(68%, 380px);
+  filter:
+    drop-shadow(0 18px 24px rgba(18, 22, 28, 0.13))
+    drop-shadow(0 0 14px rgba(154, 163, 177, 0.10));
+}
+
+.cidg-x10-hero {
+  align-items: center;
+}
+
+.cidg-x10-hero-copy {
+  align-self: center;
+}
+
+@media (max-width: 720px) {
+  .cidg-brand-lockup {
+    gap: 0.62rem;
+  }
+
+  .cidg-brand-mark-wrap {
+    transform: translateY(-2px);
+  }
+
+  .cidg-brand-wordmark {
+    transform: translateY(1px);
+  }
+}
+
+@media (max-width: 600px) {
+  .cidg-x10-symbol {
+    min-height: 280px;
+    transform: translateY(-8px);
+  }
+
+  .cidg-x10-symbol::before {
+    width: min(66%, 270px);
+  }
+
+  .cidg-x10-symbol img {
+    width: min(64%, 262px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cidg-brand-mark-wrap,
+  .cidg-brand-wordmark,
+  .cidg-x10-symbol {
+    transition: none !important;
+  }
+}
