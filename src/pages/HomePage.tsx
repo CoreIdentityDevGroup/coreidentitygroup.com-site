@@ -37,7 +37,10 @@ export default function HomePage() {
 
       <section className="cidg-x10-screen cidg-x10-hero">
         <div className="cidg-x10-hero-copy">
-          <p className="cidg-x10-kicker">Trust Infrastructure · Intelligence · Assurance · Trust</p>
+          <div className="cidg-x10-brand-headline" aria-label="Trust Infrastructure. Intelligence, Assurance, Trust.">
+            <strong>Trust Infrastructure</strong>
+            <span>Intelligence · Assurance · Trust</span>
+          </div>
           <h1>The Trust Infrastructure for the Autonomous Era</h1>
           <p className="cidg-x10-lead">
             CoreIdentity enables institutions to deploy Intelligence with continuous Assurance—creating Trust while ensuring they remain in control.
