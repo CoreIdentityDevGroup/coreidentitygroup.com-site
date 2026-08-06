@@ -775,3 +775,134 @@ footer {
     box-shadow: 0 12px 30px rgba(31, 36, 48, 0.07);
   }
 }
+
+/* ── CoreIdentity Website v6.0.2f — Contrast, Canvas & Mobile Density ─ */
+html,
+body,
+#root {
+  background: #ffffff !important;
+}
+
+main {
+  background: #ffffff !important;
+}
+
+/* Default all page typography to readable graphite on light surfaces. */
+main .text-white,
+main .text-white\/90,
+main .text-white\/80,
+main .text-white\/70,
+main .text-white\/60,
+main .text-white\/55,
+main .text-white\/50 {
+  color: #2f3540 !important;
+}
+
+/* Restore white only inside intentionally dark surfaces. */
+main [class*="bg-[#1f2430]"] .text-white,
+main [class*="bg-[#1f2430]"] .text-white\/90,
+main [class*="bg-[#1f2430]"] .text-white\/80,
+main [class*="bg-[#1f2430]"] .text-white\/70,
+main [class*="bg-[#1f2430]"] .text-white\/60,
+main [class*="bg-[#1f2430]"] .text-white\/55,
+main [class*="bg-[#1f2430]"] .text-white\/50,
+main [class*="bg-carbon"] .text-white,
+main [class*="bg-carbon"] .text-white\/90,
+main [class*="bg-carbon"] .text-white\/80,
+main [class*="bg-carbon"] .text-white\/70,
+main [class*="bg-carbon"] .text-white\/60,
+main [class*="bg-carbon"] .text-white\/55,
+main [class*="bg-carbon"] .text-white\/50 {
+  color: #ffffff !important;
+}
+
+main [class*="bg-[#1f2430]"] .text-white\/70,
+main [class*="bg-[#1f2430]"] .text-white\/60,
+main [class*="bg-[#1f2430]"] .text-white\/55,
+main [class*="bg-[#1f2430]"] .text-white\/50,
+main [class*="bg-carbon"] .text-white\/70,
+main [class*="bg-carbon"] .text-white\/60,
+main [class*="bg-carbon"] .text-white\/55,
+main [class*="bg-carbon"] .text-white\/50 {
+  color: rgba(255,255,255,0.72) !important;
+}
+
+/* Eliminate residual cream surfaces inherited from legacy classes. */
+main [class*="bg-[#f5f2ec]"],
+main [class*="bg-[#f8f6f1]"],
+main [class*="bg-[#fbfaf7]"] {
+  background-color: #ffffff !important;
+}
+
+/* Mobile header: compact, crisp, and non-overlapping. */
+@media (max-width: 1023px) {
+  header > div > div {
+    min-height: 72px;
+    height: 72px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .cidg-v602b-mark-shell {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .cidg-v602b-mark-shell img {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  header a > div:last-child > div:first-child {
+    font-size: 0.78rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.13em !important;
+    white-space: nowrap;
+  }
+
+  header a > div:last-child > div:last-child {
+    margin-top: 2px;
+    font-size: 0.64rem !important;
+    line-height: 1.15 !important;
+    white-space: nowrap;
+  }
+
+  main {
+    padding-top: calc(72px + 1.25rem) !important;
+  }
+}
+
+/* Reduce excessive mobile card height and restore a faster page rhythm. */
+@media (max-width: 767px) {
+  .cidg-v602-card {
+    min-height: auto !important;
+  }
+
+  .cidg-v602-card[class*="min-h-[19rem]"] {
+    min-height: 13.5rem !important;
+  }
+
+  .cidg-v602-card p {
+    max-width: 34rem;
+  }
+
+  main > div {
+    row-gap: 4.5rem !important;
+  }
+
+  .cidg-v602-hero {
+    border: 0 !important;
+    border-radius: 1.25rem !important;
+    box-shadow: 0 18px 48px rgba(31,36,48,0.07) !important;
+  }
+
+  .cidg-v602-hero > div.grid {
+    min-height: auto !important;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .cidg-v602-logo-stage {
+    max-width: 330px !important;
+  }
+}
