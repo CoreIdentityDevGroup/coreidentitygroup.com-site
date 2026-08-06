@@ -1240,3 +1240,522 @@ main [class*="bg-[#fbfaf7]"] {
     transition: none;
   }
 }
+
+/* ── CoreIdentity Experience 1.1 — Framework Pages ─────────────────── */
+.cidg-framework-page {
+  background: #ffffff;
+}
+
+.cidg-framework-page > section {
+  padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+.cidg-framework-hero {
+  min-height: min(720px, calc(100vh - 72px));
+  display: grid;
+  align-content: center;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.cidg-framework-kicker {
+  margin: 0;
+  color: #6f7784 !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.cidg-framework-hero h1 {
+  margin: 1.5rem 0 0;
+  color: #202631;
+  font-family: theme('fontFamily.serif') !important;
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.cidg-framework-lead {
+  margin: 2rem 0 0;
+  max-width: 850px;
+  color: #596170 !important;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.65;
+}
+
+.cidg-framework-statement {
+  background: #f5f7fa;
+}
+
+.cidg-framework-statement > * {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.cidg-framework-statement h2 {
+  margin-top: 1.25rem;
+  color: #2f3540;
+  font-family: theme('fontFamily.sans') !important;
+  font-size: clamp(2.6rem, 6vw, 5.2rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.cidg-framework-statement > p:last-child {
+  margin-top: 2rem;
+  color: #6f7784 !important;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.75;
+}
+
+.cidg-framework-principles {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.cidg-framework-principles article {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.35fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(47, 53, 64, 0.1);
+}
+
+.cidg-framework-principles article:first-child {
+  border-top: 1px solid rgba(47, 53, 64, 0.1);
+}
+
+.cidg-framework-principles h3 {
+  margin: 0;
+  color: #2f3540;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.cidg-framework-principles p {
+  margin: 0;
+  color: #6f7784 !important;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.cidg-framework-next {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  border-top: 1px solid rgba(47, 53, 64, 0.1);
+}
+
+.cidg-framework-next p {
+  margin: 0;
+  color: #6f7784 !important;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.cidg-framework-next a {
+  color: #202631;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 720px) {
+  .cidg-framework-page > section {
+    padding-block: 4rem;
+  }
+
+  .cidg-framework-hero {
+    min-height: auto;
+  }
+
+  .cidg-framework-principles article {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .cidg-framework-next {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* ── CoreIdentity Experience 1.2 — Brand Identity System ───────────── */
+:root {
+  --cidg-brand-graphite: #202631;
+  --cidg-brand-platinum: #68707d;
+  --cidg-brand-line: rgba(32, 38, 49, 0.1);
+  --cidg-brand-surface: rgba(255, 255, 255, 0.9);
+  --cidg-brand-shadow: 0 20px 55px rgba(32, 38, 49, 0.1);
+}
+
+.cidg-brand-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 80;
+  padding: 0.85rem clamp(0.75rem, 2vw, 1.5rem) 0;
+  pointer-events: none;
+}
+
+.cidg-brand-shell {
+  width: min(1440px, 100%);
+  min-height: 72px;
+  margin: 0 auto;
+  padding: 0.65rem 0.8rem 0.65rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--cidg-brand-line);
+  border-radius: 22px;
+  background: var(--cidg-brand-surface);
+  box-shadow: var(--cidg-brand-shadow);
+  backdrop-filter: blur(24px) saturate(140%);
+  pointer-events: auto;
+}
+
+.cidg-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+  color: var(--cidg-brand-graphite);
+  text-decoration: none;
+}
+
+.cidg-brand-mark-wrap {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 42%, #ffffff 0%, #f2f4f7 62%, #e1e5eb 100%);
+  border: 1px solid rgba(104, 112, 125, 0.2);
+  box-shadow:
+    0 10px 24px rgba(32, 38, 49, 0.11),
+    inset 0 1px 0 rgba(255,255,255,0.95);
+}
+
+.cidg-brand-mark {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 5px 8px rgba(32, 38, 49, 0.15))
+    drop-shadow(0 0 8px rgba(115, 125, 150, 0.12));
+}
+
+.cidg-brand-wordmark {
+  display: grid;
+  gap: 0.1rem;
+  line-height: 1;
+}
+
+.cidg-brand-wordmark strong {
+  font-size: 0.92rem;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+}
+
+.cidg-brand-wordmark small {
+  color: var(--cidg-brand-platinum);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+}
+
+.cidg-brand-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 1.5vw, 1.4rem);
+}
+
+.cidg-brand-nav > a {
+  position: relative;
+  padding: 0.65rem 0;
+  color: #626a77;
+  font-size: 0.82rem;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 160ms ease;
+}
+
+.cidg-brand-nav > a:not(.cidg-brand-contact)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0.35rem;
+  height: 1px;
+  background: var(--cidg-brand-graphite);
+  transition: right 180ms ease;
+}
+
+.cidg-brand-nav > a:hover,
+.cidg-brand-nav > a.is-active {
+  color: var(--cidg-brand-graphite);
+}
+
+.cidg-brand-nav > a:hover::after,
+.cidg-brand-nav > a.is-active::after {
+  right: 0;
+}
+
+.cidg-brand-contact {
+  min-height: 42px;
+  padding: 0 1rem !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--cidg-brand-graphite);
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(32, 38, 49, 0.14);
+}
+
+.cidg-brand-menu-button {
+  display: none;
+  min-height: 42px;
+  padding: 0 1rem;
+  border: 1px solid var(--cidg-brand-line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--cidg-brand-graphite);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.cidg-brand-mobile {
+  display: none;
+  width: min(1440px, 100%);
+  margin: 0.5rem auto 0;
+  padding: 0 0.75rem;
+  pointer-events: none;
+}
+
+.cidg-brand-mobile > div {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem;
+  border: 1px solid var(--cidg-brand-line);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.97);
+  box-shadow: var(--cidg-brand-shadow);
+  backdrop-filter: blur(24px);
+  pointer-events: auto;
+}
+
+.cidg-brand-mobile a {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  color: #626a77;
+  font-size: 0.95rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.cidg-brand-mobile a:hover,
+.cidg-brand-mobile a.is-active {
+  background: #f4f6f8;
+  color: var(--cidg-brand-graphite);
+}
+
+.cidg-brand-mobile-contact {
+  margin-top: 0.35rem;
+  background: var(--cidg-brand-graphite) !important;
+  color: #ffffff !important;
+  text-align: center;
+}
+
+.cidg-brand-footer {
+  margin-top: 7rem;
+  padding: clamp(4rem, 7vw, 7rem) clamp(1.25rem, 5vw, 5rem) 2rem;
+  background: var(--cidg-brand-graphite);
+  color: #ffffff;
+}
+
+.cidg-brand-footer-main {
+  width: min(1240px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(420px, 0.8fr);
+  gap: clamp(3rem, 7vw, 8rem);
+}
+
+.cidg-brand-footer-identity {
+  max-width: 560px;
+}
+
+.cidg-brand-footer-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cidg-brand-footer-mark-wrap {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+}
+
+.cidg-brand-footer-mark-wrap img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.cidg-brand-footer-lockup > span:last-child {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.cidg-brand-footer-lockup strong {
+  letter-spacing: 0.18em;
+  font-size: 0.95rem;
+}
+
+.cidg-brand-footer-lockup small {
+  color: rgba(255,255,255,0.52);
+  letter-spacing: 0.08em;
+}
+
+.cidg-brand-footer-identity > p {
+  margin: 2rem 0 0;
+  color: rgba(255,255,255,0.62) !important;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.cidg-brand-footer-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.cidg-brand-footer-groups h3 {
+  margin: 0 0 1rem;
+  color: rgba(255,255,255,0.42) !important;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.cidg-brand-footer-groups a {
+  display: block;
+  margin: 0.7rem 0;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.cidg-brand-footer-groups a:hover {
+  color: #ffffff;
+}
+
+.cidg-brand-footer-bottom {
+  width: min(1240px, 100%);
+  margin: 4rem auto 0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.4);
+  font-size: 0.78rem;
+}
+
+.cidg-brand-footer-bottom div {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.cidg-brand-footer-bottom a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 1120px) {
+  .cidg-brand-nav {
+    display: none;
+  }
+
+  .cidg-brand-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cidg-brand-mobile.is-open {
+    display: block;
+  }
+}
+
+@media (max-width: 720px) {
+  .cidg-brand-header {
+    padding: 0.55rem 0.55rem 0;
+  }
+
+  .cidg-brand-shell {
+    min-height: 64px;
+    border-radius: 18px;
+  }
+
+  .cidg-brand-mark-wrap {
+    width: 46px;
+    height: 46px;
+  }
+
+  .cidg-brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cidg-brand-wordmark strong {
+    font-size: 0.74rem;
+    letter-spacing: 0.13em;
+  }
+
+  .cidg-brand-wordmark small {
+    font-size: 0.64rem;
+  }
+
+  .cidg-brand-footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .cidg-brand-footer-groups {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cidg-brand-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 430px) {
+  .cidg-brand-wordmark small {
+    display: none;
+  }
+
+  .cidg-brand-footer-groups {
+    grid-template-columns: 1fr;
+  }
+}

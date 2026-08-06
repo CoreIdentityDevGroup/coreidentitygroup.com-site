@@ -1,83 +1,73 @@
 import { Link } from "@tanstack/react-router";
 
-type NavLink = { to: string; label: string };
-
-const COMPANY: NavLink[] = [
-  { to: "/about", label: "About" },
-  { to: "/leadership", label: "Leadership" },
-  { to: "/ciag", label: "Advisory" },
-  { to: "/contact", label: "Contact" },
-];
-
-const DISCIPLINE: NavLink[] = [
-  { to: "/trust-infrastructure", label: "Trust Infrastructure" },
-  { to: "/intelligence", label: "Intelligence" },
-  { to: "/assurance", label: "Assurance" },
-  { to: "/trust", label: "Trust" },
-  { to: "/platform", label: "Technical Architecture" },
-];
-
-const KNOWLEDGE: NavLink[] = [
-  { to: "/resources", label: "Research" },
-  { to: "/blog", label: "Insights" },
-  { to: "/faq", label: "FAQ" },
-];
-
-function Column({ title, links }: { title: string; links: NavLink[] }) {
-  return (
-    <div className="space-y-3">
-      <div className="text-xs font-medium uppercase tracking-widest text-white/45">{title}</div>
-      <ul className="space-y-2">
-        {links.map((link) => (
-          <li key={link.to}>
-            <Link to={link.to} className="text-white/70 transition hover:text-[#d8c6a8]">
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+const FOOTER_GROUPS = [
+  {
+    title: "Framework",
+    links: [
+      ["/trust-infrastructure", "Trust Infrastructure"],
+      ["/intelligence", "Intelligence"],
+      ["/assurance", "Assurance"],
+      ["/trust", "Trust"],
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      ["/about", "About"],
+      ["/leadership", "Leadership"],
+      ["/ciag", "Advisory"],
+      ["/contact", "Contact"],
+    ],
+  },
+  {
+    title: "Knowledge",
+    links: [
+      ["/resources", "Research"],
+      ["/blog", "Insights"],
+      ["/faq", "FAQ"],
+    ],
+  },
+] as const;
 
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-black/10 bg-[#1f2430] px-6 py-12 text-sm text-white/70">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
-        <div className="max-w-sm space-y-3">
-          <div className="flex items-center gap-3">
-            <div className="cidg-v602b-footer-mark flex h-11 w-11 items-center justify-center rounded-full">
-              <img src="/logo-mark.png" alt="CoreIdentity CI Sphere" className="h-9 w-9 object-contain" />
-            </div>
-            <div className="font-medium tracking-wide text-white">CoreIdentity Development Group</div>
+    <footer className="cidg-brand-footer">
+      <div className="cidg-brand-footer-main">
+        <div className="cidg-brand-footer-identity">
+          <div className="cidg-brand-footer-lockup">
+            <span className="cidg-brand-footer-mark-wrap" aria-hidden="true">
+              <img src="/logo-mark.png" alt="" />
+            </span>
+            <span>
+              <strong>COREIDENTITY</strong>
+              <small>Development Group</small>
+            </span>
           </div>
-          <div className="text-xs uppercase tracking-[0.16em] text-[#d8c6a8]">
-            Trust Infrastructure · Intelligence · Assurance · Trust
-          </div>
-          <div className="h-px bg-white/10" />
-          <p className="pt-2 text-xs leading-relaxed text-white/50">
-            Establishing the institutional foundation that enables organizations to deploy Intelligence with continuous Assurance—creating Trust while ensuring they remain in control.
+
+          <p>
+            Establishing the Trust Infrastructure that enables institutions to deploy Intelligence with continuous Assurance—creating Trust while ensuring they remain in control.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
-          <Column title="Company" links={COMPANY} />
-          <Column title="Discipline" links={DISCIPLINE} />
-          <Column title="Knowledge" links={KNOWLEDGE} />
+        <div className="cidg-brand-footer-groups">
+          {FOOTER_GROUPS.map((group) => (
+            <div key={group.title}>
+              <h3>{group.title}</h3>
+              {group.links.map(([to, label]) => (
+                <Link key={to} to={to}>
+                  {label}
+                </Link>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-6xl flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6">
-        <div className="text-xs text-white/45">
-          © {new Date().getFullYear()} CoreIdentity Development Group. All rights reserved.
-        </div>
-        <div className="flex gap-6">
-          <Link to="/privacy" className="text-xs text-white/45 transition hover:text-white/70">
-            Privacy Policy
-          </Link>
-          <Link to="/terms" className="text-xs text-white/45 transition hover:text-white/70">
-            Terms of Use
-          </Link>
+      <div className="cidg-brand-footer-bottom">
+        <span>© {new Date().getFullYear()} CoreIdentity Development Group</span>
+        <div>
+          <Link to="/privacy">Privacy</Link>
+          <Link to="/terms">Terms</Link>
         </div>
       </div>
     </footer>
