@@ -514,3 +514,142 @@ body {
 .cidg-v602b-footer-mark img {
   filter: drop-shadow(0 0 10px rgba(216,198,168,0.20));
 }
+
+/* ── CoreIdentity Website v6.0.2c — Homepage Completion ─────────────── */
+.cidg-v602c-ecosystem {
+  box-shadow: 0 22px 64px rgba(31,36,48,0.075);
+}
+
+.cidg-v602c-blueprint {
+  background:
+    linear-gradient(rgba(216,198,168,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(216,198,168,0.08) 1px, transparent 1px),
+    linear-gradient(135deg, #313845, #1f2430);
+  background-size: 44px 44px, 44px 44px, auto;
+}
+
+.cidg-v602c-blueprint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 22% 20%, rgba(216,198,168,0.16), transparent 28%),
+    radial-gradient(circle at 76% 72%, rgba(255,255,255,0.05), transparent 32%);
+}
+
+/* ── CoreIdentity Website v6.0.2d — Typography System ───────────────── */
+:root {
+  --experience-heading: #2f3540;
+  --experience-subheading: #596170;
+  --experience-body: #6f7784;
+  --experience-accent: #8b6f47;
+}
+
+body {
+  color: var(--experience-body);
+}
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  color: var(--experience-heading);
+}
+
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  font-family: theme('fontFamily.sans');
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+main h1 {
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+main p,
+main li,
+main dd,
+main dt {
+  color: var(--experience-body);
+}
+
+main .text-ink {
+  color: var(--experience-heading) !important;
+}
+
+main .text-ink-secondary {
+  color: var(--experience-subheading) !important;
+}
+
+main .text-ink-muted {
+  color: var(--experience-body) !important;
+}
+
+main .text-accent,
+main .text-platinum {
+  color: var(--experience-accent) !important;
+}
+
+main section:not(.bg-\[\#1f2430\]):not([class*="bg-carbon"]) .text-white,
+main article:not([class*="bg-[#1f2430]"]):not([class*="bg-carbon"]) .text-white {
+  color: var(--experience-heading) !important;
+}
+
+main section[class*="bg-[#1f2430]"] h1,
+main section[class*="bg-[#1f2430]"] h2,
+main section[class*="bg-[#1f2430]"] h3,
+main section[class*="bg-[#1f2430]"] p,
+main section[class*="bg-[#1f2430]"] .text-white,
+main [class*="bg-carbon"] h1,
+main [class*="bg-carbon"] h2,
+main [class*="bg-carbon"] h3,
+main [class*="bg-carbon"] p,
+main [class*="bg-carbon"] .text-white {
+  color: #ffffff !important;
+}
+
+main section[class*="bg-[#1f2430]"] .text-white\/70,
+main section[class*="bg-[#1f2430]"] .text-white\/55,
+main section[class*="bg-[#1f2430]"] .text-white\/50 {
+  color: rgba(255,255,255,0.72) !important;
+}
+
+main .font-serif:not(h1) {
+  font-family: theme('fontFamily.sans') !important;
+}
+
+.cidg-v602-hero h1 {
+  font-family: theme('fontFamily.serif') !important;
+}
+
+.cidg-v602-hero p {
+  color: #58606f !important;
+}
+
+.cidg-v602-card h3,
+.cidg-v602c-ecosystem h2,
+.cidg-v602c-ecosystem h3 {
+  font-family: theme('fontFamily.sans') !important;
+}
+
+@media (max-width: 767px) {
+  main h1 {
+    line-height: 1.05;
+  }
+
+  main h2 {
+    line-height: 1.08;
+  }
+
+  main p {
+    line-height: 1.7;
+  }
+}
