@@ -192,3 +192,82 @@
 .cidg-stat {
   animation: cidg-countup 0.5s ease forwards;
 }
+
+/* ── CoreIdentity Website v5.0.1 — Trust Infrastructure Foundation ───── */
+.text-platinum { color: var(--platinum); }
+.bg-platinum { background-color: var(--platinum); }
+.border-platinum\/20 { border-color: rgba(197, 202, 214, 0.20); }
+.border-platinum\/30 { border-color: rgba(197, 202, 214, 0.30); }
+.border-platinum\/40 { border-color: rgba(197, 202, 214, 0.40); }
+.bg-platinum\/10 { background-color: rgba(197, 202, 214, 0.10); }
+.bg-platinum\/\[0\.04\] { background-color: rgba(197, 202, 214, 0.04); }
+
+.cidg-v5-hero {
+  background:
+    radial-gradient(circle at 78% 38%, rgba(197,202,214,0.09), transparent 28%),
+    linear-gradient(135deg, rgba(22,22,26,0.98), rgba(11,11,12,0.94));
+}
+
+.cidg-v5-hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.24;
+  background-image:
+    linear-gradient(rgba(197,202,214,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(197,202,214,0.08) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(90deg, black, transparent 82%);
+}
+
+.cidg-v5-hero-glow {
+  position: absolute;
+  width: 34rem;
+  height: 34rem;
+  right: -4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(197,202,214,0.13), transparent 67%);
+  filter: blur(10px);
+}
+
+.cidg-v5-sphere {
+  filter: drop-shadow(0 0 38px rgba(197,202,214,0.13));
+  opacity: 0.94;
+}
+
+.cidg-v5-framework-card {
+  min-height: 17rem;
+  overflow: visible;
+}
+
+.cidg-v5-framework-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(145deg, rgba(197,202,214,0.055), transparent 42%);
+}
+
+.cidg-v5-closing {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(197,202,214,0.11), transparent 45%),
+    linear-gradient(180deg, rgba(22,22,26,0.94), rgba(11,11,12,0.98));
+}
+
+@media (max-width: 1023px) {
+  .cidg-v5-framework-card {
+    min-height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cidg-card,
+  .cidg-btn-primary,
+  .cidg-fadein,
+  .cidg-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
