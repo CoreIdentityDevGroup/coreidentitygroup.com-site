@@ -34,6 +34,10 @@ import { RetailGovernancePage } from "./pages/RetailGovernancePage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import { GovernanceConsolePage } from "./pages/GovernanceConsolePage";
+import { TrustInfrastructurePage } from "./pages/TrustInfrastructurePage";
+import { IntelligencePage } from "./pages/IntelligencePage";
+import { AssurancePage } from "./pages/AssurancePage";
+import { TrustPage } from "./pages/TrustPage";
 
 // Institutional Carbon restructure — four governance layers + platform deep-dive.
 import { PlatformPage } from "./pages/PlatformPage";
@@ -51,6 +55,30 @@ const indexRoute = createRoute({
 });
 
 // ── Governance layers (A → D) + platform architecture ───────────────────
+const trustInfrastructureRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/trust-infrastructure",
+  component: TrustInfrastructurePage,
+});
+
+const intelligenceRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/intelligence",
+  component: IntelligencePage,
+});
+
+const assuranceRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/assurance",
+  component: AssurancePage,
+});
+
+const trustRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/trust",
+  component: TrustPage,
+});
+
 const platformRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/platform",
@@ -274,6 +302,11 @@ const governanceConsoleRoute = createRoute({
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
+
+  trustInfrastructureRoute,
+  intelligenceRoute,
+  assuranceRoute,
+  trustRoute,
 
   // Layers + platform
   platformRoute,

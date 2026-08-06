@@ -5,11 +5,11 @@ import { GOVERNANCE_GROUPS } from "../data/governanceNav";
 type NavLink = { to: string; label: string };
 
 const ARCHITECTURE_MENU: NavLink[] = [
-  { to: "/platform", label: "Trust Infrastructure" },
-  { to: "/layer-a", label: "Execution Integrity" },
-  { to: "/layer-b", label: "Verification at Scale" },
-  { to: "/layer-c", label: "Sovereign Assurance" },
-  { to: "/layer-d", label: "Cryptographic Hardening" },
+  { to: "/trust-infrastructure", label: "Trust Infrastructure" },
+  { to: "/intelligence", label: "Intelligence" },
+  { to: "/assurance", label: "Assurance" },
+  { to: "/trust", label: "Trust" },
+  { to: "/platform", label: "Technical Architecture" },
 ];
 
 function Chevron() {
