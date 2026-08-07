@@ -47,7 +47,7 @@ export function TrustInfrastructurePage() {
         <Link to="/intelligence">Intelligence →</Link>
       </section>
       <section className="cidg-platinum-visual-section" aria-label="Institutional control">
-        <InstitutionalVisual src="/images/visuals/institutional-control.svg" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-platinum-visual--control" />
+        <InstitutionalVisual src="/images/visuals/institutional-control-3d.webp" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-platinum-visual--control" />
       </section>
 
     </div>

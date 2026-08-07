@@ -43,18 +43,10 @@ export default function HomePage() {
         {/* Labels live inside the SVG as real text: selectable, translatable,
             and readable by assistive technology. No caption duplication. */}
         <figure className="cidg-platinum-architecture">
-          <img
-            src="/hero-architecture.svg"
-            alt="Trust Infrastructure frames three institutional capabilities — Institutional Intelligence, Institutional Assurance, and Institutional Trust — resolving to Autonomous Governed Execution."
-            width="1320"
-            height="980"
-            loading="eager"
-            decoding="async"
-          />
         </figure>
       
         <InstitutionalVisual
-          src="/images/visuals/trust-infrastructure-hero.svg"
+          src="/images/visuals/trust-infrastructure-3d.webp"
           alt="Trust Infrastructure architecture: Intelligence, Assurance and Trust enabling Autonomous Governed Execution."
           className="cidg-platinum-visual--hero"
           priority

@@ -189,7 +189,7 @@ export function AboutPage() {
       </section>
 
       <section className="cidg-platinum-visual-section" aria-label="Governance Ecosystem architecture">
-        <InstitutionalVisual src="/images/visuals/governance-ecosystem.svg" alt="CoreIdentity Governance Ecosystem integrating Trust Infrastructure, Autonomous Execution Governance, the Institutional Chain of Legitimacy and Autonomous Governed Execution." className="cidg-platinum-visual--ecosystem" />
+        <InstitutionalVisual src="/images/visuals/governance-ecosystem-3d.webp" alt="CoreIdentity Governance Ecosystem integrating Trust Infrastructure, Autonomous Execution Governance, the Institutional Chain of Legitimacy and Autonomous Governed Execution." className="cidg-platinum-visual--ecosystem" />
       </section>
 
     </div>

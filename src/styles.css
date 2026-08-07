@@ -4433,3 +4433,32 @@ body,
 /* <<< coreidentity:hero-figure <<< */
 /* CoreIdentity Release 46 — Platinum Visual Assets */
 .cidg-platinum-visual{margin:0;width:100%}.cidg-platinum-visual img{display:block;width:100%;height:auto;object-fit:contain;background:#fff}.cidg-platinum-visual--hero{width:min(100%,760px);margin:clamp(2rem,5vw,4.5rem) auto 0}.cidg-platinum-visual-section{width:min(1180px,calc(100% - 2.5rem));margin:0 auto;padding:clamp(4rem,8vw,8rem) 0;background:#fff}.cidg-platinum-visual--ecosystem,.cidg-platinum-visual--control{width:min(100%,1040px);margin-inline:auto}@media(max-width:720px){.cidg-platinum-visual--hero{width:100%;margin-top:2rem}.cidg-platinum-visual-section{width:min(100% - 1.5rem,1180px);padding-block:3.5rem}}
+
+
+/* CoreIdentity Release 46r2 - Photoreal 3D Visuals */
+.cidg-platinum-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+.cidg-platinum-visual--hero {
+  width: min(100%, 760px);
+  margin: clamp(1.75rem, 4vw, 3.5rem) auto 0;
+}
+
+.cidg-platinum-visual--ecosystem,
+.cidg-platinum-visual--control {
+  width: min(100%, 1040px);
+  margin-inline: auto;
+}
+
+@media (max-width: 720px) {
+  .cidg-platinum-visual--hero,
+  .cidg-platinum-visual--ecosystem,
+  .cidg-platinum-visual--control {
+    width: 100%;
+  }
+}
