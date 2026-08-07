@@ -70,12 +70,6 @@ export default function HomePage() {
           </p>
           <Link to="/about">Understand CoreIdentity →</Link>
         </div>
-
-        <InstitutionalVisual
-          src="/images/visuals/governance-ecosystem-3d.webp"
-          alt="CoreIdentity Governance Ecosystem integrating Trust Infrastructure, Autonomous Execution Governance, the Institutional Chain of Legitimacy and Autonomous Governed Execution."
-          className="cidg-platinum-visual--ecosystem"
-        />
       </section>
 
       <section className="cidg-platinum-closing">

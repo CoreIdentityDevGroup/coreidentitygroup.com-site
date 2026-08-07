@@ -2,6 +2,7 @@
 import React from "react";
 import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
 import { Helmet } from "react-helmet-async";
+import InstitutionalVisual from "../components/InstitutionalVisual";
 
 /**
  * AboutPage (About Us)
@@ -163,6 +164,21 @@ export function AboutPage() {
           </div>
         </Card>
       </section>
+
+      <section className="cidg-governance-ecosystem-feature" aria-labelledby="cidg-governance-ecosystem-heading">
+        <div className="cidg-governance-ecosystem-copy">
+          <p className="cidg-platinum-kicker">The Governance Ecosystem</p>
+          <h2 id="cidg-governance-ecosystem-heading">Architecture, doctrine, and legitimacy operating as one institutional system.</h2>
+          <p>Trust Infrastructure establishes the architectural discipline. Autonomous Execution Governance defines the operational doctrine. The Institutional Chain of Legitimacy preserves institutional authority throughout autonomous execution. Together, they enable Autonomous Governed Execution.</p>
+        </div>
+        <InstitutionalVisual
+          src="/images/visuals/governance-ecosystem-3d.webp"
+          alt="The CoreIdentity Governance Ecosystem: Trust Infrastructure, Autonomous Execution Governance, the Institutional Chain of Legitimacy, and Autonomous Governed Execution."
+          className="cidg-platinum-visual--ecosystem"
+        />
+      </section>
+
+
 
       {/* Infrastructure Partners */}
       <section className="space-y-5">

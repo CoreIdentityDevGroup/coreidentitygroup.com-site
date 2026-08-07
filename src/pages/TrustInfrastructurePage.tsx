@@ -29,6 +29,10 @@ export function TrustInfrastructurePage() {
         </p>
       </section>
 
+      <section className="cidg-platinum-visual-section" aria-label="Institutional control">
+        <InstitutionalVisual src="/images/visuals/institutional-control-3d.webp" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-platinum-visual--control" />
+      </section>
+
       <section className="cidg-framework-principles">
         {[
           ["Authority", "Every action remains traceable to legitimate institutional authority."],
@@ -40,10 +44,6 @@ export function TrustInfrastructurePage() {
             <p>{copy}</p>
           </article>
         ))}
-      </section>
-
-      <section className="cidg-platinum-visual-section" aria-label="Institutional control">
-        <InstitutionalVisual src="/images/visuals/institutional-control-3d.webp" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-platinum-visual--control" />
       </section>
 
       <section className="cidg-framework-next">
