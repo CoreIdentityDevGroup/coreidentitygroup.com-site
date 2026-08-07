@@ -35,3 +35,17 @@ gcp-credentials*.json
 credentials.json
 .aws/credentials
 .netrc
+
+# >>> coreidentity:release-hygiene >>>
+node_modules/
+dist/
+# Credentials — never commit
+release.conf
+devops.env
+.env
+.env.*
+# Release state — must live outside the working tree
+.release-logs/
+.release-reports/
+devops-release-manifest.json
+# <<< coreidentity:release-hygiene <<<
