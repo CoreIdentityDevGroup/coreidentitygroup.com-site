@@ -19,6 +19,17 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
+    label: "Platform",
+    items: [
+      { to: "/platform", label: "Platform Overview" },
+      { to: "/layer-a", label: "Layer A — Execution Integrity" },
+      { to: "/layer-b", label: "Layer B — Verification at Scale" },
+      { to: "/layer-c", label: "Layer C — Sovereign Assurance" },
+      { to: "/layer-d", label: "Layer D — Cryptographic Hardening" },
+      { to: "/smartnation-ai", label: "SmartNation AI" },
+    ],
+  },
+  {
     label: "Company",
     items: [
       { to: "/about", label: "About" },
