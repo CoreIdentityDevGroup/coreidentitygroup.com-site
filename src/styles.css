@@ -2932,3 +2932,291 @@ main [class*="bg-[#fbfaf7]"] {
     transition: none !important;
   }
 }
+
+/* CoreIdentity Website v6.3.8 — Infrastructure Hero */
+
+.cidg-v638-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(880px, calc(100svh - 110px));
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: clamp(2rem, 4vw, 5rem);
+  align-items: center;
+  padding: clamp(4.5rem, 8vw, 8rem) clamp(1.5rem, 5vw, 5rem);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 69% 50%, rgba(198, 157, 94, 0.13), transparent 24%),
+    radial-gradient(circle at 82% 76%, rgba(198, 157, 94, 0.06), transparent 34%),
+    #07090c;
+  color: #f7f4ee;
+}
+
+.cidg-v638-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 760px;
+}
+
+.cidg-v638-brandline {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.4rem);
+  text-transform: uppercase;
+}
+
+.cidg-v638-brandline strong {
+  color: #d7b27a;
+  font-size: clamp(0.98rem, 1.3vw, 1.25rem);
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.cidg-v638-brandline span {
+  color: #f1ede5;
+  font-size: clamp(0.88rem, 1.2vw, 1.08rem);
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.cidg-v638-copy h1 {
+  max-width: 720px;
+  margin: 0;
+  color: #f8f5ef;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.2rem, 6vw, 6.7rem);
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.cidg-v638-copy h1 span {
+  display: block;
+}
+
+.cidg-v638-copy > p {
+  max-width: 620px;
+  margin: clamp(1.7rem, 3vw, 2.5rem) 0 0;
+  color: #c8cbd0;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.cidg-v638-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.cidg-v638-primary,
+.cidg-v638-secondary {
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1.4rem;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  font-weight: 760;
+  letter-spacing: 0.045em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cidg-v638-primary {
+  border: 1px solid rgba(215,178,122,0.76);
+  color: #f8f5ef;
+  background: rgba(255,255,255,0.015);
+}
+
+.cidg-v638-secondary {
+  border: 1px solid rgba(255,255,255,0.16);
+  color: #cfd3d9;
+  background: rgba(255,255,255,0.025);
+}
+
+.cidg-v638-visual {
+  position: relative;
+  min-height: 680px;
+  perspective: 1100px;
+}
+
+.cidg-v638-axis {
+  position: absolute;
+  left: 50%;
+  top: 7%;
+  bottom: 6%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.86) 16%, #d7b27a 50%, rgba(255,255,255,0.84) 84%, transparent);
+  box-shadow: 0 0 20px rgba(215,178,122,0.74);
+}
+
+.cidg-v638-layer {
+  position: absolute;
+  left: 50%;
+  width: min(82%, 610px);
+  aspect-ratio: 1.82;
+  transform: translateX(-50%) rotateX(64deg);
+  border: 1px solid rgba(255,255,255,0.56);
+  background: linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.018));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.64), 0 0 28px rgba(215,178,122,0.14), 0 28px 44px rgba(0,0,0,0.34);
+}
+
+.cidg-v638-layer::before,
+.cidg-v638-layer::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cidg-v638-layer::before {
+  width: 37%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(215,178,122,0.58);
+  box-shadow: 0 0 22px rgba(215,178,122,0.56), inset 0 0 18px rgba(215,178,122,0.18);
+}
+
+.cidg-v638-layer::after {
+  width: 8px;
+  height: 8px;
+  background: #fffaf0;
+  box-shadow: 0 0 10px #fff, 0 0 25px #d7b27a, 0 0 48px rgba(215,178,122,0.8);
+}
+
+.cidg-v638-layer-1 { top: 8%; }
+.cidg-v638-layer-2 { top: 28%; }
+.cidg-v638-layer-3 { top: 48%; }
+.cidg-v638-layer-4 { top: 68%; }
+
+.cidg-v638-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.42;
+  background:
+    linear-gradient(rgba(215,178,122,0.19) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(215,178,122,0.19) 1px, transparent 1px);
+  background-size: 13% 21%;
+}
+
+.cidg-v638-node {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff8e8;
+  box-shadow: 0 0 16px rgba(215,178,122,0.92);
+}
+
+.cidg-v638-node-a { left: 21%; top: 31%; }
+.cidg-v638-node-b { left: 68%; top: 61%; }
+.cidg-v638-node-c { left: 45%; top: 78%; }
+
+.cidg-v638-label {
+  position: absolute;
+  right: -1%;
+  width: min(38%, 260px);
+  display: grid;
+  gap: 0.28rem;
+  padding-left: 1rem;
+  color: #c8cbd0;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.cidg-v638-label::before {
+  content: "";
+  position: absolute;
+  left: -72px;
+  top: 0.62rem;
+  width: 62px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d7b27a);
+}
+
+.cidg-v638-label strong {
+  color: #d7b27a;
+  font-size: 0.9rem;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.cidg-v638-label-1 { top: 13%; }
+.cidg-v638-label-2 { top: 34%; }
+.cidg-v638-label-3 { top: 55%; }
+.cidg-v638-label-4 { top: 76%; }
+
+.cidg-brand-mark { object-position: 51.2% 50.8%; }
+
+@media (max-width: 960px) {
+  .cidg-v638-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  .cidg-v638-visual {
+    min-height: 680px;
+    width: min(100%, 760px);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .cidg-v638-hero {
+    gap: 1.5rem;
+    padding: 3.5rem 1.25rem 4rem;
+  }
+
+  .cidg-v638-brandline span {
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+
+  .cidg-v638-copy h1 {
+    font-size: clamp(3rem, 14vw, 4.6rem);
+    line-height: 0.94;
+  }
+
+  .cidg-v638-actions {
+    display: grid;
+  }
+
+  .cidg-v638-primary,
+  .cidg-v638-secondary {
+    width: 100%;
+  }
+
+  .cidg-v638-visual {
+    min-height: 560px;
+  }
+
+  .cidg-v638-layer {
+    width: 78%;
+  }
+
+  .cidg-v638-label {
+    right: 0;
+    width: 39%;
+    padding-left: 0.45rem;
+    font-size: 0.66rem;
+  }
+
+  .cidg-v638-label strong {
+    font-size: 0.68rem;
+  }
+
+  .cidg-v638-label::before {
+    left: -34px;
+    width: 30px;
+  }
+
+  .cidg-brand-mark {
+    object-position: 51.5% 51%;
+  }
+}

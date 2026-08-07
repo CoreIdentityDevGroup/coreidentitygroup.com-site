@@ -35,31 +35,65 @@ export default function HomePage() {
         />
       </Helmet>
 
-      <section className="cidg-x10-screen cidg-x10-hero">
-        <div className="cidg-x10-hero-copy">
-          <div className="cidg-x10-brand-headline" aria-label="Trust Infrastructure. Intelligence, Assurance, Trust.">
+      
+      <section className="cidg-v638-hero" aria-labelledby="cidg-v638-title">
+        <div className="cidg-v638-copy">
+          <div className="cidg-v638-brandline">
             <strong>Trust Infrastructure</strong>
             <span>Intelligence · Assurance · Trust</span>
           </div>
-          <h1>The Trust Infrastructure for the Autonomous Era</h1>
-          <p className="cidg-x10-lead">
-            CoreIdentity enables institutions to deploy Intelligence with continuous Assurance—creating Trust while ensuring they remain in control.
+
+          <h1 id="cidg-v638-title">
+            The Trust Infrastructure
+            <span>the Autonomous Era Demands</span>
+          </h1>
+
+          <p>
+            The institutional foundation that enables organizations to safely
+            delegate autonomous execution while ensuring they remain in control.
           </p>
-          <div className="cidg-x10-actions">
-            <Link to="/trust-infrastructure" className="cidg-x10-primary">
-              Explore Trust Infrastructure
+
+          <div className="cidg-v638-actions">
+            <Link to="/trust-infrastructure" className="cidg-v638-primary">
+              Explore the Ecosystem <span aria-hidden="true">→</span>
             </Link>
-            <Link to="/resources" className="cidg-x10-secondary">
+            <Link to="/resources" className="cidg-v638-secondary">
               Read Our Research
             </Link>
           </div>
         </div>
 
-        <div className="cidg-x10-symbol" aria-label="CoreIdentity brand symbol">
-          <div className="cidg-x10-halo" aria-hidden="true" />
-          <img src="/logo-mark.png" alt="CoreIdentity" />
+        <div className="cidg-v638-visual" aria-label="Layered Governance Ecosystem architecture">
+          <div className="cidg-v638-axis" aria-hidden="true" />
+
+          {[1, 2, 3, 4].map((layer) => (
+            <div key={layer} className={`cidg-v638-layer cidg-v638-layer-${layer}`}>
+              <div className="cidg-v638-grid" />
+              <div className="cidg-v638-node cidg-v638-node-a" />
+              <div className="cidg-v638-node cidg-v638-node-b" />
+              <div className="cidg-v638-node cidg-v638-node-c" />
+            </div>
+          ))}
+
+          <div className="cidg-v638-label cidg-v638-label-1">
+            <strong>Trust Infrastructure</strong>
+            <span>The Architectural Discipline</span>
+          </div>
+          <div className="cidg-v638-label cidg-v638-label-2">
+            <strong>Intelligence</strong>
+            <span>Context and Understanding</span>
+          </div>
+          <div className="cidg-v638-label cidg-v638-label-3">
+            <strong>Assurance</strong>
+            <span>Verification and Control</span>
+          </div>
+          <div className="cidg-v638-label cidg-v638-label-4">
+            <strong>Governed Execution</strong>
+            <span>Autonomous Operations Within Guardrails</span>
+          </div>
         </div>
       </section>
+
 
       <section className="cidg-x10-screen cidg-x10-statement">
         <div className="cidg-x10-narrow">
