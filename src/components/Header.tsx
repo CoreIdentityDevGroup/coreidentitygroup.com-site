@@ -1,118 +1,69 @@
 import { useEffect, useState } from "react";
-import { Link, useRouterState } from "@tanstack/react-router";
-
-type NavItem = {
-  to: string;
-  label: string;
-};
-
-const PRIMARY_NAV: NavItem[] = [
-  { to: "/trust-infrastructure", label: "Trust Infrastructure" },
-  { to: "/intelligence", label: "Intelligence" },
-  { to: "/assurance", label: "Assurance" },
-  { to: "/trust", label: "Trust" },
-  { to: "/resources", label: "Research" },
-  { to: "/leadership", label: "Leadership" },
-  { to: "/about", label: "About" },
-];
+import { Link } from "@tanstack/react-router";
+import { NAVIGATION_GROUPS, PRIMARY_NAVIGATION } from "../data/siteNavigation";
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const pathname = useRouterState({ select: (state) => state.location.pathname });
-
-  const isActive = (to: string) =>
-    to === "/" ? pathname === "/" : pathname === to || pathname.startsWith(`${to}/`);
 
   useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = open ? "hidden" : previousOverflow;
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
-    };
-
-    if (open) window.addEventListener("keydown", handleEscape);
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener("keydown", handleEscape);
-    };
+    document.documentElement.classList.toggle("cidg-menu-open", open);
+    return () => document.documentElement.classList.remove("cidg-menu-open");
   }, [open]);
 
+  const close = () => setOpen(false);
+
   return (
-    <>
-      <header className="cidg-brand-header">
-        <div className="cidg-brand-shell">
-          <Link to="/" className="cidg-brand-lockup" onClick={() => setOpen(false)}>
-            <span className="cidg-brand-mark-wrap" aria-hidden="true">
-              <img src="/logo-mark.png" alt="" className="cidg-brand-mark" />
-            </span>
+    <header className="cidg-platinum-header">
+      <div className="cidg-platinum-masthead">
+        <Link to="/" onClick={close} className="cidg-platinum-brand" aria-label="CoreIdentity home">
+          <span className="cidg-platinum-mark">
+            <img src="/logo-mark.png" alt="" />
+          </span>
+          <span className="cidg-platinum-wordmark">COREIDENTITY</span>
+        </Link>
 
-            <span className="cidg-brand-wordmark" aria-label="CoreIdentity">
-              COREIDENTITY
-            </span>
-          </Link>
+        <nav className="cidg-platinum-desktop-nav" aria-label="Primary navigation">
+          {PRIMARY_NAVIGATION.map((item) => (
+            <Link key={item.to} to={item.to}>{item.label}</Link>
+          ))}
+          <Link to="/contact" className="cidg-platinum-contact">Contact</Link>
+        </nav>
 
-          <nav className="cidg-brand-nav" aria-label="Primary navigation">
-            {PRIMARY_NAV.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className={isActive(item.to) ? "is-active" : undefined}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link to="/contact" className="cidg-brand-contact">Contact</Link>
-          </nav>
-
-          <button
-            type="button"
-            className="cidg-brand-menu-button"
-            aria-expanded={open}
-            aria-controls="cidg-mobile-navigation"
-            onClick={() => setOpen((value) => !value)}
-          >
-            {open ? "Close" : "Menu"}
-          </button>
-        </div>
-      </header>
+        <button
+          type="button"
+          className="cidg-platinum-menu-button"
+          aria-expanded={open}
+          aria-controls="cidg-platinum-menu"
+          onClick={() => setOpen((current) => !current)}
+        >
+          {open ? "Close" : "Menu"}
+        </button>
+      </div>
 
       <div
-        id="cidg-mobile-navigation"
-        className={open ? "cidg-mobile-sheet is-open" : "cidg-mobile-sheet"}
+        id="cidg-platinum-menu"
+        className={`cidg-platinum-menu ${open ? "is-open" : ""}`}
         aria-hidden={!open}
       >
-        <div className="cidg-mobile-sheet-inner">
-          <nav aria-label="Mobile navigation">
-            {PRIMARY_NAV.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className={isActive(item.to) ? "is-active" : undefined}
-                tabIndex={open ? 0 : -1}
-              >
-                <span>{item.label}</span>
-                <span aria-hidden="true">→</span>
-              </Link>
-            ))}
-          </nav>
+        <div className="cidg-platinum-menu-inner">
+          {NAVIGATION_GROUPS.map((group) => (
+            <section key={group.label} className="cidg-platinum-menu-group">
+              <p>{group.label}</p>
+              {group.items.map((item) => (
+                <Link key={item.to} to={item.to} onClick={close}>
+                  <span>{item.label}</span>
+                  <b aria-hidden="true">→</b>
+                </Link>
+              ))}
+            </section>
+          ))}
 
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
-            className="cidg-mobile-sheet-contact"
-            tabIndex={open ? 0 : -1}
-          >
-            Contact
+          <Link to="/contact" onClick={close} className="cidg-platinum-menu-cta">
+            Begin an Institutional Conversation
           </Link>
         </div>
       </div>
-    </>
+    </header>
   );
 }
+

@@ -1,75 +1,45 @@
 import { Link } from "@tanstack/react-router";
-
-const FOOTER_GROUPS = [
-  {
-    title: "Framework",
-    links: [
-      ["/trust-infrastructure", "Trust Infrastructure"],
-      ["/intelligence", "Intelligence"],
-      ["/assurance", "Assurance"],
-      ["/trust", "Trust"],
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      ["/about", "About"],
-      ["/leadership", "Leadership"],
-      ["/ciag", "Advisory"],
-      ["/contact", "Contact"],
-    ],
-  },
-  {
-    title: "Knowledge",
-    links: [
-      ["/resources", "Research"],
-      ["/blog", "Insights"],
-      ["/faq", "FAQ"],
-    ],
-  },
-] as const;
+import { NAVIGATION_GROUPS } from "../data/siteNavigation";
 
 export default function Footer() {
   return (
-    <footer className="cidg-brand-footer">
-      <div className="cidg-brand-footer-main">
-        <div className="cidg-brand-footer-identity">
-          <div className="cidg-brand-footer-lockup">
-            <span className="cidg-brand-footer-mark-wrap" aria-hidden="true">
+    <footer className="cidg-platinum-footer">
+      <div className="cidg-platinum-footer-grid">
+        <div className="cidg-platinum-footer-brand">
+          <Link to="/" className="cidg-platinum-footer-lockup">
+            <span className="cidg-platinum-footer-mark">
               <img src="/logo-mark.png" alt="" />
             </span>
             <span>
               <strong>COREIDENTITY</strong>
               <small>Development Group</small>
             </span>
-          </div>
+          </Link>
 
           <p>
-            Establishing the Trust Infrastructure that enables institutions to deploy Intelligence with continuous Assurance—creating Trust while ensuring they remain in control.
+            Establishing the Trust Infrastructure that enables institutions to
+            safely delegate autonomous execution while ensuring they remain in control.
           </p>
         </div>
 
-        <div className="cidg-brand-footer-groups">
-          {FOOTER_GROUPS.map((group) => (
-            <div key={group.title}>
-              <h3>{group.title}</h3>
-              {group.links.map(([to, label]) => (
-                <Link key={to} to={to}>
-                  {label}
-                </Link>
-              ))}
-            </div>
-          ))}
-        </div>
+        {NAVIGATION_GROUPS.map((group) => (
+          <nav key={group.label} aria-label={`${group.label} navigation`}>
+            <h2>{group.label}</h2>
+            {group.items.map((item) => (
+              <Link key={item.to} to={item.to}>{item.label}</Link>
+            ))}
+          </nav>
+        ))}
       </div>
 
-      <div className="cidg-brand-footer-bottom">
+      <div className="cidg-platinum-footer-legal">
         <span>© {new Date().getFullYear()} CoreIdentity Development Group</span>
-        <div>
+        <span>
           <Link to="/privacy">Privacy</Link>
           <Link to="/terms">Terms</Link>
-        </div>
+        </span>
       </div>
     </footer>
   );
 }
+
