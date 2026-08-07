@@ -1,4 +1,4 @@
-# Core Holding Corporation — Cloudflare Pages (React)
+# CoreIdentity Development Group— Cloudflare Pages (React)
 
 ## Why you saw a blank page
 Cloudflare Pages will only render this site after it runs a Vite build.
