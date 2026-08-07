@@ -42,12 +42,13 @@ export function TrustInfrastructurePage() {
         ))}
       </section>
 
+      <section className="cidg-platinum-visual-section" aria-label="Institutional control">
+        <InstitutionalVisual src="/images/visuals/institutional-control-3d.webp" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-platinum-visual--control" />
+      </section>
+
       <section className="cidg-framework-next">
         <p>Next in the framework</p>
         <Link to="/intelligence">Intelligence →</Link>
-      </section>
-      <section className="cidg-platinum-visual-section" aria-label="Institutional control">
-        <InstitutionalVisual src="/images/visuals/institutional-control-3d.webp" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-platinum-visual--control" />
       </section>
 
     </div>

@@ -39,13 +39,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-
-        {/* Labels live inside the SVG as real text: selectable, translatable,
-            and readable by assistive technology. No caption duplication. */}
-        <figure className="cidg-platinum-architecture">
-        </figure>
-      
-        <InstitutionalVisual
+<InstitutionalVisual
           src="/images/visuals/trust-infrastructure-3d.webp"
           alt="Trust Infrastructure architecture: Intelligence, Assurance and Trust enabling Autonomous Governed Execution."
           className="cidg-platinum-visual--hero"
@@ -77,15 +71,11 @@ export default function HomePage() {
           <Link to="/about">Understand CoreIdentity →</Link>
         </div>
 
-        <div className="cidg-platinum-sequence" aria-label="Governance Ecosystem sequence">
-          <div>Trust Infrastructure</div>
-          <span aria-hidden="true">↓</span>
-          <div>Autonomous Execution Governance</div>
-          <span aria-hidden="true">↓</span>
-          <div>Institutional Chain of Legitimacy</div>
-          <span aria-hidden="true">↓</span>
-          <div className="is-result">Autonomous Governed Execution</div>
-        </div>
+        <InstitutionalVisual
+          src="/images/visuals/governance-ecosystem-3d.webp"
+          alt="CoreIdentity Governance Ecosystem integrating Trust Infrastructure, Autonomous Execution Governance, the Institutional Chain of Legitimacy and Autonomous Governed Execution."
+          className="cidg-platinum-visual--ecosystem"
+        />
       </section>
 
       <section className="cidg-platinum-closing">
