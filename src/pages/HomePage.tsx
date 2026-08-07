@@ -39,19 +39,17 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Labels live inside the SVG as real text: selectable, translatable,
+            and readable by assistive technology. No caption duplication. */}
         <figure className="cidg-platinum-architecture">
           <img
-            src="/trust-infrastructure-architecture.webp"
-            alt="Layered Trust Infrastructure architecture"
+            src="/hero-architecture.svg"
+            alt="Trust Infrastructure frames three institutional capabilities — Institutional Intelligence, Institutional Assurance, and Institutional Trust — resolving to Autonomous Governed Execution."
+            width="1320"
+            height="980"
             loading="eager"
             decoding="async"
           />
-          <figcaption>
-            <div><span>01</span><strong>Intelligence</strong><small>Context and understanding</small></div>
-            <div><span>02</span><strong>Assurance</strong><small>Verification and control</small></div>
-            <div><span>03</span><strong>Trust</strong><small>Identity, authority, and institutional integrity</small></div>
-            <div className="cidg-platinum-result"><span>Result</span><strong>Autonomous Governed Execution</strong><small>Execution within institutional guardrails</small></div>
-          </figcaption>
         </figure>
       </section>
 
@@ -81,11 +79,11 @@ export default function HomePage() {
 
         <div className="cidg-platinum-sequence" aria-label="Governance Ecosystem sequence">
           <div>Trust Infrastructure</div>
-          <span>↓</span>
+          <span aria-hidden="true">↓</span>
           <div>Autonomous Execution Governance</div>
-          <span>↓</span>
+          <span aria-hidden="true">↓</span>
           <div>Institutional Chain of Legitimacy</div>
-          <span>↓</span>
+          <span aria-hidden="true">↓</span>
           <div className="is-result">Autonomous Governed Execution</div>
         </div>
       </section>
@@ -101,4 +99,3 @@ export default function HomePage() {
     </div>
   );
 }
-

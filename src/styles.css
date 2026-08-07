@@ -3618,17 +3618,6 @@ main [class*="bg-[#fbfaf7]"] {
   letter-spacing: .05em;
 }
 
-/* Canonical CI Sphere: centered everywhere, no legacy offsets. */
-img[src="/logo-mark.png"],
-img[src="/logo-mark-512.png"],
-.cidg-brand-mark,
-.cidg-footer-mark,
-.cidg-leadership-mark {
-  object-position: 50% 50% !important;
-  transform: none !important;
-  clip-path: circle(50% at 50% 50%) !important;
-}
-
 @media (max-width: 980px) {
   .cidg-v641-hero,
   .cidg-v641-ecosystem {
@@ -4304,14 +4293,6 @@ body,
   text-decoration: none;
 }
 
-/* Remove legacy transform hacks from every CI Sphere placement. */
-img[src="/logo-mark.png"],
-img[src="/logo-mark-512.png"] {
-  object-position: 50% 50% !important;
-  transform: none !important;
-  clip-path: circle(50% at 50% 50%) !important;
-}
-
 @media (max-width: 1080px) {
   .cidg-platinum-desktop-nav {
     display: none;
@@ -4434,3 +4415,19 @@ img[src="/logo-mark-512.png"] {
   }
 }
 
+
+/* >>> coreidentity:hero-figure >>> */
+/* The architecture graphic is now a labelled SVG, so the figure is a single
+   scalable element rather than an image plus a caption grid. */
+.cidg-platinum-architecture {
+  margin: 0;
+  display: block;
+}
+.cidg-platinum-architecture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 660px;
+  margin-inline: auto;
+}
+/* <<< coreidentity:hero-figure <<< */

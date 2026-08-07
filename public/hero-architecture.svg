@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 980" width="1320" height="980" role="img" aria-labelledby="ttl desc">
+<title id="ttl">CoreIdentity Governance Architecture</title>
+<desc id="desc">Trust Infrastructure frames three institutional capabilities — Intelligence, Assurance, and Trust — resolving to Governed Execution.</desc>
+<defs>
+<linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.96"/>
+  <stop offset="100%" stop-color="#F2F5F8" stop-opacity="0.80"/>
+</linearGradient>
+<linearGradient id="axis" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#C9973F" stop-opacity="0"/>
+  <stop offset="18%" stop-color="#C9973F" stop-opacity="0.75"/>
+  <stop offset="82%" stop-color="#C9973F" stop-opacity="0.75"/>
+  <stop offset="100%" stop-color="#C9973F" stop-opacity="0"/>
+</linearGradient>
+<filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur stdDeviation="9"/>
+</filter>
+</defs>
+<line x1="455" y1="83" x2="455" y2="981" stroke="url(#axis)" stroke-width="2"/>
+<ellipse cx="455" cy="254" rx="193" ry="38" fill="#0A1628" opacity="0.07" filter="url(#soft)"/>
+<polygon points="187,175 455,47 723,175 455,303" fill="url(#glass)" stroke="#A16C2F" stroke-width="1.4" stroke-opacity="0.85"/>
+<line x1="225.3" y1="156.7" x2="493.3" y2="284.7" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="684.7" y1="156.7" x2="416.7" y2="284.7" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="263.6" y1="138.4" x2="531.6" y2="266.4" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="646.4" y1="138.4" x2="378.4" y2="266.4" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="301.9" y1="120.1" x2="569.9" y2="248.1" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="608.1" y1="120.1" x2="340.1" y2="248.1" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="340.1" y1="101.9" x2="608.1" y2="229.9" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="569.9" y1="101.9" x2="301.9" y2="229.9" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="378.4" y1="83.6" x2="646.4" y2="211.6" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="531.6" y1="83.6" x2="263.6" y2="211.6" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="416.7" y1="65.3" x2="684.7" y2="193.3" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="493.3" y1="65.3" x2="225.3" y2="193.3" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<circle cx="455.0" cy="83.6" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="101.9" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="120.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="138.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="301.9" cy="156.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="263.6" cy="175.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="101.9" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="120.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="138.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="156.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="175.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="301.9" cy="193.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="120.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="138.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="156.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="175.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="193.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="211.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="138.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="156.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="175.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="193.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="211.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="229.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="608.1" cy="156.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="175.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="193.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="211.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="229.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="248.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="646.4" cy="175.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="608.1" cy="193.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="211.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="229.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="248.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="266.4" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455" cy="175" r="9" fill="none" stroke="#C9973F" stroke-width="1.4" opacity="0.9"/>
+<circle cx="455" cy="175" r="3" fill="#C9973F"/>
+<path d="M 602 131 L 741 149" stroke="#A16C2F" stroke-width="1" fill="none" opacity="0.65"/>
+<circle cx="741" cy="149" r="2.6" fill="#A16C2F"/>
+<text x="757" y="154" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#A16C2F" letter-spacing="0.04em">Institutional Intelligence</text>
+<text x="757" y="179" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#5A6472">Context and understanding</text>
+<ellipse cx="455" cy="412" rx="193" ry="38" fill="#0A1628" opacity="0.07" filter="url(#soft)"/>
+<polygon points="187,333 455,205 723,333 455,461" fill="url(#glass)" stroke="#A16C2F" stroke-width="1.4" stroke-opacity="0.85"/>
+<line x1="225.3" y1="314.7" x2="493.3" y2="442.7" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="684.7" y1="314.7" x2="416.7" y2="442.7" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="263.6" y1="296.4" x2="531.6" y2="424.4" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="646.4" y1="296.4" x2="378.4" y2="424.4" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="301.9" y1="278.1" x2="569.9" y2="406.1" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="608.1" y1="278.1" x2="340.1" y2="406.1" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="340.1" y1="259.9" x2="608.1" y2="387.9" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="569.9" y1="259.9" x2="301.9" y2="387.9" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="378.4" y1="241.6" x2="646.4" y2="369.6" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="531.6" y1="241.6" x2="263.6" y2="369.6" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="416.7" y1="223.3" x2="684.7" y2="351.3" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="493.3" y1="223.3" x2="225.3" y2="351.3" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<circle cx="455.0" cy="241.6" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="259.9" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="278.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="296.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="301.9" cy="314.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="263.6" cy="333.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="259.9" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="278.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="296.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="314.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="333.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="301.9" cy="351.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="278.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="296.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="314.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="333.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="351.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="369.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="296.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="314.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="333.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="351.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="369.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="387.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="608.1" cy="314.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="333.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="351.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="369.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="387.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="406.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="646.4" cy="333.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="608.1" cy="351.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="369.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="387.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="406.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="424.4" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455" cy="333" r="9" fill="none" stroke="#C9973F" stroke-width="1.4" opacity="0.9"/>
+<circle cx="455" cy="333" r="3" fill="#C9973F"/>
+<path d="M 602 289 L 741 307" stroke="#A16C2F" stroke-width="1" fill="none" opacity="0.65"/>
+<circle cx="741" cy="307" r="2.6" fill="#A16C2F"/>
+<text x="757" y="312" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#A16C2F" letter-spacing="0.04em">Institutional Assurance</text>
+<text x="757" y="337" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#5A6472">Verification and control</text>
+<ellipse cx="455" cy="570" rx="193" ry="38" fill="#0A1628" opacity="0.07" filter="url(#soft)"/>
+<polygon points="187,491 455,363 723,491 455,619" fill="url(#glass)" stroke="#A16C2F" stroke-width="1.4" stroke-opacity="0.85"/>
+<line x1="225.3" y1="472.7" x2="493.3" y2="600.7" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="684.7" y1="472.7" x2="416.7" y2="600.7" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="263.6" y1="454.4" x2="531.6" y2="582.4" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="646.4" y1="454.4" x2="378.4" y2="582.4" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="301.9" y1="436.1" x2="569.9" y2="564.1" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="608.1" y1="436.1" x2="340.1" y2="564.1" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="340.1" y1="417.9" x2="608.1" y2="545.9" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="569.9" y1="417.9" x2="301.9" y2="545.9" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="378.4" y1="399.6" x2="646.4" y2="527.6" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="531.6" y1="399.6" x2="263.6" y2="527.6" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="416.7" y1="381.3" x2="684.7" y2="509.3" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<line x1="493.3" y1="381.3" x2="225.3" y2="509.3" stroke="#A16C2F" stroke-width="0.7" opacity="0.42"/>
+<circle cx="455.0" cy="399.6" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="417.9" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="436.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="454.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="301.9" cy="472.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="263.6" cy="491.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="417.9" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="436.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="454.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="472.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="491.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="301.9" cy="509.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="436.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="454.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="472.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="491.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="509.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="527.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="454.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="472.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="491.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="509.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="527.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="545.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="608.1" cy="472.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="491.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="509.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="527.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="545.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="564.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="646.4" cy="491.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="608.1" cy="509.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="527.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="545.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="564.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="582.4" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455" cy="491" r="9" fill="none" stroke="#C9973F" stroke-width="1.4" opacity="0.9"/>
+<circle cx="455" cy="491" r="3" fill="#C9973F"/>
+<path d="M 602 447 L 741 465" stroke="#A16C2F" stroke-width="1" fill="none" opacity="0.65"/>
+<circle cx="741" cy="465" r="2.6" fill="#A16C2F"/>
+<text x="757" y="470" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#A16C2F" letter-spacing="0.04em">Institutional Trust</text>
+<text x="757" y="495" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#5A6472">Trusted relationships, continuously governed</text>
+<ellipse cx="455" cy="862" rx="193" ry="38" fill="#0A1628" opacity="0.07" filter="url(#soft)"/>
+<polygon points="187,783 455,655 723,783 455,911" fill="#0A1628" stroke="#A16C2F" stroke-width="2"/>
+<line x1="225.3" y1="764.7" x2="493.3" y2="892.7" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="684.7" y1="764.7" x2="416.7" y2="892.7" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="263.6" y1="746.4" x2="531.6" y2="874.4" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="646.4" y1="746.4" x2="378.4" y2="874.4" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="301.9" y1="728.1" x2="569.9" y2="856.1" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="608.1" y1="728.1" x2="340.1" y2="856.1" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="340.1" y1="709.9" x2="608.1" y2="837.9" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="569.9" y1="709.9" x2="301.9" y2="837.9" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="378.4" y1="691.6" x2="646.4" y2="819.6" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="531.6" y1="691.6" x2="263.6" y2="819.6" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="416.7" y1="673.3" x2="684.7" y2="801.3" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<line x1="493.3" y1="673.3" x2="225.3" y2="801.3" stroke="#A16C2F" stroke-width="0.7" opacity="0.5"/>
+<circle cx="455.0" cy="691.6" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="709.9" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="728.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="746.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="301.9" cy="764.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="263.6" cy="783.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="709.9" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="728.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="746.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="764.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="783.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="301.9" cy="801.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="728.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="746.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="764.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="783.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="801.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="340.1" cy="819.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="746.4" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="764.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="783.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="801.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="819.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="378.4" cy="837.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="608.1" cy="764.7" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="783.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="801.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="819.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="837.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="416.7" cy="856.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="646.4" cy="783.0" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="608.1" cy="801.3" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="569.9" cy="819.6" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="531.6" cy="837.9" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="493.3" cy="856.1" r="1.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455.0" cy="874.4" r="2.6" fill="#C9973F" opacity="0.85"/>
+<circle cx="455" cy="783" r="9" fill="none" stroke="#C9973F" stroke-width="1.4" opacity="0.9"/>
+<circle cx="455" cy="783" r="3" fill="#C9973F"/>
+<path d="M 602 739 L 741 757" stroke="#A16C2F" stroke-width="1" fill="none" opacity="0.65"/>
+<circle cx="741" cy="757" r="2.6" fill="#A16C2F"/>
+<text x="757" y="762" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#A16C2F" letter-spacing="0.04em">Autonomous Governed Execution</text>
+<text x="757" y="787" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#5A6472">Execution within institutional guardrails</text>
+<path d="M 147 35 L 131 35 L 131 631 L 147 631" stroke="#A16C2F" stroke-width="1.6" fill="none" opacity="0.9"/>
+<text transform="translate(113,333.0) rotate(-90)" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#A16C2F" letter-spacing="0.22em">TRUST INFRASTRUCTURE</text>
+<text transform="translate(91,333.0) rotate(-90)" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#5A6472" letter-spacing="0.12em">THE ARCHITECTURAL DISCIPLINE</text>
+<path d="M 455 649 L 455 697" stroke="#A16C2F" stroke-width="1.6" opacity="0.9"/>
+<path d="M 448 691 L 455 703 L 462 691" fill="#A16C2F" opacity="0.9"/>
+</svg>
