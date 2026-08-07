@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
+import InstitutionalVisual from "../components/InstitutionalVisual";
 
 export function TrustInfrastructurePage() {
   return (
@@ -45,6 +46,10 @@ export function TrustInfrastructurePage() {
         <p>Next in the framework</p>
         <Link to="/intelligence">Intelligence →</Link>
       </section>
+      <section className="cidg-platinum-visual-section" aria-label="Institutional control">
+        <InstitutionalVisual src="/images/visuals/institutional-control.svg" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-platinum-visual--control" />
+      </section>
+
     </div>
   );
 }

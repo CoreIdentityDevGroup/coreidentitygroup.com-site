@@ -2,6 +2,7 @@
 import React from "react";
 import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
 import { Helmet } from "react-helmet-async";
+import InstitutionalVisual from "../components/InstitutionalVisual";
 
 /**
  * AboutPage (About Us)
@@ -185,6 +186,10 @@ export function AboutPage() {
             )}
           </div>
         </Card>
+      </section>
+
+      <section className="cidg-platinum-visual-section" aria-label="Governance Ecosystem architecture">
+        <InstitutionalVisual src="/images/visuals/governance-ecosystem.svg" alt="CoreIdentity Governance Ecosystem integrating Trust Infrastructure, Autonomous Execution Governance, the Institutional Chain of Legitimacy and Autonomous Governed Execution." className="cidg-platinum-visual--ecosystem" />
       </section>
 
     </div>

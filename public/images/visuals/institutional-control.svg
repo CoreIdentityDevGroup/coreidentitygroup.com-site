@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200"><defs>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#E8EBEF"/><stop offset="100%" stop-color="#C8CED6"/></linearGradient>
+<linearGradient id="plat" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F4E9D6"/><stop offset="50%" stop-color="#B78A4A"/><stop offset="100%" stop-color="#8E672F"/></linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#172131" flood-opacity=".14"/></filter>
+</defs>
+<rect width="1600" height="1200" fill="#fff"/>
+<text x="800" y="90" text-anchor="middle" font-family="Arial" font-size="50" font-weight="700" fill="#172131">INSTITUTIONAL CONTROL</text>
+<text x="800" y="135" text-anchor="middle" font-family="Arial" font-size="21" letter-spacing="5" fill="#B78A4A">CONTINUOUS THROUGH THE EXECUTION LIFECYCLE</text>
+<rect x="570" y="185" width="460" height="110" rx="18" fill="#fff" stroke="#BBC3CD" stroke-width="2"/>
+<text x="800" y="228" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#172131">INSTITUTIONAL AUTHORITY</text>
+<text x="800" y="265" text-anchor="middle" font-family="Arial" font-size="19" fill="#687383">Policy · Role · Mandate · Oversight</text>
+<path d="M280 595 C280 380 500 350 660 520 C720 585 760 615 800 615 C840 615 880 585 940 520 C1100 350 1320 380 1320 595 C1320 810 1100 840 940 670 C880 605 840 575 800 575 C760 575 720 605 660 670 C500 840 280 810 280 595Z" fill="none" stroke="url(#metal)" stroke-width="38"/>
+<path d="M800 615 C840 615 880 585 940 520 C1100 350 1320 380 1320 595 C1320 810 1100 840 940 670 C880 605 840 575 800 575" fill="none" stroke="url(#plat)" stroke-width="18"/>
+<g font-family="Arial" text-anchor="middle">
+<g transform="translate(430,590)"><circle r="62" fill="#fff" stroke="#BFC6CF" stroke-width="3"/><text y="8" font-size="46" fill="#172131">I</text><text y="102" font-size="22" font-weight="700" fill="#172131">INTELLIGENCE</text></g>
+<g transform="translate(650,590)"><circle r="62" fill="#fff" stroke="#BFC6CF" stroke-width="3"/><path d="M-24 0 l18 20 34-42" fill="none" stroke="#172131" stroke-width="7"/><text y="102" font-size="22" font-weight="700" fill="#172131">ASSURANCE</text></g>
+<g transform="translate(950,590)"><circle r="62" fill="#fff" stroke="#B78A4A" stroke-width="3"/><text y="10" font-size="44" fill="#B78A4A">T</text><text y="102" font-size="22" font-weight="700" fill="#172131">TRUST</text></g>
+<g transform="translate(1170,590)"><circle r="62" fill="#fff" stroke="#B78A4A" stroke-width="3"/><text y="10" font-size="40" fill="#172131">→</text><text y="102" font-size="22" font-weight="700" fill="#172131">GOVERNED EXECUTION</text></g>
+</g>
+<rect x="590" y="865" width="420" height="110" rx="18" fill="#fff" stroke="#BBC3CD" stroke-width="2"/>
+<text x="800" y="908" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#172131">CONTINUOUS OVERSIGHT</text>
+<text x="800" y="946" text-anchor="middle" font-family="Arial" font-size="19" fill="#687383">Monitor · Detect · Respond · Adapt</text>
+<line x1="800" y1="295" x2="800" y2="470" stroke="#B78A4A" stroke-width="3" stroke-dasharray="8 10"/>
+<line x1="800" y1="720" x2="800" y2="865" stroke="#B78A4A" stroke-width="3" stroke-dasharray="8 10"/>
+</svg>

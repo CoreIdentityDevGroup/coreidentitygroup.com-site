@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200"><defs>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#E8EBEF"/><stop offset="100%" stop-color="#C8CED6"/></linearGradient>
+<linearGradient id="plat" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F4E9D6"/><stop offset="50%" stop-color="#B78A4A"/><stop offset="100%" stop-color="#8E672F"/></linearGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#172131" flood-opacity=".14"/></filter>
+</defs>
+<rect width="1600" height="1200" fill="#fff"/>
+<text x="90" y="100" font-family="Arial" font-size="52" font-weight="700" fill="#172131">TRUST INFRASTRUCTURE</text>
+<text x="92" y="145" font-family="Arial" font-size="22" letter-spacing="5" fill="#B78A4A">THE ARCHITECTURAL DISCIPLINE</text>
+<text x="92" y="190" font-family="Arial" font-size="22" fill="#2F3742">Intelligence · Assurance · Trust → Autonomous Governed Execution</text>
+<g transform="translate(210,260)" filter="url(#shadow)">
+<polygon points="180,0 520,0 650,75 310,75" fill="url(#metal)" stroke="#BAC2CC" stroke-width="2"/>
+<polygon points="180,185 520,185 650,260 310,260" fill="#F5E7CF" stroke="#B78A4A" stroke-width="2"/>
+<polygon points="180,370 520,370 650,445 310,445" fill="url(#metal)" stroke="#BAC2CC" stroke-width="2"/>
+<polygon points="180,555 520,555 650,630 310,630" fill="#E9EDF1" stroke="#9FA8B5" stroke-width="2"/>
+<line x1="415" y1="-5" x2="415" y2="635" stroke="#B78A4A" stroke-width="4"/>
+<circle cx="415" cy="40" r="26" fill="none" stroke="#172131" stroke-width="5"/><path d="M395 40h40M415 20v40" stroke="#172131" stroke-width="5"/>
+<path d="M390 225 l22 22 42-48" fill="none" stroke="#B78A4A" stroke-width="8"/>
+<path d="M380 420 q35-40 70 0 q35-40 70 0" fill="none" stroke="#2F3742" stroke-width="7"/>
+<circle cx="415" cy="595" r="34" fill="none" stroke="#2F3742" stroke-width="6"/><path d="M415 548v94M368 595h94" stroke="#2F3742" stroke-width="4"/>
+</g>
+<g font-family="Arial">
+<text x="980" y="315" font-size="28" font-weight="700" fill="#172131">INTELLIGENCE</text><text x="980" y="353" font-size="21" fill="#687383">Context and understanding</text>
+<text x="980" y="500" font-size="28" font-weight="700" fill="#172131">ASSURANCE</text><text x="980" y="538" font-size="21" fill="#687383">Continuous verification and control</text>
+<text x="980" y="685" font-size="28" font-weight="700" fill="#172131">TRUST</text><text x="980" y="723" font-size="21" fill="#687383">Identity, authority, institutional integrity</text>
+<text x="980" y="870" font-size="28" font-weight="700" fill="#172131">AUTONOMOUS GOVERNED EXECUTION</text><text x="980" y="908" font-size="21" fill="#687383">Execution within institutional guardrails</text>
+</g></svg>

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
+import InstitutionalVisual from "../components/InstitutionalVisual";
 
 export default function HomePage() {
   return (
@@ -51,6 +52,13 @@ export default function HomePage() {
             decoding="async"
           />
         </figure>
+      
+        <InstitutionalVisual
+          src="/images/visuals/trust-infrastructure-hero.svg"
+          alt="Trust Infrastructure architecture: Intelligence, Assurance and Trust enabling Autonomous Governed Execution."
+          className="cidg-platinum-visual--hero"
+          priority
+        />
       </section>
 
       <section className="cidg-platinum-shift">
