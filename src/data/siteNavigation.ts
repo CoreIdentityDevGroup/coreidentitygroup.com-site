@@ -16,6 +16,7 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
       { to: "/intelligence", label: "Intelligence" },
       { to: "/assurance", label: "Assurance" },
       { to: "/trust", label: "Trust" },
+      { to: "/governance-ecosystem", label: "Governance Ecosystem" },
     ],
   },
   {

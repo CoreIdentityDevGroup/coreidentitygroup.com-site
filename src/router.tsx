@@ -35,6 +35,7 @@ import BlogIndexPage from "./pages/BlogIndexPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import { GovernanceConsolePage } from "./pages/GovernanceConsolePage";
 import { TrustInfrastructurePage } from "./pages/TrustInfrastructurePage";
+import { GovernanceEcosystemPage } from "./pages/GovernanceEcosystemPage";
 import { IntelligencePage } from "./pages/IntelligencePage";
 import { AssurancePage } from "./pages/AssurancePage";
 import { TrustPage } from "./pages/TrustPage";
@@ -60,6 +61,13 @@ const trustInfrastructureRoute = createRoute({
   path: "/trust-infrastructure",
   component: TrustInfrastructurePage,
 });
+
+const governanceEcosystemRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/governance-ecosystem",
+  component: GovernanceEcosystemPage,
+});
+
 
 const intelligenceRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -304,6 +312,7 @@ const routeTree = rootRoute.addChildren([
   indexRoute,
 
   trustInfrastructureRoute,
+  governanceEcosystemRoute,
   intelligenceRoute,
   assuranceRoute,
   trustRoute,
