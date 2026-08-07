@@ -36,74 +36,62 @@ export default function HomePage() {
       </Helmet>
 
       
-      <section className="cidg-v638-hero" aria-labelledby="cidg-v638-title">
-        <div className="cidg-v638-copy">
-          <div className="cidg-v638-brandline">
+      
+      <section className="cidg-v639-hero" aria-labelledby="cidg-v639-title">
+        <div className="cidg-v639-copy">
+          <div className="cidg-v639-brandline">
             <strong>Trust Infrastructure</strong>
             <span>Intelligence · Assurance · Trust</span>
           </div>
-
-          <h1 id="cidg-v638-title">
-            The Trust Infrastructure
-            <span>the Autonomous Era Demands</span>
-          </h1>
-
-          <p>
-            The institutional foundation that enables organizations to safely
-            delegate autonomous execution while ensuring they remain in control.
-          </p>
-
-          <div className="cidg-v638-actions">
-            <Link to="/trust-infrastructure" className="cidg-v638-primary">
-              Explore the Ecosystem <span aria-hidden="true">→</span>
-            </Link>
-            <Link to="/resources" className="cidg-v638-secondary">
-              Read Our Research
-            </Link>
+          <h1 id="cidg-v639-title">The Trust Infrastructure<span>the Autonomous Era Demands</span></h1>
+          <p>The institutional foundation that enables organizations to safely delegate autonomous execution while ensuring they remain in control.</p>
+          <div className="cidg-v639-actions">
+            <Link to="/trust-infrastructure" className="cidg-v639-primary">Explore the Ecosystem <span aria-hidden="true">→</span></Link>
+            <Link to="/resources" className="cidg-v639-secondary">Read Our Research</Link>
           </div>
         </div>
 
-        <div className="cidg-v638-visual" aria-label="Layered Governance Ecosystem architecture">
-          <div className="cidg-v638-axis" aria-hidden="true" />
-
-          {[1, 2, 3, 4].map((layer) => (
-            <div key={layer} className={`cidg-v638-layer cidg-v638-layer-${layer}`}>
-              <div className="cidg-v638-grid" />
-              <div className="cidg-v638-node cidg-v638-node-a" />
-              <div className="cidg-v638-node cidg-v638-node-b" />
-              <div className="cidg-v638-node cidg-v638-node-c" />
+        <div className="cidg-v639-visual" aria-label="Trust Infrastructure architecture">
+          <div className="cidg-v639-axis" aria-hidden="true" />
+          {[
+            ["Intelligence", "Context and Understanding"],
+            ["Assurance", "Verification and Control"],
+            ["Trust", "Identity, Authority and Institutional Integrity"],
+            ["Autonomous Governed Execution", "Autonomous Operations Within Guardrails"],
+          ].map(([title, description], index) => (
+            <div key={title} className={`cidg-v639-layer cidg-v639-layer-${index + 1}`}>
+              <div className="cidg-v639-grid" />
+              <div className="cidg-v639-core" />
+              <div className="cidg-v639-label"><strong>{title}</strong><span>{description}</span></div>
             </div>
           ))}
-
-          <div className="cidg-v638-label cidg-v638-label-1">
-            <strong>Trust Infrastructure</strong>
-            <span>The Architectural Discipline</span>
-          </div>
-          <div className="cidg-v638-label cidg-v638-label-2">
-            <strong>Intelligence</strong>
-            <span>Context and Understanding</span>
-          </div>
-          <div className="cidg-v638-label cidg-v638-label-3">
-            <strong>Assurance</strong>
-            <span>Verification and Control</span>
-          </div>
-          <div className="cidg-v638-label cidg-v638-label-4">
-            <strong>Governed Execution</strong>
-            <span>Autonomous Operations Within Guardrails</span>
-          </div>
         </div>
       </section>
 
 
-      <section className="cidg-x10-screen cidg-x10-statement">
-        <div className="cidg-x10-narrow">
-          <p className="cidg-x10-kicker">The Autonomous Era</p>
-          <h2>Execution is becoming autonomous. Governance must become infrastructure.</h2>
-          <p>
-            Policies written for human-speed oversight cannot govern machine-speed execution. Authority, identity, accountability, and evidence must remain enforceable while execution occurs.
-          </p>
+
+      
+      <section className="cidg-v639-foundation" aria-labelledby="cidg-v639-foundation-title">
+        <div className="cidg-v639-foundation-intro">
+          <span>Built for institutions. Engineered for control.</span>
+          <h2 id="cidg-v639-foundation-title">CoreIdentity delivers the Governance Ecosystem that establishes trust, enforces accountability, and protects what matters most.</h2>
+        </div>
+
+        <div className="cidg-v639-card-grid">
+          <article><span className="cidg-v639-card-icon">◇</span><h3>Institutional Grade</h3><p>Engineered to meet the highest standards of security, compliance, and operational integrity.</p></article>
+          <article><span className="cidg-v639-card-icon">◎</span><h3>Intelligent by Design</h3><p>Context-aware intelligence that understands, adapts, and supports decisions with precision.</p></article>
+          <article><span className="cidg-v639-card-icon">⬡</span><h3>Assurance by Default</h3><p>Continuous verification, real-time monitoring, and immutable evidence at every layer.</p></article>
+          <article><span className="cidg-v639-card-icon">⌂</span><h3>Trust by Foundation</h3><p>Identity, authority, and institutional integrity establish the foundation for legitimate action.</p></article>
+        </div>
+
+        <div className="cidg-v639-result">
+          <span>The Result</span>
+          <h2>Autonomous Execution Governance (AEG)</h2>
+          <p>The continuous governance doctrine that ensures autonomous execution remains aligned with institutional intent, policy, and accountability.</p>
+          <strong>Intelligence · Assurance · Trust → Autonomous Governed Execution</strong>
         </div>
       </section>
+
 
       <section className="cidg-x10-screen cidg-x10-pillars">
         <div className="cidg-x10-section-head">
