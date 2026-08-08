@@ -110,8 +110,8 @@ export function RetailGovernancePage() {
         <p className="text-sm leading-relaxed text-ink-secondary">
           CoreIdentity is hardened against both current and future threats — implementing all three NIST FIPS post-quantum standards in production: ML-DSA-65 (FIPS 204), ML-KEM-768 (FIPS 203), and SLH-DSA-128s (FIPS 205). Long-lived regulated records stay defensible against tomorrow's cryptographic threats, not just today's.
         </p>
-        <Link to="/layer-d" className="mt-3 inline-flex items-center gap-1 text-sm text-accent/80 transition hover:text-accent">
-          View full quantum hardening posture →
+        <Link to="/platform" className="mt-3 inline-flex items-center gap-1 text-sm text-accent/80 transition hover:text-accent">
+          View our technical architecture →
         </Link>
       </div>
 

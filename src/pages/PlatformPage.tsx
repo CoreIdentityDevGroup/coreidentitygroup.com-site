@@ -8,15 +8,10 @@ import { SectionHead, InfoCard, ProofStat, InstitutionalCTA, PlatinumProof } fro
 
 type Component = { name: string; role: string; layer: string };
 
-const STACK: Component[] = [
-  { name: "Agent Identity Systems", role: "Cryptographically verifiable identity, authorization boundaries, provenance, and attribution bound to every agent at the execution layer.", layer: "Layer A" },
-  { name: "SAL — Semantic Authorization Layer", role: "The deterministic pre-execution kernel. Every action is arbitrated across the five-dimension IIAAC model in sub-3ms; fail-closed by design.", layer: "Layer B" },
-  { name: "FGRE — Formal Governance Reasoning Engine", role: "Z3 SMT formal verification that proves policy correctness before activation and emits SLH-DSA-128s signed, machine-verifiable proof artifacts.", layer: "Layer B" },
-  { name: "Nexus", role: "Governed multi-agent orchestration — routing, integration, retries, and recovery inside policy constraints with full delegation-chain validation.", layer: "Layer C" },
-  { name: "AGO — Autonomous Governance Orchestrator", role: "The operating agent that runs the fleet under continuous self-supervision, detecting drift and intervening with immutable governance records.", layer: "Layer C" },
-  { name: "Sentinel", role: "Policy enforcement, identity boundaries, approval gates, and tamper-evident evidence capture — signed under post-quantum keys.", layer: "Layer D" },
-  { name: "Governed MCP", role: "A production Model Context Protocol surface where every external tool call inherits identity enforcement, namespace isolation, and contract versioning.", layer: "Layer D" },
-  { name: "SmartNation AI", role: "The governed digital-labor surface — agents deployed under full enforcement from day one, each with a governance profile and an audit trail.", layer: "Substrate" },
+const ARCHITECTURE_SUMMARY = [
+  { name: "Execution Integrity", to: "/execution-integrity", desc: "Every consequential action is provably attributable to a verified identity, at the moment it happens." },
+  { name: "Verification at Scale", to: "/verification-at-scale", desc: "Policy is proven correct before it activates, and enforced identically across every agent, every time." },
+  { name: "Sovereign Assurance", to: "/sovereign-assurance", desc: "Authority stays accountable as it is delegated across a fleet — traceable, and contained if it drifts." },
 ];
 
 const TIMELINE: { phase: string; title: string; detail: string }[] = [
@@ -62,16 +57,11 @@ export function PlatformPage() {
           intro="Every agent action passes through a vertically integrated enforcement chain before execution is permitted. Each component has a distinct job and a clear boundary, and each maps to one of the four institutional assurance layers."
         />
         <div className="grid gap-4 md:grid-cols-2">
-          {STACK.map((c) => (
-            <div key={c.name} className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
-              <div className="mb-2 flex items-center justify-between gap-3">
-                <h3 className="font-serif text-lg text-ink">{c.name}</h3>
-                <span className="shrink-0 rounded-full border border-accent/30 bg-accent/5 px-2.5 py-0.5 text-[11px] font-medium text-accent">
-                  {c.layer}
-                </span>
-              </div>
-              <p className="text-sm leading-relaxed text-ink-secondary">{c.role}</p>
-            </div>
+          {ARCHITECTURE_SUMMARY.map((l) => (
+            <a key={l.name} href={l.to} className="cidg-card block rounded-2xl border border-line bg-carbon-panel p-6 transition hover:border-accent/40">
+              <h3 className="font-serif text-lg text-ink">{l.name}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-secondary">{l.desc}</p>
+            </a>
           ))}
         </div>
       </section>

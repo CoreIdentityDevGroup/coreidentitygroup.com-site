@@ -124,17 +124,16 @@ export function PlatinumProof() {
   );
 }
 
-const LAYERS: { id: "a" | "b" | "c" | "d"; to: string; label: string }[] = [
-  { id: "a", to: "/layer-a", label: "Execution Integrity" },
-  { id: "b", to: "/layer-b", label: "Verification at Scale" },
-  { id: "c", to: "/layer-c", label: "Sovereign Assurance" },
-  { id: "d", to: "/layer-d", label: "Cryptographic Hardening" },
+const ARCHITECTURE: { id: string; to: string; label: string }[] = [
+  { id: "execution-integrity", to: "/execution-integrity", label: "Execution Integrity" },
+  { id: "verification-at-scale", to: "/verification-at-scale", label: "Verification at Scale" },
+  { id: "sovereign-assurance", to: "/sovereign-assurance", label: "Sovereign Assurance" },
 ];
 
-export function LayerNav({ current }: { current: "a" | "b" | "c" | "d" }) {
+export function ArchitectureNav({ current }: { current: string }) {
   return (
-    <nav aria-label="Governance layers" className="flex flex-wrap gap-2">
-      {LAYERS.map((l) => (
+    <nav aria-label="Institutional architecture" className="flex flex-wrap gap-2">
+      {ARCHITECTURE.map((l) => (
         <a
           key={l.id}
           href={l.to}
@@ -145,7 +144,7 @@ export function LayerNav({ current }: { current: "a" | "b" | "c" | "d" }) {
               : "border-line bg-carbon-panel text-ink-secondary hover:text-ink",
           ].join(" ")}
         >
-          Layer {l.id.toUpperCase()} · {l.label}
+          {l.label}
         </a>
       ))}
     </nav>

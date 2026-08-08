@@ -9,28 +9,22 @@ import { SectionHead } from "../components/institutional";
 type LayerEntry = { id: string; to: string; title: string; body: string };
 const LAYERS: LayerEntry[] = [
   {
-    id: "A",
-    to: "/layer-a",
+    id: "execution-integrity",
+    to: "/execution-integrity",
     title: "Execution Integrity",
-    body: "Verified agent identity, runtime behavioral fingerprinting, and an immutable, ML-DSA-65 signed audit trail — proof of which agent acted and under whose authority.",
+    body: "Every consequential action is provably attributable to a verified identity, at the moment it happens — not reconstructed after an incident.",
   },
   {
-    id: "B",
-    to: "/layer-b",
+    id: "verification-at-scale",
+    to: "/verification-at-scale",
     title: "Verification at Scale",
-    body: "FGRE formal proof of policy correctness before activation, and the SAL Semantic Authorization Layer enforcing it deterministically in sub-3ms. Validated by a Platinum Test Suite across governed agent interactions at institutional scale — every invariant held, no exceptions.",
+    body: "Policy is proven correct before it ever activates, and enforced identically across every agent, every time — no drift, no exceptions.",
   },
   {
-    id: "C",
-    to: "/layer-c",
+    id: "sovereign-assurance",
+    to: "/sovereign-assurance",
     title: "Sovereign Assurance",
-    body: "Nexus governed orchestration, AGO autonomous supervision, and behavioral genealogy — delegation lineage and trust-decay scoring across the entire agent fleet.",
-  },
-  {
-    id: "D",
-    to: "/layer-d",
-    title: "Cryptographic Hardening",
-    body: "Post-quantum protection across every cryptographic surface — the first commercial platform in production with all three NIST FIPS standards (203/204/205), 2-of-3 consensus, fail-close containment.",
+    body: "Authority stays accountable as it is delegated across a fleet — traceable end to end, and contained the moment a link drifts or breaks.",
   },
 ];
 
@@ -93,7 +87,6 @@ export function PortfolioPage() {
                 <span className="grid h-9 w-9 place-items-center rounded-lg border border-accent/30 bg-accent/5 font-serif text-lg text-accent">
                   {l.id}
                 </span>
-                <span className="text-xs uppercase tracking-widest text-ink-muted">Layer {l.id}</span>
               </div>
               <h3 className="font-serif text-xl text-ink">{l.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-secondary">{l.body}</p>

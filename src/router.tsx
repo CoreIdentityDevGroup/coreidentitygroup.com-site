@@ -9,7 +9,6 @@ import HomePage from "./pages/HomePage";
 import { PortfolioPage } from "./pages/PortfolioPage";
 import { SmartNationAIPage } from "./pages/SmartNationAIPage";
 import { CoreIdentityAdvisoryGroupPage } from "./pages/CoreIdentityAdvisoryGroupPage";
-import { PortalPage } from "./pages/PortalPage";
 import { FoundersPage } from "./pages/FoundersPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { TermsPage } from "./pages/TermsPage";
@@ -42,10 +41,9 @@ import { TrustPage } from "./pages/TrustPage";
 
 // Institutional Carbon restructure — four governance layers + platform deep-dive.
 import { PlatformPage } from "./pages/PlatformPage";
-import { LayerAPage } from "./pages/LayerAPage";
-import { LayerBPage } from "./pages/LayerBPage";
-import { LayerCPage } from "./pages/LayerCPage";
-import { LayerDPage } from "./pages/LayerDPage";
+import { ExecutionIntegrityPage } from "./pages/ExecutionIntegrityPage";
+import { VerificationAtScalePage } from "./pages/VerificationAtScalePage";
+import { SovereignAssurancePage } from "./pages/SovereignAssurancePage";
 
 const rootRoute = createRootRoute({ component: Layout });
 
@@ -87,35 +85,33 @@ const trustRoute = createRoute({
   component: TrustPage,
 });
 
+const executionIntegrityRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/execution-integrity",
+  component: ExecutionIntegrityPage,
+});
+
+const verificationAtScaleRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/verification-at-scale",
+  component: VerificationAtScalePage,
+});
+
+const sovereignAssuranceRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/sovereign-assurance",
+  component: SovereignAssurancePage,
+});
+
 const platformRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/platform",
   component: PlatformPage,
 });
 
-const layerARoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/layer-a",
-  component: LayerAPage,
-});
 
-const layerBRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/layer-b",
-  component: LayerBPage,
-});
 
-const layerCRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/layer-c",
-  component: LayerCPage,
-});
 
-const layerDRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/layer-d",
-  component: LayerDPage,
-});
 
 // ── Portfolio (Governance Infrastructure + Commercial Products) ──────────
 const govintraRoute = createRoute({
@@ -174,11 +170,6 @@ const termsRoute = createRoute({
   component: TermsPage,
 });
 
-const portalRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/portal",
-  component: PortalPage,
-});
 
 const resourcesRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -319,10 +310,9 @@ const routeTree = rootRoute.addChildren([
 
   // Layers + platform
   platformRoute,
-  layerARoute,
-  layerBRoute,
-  layerCRoute,
-  layerDRoute,
+  executionIntegrityRoute,
+  verificationAtScaleRoute,
+  sovereignAssuranceRoute,
 
   // Portfolio
   govintraRoute,
@@ -335,7 +325,6 @@ const routeTree = rootRoute.addChildren([
   advisoryRoute,
 
   // Company + legal
-  portalRoute,
   foundersRoute,
   privacyRoute,
   termsRoute,

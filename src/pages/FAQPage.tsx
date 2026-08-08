@@ -19,7 +19,7 @@ export function FAQPage() {
         <title>Frequently Asked Questions | CoreIdentity</title>
         <meta
           name="description"
-          content="Answers about CoreIdentity, provable AI decision governance, the four-layer assurance model, fail-closed enforcement, and post-quantum hardening."
+          content="Answers about CoreIdentity, provable AI decision governance, fail-closed enforcement, fail-closed enforcement, and post-quantum hardening."
         />
       </Helmet>
 
@@ -45,31 +45,27 @@ export function FAQPage() {
           infrastructure as a governance substrate, not an application bolted on after the fact.
         </FAQCard>
 
-        <FAQCard q="What are the four assurance layers?">
+        <FAQCard q="What is CoreIdentity's institutional architecture?">
           <div className="space-y-2">
-            <p>Each layer adds a guarantee on the one beneath it:</p>
+            <p>Three layers, each adding a guarantee on the one beneath it — every one hardened against current and future threats by construction, not as a separate add-on:</p>
             <ul className="list-disc space-y-1 pl-5">
               <li>
-                <Link to="/layer-a" className="text-accent hover:text-accent-strong">Execution Integrity</Link>{" "}
-                — verified identity, runtime behavioral fingerprinting, and an immutable ML-DSA-65 signed trail.
+                <Link to="/execution-integrity" className="text-accent hover:text-accent-strong">Execution Integrity</Link>{" "}
+                — every action is provably attributable to a verified identity, at the moment it happens.
               </li>
               <li>
-                <Link to="/layer-b" className="text-accent hover:text-accent-strong">Verification at Scale</Link>{" "}
-                — FGRE formal proof of policy correctness, enforced deterministically by the SAL kernel.
+                <Link to="/verification-at-scale" className="text-accent hover:text-accent-strong">Verification at Scale</Link>{" "}
+                — policy is proven correct before it activates, and enforced identically every time.
               </li>
               <li>
-                <Link to="/layer-c" className="text-accent hover:text-accent-strong">Sovereign Assurance</Link>{" "}
-                — Nexus orchestration, AGO supervision, and behavioral genealogy across the fleet.
-              </li>
-              <li>
-                <Link to="/layer-d" className="text-accent hover:text-accent-strong">Cryptographic Hardening</Link>{" "}
-                — post-quantum protection across every cryptographic surface.
+                <Link to="/sovereign-assurance" className="text-accent hover:text-accent-strong">Sovereign Assurance</Link>{" "}
+                — authority stays accountable as it is delegated across a fleet, traceable end to end.
               </li>
             </ul>
             <p>
               The{" "}
               <Link to="/platform" className="text-accent hover:text-accent-strong">platform architecture</Link>{" "}
-              page ties all four together for technical evaluators.
+              page ties them together for technical evaluators.
             </p>
           </div>
         </FAQCard>
@@ -98,11 +94,8 @@ export function FAQPage() {
         </FAQCard>
 
         <FAQCard q="How does enforcement work at runtime?">
-          Every machine-initiated action is arbitrated by the Semantic Authorization Layer across five
-          dimensions — Identity, Intent, Asset, Action, and Context (IIAAC) — in sub-3ms before
-          execution is permitted. All five must pass; a single failure returns a deterministic deny.
-          This is the substrate of{" "}
-          <Link to="/layer-b" className="text-accent hover:text-accent-strong">Verification at Scale</Link>.
+          Every machine-initiated action is evaluated in milliseconds before it is permitted — checked against identity, intent, and policy boundaries all at once. Any single failure returns a deterministic denial, not a guess. This is{" "}
+          <Link to="/verification-at-scale" className="text-accent hover:text-accent-strong">Verification at Scale</Link> in practice.
         </FAQCard>
 
         <FAQCard q="What is post-quantum hardening, and why does it matter now?">
@@ -120,29 +113,25 @@ export function FAQPage() {
               <li>
                 <span className="font-medium text-ink">NIST finalized in August 2024.</span> Federal
                 agencies and contractors face migration deadlines; enterprise governance infrastructure
-                must meet the same bar. See{" "}
-                <Link to="/layer-d" className="text-accent hover:text-accent-strong">Cryptographic Hardening</Link>.
+                must meet the same bar.
               </li>
             </ul>
           </div>
         </FAQCard>
 
-        <FAQCard q="What is the PQ-CA?">
-          The PQ-CA (Post-Quantum Certificate Authority) is a two-tier cryptographic trust authority
-          embedded in the identity substrate. It issues and verifies ML-DSA-65 signed agent
-          credentials. The Root CA is cold-stored in AWS Secrets Manager — it signs only the Issuing
-          CA certificate, after which its key is zeroed. Revocation requires an explicit{" "}
-          <span className="font-mono text-ink">X-Manual-Override: true</span> header, making automated
-          revocation architecturally impossible.
+        <FAQCard q="How are agent credentials protected against future threats?">
+          Every agent credential is issued and verified through a dedicated post-quantum trust
+          authority. Its highest-privilege key is cold-stored and used once, then permanently
+          retired — nothing in production ever holds the authority to mint new trust silently.
+          Revocation is deliberately hard to automate, by design: it requires an explicit,
+          auditable manual action, never a background process.
         </FAQCard>
 
-        <FAQCard q="What is quantum entropy anchoring?">
-          The randomness used to generate every agent credential is sourced from a physical quantum
-          process — the ANU Quantum Random Number Generator, which measures photon vacuum fluctuations.
-          On each refresh, 1,024 quantum-sourced values are XOR-mixed with OS CSPRNG output into a
-          16&nbsp;KB entropy pool. If the quantum source is unavailable, the system degrades to CSPRNG
-          fallback without halting issuance; QUANTUM status is reported only when photon-sourced
-          entropy is actively contributing.
+        <FAQCard q="How is randomness generated for credentials?">
+          Every credential draws on a genuine hardware source of quantum randomness, not a purely
+          software-generated approximation. If that source is ever unavailable, the system degrades
+          gracefully to a strong software fallback rather than halting — availability is never
+          sacrificed for a marginal gain in entropy quality.
         </FAQCard>
 
         <FAQCard q="Are you replacing human positions?">
