@@ -13,5 +13,13 @@
 /quantum-hardening       /layer-d   301
 /coreidentity-technologies  /platform  301
 
+# >>> coreidentity:architecture-rename >>>
+/portal                  /contact                301
+/layer-a                 /execution-integrity     301
+/layer-b                 /verification-at-scale   301
+/layer-c                 /sovereign-assurance     301
+/layer-d                 /platform                301
+# <<< coreidentity:architecture-rename <<<
+
 # SPA fallback
 /*    /index.html   200
