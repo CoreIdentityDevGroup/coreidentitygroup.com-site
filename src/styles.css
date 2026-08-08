@@ -4403,3 +4403,100 @@ body,
    this change a pure append, safe to re-run. */
 @media(max-width:800px){.cidg-framework-page .cidg-platinum-visual-section{width:100vw;margin-inline:calc(50% - 50vw);padding:1rem}}
 /* <<< coreidentity:true-full-bleed <<< */
+
+/* COREIDENTITY_PLATINUM_IMAGE_INTEGRATION_START */
+:root{
+  --ci-platinum-canvas:#f7f6f3;
+  --ci-platinum-canvas-soft:#faf9f7;
+}
+
+/* Architecture artwork becomes part of the page surface, not a card. */
+img[src*="infinity" i],
+img[src*="continuous" i],
+img[src*="oversight" i],
+img[src*="governance" i],
+img[src*="ecosystem" i],
+img[src*="architecture" i],
+img[src*="stack" i],
+img[src*="layers" i],
+img[alt*="infinity" i],
+img[alt*="continuous oversight" i],
+img[alt*="governance ecosystem" i],
+img[alt*="trust infrastructure" i],
+img[alt*="architecture" i]{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  margin:0 auto;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  mix-blend-mode:multiply;
+}
+
+/* Remove visible frames and expand the artwork stage. */
+figure:has(img[src*="infinity" i]),
+figure:has(img[src*="continuous" i]),
+figure:has(img[src*="oversight" i]),
+figure:has(img[src*="governance" i]),
+figure:has(img[src*="ecosystem" i]),
+figure:has(img[src*="architecture" i]),
+figure:has(img[src*="stack" i]),
+figure:has(img[src*="layers" i]),
+.image-card:has(img[src*="infinity" i]),
+.image-card:has(img[src*="governance" i]),
+.image-card:has(img[src*="ecosystem" i]),
+.image-card:has(img[src*="architecture" i]),
+.visual-card:has(img[src*="infinity" i]),
+.visual-card:has(img[src*="governance" i]),
+.visual-card:has(img[src*="ecosystem" i]),
+.visual-card:has(img[src*="architecture" i]){
+  width:min(100%,1120px)!important;
+  max-width:1120px!important;
+  margin-inline:auto!important;
+  padding:clamp(16px,3vw,36px)!important;
+  overflow:visible!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  background:var(--ci-platinum-canvas)!important;
+}
+
+/* Unify the surrounding section and artwork into one platinum canvas. */
+section:has(img[src*="infinity" i]),
+section:has(img[src*="continuous" i]),
+section:has(img[src*="oversight" i]),
+section:has(img[src*="governance" i]),
+section:has(img[src*="ecosystem" i]),
+section:has(img[src*="architecture" i]),
+section:has(img[src*="stack" i]),
+section:has(img[src*="layers" i]){
+  background:var(--ci-platinum-canvas)!important;
+  overflow:visible!important;
+}
+
+@media (max-width:768px){
+  figure:has(img[src*="infinity" i]),
+  figure:has(img[src*="governance" i]),
+  figure:has(img[src*="ecosystem" i]),
+  figure:has(img[src*="architecture" i]),
+  figure:has(img[src*="stack" i]),
+  figure:has(img[src*="layers" i]),
+  .image-card:has(img[src*="infinity" i]),
+  .image-card:has(img[src*="governance" i]),
+  .image-card:has(img[src*="ecosystem" i]),
+  .image-card:has(img[src*="architecture" i]),
+  .visual-card:has(img[src*="infinity" i]),
+  .visual-card:has(img[src*="governance" i]),
+  .visual-card:has(img[src*="ecosystem" i]),
+  .visual-card:has(img[src*="architecture" i]){
+    width:100%!important;
+    max-width:none!important;
+    padding:12px 8px 18px!important;
+  }
+}
+/* COREIDENTITY_PLATINUM_IMAGE_INTEGRATION_END */
