@@ -75,7 +75,7 @@ export function RealEstateGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Transaction-Aware Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces scoped authorization over origination, underwriting, and closing actions so no agent clears or alters a transaction outside policy.
+              Governance enforcement enforces scoped authorization over origination, underwriting, and closing actions so no agent clears or alters a transaction outside policy.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function RealEstateGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an action falls outside authorized policy, Sentinel halts and escalates to a human. The agent does not clear a transaction it cannot justify. It stops.
+              When an action falls outside authorized policy, Governance enforcement halts and escalates to a human. The agent does not clear a transaction it cannot justify. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">

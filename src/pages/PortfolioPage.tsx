@@ -50,7 +50,7 @@ export function PortfolioPage() {
         <title>Portfolio | CoreIdentity</title>
         <meta
           name="description"
-          content="The CoreIdentity portfolio: the governance infrastructure — four layers of progressive institutional assurance — and the commercial products that prove the platform's capability in market."
+          content="The CoreIdentity portfolio: the governance infrastructure — an integrated institutional governance architecture — and the commercial products that prove the platform's capability in market."
         />
       </Helmet>
 
@@ -63,7 +63,7 @@ export function PortfolioPage() {
         </h1>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-secondary md:text-xl">
           CoreIdentity builds and operates institutional trust infrastructure for autonomous systems.
-          The portfolio is organized in two tiers: the governance substrate itself — four layers of
+          The portfolio is organized in two tiers: the governance substrate itself — the integrated architecture of
           progressive assurance — and the commercial products that demonstrate that substrate at work
           in market.
         </p>

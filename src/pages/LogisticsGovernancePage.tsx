@@ -75,7 +75,7 @@ export function LogisticsGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Action Boundaries at the Agent Layer</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces authorization on every consequential action — routing, clearance, party screening, or system actuation — so no agent acts outside its scoped authority.
+              Governance enforcement enforces authorization on every consequential action — routing, clearance, party screening, or system actuation — so no agent acts outside its scoped authority.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function LogisticsGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an action falls outside authorized policy, Sentinel halts and escalates to a human. The agent does not ship against a control. It stops.
+              When an action falls outside authorized policy, Governance enforcement halts and escalates to a human. The agent does not ship against a control. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">

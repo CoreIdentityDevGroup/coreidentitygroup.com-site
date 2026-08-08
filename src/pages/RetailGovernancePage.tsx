@@ -75,7 +75,7 @@ export function RetailGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Consent-Aware Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces data classification and consumer elections at the agent layer. No agent processes consumer data outside its authorized purpose and the consumer's choices.
+              Governance enforcement enforces data classification and consumer elections at the agent layer. No agent processes consumer data outside its authorized purpose and the consumer's choices.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function RetailGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an action falls outside authorized policy, Sentinel halts and escalates. The agent does not act against an opt-out. It stops.
+              When an action falls outside authorized policy, Governance enforcement halts and escalates. The agent does not act against an opt-out. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">

@@ -70,7 +70,7 @@ export function FoundersPage() {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <div className="text-xs text-white/40 tracking-widest mb-1">2026</div>
-              <div className="text-sm text-white/60">Pre-revenue. AGO billing Q4 2026.</div>
+              <div className="text-sm text-white/60">Pre-revenue. Commercialization in development.</div>
             </div>
             <div>
               <div className="text-xs text-white/40 tracking-widest mb-1">2027</div>

@@ -75,7 +75,7 @@ export function BFSIGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Authorization Before Execution</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel evaluates every agent action against codified policy before it runs. No trade, transfer, or data access proceeds outside an active, scoped authorization — the model cannot be prompted past the limit.
+              Governance enforcement evaluates every agent action against codified policy before it runs. No trade, transfer, or data access proceeds outside an active, scoped authorization — the model cannot be prompted past the limit.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function BFSIGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an action falls outside authorized policy, Sentinel halts and escalates to a human supervisor. The agent does not improvise against a control limit. It stops.
+              When an action falls outside authorized policy, Governance enforcement halts and escalates to a human supervisor. The agent does not improvise against a control limit. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">

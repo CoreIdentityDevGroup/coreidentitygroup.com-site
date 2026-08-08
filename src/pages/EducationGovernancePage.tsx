@@ -75,7 +75,7 @@ export function EducationGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Record-Aware Access Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces FERPA-scoped classification at the agent layer. No agent reads or discloses a protected education record outside an active, authorized purpose.
+              Governance enforcement enforces FERPA-scoped classification at the agent layer. No agent reads or discloses a protected education record outside an active, authorized purpose.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function EducationGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When access falls outside authorized scope, Sentinel stops and escalates to a human. The agent does not guess with a student's protected record. It stops.
+              When access falls outside authorized scope, Governance enforcement stops and escalates to a human. The agent does not guess with a student's protected record. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">

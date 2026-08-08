@@ -75,7 +75,7 @@ export function SovereignGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Authority-Aware Access Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces classification- and clearance-aware authorization at the agent layer. No agent accesses controlled data or acts outside an active, scoped authorization.
+              Governance enforcement enforces classification- and clearance-aware authorization at the agent layer. No agent accesses controlled data or acts outside an active, scoped authorization.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function SovereignGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an agent meets a scenario outside its authorized scope, Sentinel stops and escalates to a cleared official. It does not infer authority it was not granted. It stops.
+              When an agent meets a scenario outside its authorized scope, Governance enforcement stops and escalates to a cleared official. It does not infer authority it was not granted. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">

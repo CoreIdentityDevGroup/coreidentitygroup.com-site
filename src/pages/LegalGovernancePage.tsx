@@ -75,7 +75,7 @@ export function LegalGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Privilege-Aware Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces matter-level classification at the agent layer. No agent reads or moves privileged material outside an active, scoped authorization.
+              Governance enforcement enforces matter-level classification at the agent layer. No agent reads or moves privileged material outside an active, scoped authorization.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function LegalGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When access falls outside authorized scope, Sentinel stops and escalates to a supervising attorney. The agent does not guess across an ethical wall. It stops.
+              When access falls outside authorized scope, Governance enforcement stops and escalates to a supervising attorney. The agent does not guess across an ethical wall. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">

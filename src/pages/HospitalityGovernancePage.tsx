@@ -75,7 +75,7 @@ export function HospitalityGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Jurisdiction-Aware Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces data classification and residency at the agent layer. No agent processes or transfers guest data outside its authorized scope and region.
+              Governance enforcement enforces data classification and residency at the agent layer. No agent processes or transfers guest data outside its authorized scope and region.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function HospitalityGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an action falls outside authorized policy, Sentinel halts and escalates. The agent does not move data it was not cleared to move. It stops.
+              When an action falls outside authorized policy, Governance enforcement halts and escalates. The agent does not move data it was not cleared to move. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">

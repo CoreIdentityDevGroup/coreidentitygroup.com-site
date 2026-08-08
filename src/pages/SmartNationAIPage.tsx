@@ -78,7 +78,7 @@ export function SmartNationAIPage() {
         <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
         <PageTitle>SmartNation AI</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed">
-          The governed digital labor registry. SmartNation AI catalogs, deploys, and monitors 10,000 enterprise-grade autonomous agents across 8 regulated verticals. Every agent maps to a real operational labor position, carries a full governance profile, and executes exclusively under policy enforcement with an immutable audit trail anchored by the governance control layer.
+          The governed digital labor registry. SmartNation AI catalogs, deploys, and monitors governed autonomous capabilities across institutional domains. Every agent maps to a real operational labor position, carries a full governance profile, and executes exclusively under policy enforcement with an immutable audit trail anchored by the governance control layer.
         </p>
       </div>
 
@@ -86,7 +86,7 @@ export function SmartNationAIPage() {
         <SectionTitle>Registry at a Glance</SectionTitle>
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           {[
-            { label: "Governed Agents", value: "10,000" },
+            { label: "Governed Agents", value: "large-scale" },
             { label: "Active Agents", value: "8,240" },
             { label: "Regulated Verticals", value: "8" },
             { label: "Avg Governance Score", value: "63 / 100" },
@@ -103,7 +103,7 @@ export function SmartNationAIPage() {
         <SectionTitle>Governance Architecture</SectionTitle>
         <Card>
           <div className="space-y-3 text-white/75 leading-relaxed">
-            <p>Every agent in the SmartNation registry executes under the CoreIdentity governance stack. No agent reaches production without a governance profile, a risk tier assignment, and a compliance framework mapping. At runtime, every execution request is evaluated by the Semantic Authorization Layer (SAL) across five dimensions — Identity, Intent, Asset, Action, and Context — before execution is permitted. Every decision generates an immutable Proof Pack anchored to a cryptographic ledger.</p>
+            <p>Every agent in the SmartNation registry executes under the CoreIdentity Governance Ecosystem. No agent reaches production without a governance profile, a risk tier assignment, and a compliance framework mapping. At runtime, every execution request is evaluated by the Semantic Authorization Layer (SAL) across five dimensions — Identity, Intent, Asset, Action, and Context — before execution is permitted. Every decision generates an immutable Proof Pack anchored to a cryptographic ledger.</p>
             <div className="grid sm:grid-cols-3 gap-4 pt-2">
               {[
                 { tier: "TIER 1 — Critical", count: "6,021 agents (60%)", desc: "Highest risk. Dual approval required. Human review on escalation. Healthcare, financial, and legal agents." },

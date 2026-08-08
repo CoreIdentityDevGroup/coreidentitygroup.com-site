@@ -75,7 +75,7 @@ export function FinanceGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Segregation Enforced in Software</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces authorization and segregation-of-duties at the agent layer. No agent posts, approves, or alters financial records outside its scoped authority.
+              Governance enforcement enforces authorization and segregation-of-duties at the agent layer. No agent posts, approves, or alters financial records outside its scoped authority.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function FinanceGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an action exceeds authorized policy, Sentinel halts and escalates. The agent does not self-approve. It stops.
+              When an action exceeds authorized policy, Governance enforcement halts and escalates. The agent does not self-approve. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">

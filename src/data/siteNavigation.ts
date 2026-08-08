@@ -26,7 +26,6 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
       { to: "/execution-integrity", label: "Execution Integrity" },
       { to: "/verification-at-scale", label: "Verification at Scale" },
       { to: "/sovereign-assurance", label: "Sovereign Assurance" },
-      { to: "/smartnation-ai", label: "SmartNation AI" },
     ],
   },
   {

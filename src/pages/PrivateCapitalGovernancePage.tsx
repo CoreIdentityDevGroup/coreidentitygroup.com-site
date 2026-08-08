@@ -75,7 +75,7 @@ export function PrivateCapitalGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Wall-Aware Access Boundaries</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              Sentinel enforces information barriers and scoped authorization at the agent layer. No agent accesses MNPI or fund data outside its authorized purpose.
+              Governance enforcement enforces information barriers and scoped authorization at the agent layer. No agent accesses MNPI or fund data outside its authorized purpose.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
@@ -87,7 +87,7 @@ export function PrivateCapitalGovernancePage() {
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
             <div className="mb-2 text-lg font-semibold text-ink">Fail-Closed on Ambiguity</div>
             <p className="text-sm leading-relaxed text-ink-secondary">
-              When an action exceeds authorized policy, Sentinel halts and escalates. The agent does not cross a wall or self-approve a valuation. It stops.
+              When an action exceeds authorized policy, Governance enforcement halts and escalates. The agent does not cross a wall or self-approve a valuation. It stops.
             </p>
           </div>
           <div className="cidg-card rounded-2xl border border-line bg-carbon-panel p-6">
