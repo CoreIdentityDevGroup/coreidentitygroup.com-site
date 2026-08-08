@@ -5,9 +5,9 @@ import { SectionHead } from "../components/institutional";
 
 function FAQCard({ q, children }: { q: string; children: ReactNode }) {
   return (
-    <div className="rounded-2xl border border-line bg-carbon-panel p-6">
-      <h3 className="mb-3 font-serif text-lg text-ink">{q}</h3>
-      <div className="text-sm leading-relaxed text-ink-secondary">{children}</div>
+    <div className="rounded-2xl border border-[rgba(21,29,42,0.13)] bg-white p-6 shadow-[0_1px_2px_rgba(21,29,42,0.04)]">
+      <h3 className="mb-3 font-serif text-lg text-[#151d2a]">{q}</h3>
+      <div className="text-sm leading-relaxed text-[#465365]">{children}</div>
     </div>
   );
 }
@@ -19,7 +19,7 @@ export function FAQPage() {
         <title>Frequently Asked Questions | CoreIdentity</title>
         <meta
           name="description"
-          content="Answers about CoreIdentity, provable AI decision governance, fail-closed enforcement, fail-closed enforcement, and post-quantum hardening."
+          content="Answers about CoreIdentity, provable AI decision governance, fail-closed enforcement, and post-quantum hardening."
         />
       </Helmet>
 
@@ -27,10 +27,10 @@ export function FAQPage() {
         <div className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
           CoreIdentity Development Group
         </div>
-        <h1 className="mt-4 font-serif text-display-xl tracking-tight text-ink md:text-display-2xl">
+        <h1 className="mt-4 font-serif text-display-xl tracking-tight text-[#151d2a] md:text-display-2xl">
           Frequently Asked Questions
         </h1>
-        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-secondary">
+        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-[#465365]">
           Practical answers about CoreIdentity, provable AI decision governance, and how a governance
           substrate differs from autonomy-first AI deployment.
         </p>
@@ -106,12 +106,12 @@ export function FAQPage() {
             </p>
             <ul className="list-disc space-y-2 pl-5">
               <li>
-                <span className="font-medium text-ink">Harvest now, decrypt later.</span> Adversaries
+                <span className="font-medium text-[#151d2a]">Harvest now, decrypt later.</span> Adversaries
                 collect encrypted data today to decrypt once quantum computers are capable — governance
                 audit trails and identity credentials signed with classical algorithms are already at risk.
               </li>
               <li>
-                <span className="font-medium text-ink">NIST finalized in August 2024.</span> Federal
+                <span className="font-medium text-[#151d2a]">NIST finalized in August 2024.</span> Federal
                 agencies and contractors face migration deadlines; enterprise governance infrastructure
                 must meet the same bar.
               </li>
@@ -154,7 +154,7 @@ export function FAQPage() {
       <div>
         <Link
           to="/contact"
-          className="inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-carbon transition hover:bg-accent-strong"
+          className="inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
         >
           Contact us
         </Link>
