@@ -81,7 +81,7 @@ export function AboutPage() {
               </div>
             </div>
             <p className="text-xs text-white/45 pt-1">
-              The platform is live in production with a Platinum Test Suite under continuous adversarial validation
+Our Governance Ecosystem is engineered to perform under continuous adversarial conditions, maintaining institutional control, verifiable accountability, and execution integrity as autonomous systems operate at machine speed.
               across Security, Post-Quantum, Compliance, Disaster Recovery, and Adversarial suites.
             </p>
           </div>

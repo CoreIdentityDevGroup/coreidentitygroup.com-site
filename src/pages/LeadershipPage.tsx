@@ -42,7 +42,7 @@ const TODD_FALLBACK_BIO = [
   `That experience led to a fundamental observation: the governance systems organizations rely on today were designed for people making decisions at human speed. As autonomous systems assume responsibility for increasingly consequential work, institutions require a new model—one capable of governing autonomous execution with the same rigor historically applied to people, processes, and financial controls.`,
   `Todd is the architect of the Trust Infrastructure discipline and the Autonomous Execution Governance (AEG) doctrine, establishing the governance principles and institutional trust model that enable autonomous execution at enterprise scale.`,
   `Under his leadership, CoreIdentity is building the technology and institutional infrastructure that transforms those principles into operational reality, enabling governments, regulated industries, and enterprises to deploy autonomous execution with verifiable trust, accountability, and control.`,
-  `Todd holds a Bachelor of Science in Information Systems from American Sentinel University (now Post University) and a Master of Business Administration from the University of Maryland Global Campus, where he was elected to Phi Kappa Phi, the nation's oldest and most selective all-discipline honor society. He is building CoreIdentity as a category-defining company to become the institutional trust infrastructure the agentic era is built on.`,
+
 ];
 
 function MemberCard({ member }: { member: SanityTeamMember }) {
@@ -126,12 +126,7 @@ export function LeadershipPage() {
       <div className="space-y-4">
         <Eyebrow>COREIDENTITY DEVELOPMENT GROUP</Eyebrow>
         <PageTitle>Leadership</PageTitle>
-        <p className="text-white/70 max-w-3xl leading-relaxed">
-          CoreIdentity is led by operators who have built and governed
-          mission-critical systems in the most demanding institutional
-          environments — and who understand that governance infrastructure
-          is not a product category. It is an operational requirement.
-        </p>
+        <p className="text-white/70 max-w-3xl leading-relaxed">CoreIdentity's leadership comprises experienced operators who have built and led complex organizations, programs, and institutional systems in environments where accountability, resilience, and execution matter.</p>
       </div>
 
       <section className="space-y-5">

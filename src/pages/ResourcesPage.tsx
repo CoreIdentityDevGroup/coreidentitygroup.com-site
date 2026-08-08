@@ -5,7 +5,7 @@ export function ResourcesPage() {
   return (
     <div className="space-y-12">
       <Helmet>
-        <title>Resources | CoreIdentity</title>
+        <title>Thought Leadership | CoreIdentity</title>
         <meta
           name="description"
           content="CoreIdentity governance research and resources — coming soon."

@@ -65,7 +65,13 @@ export function CoreIdentityAdvisoryGroupPage() {
 
       {/* ── Engagement Model ────────────────────────────────────── */}
       <Section>
-        <SectionTitle>Engagement Model</SectionTitle>
+        
+          <div className="cidg-advisory-phase-card">
+            <div className="text-sm font-semibold uppercase tracking-wide">Phase 3</div>
+            <h3>Governance Retainer</h3>
+            <p>Ongoing executive governance support to maintain institutional controls, address emerging autonomous-execution risks, and keep governance architecture aligned with operational and regulatory change.</p>
+          </div>
+<SectionTitle>Engagement Model</SectionTitle>
         <p className="text-ink-secondary mb-6 max-w-2xl">
           Every CIAG engagement follows a structured progression. Each phase builds on the last — establishing governance foundation before expanding to platform deployment and enterprise scale.
         </p>

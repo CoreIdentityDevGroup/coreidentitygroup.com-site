@@ -4611,3 +4611,10 @@ div:has(> img[src$="6041.webp"]), div:has(> img[src*="/6041.webp"]) {
 [class*="leadership" i] a[href*="linkedin.com"] svg,a[href*="linkedin.com"][aria-label*="LinkedIn" i] svg{color:currentColor;fill:currentColor;stroke:currentColor}
 .cidg-aeg-middle-tier,[data-cidg-tier="intelligence-assurance-trust"]{width:min(88%,72rem);margin-inline:auto}
 /* CIDG_MASTER_RELEASE_V7:END */
+
+/* CIDG_V712:START */
+.cidg-governance-fullbleed figure,.cidg-governance-fullbleed [data-ecosystem-visual]{width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+a[href*="linkedin.com"] svg{color:#0A66C2;fill:#0A66C2}
+.cidg-advisory-phase-card{box-shadow:none;border:1px solid rgba(17,24,39,.12);padding:clamp(1.5rem,3vw,2.5rem);margin-block:1.5rem}
+.cidg-advisory-phase-card h3{margin-top:.5rem}.cidg-advisory-phase-card p{margin-top:1rem}
+/* CIDG_V712:END */

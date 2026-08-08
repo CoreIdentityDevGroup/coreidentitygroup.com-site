@@ -4,7 +4,7 @@ import InstitutionalVisual from "../components/InstitutionalVisual";
 
 export function GovernanceEcosystemPage() {
   return (
-    <div className="cidg-framework-page cidg-governance-page">
+    <div className="cidg-framework-page cidg-governance-page cidg-governance-fullbleed">
       <Helmet>
         <title>The Governance Ecosystem | CoreIdentity Development Group</title>
         <meta

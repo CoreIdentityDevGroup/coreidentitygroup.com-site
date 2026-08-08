@@ -38,9 +38,9 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
-    label: "Knowledge",
+    label: "Thought Leadership",
     items: [
-      { to: "/resources", label: "Research" },
+      { to: "/resources", label: "Resources" },
       { to: "/blog", label: "Insights" },
       { to: "/faq", label: "FAQ" },
     ],
@@ -49,7 +49,8 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
 
 export const PRIMARY_NAVIGATION: readonly NavigationItem[] = [
   ...NAVIGATION_GROUPS[0].items,
-  { to: "/resources", label: "Research" },
+  { to: "/resources", label: "Resources" },
   { to: "/about", label: "About" },
+  { to: "/governance-console", label: "Governance Console" },
 ] as const;
 
