@@ -15,15 +15,15 @@ export default function HomePage() {
 
       <section className="cidg-platinum-hero" aria-labelledby="cidg-platinum-title">
         <div className="cidg-platinum-hero-copy">
-          <div className="cidg-platinum-eyebrow-row">
+          <div className="cidg-platinum-eyebrow">
             <strong>Trust Infrastructure</strong>
-            <strong>Autonomous Execution Governance</strong>
           </div>
           <div className="cidg-platinum-eyebrow-terms">
             <span>Intelligence</span>
             <span>Assurance</span>
             <span>Trust</span>
           </div>
+          <div className="cidg-platinum-eyebrow-aeg">Autonomous Execution Governance</div>
 
           <h1 id="cidg-platinum-title">
             The Trust Infrastructure

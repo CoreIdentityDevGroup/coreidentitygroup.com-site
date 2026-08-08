@@ -1160,7 +1160,7 @@ main [class*="bg-[#fbfaf7]"] {
 }
 
 .cidg-framework-page > section {
-  padding: clamp(4rem, 8vw, 8rem) clamp(1.25rem, 5vw, 5rem);
+  padding: clamp(2.25rem, 5vw, 5rem) clamp(1.25rem, 5vw, 5rem);
 }
 
 .cidg-framework-hero {
@@ -4588,3 +4588,12 @@ div:has(> img[src$="6041.webp"]), div:has(> img[src*="/6041.webp"]) {
 .cidg-platinum-hero{align-items:start}
 .cidg-platinum-hero-visual-col .cidg-platinum-visual--hero{margin-top:0}
 /* <<< coreidentity:homepage-hero-list-items <<< */
+
+/* >>> coreidentity:aeg-position-fix >>> */
+.cidg-platinum-eyebrow{display:block;margin-bottom:.6rem}
+.cidg-platinum-eyebrow strong{color:#9a682a;text-transform:uppercase;font-size:clamp(1.05rem,1.4vw,1.3rem);letter-spacing:.14em}
+.cidg-platinum-eyebrow-terms{display:flex;gap:1.5rem;margin-bottom:.6rem}
+.cidg-platinum-eyebrow-terms span{color:#283342;text-transform:uppercase;font-size:clamp(1rem,1.2vw,1.15rem);font-weight:750;letter-spacing:.065em}
+.cidg-platinum-eyebrow-aeg{color:#9a682a;text-transform:uppercase;font-size:clamp(1.05rem,1.4vw,1.3rem);letter-spacing:.14em;margin-bottom:2rem}
+@media(max-width:800px){.cidg-platinum-eyebrow-terms{flex-wrap:wrap;gap:.5rem 1rem}}
+/* <<< coreidentity:aeg-position-fix <<< */
