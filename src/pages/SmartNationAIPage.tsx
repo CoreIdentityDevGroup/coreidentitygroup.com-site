@@ -78,7 +78,7 @@ export function SmartNationAIPage() {
         <Eyebrow>GOVERNANCE INFRASTRUCTURE</Eyebrow>
         <PageTitle>SmartNation AI</PageTitle>
         <p className="text-white/70 max-w-3xl leading-relaxed">
-          The governed digital labor registry. SmartNation AI catalogs, deploys, and monitors 10,000 enterprise-grade autonomous agents across 8 regulated verticals. Every agent maps to a real operational labor position, carries a full governance profile, and executes exclusively under Sentinel policy enforcement with an immutable audit trail anchored by the SAL Kernel.
+          The governed digital labor registry. SmartNation AI catalogs, deploys, and monitors 10,000 enterprise-grade autonomous agents across 8 regulated verticals. Every agent maps to a real operational labor position, carries a full governance profile, and executes exclusively under policy enforcement with an immutable audit trail anchored by the governance control layer.
         </p>
       </div>
 

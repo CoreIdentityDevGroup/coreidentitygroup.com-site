@@ -3,7 +3,7 @@ import { LayerHero, ArchitectureNav, SectionHead, InfoCard, ProofStat, Instituti
 
 export function ExecutionIntegrityPage() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 cidg-framework-page">
       <Helmet>
         <title>Execution Integrity | CoreIdentity</title>
         <meta

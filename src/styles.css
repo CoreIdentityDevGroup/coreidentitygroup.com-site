@@ -4597,3 +4597,17 @@ div:has(> img[src$="6041.webp"]), div:has(> img[src*="/6041.webp"]) {
 .cidg-platinum-eyebrow-aeg{color:#9a682a;text-transform:uppercase;font-size:clamp(1.05rem,1.4vw,1.3rem);letter-spacing:.14em;margin-bottom:2rem}
 @media(max-width:800px){.cidg-platinum-eyebrow-terms{flex-wrap:wrap;gap:.5rem 1rem}}
 /* <<< coreidentity:aeg-position-fix <<< */
+
+/* CIDG_MASTER_RELEASE_V7:START */
+:root{--cidg-platinum-surface:#e5e4e2;--cidg-page-surface:#fff;--cidg-ink:#111827;--cidg-line:rgba(17,24,39,.12)}
+.cidg-framework-page,.cidg-governance-page,.cidg-home-page,main{overflow-x:clip}
+.cidg-framework-page>section,.cidg-governance-page>section{margin-block:0}
+.cidg-framework-page>section{padding-block:clamp(2.5rem,5vw,5rem)}
+.cidg-framework-page img,.cidg-framework-page picture,.cidg-framework-page figure{margin-top:clamp(.75rem,2vw,1.5rem);max-width:100%}
+.cidg-home-page img,.cidg-home-page picture,.cidg-home-page figure{max-width:100%}
+.cidg-governance-page figure,.cidg-governance-page .visual-card,.cidg-governance-page [class*="image"]{width:100%;max-width:none}
+[class*="advisory" i] section,[class*="ciag" i] section{padding-block:clamp(2.5rem,5vw,5rem)}
+[class*="advisory" i] [class*="card" i],[class*="ciag" i] [class*="card" i]{margin-block:clamp(.5rem,1.5vw,1rem)}
+[class*="leadership" i] a[href*="linkedin.com"] svg,a[href*="linkedin.com"][aria-label*="LinkedIn" i] svg{color:currentColor;fill:currentColor;stroke:currentColor}
+.cidg-aeg-middle-tier,[data-cidg-tier="intelligence-assurance-trust"]{width:min(88%,72rem);margin-inline:auto}
+/* CIDG_MASTER_RELEASE_V7:END */

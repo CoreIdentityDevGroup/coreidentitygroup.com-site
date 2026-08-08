@@ -3,7 +3,7 @@ import { LayerHero, ArchitectureNav, SectionHead, InfoCard, ProofStat, Instituti
 
 export function SovereignAssurancePage() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 cidg-framework-page">
       <Helmet>
         <title>Sovereign Assurance | CoreIdentity</title>
         <meta

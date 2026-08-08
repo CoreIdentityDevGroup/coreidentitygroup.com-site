@@ -4,7 +4,7 @@ import InstitutionalVisual from "../components/InstitutionalVisual";
 
 export default function HomePage() {
   return (
-    <div className="cidg-platinum-home">
+    <div className="cidg-platinum-home cidg-home-page">
       <Helmet>
         <title>CoreIdentity Development Group | Trust Infrastructure</title>
         <meta

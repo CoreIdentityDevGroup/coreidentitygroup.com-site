@@ -3,7 +3,7 @@ import { LayerHero, ArchitectureNav, SectionHead, InfoCard, InstitutionalCTA } f
 
 export function VerificationAtScalePage() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 cidg-framework-page">
       <Helmet>
         <title>Verification at Scale | CoreIdentity</title>
         <meta
