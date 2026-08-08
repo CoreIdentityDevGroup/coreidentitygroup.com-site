@@ -15,9 +15,14 @@ export default function HomePage() {
 
       <section className="cidg-platinum-hero" aria-labelledby="cidg-platinum-title">
         <div className="cidg-platinum-hero-copy">
-          <div className="cidg-platinum-eyebrow">
+          <div className="cidg-platinum-eyebrow-row">
             <strong>Trust Infrastructure</strong>
-            <span>Intelligence · Assurance · Trust</span>
+            <strong>Autonomous Execution Governance</strong>
+          </div>
+          <div className="cidg-platinum-eyebrow-terms">
+            <span>Intelligence</span>
+            <span>Assurance</span>
+            <span>Trust</span>
           </div>
 
           <h1 id="cidg-platinum-title">
@@ -29,22 +34,20 @@ export default function HomePage() {
             The institutional foundation that enables organizations to safely
             delegate autonomous execution while ensuring they remain in control.
           </p>
-
+        </div>
+        <div className="cidg-platinum-hero-visual-col">
+          <InstitutionalVisual
+            src="/images/visuals/trust-infrastructure-3d.webp"
+            alt="Trust Infrastructure architecture: Intelligence, Assurance and Trust enabling Autonomous Governed Execution."
+            className="cidg-platinum-visual--hero"
+            priority
+          />
           <div className="cidg-platinum-hero-actions">
             <Link to="/trust-infrastructure" className="cidg-platinum-primary">
               Explore Trust Infrastructure <span aria-hidden="true">→</span>
             </Link>
-            <Link to="/resources" className="cidg-platinum-secondary">
-              Read Our Research
-            </Link>
           </div>
         </div>
-<InstitutionalVisual
-          src="/images/visuals/trust-infrastructure-3d.webp"
-          alt="Trust Infrastructure architecture: Intelligence, Assurance and Trust enabling Autonomous Governed Execution."
-          className="cidg-platinum-visual--hero"
-          priority
-        />
       </section>
 
       <section className="cidg-platinum-shift">

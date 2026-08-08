@@ -4568,3 +4568,23 @@ div:has(> img[src$="6041.webp"]), div:has(> img[src*="/6041.webp"]) {
   }
 }
 /* CI_PLATINUM_EXACT_FILENAME_END */
+
+/* >>> coreidentity:homepage-hero-list-items >>> */
+/* Item 1: Trust Infrastructure / AEG as bookends, spread full width */
+.cidg-platinum-eyebrow-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:.6rem}
+.cidg-platinum-eyebrow-row strong{color:#9a682a;text-transform:uppercase;font-size:clamp(1.05rem,1.4vw,1.3rem);letter-spacing:.14em}
+.cidg-platinum-eyebrow-terms{display:flex;justify-content:space-between;gap:1rem;margin-bottom:2rem}
+.cidg-platinum-eyebrow-terms span{color:#283342;text-transform:uppercase;font-size:clamp(1rem,1.2vw,1.15rem);font-weight:750;letter-spacing:.065em}
+@media(max-width:800px){
+  .cidg-platinum-eyebrow-row{flex-direction:column;gap:.35rem}
+  .cidg-platinum-eyebrow-terms{flex-wrap:wrap;gap:.5rem 1rem}
+}
+
+/* Item 3+4: CTA now lives below the image, in its own visual column */
+.cidg-platinum-hero-visual-col{display:flex;flex-direction:column;align-items:center;gap:1.75rem}
+.cidg-platinum-hero-visual-col .cidg-platinum-hero-actions{margin-top:0}
+
+/* Item 5: image top-aligned instead of vertically centered, less top margin */
+.cidg-platinum-hero{align-items:start}
+.cidg-platinum-hero-visual-col .cidg-platinum-visual--hero{margin-top:0}
+/* <<< coreidentity:homepage-hero-list-items <<< */
