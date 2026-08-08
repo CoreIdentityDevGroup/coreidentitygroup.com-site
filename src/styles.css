@@ -4500,3 +4500,71 @@ section:has(img[src*="layers" i]){
   }
 }
 /* COREIDENTITY_PLATINUM_IMAGE_INTEGRATION_END */
+
+/* CI_PLATINUM_EXACT_FILENAME_START */
+/* Exact production assets: 6037.webp, 6038.webp, 6041.webp */
+img[src$="6037.webp"], img[src*="/6037.webp"],
+img[src$="6038.webp"], img[src*="/6038.webp"],
+img[src$="6041.webp"], img[src*="/6041.webp"] {
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  margin:0 auto!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+
+/* 6037 + 6038 edge pixels are essentially pure white. */
+section:has(img[src$="6037.webp"]), section:has(img[src*="/6037.webp"]),
+section:has(img[src$="6038.webp"]), section:has(img[src*="/6038.webp"]),
+figure:has(img[src$="6037.webp"]), figure:has(img[src*="/6037.webp"]),
+figure:has(img[src$="6038.webp"]), figure:has(img[src*="/6038.webp"]),
+div:has(> img[src$="6037.webp"]), div:has(> img[src*="/6037.webp"]),
+div:has(> img[src$="6038.webp"]), div:has(> img[src*="/6038.webp"]) {
+  background:#fff!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+/* 6041 warm stone/platinum border median ≈ RGB(223,218,214). */
+section:has(img[src$="6041.webp"]), section:has(img[src*="/6041.webp"]),
+figure:has(img[src$="6041.webp"]), figure:has(img[src*="/6041.webp"]),
+div:has(> img[src$="6041.webp"]), div:has(> img[src*="/6041.webp"]) {
+  background:rgb(223,218,214)!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+/* Expand the immediate artwork stage; eliminate inset-card framing. */
+figure:has(img[src$="6037.webp"]), figure:has(img[src*="/6037.webp"]),
+figure:has(img[src$="6038.webp"]), figure:has(img[src*="/6038.webp"]),
+figure:has(img[src$="6041.webp"]), figure:has(img[src*="/6041.webp"]),
+div:has(> img[src$="6037.webp"]), div:has(> img[src*="/6037.webp"]),
+div:has(> img[src$="6038.webp"]), div:has(> img[src*="/6038.webp"]),
+div:has(> img[src$="6041.webp"]), div:has(> img[src*="/6041.webp"]) {
+  width:min(100%,1180px)!important;
+  max-width:1180px!important;
+  margin-inline:auto!important;
+  padding:0!important;
+  overflow:visible!important;
+}
+
+@media (max-width:768px) {
+  figure:has(img[src$="6037.webp"]), figure:has(img[src*="/6037.webp"]),
+  figure:has(img[src$="6038.webp"]), figure:has(img[src*="/6038.webp"]),
+  figure:has(img[src$="6041.webp"]), figure:has(img[src*="/6041.webp"]),
+  div:has(> img[src$="6037.webp"]), div:has(> img[src*="/6037.webp"]),
+  div:has(> img[src$="6038.webp"]), div:has(> img[src*="/6038.webp"]),
+  div:has(> img[src$="6041.webp"]), div:has(> img[src*="/6041.webp"]) {
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0!important;
+  }
+}
+/* CI_PLATINUM_EXACT_FILENAME_END */
