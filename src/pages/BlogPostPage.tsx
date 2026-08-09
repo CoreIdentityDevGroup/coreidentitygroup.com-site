@@ -12,7 +12,7 @@ const Route = getRouteApi("/blog/$slug");
 const ptComponents: PortableTextComponents = {
   block: {
     normal: ({ children }) => (
-      <p className="text-white/70 leading-relaxed mb-4">{children}</p>
+      <p className="cidg-insight-p">{children}</p>
     ),
     h2: ({ children }) => (
       <h2 className="text-xl font-semibold tracking-tight mt-10 mb-4">{children}</h2>
@@ -109,7 +109,7 @@ export default function BlogPostPage() {
     }
 
     return (
-      <div className="mx-auto max-w-3xl px-4 py-16">
+      <div className="cidg-insight-article mx-auto max-w-3xl px-4 py-16">
         <Helmet>
           <title>{post.title} — CoreIdentity Development Group</title>
           <meta name="description" content={post.excerpt} />
@@ -166,7 +166,7 @@ export default function BlogPostPage() {
   }
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16">
+    <div className="cidg-insight-article mx-auto max-w-3xl px-4 py-16">
       <Helmet>
         <title>{localPost.title} — CoreIdentity Development Group</title>
         <meta name="description" content={localPost.excerpt} />
@@ -193,14 +193,7 @@ export default function BlogPostPage() {
       </div>
 
       <div
-        className="prose prose-invert prose-sm max-w-none
-          prose-headings:font-semibold prose-headings:tracking-tight
-          prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-4
-          prose-p:text-white/70 prose-p:leading-relaxed prose-p:mb-4
-          prose-ul:text-white/70 prose-ul:leading-relaxed prose-li:mb-2
-          prose-strong:text-white
-          prose-code:text-teal-300 prose-code:bg-white/5 prose-code:px-1 prose-code:rounded
-          prose-a:text-teal-400 prose-a:no-underline hover:prose-a:text-teal-300"
+        className="cidg-insight-prose"
         dangerouslySetInnerHTML={{ __html: localPost.content }}
       />
 

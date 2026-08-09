@@ -45,6 +45,7 @@ import { ExecutionIntegrityPage } from "./pages/ExecutionIntegrityPage";
 import { VerificationAtScalePage } from "./pages/VerificationAtScalePage";
 import { SovereignAssurancePage } from "./pages/SovereignAssurancePage";
 
+import MarketsWeServePage from "./pages/MarketsWeServePage";
 const rootRoute = createRootRoute({ component: Layout });
 
 const indexRoute = createRoute({
@@ -299,7 +300,14 @@ const governanceConsoleRoute = createRoute({
   component: GovernanceConsolePage,
 });
 
+const marketsWeServeRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/markets-we-serve",
+  component: MarketsWeServePage,
+});
+
 const routeTree = rootRoute.addChildren([
+  marketsWeServeRoute,
   indexRoute,
 
   trustInfrastructureRoute,

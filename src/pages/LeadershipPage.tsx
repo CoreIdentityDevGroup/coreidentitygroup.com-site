@@ -36,17 +36,15 @@ const FALLBACK_MEMBERS: SanityTeamMember[] = [
 ];
 
 // Hardcoded bio paragraphs shown for the fallback member
-const TODD_FALLBACK_BIO = [
-  `Todd is the Founder and Chief Executive Officer of CoreIdentity Development Group Inc., the company advancing the Trust Infrastructure discipline.`,
-  `He brings more than 30 years of executive leadership experience across highly regulated, multi-stakeholder operating environments supporting the National Intelligence Community, the Department of Defense, and private enterprise. Throughout his career, he has built governance frameworks for environments where accountability, auditability, and operational integrity are institutional requirements rather than aspirational goals.`,
-  `That experience led to a fundamental observation: the governance systems organizations rely on today were designed for people making decisions at human speed. As autonomous systems assume responsibility for increasingly consequential work, institutions require a new model—one capable of governing autonomous execution with the same rigor historically applied to people, processes, and financial controls.`,
-  `Todd is the architect of the Trust Infrastructure discipline and the Autonomous Execution Governance (AEG) doctrine, establishing the governance principles and institutional trust model that enable autonomous execution at enterprise scale.`,
-  `Under his leadership, CoreIdentity is building the technology and institutional infrastructure that transforms those principles into operational reality, enabling governments, regulated industries, and enterprises to deploy autonomous execution with verifiable trust, accountability, and control.`,
-  `He is building CoreIdentity as a category-defining company to become the institutional trust infrastructure the agentic era is built on.`,
+const TODD_CANONICAL_BIO = [
+  `Todd Morgan is the Founder and Chief Executive Officer of CoreIdentity Development Group Inc., the architect of the Governance Ecosystem for the Autonomous Era.`,
+  `He brings more than 30 years of executive leadership experience across complex, highly regulated, multi-stakeholder operating environments spanning national security, defense, technology, and private enterprise. His career has centered on building and leading organizations where accountability, operational integrity, resilience, and institutional control are fundamental requirements.`,
+  `Todd is the architect of the Trust Infrastructure discipline and Autonomous Execution Governance (AEG), establishing an institutional model for governing autonomous execution through continuously verifiable identity, authority, policy enforcement, evidence, assurance, and accountability.`,
+  `Under his leadership, CoreIdentity is advancing an operational institutional architecture that enables governments, regulated industries, and enterprises to safely delegate autonomous execution while ensuring they remain in control.`
 ];
 
 function MemberCard({ member }: { member: SanityTeamMember }) {
-  const isFallback = member._id === 'todd-morgan' && !isSanityConfigured;
+  const isFallback = member._id === 'todd-morgan';
 
   return (
     <Card>
@@ -69,7 +67,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
 
         <div className="space-y-4">
           {isFallback ? (
-            TODD_FALLBACK_BIO.map((para, i) => (
+            TODD_CANONICAL_BIO.map((para, i) => (
               <p key={i} className="text-white/70 leading-relaxed">{para}</p>
             ))
           ) : member.bio && member.bio.length > 0 ? (
