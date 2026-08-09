@@ -4618,3 +4618,74 @@ a[href*="linkedin.com"] svg{color:#0A66C2;fill:#0A66C2}
 .cidg-advisory-phase-card{box-shadow:none;border:1px solid rgba(17,24,39,.12);padding:clamp(1.5rem,3vw,2.5rem);margin-block:1.5rem}
 .cidg-advisory-phase-card h3{margin-top:.5rem}.cidg-advisory-phase-card p{margin-top:1rem}
 /* CIDG_V712:END */
+
+/* CIDG_V716B:START */
+.cidg-home-trust-sequence{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  flex-wrap:wrap;
+}
+.cidg-home-trust-sequence > * + *::before{
+  content:"•";
+  display:inline-block;
+  margin:0 .7em;
+  font-weight:400;
+  opacity:.72;
+}
+.cidg-ecosystem-fullbleed{
+  width:100vw !important;
+  max-width:none !important;
+  position:relative;
+  left:50%;
+  margin-left:-50vw !important;
+  margin-right:-50vw !important;
+}
+.cidg-ecosystem-fullbleed .cidg-platinum-visual--ecosystem{
+  width:100% !important;
+  max-width:none !important;
+}
+.cidg-ecosystem-interpretation{
+  max-width:72rem;
+  margin:clamp(3rem,7vw,6rem) auto 0;
+  padding:0 clamp(1.25rem,4vw,3rem);
+}
+.cidg-ecosystem-interpretation h2{margin-top:.6rem}
+.cidg-ecosystem-interpretation p{margin-top:1.1rem}
+.cidg-ecosystem-principle{margin-top:1.75rem !important}
+.cidg-linkedin-link,
+.cidg-linkedin-link svg{
+  color:#0A66C2 !important;
+}
+.cidg-linkedin-link svg{
+  fill:#0A66C2 !important;
+  stroke:#0A66C2 !important;
+}
+/* CIDG_V716B:END */
+
+/* CIDG_V717_BRAND:START */
+:root{
+  --cidg-header-black:#0A0A0A;
+  --cidg-bright-platinum:#E6E6E6;
+  --cidg-platinum:#BDBDBD;
+}
+.cidg-platinum-header,
+.cidg-platinum-masthead,
+.cidg-platinum-menu{background:#0A0A0A!important}
+.cidg-platinum-header{border-color:rgba(230,230,230,.14)!important}
+.cidg-platinum-mark img,
+.cidg-platinum-footer-mark img{object-fit:contain;background:#0A0A0A}
+.cidg-platinum-mark img{width:60px!important;height:60px!important}
+.cidg-platinum-wordmark{color:#E6E6E6!important;letter-spacing:.08em}
+.cidg-platinum-desktop-nav a,
+.cidg-platinum-menu a,
+.cidg-platinum-menu-group p{color:#D7D7D7!important}
+.cidg-platinum-desktop-nav a:hover,
+.cidg-platinum-menu a:hover{color:#F3F3F3!important}
+.cidg-platinum-contact,
+.cidg-platinum-menu-cta{border-color:rgba(230,230,230,.42)!important;color:#E6E6E6!important}
+.cidg-platinum-footer{background:#0A0A0A!important}
+.cidg-platinum-footer-lockup strong{color:#E6E6E6!important}
+@media(max-width:768px){.cidg-platinum-mark img{width:50px!important;height:50px!important}}
+/* CIDG_V717_BRAND:END */

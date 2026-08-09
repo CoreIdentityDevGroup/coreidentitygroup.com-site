@@ -90,7 +90,7 @@ export default function ContactPage() {
       <div className="space-y-3">
         <PageTitle>Contact</PageTitle>
         <p className="text-white/70 max-w-3xl">
-          Use the form below for general inquiries, partnerships, and requests.
+          For organizations evaluating Trust Infrastructure, Autonomous Execution Governance, institutional advisory services, strategic partnerships, or other engagements.
         </p>
       </div>
 

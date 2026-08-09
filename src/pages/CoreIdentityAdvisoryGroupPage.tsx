@@ -65,17 +65,11 @@ export function CoreIdentityAdvisoryGroupPage() {
 
       {/* ── Engagement Model ────────────────────────────────────── */}
       <Section>
-        
-          <div className="cidg-advisory-phase-card">
-            <div className="text-sm font-semibold uppercase tracking-wide">Phase 3</div>
-            <h3>Governance Retainer</h3>
-            <p>Ongoing executive governance support to maintain institutional controls, address emerging autonomous-execution risks, and keep governance architecture aligned with operational and regulatory change.</p>
-          </div>
 <SectionTitle>Engagement Model</SectionTitle>
         <p className="text-ink-secondary mb-6 max-w-2xl">
           Every CIAG engagement follows a structured progression. Each phase builds on the last — establishing governance foundation before expanding to platform deployment and enterprise scale.
         </p>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <Card>
             <div className="space-y-3">
               <div className="flex items-center gap-2">
@@ -108,6 +102,18 @@ export function CoreIdentityAdvisoryGroupPage() {
               <div className="text-xl font-semibold">Enterprise Scale</div>
               <p className="text-ink-secondary leading-relaxed text-sm">
                 Autonomous governance orchestration across enterprise AI infrastructure. Board-level reporting, continuous compliance monitoring, and regulatory evidence packages.
+              </p>
+            </div>
+          </Card>
+
+          <Card>
+            <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold tracking-widest text-accent">PHASE 3</span>
+              </div>
+              <div className="text-xl font-semibold">Governance Retainer</div>
+              <p className="text-ink-secondary leading-relaxed text-sm">
+                Ongoing executive governance support to maintain institutional controls, address emerging autonomous-execution risks, and keep governance architecture aligned with operational and regulatory change.
               </p>
             </div>
           </Card>

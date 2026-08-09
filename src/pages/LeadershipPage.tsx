@@ -41,8 +41,7 @@ const TODD_FALLBACK_BIO = [
   `He brings more than 30 years of executive leadership experience across highly regulated, multi-stakeholder operating environments supporting the National Intelligence Community, the Department of Defense, and private enterprise. Throughout his career, he has built governance frameworks for environments where accountability, auditability, and operational integrity are institutional requirements rather than aspirational goals.`,
   `That experience led to a fundamental observation: the governance systems organizations rely on today were designed for people making decisions at human speed. As autonomous systems assume responsibility for increasingly consequential work, institutions require a new model—one capable of governing autonomous execution with the same rigor historically applied to people, processes, and financial controls.`,
   `Todd is the architect of the Trust Infrastructure discipline and the Autonomous Execution Governance (AEG) doctrine, establishing the governance principles and institutional trust model that enable autonomous execution at enterprise scale.`,
-  `Under his leadership, CoreIdentity is building the technology and institutional infrastructure that transforms those principles into operational reality, enabling governments, regulated industries, and enterprises to deploy autonomous execution with verifiable trust, accountability, and control.`,
-
+  `Under his leadership, CoreIdentity is building the technology and institutional infrastructure that transforms those principles into operational reality, enabling governments, regulated industries, and enterprises to deploy autonomous execution with verifiable trust, accountability, and control. He is building CoreIdentity as a category-defining company to become the institutional trust infrastructure the agentic era is built on.`,
 ];
 
 function MemberCard({ member }: { member: SanityTeamMember }) {
@@ -89,7 +88,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${member.name} on LinkedIn`}
-            className="mt-3 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line bg-carbon-panel text-ink-secondary transition hover:border-accent/40 hover:text-accent"
+            className="mt-3 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line bg-carbon-panel text-ink-secondary transition hover:border-accent/40 hover:text-accent cidg-linkedin-link"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M4.98 3.5C4.98 4.881 3.88 6 2.5 6S0 4.881 0 3.5 1.12 1 2.5 1 4.98 2.119 4.98 3.5zM.216 8.25h4.568V23H.216V8.25zM8.5 8.25h4.38v2.014h.062c.61-1.155 2.1-2.373 4.32-2.373 4.62 0 5.47 3.043 5.47 7v8.109h-4.57v-7.19c0-1.716-.03-3.923-2.39-3.923-2.39 0-2.76 1.868-2.76 3.8v7.313H8.5V8.25z"/>

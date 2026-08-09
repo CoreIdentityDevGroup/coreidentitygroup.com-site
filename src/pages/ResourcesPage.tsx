@@ -20,8 +20,7 @@ export function ResourcesPage() {
           Resources
         </h1>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-secondary">
-          Research, governance frameworks, and institutional briefings are in preparation.
-        </p>
+</p>
       </section>
 
       <section className="rounded-2xl border border-line bg-carbon-panel p-8 text-center">

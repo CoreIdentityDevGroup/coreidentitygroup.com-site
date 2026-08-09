@@ -12,8 +12,7 @@ export default function Footer() {
             </span>
             <span>
               <strong>COREIDENTITY</strong>
-              <small>Development Group</small>
-            </span>
+</span>
           </Link>
 
           <p>
