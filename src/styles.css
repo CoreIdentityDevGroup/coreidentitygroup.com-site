@@ -4728,3 +4728,135 @@ a[aria-label*="LinkedIn"] img{display:block;width:20px;height:20px;object-fit:co
 .cidg-contact-form button[type="submit"]{min-height:46px;background:#10131a!important;color:#fff!important;border:1px solid #10131a!important;padding:.75rem 1.25rem!important}.cidg-contact-form button[type="submit"]:disabled{opacity:.4!important}
 @media(max-width:760px){.cidg-resources-grid{grid-template-columns:1fr}.cidg-resources-engage{display:grid;align-items:start}.cidg-console-sequence{grid-template-columns:1fr}.cidg-console-proof{grid-template-columns:1fr}.cidg-console-note{display:grid}}
 /* <<< coreidentity:v7.2.0-visual-integrity <<< */
+
+/* >>> coreidentity:v7.2.2-visual-blending >>> */
+
+/* Homepage eyebrow stack: approved centered hierarchy. */
+.cidg-platinum-hero-copy .cidg-platinum-eyebrow,
+.cidg-platinum-hero-copy .cidg-platinum-eyebrow-terms,
+.cidg-platinum-hero-copy .cidg-platinum-eyebrow-aeg{
+  width:100%!important;
+  max-width:none!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+  justify-content:center!important;
+}
+.cidg-platinum-hero-copy .cidg-platinum-eyebrow-terms{
+  margin-top:.5rem!important;
+  margin-bottom:.55rem!important;
+  word-spacing:.28em;
+}
+
+/* Blend architectural renders into the page rather than showing a white image canvas. */
+.cidg-platinum-visual--hero,
+.cidg-platinum-visual--ecosystem,
+.cidg-visual-no-frame,
+.cidg-visual-no-frame img,
+.cidg-platinum-visual--hero img,
+.cidg-platinum-visual--ecosystem img{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  mix-blend-mode:multiply;
+}
+
+.cidg-platinum-hero-visual-col,
+.cidg-platinum-visual-section{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+/* Homepage architecture note and CTA breathing room. */
+.cidg-platinum-hero-architecture-note{
+  max-width:44rem;
+  margin:clamp(1.5rem,4vw,2.4rem) auto 0;
+  color:#626b76;
+  font-size:clamp(.92rem,1.7vw,1.04rem);
+  line-height:1.75;
+  text-align:center;
+}
+.cidg-platinum-hero-actions{
+  margin-top:clamp(1.5rem,4vw,2.25rem)!important;
+}
+
+/* Requested paragraph space after the Architecture, doctrine, and legitimacy heading. */
+#cidg-platinum-ecosystem-title{
+  margin-bottom:clamp(1.15rem,3vw,1.75rem)!important;
+}
+
+/* LinkedIn: exact blue logo, no black surrounding tile. */
+a[aria-label*="LinkedIn"]{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  width:36px!important;
+  height:36px!important;
+}
+a[aria-label*="LinkedIn"] img{
+  width:36px!important;
+  height:36px!important;
+  object-fit:contain!important;
+  border-radius:7px;
+}
+
+@media(max-width:760px){
+  .cidg-platinum-hero-architecture-note{padding:0 .25rem;}
+}
+/* <<< coreidentity:v7.2.2-visual-blending <<< */
+
+/* >>> coreidentity:v7.2.3-insights-console >>> */
+
+/* Insights: eliminate invisible legacy text and normalize article typography. */
+.cidg-insight-article,
+.cidg-insight-article article,
+.cidg-insight-article .prose,
+.cidg-insight-article [class*="prose"]{
+  color:#27313d!important;
+  background-color:#fff!important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+.cidg-insight-article p,
+.cidg-insight-article li,
+.cidg-insight-article blockquote,
+.cidg-insight-article td,
+.cidg-insight-article th,
+.cidg-insight-article [class*="text-white"],
+.cidg-insight-article [class*="text-slate"],
+.cidg-insight-article [class*="text-gray"]{
+  color:#4f5966!important;
+  opacity:1!important;
+  visibility:visible!important;
+  font-family:inherit!important;
+  line-height:1.78!important;
+}
+.cidg-insight-article h1,
+.cidg-insight-article h2,
+.cidg-insight-article h3,
+.cidg-insight-article h4,
+.cidg-insight-article h5,
+.cidg-insight-article h6{
+  color:#1b2430!important;
+  opacity:1!important;
+  visibility:visible!important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+  font-weight:700!important;
+  line-height:1.18!important;
+  letter-spacing:-.02em;
+}
+.cidg-insight-article a{color:#1b2430!important;text-decoration-color:#a98755;}
+.cidg-insight-article strong{color:#1b2430!important;}
+.cidg-insight-article .prose > * + *,
+.cidg-insight-article [class*="prose"] > * + *{margin-top:1.15em!important;}
+.cidg-insight-article .prose h2,
+.cidg-insight-article [class*="prose"] h2{margin-top:2.2em!important;margin-bottom:.8em!important;}
+.cidg-insight-article .prose h3,
+.cidg-insight-article [class*="prose"] h3{margin-top:1.8em!important;margin-bottom:.65em!important;}
+
+/* Restored console is the interactive production public view; never label it a demo. */
+.cidg-console-page [data-demo],
+.cidg-console-page .demo-only{display:none!important;}
+
+/* <<< coreidentity:v7.2.3-insights-console <<< */

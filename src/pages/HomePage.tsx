@@ -38,6 +38,12 @@ export default function HomePage() {
             className="cidg-platinum-visual--hero"
             priority
           />
+          <p className="cidg-platinum-hero-architecture-note">
+            Each layer of our Trust Infrastructure is engineered with multiple proprietary components that work together
+            to establish authority, enforce policy, verify execution, preserve evidence, and maintain institutional control.
+            Together, these layers are designed to provide the highest level of Autonomous Execution Governance across the
+            full lifecycle of autonomous execution.
+          </p>
           <div className="cidg-platinum-hero-actions">
             <Link to="/trust-infrastructure" className="cidg-platinum-primary">
               Explore Trust Infrastructure <span aria-hidden="true">→</span>

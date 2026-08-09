@@ -88,9 +88,9 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${member.name} on LinkedIn`}
-            className="mt-3 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line bg-carbon-panel text-ink-secondary transition hover:border-accent/40 hover:text-accent cidg-linkedin-link"
+            className="mt-3 inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-secondary transition cidg-linkedin-link"
           >
-            <img src="/images/brand/linkedin.png" alt="" className="h-5 w-5 object-contain" aria-hidden="true" />
+            <img src="/images/brand/linkedin-transparent.png" alt="" className="h-5 w-5 object-contain" aria-hidden="true" />
           </a>
         )}
       </div>

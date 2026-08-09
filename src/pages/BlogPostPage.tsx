@@ -42,7 +42,7 @@ const ptComponents: PortableTextComponents = {
     strong: ({ children }) => <strong className="text-white">{children}</strong>,
     em: ({ children }) => <em>{children}</em>,
     code: ({ children }) => (
-      <code className="text-teal-300 bg-white/5 px-1 rounded font-mono text-xs">
+      <code className="text-teal-300 bg-white/5 px-1 rounded font-mono text-xs cidg-insight-article">
         {children}
       </code>
     ),
