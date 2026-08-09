@@ -24,11 +24,11 @@ export function GovernanceEcosystemPage() {
         </p>
       </section>
 
-      <div className="cidg-platinum-visual-section cidg-ecosystem-fullbleed cidg-visual-no-frame" aria-label="The Governance Ecosystem">
+      <div className="cidg-alpha-stage cidg-alpha-stage--ecosystem" aria-label="The Governance Ecosystem">
         <InstitutionalVisual
-          src="/images/visuals/governance-ecosystem-3d.webp"
+          src="/images/visuals/governance-ecosystem-3d-alpha.png"
           alt="The CoreIdentity Governance Ecosystem: Trust Infrastructure, Autonomous Execution Governance, the Institutional Chain of Legitimacy, and Autonomous Governed Execution."
-          className="cidg-platinum-visual--ecosystem"
+          className="cidg-alpha-visual cidg-alpha-visual--ecosystem"
         />
       </div>
 
