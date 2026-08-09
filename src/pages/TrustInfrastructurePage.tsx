@@ -29,7 +29,7 @@ export function TrustInfrastructurePage() {
         </p>
       </section>
 
-      <div className="cidg-hq-stage cidg-hq-stage--control" aria-label="Institutional control">
+      <div className="cidg-hq-stage cidg-hq-stage--control cidg-hq-stage--feather" aria-label="Institutional control">
         <InstitutionalVisual src="/images/visuals/institutional-control-3d.webp" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-hq-visual cidg-hq-visual--control" />
       </div>
 

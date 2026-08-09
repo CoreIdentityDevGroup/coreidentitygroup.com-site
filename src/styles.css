@@ -5170,3 +5170,107 @@ a[aria-label*="LinkedIn"] img{
 }
 
 /* <<< coreidentity:v7.2.9-trust-hq-restoration <<< */
+
+/* >>> coreidentity:v7.2.10-trust-edge-blend >>> */
+
+/*
+  Non-destructive blend treatment:
+  - original HQ WebP remains untouched
+  - center artwork receives no filtering or opacity changes
+  - only the external canvas perimeter is optically feathered into white
+*/
+.cidg-hq-stage--control.cidg-hq-stage--feather{
+  position:relative!important;
+  isolation:isolate!important;
+  background:#fff!important;
+}
+
+.cidg-hq-stage--control.cidg-hq-stage--feather
+  > .cidg-platinum-visual.cidg-hq-visual--control{
+  position:relative!important;
+  z-index:1!important;
+  background:#fff!important;
+}
+
+/* Four edge veils, expressed as one layered overlay. */
+.cidg-hq-stage--control.cidg-hq-stage--feather::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:
+    linear-gradient(to bottom,
+      #fff 0%,
+      rgba(255,255,255,.88) 1.5%,
+      rgba(255,255,255,.42) 4%,
+      rgba(255,255,255,0) 9%,
+      rgba(255,255,255,0) 91%,
+      rgba(255,255,255,.38) 96%,
+      rgba(255,255,255,.86) 98.5%,
+      #fff 100%),
+    linear-gradient(to right,
+      #fff 0%,
+      rgba(255,255,255,.92) 1.25%,
+      rgba(255,255,255,.50) 3.5%,
+      rgba(255,255,255,0) 8%,
+      rgba(255,255,255,0) 92%,
+      rgba(255,255,255,.50) 96.5%,
+      rgba(255,255,255,.92) 98.75%,
+      #fff 100%);
+}
+
+/*
+  A subtle corner-only whitening layer removes the remaining warm-gray
+  rectangle at the four corners without bleaching the central glasswork.
+*/
+.cidg-hq-stage--control.cidg-hq-stage--feather::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 0 0,
+      rgba(255,255,255,.96) 0,
+      rgba(255,255,255,.72) 5%,
+      rgba(255,255,255,0) 15%),
+    radial-gradient(circle at 100% 0,
+      rgba(255,255,255,.96) 0,
+      rgba(255,255,255,.72) 5%,
+      rgba(255,255,255,0) 15%),
+    radial-gradient(circle at 0 100%,
+      rgba(255,255,255,.96) 0,
+      rgba(255,255,255,.68) 5%,
+      rgba(255,255,255,0) 14%),
+    radial-gradient(circle at 100% 100%,
+      rgba(255,255,255,.96) 0,
+      rgba(255,255,255,.68) 5%,
+      rgba(255,255,255,0) 14%);
+}
+
+@media(max-width:768px){
+  .cidg-hq-stage--control.cidg-hq-stage--feather::after{
+    background:
+      linear-gradient(to bottom,
+        #fff 0%,
+        rgba(255,255,255,.82) 1%,
+        rgba(255,255,255,.35) 3%,
+        rgba(255,255,255,0) 7%,
+        rgba(255,255,255,0) 93%,
+        rgba(255,255,255,.32) 97%,
+        rgba(255,255,255,.82) 99%,
+        #fff 100%),
+      linear-gradient(to right,
+        #fff 0%,
+        rgba(255,255,255,.92) 1%,
+        rgba(255,255,255,.48) 3%,
+        rgba(255,255,255,0) 7.5%,
+        rgba(255,255,255,0) 92.5%,
+        rgba(255,255,255,.48) 97%,
+        rgba(255,255,255,.92) 99%,
+        #fff 100%);
+  }
+}
+
+/* <<< coreidentity:v7.2.10-trust-edge-blend <<< */
