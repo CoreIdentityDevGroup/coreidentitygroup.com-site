@@ -5207,3 +5207,53 @@ a[aria-label*="LinkedIn"] img{
 }
 
 /* <<< coreidentity:v7.2.12-final-continuity-typography <<< */
+
+/* >>> coreidentity:v7.2.19-homepage-responsive-refinement >>> */
+/* CSS-only responsive refinement: desktop hierarchy centering + H1 scale reduction. */
+@media (min-width: 1081px) {
+  .cidg-home-page .cidg-platinum-hero {
+    position: relative;
+    padding-top: clamp(11rem, 16vw, 14rem);
+  }
+  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow,
+  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-terms,
+  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-aeg {
+    position: absolute;
+    left: 50%;
+    width: min(92vw, 900px) !important;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow {
+    top: clamp(4.5rem, 7vw, 6rem);
+  }
+  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-terms {
+    top: clamp(7rem, 9.7vw, 8.6rem);
+    margin: 0 !important;
+  }
+  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-aeg {
+    top: clamp(9.3rem, 12.3vw, 11rem);
+    margin: 0 !important;
+  }
+  .cidg-home-page .cidg-platinum-hero h1 {
+    font-size: clamp(3rem, 4.75vw, 5.35rem);
+  }
+}
+@media (max-width: 1080px) {
+  .cidg-home-page .cidg-platinum-hero h1 {
+    font-size: clamp(2.75rem, 8vw, 4.25rem);
+  }
+}
+@media (max-width: 720px) {
+  .cidg-home-page .cidg-platinum-hero h1 {
+    font-size: clamp(2.55rem, 10.5vw, 3.55rem);
+    line-height: 1;
+    letter-spacing: -.04em;
+  }
+}
+@media (max-width: 420px) {
+  .cidg-home-page .cidg-platinum-hero h1 {
+    font-size: clamp(2.4rem, 10vw, 3.15rem);
+  }
+}
+/* <<< coreidentity:v7.2.19-homepage-responsive-refinement <<< */
