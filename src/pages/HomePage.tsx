@@ -14,13 +14,15 @@ export default function HomePage() {
       </Helmet>
 
       <section className="cidg-platinum-hero" aria-labelledby="cidg-platinum-title">
-        <div className="cidg-platinum-hero-copy">
+        <div className="cidg-platinum-hero-sequence" aria-label="Governance framework sequence">
           <div className="cidg-platinum-eyebrow">
             <strong>Trust Infrastructure</strong>
           </div>
           <div className="cidg-platinum-eyebrow-terms">Intelligence • Assurance • Trust</div>
           <div className="cidg-platinum-eyebrow-aeg"><strong>Autonomous Execution Governance</strong></div>
+        </div>
 
+        <div className="cidg-platinum-hero-copy">
           <h1 id="cidg-platinum-title">
             The Institutional Foundation
             <span>for the Autonomous Era</span>

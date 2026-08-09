@@ -5208,52 +5208,117 @@ a[aria-label*="LinkedIn"] img{
 
 /* <<< coreidentity:v7.2.12-final-continuity-typography <<< */
 
-/* >>> coreidentity:v7.2.19-homepage-responsive-refinement >>> */
-/* CSS-only responsive refinement: desktop hierarchy centering + H1 scale reduction. */
-@media (min-width: 1081px) {
+/* >>> coreidentity:v7.2.20-homepage-hero-structural-refactor >>> */
+
+/*
+  Homepage hero structural model:
+  Row 1: full-width governance framework sequence.
+  Row 2: copy left / architecture right.
+  Mobile/tablet collapse naturally without absolute positioning.
+*/
+
+.cidg-home-page .cidg-platinum-hero {
+  grid-template-areas:
+    "sequence sequence"
+    "copy visual";
+  grid-template-columns: minmax(0,.9fr) minmax(430px,1.1fr);
+  align-items: start;
+}
+
+.cidg-home-page .cidg-platinum-hero-sequence {
+  grid-area: sequence;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto clamp(2.4rem,4vw,3.8rem);
+  text-align: center;
+}
+
+.cidg-home-page .cidg-platinum-hero-copy {
+  grid-area: copy;
+}
+
+.cidg-home-page .cidg-platinum-hero-visual-col {
+  grid-area: visual;
+}
+
+/* Remove residual positional behavior from earlier responsive experiments. */
+.cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow,
+.cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-terms,
+.cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-aeg,
+.cidg-home-page .cidg-platinum-hero-sequence .cidg-platinum-eyebrow,
+.cidg-home-page .cidg-platinum-hero-sequence .cidg-platinum-eyebrow-terms,
+.cidg-home-page .cidg-platinum-hero-sequence .cidg-platinum-eyebrow-aeg {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.cidg-home-page .cidg-platinum-hero-sequence .cidg-platinum-eyebrow {
+  margin: 0 0 .7rem !important;
+}
+
+.cidg-home-page .cidg-platinum-hero-sequence .cidg-platinum-eyebrow-terms {
+  margin: 0 0 .7rem !important;
+}
+
+.cidg-home-page .cidg-platinum-hero-sequence .cidg-platinum-eyebrow-aeg {
+  margin: 0 !important;
+}
+
+/* More restrained opening headline. */
+.cidg-home-page .cidg-platinum-hero h1 {
+  font-size: clamp(3rem,4.2vw,4.8rem);
+  line-height: .99;
+  letter-spacing: -.04em;
+}
+
+/* Tablet / landscape mobile. */
+@media (max-width:1080px) {
   .cidg-home-page .cidg-platinum-hero {
-    position: relative;
-    padding-top: clamp(11rem, 16vw, 14rem);
+    grid-template-areas:
+      "sequence"
+      "copy"
+      "visual";
+    grid-template-columns: 1fr;
   }
-  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow,
-  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-terms,
-  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-aeg {
-    position: absolute;
-    left: 50%;
-    width: min(92vw, 900px) !important;
-    transform: translateX(-50%);
-    z-index: 2;
+
+  .cidg-home-page .cidg-platinum-hero-sequence {
+    margin-bottom: clamp(2rem,4vw,3rem);
   }
-  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow {
-    top: clamp(4.5rem, 7vw, 6rem);
-  }
-  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-terms {
-    top: clamp(7rem, 9.7vw, 8.6rem);
-    margin: 0 !important;
-  }
-  .cidg-home-page .cidg-platinum-hero-copy .cidg-platinum-eyebrow-aeg {
-    top: clamp(9.3rem, 12.3vw, 11rem);
-    margin: 0 !important;
-  }
+
   .cidg-home-page .cidg-platinum-hero h1 {
-    font-size: clamp(3rem, 4.75vw, 5.35rem);
+    font-size: clamp(2.5rem,6vw,3.7rem);
   }
 }
-@media (max-width: 1080px) {
+
+/* Mobile portrait. */
+@media (max-width:720px) {
+  .cidg-home-page .cidg-platinum-hero {
+    padding: 3.2rem 1.2rem 3.75rem;
+  }
+
+  .cidg-home-page .cidg-platinum-hero-sequence {
+    margin-bottom: 2rem;
+  }
+
   .cidg-home-page .cidg-platinum-hero h1 {
-    font-size: clamp(2.75rem, 8vw, 4.25rem);
+    font-size: clamp(2.15rem,8.8vw,2.8rem);
+    line-height: 1.02;
+    letter-spacing: -.03em;
   }
 }
-@media (max-width: 720px) {
+
+/* Narrow handset protection. */
+@media (max-width:420px) {
   .cidg-home-page .cidg-platinum-hero h1 {
-    font-size: clamp(2.55rem, 10.5vw, 3.55rem);
-    line-height: 1;
-    letter-spacing: -.04em;
+    font-size: clamp(2.05rem,8.4vw,2.55rem);
   }
 }
-@media (max-width: 420px) {
-  .cidg-home-page .cidg-platinum-hero h1 {
-    font-size: clamp(2.4rem, 10vw, 3.15rem);
-  }
-}
-/* <<< coreidentity:v7.2.19-homepage-responsive-refinement <<< */
+
+/* <<< coreidentity:v7.2.20-homepage-hero-structural-refactor <<< */
