@@ -42,6 +42,7 @@ const TODD_FALLBACK_BIO = [
   `That experience led to a fundamental observation: the governance systems organizations rely on today were designed for people making decisions at human speed. As autonomous systems assume responsibility for increasingly consequential work, institutions require a new model—one capable of governing autonomous execution with the same rigor historically applied to people, processes, and financial controls.`,
   `Todd is the architect of the Trust Infrastructure discipline and the Autonomous Execution Governance (AEG) doctrine, establishing the governance principles and institutional trust model that enable autonomous execution at enterprise scale.`,
   `Under his leadership, CoreIdentity is building the technology and institutional infrastructure that transforms those principles into operational reality, enabling governments, regulated industries, and enterprises to deploy autonomous execution with verifiable trust, accountability, and control.`,
+  `He is building CoreIdentity as a category-defining company to become the institutional trust infrastructure the agentic era is built on.`,
 ];
 
 function MemberCard({ member }: { member: SanityTeamMember }) {

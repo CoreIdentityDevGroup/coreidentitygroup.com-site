@@ -4860,3 +4860,144 @@ a[aria-label*="LinkedIn"] img{
 .cidg-console-page .demo-only{display:none!important;}
 
 /* <<< coreidentity:v7.2.3-insights-console <<< */
+
+/* >>> coreidentity:v7.2.4-qc-repair >>> */
+
+/* Governance Ecosystem: centered, full-width, no image-card edge. */
+.cidg-ecosystem-fullbleed{
+  width:100vw!important;
+  max-width:100vw!important;
+  margin-left:calc(50% - 50vw)!important;
+  margin-right:calc(50% - 50vw)!important;
+  padding:0!important;
+  background:#fff!important;
+  overflow:hidden!important;
+}
+.cidg-ecosystem-fullbleed figure,
+.cidg-ecosystem-fullbleed [data-institutional-visual],
+.cidg-ecosystem-fullbleed .cidg-institutional-visual{
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 auto!important;
+  padding:0!important;
+  background:#fff!important;
+  border:0!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+.cidg-ecosystem-fullbleed img,
+.cidg-platinum-visual--ecosystem{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  margin:0 auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:#fff!important;
+  border:0!important;
+  box-shadow:none!important;
+  mix-blend-mode:multiply!important;
+}
+
+/* Trust Infrastructure: same accepted blend treatment as homepage hero. */
+.cidg-visual-no-frame,
+.cidg-visual-no-frame figure,
+.cidg-visual-no-frame [data-institutional-visual],
+.cidg-visual-no-frame .cidg-institutional-visual{
+  background:#fff!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.cidg-visual-no-frame img,
+.cidg-platinum-visual--trust,
+.cidg-trust-visual img{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:#fff!important;
+  border:0!important;
+  box-shadow:none!important;
+  mix-blend-mode:multiply!important;
+}
+
+/* Insights: one readable typography system across every article artifact. */
+.cidg-insight-article,
+.cidg-insight-article *{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+.cidg-insight-article article,
+.cidg-insight-article .prose,
+.cidg-insight-article [class*="prose"]{
+  color:#4f5966!important;
+  background:#fff!important;
+}
+.cidg-insight-article article *,
+.cidg-insight-article .prose *,
+.cidg-insight-article [class*="prose"] *{
+  color:#4f5966!important;
+  -webkit-text-fill-color:currentColor!important;
+  opacity:1!important;
+  visibility:visible!important;
+  text-shadow:none!important;
+}
+.cidg-insight-article h1,
+.cidg-insight-article h2,
+.cidg-insight-article h3,
+.cidg-insight-article h4,
+.cidg-insight-article h5,
+.cidg-insight-article h6,
+.cidg-insight-article h1 *,
+.cidg-insight-article h2 *,
+.cidg-insight-article h3 *,
+.cidg-insight-article h4 *,
+.cidg-insight-article h5 *,
+.cidg-insight-article h6 *{
+  color:#1b2430!important;
+  -webkit-text-fill-color:#1b2430!important;
+  opacity:1!important;
+  visibility:visible!important;
+  font-weight:700!important;
+  line-height:1.2!important;
+  letter-spacing:-.02em!important;
+}
+.cidg-insight-article p,
+.cidg-insight-article li,
+.cidg-insight-article blockquote,
+.cidg-insight-article td,
+.cidg-insight-article th{
+  color:#4f5966!important;
+  -webkit-text-fill-color:#4f5966!important;
+  opacity:1!important;
+  visibility:visible!important;
+  font-size:1rem!important;
+  line-height:1.78!important;
+}
+.cidg-insight-article p:empty{display:none!important;}
+.cidg-insight-article .prose > * + *,
+.cidg-insight-article [class*="prose"] > * + *{margin-top:1.1em!important;}
+.cidg-insight-article .prose h2,
+.cidg-insight-article [class*="prose"] h2{margin-top:2.15em!important;margin-bottom:.75em!important;}
+.cidg-insight-article .prose h3,
+.cidg-insight-article [class*="prose"] h3{margin-top:1.7em!important;margin-bottom:.6em!important;}
+
+@media(max-width:760px){
+  .cidg-ecosystem-fullbleed img,
+  .cidg-platinum-visual--ecosystem,
+  .cidg-visual-no-frame img{
+    width:100%!important;
+    max-width:100%!important;
+    transform:none!important;
+    left:auto!important;
+    right:auto!important;
+  }
+  .cidg-insight-article p,
+  .cidg-insight-article li{
+    font-size:1rem!important;
+  }
+}
+
+/* <<< coreidentity:v7.2.4-qc-repair <<< */
