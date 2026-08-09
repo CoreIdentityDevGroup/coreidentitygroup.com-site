@@ -55,7 +55,7 @@ export function GovernanceEcosystemPage() {
 
 
       <section className="cidg-framework-next">
-        <p>Foundation</p>
+        <p>Return to the Foundation</p>
         <Link to="/trust-infrastructure">Trust Infrastructure →</Link>
       </section>
     </div>

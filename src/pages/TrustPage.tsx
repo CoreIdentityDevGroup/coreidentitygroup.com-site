@@ -42,8 +42,8 @@ export function TrustPage() {
       </section>
 
       <section className="cidg-framework-next">
-        <p>Return to the foundation</p>
-        <Link to="/trust-infrastructure">Trust Infrastructure →</Link>
+        <p>Operational Doctrine</p>
+        <Link to="/governance-ecosystem">Autonomous Execution Governance (AEG) →</Link>
       </section>
     </div>
   );

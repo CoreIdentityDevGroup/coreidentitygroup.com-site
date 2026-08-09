@@ -10,7 +10,7 @@ export type NavigationGroup = {
 
 export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
   {
-    label: "Framework",
+    label: "Governance Framework",
     items: [
       { to: "/trust-infrastructure", label: "Trust Infrastructure" },
       { to: "/intelligence", label: "Intelligence" },
