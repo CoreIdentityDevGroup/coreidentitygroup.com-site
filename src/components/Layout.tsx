@@ -14,8 +14,10 @@ export function Layout() {
 
   return (
     <div className="cidg-platinum-site">
-      <Header />
-      <main className="cidg-platinum-main">
+      
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+<Header />
+      <main className="cidg-platinum-main" id="main-content">
         <Outlet />
       </main>
       <Footer />
