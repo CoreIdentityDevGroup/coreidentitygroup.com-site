@@ -40,7 +40,8 @@ const TODD_CANONICAL_BIO = [
   `Todd Morgan is the Founder and Chief Executive Officer of CoreIdentity Development Group and the architect of the CoreIdentity Governance Ecosystem for the Autonomous Era.`,
   `He brings more than 30 years of executive leadership experience across complex, highly regulated, multi-stakeholder operating environments spanning national security, defense, technology, and private enterprise. His career has centered on leading organizations where accountability, operational integrity, resilience, and institutional control are fundamental requirements.`,
   `Applying first-principles reasoning to the emergence of autonomous systems, Todd originated Trust Infrastructure as the architectural discipline for institutional trust and developed Autonomous Execution Governance (AEG) as the operational doctrine governing autonomous execution.`,
-  `Together, Trust Infrastructure, Autonomous Execution Governance, and the Institutional Chain of Legitimacy form the CoreIdentity Governance Ecosystem—an operational institutional architecture designed to enable organizations to safely delegate autonomous execution while ensuring they remain in control.`
+  `Together, Trust Infrastructure, Autonomous Execution Governance, and the Institutional Chain of Legitimacy form the CoreIdentity Governance Ecosystem—an operational institutional architecture designed to enable organizations to safely delegate autonomous execution while ensuring they remain in control.`,
+  `Todd holds an MBA and a Bachelor of Science in Information Systems and has completed executive education in artificial intelligence, complementing his decades of operating leadership with formal grounding in business, technology, and the emerging governance requirements of advanced AI systems.`,
 ];
 
 function MemberCard({ member }: { member: SanityTeamMember }) {
