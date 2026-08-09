@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 const markets = [
   { title: "Private Capital Markets", body: "Govern autonomous transaction workflows, participant authority, verification, evidence, and execution controls across institutional private capital activity." },
   { title: "Banking & Financial Services", body: "Enable governed autonomous execution where fiduciary duty, regulatory accountability, auditability, operational resilience, and institutional trust are non-negotiable." },
+  { title: "Construction", body: "Deploy Governed Intelligence across complex construction, infrastructure, and EPC environments to identify emerging project, financial, procurement, schedule, and operational risks while preserving institutional authority, accountability, and control." },
   { title: "Sovereign Nations", body: "Establish national-scale Trust Infrastructure for sovereign AI, digital government, public services, and autonomous institutional operations while preserving legitimate authority and control." },
   { title: "Healthcare", body: "Govern autonomous clinical and administrative workflows where identity, privacy, authorization, accountability, evidence, and patient trust must remain continuously verifiable." },
   { title: "Critical Infrastructure", body: "Preserve institutional authority and operational resilience across high-consequence systems where autonomous execution must remain bounded, attributable, and continuously assured." },
