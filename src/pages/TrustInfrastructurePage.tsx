@@ -29,8 +29,8 @@ export function TrustInfrastructurePage() {
         </p>
       </section>
 
-      <div className="cidg-hq-stage cidg-hq-stage--control" aria-label="Institutional control">
-        <InstitutionalVisual src="/images/visuals/institutional-control-3d.webp" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-hq-visual cidg-hq-visual--control" />
+      <div className="cidg-trust-production-stage" aria-label="Institutional control">
+        <InstitutionalVisual src="/images/visuals/institutional-control-3d-production.png" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-trust-production-visual" />
       </div>
 
       <section className="cidg-framework-principles">
