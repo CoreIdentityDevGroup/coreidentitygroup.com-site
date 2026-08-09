@@ -3,37 +3,52 @@ import { Helmet } from "react-helmet-async";
 
 export function ResourcesPage() {
   return (
-    <div className="space-y-12">
+    <div className="cidg-resources-page">
       <Helmet>
-        <title>Thought Leadership | CoreIdentity</title>
-        <meta
-          name="description"
-          content="CoreIdentity governance research and resources — coming soon."
-        />
+        <title>Resources | CoreIdentity</title>
+        <meta name="description" content="CoreIdentity resources on Trust Infrastructure, Autonomous Execution Governance, institutional assurance, and governance for the Autonomous Era." />
       </Helmet>
 
-      <section className="pt-4 md:pt-8">
-        <div className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-          CoreIdentity Development Group
-        </div>
-        <h1 className="mt-4 font-serif text-display-xl tracking-tight text-ink md:text-display-2xl">
-          Resources
-        </h1>
-        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-secondary">
-</p>
+      <section className="cidg-resources-hero">
+        <p className="cidg-framework-kicker">Thought Leadership</p>
+        <h1>Resources</h1>
+        <p>Research, institutional perspectives, governance frameworks, and practical guidance for organizations preparing to delegate consequential execution to autonomous systems.</p>
       </section>
 
-      <section className="rounded-2xl border border-line bg-carbon-panel p-8 text-center">
-        <p className="mx-auto mb-4 max-w-2xl text-sm leading-relaxed text-ink-muted">
-          Governance frameworks, compliance mappings, and deployment guides are available
-          to qualified institutional and sovereign evaluators on request.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-carbon transition hover:bg-accent-strong"
-        >
-          Contact Us
-        </Link>
+      <section className="cidg-resources-grid" aria-label="CoreIdentity resources">
+        <article>
+          <p className="cidg-framework-kicker">Foundational Architecture</p>
+          <h2>Trust Infrastructure</h2>
+          <p>Explore the institutional architecture required to preserve authority, accountability, identity, policy, and evidence through autonomous execution.</p>
+          <Link to="/trust-infrastructure">Explore Trust Infrastructure →</Link>
+        </article>
+        <article>
+          <p className="cidg-framework-kicker">Institutional System</p>
+          <h2>Governance Ecosystem</h2>
+          <p>Understand how architectural discipline, operational doctrine, and institutional legitimacy operate together as one governance system.</p>
+          <Link to="/governance-ecosystem">Explore the Governance Ecosystem →</Link>
+        </article>
+        <article>
+          <p className="cidg-framework-kicker">Perspectives</p>
+          <h2>Insights</h2>
+          <p>Read CoreIdentity analysis on autonomous execution, governance architecture, institutional assurance, and emerging AI governance requirements.</p>
+          <Link to="/blog">View Insights →</Link>
+        </article>
+        <article>
+          <p className="cidg-framework-kicker">Reference</p>
+          <h2>Frequently Asked Questions</h2>
+          <p>Review concise explanations of CoreIdentity terminology, governance concepts, engagement models, and the institutional problem we address.</p>
+          <Link to="/faq">View FAQ →</Link>
+        </article>
+      </section>
+
+      <section className="cidg-resources-engage">
+        <div>
+          <p className="cidg-framework-kicker">Institutional Evaluation</p>
+          <h2>Need a deeper governance briefing?</h2>
+          <p>Organizations evaluating governance architecture, advisory support, or strategic collaboration can begin a direct conversation with CoreIdentity.</p>
+        </div>
+        <Link to="/contact">Contact CoreIdentity →</Link>
       </section>
     </div>
   );

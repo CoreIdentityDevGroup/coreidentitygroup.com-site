@@ -95,7 +95,7 @@ export default function ContactPage() {
       </div>
 
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
-        <form className="grid gap-4" onSubmit={onSubmit}>
+        <form className="cidg-contact-form grid gap-4" onSubmit={onSubmit}>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="grid gap-2">
               <label className="text-sm text-white/70" htmlFor="name">

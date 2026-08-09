@@ -18,11 +18,7 @@ export default function HomePage() {
           <div className="cidg-platinum-eyebrow">
             <strong>Trust Infrastructure</strong>
           </div>
-          <div className="cidg-platinum-eyebrow-terms">
-            <span>Intelligence</span>
-            <span>Assurance</span>
-            <span>Trust</span>
-          </div>
+          <div className="cidg-platinum-eyebrow-terms">Intelligence • Assurance • Trust</div>
           <div className="cidg-platinum-eyebrow-aeg"><strong>Autonomous Execution Governance</strong></div>
 
           <h1 id="cidg-platinum-title">

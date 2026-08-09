@@ -20,9 +20,9 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
-    label: "Platform",
+    label: "Governance",
     items: [
-      { to: "/platform", label: "Platform Overview" },
+      { to: "/platform", label: "Governance Architecture" },
       { to: "/execution-integrity", label: "Execution Integrity" },
       { to: "/verification-at-scale", label: "Verification at Scale" },
       { to: "/sovereign-assurance", label: "Sovereign Assurance" },
