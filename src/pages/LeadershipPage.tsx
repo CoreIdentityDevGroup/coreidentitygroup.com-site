@@ -37,10 +37,10 @@ const FALLBACK_MEMBERS: SanityTeamMember[] = [
 
 // Hardcoded bio paragraphs shown for the fallback member
 const TODD_CANONICAL_BIO = [
-  `Todd Morgan is the Founder and Chief Executive Officer of CoreIdentity Development Group Inc., the architect of the Governance Ecosystem for the Autonomous Era.`,
-  `He brings more than 30 years of executive leadership experience across complex, highly regulated, multi-stakeholder operating environments spanning national security, defense, technology, and private enterprise. His career has centered on building and leading organizations where accountability, operational integrity, resilience, and institutional control are fundamental requirements.`,
-  `Todd is the architect of the Trust Infrastructure discipline and Autonomous Execution Governance (AEG), establishing an institutional model for governing autonomous execution through continuously verifiable identity, authority, policy enforcement, evidence, assurance, and accountability.`,
-  `Under his leadership, CoreIdentity is advancing an operational institutional architecture that enables governments, regulated industries, and enterprises to safely delegate autonomous execution while ensuring they remain in control.`
+  `Todd Morgan is the Founder and Chief Executive Officer of CoreIdentity Development Group and the architect of the CoreIdentity Governance Ecosystem for the Autonomous Era.`,
+  `He brings more than 30 years of executive leadership experience across complex, highly regulated, multi-stakeholder operating environments spanning national security, defense, technology, and private enterprise. His career has centered on leading organizations where accountability, operational integrity, resilience, and institutional control are fundamental requirements.`,
+  `Applying first-principles reasoning to the emergence of autonomous systems, Todd originated Trust Infrastructure as the architectural discipline for institutional trust and developed Autonomous Execution Governance (AEG) as the operational doctrine governing autonomous execution.`,
+  `Together, Trust Infrastructure, Autonomous Execution Governance, and the Institutional Chain of Legitimacy form the CoreIdentity Governance Ecosystem—an operational institutional architecture designed to enable organizations to safely delegate autonomous execution while ensuring they remain in control.`
 ];
 
 function MemberCard({ member }: { member: SanityTeamMember }) {
@@ -75,11 +75,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
           ) : null}
         </div>
 
-        {isTodd && (
-          <p className="mt-4 text-sm text-white/35 italic">
-            "The greatest superpower is the ability to change yourself."
-          </p>
-        )}
+        
 
         {member.linkedIn && (
           <a
