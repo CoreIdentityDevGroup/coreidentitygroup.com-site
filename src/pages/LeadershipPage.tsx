@@ -44,7 +44,7 @@ const TODD_CANONICAL_BIO = [
 ];
 
 function MemberCard({ member }: { member: SanityTeamMember }) {
-  const isFallback = member._id === 'todd-morgan';
+  const isTodd = member.name.trim().toLowerCase() === 'todd morgan';
 
   return (
     <Card>
@@ -66,7 +66,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
         </div>
 
         <div className="space-y-4">
-          {isFallback ? (
+          {isTodd ? (
             TODD_CANONICAL_BIO.map((para, i) => (
               <p key={i} className="text-white/70 leading-relaxed">{para}</p>
             ))
@@ -75,7 +75,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
           ) : null}
         </div>
 
-        {isFallback && (
+        {isTodd && (
           <p className="mt-4 text-sm text-white/35 italic">
             "The greatest superpower is the ability to change yourself."
           </p>

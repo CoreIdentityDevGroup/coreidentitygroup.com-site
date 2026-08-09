@@ -5002,10 +5002,25 @@ a[aria-label*="LinkedIn"] img{
 
 /* <<< coreidentity:v7.2.4-qc-repair <<< */
 
-/* >>> coreidentity:v7.2.5-canonical-root-cause >>> */
-.cidg-platinum-visual,.cidg-platinum-visual--hero,.cidg-platinum-visual--ecosystem,.cidg-platinum-visual--control,.cidg-visual-no-frame,.cidg-trust-visual{width:100%;max-width:100%;margin-inline:auto;padding:0;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important}
-.cidg-platinum-visual img,.cidg-platinum-visual--hero img,.cidg-platinum-visual--ecosystem img,.cidg-platinum-visual--control img,.cidg-visual-no-frame img,.cidg-trust-visual img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;margin:0 auto!important;object-fit:contain!important;object-position:center!important;background:transparent!important;border:0!important;box-shadow:none!important;transform:none!important}
-.cidg-platinum-visual--hero{max-width:760px}.cidg-platinum-visual--ecosystem{max-width:1120px}.cidg-platinum-visual--control{max-width:1040px}
-.cidg-insight-article{color:#4f5966!important}.cidg-insight-article p,.cidg-insight-p,.cidg-insight-article li,.cidg-insight-article blockquote{color:#4f5966!important;opacity:1!important;visibility:visible!important;line-height:1.75}.cidg-insight-article h1,.cidg-insight-article h2,.cidg-insight-article h3,.cidg-insight-article h4,.cidg-insight-article h5,.cidg-insight-article h6,.cidg-insight-article strong{color:#172131!important;opacity:1!important;visibility:visible!important}.cidg-insight-article a{color:#765d37!important}.cidg-insight-prose>*+*{margin-top:1.15em}.cidg-insight-prose h2{margin-top:2.2em;margin-bottom:.8em}
-.cidg-markets-page{background:#fff;color:#172131}.cidg-markets-hero,.cidg-markets-grid,.cidg-markets-close{width:min(1180px,calc(100% - 3rem));margin-inline:auto}.cidg-markets-hero{padding:clamp(5rem,9vw,9rem) 0 clamp(3rem,6vw,5rem)}.cidg-markets-kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:800;color:#8b6f47}.cidg-markets-hero h1{max-width:18ch;font-size:clamp(2.8rem,6vw,5.8rem);line-height:.98;letter-spacing:-.045em;margin:.7rem 0 1.5rem}.cidg-markets-hero>p:last-child,.cidg-markets-close>p:last-child{max-width:760px;color:#5b6573;line-height:1.75}.cidg-markets-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #d8dce1}.cidg-markets-grid article{padding:clamp(2rem,4vw,3.5rem) clamp(1rem,3vw,2.5rem) clamp(2.5rem,5vw,4rem) 0;border-bottom:1px solid #d8dce1}.cidg-markets-grid article:nth-child(even){padding-left:clamp(1rem,3vw,2.5rem);border-left:1px solid #d8dce1}.cidg-markets-grid h2{margin:0 0 .8rem;font-size:clamp(1.5rem,2.5vw,2.2rem)}.cidg-markets-grid p{margin:0;color:#5b6573;line-height:1.7}.cidg-markets-close{padding:clamp(4rem,8vw,8rem) 0}.cidg-markets-close h2{font-size:clamp(2.2rem,4vw,4.2rem);letter-spacing:-.035em}@media(max-width:720px){.cidg-markets-hero,.cidg-markets-grid,.cidg-markets-close{width:min(100% - 2rem,1180px)}.cidg-markets-grid{grid-template-columns:1fr}.cidg-markets-grid article,.cidg-markets-grid article:nth-child(even){padding:2rem 0;border-left:0}}
-/* <<< coreidentity:v7.2.5-canonical-root-cause <<< */
+/* >>> coreidentity:v7.2.6-platinum-consolidation >>> */
+.cidg-framework-page,.cidg-governance-page{width:100%}
+.cidg-framework-page>section,.cidg-governance-page>section{margin-block:0!important;padding-block:clamp(2rem,3.5vw,3.75rem)!important}
+.cidg-framework-hero{padding-top:clamp(2.75rem,4.5vw,4.75rem)!important;padding-bottom:clamp(2rem,3vw,3.25rem)!important}
+.cidg-framework-statement,.cidg-framework-principles,.cidg-framework-next,.cidg-ecosystem-interpretation{margin-top:0!important;margin-bottom:0!important}
+.cidg-ecosystem-interpretation{max-width:72rem!important;margin-inline:auto!important;padding-inline:clamp(1.25rem,4vw,3rem)!important}
+.cidg-platinum-visual-section{width:min(1180px,calc(100% - 2.5rem))!important;margin:0 auto!important;padding:clamp(1.25rem,2.5vw,2.5rem) 0!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important}
+.cidg-platinum-visual,.cidg-platinum-visual--hero,.cidg-platinum-visual--ecosystem,.cidg-platinum-visual--control,.cidg-visual-no-frame,.cidg-trust-visual{display:block!important;width:100%!important;max-width:100%!important;margin:0 auto!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important}
+.cidg-platinum-visual--hero{max-width:760px!important}
+.cidg-platinum-visual--ecosystem{max-width:1120px!important}
+.cidg-platinum-visual--control{max-width:980px!important}
+.cidg-platinum-visual img,.cidg-platinum-visual--hero img,.cidg-platinum-visual--ecosystem img,.cidg-platinum-visual--control img,.cidg-visual-no-frame img,.cidg-trust-visual img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;margin:0 auto!important;object-fit:contain!important;object-position:center center!important;background:transparent!important;border:0!important;box-shadow:none!important;transform:none!important}
+.cidg-governance-fullbleed,.cidg-ecosystem-fullbleed{width:100%!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important;background:transparent!important;overflow:visible!important}
+.cidg-governance-fullbleed figure,.cidg-governance-fullbleed [data-ecosystem-visual],.cidg-ecosystem-fullbleed figure,.cidg-ecosystem-fullbleed [data-institutional-visual],.cidg-ecosystem-fullbleed .cidg-institutional-visual{width:100%!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important;background:transparent!important;overflow:visible!important}
+.cidg-markets-hero{padding-top:clamp(3.5rem,6vw,6rem)!important;padding-bottom:clamp(2.5rem,4vw,4rem)!important}
+.cidg-markets-close{padding-top:clamp(3rem,5vw,5rem)!important;padding-bottom:clamp(3rem,5vw,5rem)!important}
+@media(max-width:720px){
+  .cidg-framework-page>section,.cidg-governance-page>section{padding-block:2rem!important}
+  .cidg-platinum-visual-section{width:min(100% - 1.5rem,1180px)!important;padding:1rem 0 1.5rem!important}
+  .cidg-platinum-visual--hero,.cidg-platinum-visual--ecosystem,.cidg-platinum-visual--control{max-width:100%!important}
+}
+/* <<< coreidentity:v7.2.6-platinum-consolidation <<< */

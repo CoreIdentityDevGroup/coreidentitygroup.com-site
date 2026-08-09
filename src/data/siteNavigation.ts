@@ -33,6 +33,7 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     items: [
       { to: "/about", label: "About" },
       { to: "/leadership", label: "Leadership" },
+      { to: "/markets-we-serve", label: "Markets We Serve" },
       { to: "/ciag", label: "Advisory" },
       { to: "/governance-console", label: "Governance Console" },
       { to: "/contact", label: "Contact" },
