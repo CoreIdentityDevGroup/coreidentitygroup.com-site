@@ -22,13 +22,12 @@ export default function HomePage() {
           <div className="cidg-platinum-eyebrow-aeg"><strong>Autonomous Execution Governance</strong></div>
 
           <h1 id="cidg-platinum-title">
-            The Trust Infrastructure
-            <span>the Autonomous Era Demands</span>
+            The Institutional Foundation
+            <span>for the Autonomous Era</span>
           </h1>
 
           <p>
-            The institutional foundation that enables organizations to safely
-            delegate autonomous execution while ensuring they remain in control.
+            CoreIdentity enables organizations to safely delegate autonomous execution while ensuring they remain in control.
           </p>
         </div>
         <div className="cidg-platinum-hero-visual-col">
