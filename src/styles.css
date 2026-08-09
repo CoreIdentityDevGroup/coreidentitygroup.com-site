@@ -5098,3 +5098,75 @@ a[aria-label*="LinkedIn"] img{
   }
 }
 /* <<< coreidentity:v7.2.8-r2-alpha-asset-contract <<< */
+
+/* >>> coreidentity:v7.2.9-trust-hq-restoration >>> */
+
+/*
+  Trust Infrastructure artwork is intentionally rendered from the untouched
+  original WebP. Its white source canvas becomes invisible because the visual
+  stage itself is white. No chroma-keying, flood-fill, opacity manipulation,
+  blend mode, filtering, scaling distortion, or destructive pixel processing.
+*/
+.cidg-hq-stage--control{
+  box-sizing:border-box;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:clamp(1.25rem,2.5vw,2.75rem) clamp(.75rem,2vw,1.5rem)!important;
+  background:#fff!important;
+  border:0!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+}
+
+.cidg-hq-stage--control > .cidg-platinum-visual.cidg-hq-visual--control{
+  display:block!important;
+  width:min(100%,1080px)!important;
+  max-width:1080px!important;
+  margin:0 auto!important;
+  padding:0!important;
+  background:#fff!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+
+.cidg-hq-stage--control > .cidg-hq-visual--control > img{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  margin:0 auto!important;
+  padding:0!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:#fff!important;
+  border:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+  mix-blend-mode:normal!important;
+  opacity:1!important;
+  transform:none!important;
+  translate:none!important;
+  scale:1!important;
+}
+
+@media(max-width:768px){
+  .cidg-hq-stage--control{
+    padding:1rem .75rem 1.5rem!important;
+  }
+
+  .cidg-hq-stage--control > .cidg-platinum-visual.cidg-hq-visual--control{
+    width:100%!important;
+    max-width:100%!important;
+  }
+
+  .cidg-hq-stage--control > .cidg-hq-visual--control > img{
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+  }
+}
+
+/* <<< coreidentity:v7.2.9-trust-hq-restoration <<< */
