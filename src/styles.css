@@ -5188,3 +5188,22 @@ a[aria-label*="LinkedIn"] img{
   }
 }
 /* /AE-001 */
+
+/* >>> coreidentity:v7.2.12-final-continuity-typography >>> */
+
+/* Final production readability treatment for Institutional Continuity copy. */
+.cidg-ecosystem-interpretation > p:not(.cidg-framework-kicker){
+  color:#4f5966!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+
+.cidg-ecosystem-interpretation > .cidg-ecosystem-principle,
+.cidg-ecosystem-interpretation > .cidg-ecosystem-principle strong{
+  color:#182131!important;
+  opacity:1!important;
+  visibility:visible!important;
+  font-weight:700!important;
+}
+
+/* <<< coreidentity:v7.2.12-final-continuity-typography <<< */
