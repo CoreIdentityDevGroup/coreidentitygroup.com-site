@@ -78,7 +78,7 @@ const GOVERN_SCENARIOS: Record<string, GovernScenario> = {
 };
 
 const IIAAC = [
-  { l: "I", n: "Identity" }, { l: "I", n: "Intent" }, { l: "A", n: "Asset" }, { l: "A", n: "Action" }, { l: "C", n: "Context" },
+  { l: "I", n: "Identity" }, { l: "I", n: "Purpose" }, { l: "A", n: "Authority" }, { l: "A", n: "Scope" }, { l: "C", n: "Context" },
 ];
 
 interface StepVisual { state: StepState; stateLabel: string; statusHtml: string; verdict: "" | "ok" | "deny"; }
