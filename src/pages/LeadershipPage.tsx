@@ -5,6 +5,7 @@ import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
 import { getTeamMembers, isSanityConfigured, type SanityTeamMember } from "../lib/queries";
 import { Helmet } from "react-helmet-async";
 
+import ToddMorganLeadershipProfile from "../assets/leadership/todd-morgan-leadership-profile-v3.png";
 // Portable text renderer for biography blocks
 const bioComponents: PortableTextComponents = {
   block: {
@@ -61,7 +62,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
           <div>
             {member._id === "todd-morgan" ? (
               <div className="cidg-leadership-profile-photo-wrap">
-                <img src="/images/leadership/todd-morgan-leadership-profile.png" alt="Todd Morgan, Founder and Chief Executive Officer of CoreIdentity Development Group" className="cidg-leadership-profile-photo" loading="eager" decoding="async" />
+                <img src={ToddMorganLeadershipProfile} alt="Todd Morgan, Founder and Chief Executive Officer of CoreIdentity Development Group" className="cidg-leadership-profile-photo" loading="eager" decoding="async" />
               </div>
             ) : null}
             <div className="text-2xl font-semibold text-white">{member.name}</div>
@@ -116,7 +117,7 @@ export function LeadershipPage() {
   }, []);
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 cidg-leadership-page">
       <Helmet>
         <title>Leadership | CoreIdentity</title>
         <meta name="description" content="CoreIdentity is led by operators who have built and governed mission-critical systems in the most demanding institutional environments — where trust is proven, not asserted." />
