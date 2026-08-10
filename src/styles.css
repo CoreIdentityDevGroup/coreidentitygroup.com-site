@@ -5359,242 +5359,293 @@ a[aria-label*="LinkedIn"] img{
 @media(max-width:900px){.cidg-framework-flow--five,.cidg-framework-flow--four,.cidg-framework-definition-list,.cidg-framework-adaptability-grid{grid-template-columns:1fr}.cidg-framework-flow-step>span[aria-hidden="true"]{position:static;transform:rotate(90deg);margin-top:.6rem}.cidg-framework-convergence-grid{grid-template-columns:1fr}.cidg-framework-convergence-arrow{transform:rotate(90deg);text-align:center}.cidg-framework-distinction p,.cidg-framework-outcome-lines p{grid-template-columns:1fr;gap:.35rem}}
 /* <<< coreidentity:v7.2.26-institutional-framework-expansion <<< */
 
-/* >>> coreidentity:v7.2.27-framework-visual-density >>> */
-.cidg-framework-expanded .cidg-framework-hero {
-  padding-top: clamp(3rem, 6vw, 5.25rem);
-  padding-bottom: clamp(3rem, 6vw, 5.25rem);
+/* >>> coreidentity:v7.2.28-framework-density-cascade >>> */
+
+/* Canonical framework density contract. */
+.cidg-framework-page.cidg-framework-expanded > section {
+  margin-block: 0 !important;
+  padding-block: clamp(1.85rem, 2.8vw, 2.75rem) !important;
 }
-.cidg-framework-expanded .cidg-framework-hero h1 {
-  max-width: 980px;
-  margin-top: .55rem;
-  margin-bottom: 1.15rem;
-  font-size: clamp(2.65rem, 5.3vw, 4.75rem);
-  line-height: .98;
-  letter-spacing: -.035em;
+
+.cidg-framework-page.cidg-framework-expanded > .cidg-framework-hero {
+  padding-top: clamp(2.35rem, 3.8vw, 3.5rem) !important;
+  padding-bottom: clamp(2.1rem, 3.2vw, 3rem) !important;
 }
-.cidg-framework-expanded .cidg-framework-lead {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: clamp(1rem, 1.55vw, 1.2rem);
-  line-height: 1.5;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-hero h1 {
+  margin-top: .45rem !important;
+  margin-bottom: .85rem !important;
+  font-size: clamp(2.5rem, 4.5vw, 4rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -.032em;
 }
-.cidg-framework-expanded .cidg-framework-support {
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-lead {
+  margin-top: 0 !important;
+  margin-bottom: .85rem !important;
+  font-size: clamp(.98rem, 1.35vw, 1.12rem) !important;
+  line-height: 1.48;
+}
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-support {
   max-width: 860px;
-  margin: .8rem auto 0;
-  line-height: 1.65;
+  margin-top: .62rem !important;
+  margin-bottom: 0 !important;
+  line-height: 1.58;
 }
-.cidg-framework-expanded .cidg-framework-doctrine {
-  margin-top: 1.35rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-doctrine {
+  margin-top: 1.05rem !important;
+  margin-bottom: 0 !important;
 }
-.cidg-framework-expanded .cidg-framework-statement,
-.cidg-framework-expanded .cidg-framework-architecture,
-.cidg-framework-expanded .cidg-framework-behaviors,
-.cidg-framework-expanded .cidg-framework-convergence,
-.cidg-framework-expanded .cidg-framework-adaptability,
-.cidg-framework-expanded .cidg-framework-evidence-standard,
-.cidg-framework-expanded .cidg-framework-outcome,
-.cidg-framework-expanded .cidg-framework-callout {
-  margin-top: 0;
-  padding-top: clamp(2.6rem, 4.5vw, 4rem);
-  padding-bottom: clamp(2.6rem, 4.5vw, 4rem);
+
+.cidg-framework-page.cidg-framework-expanded h2 {
+  margin-top: .42rem !important;
+  margin-bottom: .82rem !important;
+  font-size: clamp(1.65rem, 2.65vw, 2.55rem) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.022em;
 }
-.cidg-framework-expanded .cidg-framework-statement h2,
-.cidg-framework-expanded .cidg-framework-architecture h2,
-.cidg-framework-expanded .cidg-framework-convergence h2,
-.cidg-framework-expanded .cidg-framework-evidence-standard h2,
-.cidg-framework-expanded .cidg-framework-behaviors h2 {
-  max-width: 980px;
-  margin-top: .55rem;
-  margin-bottom: 1.05rem;
-  font-size: clamp(1.75rem, 3.45vw, 3.15rem);
-  line-height: 1.04;
-  letter-spacing: -.025em;
+
+.cidg-framework-page.cidg-framework-expanded h2 + p {
+  margin-top: .9rem !important;
 }
-.cidg-framework-expanded h2 + p,
-.cidg-framework-expanded h2 + .cidg-framework-distinction,
-.cidg-framework-expanded h2 + .cidg-framework-convergence-grid,
-.cidg-framework-expanded h2 + .cidg-framework-definition-list {
-  margin-top: 1.05rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-kicker {
+  margin-bottom: .35rem !important;
 }
-.cidg-framework-expanded .cidg-framework-question {
-  margin-top: 1.45rem;
-  margin-bottom: 1.45rem;
-  padding: 1.15rem 1.35rem;
-  font-size: clamp(1.05rem, 1.65vw, 1.3rem);
-  line-height: 1.5;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-question {
+  margin-top: 1.05rem !important;
+  margin-bottom: 1.05rem !important;
+  padding: .95rem 1.15rem !important;
+  font-size: clamp(1rem, 1.35vw, 1.18rem) !important;
+  line-height: 1.48;
 }
-.cidg-framework-expanded .cidg-framework-flow {
-  margin-top: 1.45rem;
-  margin-bottom: 1.45rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-flow {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  gap: .65rem !important;
 }
-.cidg-framework-expanded .cidg-framework-flow-step {
-  min-height: 82px;
-  padding: 1rem .85rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-flow-step {
+  min-height: 68px !important;
+  padding: .8rem .7rem !important;
 }
-.cidg-framework-expanded .cidg-framework-flow-step--detail {
-  min-height: 150px;
-  gap: .55rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-flow-step--detail {
+  min-height: 122px !important;
+  gap: .4rem !important;
 }
-.cidg-framework-expanded .cidg-framework-definition-list {
-  margin-top: 1.35rem;
-  gap: .8rem 1rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-convergence-grid {
+  margin-top: 1rem !important;
+  gap: 1rem !important;
 }
-.cidg-framework-expanded .cidg-framework-definition-list > div,
-.cidg-framework-expanded .cidg-framework-adaptability-grid > div {
-  padding: 1.05rem 1.15rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-signal-stack {
+  gap: .4rem !important;
 }
-.cidg-framework-expanded .cidg-framework-distinction {
-  margin-top: 1.1rem;
-  gap: .5rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-signal-stack span {
+  padding: .55rem .85rem !important;
 }
-.cidg-framework-expanded .cidg-framework-distinction p,
-.cidg-framework-expanded .cidg-framework-outcome-lines p {
-  padding: .8rem 0;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-convergence-outcome {
+  min-height: 145px !important;
+  padding: 1.2rem !important;
 }
-.cidg-framework-expanded .cidg-framework-convergence-grid {
-  margin-top: 1.35rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-vertical-flow {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  gap: 0 !important;
 }
-.cidg-framework-expanded .cidg-framework-convergence-outcome {
-  min-height: 180px;
-  padding: 1.5rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-vertical-flow > div {
+  gap: .08rem !important;
 }
-.cidg-framework-expanded .cidg-framework-vertical-flow {
-  margin-top: 1.45rem;
-  margin-bottom: 1.45rem;
-  gap: .15rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-vertical-flow strong {
+  padding: .6rem .85rem !important;
 }
-.cidg-framework-expanded .cidg-framework-vertical-flow strong {
-  padding: .8rem 1.05rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-vertical-flow span {
+  line-height: 1 !important;
+  font-size: 1rem !important;
 }
-.cidg-framework-expanded .cidg-framework-adaptability-grid {
-  margin-top: 1.25rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-definition-list {
+  margin-top: 1rem !important;
+  gap: .55rem 1rem !important;
 }
-.cidg-framework-expanded .cidg-framework-qualification,
-.cidg-framework-expanded .cidg-framework-evidence-note {
-  margin-top: 1.15rem;
-  padding: .9rem 1.05rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-definition-list > div,
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-adaptability-grid > div {
+  padding: .8rem .95rem !important;
 }
-.cidg-framework-expanded .cidg-framework-callout {
-  margin-top: 0;
-  border-radius: 22px;
-  gap: .45rem;
-  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-distinction {
+  margin-top: .85rem !important;
+  gap: .3rem !important;
 }
-.cidg-framework-expanded .cidg-trust-production-stage {
-  margin-top: clamp(1.5rem, 3vw, 2.5rem);
-  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-distinction p,
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-outcome-lines p {
+  padding: .6rem 0 !important;
 }
-.cidg-framework-expanded .cidg-framework-next {
-  padding-top: clamp(2rem, 3.5vw, 3rem);
-  padding-bottom: clamp(2rem, 3.5vw, 3rem);
-  gap: 1.5rem;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-adaptability-grid {
+  margin-top: .9rem !important;
+  gap: .75rem !important;
 }
-.cidg-framework-expanded .cidg-framework-next p {
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-qualification,
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-evidence-note {
+  margin-top: .9rem !important;
+  padding: .75rem .95rem !important;
+}
+
+.cidg-framework-page.cidg-framework-expanded .cidg-trust-production-stage {
+  margin-top: .75rem !important;
+  margin-bottom: .75rem !important;
+}
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-callout {
+  margin-top: 0 !important;
+  padding-block: 1.65rem !important;
+  gap: .3rem !important;
+  font-size: clamp(1rem, 1.35vw, 1.18rem) !important;
+}
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-proposition {
+  margin-top: 1rem !important;
+  font-size: clamp(1.05rem, 1.45vw, 1.25rem) !important;
+}
+
+.cidg-framework-page.cidg-framework-expanded > .cidg-framework-next {
+  padding-top: 1.35rem !important;
+  padding-bottom: 1.35rem !important;
+}
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-next {
+  gap: 1rem !important;
+}
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-next p {
   max-width: 720px;
-  font-size: .78rem;
-  line-height: 1.5;
-  letter-spacing: .13em;
+  font-size: .7rem !important;
+  line-height: 1.42;
+  letter-spacing: .105em;
 }
-.cidg-framework-expanded .cidg-framework-next a {
-  font-size: clamp(1rem, 1.55vw, 1.3rem);
-  line-height: 1.18;
-  max-width: 250px;
+
+.cidg-framework-page.cidg-framework-expanded .cidg-framework-next a {
+  max-width: 210px;
+  font-size: .98rem !important;
+  line-height: 1.15;
 }
+
 @media (max-width: 900px) {
-  .cidg-framework-expanded .cidg-framework-hero {
-    padding-top: 2.5rem;
-    padding-bottom: 2.75rem;
+  .cidg-framework-page.cidg-framework-expanded > section {
+    padding-block: 1.65rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-hero h1 {
-    font-size: clamp(2.15rem, 9vw, 3rem);
-    line-height: 1;
-    margin-bottom: .9rem;
+
+  .cidg-framework-page.cidg-framework-expanded > .cidg-framework-hero {
+    padding-top: 2rem !important;
+    padding-bottom: 1.85rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-lead {
-    font-size: 1rem;
-    margin-bottom: .8rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-hero h1 {
+    font-size: clamp(2rem, 7.6vw, 2.65rem) !important;
+    margin-bottom: .7rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-support {
-    margin-top: .65rem;
-    line-height: 1.58;
+
+  .cidg-framework-page.cidg-framework-expanded h2 {
+    font-size: clamp(1.5rem, 5.7vw, 1.95rem) !important;
+    margin-bottom: .7rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-statement,
-  .cidg-framework-expanded .cidg-framework-architecture,
-  .cidg-framework-expanded .cidg-framework-behaviors,
-  .cidg-framework-expanded .cidg-framework-convergence,
-  .cidg-framework-expanded .cidg-framework-adaptability,
-  .cidg-framework-expanded .cidg-framework-evidence-standard,
-  .cidg-framework-expanded .cidg-framework-outcome,
-  .cidg-framework-expanded .cidg-framework-callout {
-    padding-top: 2.25rem;
-    padding-bottom: 2.25rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-support {
+    margin-top: .52rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-statement h2,
-  .cidg-framework-expanded .cidg-framework-architecture h2,
-  .cidg-framework-expanded .cidg-framework-convergence h2,
-  .cidg-framework-expanded .cidg-framework-evidence-standard h2,
-  .cidg-framework-expanded .cidg-framework-behaviors h2 {
-    font-size: clamp(1.65rem, 7.4vw, 2.25rem);
-    line-height: 1.06;
-    margin-bottom: .9rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-flow {
+    gap: .45rem !important;
+    margin-block: .8rem !important;
   }
-  .cidg-framework-expanded h2 + p {
-    margin-top: .9rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-flow-step {
+    min-height: auto !important;
+    padding: .7rem .75rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-question {
-    margin-top: 1.15rem;
-    margin-bottom: 1.15rem;
-    padding: 1rem 1.05rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-flow-step--detail {
+    min-height: auto !important;
   }
-  .cidg-framework-expanded .cidg-framework-flow {
-    margin-top: 1.15rem;
-    margin-bottom: 1.15rem;
-    gap: .65rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-vertical-flow {
+    margin-block: .75rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-flow-step {
-    min-height: auto;
-    padding: .9rem .85rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-vertical-flow strong {
+    padding: .5rem .7rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-flow-step--detail {
-    min-height: auto;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-definition-list,
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-adaptability-grid {
+    gap: .45rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-definition-list {
-    gap: .65rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-definition-list > div,
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-adaptability-grid > div {
+    padding: .7rem .8rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-definition-list > div,
-  .cidg-framework-expanded .cidg-framework-adaptability-grid > div {
-    padding: .9rem 1rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-convergence-outcome {
+    min-height: 115px !important;
   }
-  .cidg-framework-expanded .cidg-framework-convergence-outcome {
-    min-height: 145px;
+
+  .cidg-framework-page.cidg-framework-expanded > .cidg-framework-next {
+    padding-block: 1rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-next {
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
-    gap: .9rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-next {
+    gap: .65rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-next p {
-    font-size: .7rem;
-    letter-spacing: .1em;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-next p {
+    font-size: .64rem !important;
+    letter-spacing: .085em;
   }
-  .cidg-framework-expanded .cidg-framework-next a {
-    font-size: 1rem;
-    max-width: 190px;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-next a {
+    max-width: 175px;
+    font-size: .9rem !important;
   }
 }
+
 @media (max-width: 560px) {
-  .cidg-framework-expanded .cidg-framework-hero h1 {
-    font-size: clamp(2rem, 10vw, 2.65rem);
+  .cidg-framework-page.cidg-framework-expanded > section {
+    padding-block: 1.4rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-statement h2,
-  .cidg-framework-expanded .cidg-framework-architecture h2,
-  .cidg-framework-expanded .cidg-framework-convergence h2,
-  .cidg-framework-expanded .cidg-framework-evidence-standard h2,
-  .cidg-framework-expanded .cidg-framework-behaviors h2 {
-    font-size: clamp(1.55rem, 7.6vw, 2rem);
+
+  .cidg-framework-page.cidg-framework-expanded > .cidg-framework-hero {
+    padding-top: 1.65rem !important;
+    padding-bottom: 1.5rem !important;
   }
-  .cidg-framework-expanded .cidg-framework-next a {
-    font-size: .95rem;
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-hero h1 {
+    font-size: clamp(1.9rem, 9vw, 2.4rem) !important;
+  }
+
+  .cidg-framework-page.cidg-framework-expanded h2 {
+    font-size: clamp(1.4rem, 6.8vw, 1.8rem) !important;
+  }
+
+  .cidg-framework-page.cidg-framework-expanded .cidg-framework-next a {
+    font-size: .86rem !important;
   }
 }
-/* <<< coreidentity:v7.2.27-framework-visual-density <<< */
+
+/* <<< coreidentity:v7.2.28-framework-density-cascade <<< */
