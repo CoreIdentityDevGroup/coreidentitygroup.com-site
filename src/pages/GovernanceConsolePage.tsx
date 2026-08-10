@@ -20,14 +20,14 @@ interface FlowStep { layer: LayerKey; state: string; iiaac?: boolean; status: (a
 interface AgentDef { id: string; label: string; }
 
 const LAYERS: Record<LayerKey, Layer> = {
-  smartnation: { name: "SmartNation AI", role: "Governed digital labor catalog", icon: "SN", accent: "#10B981" },
-  fgv: { name: "Formal Governance Verification", role: "Z3 SMT pre-deployment proof", icon: "FV", accent: "#2DD4BF" },
-  ais: { name: "Agent Identity Systems", role: "Post-quantum credential authority", icon: "AIS", accent: "#A78BDA" },
-  sal: { name: "SAL Enforcement Kernel", role: "Semantic Authorization Layer \u00b7 IIAAC", icon: "SAL", accent: "#10B981" },
-  mcp: { name: "MCP Protocol", role: "Governed external-access gateway", icon: "MCP", accent: "#A78BFA" },
-  sentinel: { name: "Sentinel", role: "Policy enforcement & evidence capture", icon: "SEN", accent: "#3B82F6" },
-  nexus: { name: "Nexus", role: "Governed multi-agent orchestration", icon: "NEX", accent: "#A78BFA" },
-  ago: { name: "AGO", role: "Autonomous Governance Orchestrator", icon: "AGO", accent: "#3B82F6" },
+  smartnation: { name: "Governed Capability Registry", role: "Delegated capability provisioning", icon: "CR", accent: "#10B981" },
+  fgv: { name: "Policy Assurance", role: "Pre-execution policy verification", icon: "PA", accent: "#2DD4BF" },
+  ais: { name: "Identity & Authority", role: "Verifiable execution identity", icon: "IA", accent: "#A78BDA" },
+  sal: { name: "Authorization Control", role: "Contextual execution authorization", icon: "AC", accent: "#10B981" },
+  mcp: { name: "External Access Governance", role: "Governed tool and system access", icon: "EA", accent: "#A78BFA" },
+  sentinel: { name: "Runtime Enforcement", role: "Policy enforcement & evidence capture", icon: "RE", accent: "#3B82F6" },
+  nexus: { name: "Coordinated Execution", role: "Governed multi-agent coordination", icon: "CE", accent: "#A78BFA" },
+  ago: { name: "Continuous Assurance", role: "Autonomous oversight & escalation", icon: "CA", accent: "#3B82F6" },
 };
 
 const AGENTS: AgentDef[] = [
@@ -39,42 +39,42 @@ const AGENTS: AgentDef[] = [
 type ModeKey = "deploy" | "govern" | "retire";
 
 const MODE_META: Record<ModeKey, { num: string; label: string; runLabel: string; desc: string }> = {
-  deploy: { num: "A", label: "Deploy Governed Agent", runLabel: "Deploy Agent", desc: "Provision a new agent from the SmartNation catalog under full governance." },
+  deploy: { num: "A", label: "Deploy Governed Agent", runLabel: "Deploy Agent", desc: "Provision a governed capability under defined institutional authority." },
   govern: { num: "B", label: "Govern an Action", runLabel: "Govern Action", desc: "A live agent attempts an action. Watch every layer evaluate it." },
   retire: { num: "C", label: "Retire an Agent", runLabel: "Retire Agent", desc: "Decommission an agent and seal its complete audit trail." },
 };
 
 const FLOWS: Record<ModeKey, FlowStep[]> = {
   deploy: [
-    { layer: "smartnation", state: "PROVISIONED", status: (a) => `Provisioning <span class="gic-hl">${a.label}</span> from digital labor catalog. Labor position assigned. Governance profile attached.` },
-    { layer: "fgv", state: "VERIFIED", status: () => `Running Z3 SMT formal verification across the policy rule set. Checking for contradictions and unreachable states... <span class="gic-ok">Policy set proven consistent.</span> FIPS 205 proof artifact signed.` },
-    { layer: "ais", state: "ISSUED", status: (a) => `Generating ML-DSA-65 keypair (HSM-backed). Post-quantum identity credential <span class="gic-hl">${a.id}</span> issued. <span class="gic-ok">Credential valid.</span>` },
+    { layer: "smartnation", state: "PROVISIONED", status: (a) => `Provisioning <span class="gic-hl">${a.label}</span> under delegated institutional authority. Governance profile attached.` },
+    { layer: "fgv", state: "VERIFIED", status: () => `Verifying the governing policy set before activation. Checking for contradictions and invalid states... <span class="gic-ok">Policy assurance complete.</span> Signed evidence preserved.` },
+    { layer: "ais", state: "ISSUED", status: (a) => `Establishing a verifiable execution identity for <span class="gic-hl">${a.id}</span>. Authority binding completed. <span class="gic-ok">Identity valid.</span>` },
     { layer: "sentinel", state: "BOUND", status: () => `Binding policy boundaries to the agent. Authorization scope set. Approval gates configured. <span class="gic-ok">Fail-closed enforcement active.</span>` },
-    { layer: "nexus", state: "REGISTERED", status: () => `Registering agent into the orchestration fleet. Policy propagation complete across the coordination layer. <span class="gic-ok">Agent coordinated under governance.</span>` },
-    { layer: "ago", state: "MONITORING", status: () => `Activating autonomous governance monitoring. Behavioral baseline established. <span class="gic-ok">Continuous oversight live.</span>` },
+    { layer: "nexus", state: "REGISTERED", status: () => `Registering the governed capability for coordinated execution. Policy propagation complete. <span class="gic-ok">Execution remains governed.</span>` },
+    { layer: "ago", state: "MONITORING", status: () => `Activating continuous governance assurance. Operational baseline established. <span class="gic-ok">Continuous oversight live.</span>` },
   ],
   govern: [
-    { layer: "ais", state: "VALIDATED", status: (a) => `Validating credential <span class="gic-hl">${a.id}</span> against active tenant and credential chain... <span class="gic-ok">Valid, non-revoked.</span>` },
-    { layer: "sal", state: "EVALUATING", iiaac: true, status: () => `Evaluating the action across five IIAAC dimensions. All five must pass for execution.` },
-    { layer: "mcp", state: "GOVERNED", status: () => `Governing the external tool call through the MCP gateway. Namespace allowlist checked \u00b7 default-deny enforced \u00b7 audit logging active.` },
-    { layer: "sentinel", state: "ENFORCED", status: () => `Policy enforcement complete. Evidence captured. Signed proof artifact generated.` },
+    { layer: "ais", state: "VALIDATED", status: (a) => `Validating the execution identity <span class="gic-hl">${a.id}</span> against active authority and credential state... <span class="gic-ok">Valid, non-revoked.</span>` },
+    { layer: "sal", state: "EVALUATING", iiaac: true, status: () => `Evaluating the action across the required authorization dimensions. Every control must pass before execution.` },
+    { layer: "mcp", state: "GOVERNED", status: () => `Governing external system access. Authorized scope checked; default-deny enforced; evidence capture active.` },
+    { layer: "sentinel", state: "ENFORCED", status: () => `Runtime policy enforcement complete. Evidence captured. Signed proof artifact generated.` },
   ],
   retire: [
     { layer: "ago", state: "INITIATED", status: () => `Decommission sequence initiated. Capturing final governance state. Approval recorded.` },
-    { layer: "nexus", state: "REMOVED", status: () => `Removing agent from the orchestration fleet. In-flight actions completed within authorized scope, then halted. <span class="gic-ok">No orphaned tasks.</span>` },
-    { layer: "ais", state: "REVOKED", status: (a) => `Revoking credential <span class="gic-hl">${a.id}</span>. Revocation propagated across the infrastructure. <span class="gic-ok">All access invalidated instantly.</span>` },
-    { layer: "sentinel", state: "SEALED", status: () => `Sealing the final audit record. Complete decision history retained and signed. <span class="gic-ok">Immutable trail preserved.</span>` },
-    { layer: "smartnation", state: "RELEASED", status: () => `Labor position released. Agent returned to the catalog. Governance profile archived.` },
-    { layer: "fgv", state: "ATTESTED", status: () => `Generating the decommission attestation. <span class="gic-ok">FIPS 205 final proof package signed.</span>` },
+    { layer: "nexus", state: "REMOVED", status: () => `Removing the capability from coordinated execution. In-flight actions completed within authorized scope, then halted. <span class="gic-ok">No orphaned tasks.</span>` },
+    { layer: "ais", state: "REVOKED", status: (a) => `Revoking execution authority for <span class="gic-hl">${a.id}</span>. Revocation propagated across the governance infrastructure. <span class="gic-ok">Access invalidated.</span>` },
+    { layer: "sentinel", state: "SEALED", status: () => `Sealing the final evidence record. Complete decision history retained and signed. <span class="gic-ok">Immutable trail preserved.</span>` },
+    { layer: "smartnation", state: "RELEASED", status: () => `Delegated capability released. Governance profile archived.` },
+    { layer: "fgv", state: "ATTESTED", status: () => `Generating the decommission attestation. <span class="gic-ok">Final evidence package signed and preserved.</span>` },
   ],
 };
 
 interface GovernScenario { iiaac: DimState[]; failDim: number; verdict: "ALLOW" | "DENY"; code: string; action: string; reason: string; external: boolean; }
 
 const GOVERN_SCENARIOS: Record<string, GovernScenario> = {
-  agt_pcm_intake_4f7c: { iiaac: ["pass", "pass", "pass", "pass", "pass"], failDim: -1, verdict: "ALLOW", code: "SAL-2000", action: "Deal intake record \u00b7 authorized", reason: "", external: true },
-  agt_pcm_screen_9b3a: { iiaac: ["pass", "pass", "fail", "pass", "pass"], failDim: 2, verdict: "DENY", code: "SAL-4004", action: "Cross-tenant asset read \u00b7 TIER_3", reason: "Agent authorized for its own tenant scope; requested asset belongs to a different tenant. Cross-tenant access is structurally blocked.", external: true },
-  agt_pcm_pipe_7d10: { iiaac: ["pass", "fail", "pass", "pass", "pass"], failDim: 1, verdict: "DENY", code: "SAL-4008", action: "Unscoped data export", reason: "Requested intent does not map to the agent\u2019s authorized operational scope. Semantic intent violation.", external: false },
+  agt_pcm_intake_4f7c: { iiaac: ["pass", "pass", "pass", "pass", "pass"], failDim: -1, verdict: "ALLOW", code: "GOV-2000", action: "Deal intake record \u00b7 authorized", reason: "", external: true },
+  agt_pcm_screen_9b3a: { iiaac: ["pass", "pass", "fail", "pass", "pass"], failDim: 2, verdict: "DENY", code: "GOV-4004", action: "Cross-tenant asset read \u00b7 TIER_3", reason: "Agent authorized for its own tenant scope; requested asset belongs to a different tenant. Cross-tenant access is structurally blocked.", external: true },
+  agt_pcm_pipe_7d10: { iiaac: ["pass", "fail", "pass", "pass", "pass"], failDim: 1, verdict: "DENY", code: "GOV-4008", action: "Unscoped data export", reason: "Requested intent does not map to the agent\u2019s authorized operational scope. Semantic intent violation.", external: false },
 };
 
 const IIAAC = [
@@ -170,10 +170,10 @@ export function GovernanceConsolePage() {
         }
         if (runIdRef.current !== myRun) return;
         if (denied) {
-          patchStep(i, { state: "done", stateLabel: "DENY", verdict: "deny", statusHtml: `<span class="gic-deny">${IIAAC[scn.failDim].n} dimension failed. ${scn.reason} Execution halted.</span>` });
+          patchStep(i, { state: "done", stateLabel: "DENY", verdict: "deny", statusHtml: `<span class="gic-deny">Authorization control failed. ${scn.reason} Execution halted.</span>` });
           break;
         } else {
-          patchStep(i, { state: "done", stateLabel: "5/5 PASS", verdict: "ok", statusHtml: `<span class="gic-ok">All five IIAAC dimensions passed.</span> Action authorized to proceed.` });
+          patchStep(i, { state: "done", stateLabel: "5/5 PASS", verdict: "ok", statusHtml: `<span class="gic-ok">All required authorization dimensions passed.</span> Action authorized to proceed.` });
         }
       } else {
         await sleep(600);
@@ -227,7 +227,7 @@ export function GovernanceConsolePage() {
       <div className="gic-eyebrow"><span className="gic-dot" />Live View \u00b7 Governance Infrastructure</div>
       <h1 className="gic-h1">Live Governance Infrastructure</h1>
       <p className="gic-subtitle">
-        A live view of the CoreIdentity Governance Infrastructure processing an agent across its full lifecycle. Every layer &mdash; identity, formal verification, semantic authorization, orchestration, external-access control, and autonomous governance &mdash; plays its part. Select a lifecycle event and watch each layer do its job.
+        A live view of the CoreIdentity Governance Infrastructure processing an agent across its full lifecycle. The console presents institutional governance capabilities rather than proprietary implementation components. Select a lifecycle event to observe how authority, policy, identity, execution boundaries, coordination, external access, evidence, and assurance operate together.
       </p>
 
       <div className="gic-label">01 &mdash; Select a Lifecycle Event</div>
@@ -346,7 +346,7 @@ export function GovernanceConsolePage() {
       ) : null}
 
       <div className="gic-disclaimer">
-        A live view of the CoreIdentity Governance Infrastructure using representative governance scenarios. It reflects how the nine governance layers operate together across the agent lifecycle &mdash; provisioning, runtime enforcement, and decommission &mdash; in CoreIdentity&rsquo;s production environment. Tenant identity is masked; proof signatures shown are illustrative.
+        A live view of the CoreIdentity Governance Infrastructure using representative governance scenarios. It reflects how institutional governance capabilities operate together across the agent lifecycle &mdash; provisioning, runtime enforcement, and decommission &mdash; without exposing proprietary implementation architecture. Tenant identity is masked; technical identifiers and proof representations shown are illustrative.
       </div>
     </div>
   );
@@ -356,14 +356,14 @@ function buildGovernArtifact(good: boolean, scn: GovernScenario, agent: AgentDef
   const ppid = hex(8);
   const ts = new Date().toISOString();
   const rows: ArtifactRow[] = [
-    { k: "event_type", v: good ? "SAL_ALLOW" : "SAL_DENY", cls: good ? "green" : "red" },
+    { k: "event_type", v: good ? "GOV_ALLOW" : "GOV_DENY", cls: good ? "green" : "red" },
     { k: "event_id", v: scn.code + "-" + ppid, cls: "" },
     { k: "agent_id", v: agent.id, cls: "" },
     { k: "timestamp_utc", v: ts, cls: "" },
-    { k: "iiaac_result", v: good ? "5/5 PASS" : (scn.failDim + 1) + "/5 \u00b7 FAIL@" + IIAAC[scn.failDim].n.toUpperCase(), cls: good ? "green" : "red" },
+    { k: "authorization_result", v: good ? "5/5 PASS" : (scn.failDim + 1) + "/5 \u00b7 FAIL@" + IIAAC[scn.failDim].n.toUpperCase(), cls: good ? "green" : "red" },
   ];
   if (!good) rows.push({ k: "rejection_reason", v: '"' + scn.reason + '"', cls: "red" });
-  rows.push({ k: "mcp_gateway", v: scn.external ? "engaged \u00b7 audit-logged" : "not engaged", cls: "" });
+  rows.push({ k: "external_access_control", v: scn.external ? "engaged \u00b7 audit-logged" : "not engaged", cls: "" });
   rows.push({ k: "policy_version", v: "pol_v2.4.1", cls: "" });
   rows.push({ k: "arbitration_latency_ms", v: (1.2 + Math.random() * 1.6).toFixed(1), cls: "blue" });
   rows.push({ k: "proof_pack_id", v: ppid, cls: "" });
@@ -381,17 +381,17 @@ function buildLifecycleArtifact(kind: "deploy" | "retire", agent: AgentDef): Art
       { k: "event_type", v: "AGENT_PROVISIONED", cls: "green" },
       { k: "agent_id", v: agent.id, cls: "" },
       { k: "labor_position", v: agent.label, cls: "" },
-      { k: "policy_verification", v: "Z3 SMT \u00b7 consistent", cls: "green" },
-      { k: "credential_alg", v: "ML-DSA-65 \u00b7 FIPS 204", cls: "" },
-      { k: "fleet_status", v: "REGISTERED \u00b7 governed", cls: "green" },
-      { k: "monitoring", v: "AGO active", cls: "green" },
+      { k: "policy_assurance", v: "VERIFIED \u00b7 consistent", cls: "green" },
+      { k: "identity_assurance", v: "VERIFIED", cls: "" },
+      { k: "execution_status", v: "REGISTERED \u00b7 governed", cls: "green" },
+      { k: "continuous_assurance", v: "ACTIVE", cls: "green" },
     ]);
   } else {
     rows = base.concat([
       { k: "event_type", v: "AGENT_DECOMMISSIONED", cls: "green" },
       { k: "agent_id", v: agent.id, cls: "" },
       { k: "credential_status", v: "REVOKED \u00b7 propagated", cls: "green" },
-      { k: "fleet_status", v: "REMOVED", cls: "green" },
+      { k: "execution_status", v: "REMOVED", cls: "green" },
       { k: "audit_record", v: "SEALED \u00b7 signed", cls: "green" },
       { k: "labor_position", v: "RELEASED", cls: "" },
       { k: "decommission_attestation", v: "FIPS 205 signed", cls: "green" },
