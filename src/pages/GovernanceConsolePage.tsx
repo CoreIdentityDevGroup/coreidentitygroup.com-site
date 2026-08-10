@@ -284,8 +284,8 @@ export function GovernanceConsolePage() {
                     const st = ds === "pass" ? "PASS" : ds === "fail" ? "FAIL" : ds === "on" ? "\u00b7\u00b7\u00b7" : "";
                     return (
                       <div key={j} className={mc}>
-                        <div className="gic-mini-l">{d.l}</div>
-                        <div className="gic-mini-n">{d.n}</div>
+                        
+                        <div className="gic-mini-n"><strong className="gic-public-auth-label">{d.n}</strong></div>
                         <div className="gic-mini-s">{st}</div>
                       </div>
                     );
