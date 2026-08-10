@@ -5649,3 +5649,35 @@ a[aria-label*="LinkedIn"] img{
 }
 
 /* <<< coreidentity:v7.2.28-framework-density-cascade <<< */
+
+/* >>> coreidentity:v7.2.29-leadership-profile-photo >>> */
+.cidg-leadership-profile-photo-wrap {
+  float: left;
+  width: clamp(190px, 18vw, 220px);
+  aspect-ratio: 1;
+  margin: .15rem 2rem 1.25rem 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(151, 154, 159, .42);
+  box-shadow: 0 16px 36px rgba(17, 24, 39, .10);
+  shape-outside: circle(50%);
+}
+
+.cidg-leadership-profile-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50%;
+}
+
+@media (max-width: 760px) {
+  .cidg-leadership-profile-photo-wrap {
+    float: none;
+    width: clamp(140px, 34vw, 165px);
+    margin: 0 0 1.25rem 0;
+    shape-outside: none;
+  }
+}
+/* <<< coreidentity:v7.2.29-leadership-profile-photo <<< */

@@ -59,6 +59,11 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
             />
           )}
           <div>
+            {member._id === "todd-morgan" ? (
+              <div className="cidg-leadership-profile-photo-wrap">
+                <img src="/images/leadership/todd-morgan-leadership-profile.png" alt="Todd Morgan, Founder and Chief Executive Officer of CoreIdentity Development Group" className="cidg-leadership-profile-photo" loading="eager" decoding="async" />
+              </div>
+            ) : null}
             <div className="text-2xl font-semibold text-white">{member.name}</div>
             <div className="text-sm text-white/50 tracking-widest mt-1 uppercase">
               {member.title}
