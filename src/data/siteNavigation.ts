@@ -13,9 +13,9 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     label: "Governance Framework",
     items: [
       { to: "/trust-infrastructure", label: "Trust Infrastructure" },
-      { to: "/intelligence", label: "Intelligence" },
-      { to: "/assurance", label: "Assurance" },
-      { to: "/trust", label: "Trust" },
+      { to: "/intelligence", label: "Institutional Intelligence" },
+      { to: "/assurance", label: "Institutional Assurance" },
+      { to: "/trust", label: "Institutional Trust" },
       { to: "/governance-ecosystem", label: "Governance Ecosystem" },
     ],
   },

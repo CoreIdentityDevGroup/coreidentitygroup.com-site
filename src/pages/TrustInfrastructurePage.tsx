@@ -4,53 +4,64 @@ import InstitutionalVisual from "../components/InstitutionalVisual";
 
 export function TrustInfrastructurePage() {
   return (
-    <div className="cidg-framework-page">
+    <div className="cidg-framework-page cidg-framework-expanded">
       <Helmet>
         <title>Trust Infrastructure | CoreIdentity Development Group</title>
-        <meta
-          name="description"
-          content="Trust Infrastructure is the institutional architecture that preserves authority, accountability, identity, policy, and evidence as execution becomes autonomous."
-        />
+        <meta name="description" content="Trust Infrastructure is the operational institutional foundation through which authority can be established, delegated, constrained, exercised, verified, and preserved throughout autonomous execution." />
       </Helmet>
 
       <section className="cidg-framework-hero">
         <p className="cidg-framework-kicker">Foundation</p>
         <h1>Trust Infrastructure</h1>
-        <p className="cidg-framework-lead">
-          The institutional architecture required to preserve authority, accountability, identity, policy, and evidence as intelligent systems move from assisting decisions to executing them.
-        </p>
+        <p className="cidg-framework-lead">The institutional foundation for governed autonomous execution.</p>
+        <p className="cidg-framework-support">As autonomous systems move from generating information to making decisions and executing actions, institutions require infrastructure capable of governing not only the technology, but the authority under which it operates.</p>
+        <p className="cidg-framework-support">CoreIdentity defines Trust Infrastructure as the operational institutional foundation through which authority can be established, delegated, constrained, exercised, verified, and preserved throughout autonomous execution.</p>
+        <p className="cidg-framework-doctrine">Delegate Execution. Never Surrender Control.</p>
       </section>
 
       <section className="cidg-framework-statement">
-        <p className="cidg-framework-kicker">Why it exists</p>
-        <h2>Autonomous execution creates an architectural problem.</h2>
-        <p>
-          Traditional governance assumes people remain in the execution loop. Autonomous systems change that assumption. Governance must therefore move from documentation and periodic review into the live execution environment.
-        </p>
+        <p className="cidg-framework-kicker">The delegation problem</p>
+        <h2>Autonomous execution changes what institutions must govern.</h2>
+        <p>Traditional infrastructure was designed to govern users, applications, data, transactions, and systems. Autonomous execution introduces something materially different: machines exercising delegated institutional authority.</p>
+        <blockquote className="cidg-framework-question">What is the system authorized to do, on whose authority, under what conditions, within what boundaries, and how does the institution remain in control throughout execution?</blockquote>
+        <p>This is where Trust Infrastructure begins.</p>
+      </section>
+
+      <section className="cidg-framework-architecture">
+        <p className="cidg-framework-kicker">Authority must travel with execution</p>
+        <h2>Governance cannot remain upstream from the action.</h2>
+        <div className="cidg-framework-flow cidg-framework-flow--five" aria-label="Institutional Authority to Accountability">
+          {["Institutional Authority", "Delegation", "Governed Execution", "Verification", "Accountability"].map((item, index) => (
+            <div className="cidg-framework-flow-step" key={item}>
+              <strong>{item}</strong>
+              {index < 4 ? <span aria-hidden="true">→</span> : null}
+            </div>
+          ))}
+        </div>
+        <p>Institutional authority and its constraints must remain connected to execution. Governance therefore has to operate through the execution lifecycle—not only through policy, approvals, or retrospective review.</p>
       </section>
 
       <div className="cidg-trust-production-stage" aria-label="Institutional control">
         <InstitutionalVisual src="/images/visuals/institutional-control-3d-production.png" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-trust-production-visual" />
       </div>
 
-      <section className="cidg-framework-principles">
-        {[
-          ["Authority", "Every action remains traceable to legitimate institutional authority."],
-          ["Boundaries", "Policy remains enforceable at the moment execution occurs."],
-          ["Evidence", "Institutions retain durable proof that execution remained governed."],
-        ].map(([title, copy]) => (
-          <article key={title}>
-            <h3>{title}</h3>
-            <p>{copy}</p>
-          </article>
-        ))}
+      <section className="cidg-framework-behaviors">
+        <p className="cidg-framework-kicker">Designed around institutional control</p>
+        <h2>Trust Infrastructure establishes governance behavior, not a catalog of components.</h2>
+        <dl className="cidg-framework-definition-list">
+          <div><dt>Authority</dt><dd>Establish legitimate institutional authority.</dd></div>
+          <div><dt>Delegation</dt><dd>Define what authority autonomous systems may exercise.</dd></div>
+          <div><dt>Boundaries</dt><dd>Establish conditions, permissions, prohibitions, and escalation requirements.</dd></div>
+          <div><dt>Enforcement</dt><dd>Maintain those requirements during execution.</dd></div>
+          <div><dt>Evidence</dt><dd>Preserve attributable evidence of material actions.</dd></div>
+          <div><dt>Accountability</dt><dd>Maintain the connection between autonomous execution and responsible institutional authority.</dd></div>
+        </dl>
       </section>
 
       <section className="cidg-framework-next">
-        <p>Next in the framework</p>
-        <Link to="/intelligence">Intelligence →</Link>
+        <p>Trust Infrastructure establishes the conditions for governed execution. Institutional Intelligence enables the institution to understand what is occurring within those conditions.</p>
+        <Link to="/intelligence">Explore Institutional Intelligence →</Link>
       </section>
-
     </div>
   );
 }
