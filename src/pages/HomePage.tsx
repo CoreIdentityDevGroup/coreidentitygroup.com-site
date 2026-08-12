@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 import InstitutionalVisual from "../components/InstitutionalVisual";
 
-import AutonomousGovernanceEcosystem from "../assets/governance/autonomous-governance-ecosystem-alpha.png";
+import AutonomousGovernanceEcosystem from "../assets/governance/autonomous-governance-ecosystem.png";
 export default function HomePage() {
   return (
     <div className="cidg-platinum-home cidg-home-page cidg-home-trust-sequence">
@@ -15,9 +15,12 @@ export default function HomePage() {
       </Helmet>
 
       <section className="cidg-platinum-hero" aria-labelledby="cidg-platinum-title">
-        <div className="cidg-platinum-hero-sequence" aria-label="Autonomous Governance Ecosystem">
-          <div className="cidg-platinum-eyebrow"><strong>Autonomous Governance Ecosystem</strong></div>
+        <div className="cidg-platinum-hero-sequence" aria-label="Governance framework sequence">
+          <div className="cidg-platinum-eyebrow">
+            <strong>Trust Infrastructure</strong>
+          </div>
           <div className="cidg-platinum-eyebrow-terms">Governance • Intelligence • Assurance • Trust</div>
+          <div className="cidg-platinum-eyebrow-aeg"><strong>Autonomous Execution Governance</strong></div>
         </div>
 
         <div className="cidg-platinum-hero-copy">
@@ -38,7 +41,10 @@ export default function HomePage() {
             priority
           />
           <p className="cidg-platinum-hero-architecture-note">
-            CoreIdentity has built the production Governance Ecosystem for the Autonomous Era—integrating Governance, Intelligence, Assurance, and Trust so institutions can delegate autonomous execution without surrendering institutional authority or control.
+            Each layer of our Trust Infrastructure is engineered with multiple proprietary components that work together
+            to establish authority, enforce policy, verify execution, preserve evidence, and maintain institutional control.
+            Together, these layers are designed to provide the highest level of Autonomous Execution Governance across the
+            full lifecycle of autonomous execution.
           </p>
           <div className="cidg-platinum-hero-actions">
             <Link to="/trust-infrastructure" className="cidg-platinum-primary">
@@ -59,13 +65,17 @@ export default function HomePage() {
 
       <section className="cidg-platinum-ecosystem" aria-labelledby="cidg-platinum-ecosystem-title">
         <div>
-          <p className="cidg-platinum-kicker">One Ecosystem. One System. Continuous Control.</p>
-          <h2 id="cidg-platinum-ecosystem-title">Designed, defined, and built for governed autonomous execution.</h2>
-          <div className="cidg-home-system-grid">
-            <article><h3>Autonomous Governance Ecosystem</h3><p>What the system is: the institutional governance model for the Autonomous Era.</p></article>
-            <article><h3>Trust Infrastructure</h3><p>What makes it operational: the production institutional infrastructure beneath governed execution.</p><Link to="/trust-infrastructure">Explore Trust Infrastructure →</Link></article>
-            <article><h3>Autonomous Execution Governance</h3><p>How it operates: the continuous governance doctrine that governs execution in motion.</p><Link to="/governance-ecosystem">Explore AEG →</Link></article>
-          </div>
+          <p className="cidg-platinum-kicker">The Governance Ecosystem</p>
+          <h2 id="cidg-platinum-ecosystem-title">
+            Architecture, doctrine, and legitimacy—operating as one institutional system.
+          </h2>
+          <p>
+            Trust Infrastructure establishes the architectural discipline.
+            Autonomous Execution Governance defines the operational doctrine.
+            The Institutional Chain of Legitimacy preserves authority, accountability,
+            and evidence throughout autonomous execution.
+          </p>
+          <Link to="/about">Understand CoreIdentity →</Link>
         </div>
       </section>
 

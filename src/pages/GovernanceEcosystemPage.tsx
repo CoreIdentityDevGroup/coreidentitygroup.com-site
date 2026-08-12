@@ -2,47 +2,60 @@ import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 import InstitutionalVisual from "../components/InstitutionalVisual";
 
-import ContinuousGovernanceCycle from "../assets/governance/continuous-governance-cycle.png";
 export function GovernanceEcosystemPage() {
   return (
     <div className="cidg-framework-page cidg-governance-page cidg-governance-fullbleed">
       <Helmet>
-        <title>Autonomous Execution Governance | CoreIdentity Development Group</title>
+        <title>The Governance Ecosystem | CoreIdentity Development Group</title>
         <meta
           name="description"
-          content="Autonomous Execution Governance (AEG) is CoreIdentity’s operational doctrine for continuously governing autonomous execution while preserving institutional authority, assurance, evidence, and control."
+          content="The CoreIdentity Governance Ecosystem: Trust Infrastructure, Autonomous Execution Governance, and the Institutional Chain of Legitimacy operating as one institutional system."
         />
       </Helmet>
 
       <section className="cidg-framework-hero">
-          <p className="cidg-framework-kicker">Autonomous Execution Governance</p>
-          <h1>Continuous Governance for Autonomous Execution.</h1>
-          <p className="cidg-framework-lead">Autonomous Execution Governance (AEG) is the operational doctrine that governs execution in motion—ensuring delegated autonomous execution remains within institutional authority, policy, boundaries, and accountability at every step.</p>
-          <p className="cidg-framework-doctrine">Delegate Execution. Never Surrender Control.</p>
-        </section>
+        <p className="cidg-framework-kicker">The Governance Ecosystem</p>
+        <h1>Architecture, doctrine, and legitimacy operating as one institutional system.</h1>
+        <p className="cidg-framework-lead">
+          Trust Infrastructure establishes the architectural discipline. Autonomous Execution
+          Governance defines the operational doctrine. The Institutional Chain of Legitimacy
+          preserves institutional authority throughout autonomous execution. Together, they
+          enable Autonomous Governed Execution.
+        </p>
+      </section>
 
-      <div className="cidg-aeg-cycle-stage" aria-label="Autonomous Execution Governance continuous cycle">
-          <InstitutionalVisual src={ContinuousGovernanceCycle} alt="Continuous governance cycle for autonomous execution under persistent institutional authority and oversight." className="cidg-aeg-cycle-visual" />
-        </div>
+      <div className="cidg-alpha-stage cidg-alpha-stage--ecosystem" aria-label="The Governance Ecosystem">
+        <InstitutionalVisual
+          src="/images/visuals/governance-ecosystem-3d-alpha.png"
+          alt="The CoreIdentity Governance Ecosystem: Trust Infrastructure, Autonomous Execution Governance, the Institutional Chain of Legitimacy, and Autonomous Governed Execution."
+          className="cidg-alpha-visual cidg-alpha-visual--ecosystem"
+        />
+      </div>
 
       {/* CIDG_V716B_ECOSYSTEM_INTERPRETATION */}
-      <section className="cidg-ecosystem-interpretation cidg-aeg-interpretation">
-          <p className="cidg-framework-kicker">The Continuous Cycle</p>
-          <h2>Authority That Persists Through Execution</h2>
-          <p>AEG governs the transition from institutional intent and delegated authority into autonomous execution. Governance does not remain upstream from the action; it persists throughout the execution lifecycle.</p>
-          <div className="cidg-aeg-sequence" aria-label="Continuous governance sequence">
-            <div><strong>Intelligence</strong><span>Informs Governance</span></div><span aria-hidden="true">→</span>
-            <div><strong>Governance</strong><span>Controls Execution</span></div><span aria-hidden="true">→</span>
-            <div><strong>Assurance</strong><span>Continuously Verifies</span></div><span aria-hidden="true">→</span>
-            <div><strong>Trust</strong><span>Is Established</span></div>
-          </div>
-          <p>The resulting execution state, evidence, and risk context become new institutional intelligence and inform the next governance cycle.</p>
-          <p className="cidg-ecosystem-principle"><strong>Continuous Governance. Verifiable Execution. Institutional Control.</strong></p>
-        </section>
+      <section className="cidg-ecosystem-interpretation">
+        <p className="cidg-framework-kicker">Institutional Continuity</p>
+        <h2>Governance That Persists Through Execution</h2>
+        <p>
+          The Governance Ecosystem is not a collection of disconnected controls. It is a continuous
+          institutional architecture that carries authority from governance intent into autonomous execution.
+        </p>
+        <p>
+          Trust Infrastructure establishes the conditions under which intelligence may operate. Autonomous
+          Execution Governance defines how delegated execution is governed. The Institutional Chain of
+          Legitimacy maintains the continuity of authority, control, evidence, and accountability throughout execution.
+        </p>
+        <p>
+          The result is an operating environment in which institutions can increase autonomy without surrendering control.
+        </p>
+        <p className="cidg-ecosystem-principle">
+          <strong>Authority is established. Execution is governed. Assurance is continuous. Trust becomes verifiable.</strong>
+        </p>
+      </section>
 
 
       <section className="cidg-framework-next">
-        <p>Explore the production foundation beneath governed execution.</p>
+        <p>Return to the Foundation</p>
         <Link to="/trust-infrastructure">Trust Infrastructure →</Link>
       </section>
     </div>

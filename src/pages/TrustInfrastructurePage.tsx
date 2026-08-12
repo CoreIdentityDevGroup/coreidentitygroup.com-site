@@ -46,7 +46,7 @@ export function TrustInfrastructurePage() {
       </div>
 
       <section className="cidg-framework-behaviors">
-          <p className="cidg-framework-kicker">The production foundation</p>
+          <p className="cidg-framework-kicker">The operating foundation</p>
           <h2>Trust Infrastructure makes the Autonomous Governance Ecosystem operational.</h2>
           <p className="cidg-framework-support">It provides the production institutional infrastructure through which governance is established, autonomous execution is constrained, assurance is continuous, and trust becomes demonstrable rather than assumed.</p>
           <dl className="cidg-framework-definition-list cidg-framework-definition-list--four">
@@ -55,7 +55,7 @@ export function TrustInfrastructurePage() {
             <div><dt>Assurance</dt><dd>Continuously verifies compliance, control, and performance so execution remains authorized and within institutional requirements.</dd></div>
             <div><dt>Trust</dt><dd>The resulting state of confidence that authority, control, and oversight are maintained through governed execution and verifiable evidence.</dd></div>
           </dl>
-          <p className="cidg-framework-cycle">Intelligence informs Governance. Governance controls autonomous execution. Assurance continuously verifies execution. Trust is established through verifiable governed execution—and the resulting state informs the next governance cycle.</p>
+          <p className="cidg-framework-cycle">Intelligence informs Governance. Governance controls autonomous execution. Assurance continuously verifies it. Trust is established through verifiable governed execution.</p>
         </section>
 
       <section className="cidg-framework-next">
