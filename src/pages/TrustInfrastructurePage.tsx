@@ -41,27 +41,27 @@ export function TrustInfrastructurePage() {
         <p>Institutional authority and its constraints must remain connected to execution. Governance therefore has to operate through the execution lifecycle—not only through policy, approvals, or retrospective review.</p>
       </section>
 
-      <div className="cidg-trust-production-stage" aria-label="Trust Infrastructure">
-        <InstitutionalVisual src="/images/visuals/trust-infrastructure-3d.webp" alt="CoreIdentity Trust Infrastructure supporting governed autonomous execution through institutional Intelligence, Governance, Assurance, and Trust." className="cidg-trust-production-visual cidg-trust-production-visual--infrastructure" />
+      <div className="cidg-trust-production-stage" aria-label="Institutional control">
+        <InstitutionalVisual src="/images/visuals/institutional-control-3d-production.png" alt="Institutional control remains continuous through Intelligence, Assurance, Trust and Governed Execution." className="cidg-trust-production-visual" />
       </div>
 
       <section className="cidg-framework-behaviors">
-          <p className="cidg-framework-kicker">The operating foundation</p>
-          <h2>Trust Infrastructure makes the Autonomous Governance Ecosystem operational.</h2>
-          <p className="cidg-framework-support">It provides the production institutional infrastructure through which governance is established, autonomous execution is constrained, assurance is continuous, and trust becomes demonstrable rather than assumed.</p>
-          <dl className="cidg-framework-definition-list cidg-framework-definition-list--four">
-            <div><dt>Intelligence</dt><dd>Establishes institutional context, identity, policy, obligations, risk, and operational awareness to inform governed decisions.</dd></div>
-            <div><dt>Governance</dt><dd>Establishes authority, determines policy, sets boundaries, and governs autonomous execution.</dd></div>
-            <div><dt>Assurance</dt><dd>Continuously verifies compliance, control, and performance so execution remains authorized and within institutional requirements.</dd></div>
-            <div><dt>Trust</dt><dd>The resulting state of confidence that authority, control, and oversight are maintained through governed execution and verifiable evidence.</dd></div>
-          </dl>
-          <p className="cidg-framework-cycle">Intelligence informs Governance. Governance controls autonomous execution. Assurance continuously verifies it. Trust is established through verifiable governed execution.</p>
-        </section>
+        <p className="cidg-framework-kicker">Designed around institutional control</p>
+        <h2>Trust Infrastructure establishes governance behavior, not a catalog of components.</h2>
+        <dl className="cidg-framework-definition-list">
+          <div><dt>Authority</dt><dd>Establish legitimate institutional authority.</dd></div>
+          <div><dt>Delegation</dt><dd>Define what authority autonomous systems may exercise.</dd></div>
+          <div><dt>Boundaries</dt><dd>Establish conditions, permissions, prohibitions, and escalation requirements.</dd></div>
+          <div><dt>Enforcement</dt><dd>Maintain those requirements during execution.</dd></div>
+          <div><dt>Evidence</dt><dd>Preserve attributable evidence of material actions.</dd></div>
+          <div><dt>Accountability</dt><dd>Maintain the connection between autonomous execution and responsible institutional authority.</dd></div>
+        </dl>
+      </section>
 
       <section className="cidg-framework-next">
-          <p>Trust Infrastructure operates across Intelligence, Governance, Assurance, and Trust to preserve institutional authority throughout autonomous execution.</p>
-          <Link to="/intelligence">Explore Institutional Intelligence →</Link>
-        </section>
+        <p>Trust Infrastructure establishes the conditions for governed execution. Institutional Intelligence enables the institution to understand what is occurring within those conditions.</p>
+        <Link to="/intelligence">Explore Institutional Intelligence →</Link>
+      </section>
     </div>
   );
 }

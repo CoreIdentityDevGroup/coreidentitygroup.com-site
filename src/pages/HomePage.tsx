@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 import InstitutionalVisual from "../components/InstitutionalVisual";
 
-import AutonomousGovernanceEcosystem from "../assets/governance/autonomous-governance-ecosystem.png";
 export default function HomePage() {
   return (
     <div className="cidg-platinum-home cidg-home-page cidg-home-trust-sequence">
@@ -19,7 +18,7 @@ export default function HomePage() {
           <div className="cidg-platinum-eyebrow">
             <strong>Trust Infrastructure</strong>
           </div>
-          <div className="cidg-platinum-eyebrow-terms">Governance • Intelligence • Assurance • Trust</div>
+          <div className="cidg-platinum-eyebrow-terms">Intelligence • Assurance • Trust</div>
           <div className="cidg-platinum-eyebrow-aeg"><strong>Autonomous Execution Governance</strong></div>
         </div>
 
@@ -35,9 +34,9 @@ export default function HomePage() {
         </div>
         <div className="cidg-platinum-hero-visual-col">
           <InstitutionalVisual
-            src={AutonomousGovernanceEcosystem}
-            alt="CoreIdentity Autonomous Governance Ecosystem: Governance, Intelligence, Assurance, and Trust."
-            className="cidg-platinum-visual--hero cidg-platinum-visual--governance-globe"
+            src="/images/visuals/trust-infrastructure-3d.webp"
+            alt="Trust Infrastructure architecture: Intelligence, Assurance and Trust enabling Autonomous Governed Execution."
+            className="cidg-platinum-visual--hero"
             priority
           />
           <p className="cidg-platinum-hero-architecture-note">

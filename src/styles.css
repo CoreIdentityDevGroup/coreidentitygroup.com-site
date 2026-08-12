@@ -5722,17 +5722,3 @@ main:has(.cidg-leadership-profile-photo-wrap) {
 }
 
 /* <<< coreidentity:v7.2.31-leadership-profile-production <<< */
-
-/* >>> coreidentity:v7.2.32f-canonical-governance-visual-placement >>> */
-.cidg-home-page .cidg-platinum-visual--governance-globe { width:min(100%,780px); margin-inline:auto; }
-.cidg-home-page .cidg-platinum-visual--governance-globe img { display:block; width:100%; height:auto; object-fit:contain; }
-.cidg-trust-production-visual--infrastructure { width:min(100%,1040px); margin-inline:auto; }
-.cidg-trust-production-visual--infrastructure img { display:block; width:100%; height:auto; object-fit:contain; }
-.cidg-framework-definition-list--four { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.cidg-framework-cycle { margin-top:clamp(1.5rem,3vw,2.25rem); font-weight:600; }
-@media (max-width:760px) {
-  .cidg-framework-definition-list--four { grid-template-columns:1fr; }
-  .cidg-home-page .cidg-platinum-visual--governance-globe,
-  .cidg-trust-production-visual--infrastructure { width:100%; }
-}
-/* <<< coreidentity:v7.2.32f-canonical-governance-visual-placement <<< */
