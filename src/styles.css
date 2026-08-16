@@ -5722,3 +5722,37 @@ main:has(.cidg-leadership-profile-photo-wrap) {
 }
 
 /* <<< coreidentity:v7.2.31-leadership-profile-production <<< */
+
+/* CIDG_HOME_VISUAL_V731_START */
+/*
+ * Homepage mobile visual refinement.
+ * Promise remains on one line at a smaller scale.
+ * One deliberate paragraph-space separates positioning from architecture.
+ * Mobile hero flow pulls the governance visual upward.
+ */
+@media (max-width: 760px) {
+  .cidg-platinum-hero-copy #cidg-platinum-title {
+    font-size: clamp(1.45rem, 6.4vw, 2rem);
+    line-height: 1.08;
+    white-space: nowrap;
+    letter-spacing: -0.025em;
+  }
+
+  .cidg-platinum-hero-copy > p {
+    margin-bottom: 1.25rem;
+  }
+
+  .cidg-platinum-hero-sequence {
+    margin-top: 0;
+  }
+
+  .cidg-platinum-hero {
+    row-gap: 1rem;
+  }
+
+  .cidg-platinum-hero-visual-col {
+    margin-top: -0.75rem;
+    padding-top: 0;
+  }
+}
+/* CIDG_HOME_VISUAL_V731_END */

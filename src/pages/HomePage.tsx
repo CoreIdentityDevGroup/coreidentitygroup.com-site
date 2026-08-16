@@ -16,7 +16,7 @@ export default function HomePage() {
 
       <section className="cidg-platinum-hero" aria-labelledby="cidg-platinum-title">
         <div className="cidg-platinum-hero-copy">
-          <h1 id="cidg-platinum-title">Making Autonomy Trustworthy.</h1>
+          <h1 id="cidg-platinum-title">Making Autonomy Trustworthy</h1>
 
           <p>
             We build the Trust Infrastructure that enables institutions to embrace autonomous execution while preserving authority, accountability, trust, and control.
