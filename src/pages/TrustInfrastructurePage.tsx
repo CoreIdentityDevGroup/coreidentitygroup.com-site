@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 import InstitutionalVisual from "../components/InstitutionalVisual";
 
+// CIDG_CONTENT_ALIGNMENT_V730_R9
 export function TrustInfrastructurePage() {
   return (
     <div className="cidg-framework-page cidg-framework-expanded">
@@ -46,6 +47,12 @@ export function TrustInfrastructurePage() {
       </div>
 
       <section className="cidg-framework-behaviors">
+        <p className="cidg-framework-kicker">Four interconnected institutional functions</p>
+        <h2>Trust Infrastructure operates through four interconnected institutional functions.</h2>
+        <p><strong>Institutional Intelligence</strong> — Establishes institutional context, identity, policy, obligations, risk, and operational awareness.</p>
+        <p><strong>Governance</strong> — Establishes authority, determines policy, sets boundaries, and governs autonomous execution.</p>
+        <p><strong>Institutional Assurance</strong> — Continuously verifies compliance, control, and performance so execution remains authorized and within institutional requirements.</p>
+        <p><strong>Institutional Trust</strong> — Establishes verifiable confidence that authority, control, oversight, and accountability are maintained throughout governed execution.</p>
         <p className="cidg-framework-kicker">Designed around institutional control</p>
         <h2>Trust Infrastructure establishes governance behavior, not a catalog of components.</h2>
         <dl className="cidg-framework-definition-list">
@@ -59,7 +66,7 @@ export function TrustInfrastructurePage() {
       </section>
 
       <section className="cidg-framework-next">
-        <p>Trust Infrastructure establishes the conditions for governed execution. Institutional Intelligence enables the institution to understand what is occurring within those conditions.</p>
+        <p>Trust Infrastructure carries institutional governance through execution. Institutional Intelligence enables the institution to understand what is occurring within that governed environment.</p>
         <Link to="/intelligence">Explore Institutional Intelligence →</Link>
       </section>
     </div>

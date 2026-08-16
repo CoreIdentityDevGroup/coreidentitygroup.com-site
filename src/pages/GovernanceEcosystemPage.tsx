@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 import InstitutionalVisual from "../components/InstitutionalVisual";
 
+// CIDG_CONTENT_ALIGNMENT_V730_R6
 export function GovernanceEcosystemPage() {
   return (
     <div className="cidg-framework-page cidg-governance-page cidg-governance-fullbleed">
@@ -17,10 +18,11 @@ export function GovernanceEcosystemPage() {
         <p className="cidg-framework-kicker">The Governance Ecosystem</p>
         <h1>Architecture, doctrine, and legitimacy operating as one institutional system.</h1>
         <p className="cidg-framework-lead">
-          Trust Infrastructure establishes the architectural discipline. Autonomous Execution
-          Governance defines the operational doctrine. The Institutional Chain of Legitimacy
-          preserves institutional authority throughout autonomous execution. Together, they
-          enable Autonomous Governed Execution.
+          The Governance Ecosystem for the Autonomous Era is the complete institutional system
+          through which autonomous execution can remain governed. Trust Infrastructure provides
+          the production institutional infrastructure, Autonomous Execution Governance defines
+          the operational doctrine, and the Institutional Chain of Legitimacy preserves continuity
+          between authority, delegated execution, evidence, and accountability.
         </p>
       </section>
 
@@ -41,9 +43,10 @@ export function GovernanceEcosystemPage() {
           institutional architecture that carries authority from governance intent into autonomous execution.
         </p>
         <p>
-          Trust Infrastructure establishes the conditions under which intelligence may operate. Autonomous
-          Execution Governance defines how delegated execution is governed. The Institutional Chain of
-          Legitimacy maintains the continuity of authority, control, evidence, and accountability throughout execution.
+          Trust Infrastructure carries institutional authority and governance requirements into execution through
+          Governance, Institutional Intelligence, Institutional Assurance, and Institutional Trust. Autonomous
+          Execution Governance governs execution in motion. The Institutional Chain of Legitimacy maintains
+          continuity between institutional authority, delegated execution, evidence, and accountability.
         </p>
         <p>
           The result is an operating environment in which institutions can increase autonomy without surrendering control.

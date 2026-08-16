@@ -1,19 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 
+// CIDG_CONTENT_ALIGNMENT_V730_R9
 export function AssurancePage() {
   return (
     <div className="cidg-framework-page cidg-framework-expanded">
       <Helmet>
         <title>Institutional Assurance | CoreIdentity Development Group</title>
-        <meta name="description" content="Institutional Assurance provides the evidentiary foundation through which organizations can verify whether autonomous execution remained within established authority, governance requirements, institutional obligations, and operational controls." />
+        <meta name="description" content="Institutional Assurance continuously verifies compliance, control, and performance so autonomous execution remains authorized and within institutional requirements." />
       </Helmet>
 
       <section className="cidg-framework-hero">
         <p className="cidg-framework-kicker">Demonstrable governance</p>
         <h1>Institutional Assurance</h1>
         <p className="cidg-framework-lead">Governance must be demonstrable, not assumed.</p>
-        <p className="cidg-framework-support">Institutional Assurance provides the evidentiary foundation through which organizations can verify whether autonomous execution remained within established authority, governance requirements, institutional obligations, and operational controls.</p>
+        <p className="cidg-framework-support">Institutional Assurance is the Trust Infrastructure function that continuously verifies compliance, control, and performance so autonomous execution remains authorized and within institutional requirements.</p>
       </section>
 
       <section className="cidg-framework-architecture cidg-framework-architecture--assurance">

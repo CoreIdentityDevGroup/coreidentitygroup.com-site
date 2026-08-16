@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 
+// CIDG_CONTENT_ALIGNMENT_V730_R9
 export function IntelligencePage() {
   return (
     <div className="cidg-framework-page cidg-framework-expanded">
@@ -14,7 +15,7 @@ export function IntelligencePage() {
         <h1>Institutional Intelligence</h1>
         <p className="cidg-framework-lead">Governed understanding for autonomous execution.</p>
         <p className="cidg-framework-support">Autonomous execution produces enormous quantities of activity, signals, decisions, interactions, and evidence. Visibility alone is insufficient.</p>
-        <p className="cidg-framework-support">Institutional Intelligence enables organizations to understand autonomous execution in the context of institutional authority, governance requirements, operational conditions, and risk.</p>
+        <p className="cidg-framework-support">Institutional Intelligence is the Trust Infrastructure function that establishes institutional context, identity, policy, obligations, risk, and operational awareness.</p>
       </section>
 
       <section className="cidg-framework-statement">

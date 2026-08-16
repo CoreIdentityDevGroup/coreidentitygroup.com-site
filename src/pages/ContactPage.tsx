@@ -10,6 +10,7 @@ type ContactPayload = {
   message: string;
 };
 
+// CIDG_CONTENT_ALIGNMENT_V730_R6
 export default function ContactPage() {
   const [form, setForm] = useState<ContactPayload>({
     name: "",
@@ -90,7 +91,7 @@ export default function ContactPage() {
       <div className="space-y-3">
         <PageTitle>Contact</PageTitle>
         <p className="text-white/70 max-w-3xl">
-          For organizations evaluating Trust Infrastructure, Autonomous Execution Governance, institutional advisory services, strategic partnerships, or other engagements.
+          For institutions evaluating Trust Infrastructure, governed autonomous execution, institutional advisory services, strategic partnerships, or deployment pathways.
         </p>
       </div>
 

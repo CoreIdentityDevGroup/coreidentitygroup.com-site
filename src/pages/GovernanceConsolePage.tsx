@@ -90,6 +90,7 @@ interface LedgerEntry { tagClass: string; tagLabel: string; id: string; desc: st
 function hex(n: number): string { let s = ""; for (let i = 0; i < n; i++) s += "0123456789abcdef"[Math.floor(Math.random() * 16)]; return s; }
 function sleep(ms: number): Promise<void> { return new Promise((r) => setTimeout(r, ms)); }
 
+// CIDG_CONTENT_ALIGNMENT_V730_R6
 export function GovernanceConsolePage() {
   const [mode, setMode] = useState<ModeKey>("deploy");
   const [agent, setAgent] = useState<AgentDef>(AGENTS[0]);
@@ -219,15 +220,15 @@ export function GovernanceConsolePage() {
     <div className="gic-root">
       <Helmet>
         <title>Governance Console | CoreIdentity</title>
-        <meta name="description" content="A live view of the CoreIdentity Governance Infrastructure processing an agent across its full lifecycle — deploy, govern, retire — with every governance layer enforcing in real time." />
+        <meta name="description" content="An interactive representative view of CoreIdentity Trust Infrastructure governing autonomous execution across the agent lifecycle." />
       </Helmet>
 
       <style>{CSS}</style>
 
-      <div className="gic-eyebrow"><span className="gic-dot" />Live View \u00b7 Governance Infrastructure</div>
-      <h1 className="gic-h1">Live Governance Infrastructure</h1>
+      <div className="gic-eyebrow"><span className="gic-dot" />Interactive View \u00b7 Trust Infrastructure</div>
+      <h1 className="gic-h1">Governed Autonomous Execution</h1>
       <p className="gic-subtitle">
-        A live view of the CoreIdentity Governance Infrastructure processing an agent across its full lifecycle. The console presents institutional governance capabilities rather than proprietary implementation components. Select a lifecycle event to observe how authority, policy, identity, execution boundaries, coordination, external access, evidence, and assurance operate together.
+        An interactive representative view of Trust Infrastructure governing autonomous execution across its lifecycle. The console presents institutional governance capabilities rather than proprietary implementation components. Select a lifecycle event to observe how authority, policy, identity, execution boundaries, coordination, external access, evidence, and assurance operate together under Autonomous Execution Governance.
       </p>
 
       <div className="gic-label">01 &mdash; Select a Lifecycle Event</div>
@@ -346,7 +347,7 @@ export function GovernanceConsolePage() {
       ) : null}
 
       <div className="gic-disclaimer">
-        A live view of the CoreIdentity Governance Infrastructure using representative governance scenarios. It reflects how institutional governance capabilities operate together across the agent lifecycle &mdash; provisioning, runtime enforcement, and decommission &mdash; without exposing proprietary implementation architecture. Tenant identity is masked; technical identifiers and proof representations shown are illustrative.
+        An interactive representative view of CoreIdentity Trust Infrastructure using governance scenarios. It illustrates how institutional governance capabilities operate together across the agent lifecycle &mdash; provisioning, runtime governance, and decommission &mdash; without exposing proprietary implementation architecture. Tenant identity is masked; technical identifiers and proof representations shown are illustrative.
       </div>
     </div>
   );

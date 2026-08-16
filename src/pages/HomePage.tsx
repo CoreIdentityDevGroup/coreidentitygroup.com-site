@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 import InstitutionalVisual from "../components/InstitutionalVisual";
 
+// CIDG_CONTENT_ALIGNMENT_V730_R8
 export default function HomePage() {
   return (
     <div className="cidg-platinum-home cidg-home-page cidg-home-trust-sequence">
@@ -14,36 +15,35 @@ export default function HomePage() {
       </Helmet>
 
       <section className="cidg-platinum-hero" aria-labelledby="cidg-platinum-title">
-        <div className="cidg-platinum-hero-sequence" aria-label="Governance framework sequence">
-          <div className="cidg-platinum-eyebrow">
-            <strong>Trust Infrastructure</strong>
-          </div>
-          <div className="cidg-platinum-eyebrow-terms">Intelligence • Assurance • Trust</div>
-          <div className="cidg-platinum-eyebrow-aeg"><strong>Autonomous Execution Governance</strong></div>
-        </div>
-
         <div className="cidg-platinum-hero-copy">
-          <h1 id="cidg-platinum-title">
-            The Institutional Foundation
-            <span>for the Autonomous Era</span>
-          </h1>
+          <h1 id="cidg-platinum-title">Making Autonomy Trustworthy.</h1>
 
           <p>
-            CoreIdentity enables organizations to safely delegate autonomous execution while ensuring they remain in control.
+            We build the Trust Infrastructure that enables institutions to embrace autonomous execution while preserving authority, accountability, trust, and control.
           </p>
+
+          <div className="cidg-platinum-hero-sequence" aria-label="CoreIdentity institutional governance architecture">
+            <div className="cidg-platinum-eyebrow">
+              <strong>Governance Ecosystem for the Autonomous Era</strong>
+            </div>
+            <div className="cidg-platinum-eyebrow-aeg"><strong>Trust Infrastructure</strong></div>
+            <div className="cidg-platinum-eyebrow-terms">Governance • Intelligence • Assurance • Trust</div>
+            <div className="cidg-platinum-eyebrow-aeg"><strong>Autonomous Execution Governance</strong></div>
+            <div className="cidg-platinum-eyebrow-terms">Operational doctrine for governing execution in motion</div>
+          </div>
         </div>
+
         <div className="cidg-platinum-hero-visual-col">
           <InstitutionalVisual
             src="/images/visuals/trust-infrastructure-3d.webp"
-            alt="Trust Infrastructure architecture: Intelligence, Assurance and Trust enabling Autonomous Governed Execution."
+            alt="CoreIdentity Governance Ecosystem and Trust Infrastructure for governed autonomous execution."
             className="cidg-platinum-visual--hero"
             priority
           />
           <p className="cidg-platinum-hero-architecture-note">
-            Each layer of our Trust Infrastructure is engineered with multiple proprietary components that work together
-            to establish authority, enforce policy, verify execution, preserve evidence, and maintain institutional control.
-            Together, these layers are designed to provide the highest level of Autonomous Execution Governance across the
-            full lifecycle of autonomous execution.
+            Trust Infrastructure is the institutional infrastructure through which authority can be established, delegated,
+            constrained, exercised, verified, and preserved throughout autonomous execution. The Institutional Chain of
+            Legitimacy preserves continuity between institutional authority, delegated execution, evidence, and accountability across the system.
           </p>
           <div className="cidg-platinum-hero-actions">
             <Link to="/trust-infrastructure" className="cidg-platinum-primary">
@@ -69,10 +69,10 @@ export default function HomePage() {
             Architecture, doctrine, and legitimacy—operating as one institutional system.
           </h2>
           <p>
-            Trust Infrastructure establishes the architectural discipline.
-            Autonomous Execution Governance defines the operational doctrine.
-            The Institutional Chain of Legitimacy preserves authority, accountability,
-            and evidence throughout autonomous execution.
+            The Governance Ecosystem integrates Trust Infrastructure, Autonomous Execution Governance,
+            and the Institutional Chain of Legitimacy as one operational institutional system. Trust Infrastructure
+            provides the production infrastructure, AEG governs execution in motion, and the Institutional Chain of
+            Legitimacy preserves continuity between authority, delegated execution, evidence, and accountability.
           </p>
           <Link to="/about">Understand CoreIdentity →</Link>
         </div>

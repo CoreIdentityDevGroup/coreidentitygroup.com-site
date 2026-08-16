@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 
+// CIDG_CONTENT_ALIGNMENT_V730_R9
 export function TrustPage() {
   return (
     <div className="cidg-framework-page cidg-framework-expanded">
@@ -14,7 +15,7 @@ export function TrustPage() {
         <h1>Institutional Trust</h1>
         <p className="cidg-framework-lead">Trust is not assumed. It is established through evidence.</p>
         <p className="cidg-framework-support">Autonomous systems should not be trusted merely because they perform successfully.</p>
-        <p className="cidg-framework-support">Institutional Trust emerges when organizations possess sufficient intelligence, assurance, evidence, and accountability to establish that autonomous execution occurred within legitimate authority and governed boundaries.</p>
+        <p className="cidg-framework-support">Institutional Trust is the Trust Infrastructure function that establishes verifiable confidence that authority, control, oversight, and accountability are maintained throughout governed execution.</p>
       </section>
 
       <section className="cidg-framework-architecture">
@@ -48,16 +49,16 @@ export function TrustPage() {
       <section className="cidg-framework-outcome">
         <p className="cidg-framework-kicker">The institutional outcome</p>
         <div className="cidg-framework-outcome-lines">
-          <p><strong>Trust Infrastructure</strong><span>establishes the foundation.</span></p>
-          <p><strong>Institutional Intelligence</strong><span>establishes understanding.</span></p>
-          <p><strong>Institutional Assurance</strong><span>establishes evidence.</span></p>
-          <p><strong>Institutional Trust</strong><span>establishes warranted confidence.</span></p>
+          <p><strong>Governance</strong><span>establishes authority, requirements, and boundaries.</span></p>
+          <p><strong>Institutional Intelligence</strong><span>establishes governed understanding.</span></p>
+          <p><strong>Institutional Assurance</strong><span>establishes verification and evidence.</span></p>
+          <p><strong>Institutional Trust</strong><span>establishes warranted institutional confidence.</span></p>
         </div>
         <p className="cidg-framework-doctrine">Delegate Execution. Never Surrender Control.</p>
       </section>
 
       <section className="cidg-framework-next">
-        <p>Together, these institutional layers operate as an integrated expression of the Governance Ecosystem.</p>
+        <p>Together, these institutional functions operate through Trust Infrastructure as an integrated expression of the Governance Ecosystem.</p>
         <Link to="/governance-ecosystem">Explore the Governance Ecosystem →</Link>
       </section>
     </div>
