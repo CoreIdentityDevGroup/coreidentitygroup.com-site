@@ -5723,36 +5723,103 @@ main:has(.cidg-leadership-profile-photo-wrap) {
 
 /* <<< coreidentity:v7.2.31-leadership-profile-production <<< */
 
-/* CIDG_HOME_VISUAL_V731_START */
+/* CIDG_RESPONSIVE_SYSTEM_V732_START */
 /*
- * Homepage mobile visual refinement.
- * Promise remains on one line at a smaller scale.
- * One deliberate paragraph-space separates positioning from architecture.
- * Mobile hero flow pulls the governance visual upward.
+ * Fluid responsive system for the CoreIdentity homepage.
+ * One design system across portrait, landscape, tablet and desktop.
  */
+.cidg-platinum-hero {
+  row-gap: clamp(1rem, 2.25vw, 2rem);
+}
+
+.cidg-platinum-hero-copy #cidg-platinum-title {
+  font-size: clamp(2rem, 4.2vw, 4.6rem);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.cidg-platinum-hero-copy > p {
+  font-size: clamp(1rem, 1.35vw, 1.35rem);
+  line-height: 1.55;
+  max-width: 62rem;
+  margin-bottom: clamp(1rem, 1.6vw, 1.5rem);
+}
+
+.cidg-platinum-hero-sequence {
+  margin-top: 0;
+  row-gap: clamp(0.45rem, 0.9vw, 0.8rem);
+}
+
+.cidg-platinum-eyebrow,
+.cidg-platinum-eyebrow-aeg {
+  font-size: clamp(0.92rem, 1.55vw, 1.35rem);
+}
+
+.cidg-platinum-eyebrow-terms {
+  font-size: clamp(0.92rem, 1.3vw, 1.2rem);
+}
+
+.cidg-platinum-hero-visual-col {
+  margin-top: clamp(-1rem, -1.3vw, -0.35rem);
+  padding-top: 0;
+}
+
+.cidg-platinum-hero-architecture-note {
+  margin-top: clamp(1rem, 1.6vw, 1.5rem);
+}
+
 @media (max-width: 760px) {
   .cidg-platinum-hero-copy #cidg-platinum-title {
-    font-size: clamp(1.45rem, 6.4vw, 2rem);
-    line-height: 1.08;
+    font-size: clamp(1.9rem, 8.4vw, 2.65rem);
     white-space: nowrap;
-    letter-spacing: -0.025em;
+    text-wrap: nowrap;
+    letter-spacing: -0.035em;
   }
 
   .cidg-platinum-hero-copy > p {
-    margin-bottom: 1.25rem;
-  }
-
-  .cidg-platinum-hero-sequence {
-    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   .cidg-platinum-hero {
-    row-gap: 1rem;
+    row-gap: 0.85rem;
   }
 
   .cidg-platinum-hero-visual-col {
-    margin-top: -0.75rem;
-    padding-top: 0;
+    margin-top: -1rem;
   }
 }
-/* CIDG_HOME_VISUAL_V731_END */
+
+@media (min-width: 761px) and (max-width: 1180px) {
+  .cidg-platinum-hero-copy #cidg-platinum-title {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+
+  .cidg-platinum-hero-visual-col {
+    margin-top: -0.8rem;
+  }
+}
+
+@media (min-width: 1181px) {
+  .cidg-platinum-hero-copy #cidg-platinum-title {
+    font-size: clamp(3rem, 4vw, 4.4rem);
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+}
+
+  .cidg-platinum-header {
+    min-height: clamp(4.5rem, 7vw, 6.25rem);
+  }
+
+  .cidg-platinum-brand {
+    transform: scale(clamp(0.82, 0.74 + 0.18vw, 1));
+    transform-origin: left center;
+  }
+
+  .cidg-platinum-menu-cta {
+    font-size: clamp(0.9rem, 0.8rem + 0.25vw, 1.05rem);
+  }
+/* CIDG_RESPONSIVE_SYSTEM_V732_END */
