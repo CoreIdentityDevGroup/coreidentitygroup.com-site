@@ -5723,103 +5723,15 @@ main:has(.cidg-leadership-profile-photo-wrap) {
 
 /* <<< coreidentity:v7.2.31-leadership-profile-production <<< */
 
-/* CIDG_RESPONSIVE_SYSTEM_V732_START */
-/*
- * Fluid responsive system for the CoreIdentity homepage.
- * One design system across portrait, landscape, tablet and desktop.
- */
-.cidg-platinum-hero {
-  row-gap: clamp(1rem, 2.25vw, 2rem);
-}
-
-.cidg-platinum-hero-copy #cidg-platinum-title {
-  font-size: clamp(2rem, 4.2vw, 4.6rem);
-  line-height: 1.03;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
-}
-
-.cidg-platinum-hero-copy > p {
-  font-size: clamp(1rem, 1.35vw, 1.35rem);
-  line-height: 1.55;
-  max-width: 62rem;
-  margin-bottom: clamp(1rem, 1.6vw, 1.5rem);
-}
-
-.cidg-platinum-hero-sequence {
-  margin-top: 0;
-  row-gap: clamp(0.45rem, 0.9vw, 0.8rem);
-}
-
-.cidg-platinum-eyebrow,
-.cidg-platinum-eyebrow-aeg {
-  font-size: clamp(0.92rem, 1.55vw, 1.35rem);
-}
-
-.cidg-platinum-eyebrow-terms {
-  font-size: clamp(0.92rem, 1.3vw, 1.2rem);
-}
-
-.cidg-platinum-hero-visual-col {
-  margin-top: clamp(-1rem, -1.3vw, -0.35rem);
-  padding-top: 0;
-}
-
-.cidg-platinum-hero-architecture-note {
-  margin-top: clamp(1rem, 1.6vw, 1.5rem);
-}
-
-@media (max-width: 760px) {
-  .cidg-platinum-hero-copy #cidg-platinum-title {
-    font-size: clamp(1.9rem, 8.4vw, 2.65rem);
-    white-space: nowrap;
-    text-wrap: nowrap;
-    letter-spacing: -0.035em;
-  }
-
-  .cidg-platinum-hero-copy > p {
-    margin-bottom: 1rem;
-  }
-
-  .cidg-platinum-hero {
-    row-gap: 0.85rem;
-  }
-
-  .cidg-platinum-hero-visual-col {
-    margin-top: -1rem;
-  }
-}
-
-@media (min-width: 761px) and (max-width: 1180px) {
-  .cidg-platinum-hero-copy #cidg-platinum-title {
-    font-size: clamp(2.4rem, 5vw, 3.8rem);
-    white-space: nowrap;
-    text-wrap: nowrap;
-  }
-
-  .cidg-platinum-hero-visual-col {
-    margin-top: -0.8rem;
-  }
-}
-
-@media (min-width: 1181px) {
-  .cidg-platinum-hero-copy #cidg-platinum-title {
-    font-size: clamp(3rem, 4vw, 4.4rem);
-    white-space: nowrap;
-    text-wrap: nowrap;
-  }
-}
-
-  .cidg-platinum-header {
-    min-height: clamp(4.5rem, 7vw, 6.25rem);
-  }
-
-  .cidg-platinum-brand {
-    transform: scale(clamp(0.82, 0.74 + 0.18vw, 1));
-    transform-origin: left center;
-  }
-
-  .cidg-platinum-menu-cta {
-    font-size: clamp(0.9rem, 0.8rem + 0.25vw, 1.05rem);
-  }
-/* CIDG_RESPONSIVE_SYSTEM_V732_END */
+/* CIDG_RESPONSIVE_SYSTEM_V734_START */
+.cidg-home-page .cidg-platinum-hero{align-items:start;row-gap:clamp(.75rem,1.5vw,1.25rem)}
+.cidg-home-page .cidg-platinum-hero-copy{width:100%;max-width:none}
+.cidg-home-page .cidg-platinum-hero-copy #cidg-platinum-title{margin:0;font-size:clamp(2rem,4vw,4.15rem);line-height:1.03;letter-spacing:-.035em;white-space:nowrap;text-wrap:nowrap}
+.cidg-home-page .cidg-platinum-hero-copy>p{max-width:62rem;margin:clamp(1rem,1.6vw,1.35rem) 0 0;font-size:clamp(1rem,1.25vw,1.22rem);line-height:1.55}
+.cidg-home-page .cidg-platinum-hero-sequence{width:100%;max-width:920px;margin:clamp(1rem,1.6vw,1.35rem) auto 0;row-gap:clamp(.35rem,.65vw,.65rem)}
+.cidg-home-page .cidg-platinum-hero-visual-col{margin-top:clamp(-1.25rem,-1.5vw,-.65rem);padding-top:0}
+.cidg-home-page .cidg-platinum-hero-visual-col .cidg-platinum-visual--hero{margin-top:0}
+@media(max-width:1080px){.cidg-home-page .cidg-platinum-hero{grid-template-columns:1fr}.cidg-home-page .cidg-platinum-hero-copy #cidg-platinum-title{font-size:clamp(2rem,5.6vw,3.65rem)}}
+@media(max-width:760px){.cidg-home-page .cidg-platinum-hero{padding:2.75rem 1.2rem 3.5rem;row-gap:.65rem}.cidg-home-page .cidg-platinum-hero-copy #cidg-platinum-title{font-size:clamp(1.85rem,7.8vw,2.55rem)}.cidg-home-page .cidg-platinum-hero-copy>p{margin-top:.9rem}.cidg-home-page .cidg-platinum-hero-sequence{margin-top:.9rem}.cidg-home-page .cidg-platinum-hero-visual-col{margin-top:-1.15rem}}
+@media(max-width:390px){.cidg-home-page .cidg-platinum-hero-copy #cidg-platinum-title{font-size:clamp(1.72rem,7.45vw,2.05rem);letter-spacing:-.04em}}
+/* CIDG_RESPONSIVE_SYSTEM_V734_END */
