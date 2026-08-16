@@ -5735,3 +5735,109 @@ main:has(.cidg-leadership-profile-photo-wrap) {
 @media(max-width:760px){.cidg-home-page .cidg-platinum-hero{padding:2.75rem 1.2rem 3.5rem;row-gap:.65rem}.cidg-home-page .cidg-platinum-hero-copy #cidg-platinum-title{font-size:clamp(1.85rem,7.8vw,2.55rem)}.cidg-home-page .cidg-platinum-hero-copy>p{margin-top:.9rem}.cidg-home-page .cidg-platinum-hero-sequence{margin-top:.9rem}.cidg-home-page .cidg-platinum-hero-visual-col{margin-top:-1.15rem}}
 @media(max-width:390px){.cidg-home-page .cidg-platinum-hero-copy #cidg-platinum-title{font-size:clamp(1.72rem,7.45vw,2.05rem);letter-spacing:-.04em}}
 /* CIDG_RESPONSIVE_SYSTEM_V734_END */
+
+/* CIDG_MOBILE_OVERFLOW_V735_START */
+/* Definitive containment contract for homepage hero. */
+html, body, #root {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.cidg-home-page,
+.cidg-home-page .cidg-platinum-hero,
+.cidg-home-page .cidg-platinum-hero > *,
+.cidg-home-page .cidg-platinum-hero-copy,
+.cidg-home-page .cidg-platinum-hero-sequence,
+.cidg-home-page .cidg-platinum-hero-visual-col {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.cidg-home-page .cidg-platinum-hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.cidg-home-page .cidg-platinum-hero-copy #cidg-platinum-title {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+.cidg-home-page .cidg-platinum-hero-copy > p,
+.cidg-home-page .cidg-platinum-hero-sequence,
+.cidg-home-page .cidg-platinum-eyebrow,
+.cidg-home-page .cidg-platinum-eyebrow-terms,
+.cidg-home-page .cidg-platinum-eyebrow-aeg {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.cidg-home-page .cidg-platinum-hero-visual-col {
+  width: 100%;
+  margin-top: -.9rem;
+}
+
+.cidg-home-page .cidg-platinum-hero-visual-col img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .cidg-home-page .cidg-platinum-hero {
+    width: 100%;
+    padding-left: clamp(1rem, 4.8vw, 1.3rem);
+    padding-right: clamp(1rem, 4.8vw, 1.3rem);
+  }
+
+  .cidg-home-page .cidg-platinum-hero-copy #cidg-platinum-title {
+    /*
+     * 29 characters including spaces. This range is deliberately
+     * conservative so the approved promise fits a 320px viewport.
+     */
+    font-size: clamp(1.42rem, 5.65vw, 1.82rem);
+    line-height: 1.08;
+    letter-spacing: -.045em;
+  }
+
+  .cidg-home-page .cidg-platinum-hero-copy > p {
+    width: 100%;
+    margin-top: .85rem;
+  }
+
+  .cidg-home-page .cidg-platinum-hero-sequence {
+    width: 100%;
+    margin-top: .85rem;
+    padding-inline: 0;
+  }
+
+  .cidg-home-page .cidg-platinum-eyebrow,
+  .cidg-home-page .cidg-platinum-eyebrow-aeg {
+    white-space: normal;
+  }
+
+  .cidg-home-page .cidg-platinum-eyebrow-terms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .15rem .5rem;
+    white-space: normal;
+  }
+
+  .cidg-home-page .cidg-platinum-hero-visual-col {
+    margin-top: -1.35rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .cidg-home-page .cidg-platinum-hero-copy #cidg-platinum-title {
+    font-size: clamp(1.34rem, 5.55vw, 1.52rem);
+    letter-spacing: -.05em;
+  }
+}
+/* CIDG_MOBILE_OVERFLOW_V735_END */
