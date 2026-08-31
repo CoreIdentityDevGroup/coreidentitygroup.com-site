@@ -526,6 +526,35 @@ css = r'''
 styles = (ROOT / "src/styles.css").read_text()
 if css_marker not in styles:
     styles = styles.rstrip() + css.rstrip() + "\n"
+
+menu_fix_marker = "/* >>> coreidentity:desktop-menu-visibility-fix-v1 >>> */"
+menu_fix_css = r'''
+
+/* >>> coreidentity:desktop-menu-visibility-fix-v1 >>> */
+/* Respect React's hidden state, bridge the hover gap, and keep the wide
+   Company menu inside the desktop viewport. */
+.cidg-nav-dropdown-panel[hidden] {
+  display: none !important;
+}
+
+.cidg-nav-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+.cidg-nav-dropdown:nth-of-type(3) .cidg-nav-dropdown-panel {
+  right: 0;
+  left: auto;
+  transform: none;
+}
+/* <<< coreidentity:desktop-menu-visibility-fix-v1 <<< */
+'''
+if menu_fix_marker not in styles:
+    styles = styles.rstrip() + menu_fix_css.rstrip() + "\n"
 else:
     styles = styles.rstrip() + "\n"
 (ROOT / "src/styles.css").write_text(styles)
