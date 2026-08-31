@@ -29,7 +29,7 @@ export function PlatformPage() {
           name="description"
           content="The complete CoreIdentity architecture for CTOs and security evaluators: institutional-grade identity, policy verification, and delegation assurance — every action authorized, attributed, and recorded in a tamper-evident trail, operating in production today."
         />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
 
       <section className="pt-4 md:pt-8">

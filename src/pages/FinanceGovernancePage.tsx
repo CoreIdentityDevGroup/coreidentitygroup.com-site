@@ -9,7 +9,7 @@ export function FinanceGovernancePage() {
       <Helmet>
         <title>Corporate Finance AI Governance | CoreIdentity</title>
         <meta name="description" content="CoreIdentity keeps autonomous agents inside SOX controls across the financial close, treasury, and reporting — authorized, segregated, and audit-ready for the SEC and external auditors." />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity FinanceOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity keeps autonomous agents inside SOX controls across the financial close, treasury, and reporting — authorized, segregated, and audit-ready for the SEC and external auditors.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity FinanceOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity keeps autonomous agents inside SOX controls across the financial close, treasury, and reporting — authorized, segregated, and audit-ready for the SEC and external auditors.","provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
       </Helmet>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}

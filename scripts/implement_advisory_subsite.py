@@ -322,14 +322,30 @@ import { Helmet } from "react-helmet-async";
 import { Header } from "./Header";
 import Footer from "./Footer";
 
-const FRAMED_ROUTES = new Set(["/about", "/leadership", "/governance-console", "/contact"]);
+const FRAMED_ROUTES = new Set([
+  "/about",
+  "/leadership",
+  "/governance-console",
+  "/contact",
+  "/platform",
+  "/governance-infrastructure",
+  "/portfolio",
+  "/smartnation-ai",
+  "/founders",
+  "/privacy",
+  "/terms",
+  "/faq",
+]);
+
+const FRAMED_ROUTE_PREFIXES = ["/governance/"];
 
 export function Layout() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const hash = useRouterState({ select: (state) => state.location.hash });
   const canonicalPath = pathname === "/" ? "/" : pathname.replace(/\/+$/, "");
   const canonical = `https://coreidentitygroup.com${canonicalPath}`;
-  const framed = FRAMED_ROUTES.has(canonicalPath);
+  const framed = FRAMED_ROUTES.has(canonicalPath)
+    || FRAMED_ROUTE_PREFIXES.some((prefix) => canonicalPath.startsWith(prefix));
 
   useEffect(() => {
     if (hash?.startsWith("#")) return;
@@ -646,6 +662,15 @@ if middleware_marker not in middleware:
   "/advisory/engage": { title: "Engage Advisory | CoreIdentity Advisory Group", desc: "Discuss your institution's AI governance requirements with CoreIdentity Advisory Group." },''', 1)
     middleware_path.write_text(middleware)
 
+# Remove legacy zero-dollar Offer objects from public JSON-LD. They imply
+# pricing to search engines even though the site intentionally publishes none.
+public_offer_fragment = ',"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}'
+for schema_path in (ROOT / "src/pages").glob("*.tsx"):
+    schema_source = schema_path.read_text()
+    schema_revised = schema_source.replace(public_offer_fragment, "")
+    if schema_revised != schema_source:
+        schema_path.write_text(schema_revised)
+
 css_marker = "/* >>> coreidentity:advisory-subsite-v1 >>> */"
 css = r'''
 
@@ -898,6 +923,42 @@ layout_refinement_css = r'''
 /* <<< coreidentity:page-layout-refinement-v1 <<< */
 '''
 styles = upsert_marked_block(styles, layout_refinement_marker, "/* <<< coreidentity:page-layout-refinement-v1 <<< */", layout_refinement_css)
+
+full_site_polish_marker = "/* >>> coreidentity:full-site-polish-v1 >>> */"
+full_site_polish_css = r'''
+
+/* >>> coreidentity:full-site-polish-v1 >>> */
+/* Shared safeguards for the remaining legacy content routes. The route-level
+   frame supplies the alignment; these rules keep dense content responsive. */
+.cidg-platinum-main--framed .cidg-interior-frame > * {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.cidg-platinum-main--framed .cidg-interior-frame .max-w-3xl {
+  max-width: 48rem;
+}
+
+.cidg-insight-article :not(pre) > code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.cidg-insight-article pre {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.advisory-nav {
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+/* <<< coreidentity:full-site-polish-v1 <<< */
+'''
+styles = upsert_marked_block(styles, full_site_polish_marker, "/* <<< coreidentity:full-site-polish-v1 <<< */", full_site_polish_css)
 (ROOT / "src/styles.css").write_text(styles)
 
 print("Advisory sub-site transform complete.")

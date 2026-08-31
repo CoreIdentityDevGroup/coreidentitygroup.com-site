@@ -6078,3 +6078,34 @@ html, body, #root {
   }
 }
 /* <<< coreidentity:page-layout-refinement-v1 <<< */
+
+/* >>> coreidentity:full-site-polish-v1 >>> */
+/* Shared safeguards for the remaining legacy content routes. The route-level
+   frame supplies the alignment; these rules keep dense content responsive. */
+.cidg-platinum-main--framed .cidg-interior-frame > * {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.cidg-platinum-main--framed .cidg-interior-frame .max-w-3xl {
+  max-width: 48rem;
+}
+
+.cidg-insight-article :not(pre) > code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.cidg-insight-article pre {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.advisory-nav {
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+/* <<< coreidentity:full-site-polish-v1 <<< */
