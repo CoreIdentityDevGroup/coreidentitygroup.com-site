@@ -47,20 +47,14 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
-    label: "Company",
+    label: "Advisory",
     columns: 2,
     items: [
-      { to: "/about", label: "About" },
-      { to: "/leadership", label: "Leadership" },
-      { to: "/portfolio", label: "Portfolio" },
-      { to: "/smartnation-ai", label: "SmartNation AI" },
-      { to: "/governance-console", label: "Governance Console" },
-      { to: "/contact", label: "Contact" },
       { to: "/advisory", label: "Advisory Group" },
       { to: "/advisory/executive-ai-governance", label: "Executive AI Governance" },
       { to: "/advisory/readiness", label: "Readiness & Assurance" },
       { to: "/advisory/governance-implementation", label: "Governance Implementation" },
-      { to: "/advisory/fractional-ai-governance", label: "Fractional Governance Office" },
+      { to: "/advisory/fractional-ai-governance", label: "Fractional AI Governance Office" },
       { to: "/advisory/autonomous-ai-governance", label: "Autonomous AI Governance" },
       { to: "/advisory/industries", label: "Advisory Industries" },
       { to: "/advisory/insights", label: "Advisory Insights" },
@@ -68,10 +62,66 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
+    label: "Company",
+    items: [
+      { to: "/about", label: "About" },
+      { to: "/leadership", label: "Leadership" },
+      { to: "/portfolio", label: "Portfolio" },
+      { to: "/smartnation-ai", label: "SmartNation AI" },
+      { to: "/governance-console", label: "Governance Console" },
+    ],
+  },
+  {
     label: "Insights",
     items: [
       { to: "/resources", label: "Resources" },
       { to: "/blog", label: "Insights" },
+      { to: "/faq", label: "FAQ" },
+    ],
+  },
+] as const;
+
+export const FOOTER_NAVIGATION_GROUPS: readonly NavigationGroup[] = [
+  {
+    label: "CoreIdentity",
+    items: [
+      { to: "/trust-infrastructure", label: "Trust Infrastructure" },
+      { to: "/governance-ecosystem", label: "Governance Ecosystem" },
+      { to: "/platform", label: "Governance Architecture" },
+    ],
+  },
+  {
+    label: "Markets",
+    items: [
+      { to: "/markets-we-serve", label: "Markets We Serve" },
+      { to: "/governance/regulated", label: "Regulated Industries" },
+      { to: "/governance/sovereign", label: "Sovereign Nations" },
+    ],
+  },
+  {
+    label: "Advisory",
+    items: [
+      { to: "/advisory", label: "Advisory Group" },
+      { to: "/advisory/executive-ai-governance", label: "Executive AI Governance" },
+      { to: "/advisory/fractional-ai-governance", label: "Fractional AI Governance Office" },
+      { to: "/advisory/engage", label: "Engage Advisory" },
+    ],
+  },
+  {
+    label: "Company",
+    items: [
+      { to: "/about", label: "About" },
+      { to: "/leadership", label: "Leadership" },
+      { to: "/portfolio", label: "Portfolio" },
+      { to: "/governance-console", label: "Governance Console" },
+      { to: "/contact", label: "Contact" },
+    ],
+  },
+  {
+    label: "Insights",
+    items: [
+      { to: "/blog", label: "Insights" },
+      { to: "/resources", label: "Resources" },
       { to: "/faq", label: "FAQ" },
     ],
   },

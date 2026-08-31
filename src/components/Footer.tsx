@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { NAVIGATION_GROUPS } from "../data/siteNavigation";
+import { FOOTER_NAVIGATION_GROUPS } from "../data/siteNavigation";
 
 export default function Footer() {
   return (
@@ -10,9 +10,7 @@ export default function Footer() {
             <span className="cidg-platinum-footer-mark">
               <img src="/logo-mark.png" alt="" />
             </span>
-            <span>
-              <strong>COREIDENTITY</strong>
-</span>
+            <span><strong>COREIDENTITY</strong></span>
           </Link>
 
           <p>
@@ -21,7 +19,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {NAVIGATION_GROUPS.map((group) => (
+        {FOOTER_NAVIGATION_GROUPS.map((group) => (
           <nav key={group.label} aria-label={`${group.label} navigation`}>
             <h2>{group.label}</h2>
             {group.items.map((item) => (
@@ -41,4 +39,3 @@ export default function Footer() {
     </footer>
   );
 }
-

@@ -4,6 +4,7 @@ import { NAVIGATION_GROUPS } from "../data/siteNavigation";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileGroupOpen, setMobileGroupOpen] = useState<string | null>(null);
   const [desktopOpen, setDesktopOpen] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
   const pathname = useRouterState({ select: (state) => state.location.pathname });
@@ -33,8 +34,17 @@ export function Header() {
 
   useEffect(() => {
     setMobileOpen(false);
+    setMobileGroupOpen(null);
     setDesktopOpen(null);
   }, [pathname]);
+
+  const toggleMobileMenu = () => {
+    const opening = !mobileOpen;
+    setMobileOpen(opening);
+    setMobileGroupOpen(opening
+      ? NAVIGATION_GROUPS.find((group) => group.items.some((item) => pathname === item.to || pathname.startsWith(`${item.to}/`)))?.label ?? null
+      : null);
+  };
 
   return (
     <header className="cidg-platinum-header" ref={headerRef}>
@@ -49,7 +59,7 @@ export function Header() {
             const isOpen = desktopOpen === group.label;
             const isActive = group.items.some((item) => pathname === item.to || pathname.startsWith(`${item.to}/`));
             return (
-              <div className="cidg-nav-dropdown" key={group.label} onMouseEnter={() => setDesktopOpen(group.label)} onMouseLeave={() => setDesktopOpen(null)}>
+              <div className="cidg-nav-dropdown" data-nav-group={group.label.toLowerCase()} key={group.label} onMouseEnter={() => setDesktopOpen(group.label)} onMouseLeave={() => setDesktopOpen(null)}>
                 <button type="button" className={isActive ? "is-active" : ""} aria-expanded={isOpen} aria-controls={`nav-${group.label.toLowerCase()}`} onClick={() => setDesktopOpen(group.label)}>
                   {group.label}<span aria-hidden="true">⌄</span>
                 </button>
@@ -62,19 +72,27 @@ export function Header() {
           <Link to="/contact" className="cidg-platinum-contact">Contact</Link>
         </nav>
 
-        <button type="button" className="cidg-platinum-menu-button" aria-expanded={mobileOpen} aria-controls="cidg-platinum-menu" onClick={() => setMobileOpen((value) => !value)}>
+        <button type="button" className="cidg-platinum-menu-button" aria-expanded={mobileOpen} aria-controls="cidg-platinum-menu" onClick={toggleMobileMenu}>
           {mobileOpen ? "Close" : "Menu"}
         </button>
       </div>
 
       <div id="cidg-platinum-menu" className={`cidg-platinum-menu ${mobileOpen ? "is-open" : ""}`} aria-hidden={!mobileOpen}>
         <div className="cidg-platinum-menu-inner">
-          {NAVIGATION_GROUPS.map((group) => (
-            <section key={group.label} className="cidg-platinum-menu-group">
-              <p>{group.label}</p>
-              {group.items.map((item) => <Link key={item.to} to={item.to}><span>{item.label}</span><b aria-hidden="true">→</b></Link>)}
-            </section>
-          ))}
+          {NAVIGATION_GROUPS.map((group) => {
+            const isOpen = mobileGroupOpen === group.label;
+            const panelId = `mobile-nav-${group.label.toLowerCase()}`;
+            return (
+              <section key={group.label} className="cidg-platinum-menu-group">
+                <button type="button" className="cidg-platinum-menu-group-button" aria-expanded={isOpen} aria-controls={panelId} onClick={() => setMobileGroupOpen(isOpen ? null : group.label)}>
+                  <span>{group.label}</span><b aria-hidden="true">+</b>
+                </button>
+                <div id={panelId} className="cidg-platinum-menu-group-links" hidden={!isOpen}>
+                  {group.items.map((item) => <Link key={item.to} to={item.to}><span>{item.label}</span><b aria-hidden="true">→</b></Link>)}
+                </div>
+              </section>
+            );
+          })}
           <Link to="/contact" className="cidg-platinum-menu-cta">Begin an Institutional Conversation</Link>
         </div>
       </div>

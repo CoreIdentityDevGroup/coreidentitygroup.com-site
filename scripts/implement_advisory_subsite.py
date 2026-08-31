@@ -25,6 +25,17 @@ def replace_once(path: str, old: str, new: str) -> None:
     target.write_text(content.replace(old, new, 1))
 
 
+def upsert_marked_block(content: str, start: str, end: str, block: str) -> str:
+    normalized = block.strip()
+    if start in content:
+        if end not in content:
+            raise RuntimeError(f"Closing marker missing for {start}")
+        before, remainder = content.split(start, 1)
+        _, after = remainder.split(end, 1)
+        return before.rstrip() + "\n\n" + normalized + after.rstrip() + "\n"
+    return content.rstrip() + "\n\n" + normalized + "\n"
+
+
 write("src/data/siteNavigation.ts", r'''
 export type NavigationItem = {
   to: string;
@@ -75,20 +86,14 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
-    label: "Company",
+    label: "Advisory",
     columns: 2,
     items: [
-      { to: "/about", label: "About" },
-      { to: "/leadership", label: "Leadership" },
-      { to: "/portfolio", label: "Portfolio" },
-      { to: "/smartnation-ai", label: "SmartNation AI" },
-      { to: "/governance-console", label: "Governance Console" },
-      { to: "/contact", label: "Contact" },
       { to: "/advisory", label: "Advisory Group" },
       { to: "/advisory/executive-ai-governance", label: "Executive AI Governance" },
       { to: "/advisory/readiness", label: "Readiness & Assurance" },
       { to: "/advisory/governance-implementation", label: "Governance Implementation" },
-      { to: "/advisory/fractional-ai-governance", label: "Fractional Governance Office" },
+      { to: "/advisory/fractional-ai-governance", label: "Fractional AI Governance Office" },
       { to: "/advisory/autonomous-ai-governance", label: "Autonomous AI Governance" },
       { to: "/advisory/industries", label: "Advisory Industries" },
       { to: "/advisory/insights", label: "Advisory Insights" },
@@ -96,10 +101,66 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
+    label: "Company",
+    items: [
+      { to: "/about", label: "About" },
+      { to: "/leadership", label: "Leadership" },
+      { to: "/portfolio", label: "Portfolio" },
+      { to: "/smartnation-ai", label: "SmartNation AI" },
+      { to: "/governance-console", label: "Governance Console" },
+    ],
+  },
+  {
     label: "Insights",
     items: [
       { to: "/resources", label: "Resources" },
       { to: "/blog", label: "Insights" },
+      { to: "/faq", label: "FAQ" },
+    ],
+  },
+] as const;
+
+export const FOOTER_NAVIGATION_GROUPS: readonly NavigationGroup[] = [
+  {
+    label: "CoreIdentity",
+    items: [
+      { to: "/trust-infrastructure", label: "Trust Infrastructure" },
+      { to: "/governance-ecosystem", label: "Governance Ecosystem" },
+      { to: "/platform", label: "Governance Architecture" },
+    ],
+  },
+  {
+    label: "Markets",
+    items: [
+      { to: "/markets-we-serve", label: "Markets We Serve" },
+      { to: "/governance/regulated", label: "Regulated Industries" },
+      { to: "/governance/sovereign", label: "Sovereign Nations" },
+    ],
+  },
+  {
+    label: "Advisory",
+    items: [
+      { to: "/advisory", label: "Advisory Group" },
+      { to: "/advisory/executive-ai-governance", label: "Executive AI Governance" },
+      { to: "/advisory/fractional-ai-governance", label: "Fractional AI Governance Office" },
+      { to: "/advisory/engage", label: "Engage Advisory" },
+    ],
+  },
+  {
+    label: "Company",
+    items: [
+      { to: "/about", label: "About" },
+      { to: "/leadership", label: "Leadership" },
+      { to: "/portfolio", label: "Portfolio" },
+      { to: "/governance-console", label: "Governance Console" },
+      { to: "/contact", label: "Contact" },
+    ],
+  },
+  {
+    label: "Insights",
+    items: [
+      { to: "/blog", label: "Insights" },
+      { to: "/resources", label: "Resources" },
       { to: "/faq", label: "FAQ" },
     ],
   },
@@ -113,6 +174,7 @@ import { NAVIGATION_GROUPS } from "../data/siteNavigation";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileGroupOpen, setMobileGroupOpen] = useState<string | null>(null);
   const [desktopOpen, setDesktopOpen] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
   const pathname = useRouterState({ select: (state) => state.location.pathname });
@@ -142,8 +204,17 @@ export function Header() {
 
   useEffect(() => {
     setMobileOpen(false);
+    setMobileGroupOpen(null);
     setDesktopOpen(null);
   }, [pathname]);
+
+  const toggleMobileMenu = () => {
+    const opening = !mobileOpen;
+    setMobileOpen(opening);
+    setMobileGroupOpen(opening
+      ? NAVIGATION_GROUPS.find((group) => group.items.some((item) => pathname === item.to || pathname.startsWith(`${item.to}/`)))?.label ?? null
+      : null);
+  };
 
   return (
     <header className="cidg-platinum-header" ref={headerRef}>
@@ -158,7 +229,7 @@ export function Header() {
             const isOpen = desktopOpen === group.label;
             const isActive = group.items.some((item) => pathname === item.to || pathname.startsWith(`${item.to}/`));
             return (
-              <div className="cidg-nav-dropdown" key={group.label} onMouseEnter={() => setDesktopOpen(group.label)} onMouseLeave={() => setDesktopOpen(null)}>
+              <div className="cidg-nav-dropdown" data-nav-group={group.label.toLowerCase()} key={group.label} onMouseEnter={() => setDesktopOpen(group.label)} onMouseLeave={() => setDesktopOpen(null)}>
                 <button type="button" className={isActive ? "is-active" : ""} aria-expanded={isOpen} aria-controls={`nav-${group.label.toLowerCase()}`} onClick={() => setDesktopOpen(group.label)}>
                   {group.label}<span aria-hidden="true">⌄</span>
                 </button>
@@ -171,23 +242,75 @@ export function Header() {
           <Link to="/contact" className="cidg-platinum-contact">Contact</Link>
         </nav>
 
-        <button type="button" className="cidg-platinum-menu-button" aria-expanded={mobileOpen} aria-controls="cidg-platinum-menu" onClick={() => setMobileOpen((value) => !value)}>
+        <button type="button" className="cidg-platinum-menu-button" aria-expanded={mobileOpen} aria-controls="cidg-platinum-menu" onClick={toggleMobileMenu}>
           {mobileOpen ? "Close" : "Menu"}
         </button>
       </div>
 
       <div id="cidg-platinum-menu" className={`cidg-platinum-menu ${mobileOpen ? "is-open" : ""}`} aria-hidden={!mobileOpen}>
         <div className="cidg-platinum-menu-inner">
-          {NAVIGATION_GROUPS.map((group) => (
-            <section key={group.label} className="cidg-platinum-menu-group">
-              <p>{group.label}</p>
-              {group.items.map((item) => <Link key={item.to} to={item.to}><span>{item.label}</span><b aria-hidden="true">→</b></Link>)}
-            </section>
-          ))}
+          {NAVIGATION_GROUPS.map((group) => {
+            const isOpen = mobileGroupOpen === group.label;
+            const panelId = `mobile-nav-${group.label.toLowerCase()}`;
+            return (
+              <section key={group.label} className="cidg-platinum-menu-group">
+                <button type="button" className="cidg-platinum-menu-group-button" aria-expanded={isOpen} aria-controls={panelId} onClick={() => setMobileGroupOpen(isOpen ? null : group.label)}>
+                  <span>{group.label}</span><b aria-hidden="true">+</b>
+                </button>
+                <div id={panelId} className="cidg-platinum-menu-group-links" hidden={!isOpen}>
+                  {group.items.map((item) => <Link key={item.to} to={item.to}><span>{item.label}</span><b aria-hidden="true">→</b></Link>)}
+                </div>
+              </section>
+            );
+          })}
           <Link to="/contact" className="cidg-platinum-menu-cta">Begin an Institutional Conversation</Link>
         </div>
       </div>
     </header>
+  );
+}
+''')
+
+write("src/components/Footer.tsx", r'''
+import { Link } from "@tanstack/react-router";
+import { FOOTER_NAVIGATION_GROUPS } from "../data/siteNavigation";
+
+export default function Footer() {
+  return (
+    <footer className="cidg-platinum-footer">
+      <div className="cidg-platinum-footer-grid">
+        <div className="cidg-platinum-footer-brand">
+          <Link to="/" className="cidg-platinum-footer-lockup">
+            <span className="cidg-platinum-footer-mark">
+              <img src="/logo-mark.png" alt="" />
+            </span>
+            <span><strong>COREIDENTITY</strong></span>
+          </Link>
+
+          <p>
+            Establishing the Trust Infrastructure that enables institutions to
+            safely delegate autonomous execution while ensuring they remain in control.
+          </p>
+        </div>
+
+        {FOOTER_NAVIGATION_GROUPS.map((group) => (
+          <nav key={group.label} aria-label={`${group.label} navigation`}>
+            <h2>{group.label}</h2>
+            {group.items.map((item) => (
+              <Link key={item.to} to={item.to}>{item.label}</Link>
+            ))}
+          </nav>
+        ))}
+      </div>
+
+      <div className="cidg-platinum-footer-legal">
+        <span>© {new Date().getFullYear()} CoreIdentity Development Group</span>
+        <span>
+          <Link to="/privacy">Privacy</Link>
+          <Link to="/terms">Terms</Link>
+        </span>
+      </div>
+    </footer>
   );
 }
 ''')
@@ -518,21 +641,20 @@ css = r'''
 
 /* >>> coreidentity:advisory-subsite-v1 >>> */
 .cidg-interior-frame{width:min(1180px,calc(100% - 2.5rem));margin:0 auto;padding:clamp(2rem,4vw,4.5rem) 0 clamp(4rem,7vw,7rem);box-sizing:border-box}.cidg-platinum-main--framed{overflow-x:clip}.cidg-platinum-main--framed .cidg-interior-frame>*{min-width:0}
-.cidg-platinum-desktop-nav{gap:clamp(8px,1vw,18px)}.cidg-nav-dropdown{position:relative}.cidg-nav-dropdown>button{min-height:44px;display:flex;align-items:center;gap:.4rem;padding:0 .5rem;border:0;color:#d7d7d7;background:transparent;font:inherit;font-size:.82rem;font-weight:750;cursor:pointer}.cidg-nav-dropdown>button span{font-size:.9rem;transition:transform .18s ease}.cidg-nav-dropdown>button[aria-expanded="true"] span{transform:rotate(180deg)}.cidg-nav-dropdown>button.is-active{color:#fff}.cidg-nav-dropdown-panel{position:absolute;top:calc(100% + 14px);left:50%;width:280px;max-height:min(66vh,560px);padding:.8rem;display:grid;overflow-y:auto;border:1px solid rgba(230,230,230,.16);border-radius:16px;background:#0a0a0a;box-shadow:0 24px 60px rgba(0,0,0,.28);transform:translateX(-50%)}.cidg-nav-dropdown-panel.has-two-columns{width:min(620px,78vw);grid-template-columns:1fr 1fr;column-gap:.5rem}.cidg-nav-dropdown-panel a{min-height:42px;display:flex;align-items:center;padding:.55rem .7rem;border-radius:9px;color:#d7d7d7;font-size:.82rem;line-height:1.25}.cidg-nav-dropdown-panel a:hover,.cidg-nav-dropdown-panel a:focus-visible{color:#fff;background:rgba(255,255,255,.08);outline:none}.cidg-platinum-footer-grid{grid-template-columns:minmax(250px,1.35fr) repeat(4,minmax(130px,.55fr));gap:clamp(1.5rem,3vw,3rem)}
+.cidg-platinum-desktop-nav{gap:clamp(6px,.75vw,14px)}.cidg-nav-dropdown{position:relative}.cidg-nav-dropdown>button{min-height:44px;display:flex;align-items:center;gap:.4rem;padding:0 .42rem;border:0;color:#d7d7d7;background:transparent;font:inherit;font-size:.8rem;font-weight:750;cursor:pointer}.cidg-nav-dropdown>button span{font-size:.9rem;transition:transform .18s ease}.cidg-nav-dropdown>button[aria-expanded="true"] span{transform:rotate(180deg)}.cidg-nav-dropdown>button.is-active{color:#fff}.cidg-nav-dropdown-panel{position:absolute;top:calc(100% + 14px);left:50%;width:280px;max-height:min(66vh,560px);padding:.8rem;display:grid;overflow-y:auto;border:1px solid rgba(230,230,230,.16);border-radius:16px;background:#0a0a0a;box-shadow:0 24px 60px rgba(0,0,0,.28);transform:translateX(-50%)}.cidg-nav-dropdown-panel.has-two-columns{width:min(620px,78vw);grid-template-columns:1fr 1fr;column-gap:.5rem}.cidg-nav-dropdown-panel a{min-height:42px;display:flex;align-items:center;padding:.55rem .7rem;border-radius:9px;color:#d7d7d7;font-size:.82rem;line-height:1.25}.cidg-nav-dropdown-panel a:hover,.cidg-nav-dropdown-panel a:focus-visible{color:#fff;background:rgba(255,255,255,.08);outline:none}.cidg-platinum-menu-group-button{width:100%;min-height:62px;display:flex;align-items:center;justify-content:space-between;padding:0;border:0;border-bottom:1px solid var(--platinum-line);color:#d7d7d7;background:transparent;font:inherit;font-size:.84rem;font-weight:850;letter-spacing:.15em;text-align:left;text-transform:uppercase;cursor:pointer}.cidg-platinum-menu-group-button b{font-size:1.35rem;font-weight:400;transition:transform .18s ease}.cidg-platinum-menu-group-button[aria-expanded="true"] b{transform:rotate(45deg)}.cidg-platinum-menu-group-links[hidden]{display:none}.cidg-platinum-footer-grid{grid-template-columns:minmax(230px,1.4fr) repeat(5,minmax(100px,.5fr));gap:clamp(1.25rem,2.4vw,2.5rem)}
 .advisory-site{--ad-ink:#151a22;--ad-copy:#4e5662;--ad-line:rgba(21,26,34,.14);--ad-platinum:#d9d9d6;--ad-warm:#9a682a;background:#fff;color:var(--ad-ink)}.advisory-lockup{padding:1.4rem clamp(1.25rem,5vw,5rem) 1rem;border-bottom:1px solid var(--ad-line)}.advisory-lockup a{display:inline-grid;text-decoration:none}.advisory-lockup strong{font-size:1rem;letter-spacing:.18em}.advisory-lockup span{margin-top:.3rem;color:#6b7280;font-size:.72rem;font-weight:750;letter-spacing:.2em}.advisory-nav{position:sticky;top:110px;z-index:30;display:flex;gap:.2rem;padding:.65rem clamp(1rem,4vw,4rem);overflow-x:auto;border-bottom:1px solid var(--ad-line);background:rgba(255,255,255,.96);backdrop-filter:blur(12px);scrollbar-width:none}.advisory-nav a{flex:0 0 auto;padding:.65rem .75rem;border-radius:7px;color:#515967;font-size:.76rem;font-weight:750;text-decoration:none;white-space:nowrap}.advisory-nav a:hover,.advisory-nav a.is-active{color:#111827;background:#f0f1f3}.advisory-hero{padding:clamp(4.5rem,8vw,8rem) clamp(1.25rem,7vw,7rem);background:linear-gradient(135deg,#fff 0%,#fff 64%,#f2f0eb 100%)}.advisory-eyebrow{margin:0 0 1.2rem;color:var(--ad-warm)!important;font-size:.75rem;font-weight:850;letter-spacing:.18em;text-transform:uppercase}.advisory-hero h1{max-width:1040px;margin:0;color:var(--ad-ink);font-size:clamp(3rem,7vw,7rem);font-weight:500;line-height:.96;letter-spacing:-.05em}.advisory-lead{max-width:850px;margin:2rem 0 0;color:var(--ad-copy)!important;font-size:clamp(1.15rem,1.7vw,1.45rem);line-height:1.7}.advisory-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.5rem}.advisory-primary,.advisory-secondary{min-height:54px;display:inline-flex;align-items:center;justify-content:center;padding:0 1.25rem;border:1px solid #172131;border-radius:6px;font-size:.76rem;font-weight:850;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}.advisory-primary{color:#fff!important;background:#172131}.advisory-secondary{color:#172131!important;background:#fff}.advisory-section{padding:clamp(4rem,7vw,7rem) clamp(1.25rem,7vw,7rem);border-top:1px solid var(--ad-line);background:#fff}.advisory-section.is-dark{background:#171d26}.advisory-section-inner{width:min(1180px,100%);margin:0 auto}.advisory-section h2,.advisory-closing h2{max-width:980px;margin:0 0 1.8rem;color:var(--ad-ink);font-size:clamp(2.3rem,4.6vw,4.8rem);font-weight:500;line-height:1.03;letter-spacing:-.04em}.advisory-section p{max-width:850px;color:var(--ad-copy)!important;font-size:1.04rem;line-height:1.8}.advisory-section.is-dark h2,.advisory-section.is-dark h3{color:#fff}.advisory-section.is-dark p{color:#c8ced7!important}.advisory-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:2.5rem;background:var(--ad-line)}.advisory-cards article{padding:clamp(1.5rem,3vw,2.5rem);background:#fff}.advisory-cards h3{margin:0 0 .85rem;color:var(--ad-ink);font:750 clamp(1.15rem,2vw,1.55rem)/1.2 theme('fontFamily.sans')}.advisory-cards p{margin:0;font-size:.96rem;line-height:1.7}.advisory-section.is-dark .advisory-cards{background:rgba(255,255,255,.12)}.advisory-section.is-dark .advisory-cards article{background:#1d2531}.advisory-inline-links{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2rem}.advisory-inline-links a{color:#172131;font-weight:800;text-decoration:none}.advisory-steps,.advisory-progression{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin:2rem 0 2.5rem}.advisory-steps span,.advisory-progression span{padding:1rem 1.2rem;border:1px solid var(--ad-line);font-weight:800}.advisory-progression{flex-direction:column;align-items:stretch;max-width:760px}.advisory-progression span{text-align:center;border-color:rgba(255,255,255,.16);color:#fff}.advisory-progression b{text-align:center;color:#aeb6c2}.advisory-lifecycle{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem}.advisory-lifecycle span{min-height:130px;display:flex;flex-direction:column;justify-content:space-between;padding:1rem;border-top:2px solid var(--ad-warm);background:#f4f5f6;color:#8b5e27;font-size:.72rem;font-weight:850}.advisory-lifecycle strong{color:#1b2330;font-size:.92rem}.advisory-questions{display:grid;grid-template-columns:repeat(2,1fr);gap:0 2rem;border-top:1px solid var(--ad-line)}.advisory-questions p{margin:0;padding:1rem 0;border-bottom:1px solid var(--ad-line);font-weight:750}.advisory-note{max-width:none!important;margin-top:2rem;padding:1.2rem 1.4rem;border-left:3px solid var(--ad-warm);background:rgba(154,104,42,.08)}.advisory-closing{min-height:420px;display:grid;place-items:center;align-content:center;padding:4rem 1.25rem;text-align:center;background:#f1f2f4}.advisory-closing h2{max-width:980px}.advisory-form-section{padding:0 clamp(1.25rem,7vw,7rem) clamp(5rem,8vw,8rem)}.advisory-form{width:min(1080px,100%);margin:0 auto;padding:clamp(1.3rem,3vw,2.5rem);border:1px solid var(--ad-line);background:#fafafa}.advisory-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.advisory-field{display:grid;gap:.45rem;color:#374151;font-size:.78rem;font-weight:800}.advisory-field span{letter-spacing:.04em}.advisory-field input,.advisory-field select,.advisory-field textarea{width:100%;min-height:50px;padding:.75rem;border:1px solid rgba(17,24,39,.18);border-radius:5px;background:#fff;color:#111827;font:inherit;font-size:.95rem;box-sizing:border-box}.advisory-field textarea{resize:vertical}.advisory-field-wide{margin-top:1rem}.advisory-form-footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.25rem}.advisory-form-footer p{margin:0;color:#687181;font-size:.78rem}.advisory-form-footer button{min-height:52px;padding:0 1.2rem;border:0;border-radius:5px;background:#172131;color:#fff;font-weight:800}.advisory-form-footer button:disabled{opacity:.45}
 @media(max-width:1080px){.cidg-platinum-footer-grid{grid-template-columns:repeat(2,1fr)}.cidg-platinum-footer-brand{grid-column:1/-1}}@media(max-width:720px){.cidg-interior-frame{width:min(100% - 1.5rem,1180px);padding-top:1.5rem}.advisory-nav{top:96px}.advisory-hero{padding-top:3.5rem}.advisory-actions{display:grid}.advisory-primary,.advisory-secondary{width:100%;box-sizing:border-box}.advisory-cards,.advisory-form-grid,.advisory-questions{grid-template-columns:1fr}.advisory-lifecycle{grid-template-columns:1fr 1fr}.advisory-form-footer{align-items:stretch;flex-direction:column}.advisory-form-footer button{width:100%}}@media(max-width:460px){.cidg-platinum-footer-grid{grid-template-columns:1fr}.cidg-platinum-footer-brand{grid-column:auto}.advisory-hero h1{font-size:clamp(2.7rem,14vw,4rem)}}
 /* <<< coreidentity:advisory-subsite-v1 <<< */
 '''
 styles = (ROOT / "src/styles.css").read_text()
-if css_marker not in styles:
-    styles = styles.rstrip() + css.rstrip() + "\n"
+styles = upsert_marked_block(styles, css_marker, "/* <<< coreidentity:advisory-subsite-v1 <<< */", css)
 
 menu_fix_marker = "/* >>> coreidentity:desktop-menu-visibility-fix-v1 >>> */"
 menu_fix_css = r'''
 
 /* >>> coreidentity:desktop-menu-visibility-fix-v1 >>> */
-/* Respect React's hidden state, bridge the hover gap, and keep the wide
-   Company menu inside the desktop viewport. */
+/* Respect React's hidden state, bridge the hover gap, and keep right-side
+   dropdowns inside the desktop viewport. */
 .cidg-nav-dropdown-panel[hidden] {
   display: none !important;
 }
@@ -546,17 +668,15 @@ menu_fix_css = r'''
   height: 16px;
 }
 
-.cidg-nav-dropdown:nth-of-type(3) .cidg-nav-dropdown-panel {
+.cidg-nav-dropdown[data-nav-group="company"] .cidg-nav-dropdown-panel,
+.cidg-nav-dropdown[data-nav-group="insights"] .cidg-nav-dropdown-panel {
   right: 0;
   left: auto;
   transform: none;
 }
 /* <<< coreidentity:desktop-menu-visibility-fix-v1 <<< */
 '''
-if menu_fix_marker not in styles:
-    styles = styles.rstrip() + menu_fix_css.rstrip() + "\n"
-else:
-    styles = styles.rstrip() + "\n"
+styles = upsert_marked_block(styles, menu_fix_marker, "/* <<< coreidentity:desktop-menu-visibility-fix-v1 <<< */", menu_fix_css)
 (ROOT / "src/styles.css").write_text(styles)
 
 print("Advisory sub-site transform complete.")
