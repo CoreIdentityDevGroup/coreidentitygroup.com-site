@@ -46,6 +46,17 @@ import { VerificationAtScalePage } from "./pages/VerificationAtScalePage";
 import { SovereignAssurancePage } from "./pages/SovereignAssurancePage";
 
 import MarketsWeServePage from "./pages/MarketsWeServePage";
+import {
+  AdvisoryHomePage,
+  ExecutiveAIGovernancePage,
+  AdvisoryReadinessPage,
+  GovernanceImplementationPage,
+  FractionalGovernancePage,
+  AutonomousAIGovernancePage,
+  AdvisoryIndustriesPage,
+  AdvisoryInsightsPage,
+  AdvisoryEngagePage,
+} from "./pages/AdvisoryPages";
 const rootRoute = createRootRoute({ component: Layout });
 
 const indexRoute = createRoute({
@@ -133,23 +144,34 @@ const smartRoute = createRoute({
   component: SmartNationAIPage,
 });
 
-// ── Advisory (canonical + aliases) ──────────────────────────────────────
+// ── Advisory sub-site ──────────────────────────────────────────────────
+const advisoryHomeRoute = createRoute({ getParentRoute: () => rootRoute, path: "/advisory", component: AdvisoryHomePage });
+const advisoryExecutiveRoute = createRoute({ getParentRoute: () => rootRoute, path: "/advisory/executive-ai-governance", component: ExecutiveAIGovernancePage });
+const advisoryReadinessRoute = createRoute({ getParentRoute: () => rootRoute, path: "/advisory/readiness", component: AdvisoryReadinessPage });
+const advisoryImplementationRoute = createRoute({ getParentRoute: () => rootRoute, path: "/advisory/governance-implementation", component: GovernanceImplementationPage });
+const advisoryFractionalRoute = createRoute({ getParentRoute: () => rootRoute, path: "/advisory/fractional-ai-governance", component: FractionalGovernancePage });
+const advisoryAutonomousRoute = createRoute({ getParentRoute: () => rootRoute, path: "/advisory/autonomous-ai-governance", component: AutonomousAIGovernancePage });
+const advisoryIndustriesRoute = createRoute({ getParentRoute: () => rootRoute, path: "/advisory/industries", component: AdvisoryIndustriesPage });
+const advisoryInsightsRoute = createRoute({ getParentRoute: () => rootRoute, path: "/advisory/insights", component: AdvisoryInsightsPage });
+const advisoryEngageRoute = createRoute({ getParentRoute: () => rootRoute, path: "/advisory/engage", component: AdvisoryEngagePage });
+
+// ── Advisory legacy aliases ────────────────────────────────────────────
 const ciagRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/ciag",
-  component: CoreIdentityAdvisoryGroupPage,
+  component: AdvisoryHomePage,
 });
 
 const coreidentityAIAdvisoryGroupRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/coreidentity-ai-advisory-group",
-  component: CoreIdentityAdvisoryGroupPage,
+  component: AdvisoryHomePage,
 });
 
 const advisoryRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/coreidentity-advisory-group",
-  component: CoreIdentityAdvisoryGroupPage,
+  component: AdvisoryHomePage,
 });
 
 // ── Company + legal ─────────────────────────────────────────────────────
@@ -327,7 +349,16 @@ const routeTree = rootRoute.addChildren([
   portfolioRoute,
   smartRoute,
 
-  // Advisory: canonical first, aliases second
+  // Advisory sub-site and legacy aliases
+  advisoryHomeRoute,
+  advisoryExecutiveRoute,
+  advisoryReadinessRoute,
+  advisoryImplementationRoute,
+  advisoryFractionalRoute,
+  advisoryAutonomousRoute,
+  advisoryIndustriesRoute,
+  advisoryInsightsRoute,
+  advisoryEngageRoute,
   ciagRoute,
   coreidentityAIAdvisoryGroupRoute,
   advisoryRoute,

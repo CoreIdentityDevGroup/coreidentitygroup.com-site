@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 
 import { PageTitle } from "../components/ui";
+import { Helmet } from "react-helmet-async";
 
 type ContactPayload = {
   name: string;
@@ -88,6 +89,7 @@ export default function ContactPage() {
 
   return (
     <div className="space-y-8">
+      <Helmet><title>Contact | CoreIdentity</title><meta name="description" content="Contact CoreIdentity to discuss Trust Infrastructure, governed autonomous execution, institutional advisory services, strategic partnerships, or deployment pathways." /></Helmet>
       <div className="space-y-3">
         <PageTitle>Contact</PageTitle>
         <p className="text-white/70 max-w-3xl">
@@ -104,6 +106,7 @@ export default function ContactPage() {
               </label>
               <input
                 id="name"
+                name="name"
                 value={form.name}
                 onChange={(e) => update("name", e.target.value)}
                 className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
@@ -119,6 +122,8 @@ export default function ContactPage() {
               </label>
               <input
                 id="email"
+                name="email"
+                type="email"
                 value={form.email}
                 onChange={(e) => update("email", e.target.value)}
                 className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
@@ -137,6 +142,7 @@ export default function ContactPage() {
               </label>
               <input
                 id="company"
+                name="company"
                 value={form.company}
                 onChange={(e) => update("company", e.target.value)}
                 className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
@@ -151,6 +157,7 @@ export default function ContactPage() {
               </label>
               <input
                 id="interest"
+                name="interest"
                 value={form.interest}
                 onChange={(e) => update("interest", e.target.value)}
                 className="h-11 rounded-xl border border-white/10 bg-black/30 px-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"
@@ -165,6 +172,7 @@ export default function ContactPage() {
             </label>
             <textarea
               id="message"
+              name="message"
               value={form.message}
               onChange={(e) => update("message", e.target.value)}
               className="min-h-[140px] rounded-xl border border-white/10 bg-black/30 px-3 py-3 text-white placeholder:text-white/30 outline-none focus:border-white/25"

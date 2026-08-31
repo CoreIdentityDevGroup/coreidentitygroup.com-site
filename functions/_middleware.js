@@ -12,6 +12,15 @@ const POSTS = {
 
 // Static governance surfaces — pre-rendered OG cards for social/bot crawlers.
 const PAGES = {
+  "/advisory": { title: "Executive AI Governance | CoreIdentity Advisory Group", desc: "CoreIdentity Advisory Group helps institutions establish the governance required to adopt, scale, and govern AI from assisted decisions through autonomous execution." },
+  "/advisory/executive-ai-governance": { title: "Executive AI Governance | CoreIdentity Advisory Group", desc: "Make AI governance an executive operating capability connecting strategy, authority, risk, controls, assurance, and accountability." },
+  "/advisory/readiness": { title: "AI Governance Readiness & Assurance | CoreIdentity Advisory Group", desc: "Establish an executive baseline of AI governance maturity, exposure, gaps, and priority actions." },
+  "/advisory/governance-implementation": { title: "AI Governance Design & Implementation | CoreIdentity Advisory Group", desc: "Turn AI governance principles into an operating lifecycle with clear authority, controls, evidence, and assurance." },
+  "/advisory/fractional-ai-governance": { title: "Fractional AI Governance Office | CoreIdentity Advisory Group", desc: "Embedded executive AI governance leadership for institutions that need continuing capability while building their permanent model." },
+  "/advisory/autonomous-ai-governance": { title: "Autonomous & Agentic AI Governance | CoreIdentity Advisory Group", desc: "Extend AI governance to delegated machine authority, execution boundaries, continuous assurance, and institutional accountability." },
+  "/advisory/industries": { title: "Institutional & Regulated Environments | CoreIdentity Advisory Group", desc: "Executive AI governance for environments where AI decisions and actions carry material institutional consequence." },
+  "/advisory/insights": { title: "Executive AI Governance Insights | CoreIdentity Advisory Group", desc: "Executive perspectives on AI governance operating models, accountability, assurance, agentic systems, and autonomous execution." },
+  "/advisory/engage": { title: "Engage Advisory | CoreIdentity Advisory Group", desc: "Discuss your institution's AI governance requirements with CoreIdentity Advisory Group." },
   "/platform": {
     title: "Platform Architecture | CoreIdentity",
     desc: "The complete CoreIdentity governance substrate for evaluators: eight components across identity, authorization, formal verification, orchestration, and post-quantum hardening — schema-enforced accountability boundaries across every agent action, a Platinum Test Suite with every invariant held, governed agent interactions at institutional scale."

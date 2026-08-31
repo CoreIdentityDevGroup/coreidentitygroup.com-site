@@ -1,25 +1,27 @@
-# 301 redirects — retired surfaces → governance layers (Institutional Carbon restructure).
-# Specific rules must precede the SPA catch-all (first match wins).
-/sal                     /layer-b   301
-/fgre                    /layer-b   301
-/sentinel                /layer-d   301
-/nexus                   /layer-c   301
-/agentidentity-systems   /layer-a   301
-/mcp                     /layer-d   301
-/ago                     /layer-c   301
-/ago-1                   /layer-c   301
-/sentinel-os             /layer-d   301
-/nexus-os                /layer-c   301
-/quantum-hardening       /layer-d   301
-/coreidentity-technologies  /platform  301
+# Canonical Advisory sub-site
+/ciag                              /advisory 301
+/coreidentity-ai-advisory-group    /advisory 301
+/coreidentity-advisory-group       /advisory 301
+/advisory/                         /advisory 301
 
-# >>> coreidentity:architecture-rename >>>
-/portal                  /contact                301
-/layer-a                 /execution-integrity     301
-/layer-b                 /verification-at-scale   301
-/layer-c                 /sovereign-assurance     301
-/layer-d                 /platform                301
-# <<< coreidentity:architecture-rename <<<
+# Retired surfaces
+/sal                     /verification-at-scale 301
+/fgre                    /verification-at-scale 301
+/sentinel                /platform 301
+/nexus                   /sovereign-assurance 301
+/agentidentity-systems   /execution-integrity 301
+/mcp                     /platform 301
+/ago                     /sovereign-assurance 301
+/ago-1                   /sovereign-assurance 301
+/sentinel-os             /platform 301
+/nexus-os                /sovereign-assurance 301
+/quantum-hardening       /platform 301
+/coreidentity-technologies /platform 301
+/portal                  /contact 301
+/layer-a                 /execution-integrity 301
+/layer-b                 /verification-at-scale 301
+/layer-c                 /sovereign-assurance 301
+/layer-d                 /platform 301
 
 # SPA fallback
-/*    /index.html   200
+/* /index.html 200
