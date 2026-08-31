@@ -354,7 +354,7 @@ export function Layout() {
 ''')
 
 write("src/pages/AdvisoryPages.tsx", r'''
-import { FormEvent, ReactNode, useMemo, useState } from "react";
+import { FormEvent, ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 
@@ -376,10 +376,20 @@ function Meta({ title, description }: { title: string; description: string }) {
 
 function AdvisoryShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const advisoryNavRef = useRef<HTMLElement>(null);
+  const activeLinkRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const nav = advisoryNavRef.current;
+    const active = activeLinkRef.current;
+    if (!nav || !active) return;
+    nav.scrollLeft = Math.max(0, active.offsetLeft - (nav.clientWidth - active.clientWidth) / 2);
+  }, [pathname]);
+
   return <div className="advisory-site">
     <div className="advisory-lockup"><Link to="/advisory"><strong>COREIDENTITY</strong><span>ADVISORY GROUP</span></Link></div>
-    <nav className="advisory-nav" aria-label="Advisory navigation">
-      {advisoryNav.map(([to, label]) => <Link key={to} to={to} className={pathname === to ? "is-active" : ""}>{label}</Link>)}
+    <nav ref={advisoryNavRef} className="advisory-nav" aria-label="Advisory navigation">
+      {advisoryNav.map(([to, label]) => <Link key={to} ref={pathname === to ? activeLinkRef : undefined} to={to} className={pathname === to ? "is-active" : ""}>{label}</Link>)}
     </nav>
     {children}
   </div>;
@@ -677,6 +687,217 @@ menu_fix_css = r'''
 /* <<< coreidentity:desktop-menu-visibility-fix-v1 <<< */
 '''
 styles = upsert_marked_block(styles, menu_fix_marker, "/* <<< coreidentity:desktop-menu-visibility-fix-v1 <<< */", menu_fix_css)
+
+layout_refinement_marker = "/* >>> coreidentity:page-layout-refinement-v1 >>> */"
+layout_refinement_css = r'''
+
+/* >>> coreidentity:page-layout-refinement-v1 >>> */
+/* Give every content page a deliberate inset frame and a consistent
+   responsive rhythm. Advisory retains full section color while its borders
+   and content align with the rest of the site. */
+.cidg-interior-frame {
+  width: min(1180px, calc(100% - 2.5rem));
+}
+
+.advisory-site {
+  --ad-frame: min(1360px, calc(100% - 2.5rem));
+  padding-bottom: clamp(1.25rem, 3vw, 2.5rem);
+  background: #f3f4f5;
+  overflow-x: clip;
+}
+
+.advisory-site > .advisory-lockup,
+.advisory-site > .advisory-nav,
+.advisory-site > .advisory-hero,
+.advisory-site > .advisory-section,
+.advisory-site > .advisory-closing,
+.advisory-site > .advisory-form-section {
+  width: var(--ad-frame);
+  margin-inline: auto;
+  box-sizing: border-box;
+  border-inline: 1px solid var(--ad-line);
+}
+
+.advisory-lockup {
+  padding: 1.4rem clamp(1.25rem, 5vw, 5rem) 1rem;
+  border-top: 1px solid var(--ad-line);
+  background: #fff;
+}
+
+.advisory-nav {
+  padding-inline: clamp(1rem, 4vw, 4rem);
+}
+
+.advisory-hero {
+  padding: clamp(3.75rem, 6.5vw, 6.5rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+.advisory-hero h1 {
+  max-width: 1120px;
+  font-size: clamp(3.25rem, 6vw, 6.25rem);
+  line-height: .98;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+.advisory-lead {
+  max-width: 800px;
+  margin-top: 1.65rem;
+  font-size: clamp(1.08rem, 1.45vw, 1.34rem);
+  line-height: 1.68;
+  text-wrap: pretty;
+}
+
+.advisory-actions {
+  margin-top: 2.1rem;
+}
+
+.advisory-primary,
+.advisory-secondary {
+  border-radius: 8px;
+}
+
+.advisory-section {
+  padding: clamp(3.75rem, 6vw, 5.75rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+.advisory-section h2,
+.advisory-closing h2 {
+  max-width: 920px;
+  font-size: clamp(2.25rem, 4vw, 4rem);
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.advisory-section p {
+  max-width: 800px;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.advisory-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 2.1rem;
+}
+
+.advisory-cards article:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.advisory-lifecycle {
+  gap: .65rem;
+}
+
+.advisory-lifecycle span {
+  min-height: 118px;
+}
+
+.advisory-closing {
+  min-height: 360px;
+  border-top: 1px solid var(--ad-line);
+}
+
+.advisory-form-section {
+  padding: 0 clamp(1.25rem, 5vw, 5rem) clamp(4rem, 7vw, 6.5rem);
+  background: #fff;
+}
+
+.advisory-form {
+  border-radius: 10px;
+}
+
+@media (max-width: 720px) {
+  .cidg-interior-frame {
+    width: min(100% - 2.5rem, 1180px);
+    padding-top: 2rem;
+  }
+
+  .advisory-site {
+    --ad-frame: calc(100% - 2rem);
+    padding-bottom: 1rem;
+  }
+
+  .advisory-lockup {
+    padding: 1.25rem;
+  }
+
+  .advisory-nav {
+    padding-inline: .75rem;
+    scroll-padding-inline: 3rem;
+  }
+
+  .advisory-hero {
+    padding: 3.25rem 1.25rem 3.75rem;
+  }
+
+  .advisory-hero h1 {
+    font-size: clamp(2.3rem, 11vw, 3rem);
+    line-height: 1.02;
+    letter-spacing: -.04em;
+  }
+
+  .advisory-lead {
+    margin-top: 1.4rem;
+    font-size: 1.04rem;
+    line-height: 1.65;
+  }
+
+  .advisory-section {
+    padding: 3.25rem 1.25rem;
+  }
+
+  .advisory-section h2,
+  .advisory-closing h2 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .advisory-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .advisory-cards article:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .advisory-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+
+  .advisory-steps span {
+    text-align: center;
+  }
+
+  .advisory-steps b {
+    text-align: center;
+    transform: rotate(90deg);
+  }
+
+  .advisory-lifecycle {
+    gap: .65rem;
+  }
+
+  .advisory-lifecycle span {
+    min-height: 108px;
+  }
+
+  .advisory-lifecycle span:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .advisory-closing {
+    min-height: 300px;
+    padding-inline: 1.25rem;
+  }
+
+  .advisory-form-section {
+    padding: 0 1.25rem 4rem;
+  }
+}
+/* <<< coreidentity:page-layout-refinement-v1 <<< */
+'''
+styles = upsert_marked_block(styles, layout_refinement_marker, "/* <<< coreidentity:page-layout-refinement-v1 <<< */", layout_refinement_css)
 (ROOT / "src/styles.css").write_text(styles)
 
 print("Advisory sub-site transform complete.")

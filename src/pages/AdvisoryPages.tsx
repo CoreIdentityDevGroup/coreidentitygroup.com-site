@@ -1,4 +1,4 @@
-import { FormEvent, ReactNode, useMemo, useState } from "react";
+import { FormEvent, ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 
@@ -20,10 +20,20 @@ function Meta({ title, description }: { title: string; description: string }) {
 
 function AdvisoryShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const advisoryNavRef = useRef<HTMLElement>(null);
+  const activeLinkRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const nav = advisoryNavRef.current;
+    const active = activeLinkRef.current;
+    if (!nav || !active) return;
+    nav.scrollLeft = Math.max(0, active.offsetLeft - (nav.clientWidth - active.clientWidth) / 2);
+  }, [pathname]);
+
   return <div className="advisory-site">
     <div className="advisory-lockup"><Link to="/advisory"><strong>COREIDENTITY</strong><span>ADVISORY GROUP</span></Link></div>
-    <nav className="advisory-nav" aria-label="Advisory navigation">
-      {advisoryNav.map(([to, label]) => <Link key={to} to={to} className={pathname === to ? "is-active" : ""}>{label}</Link>)}
+    <nav ref={advisoryNavRef} className="advisory-nav" aria-label="Advisory navigation">
+      {advisoryNav.map(([to, label]) => <Link key={to} ref={pathname === to ? activeLinkRef : undefined} to={to} className={pathname === to ? "is-active" : ""}>{label}</Link>)}
     </nav>
     {children}
   </div>;
