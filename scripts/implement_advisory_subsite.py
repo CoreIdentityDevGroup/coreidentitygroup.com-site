@@ -686,8 +686,16 @@ replace_once(
   `Todd Morgan is the Founder and Chief Executive Officer of CoreIdentity Development Group and the architect of the CoreIdentity Governance Ecosystem for the Autonomous Era.`,
   `His current work is focused on establishing Trust Infrastructure as a foundational institutional discipline for organizations adopting increasingly autonomous systems. He originated Autonomous Execution Governance as the operating doctrine for governing delegated machine authority and developed the Institutional Chain of Legitimacy to connect every autonomous action to a valid source of institutional authority.`,
   `Together, these concepts form the CoreIdentity Governance Ecosystem—an integrated architecture spanning executive governance, operational controls, verifiable identity, policy-bound execution, continuous assurance, and institutional accountability. Through CoreIdentity, Todd is leading the development of the infrastructure and governance capabilities institutions will require to safely expand autonomous execution without surrendering control.`,
+  `Todd also leads CoreIdentity Advisory Group (CIAG), the company's executive AI governance practice. Through CIAG, he works with institutional leaders to establish the decision rights, operating models, controls, assurance, and accountability required to govern AI today while preparing for increasingly autonomous execution.`,
   `This work is informed by more than 30 years of executive leadership across complex, highly regulated, and mission-critical environments in national security, defense, technology, and private enterprise. Todd holds an MBA and a Bachelor of Science in Information Systems and has completed executive education in artificial intelligence.`,
 ];''',
+)
+
+replace_once(
+    "src/pages/LeadershipPage.tsx",
+    '''  `This work is informed by more than 30 years of executive leadership across complex, highly regulated, and mission-critical environments in national security, defense, technology, and private enterprise. Todd holds an MBA and a Bachelor of Science in Information Systems and has completed executive education in artificial intelligence.`,''',
+    '''  `Todd also leads CoreIdentity Advisory Group (CIAG), the company's executive AI governance practice. Through CIAG, he works with institutional leaders to establish the decision rights, operating models, controls, assurance, and accountability required to govern AI today while preparing for increasingly autonomous execution.`,
+  `This work is informed by more than 30 years of executive leadership across complex, highly regulated, and mission-critical environments in national security, defense, technology, and private enterprise. Todd holds an MBA and a Bachelor of Science in Information Systems and has completed executive education in artificial intelligence.`,''',
 )
 
 replace_once(
