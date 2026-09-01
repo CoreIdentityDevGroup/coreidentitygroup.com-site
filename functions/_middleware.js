@@ -12,6 +12,7 @@ const POSTS = {
 
 // Static governance surfaces — pre-rendered OG cards for social/bot crawlers.
 const PAGES = {
+  "/leadership": { title: "Leadership | CoreIdentity", desc: "Todd Morgan leads CoreIdentity as Founder and CEO, establishing Trust Infrastructure and the Governance Ecosystem for the Autonomous Era." },
   "/advisory": { title: "Executive AI Governance | CoreIdentity Advisory Group", desc: "CoreIdentity Advisory Group helps institutions establish the governance required to adopt, scale, and govern AI from assisted decisions through autonomous execution." },
   "/advisory/executive-ai-governance": { title: "Executive AI Governance | CoreIdentity Advisory Group", desc: "Make AI governance an executive operating capability connecting strategy, authority, risk, controls, assurance, and accountability." },
   "/advisory/readiness": { title: "AI Governance Readiness & Assurance | CoreIdentity Advisory Group", desc: "Establish an executive baseline of AI governance maturity, exposure, gaps, and priority actions." },

@@ -671,6 +671,46 @@ for schema_path in (ROOT / "src/pages").glob("*.tsx"):
     if schema_revised != schema_source:
         schema_path.write_text(schema_revised)
 
+# Position Leadership around Todd's present role and current institutional work,
+# with prior operating experience serving as supporting credibility.
+replace_once(
+    "src/pages/LeadershipPage.tsx",
+    '''const TODD_CANONICAL_BIO = [
+  `Todd Morgan is the Founder and Chief Executive Officer of CoreIdentity Development Group and the architect of the CoreIdentity Governance Ecosystem for the Autonomous Era.`,
+  `He brings more than 30 years of executive leadership experience across complex, highly regulated, multi-stakeholder operating environments spanning national security, defense, technology, and private enterprise. His career has centered on leading organizations where accountability, operational integrity, resilience, and institutional control are fundamental requirements.`,
+  `Applying first-principles reasoning to the emergence of autonomous systems, Todd originated Trust Infrastructure as the architectural discipline for institutional trust and developed Autonomous Execution Governance (AEG) as the operational doctrine governing autonomous execution.`,
+  `Together, Trust Infrastructure, Autonomous Execution Governance, and the Institutional Chain of Legitimacy form the CoreIdentity Governance Ecosystem—an operational institutional architecture designed to enable organizations to safely delegate autonomous execution while ensuring they remain in control.`,
+  `Todd holds an MBA and a Bachelor of Science in Information Systems and has completed executive education in artificial intelligence, complementing his decades of operating leadership with formal grounding in business, technology, and the emerging governance requirements of advanced AI systems.`,
+];''',
+    '''const TODD_CANONICAL_BIO = [
+  `Todd Morgan is the Founder and Chief Executive Officer of CoreIdentity Development Group and the architect of the CoreIdentity Governance Ecosystem for the Autonomous Era.`,
+  `His current work is focused on establishing Trust Infrastructure as a foundational institutional discipline for organizations adopting increasingly autonomous systems. He originated Autonomous Execution Governance as the operating doctrine for governing delegated machine authority and developed the Institutional Chain of Legitimacy to connect every autonomous action to a valid source of institutional authority.`,
+  `Together, these concepts form the CoreIdentity Governance Ecosystem—an integrated architecture spanning executive governance, operational controls, verifiable identity, policy-bound execution, continuous assurance, and institutional accountability. Through CoreIdentity, Todd is leading the development of the infrastructure and governance capabilities institutions will require to safely expand autonomous execution without surrendering control.`,
+  `This work is informed by more than 30 years of executive leadership across complex, highly regulated, and mission-critical environments in national security, defense, technology, and private enterprise. Todd holds an MBA and a Bachelor of Science in Information Systems and has completed executive education in artificial intelligence.`,
+];''',
+)
+
+replace_once(
+    "src/pages/LeadershipPage.tsx",
+    '''        <meta name="description" content="CoreIdentity is led by operators who have built and governed mission-critical systems in the most demanding institutional environments — where trust is proven, not asserted." />''',
+    '''        <meta name="description" content="Todd Morgan leads CoreIdentity as Founder and CEO, establishing Trust Infrastructure and the Governance Ecosystem for the Autonomous Era." />''',
+)
+
+replace_once(
+    "src/pages/LeadershipPage.tsx",
+    '''        <p className="text-white/70 max-w-3xl leading-relaxed">CoreIdentity's leadership comprises experienced operators who have built and led complex organizations, programs, and institutional systems in environments where accountability, resilience, and execution matter.</p>''',
+    '''        <p className="text-white/70 max-w-3xl leading-relaxed">CoreIdentity is led by founder and Chief Executive Officer Todd Morgan, who is establishing the institutional architecture required for organizations to govern autonomous execution while preserving human authority, accountability, and control.</p>''',
+)
+
+replace_once(
+    "functions/_middleware.js",
+    '''const PAGES = {
+  "/advisory":''',
+    '''const PAGES = {
+  "/leadership": { title: "Leadership | CoreIdentity", desc: "Todd Morgan leads CoreIdentity as Founder and CEO, establishing Trust Infrastructure and the Governance Ecosystem for the Autonomous Era." },
+  "/advisory":''',
+)
+
 css_marker = "/* >>> coreidentity:advisory-subsite-v1 >>> */"
 css = r'''
 
