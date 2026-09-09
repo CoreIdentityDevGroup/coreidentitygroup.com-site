@@ -78,3 +78,23 @@
 
 /* Keep page identification readable from the first paint. */
 #main-content h1,#main-content .cidg-framework-hero>*,#main-content .cidg-ecosystem-hero-copy>*{animation:none;opacity:1;transform:none}
+
+/* Canonical heading roles. Important declarations intentionally supersede legacy
+   page-level important typography; colors remain surface-specific. */
+.cidg-platinum-site{--site-title:clamp(2.25rem,4vw,3.5rem);--site-section-title:clamp(1.75rem,2.5vw,2.5rem);--site-card-title:clamp(1.125rem,1.6vw,1.375rem);--site-serif:"Source Serif 4",ui-serif,Georgia,Cambria,"Times New Roman",serif;--site-sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+#main-content h1{font-family:var(--site-serif)!important;font-size:var(--site-title)!important;font-weight:600!important;line-height:1.12!important;letter-spacing:-.035em!important}
+#main-content h2{font-family:var(--site-sans)!important;font-size:var(--site-section-title)!important;font-weight:650!important;line-height:1.2!important;letter-spacing:-.025em!important}
+#main-content h3,#main-content .cidg-insights-index article h2,#main-content .cidg-resources-grid article h2{font-family:var(--site-sans)!important;font-size:var(--site-card-title)!important;font-weight:650!important;line-height:1.35!important;letter-spacing:-.015em!important}
+#main-content .cidg-framework-page.cidg-framework-expanded .cidg-framework-hero h1{font-size:var(--site-title)!important;line-height:1.12!important}
+#main-content .cidg-ecosystem-hero{grid-template-columns:minmax(0,1fr) minmax(0,360px)}
+#main-content .cidg-ecosystem-hero-art,#main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image{max-width:360px}
+#main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image img{width:100%;max-width:360px;max-height:340px}
+@media(max-width:1000px){#main-content .cidg-ecosystem-hero{grid-template-columns:minmax(0,1fr) minmax(0,260px)}#main-content .cidg-ecosystem-hero-art,#main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image{max-width:260px}#main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image img{max-height:260px}}
+@media(max-width:700px){#main-content .cidg-ecosystem-hero{grid-template-columns:1fr}#main-content .cidg-ecosystem-hero-art{display:flex;align-items:center;gap:1.25rem;max-width:100%;text-align:left}#main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image{flex:0 1 180px;max-width:180px}#main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image img{max-height:180px}#main-content .cidg-ecosystem-hero-art>p{flex:1;min-width:0;margin:0}}
+
+/* Framework pages use the same opening rhythm and text edge as Company pages. */
+#main-content .cidg-framework-page .cidg-framework-hero{min-height:0!important;display:block!important;padding:var(--site-section) var(--site-inset)!important}
+#main-content .cidg-framework-hero .cidg-framework-support{width:100%!important;max-width:72ch!important;justify-self:start!important;margin:1rem 0 0!important}
+#main-content .cidg-framework-page>section>h2,#main-content .cidg-framework-page>section>p{margin-inline:0!important;text-align:left}
+#main-content .cidg-framework-hero .cidg-framework-kicker{margin:0 0 1rem}
+#main-content .cidg-framework-hero h1{margin:0 0 1.25rem}
