@@ -98,3 +98,8 @@
 #main-content .cidg-framework-page>section>h2,#main-content .cidg-framework-page>section>p{margin-inline:0!important;text-align:left}
 #main-content .cidg-framework-hero .cidg-framework-kicker{margin:0 0 1rem}
 #main-content .cidg-framework-hero h1{margin:0 0 1.25rem}
+
+/* Keep wide desktop menus within the viewport. */
+.cidg-nav-dropdown[data-nav-group="capabilities"] .cidg-nav-dropdown-panel,.cidg-nav-dropdown[data-nav-group="markets"] .cidg-nav-dropdown-panel{left:auto;right:0;transform:none}
+/* Four navigation groups plus the brand column. */
+@media(min-width:1081px){.cidg-platinum-footer-grid{grid-template-columns:minmax(230px,1.4fr) repeat(4,minmax(130px,1fr))}}

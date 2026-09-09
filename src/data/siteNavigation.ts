@@ -17,8 +17,9 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
       { to: "/about", label: "About" },
       { to: "/leadership", label: "Leadership" },
       { to: "/portfolio", label: "Portfolio" },
-      { to: "/smartnation-ai", label: "SmartNation AI" },
-      { to: "/governance-console", label: "Governance Console" },
+      { to: "/resources", label: "Resources" },
+      { to: "/blog", label: "Insights" },
+      { to: "/faq", label: "FAQ" },
     ],
   },
   {
@@ -37,9 +38,10 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
-    label: "CoreIdentity",
+    label: "Capabilities",
     columns: 2,
     items: [
+      { to: "/smartnation-ai", label: "SmartNation AI Workforce" },
       { to: "/trust-infrastructure", label: "Trust Infrastructure" },
       { to: "/intelligence", label: "Institutional Intelligence" },
       { to: "/assurance", label: "Institutional Assurance" },
@@ -49,6 +51,7 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
       { to: "/execution-integrity", label: "Execution Integrity" },
       { to: "/verification-at-scale", label: "Verification at Scale" },
       { to: "/sovereign-assurance", label: "Sovereign Assurance" },
+      { to: "/governance-console", label: "Governance Console" },
     ],
   },
   {
@@ -71,14 +74,6 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
       { to: "/governance/education", label: "Education" },
     ],
   },
-  {
-    label: "Insights",
-    items: [
-      { to: "/resources", label: "Resources" },
-      { to: "/blog", label: "Insights" },
-      { to: "/faq", label: "FAQ" },
-    ],
-  },
 ] as const;
 
 export const FOOTER_NAVIGATION_GROUPS: readonly NavigationGroup[] = [
@@ -88,8 +83,10 @@ export const FOOTER_NAVIGATION_GROUPS: readonly NavigationGroup[] = [
       { to: "/about", label: "About" },
       { to: "/leadership", label: "Leadership" },
       { to: "/portfolio", label: "Portfolio" },
-      { to: "/governance-console", label: "Governance Console" },
       { to: "/contact", label: "Contact" },
+      { to: "/blog", label: "Insights" },
+      { to: "/resources", label: "Resources" },
+      { to: "/faq", label: "FAQ" },
     ],
   },
   {
@@ -102,11 +99,13 @@ export const FOOTER_NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
-    label: "CoreIdentity",
+    label: "Capabilities",
     items: [
+      { to: "/smartnation-ai", label: "SmartNation AI Workforce" },
       { to: "/trust-infrastructure", label: "Trust Infrastructure" },
       { to: "/governance-ecosystem", label: "Governance Ecosystem" },
       { to: "/platform", label: "Governance Architecture" },
+      { to: "/governance-console", label: "Governance Console" },
     ],
   },
   {
@@ -115,14 +114,6 @@ export const FOOTER_NAVIGATION_GROUPS: readonly NavigationGroup[] = [
       { to: "/markets-we-serve", label: "Markets We Serve" },
       { to: "/governance/regulated", label: "Regulated Industries" },
       { to: "/governance/sovereign", label: "Sovereign Nations" },
-    ],
-  },
-  {
-    label: "Insights",
-    items: [
-      { to: "/blog", label: "Insights" },
-      { to: "/resources", label: "Resources" },
-      { to: "/faq", label: "FAQ" },
     ],
   },
 ] as const;
