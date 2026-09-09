@@ -12,6 +12,31 @@ export type NavigationGroup = {
 
 export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
   {
+    label: "Company",
+    items: [
+      { to: "/about", label: "About" },
+      { to: "/leadership", label: "Leadership" },
+      { to: "/portfolio", label: "Portfolio" },
+      { to: "/smartnation-ai", label: "SmartNation AI" },
+      { to: "/governance-console", label: "Governance Console" },
+    ],
+  },
+  {
+    label: "Advisory",
+    columns: 2,
+    items: [
+      { to: "/advisory", label: "Advisory Group" },
+      { to: "/advisory/executive-ai-governance", label: "Executive AI Governance" },
+      { to: "/advisory/readiness", label: "Readiness & Assurance" },
+      { to: "/advisory/governance-implementation", label: "Governance Implementation" },
+      { to: "/advisory/fractional-ai-governance", label: "Fractional AI Governance Office" },
+      { to: "/advisory/autonomous-ai-governance", label: "Autonomous AI Governance" },
+      { to: "/advisory/industries", label: "Advisory Industries" },
+      { to: "/advisory/insights", label: "Advisory Insights" },
+      { to: "/advisory/engage", label: "Engage Advisory" },
+    ],
+  },
+  {
     label: "CoreIdentity",
     columns: 2,
     items: [
@@ -47,31 +72,6 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
     ],
   },
   {
-    label: "Advisory",
-    columns: 2,
-    items: [
-      { to: "/advisory", label: "Advisory Group" },
-      { to: "/advisory/executive-ai-governance", label: "Executive AI Governance" },
-      { to: "/advisory/readiness", label: "Readiness & Assurance" },
-      { to: "/advisory/governance-implementation", label: "Governance Implementation" },
-      { to: "/advisory/fractional-ai-governance", label: "Fractional AI Governance Office" },
-      { to: "/advisory/autonomous-ai-governance", label: "Autonomous AI Governance" },
-      { to: "/advisory/industries", label: "Advisory Industries" },
-      { to: "/advisory/insights", label: "Advisory Insights" },
-      { to: "/advisory/engage", label: "Engage Advisory" },
-    ],
-  },
-  {
-    label: "Company",
-    items: [
-      { to: "/about", label: "About" },
-      { to: "/leadership", label: "Leadership" },
-      { to: "/portfolio", label: "Portfolio" },
-      { to: "/smartnation-ai", label: "SmartNation AI" },
-      { to: "/governance-console", label: "Governance Console" },
-    ],
-  },
-  {
     label: "Insights",
     items: [
       { to: "/resources", label: "Resources" },
@@ -82,6 +82,25 @@ export const NAVIGATION_GROUPS: readonly NavigationGroup[] = [
 ] as const;
 
 export const FOOTER_NAVIGATION_GROUPS: readonly NavigationGroup[] = [
+  {
+    label: "Company",
+    items: [
+      { to: "/about", label: "About" },
+      { to: "/leadership", label: "Leadership" },
+      { to: "/portfolio", label: "Portfolio" },
+      { to: "/governance-console", label: "Governance Console" },
+      { to: "/contact", label: "Contact" },
+    ],
+  },
+  {
+    label: "Advisory",
+    items: [
+      { to: "/advisory", label: "Advisory Group" },
+      { to: "/advisory/executive-ai-governance", label: "Executive AI Governance" },
+      { to: "/advisory/fractional-ai-governance", label: "Fractional AI Governance Office" },
+      { to: "/advisory/engage", label: "Engage Advisory" },
+    ],
+  },
   {
     label: "CoreIdentity",
     items: [
@@ -96,25 +115,6 @@ export const FOOTER_NAVIGATION_GROUPS: readonly NavigationGroup[] = [
       { to: "/markets-we-serve", label: "Markets We Serve" },
       { to: "/governance/regulated", label: "Regulated Industries" },
       { to: "/governance/sovereign", label: "Sovereign Nations" },
-    ],
-  },
-  {
-    label: "Advisory",
-    items: [
-      { to: "/advisory", label: "Advisory Group" },
-      { to: "/advisory/executive-ai-governance", label: "Executive AI Governance" },
-      { to: "/advisory/fractional-ai-governance", label: "Fractional AI Governance Office" },
-      { to: "/advisory/engage", label: "Engage Advisory" },
-    ],
-  },
-  {
-    label: "Company",
-    items: [
-      { to: "/about", label: "About" },
-      { to: "/leadership", label: "Leadership" },
-      { to: "/portfolio", label: "Portfolio" },
-      { to: "/governance-console", label: "Governance Console" },
-      { to: "/contact", label: "Contact" },
     ],
   },
   {
