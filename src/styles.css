@@ -6109,3 +6109,18 @@ html, body, #root {
   -webkit-overflow-scrolling: touch;
 }
 /* <<< coreidentity:full-site-polish-v1 <<< */
+
+/* ECOSYSTEM_JOURNEY_20260909 */
+.cidg-journey .cidg-journey-intro,.cidg-journey .cidg-journey-feedback{max-width:78ch;margin:1.6rem 0 0;color:#485568;line-height:1.8;font-size:1.05rem}
+.cidg-journey-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;list-style:none;padding:0;margin:2.6rem 0}
+.cidg-journey-grid li{min-width:0;padding:1.7rem;background:#fff;border:1px solid #dce1e7;border-radius:12px;display:flex;flex-direction:column;align-items:flex-start}
+.cidg-journey-number{color:#76603d;font-weight:700;font-size:1.15rem}
+.cidg-journey-grid .cidg-journey-owner{color:#596579;font-size:.76rem;font-weight:700;letter-spacing:.06em;margin:1rem 0 .7rem;text-transform:uppercase}
+.cidg-journey-grid h3{color:#172234;font-size:1.45rem;line-height:1.2;margin:0;letter-spacing:-.02em}
+.cidg-journey-grid p{color:#485568;font-size:1rem;line-height:1.75}
+.cidg-journey-grid a{margin-top:auto;padding-top:.6rem;color:#263e5d;font-weight:700;text-decoration:underline;text-underline-offset:.2em;line-height:1.5}
+.cidg-journey-support{padding:1.8rem;border:1px solid #526071;border-radius:12px}
+.cidg-journey-support h3{color:#fff;font-size:1.5rem;line-height:1.3;margin:0 0 1.4rem}
+.cidg-journey a:focus-visible{outline:3px solid #76603d;outline-offset:5px}
+@media(max-width:1050px){.cidg-journey-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.cidg-journey-grid{grid-template-columns:minmax(0,1fr)}.cidg-journey-grid li,.cidg-journey-support{padding:1.4rem}}
