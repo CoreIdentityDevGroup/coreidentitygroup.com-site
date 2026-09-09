@@ -57,6 +57,18 @@ function Closing({ title = "Establish the governance required for what comes nex
 
 export function AdvisoryHomePage() {
   return <AdvisoryShell><Meta title="Executive AI Governance" description="CoreIdentity Advisory Group helps institutions establish the governance required to adopt, scale, and govern AI from assisted decisions through autonomous execution." /><Hero eyebrow="CoreIdentity Advisory Group" title="Executive AI Governance" lead="From AI adoption to autonomous execution, we help institutions establish the governance required to remain in control." />
+    {/* GOVERNED_TRANSFORMATION_RELEASE_20260909 */}
+    <Section eyebrow="Governed Autonomous Transformation" title="Turn workforce opportunities into accountable transformation.">
+      <p>CIAG connects executive advisory with the CoreIdentity Venture Engine: a working capability for evaluating workflow opportunities, assembling Workforce Packs, recording authority, coordinating commercial handoff, and comparing expected value with recorded outcomes.</p>
+      <Cards items={[
+        {title:"Assess the opportunity",text:"Document the workflow, evidence, cost baseline, readiness, and assumptions. Distinguish client savings from delivery and ongoing governance costs."},
+        {title:"Compose the workforce",text:"Use SmartNation capability matching to identify candidates. Pin selected agent versions and assign human owners where work requires human judgment."},
+        {title:"Establish authority",text:"Record accountable ownership, scope, boundaries, policy approval, and expiry. Preserve an audit history of decisions and rejected actions."},
+        {title:"Coordinate and improve",text:"Link qualified opportunities to existing commercial accounts and deals. Record deployment evidence and operating observations to compare outcomes with the original business case."},
+      ]} />
+      <p>Assess → Identify → Design → Deploy → Govern → Optimize. Deployment requires the relevant operating integration and institution-specific controls; the Venture Engine coordinates readiness and evidence. Financial projections remain estimates until supported by measured results.</p>
+      <div className="advisory-inline-links"><Link to="/smartnation-ai">Explore workforce intelligence →</Link><Link to="/advisory/engage">Discuss a transformation opportunity →</Link></div>
+    </Section>
     <Section eyebrow="The Governance Imperative" title="AI capability is advancing faster than institutional governance."><p>AI can influence decisions, interact with institutional systems, process sensitive information, initiate workflows, and increasingly execute actions on behalf of organizations. Yet responsibility remains with the institution.</p><p>Effective AI governance makes authority, accountability, requirements, controls, monitoring, and assurance operational.</p></Section>
     <Section eyebrow="The Advisory Journey" title="Governance that evolves with AI capability." dark><Cards items={[
       {title:"Understand",text:"Establish the AI landscape, governance maturity, material exposures, and priority gaps."},
@@ -122,7 +134,7 @@ export function AdvisoryEngagePage() {
       <Field label="Organization" name="organization" value={form.organization} onChange={v=>set("organization",v)} required /><Field label="Your role" name="role" value={form.role} onChange={v=>set("role",v)} required />
       <Field label="Industry" name="industry" value={form.industry} onChange={v=>set("industry",v)} /><Select label="Organization size" name="size" value={form.size} onChange={v=>set("size",v)} options={["Under 250","250–999","1,000–4,999","5,000+"]} />
       <Select label="Current AI adoption stage" name="adoption" value={form.adoption} onChange={v=>set("adoption",v)} options={["Exploring","Piloting","Scaling","Enterprise-wide"]} /><Select label="Agentic or autonomous AI" name="autonomous" value={form.autonomous} onChange={v=>set("autonomous",v)} options={["Not planned","Planned","In pilot","Deployed"]} />
-      <Field label="Current governance structure" name="structure" value={form.structure} onChange={v=>set("structure",v)} /><Select label="Desired engagement" name="engagement" value={form.engagement} onChange={v=>set("engagement",v)} options={["Readiness & assurance","Governance implementation","Fractional governance office","Autonomous AI governance","Not yet determined"]} />
+      <Field label="Current governance structure" name="structure" value={form.structure} onChange={v=>set("structure",v)} /><Select label="Desired engagement" name="engagement" value={form.engagement} onChange={v=>set("engagement",v)} options={["Readiness & assurance","Governance implementation","Fractional governance office","Autonomous AI governance","Governed Autonomous Transformation","Not yet determined"]} />
       <Field label="Timing" name="timing" value={form.timing} onChange={v=>set("timing",v)} /><Field label="Name" name="name" value={form.name} onChange={v=>set("name",v)} required />
       <Field label="Email" name="email" type="email" value={form.email} onChange={v=>set("email",v)} required />
     </div><label className="advisory-field advisory-field-wide"><span>Primary governance concern</span><textarea name="concern" value={form.concern} onChange={e=>set("concern",e.target.value)} required rows={5} /></label>

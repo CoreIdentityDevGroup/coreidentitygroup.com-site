@@ -78,6 +78,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* GOVERNED_TRANSFORMATION_RELEASE_20260909 */}
+      <section className="cidg-platinum-shift" aria-labelledby="transformation-title">
+        <p className="cidg-platinum-kicker">Governed Autonomous Transformation</p>
+        <h2 id="transformation-title">Connect workforce opportunity with institutional control.</h2>
+        <p>Identify valuable workflows, assess their economics, compose a digital workforce, and establish accountable authority before advancing toward deployment. CoreIdentity brings advisory, SmartNation workforce intelligence, commercial coordination, and governance into one transformation process.</p>
+        <p>Compare projected value with recorded operating outcomes as evidence becomes available.</p>
+        <Link to="/advisory" className="cidg-platinum-primary">Explore Autonomous Workforce Transformation →</Link>
+      </section>
+
       <section className="cidg-platinum-closing">
         <p className="cidg-platinum-kicker">Our Operating Principle</p>
         <h2>Humans lead. Machines execute. Governance protects both.</h2>
