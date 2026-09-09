@@ -5,7 +5,7 @@ import InstitutionalVisual from "../components/InstitutionalVisual";
 // ECOSYSTEM_JOURNEY_20260909
 const journey = [
   { title: "Establish direction and accountability", owner: "CIAG · Executive AI Governance", text: "Start with institutional objectives, AI readiness, risk, decision rights, and accountable leadership. Define what should be delegated and what must remain under human control.", to: "/advisory/executive-ai-governance", link: "Explore Executive AI Governance" },
-  { title: "Identify and evaluate the opportunity", owner: "Governed Autonomous Transformation · Venture Engine", text: "Identify valuable workflows, document the current operating baseline, and evaluate readiness and economics. Make assumptions, delivery costs, and expected value explicit before committing to a solution.", to: "/advisory", link: "Explore the transformation practice" },
+  { title: "Identify and evaluate the opportunity", owner: "Governed Autonomous Transformation", text: "Identify valuable workflows, document the current operating baseline, and evaluate readiness and economics. Make assumptions, delivery costs, and expected value explicit before committing to a solution.", to: "/advisory", link: "Explore the transformation practice" },
   { title: "Design the workforce", owner: "SmartNation AI Workforce", text: "Match required capabilities with catalog candidates. Compose versioned Workforce Packs, validate suitability with evidence, and assign human owners for judgment, exceptions, and oversight.", to: "/smartnation-ai", link: "Explore SmartNation AI" },
   { title: "Establish authority and controls", owner: "Trust Infrastructure", text: "Define identity, delegated authority, policy boundaries, approvals, escalation, and evidence requirements. Carry those requirements into the operating environment before authorizing deployment.", to: "/trust-infrastructure", link: "Explore Trust Infrastructure" },
   { title: "Deploy within approved boundaries", owner: "Implementation · Governed execution", text: "Connect the selected workforce to the institution’s systems and workflows. Validate the required operating integrations and controls, record deployment evidence, and maintain accountable human oversight.", to: "/advisory/governance-implementation", link: "Explore implementation" },
@@ -62,8 +62,8 @@ export default function HomePage() {
         <div className="cidg-journey-support">
           <h3>Carry evidence back to leadership</h3>
           <p><strong>CIAG</strong> helps leadership use operating evidence to reassess priorities, accountability, and the next phase of transformation.</p>
-          <p><strong>SmartNation</strong> supports workforce composition as requirements change. The <strong>Venture Engine</strong> connects the original business case with recorded performance and lifecycle decisions.</p>
-          <p><strong>BD Ops</strong> supports the commercial account and engagement process. Operating platforms, including <strong>CoreG</strong>, provide the business context for domain-specific workflows.</p>
+          <p><strong>SmartNation AI</strong> supports workforce composition as requirements change. Our transformation practice compares recorded outcomes with the original business case to guide the next phase of work.</p>
+          <p><strong>Implementation and ongoing governance</strong> connect workforce capabilities with your institution’s systems, operating requirements, and accountable leadership.</p>
           <p><strong>CoreIdentity governance</strong> establishes authority and control requirements. Deployment depends on the relevant operating integrations; a catalog selection or approved business case alone does not constitute a live deployment.</p>
           <Link to="/about">Explore CoreIdentity →</Link>
         </div>

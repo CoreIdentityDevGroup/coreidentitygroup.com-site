@@ -24,7 +24,7 @@ export function SmartNationAIPage() {
       </section>
       <section className="space-y-5">
         <SectionTitle>Part of Governed Autonomous Transformation</SectionTitle>
-        <p className="text-white/70 max-w-3xl leading-relaxed">SmartNation supplies workforce intelligence. The Venture Engine evaluates opportunity economics and coordinates the transformation lifecycle. BD Ops manages commercial execution. CoreIdentity governance establishes authority and control requirements.</p>
+        <p className="text-white/70 max-w-3xl leading-relaxed">SmartNation AI supplies workforce intelligence. CIAG helps assess opportunities and design the transformation approach. Implementation connects the selected workforce with institutional systems, while CoreIdentity governance establishes authority and control requirements.</p>
         <p className="text-white/70 max-w-3xl leading-relaxed">Catalog entries are capability records, not proof of a live deployment, certification, or measured performance. Deployment and operating results require their own evidence.</p>
         <div className="flex flex-wrap gap-5"><Link to="/advisory" className="text-blue-300 underline">Explore the transformation practice</Link><a href="https://portal.coreidentitygroup.com/#/smartnation" className="text-blue-300 underline">Open the SmartNation catalog</a></div>
       </section>
