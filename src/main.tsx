@@ -4,6 +4,7 @@ import { RouterProvider } from "@tanstack/react-router";
 import { HelmetProvider } from "react-helmet-async";
 import { router } from "./router";
 import "./styles.css";
+import "./visual-system.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
