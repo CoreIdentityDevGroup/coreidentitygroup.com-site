@@ -31,7 +31,7 @@ export default function BlogIndexPage() {
   }, []);
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16">
+    <div className="cidg-insights-index">
       <Helmet>
         <title>Blog — CoreIdentity Development Group</title>
         <meta

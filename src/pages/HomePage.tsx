@@ -14,7 +14,7 @@ const journey = [
 
 export default function HomePage() {
   return (
-    <div className="cidg-platinum-home cidg-home-page cidg-home-trust-sequence">
+    <div className="cidg-platinum-home cidg-home-page">
       <Helmet>
         <title>CoreIdentity | Executive AI Governance, Workforce Transformation &amp; Trust Infrastructure</title>
         <meta name="description" content="CoreIdentity connects CIAG executive advisory, SmartNation AI workforce intelligence, governed transformation, and Trust Infrastructure—from institutional strategy through accountable execution and ongoing assurance." />

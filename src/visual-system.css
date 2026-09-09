@@ -1,0 +1,80 @@
+/* Audited visual contract: content alignment, responsive type, explicit surfaces. */
+.cidg-platinum-site{--site-content:1180px;--site-gutter:24px;--site-inset:max(var(--site-gutter),calc((100% - var(--site-content))/2));--site-section:clamp(2.5rem,5vw,4.5rem);--site-heading:#202a38;--site-copy:#485568}
+#main-content h1{font-size:clamp(2.1rem,3.8vw,3.5rem);line-height:1.12;letter-spacing:-.035em;color:var(--site-heading);white-space:normal;overflow-wrap:break-word;text-wrap:balance}
+#main-content h2{font-size:clamp(1.65rem,2.6vw,2.5rem);line-height:1.2;letter-spacing:-.025em;overflow-wrap:break-word;text-wrap:balance}
+#main-content h3{font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.35;letter-spacing:-.015em;overflow-wrap:break-word}
+#main-content p{line-height:1.75}
+#main-content img{max-width:100%;height:auto}
+#main-content .cidg-interior-frame{width:min(var(--site-content),calc(100% - var(--site-gutter)*2));padding-block:var(--site-section)}
+#main-content .cidg-home-page{display:block;width:100%}
+#main-content .cidg-home-page>section{width:100%;box-sizing:border-box;padding:var(--site-section) var(--site-inset);margin:0}
+#main-content .cidg-home-page>section::before{content:none;display:none}
+#main-content .cidg-ecosystem-hero{grid-template-columns:minmax(0,1fr) 240px;gap:2rem 3rem;align-items:center}
+#main-content .cidg-ecosystem-hero h1{max-width:26ch;color:var(--site-heading)}
+#main-content .cidg-ecosystem-hero-copy>p{max-width:68ch}
+#main-content .cidg-ecosystem-hero-art{max-width:240px}
+#main-content .cidg-ecosystem-hero-image{max-width:240px;margin:0}
+#main-content .cidg-ecosystem-hero-image img{max-height:210px;object-fit:contain}
+#main-content .cidg-ecosystem-path{margin-top:.5rem;gap:1.25rem}
+#main-content .cidg-journey h2{max-width:30ch}
+#main-content .cidg-journey-grid{gap:1.25rem;margin:2rem 0;align-items:stretch}
+#main-content .cidg-journey-grid li{padding:1.5rem;align-items:stretch;border-radius:12px}
+#main-content .cidg-journey-owner{min-height:3em;margin:.75rem 0;line-height:1.5}
+#main-content .cidg-journey-grid h3{min-height:2.7em;margin:0}
+#main-content .cidg-journey-grid a{padding-top:1rem}
+#main-content .cidg-platinum-ecosystem{background:#182333;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem;align-items:start}
+#main-content .cidg-platinum-ecosystem h2,#main-content .cidg-platinum-ecosystem h3{color:#fff}
+#main-content .cidg-platinum-ecosystem p{color:#d4dce7}
+#main-content .cidg-platinum-ecosystem a{color:#e9d4ac}
+#main-content .cidg-platinum-ecosystem .cidg-platinum-kicker{color:#c4cbd4}
+#main-content .cidg-journey-support{padding:1.5rem;border-color:#536175}
+#main-content .cidg-platinum-closing{min-height:0;gap:1.5rem}
+#main-content .cidg-platinum-closing h2{max-width:30ch;margin-inline:auto}
+/* Full-width page families share the same content edges. */
+#main-content .advisory-site{--ad-frame:100%;padding-bottom:0}
+#main-content .advisory-site>.advisory-lockup,#main-content .advisory-site>.advisory-nav,#main-content .advisory-site>.advisory-hero,#main-content .advisory-site>.advisory-section,#main-content .advisory-site>.advisory-closing,#main-content .advisory-site>.advisory-form-section{width:100%;border-inline:0;padding-inline:var(--site-inset)}
+#main-content .advisory-hero,#main-content .advisory-section,#main-content .advisory-closing{padding-block:var(--site-section)}
+#main-content .advisory-section-inner{width:100%;max-width:none}
+#main-content .advisory-hero h1{max-width:28ch}
+#main-content .advisory-section h2{max-width:34ch}
+#main-content .advisory-section.is-dark h2,#main-content .advisory-section.is-dark h3{color:#fff}
+#main-content .advisory-cards{gap:1rem;background:transparent;align-items:stretch}
+#main-content .advisory-cards article{margin:0;padding:1.5rem;border:1px solid #dce1e7;border-radius:12px}
+#main-content .advisory-section.is-dark .advisory-cards article{border-color:#465163}
+#main-content .advisory-form{max-width:100%}
+#main-content .cidg-framework-page{width:100%;max-width:none;margin-inline:0}
+#main-content>.cidg-framework-page>section{width:100%;max-width:none;box-sizing:border-box;padding:var(--site-section) var(--site-inset);margin-inline:0}
+#main-content .cidg-framework-hero h1{max-width:28ch}
+#main-content .cidg-framework-page .cidg-ecosystem-interpretation{background:#f5f7fa}
+#main-content .cidg-ecosystem-interpretation h2{color:var(--site-heading)}
+#main-content .cidg-ecosystem-interpretation p{color:var(--site-copy);max-width:78ch}
+#main-content .cidg-governance-fullbleed .cidg-alpha-stage{width:min(960px,calc(100% - var(--site-gutter)*2));margin:1rem auto 2rem;left:auto}
+#main-content .cidg-governance-fullbleed .cidg-alpha-stage figure{width:100%;max-width:100%;margin:0;left:auto}
+#main-content .cidg-framework-page .cidg-platinum-visual img{max-height:620px;object-fit:contain}
+#main-content .cidg-resources-hero,#main-content .cidg-resources-section{padding-inline:var(--site-inset)}
+#main-content .cidg-markets-shell{width:min(var(--site-content),calc(100% - var(--site-gutter)*2))}
+#main-content .cidg-markets-hero h1{max-width:26ch}
+#main-content .cidg-interior-frame>div>section:first-child{padding-top:0}
+#main-content .cidg-interior-frame .cidg-card{border-radius:12px}
+/* Native text and controls remain usable at small widths and browser zoom. */
+#main-content :where(input,select,textarea){font-size:1rem}
+#main-content :where(a,button):focus-visible{outline:3px solid #9a783f;outline-offset:4px}
+@media(max-width:900px){#main-content .cidg-ecosystem-hero{grid-template-columns:minmax(0,1fr) 180px;gap:1.75rem}#main-content .cidg-ecosystem-hero-art{max-width:180px}#main-content .cidg-platinum-ecosystem{grid-template-columns:1fr}#main-content .advisory-lifecycle{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:640px){.cidg-platinum-site{--site-gutter:20px}#main-content .cidg-ecosystem-hero{grid-template-columns:1fr}#main-content .cidg-ecosystem-hero-art{max-width:100%}#main-content .cidg-ecosystem-hero-image{max-width:110px}#main-content .cidg-ecosystem-hero-image img{max-height:100px}#main-content .cidg-ecosystem-path{grid-template-columns:1fr 1fr;gap:1rem}#main-content .cidg-journey-grid{grid-template-columns:1fr}#main-content .cidg-journey-grid h3,#main-content .cidg-journey-owner{min-height:0}#main-content .advisory-cards{grid-template-columns:1fr}#main-content .advisory-lifecycle{grid-template-columns:1fr 1fr}#main-content .cidg-framework-page .cidg-platinum-visual img{max-height:400px}}
+@media(prefers-reduced-motion:reduce){.cidg-platinum-site *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Audit follow-through: remove remaining nested insets and legacy type exceptions. */
+#main-content .cidg-framework-page.cidg-framework-expanded .cidg-framework-hero h1{font-size:clamp(2.1rem,3.8vw,3.5rem)!important;line-height:1.12!important}
+#main-content .cidg-resources-hero,#main-content .cidg-resources-grid{width:100%;max-width:none;box-sizing:border-box;padding-inline:var(--site-inset)}
+#main-content .cidg-resources-hero{padding-block:var(--site-section)}
+#main-content .cidg-resources-engage{width:min(var(--site-content),calc(100% - var(--site-gutter)*2));max-width:none;box-sizing:border-box;padding:1.75rem;margin-bottom:var(--site-section)}
+#main-content .cidg-insights-index{width:min(var(--site-content),calc(100% - var(--site-gutter)*2));margin-inline:auto;padding-block:var(--site-section)}
+#main-content .cidg-insights-index>p{max-width:72ch}
+#main-content .cidg-insights-index article{padding:1.5rem;border-radius:12px}
+#main-content .cidg-insights-index article h2,#main-content .cidg-resources-grid article h2{font-size:clamp(1.25rem,1.8vw,1.6rem);line-height:1.35}
+#main-content .cidg-insight-article{max-width:800px;padding-inline:var(--site-gutter)}
+#main-content .cidg-insight-article p,#main-content .cidg-insight-article li{line-height:1.8}
+@media(max-width:640px){#main-content .cidg-resources-grid{grid-template-columns:1fr}#main-content .cidg-resources-engage{flex-direction:column;align-items:start}}
+
+/* Keep page identification readable from the first paint. */
+#main-content h1,#main-content .cidg-framework-hero>*,#main-content .cidg-ecosystem-hero-copy>*{animation:none;opacity:1;transform:none}
