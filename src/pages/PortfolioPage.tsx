@@ -77,7 +77,7 @@ export function PortfolioPage() {
           intro="The four-layer assurance model. Each layer adds a guarantee on the one beneath it, and the platform deep-dive ties them together."
         />
         <div className="grid gap-4 md:grid-cols-2">
-          {LAYERS.map((l) => (
+          {LAYERS.map((l, index) => (
             <Link
               key={l.id}
               to={l.to}
@@ -85,7 +85,7 @@ export function PortfolioPage() {
             >
               <div className="mb-2 flex items-center gap-2">
                 <span className="grid h-9 w-9 place-items-center rounded-lg border border-accent/30 bg-accent/5 font-serif text-lg text-accent">
-                  {l.id}
+                  {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
               <h3 className="font-serif text-xl text-ink">{l.title}</h3>
