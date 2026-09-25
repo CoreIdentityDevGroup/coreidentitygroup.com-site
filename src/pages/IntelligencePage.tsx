@@ -7,7 +7,7 @@ export function IntelligencePage() {
     <div className="cidg-framework-page cidg-framework-expanded">
       <Helmet>
         <title>Institutional Intelligence | CoreIdentity Development Group</title>
-        <meta name="description" content="Institutional Intelligence establishes governed understanding of autonomous execution in the context of institutional authority, governance requirements, operating conditions, and risk." />
+        <meta name="description" content="Institutional Intelligence connects identity, policy, risk, and operational context to governed autonomous execution." />
       </Helmet>
 
       <section className="cidg-framework-hero">

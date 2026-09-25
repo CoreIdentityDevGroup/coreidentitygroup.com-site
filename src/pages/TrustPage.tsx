@@ -7,7 +7,7 @@ export function TrustPage() {
     <div className="cidg-framework-page cidg-framework-expanded">
       <Helmet>
         <title>Institutional Trust | CoreIdentity Development Group</title>
-        <meta name="description" content="Institutional Trust is a condition established when an institution possesses sufficient intelligence, assurance, evidence, and accountability to justify reliance on autonomous execution within legitimate authority and governed boundaries." />
+        <meta name="description" content="Institutional Trust connects authority, evidence, and accountability to verifiable confidence in governed autonomous execution." />
       </Helmet>
 
       <section className="cidg-framework-hero">

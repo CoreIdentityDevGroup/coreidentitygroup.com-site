@@ -1,0 +1,202 @@
+{
+  "/": {
+    "title": "CoreIdentity | AI Governance & Trust Infrastructure",
+    "description": "Explore CoreIdentity executive AI governance, workforce transformation, and Trust Infrastructure for accountable autonomous execution."
+  },
+  "/trust-infrastructure": {
+    "title": "Trust Infrastructure | CoreIdentity Development Group",
+    "description": "Explore Trust Infrastructure for establishing, delegating, constraining, and verifying institutional authority throughout autonomous execution."
+  },
+  "/governance-ecosystem": {
+    "title": "The Governance Ecosystem | CoreIdentity Development Group",
+    "description": "The CoreIdentity Governance Ecosystem: Trust Infrastructure, Autonomous Execution Governance, and the Institutional Chain of Legitimacy operating as one institutional system."
+  },
+  "/intelligence": {
+    "title": "Institutional Intelligence | CoreIdentity Development Group",
+    "description": "Institutional Intelligence connects identity, policy, risk, and operational context to governed autonomous execution."
+  },
+  "/assurance": {
+    "title": "Institutional Assurance | CoreIdentity Development Group",
+    "description": "Institutional Assurance continuously verifies compliance, control, and performance so autonomous execution remains authorized and within institutional requirements."
+  },
+  "/trust": {
+    "title": "Institutional Trust | CoreIdentity Development Group",
+    "description": "Institutional Trust connects authority, evidence, and accountability to verifiable confidence in governed autonomous execution."
+  },
+  "/execution-integrity": {
+    "title": "Execution Integrity | CoreIdentity",
+    "description": "Execution Integrity is the assurance that every autonomous action is provably attributable — to a verified identity, at the moment it happens."
+  },
+  "/verification-at-scale": {
+    "title": "Verification at Scale | CoreIdentity",
+    "description": "Verification at Scale proves governance policy is correct before it activates, and enforces it identically across every agent, every time."
+  },
+  "/sovereign-assurance": {
+    "title": "Sovereign Assurance | CoreIdentity",
+    "description": "Sovereign Assurance keeps authority accountable as it is delegated across a fleet of autonomous agents — tracing lineage and containing compromise before it spreads."
+  },
+  "/platform": {
+    "title": "Platform Architecture | CoreIdentity",
+    "description": "Explore the CoreIdentity governance architecture for identity, delegated authority, execution controls, evidence, and institutional accountability."
+  },
+  "/portfolio": {
+    "title": "Portfolio | CoreIdentity",
+    "description": "Explore the CoreIdentity portfolio spanning executive AI governance, workforce intelligence, and Trust Infrastructure."
+  },
+  "/smartnation-ai": {
+    "title": "SmartNation AI — Workforce Intelligence | CoreIdentity",
+    "description": "Explore workforce capabilities and compose versioned Workforce Packs for Governed Autonomous Transformation."
+  },
+  "/advisory": {
+    "title": "AI Governance Advisory | CoreIdentity Advisory Group",
+    "description": "CoreIdentity Advisory Group helps institutions establish the governance required to adopt, scale, and govern AI from assisted decisions through autonomous execution."
+  },
+  "/advisory/executive-ai-governance": {
+    "title": "Executive AI Governance | CoreIdentity Advisory Group",
+    "description": "Make AI governance an executive operating capability connecting strategy, authority, risk, controls, assurance, and accountability."
+  },
+  "/advisory/readiness": {
+    "title": "AI Governance Readiness & Assurance | CoreIdentity Advisory Group",
+    "description": "Establish an executive baseline of AI governance maturity, exposure, gaps, and priority actions."
+  },
+  "/advisory/governance-implementation": {
+    "title": "AI Governance Design & Implementation | CoreIdentity Advisory Group",
+    "description": "Turn AI governance principles into an operating lifecycle with clear authority, controls, evidence, and assurance."
+  },
+  "/advisory/fractional-ai-governance": {
+    "title": "Fractional AI Governance Office | CoreIdentity Advisory Group",
+    "description": "Embedded executive AI governance leadership for institutions that need continuing capability while building their permanent model."
+  },
+  "/advisory/autonomous-ai-governance": {
+    "title": "Autonomous & Agentic AI Governance | CoreIdentity Advisory Group",
+    "description": "Extend AI governance to delegated machine authority, execution boundaries, continuous assurance, and institutional accountability."
+  },
+  "/advisory/industries": {
+    "title": "Institutional & Regulated Environments | CoreIdentity Advisory Group",
+    "description": "Executive AI governance for environments where AI decisions and actions carry material institutional consequence."
+  },
+  "/advisory/insights": {
+    "title": "Executive AI Governance Insights | CoreIdentity Advisory Group",
+    "description": "Executive perspectives on AI governance operating models, accountability, assurance, agentic systems, and autonomous execution."
+  },
+  "/advisory/engage": {
+    "title": "Engage Advisory | CoreIdentity Advisory Group",
+    "description": "Start with the governance problem and discuss your institution's AI governance requirements with CoreIdentity Advisory Group."
+  },
+  "/founders": {
+    "title": "Founder's Brief | CoreIdentity",
+    "description": "Internal CoreIdentity founder briefing."
+  },
+  "/privacy": {
+    "title": "Privacy Policy | CoreIdentity",
+    "description": "How CoreIdentity collects, uses, and protects information when we interact through its website and services."
+  },
+  "/terms": {
+    "title": "Terms of Use | CoreIdentity",
+    "description": "Terms governing use of the CoreIdentity corporate website and its information."
+  },
+  "/resources": {
+    "title": "Resources | CoreIdentity",
+    "description": "CoreIdentity resources on Trust Infrastructure, Autonomous Execution Governance, institutional assurance, and governance for the Autonomous Era."
+  },
+  "/faq": {
+    "title": "Frequently Asked Questions | CoreIdentity",
+    "description": "Answers about CoreIdentity, provable AI decision governance, fail-closed enforcement, and post-quantum hardening."
+  },
+  "/leadership": {
+    "title": "Leadership | CoreIdentity",
+    "description": "Todd Morgan leads CoreIdentity as Founder and CEO, establishing Trust Infrastructure and the Governance Ecosystem for the Autonomous Era."
+  },
+  "/about": {
+    "title": "About | CoreIdentity",
+    "description": "Learn how CoreIdentity connects Trust Infrastructure, executive AI governance, and autonomous execution while preserving institutional control."
+  },
+  "/contact": {
+    "title": "Contact | CoreIdentity",
+    "description": "Contact CoreIdentity to discuss Trust Infrastructure, governed autonomous execution, institutional advisory services, strategic partnerships, or deployment pathways."
+  },
+  "/blog": {
+    "title": "Blog — CoreIdentity Development Group",
+    "description": "Insights on provable AI decision governance, post-quantum cryptography, and enterprise AI operations from CoreIdentity Development Group."
+  },
+  "/governance/regulated": {
+    "title": "Regulated Industries AI Governance | CoreIdentity",
+    "description": "Explore AI governance requirements for regulated institutions, including delegated authority, oversight, execution controls, and evidence."
+  },
+  "/governance/healthcare": {
+    "title": "Healthcare AI Governance | CoreIdentity",
+    "description": "CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent — aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act."
+  },
+  "/governance/bfsi": {
+    "title": "BFSI AI Governance | CoreIdentity",
+    "description": "Explore autonomous AI governance for banking, financial services, and insurance, with institutional authority, oversight, and accountability."
+  },
+  "/governance/sovereign": {
+    "title": "Sovereign & Government AI Governance | CoreIdentity",
+    "description": "Explore sovereign and government AI governance requirements for institutional authority, controlled execution, oversight, and evidence."
+  },
+  "/governance/legal": {
+    "title": "Legal & Professional Services AI Governance | CoreIdentity",
+    "description": "Explore AI governance for legal and professional services, including confidentiality, delegated authority, oversight, and accountability."
+  },
+  "/governance/education": {
+    "title": "Education AI Governance | CoreIdentity",
+    "description": "Explore AI governance for education, including institutional authority, student information, oversight, and accountable autonomous execution."
+  },
+  "/governance/finance": {
+    "title": "Corporate Finance AI Governance | CoreIdentity",
+    "description": "Explore AI governance for financial operations, including authorization, segregation of duties, oversight, and audit evidence."
+  },
+  "/governance/hospitality": {
+    "title": "Hospitality AI Governance | CoreIdentity",
+    "description": "CoreIdentity governs guest payment and personal data across brands and borders — enforcing PCI-DSS, GDPR, and data-sovereignty requirements on every autonomous agent."
+  },
+  "/governance/logistics": {
+    "title": "Logistics & Supply Chain AI Governance | CoreIdentity",
+    "description": "CoreIdentity governs routing, customs clearance, and party screening across the supply chain — enforcing CISA, DHS, and export-control obligations on every autonomous action."
+  },
+  "/governance/manufacturing": {
+    "title": "Manufacturing AI Governance | CoreIdentity",
+    "description": "CoreIdentity protects CUI and controlled technical data across design and production — enforcing CMMC, ITAR, and EAR requirements on every autonomous agent."
+  },
+  "/governance/private-capital": {
+    "title": "Private Capital AI Governance | CoreIdentity",
+    "description": "CoreIdentity governs diligence, valuation, and LP-reporting agents — enforcing SEC private-fund rules, FINRA information barriers, and fiduciary duty with cryptographic evidence."
+  },
+  "/governance/real-estate": {
+    "title": "Real Estate AI Governance | CoreIdentity",
+    "description": "CoreIdentity governs origination, title, and closing agents against money-laundering and consumer-protection risk — enforcing FinCEN, the Bank Secrecy Act, and CFPB rules."
+  },
+  "/governance/retail": {
+    "title": "Retail AI Governance | CoreIdentity",
+    "description": "CoreIdentity governs pricing, payments, and personalization agents across millions of consumers — enforcing PCI-DSS, CCPA/CPRA, and consumer-protection law."
+  },
+  "/governance-console": {
+    "title": "Governance Console | CoreIdentity",
+    "description": "An interactive representative view of CoreIdentity Trust Infrastructure governing autonomous execution across the agent lifecycle."
+  },
+  "/markets-we-serve": {
+    "title": "Markets We Serve | CoreIdentity Development Group",
+    "description": "One Governance Ecosystem across institutional environments where autonomous execution carries material consequence."
+  },
+  "/blog/deployed-at-scale-ungoverned-by-design": {
+    "title": "Deployed at Scale, Ungoverned by Design | CoreIdentity",
+    "description": "Why large-scale autonomous AI adoption creates an urgent need for institutional authority, governance infrastructure, and accountability."
+  },
+  "/blog/ai-agents-out-of-control-2026": {
+    "title": "AI Agents and the Governance Gap | CoreIdentity",
+    "description": "Explore the governance challenges of enterprise AI agents and the need for stronger authority, oversight, and execution controls."
+  },
+  "/blog/quantum-vulnerability-closed-24-hours": {
+    "title": "Quantum Risk and AI Governance | CoreIdentity",
+    "description": "A CoreIdentity perspective on post-quantum cryptography, software assurance, and the security foundations of autonomous AI governance."
+  },
+  "/blog/formal-governance-reasoning-enterprise-ai": {
+    "title": "Formal Governance Reasoning for Enterprise AI | CoreIdentity",
+    "description": "Explore how formal reasoning can connect governance policies, execution boundaries, and verification in enterprise AI."
+  },
+  "/blog/cryptographic-floor-beneath-ai-governance": {
+    "title": "The Cryptographic Foundation of AI Governance | CoreIdentity",
+    "description": "Explore the role of cryptographic identity, signed evidence, and verification in accountable autonomous AI execution."
+  }
+}

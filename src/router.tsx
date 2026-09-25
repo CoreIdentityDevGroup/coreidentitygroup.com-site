@@ -4,6 +4,7 @@ import {
   createRoute,
 } from "@tanstack/react-router";
 import { Layout } from "./components/Layout";
+import NotFound from "./components/NotFound";
 
 import HomePage from "./pages/HomePage";
 import { PortfolioPage } from "./pages/PortfolioPage";
@@ -57,7 +58,7 @@ import {
   AdvisoryInsightsPage,
   AdvisoryEngagePage,
 } from "./pages/AdvisoryPages";
-const rootRoute = createRootRoute({ component: Layout });
+const rootRoute = createRootRoute({ component: Layout, notFoundComponent: NotFound });
 
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -328,7 +329,7 @@ const marketsWeServeRoute = createRoute({
   component: MarketsWeServePage,
 });
 
-const routeTree = rootRoute.addChildren([
+export const routeTree = rootRoute.addChildren([
   marketsWeServeRoute,
   indexRoute,
 

@@ -12,8 +12,8 @@ function localToDisplay(p: (typeof blogPosts)[0]): DisplayPost {
 }
 
 export default function BlogIndexPage() {
-  const [posts, setPosts] = useState<DisplayPost[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState<DisplayPost[]>(() => [...blogPosts].sort((a,b) => b.date.localeCompare(a.date)).map(localToDisplay));
+  const [loading, setLoading] = useState(isSanityConfigured);
 
   useEffect(() => {
     if (!isSanityConfigured) {

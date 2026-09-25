@@ -6146,3 +6146,71 @@ html, body, #root {
 .cidg-ecosystem-hero a:focus-visible{outline:3px solid #76603d;outline-offset:5px}
 @media(max-width:850px){.cidg-ecosystem-hero{grid-template-columns:minmax(0,1fr) 180px;gap:1.8rem}.cidg-ecosystem-hero-art,.cidg-ecosystem-hero .cidg-ecosystem-hero-image{max-width:180px}.cidg-ecosystem-hero .cidg-ecosystem-hero-image img{max-height:160px}.cidg-ecosystem-path{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.cidg-ecosystem-hero{grid-template-columns:minmax(0,1fr);gap:1.5rem}.cidg-ecosystem-hero-art{display:flex;align-items:center;gap:1rem;max-width:100%;text-align:left}.cidg-ecosystem-hero .cidg-ecosystem-hero-image{flex:0 0 110px;max-width:110px}.cidg-ecosystem-hero .cidg-ecosystem-hero-image img{max-height:100px}.cidg-ecosystem-hero-art>p{margin:0}.cidg-ecosystem-path{margin-top:0}}
+
+/* CIDG_SHARED_FLUID_LAYOUT_202609 */
+:root { --cidg-gutter:48px; --cidg-page-inset:var(--cidg-gutter); }
+/* One compact header for every route. Artwork exposes only the source's right globe. */
+.cidg-platinum-header { position:relative; inset:auto; z-index:1000; isolation:isolate; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:0 24px; padding:20px var(--cidg-gutter); min-height:104px; box-sizing:border-box; pointer-events:auto; background:#080f13!important; }
+.cidg-platinum-header::before { content:""; position:absolute; inset:0 0 0 auto; width:38%; z-index:-1; pointer-events:none; background-image:url('/images/brand/coreidentity-website-header-202609.png'); background-size:350% auto; background-position:right center; background-repeat:no-repeat; mask-image:linear-gradient(to right,transparent,#000 65%); opacity:.32; }
+.cidg-website-banner { display:block; width:fit-content; color:#eef0f1; text-decoration:none; }
+.cidg-live-wordmark { display:block; font-family:Arial,sans-serif; font-size:28px; letter-spacing:.07em; line-height:1.2; white-space:nowrap; }
+.cidg-live-wordmark strong { font-weight:700; }
+.cidg-live-wordmark>span { font-weight:300; }
+.cidg-live-tagline { display:block; margin-top:8px; font-size:10px; letter-spacing:.3em; text-transform:uppercase; }
+.cidg-platinum-masthead { width:auto; min-height:56px; margin:0; padding:0; justify-content:flex-end; border:0; border-radius:0; background:transparent!important; box-shadow:none; backdrop-filter:none; }
+.cidg-platinum-desktop-nav { justify-content:flex-end; }
+.cidg-platinum-desktop-nav .cidg-platinum-contact { background:rgba(6,10,14,.7); border:1px solid #c1c3c4; border-radius:999px; padding:0 24px; }
+.cidg-platinum-menu-button { color:#fff; background:#151d23; border-color:#737373; }
+.cidg-platinum-menu { grid-column:1/-1; position:static; inset:auto; display:none; padding:16px 0 24px; opacity:1; visibility:visible; }
+.cidg-platinum-menu.is-open { display:block; }
+.cidg-platinum-menu-inner { height:auto; overflow:visible; }
+.cidg-platinum-header a:focus-visible,.cidg-platinum-header button:focus-visible { outline:2px solid #fff; outline-offset:3px; }
+.cidg-platinum-site>.cidg-platinum-main { padding-top:0!important; }
+/* Edge anchored containers: extra monitor width becomes usable column space. */
+.cidg-interior-frame { width:auto; max-width:none; margin-inline:var(--cidg-gutter); padding:48px 0 64px; }
+.cidg-interior-frame>*,.cidg-interior-frame>*>section { margin-left:0!important; margin-right:0!important; }
+.cidg-interior-frame .mx-auto { margin-left:0!important; margin-right:0!important; }
+.cidg-ecosystem-hero,.cidg-journey,.cidg-platinum-footer,.advisory-lockup,.advisory-hero,.advisory-nav,.advisory-section,.advisory-form-section { padding-left:var(--cidg-gutter)!important; padding-right:var(--cidg-gutter)!important; }
+.advisory-section-inner,.cidg-platinum-footer-grid,.cidg-platinum-footer-legal { width:100%; max-width:none; margin-inline:0; }
+.advisory-site { --ad-frame:100%; }
+.advisory-nav { top:0; }
+.cidg-ecosystem-hero { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:40px; }
+.cidg-ecosystem-hero-copy { max-width:760px; }
+.cidg-ecosystem-hero h1 { font-size:48px; color:#172234!important; }
+.cidg-ecosystem-hero-art { width:100%; max-width:520px; justify-self:center; }
+.cidg-ecosystem-hero .cidg-ecosystem-hero-image,.cidg-ecosystem-hero .cidg-ecosystem-hero-image img { width:100%; max-width:440px; max-height:380px; margin-inline:auto; }
+.cidg-platinum-footer-brand { isolation:isolate; }
+.cidg-platinum-footer-mark { width:80px; height:80px; border-radius:0; background:transparent; overflow:visible; }
+.cidg-platinum-footer-mark img { background:transparent; mix-blend-mode:screen; mask-image:radial-gradient(ellipse at center,#000 54%,transparent 73%); }
+@media(max-width:1080px) { :root { --cidg-gutter:32px; } .cidg-live-wordmark { font-size:24px; } .cidg-ecosystem-hero { gap:28px; } .cidg-ecosystem-hero h1 { font-size:40px; } }
+@media(max-width:600px) { :root { --cidg-gutter:20px; } .cidg-platinum-header { min-height:88px; padding:16px var(--cidg-gutter); gap:0 12px; } .cidg-live-wordmark { font-size:18px; letter-spacing:.035em; } .cidg-live-tagline { font-size:7px; letter-spacing:.2em; } .cidg-platinum-menu-button { min-width:60px; min-height:44px; font-size:.85rem; } .cidg-ecosystem-hero { grid-template-columns:minmax(0,1fr); } .cidg-ecosystem-hero h1 { font-size:34px; } .cidg-ecosystem-hero-art { display:flex; max-width:100%; } .cidg-ecosystem-hero .cidg-ecosystem-hero-image { flex:0 0 110px; max-width:110px; } .cidg-ecosystem-hero .cidg-ecosystem-hero-image img { max-height:110px; } }
+
+
+/* CIDG_COMPLETE_ALIGNMENT_AUDIT_202609 */
+.cidg-website-banner { display:inline-grid; grid-template-columns:max-content; }
+.cidg-live-wordmark>span { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-weight:200; }
+.cidg-live-tagline { display:block; width:100%; height:auto; margin-top:7px; overflow:visible; fill:currentColor; letter-spacing:0; font:12px Arial,sans-serif; }
+.cidg-platinum-header::before { width:180px; background-image:url('/images/brand/coreidentity-header-optimized.webp'); background-size:auto 130px; background-position:right bottom; opacity:.85; mask-image:linear-gradient(to right,transparent,#000 30%); }
+.cidg-platinum-desktop-nav { position:relative; padding:8px 12px; border-radius:8px; background:rgba(8,15,19,.88); }
+/* The framework family had its own centered sections outside the route frame. */
+#main-content .cidg-framework-page { width:100%!important; max-width:none!important; margin-inline:0!important; }
+#main-content .cidg-framework-page>section,
+#main-content .cidg-framework-page>nav,
+#main-content .cidg-framework-page>.flex { width:100%!important; max-width:none!important; margin-left:0!important; margin-right:0!important; padding-left:var(--cidg-gutter)!important; padding-right:var(--cidg-gutter)!important; box-sizing:border-box; }
+#main-content .cidg-framework-page>section>* { margin-left:0!important; margin-right:0!important; }
+#main-content .cidg-framework-page>section>div:not([class*="grid"]):not([class*="flex"]) { max-width:none!important; }
+#main-content .cidg-framework-page .cidg-framework-hero { text-align:left!important; }
+#main-content .cidg-framework-page .cidg-framework-hero h1 { margin-inline:0!important; }
+#main-content .cidg-framework-page .cidg-framework-lead { margin-inline:0!important; text-align:left!important; }
+#main-content .cidg-markets-shell { width:auto; max-width:none; margin-inline:var(--cidg-gutter); }
+#main-content .cidg-resources-page { width:auto; max-width:none; margin-inline:var(--cidg-gutter); }
+#main-content .cidg-resources-page>section { width:100%; max-width:none; margin-inline:0; padding-inline:0; }
+#main-content .cidg-insight-article { margin-left:0!important; margin-right:0!important; padding-inline:0; }
+#main-content .cidg-interior-frame .cidg-framework-page>section { padding-inline:0!important; }
+
+#main-content .cidg-interior-frame .advisory-site { margin-inline:calc(-1 * var(--cidg-gutter)); width:calc(100% + 2 * var(--cidg-gutter)); max-width:none; }
+#main-content .cidg-insight-article.cidg-insight-article { padding-inline:0!important; }
+#main-content .cidg-insights-index { width:100%; margin-inline:0; }
+#main-content .cidg-platinum-closing,#main-content .advisory-closing { text-align:left; align-items:start; justify-items:start; padding-inline:var(--cidg-gutter); }
+#main-content .cidg-platinum-closing h2,#main-content .advisory-closing h2 { margin-inline:0; }
+@media(max-width:600px) { .cidg-platinum-header::before { width:150px; opacity:.45; } }

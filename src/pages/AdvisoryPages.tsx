@@ -15,7 +15,7 @@ const advisoryNav = [
 ] as const;
 
 function Meta({ title, description }: { title: string; description: string }) {
-  return <Helmet><title>{title} | CoreIdentity Advisory Group</title><meta name="description" content={description} /><meta property="og:title" content={`${title} | CoreIdentity Advisory Group`} /><meta property="og:description" content={description} /></Helmet>;
+  return <Helmet><title>{title} | CoreIdentity Advisory Group</title><meta name="description" content={description} /></Helmet>;
 }
 
 function AdvisoryShell({ children }: { children: ReactNode }) {
@@ -56,7 +56,7 @@ function Closing({ title = "Establish the governance required for what comes nex
 }
 
 export function AdvisoryHomePage() {
-  return <AdvisoryShell><Meta title="Executive AI Governance" description="CoreIdentity Advisory Group helps institutions establish the governance required to adopt, scale, and govern AI from assisted decisions through autonomous execution." /><Hero eyebrow="CoreIdentity Advisory Group" title="Executive AI Governance" lead="From AI adoption to autonomous execution, we help institutions establish the governance required to remain in control." />
+  return <AdvisoryShell><Meta title="AI Governance Advisory" description="CoreIdentity Advisory Group helps institutions establish the governance required to adopt, scale, and govern AI from assisted decisions through autonomous execution." /><Hero eyebrow="CoreIdentity Advisory Group" title="Executive AI Governance" lead="From AI adoption to autonomous execution, we help institutions establish the governance required to remain in control." />
     {/* GOVERNED_TRANSFORMATION_RELEASE_20260909 */}
     <Section eyebrow="Governed Autonomous Transformation" title="Turn workforce opportunities into accountable transformation.">
       <p>CIAG connects executive advisory with workforce design, governed implementation, and ongoing assurance. We help institutions evaluate workflow opportunities, build a business case, compose the workforce with SmartNation AI, establish accountable authority, and compare expected value with recorded outcomes.</p>

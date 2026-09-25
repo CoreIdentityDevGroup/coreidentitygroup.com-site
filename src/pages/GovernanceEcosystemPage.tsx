@@ -14,7 +14,8 @@ export function GovernanceEcosystemPage() {
         />
       </Helmet>
 
-      <section className="cidg-framework-hero">
+      <section className="cidg-framework-hero cidg-governance-hero-grid">
+        <div className="cidg-governance-hero-copy">
         <p className="cidg-framework-kicker">The Governance Ecosystem</p>
         <h1>Architecture, doctrine, and legitimacy operating as one institutional system.</h1>
         <p className="cidg-framework-lead">
@@ -24,15 +25,16 @@ export function GovernanceEcosystemPage() {
           the operational doctrine, and the Institutional Chain of Legitimacy preserves continuity
           between authority, delegated execution, evidence, and accountability.
         </p>
-      </section>
+        </div>
 
       <div className="cidg-alpha-stage cidg-alpha-stage--ecosystem" aria-label="The Governance Ecosystem">
         <InstitutionalVisual
-          src="/images/visuals/governance-ecosystem-3d-alpha.png"
+          src="/images/visuals/governance-ecosystem-optimized.webp"
           alt="The CoreIdentity Governance Ecosystem: Trust Infrastructure, Autonomous Execution Governance, the Institutional Chain of Legitimacy, and Autonomous Governed Execution."
           className="cidg-alpha-visual cidg-alpha-visual--ecosystem"
         />
       </div>
+      </section>
 
       {/* CIDG_V716B_ECOSYSTEM_INTERPRETATION */}
       <section className="cidg-ecosystem-interpretation">

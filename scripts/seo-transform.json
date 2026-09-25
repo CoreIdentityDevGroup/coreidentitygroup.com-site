@@ -1,0 +1,372 @@
+{
+  "patches": [
+    {
+      "file": "src/router.tsx",
+      "before": "const routeTree =",
+      "after": "export const routeTree ="
+    },
+    {
+      "file": "src/pages/BlogPostPage.tsx",
+      "before": "useState<(typeof blogPosts)[0] | null>(null)",
+      "after": "useState<(typeof blogPosts)[0] | null>(() => blogPosts.find(p => p.slug === slug) ?? null)"
+    },
+    {
+      "file": "src/pages/BlogPostPage.tsx",
+      "before": "useState(true)",
+      "after": "useState(isSanityConfigured)"
+    },
+    {
+      "file": "src/pages/BlogIndexPage.tsx",
+      "before": "useState<DisplayPost[]>([])",
+      "after": "useState<DisplayPost[]>(() => [...blogPosts].sort((a,b) => b.date.localeCompare(a.date)).map(localToDisplay))"
+    },
+    {
+      "file": "src/pages/BlogIndexPage.tsx",
+      "before": "useState(true)",
+      "after": "useState(isSanityConfigured)"
+    },
+    {
+      "file": "src/pages/AdvisoryPages.tsx",
+      "before": "<AdvisoryShell><Meta title=\"Executive AI Governance\" description=\"CoreIdentity Advisory Group",
+      "after": "<AdvisoryShell><Meta title=\"AI Governance Advisory\" description=\"CoreIdentity Advisory Group"
+    },
+    {
+      "file": "src/components/Layout.tsx",
+      "before": "import Footer from \"./Footer\";",
+      "after": "import Footer from \"./Footer\";\nimport SearchMetadata from \"./SearchMetadata\";"
+    },
+    {
+      "file": "src/components/Layout.tsx",
+      "before": "      <Helmet>\n        <link rel=\"canonical\" href={canonical} />\n        <meta property=\"og:url\" content={canonical} />\n      </Helmet>",
+      "after": "      <SearchMetadata />"
+    },
+    {
+      "file": "vite.config.ts",
+      "before": "plugins: [react()],",
+      "after": "plugins: [react()],\n  build: {manifest:true},"
+    },
+    {
+      "file": "src/pages/PlatformPage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/SovereignGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity SovereignOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity enforces accreditation-grade agent governance for government and sovereign missions \u2014 authorization, attribution, and audit aligned to FedRAMP, FISMA, IL4/IL5, the UAE AI Act, and Singapore IMDA.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/HospitalityGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity HospitalityOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity governs guest payment and personal data across brands and borders \u2014 enforcing PCI-DSS, GDPR, and data-sovereignty requirements on every autonomous agent.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/PrivateCapitalGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity PrivateCapitalOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity governs diligence, valuation, and LP-reporting agents \u2014 enforcing SEC private-fund rules, FINRA information barriers, and fiduciary duty with cryptographic evidence.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/RealEstateGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity RealEstateOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity governs origination, title, and closing agents against money-laundering and consumer-protection risk \u2014 enforcing FinCEN, the Bank Secrecy Act, and CFPB rules.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/HealthcareGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity HealthcareOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity enforces HIPAA-grade access, attribution, and audit across every clinical and administrative AI agent \u2014 aligned to HIPAA, FDA, CMS, and the 21st Century Cures Act.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/LegalGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity LegalOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity enforces privilege-aware agent governance across legal and professional services \u2014 so an autonomous agent never waives privilege, breaches an ethical wall, or leaves a matter without a defensible record.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/BFSIGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity BFSI AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity enforces authorization, attribution, and audit on every autonomous action across banking, trading, credit, and payments \u2014 to SEC, FINRA, OCC, Basel III, and PCI-DSS standards.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/EducationGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity EducationOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity governs every agent that touches student records, federal aid, or research data \u2014 enforcing FERPA, Title IV, and federal research compliance with cryptographic audit trails.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/ManufacturingGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity ManufacturingOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity protects CUI and controlled technical data across design and production \u2014 enforcing CMMC, ITAR, and EAR requirements on every autonomous agent.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/LogisticsGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity LogisticsOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity governs routing, customs clearance, and party screening across the supply chain \u2014 enforcing CISA, DHS, and export-control obligations on every autonomous action.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/FinanceGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity FinanceOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity keeps autonomous agents inside SOX controls across the financial close, treasury, and reporting \u2014 authorized, segregated, and audit-ready for the SEC and external auditors.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/pages/RetailGovernancePage.tsx",
+      "before": "<script type=\"application/ld+json\">{`{\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"CoreIdentity RetailOps AI Governance\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Cloud\",\"description\":\"CoreIdentity governs pricing, payments, and personalization agents across millions of consumers \u2014 enforcing PCI-DSS, CCPA/CPRA, and consumer-protection law.\",\"provider\":{\"@type\":\"Organization\",\"name\":\"CoreIdentity Development Group Inc.\"}}`}</script>",
+      "after": ""
+    },
+    {
+      "file": "src/components/InstitutionalVisual.tsx",
+      "before": "fetchPriority={priority?\"high\":\"auto\"}",
+      "after": "{...{fetchpriority:priority?\"high\":\"auto\"}}"
+    },
+    {
+      "file": ".gitignore",
+      "before": "# >>> coreidentity:release-hygiene >>>",
+      "after": "# SEO build scratch outputs\nwork/seo-build/\nwork/seo-payload/\n\n# >>> coreidentity:release-hygiene >>>"
+    },
+    {
+      "file": "src/pages/HomePage.tsx",
+      "before": "content=\"CoreIdentity connects CIAG executive advisory, SmartNation AI workforce intelligence, governed transformation, and Trust Infrastructure\u2014from institutional strategy through accountable execution and ongoing assurance.\"",
+      "after": "content=\"Explore CoreIdentity executive AI governance, workforce transformation, and Trust Infrastructure for accountable autonomous execution.\""
+    },
+    {
+      "file": "src/pages/TrustInfrastructurePage.tsx",
+      "before": "content=\"Trust Infrastructure is the operational institutional foundation through which authority can be established, delegated, constrained, exercised, verified, and preserved throughout autonomous execution.\"",
+      "after": "content=\"Explore Trust Infrastructure for establishing, delegating, constraining, and verifying institutional authority throughout autonomous execution.\""
+    },
+    {
+      "file": "src/pages/IntelligencePage.tsx",
+      "before": "content=\"Institutional Intelligence establishes governed understanding of autonomous execution in the context of institutional authority, governance requirements, operating conditions, and risk.\"",
+      "after": "content=\"Institutional Intelligence connects identity, policy, risk, and operational context to governed autonomous execution.\""
+    },
+    {
+      "file": "src/pages/TrustPage.tsx",
+      "before": "content=\"Institutional Trust is a condition established when an institution possesses sufficient intelligence, assurance, evidence, and accountability to justify reliance on autonomous execution within legitimate authority and governed boundaries.\"",
+      "after": "content=\"Institutional Trust connects authority, evidence, and accountability to verifiable confidence in governed autonomous execution.\""
+    },
+    {
+      "file": "src/pages/PlatformPage.tsx",
+      "before": "content=\"The complete CoreIdentity architecture for CTOs and security evaluators: institutional-grade identity, policy verification, and delegation assurance \u2014 every action authorized, attributed, and recorded in a tamper-evident trail, operating in production today.\"",
+      "after": "content=\"Explore the CoreIdentity governance architecture for identity, delegated authority, execution controls, evidence, and institutional accountability.\""
+    },
+    {
+      "file": "src/pages/PortfolioPage.tsx",
+      "before": "content=\"The CoreIdentity portfolio: the governance infrastructure \u2014 an integrated institutional governance architecture \u2014 and the commercial products that prove the platform's capability in market.\"",
+      "after": "content=\"Explore the CoreIdentity portfolio spanning executive AI governance, workforce intelligence, and Trust Infrastructure.\""
+    },
+    {
+      "file": "src/pages/AboutPage.tsx",
+      "before": "content=\"CoreIdentity Development Group is the architect of the Governance Ecosystem for the Autonomous Era and the Trust Infrastructure that enables institutions to safely delegate autonomous execution while preserving authority, accountability, trust, and control.\"",
+      "after": "content=\"Learn how CoreIdentity connects Trust Infrastructure, executive AI governance, and autonomous execution while preserving institutional control.\""
+    },
+    {
+      "file": "src/pages/RegulatedIndustriesPage.tsx",
+      "before": "content=\"CoreIdentity enforces autonomous-agent governance across eleven regulated industries \u2014 authorization, attribution, and audit mapped to the obligations each regulator enforces, from SEC and HIPAA to CMMC and FinCEN.\"",
+      "after": "content=\"Explore AI governance requirements for regulated institutions, including delegated authority, oversight, execution controls, and evidence.\""
+    },
+    {
+      "file": "src/pages/BFSIGovernancePage.tsx",
+      "before": "content=\"CoreIdentity enforces authorization, attribution, and audit on every autonomous action across banking, trading, credit, and payments \u2014 to SEC, FINRA, OCC, Basel III, and PCI-DSS standards.\"",
+      "after": "content=\"Explore autonomous AI governance for banking, financial services, and insurance, with institutional authority, oversight, and accountability.\""
+    },
+    {
+      "file": "src/pages/SovereignGovernancePage.tsx",
+      "before": "content=\"CoreIdentity enforces accreditation-grade agent governance for government and sovereign missions \u2014 authorization, attribution, and audit aligned to FedRAMP, FISMA, IL4/IL5, the UAE AI Act, and Singapore IMDA.\"",
+      "after": "content=\"Explore sovereign and government AI governance requirements for institutional authority, controlled execution, oversight, and evidence.\""
+    },
+    {
+      "file": "src/pages/LegalGovernancePage.tsx",
+      "before": "content=\"CoreIdentity enforces privilege-aware agent governance across legal and professional services \u2014 so an autonomous agent never waives privilege, breaches an ethical wall, or leaves a matter without a defensible record.\"",
+      "after": "content=\"Explore AI governance for legal and professional services, including confidentiality, delegated authority, oversight, and accountability.\""
+    },
+    {
+      "file": "src/pages/EducationGovernancePage.tsx",
+      "before": "content=\"CoreIdentity governs every agent that touches student records, federal aid, or research data \u2014 enforcing FERPA, Title IV, and federal research compliance with cryptographic audit trails.\"",
+      "after": "content=\"Explore AI governance for education, including institutional authority, student information, oversight, and accountable autonomous execution.\""
+    },
+    {
+      "file": "src/pages/FinanceGovernancePage.tsx",
+      "before": "content=\"CoreIdentity keeps autonomous agents inside SOX controls across the financial close, treasury, and reporting \u2014 authorized, segregated, and audit-ready for the SEC and external auditors.\"",
+      "after": "content=\"Explore AI governance for financial operations, including authorization, segregation of duties, oversight, and audit evidence.\""
+    },
+    {
+      "file": "src/pages/HomePage.tsx",
+      "before": "<title>CoreIdentity | Executive AI Governance, Workforce Transformation &amp; Trust Infrastructure</title>",
+      "after": "<title>CoreIdentity | AI Governance &amp; Trust Infrastructure</title>"
+    },
+    {
+      "file": "src/data/blogPosts.ts",
+      "before": "  slug: string;",
+      "after": "  slug: string;\n  seoTitle?: string;\n  seoDescription?: string;"
+    },
+    {
+      "file": "src/data/blogPosts.ts",
+      "before": "    slug: \"deployed-at-scale-ungoverned-by-design\",",
+      "after": "    slug: \"deployed-at-scale-ungoverned-by-design\",\n    seoTitle: \"Deployed at Scale, Ungoverned by Design | CoreIdentity\",\n    seoDescription: \"Why large-scale autonomous AI adoption creates an urgent need for institutional authority, governance infrastructure, and accountability.\","
+    },
+    {
+      "file": "src/data/blogPosts.ts",
+      "before": "    slug: \"ai-agents-out-of-control-2026\",",
+      "after": "    slug: \"ai-agents-out-of-control-2026\",\n    seoTitle: \"AI Agents and the Governance Gap | CoreIdentity\",\n    seoDescription: \"Explore the governance challenges of enterprise AI agents and the need for stronger authority, oversight, and execution controls.\","
+    },
+    {
+      "file": "src/data/blogPosts.ts",
+      "before": "    slug: \"quantum-vulnerability-closed-24-hours\",",
+      "after": "    slug: \"quantum-vulnerability-closed-24-hours\",\n    seoTitle: \"Quantum Risk and AI Governance | CoreIdentity\",\n    seoDescription: \"A CoreIdentity perspective on post-quantum cryptography, software assurance, and the security foundations of autonomous AI governance.\","
+    },
+    {
+      "file": "src/data/blogPosts.ts",
+      "before": "    slug: \"formal-governance-reasoning-enterprise-ai\",",
+      "after": "    slug: \"formal-governance-reasoning-enterprise-ai\",\n    seoTitle: \"Formal Governance Reasoning for Enterprise AI | CoreIdentity\",\n    seoDescription: \"Explore how formal reasoning can connect governance policies, execution boundaries, and verification in enterprise AI.\","
+    },
+    {
+      "file": "src/data/blogPosts.ts",
+      "before": "    slug: \"cryptographic-floor-beneath-ai-governance\",",
+      "after": "    slug: \"cryptographic-floor-beneath-ai-governance\",\n    seoTitle: \"The Cryptographic Foundation of AI Governance | CoreIdentity\",\n    seoDescription: \"Explore the role of cryptographic identity, signed evidence, and verification in accountable autonomous AI execution.\","
+    },
+    {
+      "file": "src/pages/BlogPostPage.tsx",
+      "before": "<title>{localPost.title} \u2014 CoreIdentity Development Group</title>",
+      "after": "<title>{localPost.seoTitle ?? localPost.title + \" | CoreIdentity\"}</title>"
+    },
+    {
+      "file": "src/pages/BlogPostPage.tsx",
+      "before": "content={localPost.excerpt}",
+      "after": "content={localPost.seoDescription ?? localPost.excerpt}"
+    },
+    {
+      "file": "src/pages/HomePage.tsx",
+      "before": "<meta property=\"og:title\" content=\"CoreIdentity \u2014 Making Autonomy Trustworthy\" />",
+      "after": ""
+    },
+    {
+      "file": "src/pages/HomePage.tsx",
+      "before": "<meta property=\"og:description\" content=\"An integrated ecosystem for Executive AI Governance, Autonomous Workforce Transformation, and Trust Infrastructure.\" />",
+      "after": ""
+    },
+    {
+      "file": "src/pages/AdvisoryPages.tsx",
+      "before": "<meta property=\"og:title\" content={`${title} | CoreIdentity Advisory Group`} />",
+      "after": ""
+    },
+    {
+      "file": "src/pages/AdvisoryPages.tsx",
+      "before": "<meta property=\"og:description\" content={description} />",
+      "after": ""
+    },
+    {
+      "file": "src/styles.css",
+      "before": "background-image:url('/images/brand/coreidentity-hero-reference-202609.png')",
+      "after": "background-image:url('/images/brand/coreidentity-header-optimized.webp')"
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "before": "/images/brand/coreidentity-website-logo-202609.png",
+      "after": "/images/brand/coreidentity-logo-optimized.webp"
+    },
+    {
+      "file": "src/pages/GovernanceEcosystemPage.tsx",
+      "before": "/images/visuals/governance-ecosystem-3d-alpha.png",
+      "after": "/images/visuals/governance-ecosystem-optimized.webp"
+    },
+    {
+      "file": "src/pages/LeadershipPage.tsx",
+      "before": "import ToddMorganLeadershipProfile from \"../assets/leadership/todd-morgan-leadership-profile-v3.png\";",
+      "after": "const ToddMorganLeadershipProfile = \"/images/brand/todd-morgan-optimized.webp\";"
+    },
+    {
+      "file": "src/router.tsx",
+      "before": "import { Layout } from \"./components/Layout\";",
+      "after": "import { Layout } from \"./components/Layout\";\nimport NotFound from \"./components/NotFound\";"
+    },
+    {
+      "file": "src/router.tsx",
+      "before": "createRootRoute({ component: Layout })",
+      "after": "createRootRoute({ component: Layout, notFoundComponent: NotFound })"
+    },
+    {
+      "file": "src/pages/LeadershipPage.tsx",
+      "before": "<img src={ToddMorganLeadershipProfile} alt=",
+      "after": "<img src={ToddMorganLeadershipProfile} width=\"640\" height=\"569\" alt="
+    },
+    {
+      "file": "src/pages/LeadershipPage.tsx",
+      "before": "useState<SanityTeamMember[]>([])",
+      "after": "useState<SanityTeamMember[]>(FALLBACK_MEMBERS)"
+    },
+    {
+      "file": "src/pages/LeadershipPage.tsx",
+      "before": "useState(true)",
+      "after": "useState(isSanityConfigured)"
+    }
+  ],
+  "files": {
+    "package.json": "{\n  \"name\": \"coreidentitygroup-site\",\n  \"private\": true,\n  \"version\": \"1.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"tsc -b && vite build\",\n    \"preview\": \"vite preview\",\n    \"postbuild\": \"node scripts/prerender.mjs && node scripts/validate-seo.mjs && node scripts/write-version.mjs\",\n    \"prebuild\": \"node scripts/prepare-seo.mjs\"\n  },\n  \"dependencies\": {\n    \"@portabletext/react\": \"^3.0.0\",\n    \"@sanity/client\": \"^6.0.0\",\n    \"@tailwindcss/typography\": \"^0.5.19\",\n    \"@tanstack/react-router\": \"^1.0.0\",\n    \"@tanstack/react-router-devtools\": \"^1.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"react-helmet-async\": \"^3.0.0\"\n  },\n  \"devDependencies\": {\n    \"@types/react\": \"^18.3.3\",\n    \"@types/react-dom\": \"^18.3.0\",\n    \"@vitejs/plugin-react\": \"^4.3.1\",\n    \"autoprefixer\": \"^10.4.20\",\n    \"postcss\": \"^8.4.41\",\n    \"tailwindcss\": \"^3.4.10\",\n    \"typescript\": \"^5.5.4\",\n    \"vite\": \"^5.4.2\"\n  }\n}\n",
+    "scripts/render-pages.tsx": "import React from 'react';\nimport {renderToString} from 'react-dom/server';\nimport {createRouter,createMemoryHistory,RouterProvider} from '@tanstack/react-router';\nimport {HelmetProvider} from 'react-helmet-async';\nimport {routeTree} from '../src/router';\nimport {blogPosts} from '../src/data/blogPosts';\nimport {isSanityConfigured} from '../src/lib/queries';\nexport const posts=blogPosts;\nexport const remoteCMS=isSanityConfigured;\nexport async function renderPage(path:string){\n const router=createRouter({routeTree,history:createMemoryHistory({initialEntries:[path]}),isServer:true});\n await router.load();\n const context:any={};\n const html=renderToString(<HelmetProvider context={context}><RouterProvider router={router}/></HelmetProvider>);\n const h=context.helmet;\n return {html,title:h.title.toString(),meta:h.meta.toString(),link:h.link.toString(),script:h.script.toString()};\n}\n",
+    "scripts/prerender.mjs": "import {build} from 'vite';\nimport {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';\nimport {resolve,dirname} from 'node:path';\nimport {fileURLToPath} from 'node:url';\nconst root=resolve(dirname(fileURLToPath(import.meta.url)),'..');\nawait build({mode:'production',logLevel:'error',build:{ssr:'scripts/render-pages.tsx',outDir:'work/seo-build',emptyOutDir:true,manifest:false}});\ntry {\n const {renderPage,posts,remoteCMS}=await import('../work/seo-build/render-pages.js');\n if(remoteCMS)throw Error('Remote CMS enabled: implement a verified CMS build snapshot before prerendering.');\n const aliases=new Set(['/ciag','/coreidentity-ai-advisory-group','/coreidentity-advisory-group','/governance-infrastructure']);\n const routes=[...readFileSync(resolve(root,'src/router.tsx'),'utf8').matchAll(/path:\\s*\"([^\"$]+)\"/g)].map(m=>m[1]).filter(p=>!aliases.has(p));\n routes.push(...posts.map(p=>'/blog/'+p.slug));\n const template=readFileSync(resolve(root,'dist/index.html'),'utf8');\n const entries=[];\n for(const route of routes){\n  const result=await renderPage(route);\n  if(!result.html.includes('<h1'))throw Error('Missing crawlable heading: '+route);\n  if(!result.title||!result.meta.includes('name=\"description\"'))throw Error('Missing metadata: '+route);\n  const manifest=JSON.parse(readFileSync(resolve(root,'dist/.vite/manifest.json'),'utf8'));\n  result.html=result.html.replace(/src=\"(\\/src\\/[^\"]+)\"/g,(_,url)=>{const asset=manifest[url.slice(1)];if(!asset)throw Error('Unmapped image '+url);return 'src=\"/'+asset.file+'\"';});\n  const file=resolve(root,'dist',route==='/'?'index.html':route.slice(1)+'.html');mkdirSync(dirname(file),{recursive:true});\n  writeFileSync(file,template.replace('<!-- SEO_HEAD -->',[result.title,result.meta,result.link,result.script].join('\\n')).replace('<div id=\"root\"></div>','<div id=\"root\">'+result.html+'</div>'));\n  if(!result.meta.includes('noindex'))entries.push(route);\n }\n writeFileSync(resolve(root,'dist/sitemap.xml'),'<?xml version=\"1.0\" encoding=\"UTF-8\"?>\\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\\n'+entries.map(p=>'  <url><loc>https://coreidentitygroup.com'+p+'</loc></url>').join('\\n')+'\\n</urlset>\\n');\n writeFileSync(resolve(root,'dist/404.html'),'<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta name=\"robots\" content=\"noindex,follow\"><title>Page not found | CoreIdentity</title></head><body><main><h1>Page not found</h1><p>This address is unavailable.</p><a href=\"/\">Return to CoreIdentity</a></main></body></html>');\n console.log('Prerendered '+entries.length+' crawlable pages.');\n}finally{}\n",
+    "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<!-- SEO_HEAD -->\n<link rel=\"icon\" type=\"image/png\" sizes=\"64x64\" href=\"/favicon.png\" />\n    <!-- Institutional Carbon typography: Inter (body/UI) + Source Serif 4 (display) -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    <link\n      href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap\"\n      rel=\"stylesheet\"\n    />\n</head>\n<body>\n<div id=\"root\"></div>\n<script type=\"module\" src=\"/src/main.tsx\"></script>\n</body>\n</html>\n",
+    "src/components/SearchMetadata.tsx": "import {Helmet} from 'react-helmet-async';\nimport {useRouterState} from '@tanstack/react-router';\nimport catalog from '../data/searchMetadata.json';\nimport {blogPosts} from '../data/blogPosts';\nconst origin='https://coreidentitygroup.com';\nconst aliases:Record<string,string>={'/ciag':'/advisory','/coreidentity-ai-advisory-group':'/advisory','/coreidentity-advisory-group':'/advisory','/governance-infrastructure':'/portfolio'};\nexport default function SearchMetadata(){\n const path=useRouterState({select:s=>s.location.pathname}).replace(/\\/+$/,'')||'/';\n const canonical=origin+(aliases[path]||path);\n const entry=(catalog as Record<string,{title:string;description:string}>)[aliases[path]||path];\n const fallback:Record<string,[string,string]>={\n '/privacy':['Privacy Policy | CoreIdentity','How CoreIdentity collects, uses, and protects information when we interact through its website and services.'],\n '/terms':['Terms of Use | CoreIdentity','Terms governing use of the CoreIdentity corporate website and its information.'],\n '/founders':[\"Founder\u2019s Brief | CoreIdentity\",'Internal CoreIdentity founder briefing.'],\n };\n const defaults=fallback[path];\n const title=entry?.title||defaults?.[0]||'CoreIdentity \u2014 Making Autonomy Trustworthy';\n const description=entry?.description||defaults?.[1]||'CoreIdentity connects executive AI governance, workforce transformation, and Trust Infrastructure to preserve institutional authority and accountability.';\n const graph=[{'@type':'Organization','@id':origin+'/#organization',name:'CoreIdentity Development Group',url:origin,logo:origin+'/images/brand/coreidentity-logo-optimized.webp'}, {'@type':'WebSite','@id':origin+'/#website',name:'CoreIdentity',url:origin,publisher:{'@id':origin+'/#organization'}},{'@type':'WebPage','@id':canonical+'#page',url:canonical,name:title,description,isPartOf:{'@id':origin+'/#website'}}];\n const post=blogPosts.find(p=>path==='/blog/'+p.slug);\n const article=post?{'@context':'https://schema.org','@type':'BlogPosting',headline:post.title,datePublished:post.date,description:post.excerpt,author:{'@type':'Person',name:post.author.split(',')[0]},publisher:{'@id':origin+'/#organization'},mainEntityOfPage:canonical}:null;\n return <Helmet>\n {defaults&&<title>{defaults[0]}</title>}{defaults&&<meta name=\"description\" content={defaults[1]}/>}\n <link rel=\"canonical\" href={canonical}/>\n <meta name=\"robots\" content={path==='/founders'?'noindex, nofollow':'index, follow, max-image-preview:large'}/>\n <meta property=\"og:site_name\" content=\"CoreIdentity Group\"/><meta property=\"og:locale\" content=\"en_US\"/>\n <meta property=\"og:type\" content={path.startsWith('/blog/')?'article':'website'}/>\n <meta property=\"og:url\" content={canonical}/><meta property=\"og:title\" content={title}/><meta property=\"og:description\" content={description}/>\n <meta property=\"og:image\" content={origin+'/images/brand/coreidentity-website-header-202609.png'}/><meta property=\"og:image:alt\" content=\"CoreIdentity Group \u2014 Making Autonomy Trustworthy\"/>\n <meta name=\"twitter:card\" content=\"summary_large_image\"/><meta name=\"twitter:title\" content={title}/><meta name=\"twitter:description\" content={description}/><meta name=\"twitter:image\" content={origin+'/images/brand/coreidentity-website-header-202609.png'}/><meta name=\"twitter:image:alt\" content=\"CoreIdentity Group \u2014 Making Autonomy Trustworthy\"/>\n <script type=\"application/ld+json\">{JSON.stringify({'@context':'https://schema.org','@graph':graph}).replace(/</g,'\\\\u003c')}</script>\n {article&&<script type=\"application/ld+json\">{JSON.stringify(article).replace(/</g,'\\\\u003c')}</script>}\n </Helmet>;\n}\n",
+    "scripts/prepare-seo.mjs": "import {build} from 'vite';\nimport {readFileSync,writeFileSync} from 'node:fs';\nawait build({mode:'production',logLevel:'error',build:{ssr:'scripts/render-pages.tsx',outDir:'work/seo-build',emptyOutDir:true,manifest:false}});\ntry{\n const {renderPage,posts,remoteCMS}=await import('../work/seo-build/render-pages.js');\n if(remoteCMS)throw Error('CMS enabled: a verified build snapshot is required before publishing.');\n const aliases=new Set(['/ciag','/coreidentity-ai-advisory-group','/coreidentity-advisory-group','/governance-infrastructure']);\n const paths=[...readFileSync('src/router.tsx','utf8').matchAll(/path:\\s*\"([^\"$]+)\"/g)].map(m=>m[1]).filter(p=>!aliases.has(p));\n paths.push(...posts.map(p=>'/blog/'+p.slug));\n const decode=s=>s.replace(/&amp;/g,'&').replace(/&quot;/g,'\"').replace(/&#x27;|&#39;/g,\"'\").replace(/&lt;/g,'<').replace(/&gt;/g,'>');\n const catalog={};const titles=new Set();\n for(const path of paths){const r=await renderPage(path);const title=decode(r.title.replace(/<[^>]+>/g,''));const description=decode(r.meta.match(/name=\"description\" content=\"([^\"]*)\"/)?.[1]||'');if(!description)throw Error('Missing description: '+path);if(titles.has(title))throw Error('Duplicate title: '+title);titles.add(title);catalog[path]={title,description};}\n writeFileSync('src/data/searchMetadata.json',JSON.stringify(catalog,null,2)+'\\n');\n writeFileSync('public/sitemap.xml','<?xml version=\"1.0\" encoding=\"UTF-8\"?>\\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\\n'+paths.filter(p=>p!=='/founders').map(p=>'  <url><loc>https://coreidentitygroup.com'+p+'</loc></url>').join('\\n')+'\\n</urlset>\\n');\n console.log('Prepared unique metadata for '+paths.length+' routes.');\n}finally{}\n",
+    "public/_redirects": "# Canonical Advisory sub-site\n/ciag                              /advisory 301\n/coreidentity-ai-advisory-group    /advisory 301\n/coreidentity-advisory-group       /advisory 301\n/advisory/                         /advisory 301\n\n# Retired surfaces\n/sal                     /verification-at-scale 301\n/fgre                    /verification-at-scale 301\n/sentinel                /platform 301\n/nexus                   /sovereign-assurance 301\n/agentidentity-systems   /execution-integrity 301\n/mcp                     /platform 301\n/ago                     /sovereign-assurance 301\n/ago-1                   /sovereign-assurance 301\n/sentinel-os             /platform 301\n/nexus-os                /sovereign-assurance 301\n/quantum-hardening       /platform 301\n/coreidentity-technologies /platform 301\n/portal                  /contact 301\n/layer-a                 /execution-integrity 301\n/layer-b                 /verification-at-scale 301\n/layer-c                 /sovereign-assurance 301\n/layer-d                 /platform 301\n\n# Static page output; unknown paths use 404.html.\n/governance-infrastructure /portfolio 301\n",
+    "functions/_middleware.js": "// Every visitor and crawler receives the same build-time rendered HTML.\n// Route-specific API handlers and Cloudflare static asset status codes remain intact.\nexport async function onRequest({next}) { return next(); }\n",
+    "scripts/validate-seo.mjs": "import {readFileSync,existsSync,writeFileSync} from 'node:fs';\nimport assert from 'node:assert/strict';\nconst catalog=JSON.parse(readFileSync('src/data/searchMetadata.json','utf8'));\nconst redirects=readFileSync('public/_redirects','utf8').split('\\n').filter(x=>x&&!x.startsWith('#')).map(x=>x.trim().split(/\\s+/)[0]);\nconst attrs=tag=>Object.fromEntries([...tag.matchAll(/([\\w:-]+)=\"([^\"]*)\"/g)].map(x=>[x[1],x[2]]));\nconst missing=new Set(), warnings=[];\nfor(const [route,meta]of Object.entries(catalog)){\n const file=route==='/'?'dist/index.html':`dist${route}.html`;\n const html=readFileSync(file,'utf8'),head=html.split('</head>')[0];\n assert.equal((head.match(/<title[\\s>]/g)||[]).length,1,route+' title');\n assert.equal((html.match(/<h1[\\s>]/g)||[]).length,1,route+' h1');\n for(const name of ['description','robots','twitter:title','twitter:description','twitter:image'])assert.equal([...head.matchAll(/<meta\\b[^>]*>/g)].filter(m=>attrs(m[0]).name===name).length,1,route+' '+name);\n const canon=[...head.matchAll(/<link\\b[^>]*>/g)].filter(m=>attrs(m[0]).rel==='canonical');assert.equal(canon.length,1,route+' canonical');assert.equal(attrs(canon[0][0]).href,'https://coreidentitygroup.com'+route);\n for(const m of head.matchAll(/<script[^>]*type=\"application\\/ld\\+json\"[^>]*>([\\s\\S]*?)<\\/script>/g))JSON.parse(m[1]);\n for(const m of html.matchAll(/<(?:a|img|script|link)\\b[^>]*>/g)){\n  const a=attrs(m[0]),url=a.src||a.href;if(!url?.startsWith('/')||url.startsWith('//'))continue;\n  const path=url.split(/[?#]/)[0];if(path==='/')continue;\n  if(!existsSync('dist'+path)&&!existsSync('dist'+path+'.html')&&!redirects.includes(path))missing.add(route+' \u2192 '+path);\n  if(m[0].startsWith('<img'))assert.ok('alt'in a,route+' missing image alt');\n }\n if(meta.title.length>70||meta.description.length>180)warnings.push({route,titleLength:meta.title.length,descriptionLength:meta.description.length});\n assert.ok(!html.includes('PENDING_VERIFICATION'),route+' placeholder');\n assert.ok(!html.includes('animate-pulse'),route+' loading skeleton');\n if(route==='/leadership'){assert.ok(html.includes('Senior Advisor'));assert.ok(html.includes('todd-morgan-optimized.webp'));}\n}\nassert.equal(missing.size,0,'Broken internal targets:\\n'+[...missing].join('\\n'));\nconst map=readFileSync('dist/sitemap.xml','utf8');assert.ok(!map.includes('/founders'));\nassert.ok(readFileSync('dist/founders.html','utf8').includes('noindex'));\nassert.ok(!readFileSync('public/_redirects','utf8').includes('/* /index.html 200'));\nconst {onRequest}=await import('../functions/_middleware.js');\nfor(const ua of ['Googlebot','bingbot','LinkedInBot','Mozilla/5.0']){let calls=0;const response=await onRequest({request:new Request('https://coreidentitygroup.com/',{headers:{'user-agent':ua}}),next:()=>{calls++;return new Response('complete page');}});assert.equal(calls,1);assert.equal(await response.text(),'complete page');}\nwriteFileSync('dist/seo-validation.json',JSON.stringify({pages:Object.keys(catalog).length,sitemapUrls:(map.match(/<loc>/g)||[]).length,missingInternalTargets:0,metadataLengthReview:warnings},null,2)+'\\n');\nconsole.log(`SEO validation passed: ${Object.keys(catalog).length} pages; no missing internal targets; ${warnings.length} metadata length review notes.`);\n",
+    "src/components/NotFound.tsx": "import {Helmet} from 'react-helmet-async';\nimport {Link} from '@tanstack/react-router';\nexport default function NotFound(){return <section style={{padding:'48px'}}><Helmet><title>Page not found | CoreIdentity</title><meta name=\"robots\" content=\"noindex, follow\"/></Helmet><h1>Page not found</h1><p>This address is unavailable.</p><Link to=\"/\">Return to CoreIdentity</Link></section>;}\n",
+    "public/_routes.json": "{\n  \"version\": 1,\n  \"include\": [\"/api/*\"],\n  \"exclude\": []\n}\n"
+  },
+  "assets": [
+    {
+      "source": "public/images/brand/coreidentity-hero-reference-202609.png",
+      "destination": "public/images/brand/coreidentity-header-optimized.webp",
+      "width": 800,
+      "sha256": "3c4c2268598c853f0db79de1a96fbeeed568de790be108f70e9a3e537f58e9ec"
+    },
+    {
+      "source": "public/images/brand/coreidentity-website-logo-202609.png",
+      "destination": "public/images/brand/coreidentity-logo-optimized.webp",
+      "width": 320,
+      "sha256": "e2860d98ef5e9675d6869fb48f106ed60ef1109c76c009e8518e55ec37f81245"
+    },
+    {
+      "source": "public/images/brand/coreidentity-website-logo-202609.png",
+      "destination": "public/favicon.png",
+      "width": 64,
+      "sha256": "e2860d98ef5e9675d6869fb48f106ed60ef1109c76c009e8518e55ec37f81245"
+    },
+    {
+      "source": "public/images/visuals/governance-ecosystem-3d-alpha.png",
+      "destination": "public/images/visuals/governance-ecosystem-optimized.webp",
+      "width": 1000,
+      "sha256": "24a5b1569ee665d27c7329664de8743c10ef7729c8d742ec66e3116df2d846b9"
+    },
+    {
+      "source": "src/assets/leadership/todd-morgan-leadership-profile-v3.png",
+      "destination": "public/images/brand/todd-morgan-optimized.webp",
+      "width": 640,
+      "sha256": "b15476c8748d01708b71aa6494453660effbfaf1067e8f9112053023771d2ad4"
+    }
+  ],
+  "allowedPreimages": {
+    "package.json": [
+      "7ae384ed0b6ba96fc22be91dd5851eef0a52f9854ec8a9c42e2e263ef6ec60c2"
+    ],
+    "scripts/render-pages.tsx": [],
+    "scripts/prerender.mjs": [],
+    "index.html": [
+      "f8cfeccb85ae7ace04f3b2144a9b566d0a72d9cb64884a9f1f84ba3f43c2aef0"
+    ],
+    "src/components/SearchMetadata.tsx": [
+      "b1e9a7de6991bb4cca9f9eb2afb2fcd89487bf4606fadd80a2968d107d7e6e91"
+    ],
+    "scripts/prepare-seo.mjs": [],
+    "public/_redirects": [
+      "a96b1a7663b210df45a81ba94ff3ccac470600f79a162f6c3d02c7dfa2b781d6",
+      "8fd36680fbe3a232e82d8a763e8fc40c4c3acba3c47d582c4b618dea3093def7"
+    ],
+    "functions/_middleware.js": [
+      "2f0d59b17967b5273dc924c7f6eb8e582b3e67c7e587580552aa27525ec43ef0"
+    ],
+    "scripts/validate-seo.mjs": [
+      "2b09fdf09e25d88c66107ce1c6f79622a87c34bd84e51396427a9d8c0709228f"
+    ],
+    "src/components/NotFound.tsx": [],
+    "public/_routes.json": [
+      "2eb559f0bcd978e93184b2df0c46fcc993787aa28c078e603065423f6ad4fcf8"
+    ]
+  }
+}

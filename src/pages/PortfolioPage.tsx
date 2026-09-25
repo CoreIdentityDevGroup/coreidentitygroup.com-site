@@ -50,7 +50,7 @@ export function PortfolioPage() {
         <title>Portfolio | CoreIdentity</title>
         <meta
           name="description"
-          content="The CoreIdentity portfolio: the governance infrastructure — an integrated institutional governance architecture — and the commercial products that prove the platform's capability in market."
+          content="Explore the CoreIdentity portfolio spanning executive AI governance, workforce intelligence, and Trust Infrastructure."
         />
       </Helmet>
 

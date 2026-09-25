@@ -8,8 +8,8 @@ export function BFSIGovernancePage() {
     <div className="space-y-12">
       <Helmet>
         <title>BFSI AI Governance | CoreIdentity</title>
-        <meta name="description" content="CoreIdentity enforces authorization, attribution, and audit on every autonomous action across banking, trading, credit, and payments — to SEC, FINRA, OCC, Basel III, and PCI-DSS standards." />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity BFSI AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity enforces authorization, attribution, and audit on every autonomous action across banking, trading, credit, and payments — to SEC, FINRA, OCC, Basel III, and PCI-DSS standards.","provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+        <meta name="description" content="Explore autonomous AI governance for banking, financial services, and insurance, with institutional authority, oversight, and accountability." />
+
       </Helmet>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}

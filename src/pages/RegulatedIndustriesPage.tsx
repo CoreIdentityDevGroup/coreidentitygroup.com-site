@@ -8,7 +8,7 @@ export function RegulatedIndustriesPage() {
     <div className="space-y-12">
       <Helmet>
         <title>Regulated Industries AI Governance | CoreIdentity</title>
-        <meta name="description" content="CoreIdentity enforces autonomous-agent governance across eleven regulated industries — authorization, attribution, and audit mapped to the obligations each regulator enforces, from SEC and HIPAA to CMMC and FinCEN." />
+        <meta name="description" content="Explore AI governance requirements for regulated institutions, including delegated authority, oversight, execution controls, and evidence." />
       </Helmet>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}

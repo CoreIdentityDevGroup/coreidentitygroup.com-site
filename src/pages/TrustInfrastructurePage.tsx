@@ -8,7 +8,7 @@ export function TrustInfrastructurePage() {
     <div className="cidg-framework-page cidg-framework-expanded">
       <Helmet>
         <title>Trust Infrastructure | CoreIdentity Development Group</title>
-        <meta name="description" content="Trust Infrastructure is the operational institutional foundation through which authority can be established, delegated, constrained, exercised, verified, and preserved throughout autonomous execution." />
+        <meta name="description" content="Explore Trust Infrastructure for establishing, delegating, constraining, and verifying institutional authority throughout autonomous execution." />
       </Helmet>
 
       <section className="cidg-framework-hero">

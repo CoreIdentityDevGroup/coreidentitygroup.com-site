@@ -27,9 +27,9 @@ export function PlatformPage() {
         <title>Platform Architecture | CoreIdentity</title>
         <meta
           name="description"
-          content="The complete CoreIdentity architecture for CTOs and security evaluators: institutional-grade identity, policy verification, and delegation assurance — every action authorized, attributed, and recorded in a tamper-evident trail, operating in production today."
+          content="Explore the CoreIdentity governance architecture for identity, delegated authority, execution controls, evidence, and institutional accountability."
         />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+
       </Helmet>
 
       <section className="pt-4 md:pt-8">

@@ -36,6 +36,10 @@ credentials.json
 .aws/credentials
 .netrc
 
+# SEO build scratch outputs
+work/seo-build/
+work/seo-payload/
+
 # >>> coreidentity:release-hygiene >>>
 node_modules/
 dist/

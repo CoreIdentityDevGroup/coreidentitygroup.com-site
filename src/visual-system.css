@@ -1,5 +1,5 @@
 /* Audited visual contract: content alignment, responsive type, explicit surfaces. */
-.cidg-platinum-site{--site-content:1180px;--site-gutter:24px;--site-inset:max(var(--site-gutter),calc((100% - var(--site-content))/2));--site-section:clamp(2.5rem,5vw,4.5rem);--site-heading:#202a38;--site-copy:#485568}
+.cidg-platinum-site{--site-content:100%;--site-gutter:var(--cidg-gutter);--site-inset:var(--cidg-gutter);--site-section:clamp(2.5rem,5vw,4.5rem);--site-heading:#202a38;--site-copy:#485568}
 #main-content h1{font-size:clamp(2.1rem,3.8vw,3.5rem);line-height:1.12;letter-spacing:-.035em;color:var(--site-heading);white-space:normal;overflow-wrap:break-word;text-wrap:balance}
 #main-content h2{font-size:clamp(1.65rem,2.6vw,2.5rem);line-height:1.2;letter-spacing:-.025em;overflow-wrap:break-word;text-wrap:balance}
 #main-content h3{font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.35;letter-spacing:-.015em;overflow-wrap:break-word}
@@ -106,3 +106,26 @@
 
 /* Let each desktop headline sentence occupy one line without narrowing the title. */
 @media(min-width:1100px){#main-content .cidg-ecosystem-hero h1{max-width:100%;font-size:clamp(2.25rem,3.25vw,3rem)!important;text-wrap:wrap}}
+
+/* CIDG_IMAGE_ALIGNMENT_REFINEMENT_202609 */
+/* Account for the wordmark's trailing letter spacing, not just its box. */
+.cidg-live-tagline { width:calc(100% - 2px); }
+@media(min-width:1101px) { .cidg-platinum-desktop-nav { margin-right:156px; } }
+#main-content .cidg-ecosystem-hero,
+#main-content .cidg-framework-page .cidg-governance-hero-grid { display:grid!important; grid-template-columns:minmax(0,760px) minmax(0,560px); justify-content:start; align-items:center; gap:32px 64px; }
+#main-content .cidg-ecosystem-hero-art { width:100%; max-width:560px; justify-self:start; }
+#main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image { width:100%; max-width:560px; height:auto; max-height:none; margin:0; }
+#main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image img { width:100%; max-width:560px; max-height:480px; object-fit:contain; }
+#main-content .cidg-framework-page .cidg-governance-hero-grid .cidg-alpha-stage { width:100%!important; max-width:560px!important; margin:0!important; padding:0!important; }
+#main-content .cidg-framework-page .cidg-governance-hero-grid .cidg-alpha-stage figure { width:100%!important; max-width:560px!important; margin:0!important; }
+#main-content .cidg-framework-page .cidg-governance-hero-grid .cidg-alpha-stage img { max-height:520px; object-fit:contain!important; }
+@media(max-width:1100px) {
+ #main-content .cidg-ecosystem-hero,#main-content .cidg-framework-page .cidg-governance-hero-grid { grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:28px; }
+}
+@media(max-width:700px) {
+ #main-content .cidg-ecosystem-hero,#main-content .cidg-framework-page .cidg-governance-hero-grid { grid-template-columns:minmax(0,1fr); }
+ #main-content .cidg-ecosystem-hero-art { display:block; max-width:400px; text-align:center; }
+ #main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image { max-width:100%; }
+ #main-content .cidg-ecosystem-hero .cidg-ecosystem-hero-image img { max-height:340px; }
+ #main-content .cidg-framework-page .cidg-governance-hero-grid .cidg-alpha-stage { max-width:400px; }
+}

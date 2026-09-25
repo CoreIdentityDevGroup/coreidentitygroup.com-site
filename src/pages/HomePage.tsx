@@ -16,10 +16,10 @@ export default function HomePage() {
   return (
     <div className="cidg-platinum-home cidg-home-page">
       <Helmet>
-        <title>CoreIdentity | Executive AI Governance, Workforce Transformation &amp; Trust Infrastructure</title>
-        <meta name="description" content="CoreIdentity connects CIAG executive advisory, SmartNation AI workforce intelligence, governed transformation, and Trust Infrastructure—from institutional strategy through accountable execution and ongoing assurance." />
-        <meta property="og:title" content="CoreIdentity — Making Autonomy Trustworthy" />
-        <meta property="og:description" content="An integrated ecosystem for Executive AI Governance, Autonomous Workforce Transformation, and Trust Infrastructure." />
+        <title>CoreIdentity | AI Governance &amp; Trust Infrastructure</title>
+        <meta name="description" content="Explore CoreIdentity executive AI governance, workforce transformation, and Trust Infrastructure for accountable autonomous execution." />
+
+
       </Helmet>
       {/* ADVISORY_FIRST_HERO_20260909 */}
       <section className="cidg-ecosystem-hero" aria-labelledby="cidg-platinum-title">

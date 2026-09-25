@@ -1,5 +1,7 @@
 export interface BlogPost {
   slug: string;
+  seoTitle?: string;
+  seoDescription?: string;
   title: string;
   date: string;
   author: string;
@@ -10,6 +12,8 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "deployed-at-scale-ungoverned-by-design",
+    seoTitle: "Deployed at Scale, Ungoverned by Design | CoreIdentity",
+    seoDescription: "Why large-scale autonomous AI adoption creates an urgent need for institutional authority, governance infrastructure, and accountability.",
     title: "Deployed at Scale, Ungoverned by Design",
     date: "2026-05-17",
     author: "Todd Morgan, Founder & CEO, CoreIdentity Development Group",
@@ -182,6 +186,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "ai-agents-out-of-control-2026",
+    seoTitle: "AI Agents and the Governance Gap | CoreIdentity",
+    seoDescription: "Explore the governance challenges of enterprise AI agents and the need for stronger authority, oversight, and execution controls.",
     title: "77% of IT Managers Say AI Agents Are Out of Control. Here's What That Means.",
     date: "2026-04-28",
     author: "Todd Morgan, Founder & CEO, CoreIdentity Development Group",
@@ -322,6 +328,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "quantum-vulnerability-closed-24-hours",
+    seoTitle: "Quantum Risk and AI Governance | CoreIdentity",
+    seoDescription: "A CoreIdentity perspective on post-quantum cryptography, software assurance, and the security foundations of autonomous AI governance.",
     title: "We Found Our Own Quantum Vulnerability — Here's How We Closed It in 24 Hours",
     date: "2026-04-26",
     author: "Todd Morgan, Founder & CEO, CoreIdentity Development Group",
@@ -483,6 +491,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "formal-governance-reasoning-enterprise-ai",
+    seoTitle: "Formal Governance Reasoning for Enterprise AI | CoreIdentity",
+    seoDescription: "Explore how formal reasoning can connect governance policies, execution boundaries, and verification in enterprise AI.",
     title: "Formal Governance Reasoning for Enterprise AI: Why Policy Verification Must Happen Before Execution",
     date: "2026-05-08",
     author: "Todd Morgan, Founder & CEO, CoreIdentity Development Group",
@@ -651,6 +661,8 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "cryptographic-floor-beneath-ai-governance",
+    seoTitle: "The Cryptographic Foundation of AI Governance | CoreIdentity",
+    seoDescription: "Explore the role of cryptographic identity, signed evidence, and verification in accountable autonomous AI execution.",
     title: "The Cryptographic Floor Beneath AI Governance: Why \'Quantum-Safe\' Isn\'t What Most Platforms Think It Is",
     date: "2026-06-26",
     author: "Todd Morgan, Founder & CEO, CoreIdentity Development Group",

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="cidg-platinum-footer-brand">
           <Link to="/" className="cidg-platinum-footer-lockup">
             <span className="cidg-platinum-footer-mark">
-              <img src="/images/brand/coreidentity-logo-202609.png" alt="" />
+              <img src="/images/brand/coreidentity-logo-optimized.webp" width="1254" height="1254" loading="lazy" alt="" />
             </span>
             <span><strong>COREIDENTITY</strong></span>
           </Link>

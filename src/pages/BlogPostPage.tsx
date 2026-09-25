@@ -62,8 +62,8 @@ const ptComponents: PortableTextComponents = {
 export default function BlogPostPage() {
   const { slug } = Route.useParams();
   const [post, setPost] = useState<SanityPost | null>(null);
-  const [localPost, setLocalPost] = useState<(typeof blogPosts)[0] | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [localPost, setLocalPost] = useState<(typeof blogPosts)[0] | null>(() => blogPosts.find(p => p.slug === slug) ?? null);
+  const [loading, setLoading] = useState(isSanityConfigured);
 
   useEffect(() => {
     if (!isSanityConfigured) {
@@ -168,8 +168,8 @@ export default function BlogPostPage() {
   return (
     <div className="cidg-insight-article mx-auto max-w-3xl px-4 py-16">
       <Helmet>
-        <title>{localPost.title} — CoreIdentity Development Group</title>
-        <meta name="description" content={localPost.excerpt} />
+        <title>{localPost.seoTitle ?? localPost.title + " | CoreIdentity"}</title>
+        <meta name="description" content={localPost.seoDescription ?? localPost.excerpt} />
       </Helmet>
 
       <div className="mb-10">

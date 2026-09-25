@@ -10,7 +10,8 @@ export function Header() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
 
   useEffect(() => {
-    document.documentElement.classList.toggle("cidg-menu-open", mobileOpen);
+    // The expandable menu stays in document flow so every item remains reachable.
+    document.documentElement.classList.remove("cidg-menu-open");
     return () => document.documentElement.classList.remove("cidg-menu-open");
   }, [mobileOpen]);
 
@@ -47,12 +48,12 @@ export function Header() {
   };
 
   return (
-    <header className="cidg-platinum-header" ref={headerRef}>
+    <header className="cidg-platinum-header cidg-unified-header" ref={headerRef}>
+      <Link to="/" className="cidg-website-banner" aria-label="CoreIdentity Group home">
+        <span className="cidg-live-wordmark"><strong>COREIDENTITY</strong> <span>GROUP</span></span>
+        <svg className="cidg-live-tagline" viewBox="0 0 400 18" role="img" aria-label="Making Autonomy Trustworthy"><text x="0" y="14" textLength="400" lengthAdjust="spacing">MAKING AUTONOMY TRUSTWORTHY</text></svg>
+      </Link>
       <div className="cidg-platinum-masthead">
-        <Link to="/" className="cidg-platinum-brand" aria-label="CoreIdentity home">
-          <span className="cidg-platinum-mark"><img src="/images/brand/coreidentity-logo-202609.png" alt="" /></span>
-          <span className="cidg-platinum-wordmark">COREIDENTITY</span>
-        </Link>
 
         <nav className="cidg-platinum-desktop-nav" aria-label="Primary navigation">
           {NAVIGATION_GROUPS.map((group) => {

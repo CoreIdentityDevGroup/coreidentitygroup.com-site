@@ -8,8 +8,8 @@ export function SovereignGovernancePage() {
     <div className="space-y-12">
       <Helmet>
         <title>Sovereign & Government AI Governance | CoreIdentity</title>
-        <meta name="description" content="CoreIdentity enforces accreditation-grade agent governance for government and sovereign missions — authorization, attribution, and audit aligned to FedRAMP, FISMA, IL4/IL5, the UAE AI Act, and Singapore IMDA." />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CoreIdentity SovereignOps AI Governance","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"CoreIdentity enforces accreditation-grade agent governance for government and sovereign missions — authorization, attribution, and audit aligned to FedRAMP, FISMA, IL4/IL5, the UAE AI Act, and Singapore IMDA.","provider":{"@type":"Organization","name":"CoreIdentity Development Group Inc."}}`}</script>
+        <meta name="description" content="Explore sovereign and government AI governance requirements for institutional authority, controlled execution, oversight, and evidence." />
+
       </Helmet>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}

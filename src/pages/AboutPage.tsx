@@ -15,7 +15,7 @@ export function AboutPage() {
     <div className="space-y-10">
       <Helmet>
         <title>About | CoreIdentity</title>
-        <meta name="description" content="CoreIdentity Development Group is the architect of the Governance Ecosystem for the Autonomous Era and the Trust Infrastructure that enables institutions to safely delegate autonomous execution while preserving authority, accountability, trust, and control." />
+        <meta name="description" content="Learn how CoreIdentity connects Trust Infrastructure, executive AI governance, and autonomous execution while preserving institutional control." />
       </Helmet>
 
       {/* Header */}

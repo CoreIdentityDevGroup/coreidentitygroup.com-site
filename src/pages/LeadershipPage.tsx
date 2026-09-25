@@ -5,7 +5,7 @@ import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
 import { getTeamMembers, isSanityConfigured, type SanityTeamMember } from "../lib/queries";
 import { Helmet } from "react-helmet-async";
 
-import ToddMorganLeadershipProfile from "../assets/leadership/todd-morgan-leadership-profile-v3.png";
+const ToddMorganLeadershipProfile = "/images/brand/todd-morgan-optimized.webp";
 // Portable text renderer for biography blocks
 const bioComponents: PortableTextComponents = {
   block: {
@@ -63,7 +63,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
           <div>
             {member._id === "todd-morgan" ? (
               <div className="cidg-leadership-profile-photo-wrap">
-                <img src={ToddMorganLeadershipProfile} alt="Todd Morgan, Founder and Chief Executive Officer of CoreIdentity Development Group" className="cidg-leadership-profile-photo" loading="eager" decoding="async" />
+                <img src={ToddMorganLeadershipProfile} width="640" height="569" alt="Todd Morgan, Founder and Chief Executive Officer of CoreIdentity Development Group" className="cidg-leadership-profile-photo" loading="eager" decoding="async" />
               </div>
             ) : null}
             <div className="text-2xl font-semibold text-white">{member.name}</div>
@@ -83,7 +83,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
           ) : null}
         </div>
 
-        
+
 
         {member.linkedIn && (
           <a
@@ -102,8 +102,8 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
 }
 
 export function LeadershipPage() {
-  const [members, setMembers] = useState<SanityTeamMember[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [members, setMembers] = useState<SanityTeamMember[]>(FALLBACK_MEMBERS);
+  const [loading, setLoading] = useState(isSanityConfigured);
 
   useEffect(() => {
     if (!isSanityConfigured) {

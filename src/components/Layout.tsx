@@ -3,6 +3,7 @@ import { Outlet, useRouterState } from "@tanstack/react-router";
 import { Helmet } from "react-helmet-async";
 import { Header } from "./Header";
 import Footer from "./Footer";
+import SearchMetadata from "./SearchMetadata";
 
 const FRAMED_ROUTES = new Set([
   "/about",
@@ -17,9 +18,10 @@ const FRAMED_ROUTES = new Set([
   "/privacy",
   "/terms",
   "/faq",
+  "/blog",
 ]);
 
-const FRAMED_ROUTE_PREFIXES = ["/governance/"];
+const FRAMED_ROUTE_PREFIXES = ["/governance/", "/blog/"];
 
 export function Layout() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
@@ -36,10 +38,7 @@ export function Layout() {
 
   return (
     <div className="cidg-platinum-site">
-      <Helmet>
-        <link rel="canonical" href={canonical} />
-        <meta property="og:url" content={canonical} />
-      </Helmet>
+      <SearchMetadata />
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <Header />
       <main className={`cidg-platinum-main ${framed ? "cidg-platinum-main--framed" : ""}`} id="main-content">
