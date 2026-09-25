@@ -50,7 +50,7 @@ export function Header() {
   return (
     <header className="cidg-platinum-header cidg-unified-header" ref={headerRef}>
       <Link to="/" className="cidg-website-banner" aria-label="CoreIdentity Group home">
-        <img className="cidg-header-emblem" src="/images/brand/coreidentity-logo-optimized.webp" width="56" height="56" alt="" aria-hidden="true" decoding="async" />
+        <img className="cidg-header-emblem" src="/images/brand/coreidentity-header-sphere.webp" width="56" height="56" alt="" aria-hidden="true" decoding="async" />
         <span className="cidg-live-wordmark"><strong>COREIDENTITY</strong> <span>GROUP</span></span>
         <svg className="cidg-live-tagline" viewBox="0 0 400 18" role="img" aria-label="Making Autonomy Trustworthy"><text x="0" y="14" textLength="400" lengthAdjust="spacing">MAKING AUTONOMY TRUSTWORTHY</text></svg>
       </Link>
