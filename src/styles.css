@@ -5668,6 +5668,7 @@ main:has(.cidg-leadership-profile-photo-wrap) {
   into the narrow column seen in the failed v7.2.29a mobile render.
 */
 .cidg-leadership-profile-photo-wrap {
+  position: relative;
   display: block;
   width: clamp(180px, 17vw, 215px);
   aspect-ratio: 1;
@@ -5680,9 +5681,11 @@ main:has(.cidg-leadership-profile-photo-wrap) {
 }
 
 .cidg-leadership-profile-photo {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   max-width: none;
   object-fit: cover;
   object-position: center center;
