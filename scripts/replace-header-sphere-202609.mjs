@@ -30,7 +30,7 @@ for(const rel of ['src/visual-system.css','scripts/add-header-emblem-202609.mjs'
 }
 for(const rel of ['src/visual-system.css','scripts/add-header-emblem-202609.mjs']){
  const path=resolve(root,rel),old=edits.get(path)||readFileSync(path,'utf8');
- const next=old.replace('display:block; width:56px; height:56px; object-fit:contain;', 'display:block; width:50px; height:50px; justify-self:center; transform:translateY(3px); object-fit:contain;').replace('.cidg-header-emblem { width:36px; height:36px; }','.cidg-header-emblem { width:30px; height:30px; transform:translateY(2px); }');
+ const next=old.replace('display:block; width:56px; height:56px; object-fit:contain;', 'display:block; width:60px; height:60px; justify-self:center; transform:translateY(3px); object-fit:contain;').replace('.cidg-header-emblem { width:36px; height:36px; }','.cidg-header-emblem { width:36px; height:36px; transform:translateY(2px); }');
  if(next!==old)edits.set(path,next);
 }
 for(const [path,data] of edits){const temp=path+'.'+randomUUID()+'.tmp';writeFileSync(temp,data,{flag:'wx'});renameSync(temp,path);}
