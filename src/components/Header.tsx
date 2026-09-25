@@ -50,7 +50,7 @@ export function Header() {
     <header className="cidg-platinum-header" ref={headerRef}>
       <div className="cidg-platinum-masthead">
         <Link to="/" className="cidg-platinum-brand" aria-label="CoreIdentity home">
-          <span className="cidg-platinum-mark"><img src="/logo-mark.png" alt="" /></span>
+          <span className="cidg-platinum-mark"><img src="/images/brand/coreidentity-logo-202609.png" alt="" /></span>
           <span className="cidg-platinum-wordmark">COREIDENTITY</span>
         </Link>
 
