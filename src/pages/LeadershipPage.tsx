@@ -85,6 +85,12 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
 
 
 
+        {isTodd && (
+          <p className="text-white/70 leading-relaxed italic" data-leadership-tagline>
+            “The greatest superpower is the ability to change yourself.”
+          </p>
+        )}
+
         {member.linkedIn && (
           <a
             href={member.linkedIn}
