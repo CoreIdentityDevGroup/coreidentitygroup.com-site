@@ -132,7 +132,7 @@
 
 /* CIDG_HEADER_EMBLEM_202609 */
 .cidg-website-banner { grid-template-columns:60px max-content; column-gap:12px; align-items:center; }
-.cidg-header-emblem { grid-column:1; grid-row:1 / 3; display:block; width:60px; height:60px; justify-self:center; transform:translateY(3px); object-fit:contain; mix-blend-mode:screen; mask-image:none; }
+.cidg-header-emblem { grid-column:1; grid-row:1 / 3; display:block; width:60px; height:60px; justify-self:center; transform:translateY(3px); object-fit:contain; mix-blend-mode:screen; mask-image:radial-gradient(ellipse at center,#000 54%,transparent 73%); }
 .cidg-live-wordmark,.cidg-live-tagline { grid-column:2; }
 @media(max-width:1240px) {
  .cidg-platinum-desktop-nav { display:none; }
