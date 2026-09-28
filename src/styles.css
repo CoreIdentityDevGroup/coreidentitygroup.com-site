@@ -6150,7 +6150,7 @@ html, body, #root {
 /* CIDG_SHARED_FLUID_LAYOUT_202609 */
 :root { --cidg-gutter:48px; --cidg-page-inset:var(--cidg-gutter); }
 /* One compact header for every route. Artwork exposes only the source's right globe. */
-.cidg-platinum-header { position:relative; inset:auto; z-index:1000; isolation:isolate; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:0 24px; padding:20px var(--cidg-gutter); min-height:104px; box-sizing:border-box; pointer-events:auto; background:#080f13!important; }
+.cidg-platinum-header { position:relative; inset:auto; z-index:1000; isolation:isolate; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:0 24px; padding:12px var(--cidg-gutter); min-height:104px; box-sizing:border-box; pointer-events:auto; background:#080f13!important; }
 .cidg-platinum-header::before { content:""; position:absolute; inset:0 0 0 auto; width:38%; z-index:-1; pointer-events:none; background-image:url('/images/brand/coreidentity-website-header-202609.png'); background-size:350% auto; background-position:right center; background-repeat:no-repeat; mask-image:linear-gradient(to right,transparent,#000 65%); opacity:.32; }
 .cidg-website-banner { display:block; width:fit-content; color:#eef0f1; text-decoration:none; }
 .cidg-live-wordmark { display:block; font-family:Arial,sans-serif; font-size:28px; letter-spacing:.07em; line-height:1.2; white-space:nowrap; }
