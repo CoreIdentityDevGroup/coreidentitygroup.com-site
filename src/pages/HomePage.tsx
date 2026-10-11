@@ -44,8 +44,8 @@ export default function HomePage() {
           <img
             src="/images/partners/nvidia-inception-program-member.png"
             alt="NVIDIA Inception Program member badge"
-            width="2084"
-            height="835"
+            width="1875"
+            height="689"
             loading="lazy"
           />
         </div>
