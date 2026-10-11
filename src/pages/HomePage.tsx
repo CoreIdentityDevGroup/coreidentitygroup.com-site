@@ -38,6 +38,24 @@ export default function HomePage() {
           {['CIAG & Executive AI Governance', 'Opportunity & workforce design', 'Trust Infrastructure & deployment', 'Assurance & improvement'].map((label, index) => <li key={label}><span>0{index + 1}</span>{label}</li>)}
         </ol>
       </section>
+      {/* NVIDIA_INCEPTION_MEMBERSHIP_202610 */}
+      <section className="cidg-inception-membership" aria-labelledby="nvidia-inception-title">
+        <div className="cidg-inception-badge-frame">
+          <img
+            src="/images/partners/nvidia-inception-program-member.png"
+            alt="NVIDIA Inception Program member badge"
+            width="2084"
+            height="835"
+            loading="lazy"
+          />
+        </div>
+        <div className="cidg-inception-copy">
+          <p className="cidg-platinum-kicker">NVIDIA Inception Program Member</p>
+          <h2 id="nvidia-inception-title">Advancing Trustworthy Autonomous AI Infrastructure.</h2>
+          <p>CoreIdentity Development Group Inc. is a member of the NVIDIA Inception program. Through the program, we gain access to developer resources, technical training, preferred technology offerings, and opportunities across NVIDIA’s startup ecosystem as we continue advancing infrastructure for governable, accountable, and provable autonomous AI execution.</p>
+          <p className="cidg-inception-legal">© 2025 NVIDIA, the NVIDIA logo, and NVIDIA Inception are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other countries.</p>
+        </div>
+      </section>
       <section className="cidg-platinum-shift cidg-journey" aria-labelledby="journey-title">
         <p className="cidg-platinum-kicker">Governed Autonomous Transformation</p>
         <h2 id="journey-title">Follow the work from advisory to accountable execution.</h2>
