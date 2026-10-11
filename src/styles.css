@@ -6218,7 +6218,7 @@ html, body, #root {
 /* NVIDIA_INCEPTION_MEMBERSHIP_STYLES_202610 */
 .cidg-inception-membership{display:grid;grid-template-columns:minmax(260px,420px) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:center;padding:clamp(2.5rem,5vw,4.5rem) var(--cidg-gutter);background:#f6f7f8;border-top:1px solid #dce1e7;border-bottom:1px solid #dce1e7;color:#172234}
 .cidg-inception-membership>*{min-width:0}
-.cidg-inception-badge-frame{display:flex;align-items:center;justify-content:center;width:100%;max-width:420px;margin-inline:auto;padding:0;background:#fff;border:1px solid #c7cdd5;border-radius:0;box-shadow:none;overflow:hidden;box-sizing:border-box}
+.cidg-inception-badge-frame{display:flex;align-items:center;justify-content:center;width:100%;max-width:420px;margin-inline:auto;padding:clamp(1rem,2.1vw,1.5rem);background:#fff;border:1px solid rgba(23,34,52,.09);border-radius:8px;box-shadow:none;box-sizing:border-box}
 .cidg-inception-badge-frame img{display:block;width:100%;height:auto}
 .cidg-inception-copy{max-width:760px}
 .cidg-inception-copy h2{max-width:28ch;margin:.55rem 0 1rem;color:#172234;font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.12;letter-spacing:-.035em}
