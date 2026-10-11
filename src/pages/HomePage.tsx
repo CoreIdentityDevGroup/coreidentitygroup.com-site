@@ -42,7 +42,7 @@ export default function HomePage() {
       <section className="cidg-inception-membership" aria-labelledby="nvidia-inception-title">
         <div className="cidg-inception-badge-frame">
           <img
-            src="/images/partners/nvidia-inception-program-member.png"
+            src="/images/partners/nvidia-inception-program-member-cropped-v2.png"
             alt="NVIDIA Inception Program member badge"
             width="1875"
             height="689"
