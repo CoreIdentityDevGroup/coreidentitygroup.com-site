@@ -5,7 +5,7 @@ import { Card, PageTitle, SectionTitle, Eyebrow } from "../components/ui";
 import { getTeamMembers, isSanityConfigured, type SanityTeamMember } from "../lib/queries";
 import { Helmet } from "react-helmet-async";
 
-const ToddMorganLeadershipProfile = "/images/brand/todd-morgan-optimized.webp?v=20261116";
+const ToddMorganLeadershipProfile = "/images/brand/todd-morgan-optimized.webp?v=20261116b";
 // Portable text renderer for biography blocks
 const bioComponents: PortableTextComponents = {
   block: {
@@ -63,7 +63,7 @@ function MemberCard({ member }: { member: SanityTeamMember }) {
           <div>
             {member._id === "todd-morgan" ? (
               <div className="cidg-leadership-profile-photo-wrap">
-                <img src={ToddMorganLeadershipProfile} width="640" height="700" alt="Todd Morgan, Founder and Chief Executive Officer of CoreIdentity Development Group" className="cidg-leadership-profile-photo" loading="eager" decoding="async" />
+                <img src={ToddMorganLeadershipProfile} width="640" height="896" alt="Todd Morgan, Founder and Chief Executive Officer of CoreIdentity Development Group" className="cidg-leadership-profile-photo" loading="eager" decoding="async" />
               </div>
             ) : null}
             <div className="text-2xl font-semibold text-white">{member.name}</div>
