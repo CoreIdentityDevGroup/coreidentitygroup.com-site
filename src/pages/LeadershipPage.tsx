@@ -32,7 +32,7 @@ const FALLBACK_MEMBERS: SanityTeamMember[] = [
     title: 'Founder & Chief Executive Officer',
     bio: undefined,
     photo: null,
-    linkedIn: 'https://www.linkedin.com/in/todd-morgan-ceo',
+    linkedIn: 'https://www.linkedin.com/in/toddmorgan-mba/',
   },
 ];
 
